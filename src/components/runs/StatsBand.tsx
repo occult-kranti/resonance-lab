@@ -89,7 +89,7 @@ export default function StatsBand({
     }
     return [
       { label: "Gate discipline", score: gateDiscipline },
-      { label: "Replication (≥3 pairs)", score: replication },
+      { label: "Replication (ABBA blocks)", score: replication },
       { label: "σ trend", score: sigmaTrend },
       { label: "Calibration freshness", score: vnaCalibrated ? 1 : 0 },
       { label: "Fault handling", score: anyFault ? 0.4 : 1 },
@@ -168,14 +168,14 @@ export default function StatsBand({
                 className="flex cursor-not-allowed items-center gap-1.5 rounded-sm border border-line px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-faint opacity-60"
               >
                 <Eye size={12} strokeWidth={1.5} />
-                Reveal positions ({pairs}/3 pairs)
+                Reveal positions (gate G4 · {pairs}/3 blocks)
               </button>
             </Tooltip>
           )}
           <p className="min-w-0 flex-1 text-[11px] leading-relaxed text-dim">
             {pairs >= 3
-              ? "Statistical threshold met — three valid pairs support a two-position comparison."
-              : "The reveal unlocks at three valid pairs. More blinded runs, then the schedule opens itself."}
+              ? "Staged gates G1–G4 clear — hash verification, sham/injection recovery, and blinded diagnostics passed; the ABBA block schedule supports a two-position comparison."
+              : "The reveal walks staged gates G1–G4: hash verification → sham/injection recovery → blinded diagnostics → blocks complete. More blinded ABBA blocks, then the schedule opens itself."}
           </p>
           <button
             onClick={() => onRevealRequest(true)}

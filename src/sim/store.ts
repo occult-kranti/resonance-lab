@@ -5,13 +5,17 @@ import { persist, createJSONStorage } from "zustand/middleware";
    RESONANCE LAB — Simulation Engine (design.md §6)
    Tick-based zustand store. 10 Hz tick driven by SimProvider.
    Honest physics: passive Lorentzian dips only (S11 ≤ 0 dB).
+   v2: corrected to the physically real 20.75 kHz breathing mode
+   of a 100 mm solid copper sphere (was a fictitious 229.731 kHz
+   hollow-shell mode; see Learning → "Resonance, honestly").
    ============================================================ */
 
-export const STORE_VERSION = 1;
+export const STORE_VERSION = 2;
+// persistence key is stable across versions; `migrate` below resets v1 state
 export const STORAGE_KEY = "resonance-lab-v1";
 
-export const F0_BASE_HZ = 229_731; // breathing mode ≈ 229.731 kHz
-export const F0_TEMP_COEFF_HZ_PER_C = -8; // −8 Hz/°C from 22 °C
+export const F0_BASE_HZ = 20_750; // breathing mode of the 100 mm solid Cu sphere ≈ 20.75 kHz
+export const F0_TEMP_COEFF_HZ_PER_C = -3.3; // −3.3 Hz/K (−0.0033 Hz/mK) from 22 °C
 export const SETPOINT_C = 22.0;
 export const AMBIENT_C = 21.5;
 export const ATM_HPA = 1013;
@@ -19,8 +23,8 @@ export const ROUGH_FLOOR_HPA = 2;
 export const TURBO_FLOOR_HPA = 1e-5;
 export const QUALITY_PRESSURE_HPA = 1e-3;
 export const STAGE_LIMIT_MM = 35;
-export const Q_VACUUM = 18_000;
-export const Q_ATM = 6_000;
+export const Q_VACUUM = 100_000; // intrinsic-loss-limited Q of the solid sphere in vacuum
+export const Q_ATM = 3_000; // gas damping at 20.75 kHz caps Q far below the intrinsic limit
 export const MAX_S11_DIP_DB = -18;
 export const HISTORY_LEN = 240; // 24 s at 10 Hz
 
@@ -477,7 +481,7 @@ function freshState() {
     refWanderHz: 0,
 
     vnaCalibrated: false,
-    vnaParams: { startKHz: 229.0, stopKHz: 230.5, points: 401, ifBwHz: 100, powerDbm: -10 },
+    vnaParams: { startKHz: 20.5, stopKHz: 21.0, points: 401, ifBwHz: 100, powerDbm: -10 },
     sweeping: false,
     sweepProgress: 0,
     lastSweep: null as SweepData | null,
@@ -880,7 +884,7 @@ export const useSim = create<SimState>()(
             validRuns.filter((r) => r.label === "B").length,
           );
           if (manual && pairs < 3) {
-            emit("experiment", "WARNING", "Blinding revealed MANUALLY before 3 valid pairs — grade capped");
+            emit("experiment", "WARNING", "Blinding revealed MANUALLY before staged gates G1–G4 cleared — grade capped");
           } else {
             emit("experiment", "NOMINAL", "Blinding revealed — A/B position assignments unblinded");
           }
@@ -927,6 +931,9 @@ export const useSim = create<SimState>()(
     {
       name: STORAGE_KEY,
       version: STORE_VERSION,
+      // v1 → v2: physics constants changed (20.75 kHz mode); discard any
+      // persisted v1 session and restart from a clean state.
+      migrate: () => freshState() as unknown as SimState,
       storage: createJSONStorage(() => localStorage),
       partialize: (s) => {
         // exclude transient + bulky sweep buffers from persistence

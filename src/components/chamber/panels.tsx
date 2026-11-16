@@ -593,7 +593,7 @@ export function SphereStatPopover() {
               {[
                 ["Breathing mode f₀", `${(f0 / 1000).toFixed(3)} kHz`],
                 ["Q (this pressure)", `${Math.round(q).toLocaleString()}`],
-                ["Temp coeff", "−8 Hz/°C from 22 °C"],
+                ["Temp coeff", "−3.3 Hz/K from 22 °C"],
                 ["Drive", driveOn ? `${driveVolts.toFixed(1)} V pk` : "off"],
               ].map(([k, v]) => (
                 <p key={k} className="flex items-baseline justify-between font-mono text-[11px]">

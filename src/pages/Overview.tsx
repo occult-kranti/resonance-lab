@@ -310,7 +310,7 @@ function LorentzianDiagram() {
         0 dB — passive limit
       </text>
       <text x="296" y="142" textAnchor="end" fontSize="8" fill="#4b5b6e" fontFamily="'JetBrains Mono', monospace">
-        f₀ ≈ 229.731 kHz
+        f₀ ≈ 20.750 kHz
       </text>
       <text x="24" y="142" fontSize="8" fill="#4b5b6e" fontFamily="'JetBrains Mono', monospace">
         S11 (dB) ↓
@@ -531,7 +531,7 @@ export default function Overview() {
             Hear a sphere breathe.
           </h1>
           <p className="ov-subcopy max-w-xl text-sm leading-relaxed text-dim md:text-base">
-            A hollow copper sphere in a vacuum chamber rings at 229.7 kHz. Your job:
+            A solid copper sphere in a vacuum chamber breathes at 20.75 kHz. Your job:
             measure that resonance to microkelvin discipline, under blinding, with real
             metrology practice — and prove the result is honest.
           </p>

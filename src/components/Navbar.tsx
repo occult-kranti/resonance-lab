@@ -10,6 +10,7 @@ import {
   FlaskConical,
   GraduationCap,
   LayoutDashboard,
+  Microscope,
   NotebookPen,
   PanelLeftClose,
   PanelLeftOpen,
@@ -61,6 +62,7 @@ const NAV: NavGroup[] = [
     items: [
       { to: "/runs", label: "Runs", icon: FlaskConical },
       { to: "/notebook", label: "Notebook", icon: NotebookPen },
+      { to: "/findings", label: "Findings", icon: Microscope },
     ],
   },
   {

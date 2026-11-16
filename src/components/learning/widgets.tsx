@@ -94,9 +94,9 @@ function WidgetShell({
 
 /* ---- 1. Driven damped oscillator: slide drive frequency across resonance ---- */
 export function OscillatorWidget({ caption }: { caption: string }) {
-  const [driveKHz, setDriveKHz] = useState(229.2);
-  const f0 = 229.731;
-  const q = 8000;
+  const [driveKHz, setDriveKHz] = useState(20.72);
+  const f0 = 20.75;
+  const q = 500; // illustrative — wide enough to see the response swell
   const gamma = f0 / q; // FWHM kHz
   const det = driveKHz - f0;
   const lorentz = (gamma / 2) ** 2 / (det * det + (gamma / 2) ** 2);
@@ -141,8 +141,8 @@ export function OscillatorWidget({ caption }: { caption: string }) {
         <SliderRow
           label="Drive freq"
           value={driveKHz}
-          min={229.0}
-          max={230.5}
+          min={20.5}
+          max={21.0}
           step={0.005}
           onChange={setDriveKHz}
           format={(v) => `${v.toFixed(3)} kHz`}
@@ -154,8 +154,8 @@ export function OscillatorWidget({ caption }: { caption: string }) {
 
 /* ---- 2. Q slider → S11 dip sharpens ---- */
 export function QDipWidget({ caption }: { caption: string }) {
-  const [q, setQ] = useState(6000);
-  const f0 = 229.731;
+  const [q, setQ] = useState(3000);
+  const f0 = 20.75;
 
   const ref = useCanvas((ctx, w, h) => {
     ctx.clearRect(0, 0, w, h);
@@ -167,10 +167,10 @@ export function QDipWidget({ caption }: { caption: string }) {
       ctx.lineTo(w, (h / 4) * i + 0.5);
       ctx.stroke();
     }
-    const fMin = 229.0;
-    const fMax = 230.5;
+    const fMin = 20.7;
+    const fMax = 20.8;
     const gamma = f0 / q;
-    const depth = 18 * (0.4 + 0.6 * (q / 18000));
+    const depth = 18 * (0.4 + 0.6 * (q / 100000));
     ctx.strokeStyle = TRACE;
     ctx.lineWidth = 1.5;
     ctx.beginPath();
@@ -198,8 +198,8 @@ export function QDipWidget({ caption }: { caption: string }) {
           label="Q factor"
           value={q}
           min={2000}
-          max={20000}
-          step={250}
+          max={100000}
+          step={1000}
           onChange={setQ}
           format={(v) => v.toLocaleString()}
         />
@@ -211,7 +211,7 @@ export function QDipWidget({ caption }: { caption: string }) {
 /* ---- 3. Temperature slider → f₀ walks ---- */
 export function TempWalkWidget({ caption }: { caption: string }) {
   const [temp, setTemp] = useState(22.0);
-  const f0Hz = 229731 - 8 * (temp - 22);
+  const f0Hz = 20750 - 3.3 * (temp - 22);
 
   const ref = useCanvas((ctx, w, h) => {
     ctx.clearRect(0, 0, w, h);
@@ -221,12 +221,12 @@ export function TempWalkWidget({ caption }: { caption: string }) {
     ctx.moveTo(0, h / 2 + 0.5);
     ctx.lineTo(w, h / 2 + 0.5);
     ctx.stroke();
-    // dip centered at f0 within a 229.60–229.86 kHz window
-    const fMin = 229600;
-    const fMax = 229860;
-    const gamma = f0Hz / 18000;
+    // dip centered at f0 within a 20.740–20.760 kHz window
+    const fMin = 20740;
+    const fMax = 20760;
+    const gamma = f0Hz / 100000;
     // marker for 22 °C reference position
-    const xRef = ((229731 - fMin) / (fMax - fMin)) * w;
+    const xRef = ((20750 - fMin) / (fMax - fMin)) * w;
     ctx.strokeStyle = "rgba(75,91,110,0.8)";
     ctx.setLineDash([3, 3]);
     ctx.beginPath();
@@ -267,8 +267,8 @@ export function TempWalkWidget({ caption }: { caption: string }) {
         <p className="text-right font-mono text-[11px] tabular-nums text-trace">
           f₀ = {(f0Hz / 1000).toFixed(3)} kHz{" "}
           <span className="text-faint">
-            ({f0Hz - 229731 >= 0 ? "+" : ""}
-            {(f0Hz - 229731).toFixed(1)} Hz vs 22 °C)
+            ({f0Hz - 20750 >= 0 ? "+" : ""}
+            {(f0Hz - 20750).toFixed(1)} Hz vs 22 °C)
           </span>
         </p>
       </div>

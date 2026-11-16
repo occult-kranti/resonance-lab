@@ -54,7 +54,7 @@ export const MODULES: ModuleDef[] = [
       },
       {
         type: "p",
-        text: "Every cycle, a little energy leaks out — into heat, into sound, into the mounting hardware. The quality factor Q counts those leaks: Q is 2π times the energy stored divided by the energy lost per cycle. Q of 18,000 means the mode rings for thousands of cycles before the stored energy drains away.",
+        text: "Every cycle, a little energy leaks out — into heat, into sound, into the mounting hardware. The quality factor Q counts those leaks: Q is 2π times the energy stored divided by the energy lost per cycle. Q of 100,000 means the mode rings for tens of thousands of cycles before the stored energy drains away.",
       },
       {
         type: "warn",
@@ -63,6 +63,10 @@ export const MODULES: ModuleDef[] = [
       {
         type: "p",
         text: "This is why the simulator's resonance is drawn as a dip, not a spike. When the drive frequency lands on the resonance, the sphere absorbs power from the line — and what is absorbed cannot be reflected. Less comes back. The meter reads a dip, and the dip is honest: every watt you measure started as a watt you supplied.",
+      },
+      {
+        type: "p",
+        text: "A note on honesty: this simulator originally rang its sphere near 230 kHz, a figure the first draft inherited from an unverified claim. An engineering review of the actual physics — the breathing mode of a 100 mm solid copper sphere — put the resonance at 20.75 kHz, and the simulator was corrected to match. That is the honest scientific process working as intended: claims get checked, errors get found, and the record is updated rather than defended.",
       },
     ],
     quiz: [
@@ -89,7 +93,7 @@ export const MODULES: ModuleDef[] = [
         why: "A passive device conserves energy: you can only ever get back a fraction of what you sent.",
       },
       {
-        q: "On an S11 sweep, a dip at 229.731 kHz means…",
+        q: "On an S11 sweep, a dip at 20.750 kHz means…",
         options: [
           "The instrument lost calibration there",
           "The sphere radiated extra energy at that frequency",
@@ -245,7 +249,7 @@ export const MODULES: ModuleDef[] = [
     blocks: [
       {
         type: "p",
-        text: "At atmosphere, every vibration of the copper sphere pushes against a sea of gas molecules, and each collision carries a little energy away. That is gas damping, and it caps Q near 6,000 no matter how well the sphere is made. Pump the gas out and the collisions stop. Q climbs toward 18,000 — limited now by the sphere's own internal losses, not by the air.",
+        text: "At atmosphere, every vibration of the copper sphere pushes against a sea of gas molecules, and each collision carries a little energy away. That is gas damping, and it caps Q near 3,000 no matter how well the sphere is made. Pump the gas out and the collisions stop. Q climbs toward 100,000 — limited now by the sphere's own internal losses, not by the air.",
       },
       {
         type: "key",
@@ -305,25 +309,25 @@ export const MODULES: ModuleDef[] = [
     number: 5,
     title: "Millikelvins matter",
     abstract:
-      "Copper's stiffness drifts with temperature; so does your f₀. 8 Hz per °C is small until your error bars are smaller.",
+      "Copper's stiffness drifts with temperature; so does your f₀. 3.3 Hz per kelvin is small until your error bars are smaller.",
     minutes: 6,
     accent: "copper",
     widget: "tempwalk",
     widgetCaption:
-      "Slide the chamber temperature and watch f₀ walk. −8 Hz per °C feels like nothing — until your σ is 2 Hz.",
+      "Slide the chamber temperature and watch f₀ walk. −3.3 Hz per kelvin feels like nothing — until your σ is 0.5 Hz.",
     tryLive: { label: "See thermal state on the Console", to: "/console" },
     blocks: [
       {
         type: "p",
-        text: "Copper gets softer as it warms — imperceptibly, but measurably. The breathing mode's restoring force is the metal's stiffness, so the resonant frequency slides down as temperature rises: about −8 Hz per °C in this simulator. That coefficient is small, boring, and absolutely capable of ruining a precision measurement.",
+        text: "Copper gets softer as it warms — imperceptibly, but measurably. The breathing mode's restoring force is the metal's stiffness, so the resonant frequency slides down as temperature rises: about −3.3 Hz per kelvin in this simulator. That coefficient is small, boring, and absolutely capable of ruining a precision measurement.",
       },
       {
         type: "key",
-        text: "Key idea: a drift of −8 Hz/°C is harmless next to a 100 Hz error bar and fatal next to a 2 Hz one. Precision doesn't remove small effects; it promotes them to leading effects.",
+        text: "Key idea: a drift of −3.3 Hz/K is harmless next to a 30 Hz error bar and fatal next to a 0.5 Hz one. Precision doesn't remove small effects; it promotes them to leading effects.",
       },
       {
         type: "p",
-        text: "This is why the quality gate demands |T − 22.000 °C| < 5 mK held for five seconds. Not because 22 °C is magic, but because a stable temperature is a stable frequency. The A/B position runs differ by tens of hertz; let the chamber wander half a degree between runs and the temperature term is four hertz of fake position signal.",
+        text: "This is why the quality gate demands |T − 22.000 °C| < 5 mK held for five seconds. Not because 22 °C is magic, but because a stable temperature is a stable frequency. The A/B position runs differ by tens of hertz; let the chamber wander half a degree between runs and the temperature term is nearly two hertz of fake position signal.",
       },
       {
         type: "warn",
@@ -339,12 +343,12 @@ export const MODULES: ModuleDef[] = [
         q: "The chamber is 0.25 °C above setpoint. What happens to f₀?",
         options: [
           "Nothing measurable",
-          "It rises by 2 Hz",
-          "It falls by about 2 Hz",
-          "It falls by 8 Hz exactly",
+          "It rises by 0.8 Hz",
+          "It falls by about 0.8 Hz",
+          "It falls by 3.3 Hz exactly",
         ],
         answer: 2,
-        why: "−8 Hz/°C × 0.25 °C = −2 Hz. Small — until your error bars are smaller.",
+        why: "−3.3 Hz/K × 0.25 K = −0.8 Hz. Small — until your error bars are smaller.",
       },
       {
         q: "The gate requires |ΔT| < 5 mK for 5 seconds because…",
@@ -390,7 +394,7 @@ export const MODULES: ModuleDef[] = [
       },
       {
         type: "p",
-        text: "Why three valid pairs before unblinding? Because two runs prove almost nothing. One pair gives you a difference with no idea of its scatter; the scatter of f₀ from run to run is the ruler against which the A−B difference must be judged. Three pairs is still small — but it is enough to see whether the difference stands above the noise of repetition.",
+        text: "Why staged gates before unblinding? The protocol walks G1 hash verification, G2 sham/injection recovery, and G3 blinded diagnostics, and only opens at G4 when the B=40 ABBA block schedule is complete — because two runs prove almost nothing. One pair gives you a difference with no idea of its scatter; the scatter of f₀ from run to run is the ruler against which the A−B difference must be judged. Repetition is still small at the gate — but it is enough to see whether the difference stands above the noise of repetition.",
       },
       {
         type: "warn",
@@ -414,12 +418,12 @@ export const MODULES: ModuleDef[] = [
         why: "Blinding is a firewall between what you hope and what you record.",
       },
       {
-        q: "Why does the protocol want ≥ 3 valid pairs before unblinding?",
+        q: "Why does the protocol stage gates G1–G4 before unblinding?",
         options: [
           "The grade S requires it and grades are law",
           "One pair gives a difference but no estimate of its scatter — repetition is the ruler",
           "The stage wears in after six runs",
-          "Statistics only works in multiples of three",
+          "Statistics only works in multiples of forty",
         ],
         answer: 1,
         why: "You judge the A−B difference against run-to-run scatter; you need repeats to know the scatter.",

@@ -33,7 +33,7 @@ let chirpTimer: number | undefined;
 export const useDrive = create<DriveState>()((set, get) => ({
   on: false,
   amplitudeV: 4,
-  freqHz: 229_731,
+  freqHz: 20_750,
   chirping: false,
   chirpT0: 0,
   chirpFromHz: 0,

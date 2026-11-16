@@ -281,7 +281,7 @@ export const SCENARIOS: Scenario[] = [
         clock: "LOCKED",
         clockT: 0,
         vnaCalibrated: false,
-        vnaParams: { startKHz: 229.0, stopKHz: 230.5, points: 201, ifBwHz: 1000, powerDbm: -10 },
+        vnaParams: { startKHz: 20.5, stopKHz: 21.0, points: 201, ifBwHz: 1000, powerDbm: -10 },
       });
       return { injectedFault: null };
     },

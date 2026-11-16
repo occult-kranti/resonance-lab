@@ -28,7 +28,7 @@ import type { HoverId } from "./chamberUi";
 const setHover = (h: HoverId) => useChamberUi.getState().setHover(h);
 
 /**
- * Chamber interior: hollow copper sphere on stem + drive piezo, motorized
+ * Chamber interior: solid copper sphere on stem + drive piezo, motorized
  * XYZ stage (three orthogonal carriages), A/B markers, LDV beam from the
  * viewport lens to the sphere surface.
  */

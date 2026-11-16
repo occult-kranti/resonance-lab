@@ -14,6 +14,7 @@ import Oscilloscope from "@/pages/Oscilloscope";
 import Reference from "@/pages/Reference";
 import Runs from "@/pages/Runs";
 import Notebook from "@/pages/Notebook";
+import Findings from "@/pages/Findings";
 import Learning from "@/pages/Learning";
 import Training from "@/pages/Training";
 import Challenge from "@/pages/Challenge";
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="reference" element={<Reference />} />
           <Route path="runs" element={<Runs />} />
           <Route path="notebook" element={<Notebook />} />
+          <Route path="findings" element={<Findings />} />
           <Route path="learning" element={<Learning />} />
           <Route path="training" element={<Training />} />
           <Route path="challenge" element={<Challenge />} />

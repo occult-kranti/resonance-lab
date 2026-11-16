@@ -240,7 +240,7 @@ export function nextAction(s: SimState): NextActionModel {
       stepId: "sweep",
       title: "STEP 6 — SWEEP & FIT",
       rationale:
-        "All gates are green. Sweep S11 across 229.0–230.5 kHz and fit the breathing-mode dip (expect ≈ 229.7 kHz, Q ≈ 18,000).",
+        "All gates are green. Sweep S11 across 20.5–21.0 kHz and fit the breathing-mode dip (expect ≈ 20.75 kHz, Q ≈ 100,000).",
       progress: s.sweeping ? clamp01(s.sweepProgress) : null,
       ctaLabel: s.sweeping ? "Sweeping…" : "Start sweep",
       ctaTo: s.sweeping ? "/vna" : null,

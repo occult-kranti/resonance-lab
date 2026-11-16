@@ -334,7 +334,7 @@ export default function Reference() {
             <Panel title="Why discipline matters" accent="violet">
               <p className="text-sm leading-relaxed text-dim">
                 Your VNA measures frequency by counting against a reference. A 1 mHz error here is a
-                23 mHz error at 230 kHz scaled — small, until you compare runs days apart. The
+                2 mHz error at 20.75 kHz scaled — small, until you compare runs days apart. The
                 rubidium is stable; GPS is accurate; the GPSDO marries them. Every honest number in
                 this lab traces back to the 10 MHz on the back panel.
               </p>

@@ -230,8 +230,8 @@ export const SECTIONS: CheckSection[] = [
         route: "/vna",
         pred: (s) =>
           !!s.lastSweep &&
-          s.lastSweep.params.startKHz <= 229.5 &&
-          s.lastSweep.params.stopKHz >= 230.0,
+          s.lastSweep.params.startKHz <= 20.7 &&
+          s.lastSweep.params.stopKHz >= 20.8,
         live: (s) =>
           s.lastSweep
             ? `${s.lastSweep.params.startKHz.toFixed(1)}–${s.lastSweep.params.stopKHz.toFixed(1)} kHz`

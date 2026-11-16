@@ -36,7 +36,7 @@ const PHASE_TITLES = [
   "Thermal stabilize",
   "Lock reference",
   "Calibrate & sweep",
-  "Blinded A/B runs",
+  "Blinded ABBA blocks",
   "Unblind & grade",
 ];
 
@@ -197,7 +197,7 @@ function RunsPage({ sessionId }: { sessionId: string }) {
                     compromised
                       ? "Blinding was broken early — Timeline recorded it"
                       : revealed
-                        ? "Positions revealed after the statistical threshold"
+                        ? "Positions revealed after staged gates G1–G4 cleared"
                         : "Position assignments sealed"
                   }
                 >
@@ -281,9 +281,11 @@ function RunsPage({ sessionId }: { sessionId: string }) {
         title="Reveal positions"
       >
         <p className="text-sm leading-relaxed text-dim">
-          Three valid pairs are on the record. Unblinding flips every schedule
-          chip to its physical position and splits the scatter into P1/P2
-          groups. This cannot be undone for this session.
+          All staged gates have cleared: G1 hash verification, G2
+          sham/injection recovery, G3 blinded diagnostics, and G4 — the B=40
+          ABBA block schedule complete. Unblinding flips every schedule chip to
+          its physical position and splits the scatter into P1/P2 groups. This
+          cannot be undone for this session.
         </p>
         <div className="mt-4 flex justify-end gap-2">
           <button
@@ -310,7 +312,8 @@ function RunsPage({ sessionId }: { sessionId: string }) {
         title="Reveal early — protocol warning"
       >
         <p className="text-sm leading-relaxed text-dim">
-          Fewer than three valid pairs are on the record. Peeking now{" "}
+          The staged gates are not all clear yet — G4 (B=40 ABBA blocks
+          complete) is still open. Peeking now{" "}
           <span className="text-bad">compromises the protocol</span> — the
           Timeline will record it, the integrity chip flips to COMPROMISED, and
           the session grade is capped.

@@ -134,7 +134,7 @@ const EXPLAINERS: { re: RegExp; make: (s: SimState) => CopilotAnswer }[] = [
     make: (s) => ({
       paragraphs: [
         "**Q** (quality factor) is how underdamped the resonance is: Q = f₀ / Δf, the center frequency over the linewidth. High Q means the sphere rings for a long time and the dip is narrow.",
-        `In vacuum Q climbs toward **${(18000).toLocaleString()}** — there's almost no air to carry energy away. At atmosphere it falls toward **6,000**. Right now your conditions give roughly **Q ≈ ${Math.round(s.lastFit?.q ?? 18000).toLocaleString()}**.`,
+        `In vacuum Q climbs toward **${(100000).toLocaleString()}** — there's almost no air to carry energy away. At atmosphere, gas damping caps it near **3,000**. Right now your conditions give roughly **Q ≈ ${Math.round(s.lastFit?.q ?? 100000).toLocaleString()}**.`,
         "Q is measured energy loss per cycle — never gain. The sphere does not create energy; it stores and returns a tiny fraction of what you drive into it.",
       ],
       links: [{ label: "Open Learning Paths", to: "/learning" }],
@@ -155,7 +155,7 @@ const EXPLAINERS: { re: RegExp; make: (s: SimState) => CopilotAnswer }[] = [
     re: /22 degrees|why 22|temperature|thermal|setpoint/,
     make: () => ({
       paragraphs: [
-        "The sphere's resonance slides with temperature — about **−8 Hz per °C** for this copper shell. An unstabilized chamber turns your frequency measurement into a thermometer reading.",
+        "The sphere's resonance slides with temperature — about **−3.3 Hz per kelvin** for this solid copper sphere. An unstabilized chamber turns your frequency measurement into a thermometer reading.",
         "Holding **22.000 °C ± 5 mK** makes temperature a constant instead of a variable. 22 °C is simply this lab's reference temperature — metrology labs pick one and defend it.",
       ],
       links: [{ label: "Open Console", to: "/console" }],
@@ -175,7 +175,7 @@ const EXPLAINERS: { re: RegExp; make: (s: SimState) => CopilotAnswer }[] = [
     re: /blind|position 1|position 2|a\/b/,
     make: () => ({
       paragraphs: [
-        "LOC-1 is **blinded**: the scheduler assigns POSITION 1 and POSITION 2 to the two stage slots and hides which is which until you've recorded 3 valid pairs.",
+        "LOC-1 is **blinded**: the scheduler assigns POSITION 1 and POSITION 2 to the two stage slots and hides which is which until the staged gates G1–G4 clear — hash verification, sham/injection recovery, blinded diagnostics, and finally enough ABBA blocks complete.",
         "Blinding keeps you from (unconsciously) nudging the data toward the answer you expect. The two positions sit 0.40 m apart along the beam axis, shifting f₀ by a few tens of Hz.",
       ],
       links: [{ label: "Open Experiment Runs", to: "/runs" }],
@@ -189,7 +189,7 @@ function answerFit(s: SimState): CopilotAnswer {
     return {
       paragraphs: [
         "There's no fit on the table yet — sweep first, then ask me to judge it.",
-        "For a first pass: span **229.0–230.5 kHz**, **401 points**, IF bandwidth **100 Hz**. Narrower IF BW trades sweep time for less noise.",
+        "For a first pass: span **20.5–21.0 kHz**, **401 points**, IF bandwidth **100 Hz**. Narrower IF BW trades sweep time for less noise.",
       ],
       links: [{ label: "Open VNA", to: "/vna" }],
     };
@@ -278,8 +278,8 @@ function answerWalkthrough(s: SimState): CopilotAnswer {
 function answerFacility(): CopilotAnswer {
   return {
     paragraphs: [
-      "You're in **Meridian Standards Laboratory — Teaching Bay 3**, a simulated resonance-metrology bench. Inside a shielded vacuum chamber, a hollow copper sphere sits on a motorized XYZ stage.",
-      "Your job in **LOC-1**: characterize the sphere's breathing-mode resonance near **229.7 kHz** — under vacuum, at a stabilized 22.000 °C, against a GPS-disciplined clock — and measure how it shifts between two blinded stage positions.",
+      "You're in **Meridian Standards Laboratory — Teaching Bay 3**, a simulated resonance-metrology bench. Inside a shielded vacuum chamber, a 100 mm solid copper sphere sits on a motorized XYZ stage.",
+      "Your job in **LOC-1**: characterize the sphere's breathing-mode resonance near **20.75 kHz** — under vacuum, at a stabilized 22.000 °C, against a GPS-disciplined clock — and measure how it shifts between two blinded stage positions.",
       "It's a teaching simulator: the physics is idealized and energy-conserving, and nothing here is a real measurement device.",
     ],
     links: [{ label: "Open Lab Overview", to: "/" }],

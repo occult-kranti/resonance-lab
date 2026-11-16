@@ -67,7 +67,7 @@ const CATALOG: FaultMeta[] = [
     severity: "FAULT",
     blurb:
       "The controller's sensor develops ambitions. Temperature ramps +0.05 °C/s until the guard interlock trips at 26 °C.",
-    flow: "sensor fault → ramp +0.05 °C/s → drift alarm → f₀ walks −8 Hz/°C",
+    flow: "sensor fault → ramp +0.05 °C/s → drift alarm → f₀ walks −3.3 Hz/K",
     instruments: [
       { icon: Thermometer, label: "Thermal" },
       { icon: Waves, label: "VNA" },
