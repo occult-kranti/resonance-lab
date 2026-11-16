@@ -5,6 +5,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        void: "#05080d",
+        shell: "#0a0f16",
+        panel: "#0e141d",
+        "panel-2": "#131b26",
+        line: "#1e2a38",
+        "line-bright": "#2c3d52",
+        ink: "#d9e2ec",
+        dim: "#8296ab",
+        faint: "#4b5b6e",
+        trace: "#2dd4c8",
+        "trace-2": "#f0b64c",
+        copper: "#c47a4a",
+        go: "#3ddc84",
+        warn: "#f0b64c",
+        bad: "#f0524f",
+        violet: "#9d8df1",
+        blue: "#5aa2f0",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,6 +65,11 @@ module.exports = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        display: ["'Chakra Petch'", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        mono: ["'JetBrains Mono'", "monospace"],
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
