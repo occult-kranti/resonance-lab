@@ -1,10 +1,14 @@
 {
   "schema": "resonance-pages-publication/v1",
-  "generatedAt": "2026-11-17T15:22:03.068Z",
+  "generatedAt": "2026-11-17T15:26:18.002Z",
   "base": "/resonance-lab/",
   "mode": "static-snapshot",
+  "packager": {
+    "path": "scripts/prepare-pages.mjs",
+    "sha256": "0708e481956fb1c5165761ed0dfd9f30d3e850e1ae4d1cf03080e82d1c2362bb"
+  },
   "files": 3951,
-  "totalBytes": 650351017,
+  "totalBytes": 650350897,
   "bridgeCopies": 13,
   "rebasedTextFiles": 15,
   "adapters": [
@@ -17875,14 +17879,14 @@
       "sha256": "97ef19ad378d4993a10302e1f8be1e01239812260b0f448f5313de1260a131c4"
     },
     {
-      "path": "assets/BlueprintLibrary-CwjSClZl.js",
+      "path": "assets/BlueprintLibrary-C_bqO__b.js",
       "bytes": 227312,
-      "sha256": "39fb81f9d896a462f63dc2c4dfbcbd95c8164560c532741d054cb48d29d714d6"
+      "sha256": "dfadf63023fbd8ac1f44f8ef1fa5f7328bc97532b0f62b6cc8013e5f561760b5"
     },
     {
-      "path": "assets/DeviceBench-CrXkWCFS.js",
+      "path": "assets/DeviceBench-C065SVkv.js",
       "bytes": 29711,
-      "sha256": "6ba5d1039b3c75ec7a9d94ea22db79891a15f580ede8e7c92cdababe1c3e756c"
+      "sha256": "be6285d512480f3a66bcc5d4f87f2d9643b0c1fa65606b69515320b70891189b"
     },
     {
       "path": "assets/GLTFLoader-B3_Zo2IJ.js",
@@ -17890,9 +17894,9 @@
       "sha256": "5ae7c73573111dfde36155b87c67fd3dc654040faa2f4c029a11db515671401a"
     },
     {
-      "path": "assets/Notebook-P3WanAAt.js",
+      "path": "assets/Notebook-BYeEC20S.js",
       "bytes": 9151,
-      "sha256": "8b7a16f255725c1eebbc9cad09b38c81237742b79dda3f3cf7aefa1a854dbd24"
+      "sha256": "97a270d03da85d4a244e9d820f00ea5d498ab659eb68795a724b20ca6cd3c1ac"
     },
     {
       "path": "assets/OrbitControls--pOmw9PK.js",
@@ -17900,39 +17904,39 @@
       "sha256": "16c4f3bb2c97825b1a7429f10e6ac260e1fa902d68327bce32c44d93195c4b43"
     },
     {
-      "path": "assets/PatentDocumentation-Ybcabl3a.js",
+      "path": "assets/PatentDocumentation-C2glFXCl.js",
       "bytes": 25848,
-      "sha256": "e9b03ff0b29023fa2d7bd2251e0245d92f66f89b5c9afc3b8b6004b6fded7190"
+      "sha256": "2a68ee0e68f981007cc233b2dc1ff0631ba67e4260b6c7c2dab8409b73d83746"
     },
     {
-      "path": "assets/ResearchLibrary-CY-PCL0G.js",
+      "path": "assets/ResearchLibrary-DAW2_9r_.js",
       "bytes": 10022,
-      "sha256": "0d5267d51dbe53c127a5b71dfc41a5a1ffc582388f733861380eb8aa894e0b06"
+      "sha256": "b6205fdfb3646f9f753cbca5eb1193aa0c9091f81220a0b1c0cddcbca3e03694"
     },
     {
-      "path": "assets/RoomListening-kst645DN.js",
+      "path": "assets/RoomListening-DRJ7QcGx.js",
       "bytes": 15863,
-      "sha256": "6186aaf9c02cca7855f96b2d50de679f3e8b124a30b69fff763e56ca6ac4dc87"
+      "sha256": "869ac472fed2e7994b1540e8e6bbc2c365b319caf0eb60c85472f9a3724af3be"
     },
     {
-      "path": "assets/SphereLab-BIY__TXh.css",
-      "bytes": 10659,
-      "sha256": "a9dba06ef7b4cadf6e214e77f0a289640783fab9e994dec82b77a7a7d1c30cf4"
-    },
-    {
-      "path": "assets/SphereLab-BlXLrYBp.js",
+      "path": "assets/SphereLab-8cuJFAUU.js",
       "bytes": 56031,
-      "sha256": "c44b344cf5dd3069bfa5b109e823e99e271dfd59695d13765eaf0f5c8354f085"
+      "sha256": "6d7d7917b88a5570a84b07767476026297b67ad31de15fe83a78aeb7fafab712"
     },
     {
-      "path": "assets/SphereScene-CxBDM7u4.js",
+      "path": "assets/SphereLab-CXstDBOa.css",
+      "bytes": 10539,
+      "sha256": "acbfda2ae3cffff959dbac9cb73f787cedf9f3db293c34eca49618e2eb754c6b"
+    },
+    {
+      "path": "assets/SphereScene-BTgFGv7o.js",
       "bytes": 8517,
-      "sha256": "ce0cb6fe47af320831a962b6e44d5f78a3c00d80b66500b77a8f6c7109e05123"
+      "sha256": "a03c0ad08f96a3414eb5e9894b983b59b81c2e00feabdba1c337d06a278a6448"
     },
     {
-      "path": "assets/control-model-B1LbWtxT.js",
+      "path": "assets/control-model-DmJ00vy6.js",
       "bytes": 4535,
-      "sha256": "dd834e1654d695ff888f15e975dc9e3b006a942fc99798ab41179c969b077937"
+      "sha256": "fb80e967c5e7b578d3f7cb96c2452b70aaac0866c3235d69ad68504f280519f7"
     },
     {
       "path": "assets/device-model-CKbxHMpV.js",
@@ -17955,14 +17959,14 @@
       "sha256": "f734386147d73b5b5fb61fea843e36ddc906e5aa1e7787c2226d385d21da48d1"
     },
     {
+      "path": "assets/index-C5TjE-TN.js",
+      "bytes": 346913,
+      "sha256": "f7836700f7e8fabfeff10341c64dac735f70302ea2304ec3db9e528a2975306c"
+    },
+    {
       "path": "assets/index-CtEqUbHU.css",
       "bytes": 41260,
       "sha256": "2e685ad18dcf25f056fc5c9113d18ef93a8fcb17ecc9b6cf65b75574f0070ccd"
-    },
-    {
-      "path": "assets/index-rBVC9xvB.js",
-      "bytes": 346913,
-      "sha256": "eb898101386f9bce3bed731e498fa16f83cd43efbdb55e254f1446577b1dbc59"
     },
     {
       "path": "assets/research/nataraja-image.jpg",
@@ -17982,17 +17986,17 @@
     {
       "path": "data/blueprints-manifest.json",
       "bytes": 7067,
-      "sha256": "1d4dc916d86e35832a348ebc6e0f1f1e7d2bbb358c0148d04565960d7a2f3eae"
+      "sha256": "353890f26849e34b335a8cbc249a6f6a1ec28b7f0269367a9184307b1160f148"
     },
     {
       "path": "data/blueprints.json",
       "bytes": 196662,
-      "sha256": "090c8c9bc178747c84674a63114b3f7df2ee727458cc76d4f3a0381b5e6c54e1"
+      "sha256": "094eb8a2f154d3178961c7cf7753ecaec2f49f7de5c2d55dbb875d00bc552543"
     },
     {
       "path": "data/build-identity.json",
       "bytes": 65247,
-      "sha256": "48bca5fd6f77804d50408aa51a95878fdfdc3875d9b507916f38b2b149851d07"
+      "sha256": "962f15a6758f816c2d84dfc8d2ee964ddf5153602f01dde1bfad8d45f890492a"
     },
     {
       "path": "data/dashboard-release.json",
@@ -18022,12 +18026,12 @@
     {
       "path": "data/workspace.json",
       "bytes": 225815,
-      "sha256": "c67ceae759754dd7164620ea697fce4a7d422ab94f21f4d7d08e7b40ed38b328"
+      "sha256": "615a46967e96255718cd9645001c7a3954258ac02a756e222e294ea2b61840bf"
     },
     {
       "path": "index.html",
       "bytes": 896,
-      "sha256": "323f01c018af76ab10a829dfa8619ff9dc63980ce252731384dc3fa592e164d4"
+      "sha256": "c9e6208d35b2f2a7697ffa3a8ab174c9de75b3b631420f393fad619c06a419f6"
     },
     {
       "path": "integration/dashboard-bridge.js",

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T15:21:30.719Z",
+  "generatedAt": "2026-11-17T15:25:25.936Z",
   "implementation": {
-    "generatedAt": "2026-11-17T15:21:31.065Z",
+    "generatedAt": "2026-11-17T15:25:26.243Z",
     "source": "live-filesystem",
     "complete": true,
     "algorithm": "SHA-256 of UTF-8 JSON sorted filename-to-SHA256 map",
@@ -18,8 +18,8 @@
       "public/assets/devices/passive-circuit-concept.png": "f734386147d73b5b5fb61fea843e36ddc906e5aa1e7787c2226d385d21da48d1",
       "public/assets/research/nataraja-image.jpg": "f80fff80cc71999645eae304932b3ec45180662a7e39c2398e9f5c12d886136a",
       "public/data/blueprint-build-guides.json": "413aca7caa3150652e74f79118fabf4ce1b431ee1d44cc2c54bc3b0b4e55083d",
-      "public/data/blueprints-manifest.json": "1d4dc916d86e35832a348ebc6e0f1f1e7d2bbb358c0148d04565960d7a2f3eae",
-      "public/data/blueprints.json": "090c8c9bc178747c84674a63114b3f7df2ee727458cc76d4f3a0381b5e6c54e1",
+      "public/data/blueprints-manifest.json": "353890f26849e34b335a8cbc249a6f6a1ec28b7f0269367a9184307b1160f148",
+      "public/data/blueprints.json": "094eb8a2f154d3178961c7cf7753ecaec2f49f7de5c2d55dbb875d00bc552543",
       "public/data/dashboard-release.json": "ea4bce4719a6ddb459da5eac703a3e1cfb20584c1940c206714b08c35cc01901",
       "public/data/patent-literature.json": "9811c4e45947ef84142a72d0ed84d1d885b7535e51ee6ab35353932559b1f7bb",
       "public/data/patent-overlays.json": "f966942f85706bf522fed76fd5628b77c65589877dc6b831541bd24cc61ad37d",
@@ -526,7 +526,7 @@
       "src/workbench/sphere-acoustics.ts": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473",
       "src/workbench/sphere-drawings.test.ts": "1ac334a0ac10daeea189ad7b1105773c9bc9deabc2c2badd6ee3a9855f638dda",
       "src/workbench/sphere-drawings.ts": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb",
-      "src/workbench/sphere-lab.css": "7e7dd38ce372bfd8f557076bc705bd83a85a27f559bc7dfcfb59cfa7ecc5dfb0",
+      "src/workbench/sphere-lab.css": "f0be65042fc2255e356411800799e833187b935311655f86593a46d17106ef17",
       "src/workbench/sphere-models.test.ts": "cc4be5ccf50f38a3d38f8046b48f77d89a34ef2d02c7437d0164b6de12049132",
       "src/workbench/sphere-models.ts": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d",
       "src/workbench/sphere-quantum.test.ts": "cadcedd26f2cb187cf8249079438829aa8b963929403795b2bcd9c8247cc78f5",
@@ -543,7 +543,7 @@
       "tsconfig.node.json": "c3dd0fb522feba3596713f51b95bd53d781d845d24aedbfa2ac093d8b39c5120",
       "vite.config.ts": "ba9676a351a36c475fa4f4d736e66d7b2db57ed9f75be941e4f71257ffa62a54"
     },
-    "digest": "b337974cd9197cba68a6302107c4a55938be50841d2faed29a6afbb59b606cd0",
+    "digest": "b85c416f42862b17e21f680ef88ca671629e758fd7ef5a15904bd2722aa55b29",
     "unavailable": []
   },
   "observation": "Dated authoring snapshot bundled for GitHub Pages; no live Git, Docker or hardware API is hosted",
@@ -601,7 +601,7 @@
           "scope": "Host implementation digest comparison; source Git HEAD is separate"
         },
         "sourceHead": "f6cf8c3fed3cf5ba10c1d73da8974e282aa397d2",
-        "observedAt": "2026-11-17T15:21:31.187Z",
+        "observedAt": "2026-11-17T15:25:26.362Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -671,7 +671,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "90c4652fd268d1bdc52a62964f1204e258adae4d",
-        "observedAt": "2026-11-17T15:21:31.186Z",
+        "observedAt": "2026-11-17T15:25:26.361Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -762,7 +762,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "02425613cd057406d92c4f3ee33b5fc54a493601",
-        "observedAt": "2026-11-17T15:21:31.186Z",
+        "observedAt": "2026-11-17T15:25:26.360Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -823,7 +823,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "ca6da8566a8bccbf6596292267dd45d6c52d6d11",
-        "observedAt": "2026-11-17T15:21:31.185Z",
+        "observedAt": "2026-11-17T15:25:26.360Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -887,7 +887,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
-        "observedAt": "2026-11-17T15:21:31.189Z",
+        "observedAt": "2026-11-17T15:25:26.363Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -951,7 +951,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
-        "observedAt": "2026-11-17T15:21:31.187Z",
+        "observedAt": "2026-11-17T15:25:26.361Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -1011,7 +1011,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "1c7b9971b74aa14aeae426d40ba8eda0ae0d8644",
-        "observedAt": "2026-11-17T15:21:31.185Z",
+        "observedAt": "2026-11-17T15:25:26.360Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -1065,7 +1065,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "9249e3d4596cd4f20575120f635ab2073371d18c",
-        "observedAt": "2026-11-17T15:21:31.185Z",
+        "observedAt": "2026-11-17T15:25:26.360Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -1125,7 +1125,7 @@
           "scope": "Manifest commit comparison only; entry readability is not application or container health"
         },
         "sourceHead": "39d622394bed9f8d370695502a9e753478695434",
-        "observedAt": "2026-11-17T15:21:31.186Z",
+        "observedAt": "2026-11-17T15:25:26.360Z",
         "scope": "Bounded local adapter entry and declared build-source observation; published reachability is not checked"
       },
       "routes": [
@@ -1252,7 +1252,7 @@
     "githubWrites": false
   },
   "buildIdentity": {
-    "generatedAt": "2026-11-17T15:21:31.065Z",
+    "generatedAt": "2026-11-17T15:25:26.243Z",
     "source": "build-source-pin",
     "complete": true,
     "algorithm": "SHA-256 of UTF-8 JSON sorted filename-to-SHA256 map",
@@ -1268,8 +1268,8 @@
       "public/assets/devices/passive-circuit-concept.png": "f734386147d73b5b5fb61fea843e36ddc906e5aa1e7787c2226d385d21da48d1",
       "public/assets/research/nataraja-image.jpg": "f80fff80cc71999645eae304932b3ec45180662a7e39c2398e9f5c12d886136a",
       "public/data/blueprint-build-guides.json": "413aca7caa3150652e74f79118fabf4ce1b431ee1d44cc2c54bc3b0b4e55083d",
-      "public/data/blueprints-manifest.json": "1d4dc916d86e35832a348ebc6e0f1f1e7d2bbb358c0148d04565960d7a2f3eae",
-      "public/data/blueprints.json": "090c8c9bc178747c84674a63114b3f7df2ee727458cc76d4f3a0381b5e6c54e1",
+      "public/data/blueprints-manifest.json": "353890f26849e34b335a8cbc249a6f6a1ec28b7f0269367a9184307b1160f148",
+      "public/data/blueprints.json": "094eb8a2f154d3178961c7cf7753ecaec2f49f7de5c2d55dbb875d00bc552543",
       "public/data/dashboard-release.json": "ea4bce4719a6ddb459da5eac703a3e1cfb20584c1940c206714b08c35cc01901",
       "public/data/patent-literature.json": "9811c4e45947ef84142a72d0ed84d1d885b7535e51ee6ab35353932559b1f7bb",
       "public/data/patent-overlays.json": "f966942f85706bf522fed76fd5628b77c65589877dc6b831541bd24cc61ad37d",
@@ -1776,7 +1776,7 @@
       "src/workbench/sphere-acoustics.ts": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473",
       "src/workbench/sphere-drawings.test.ts": "1ac334a0ac10daeea189ad7b1105773c9bc9deabc2c2badd6ee3a9855f638dda",
       "src/workbench/sphere-drawings.ts": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb",
-      "src/workbench/sphere-lab.css": "7e7dd38ce372bfd8f557076bc705bd83a85a27f559bc7dfcfb59cfa7ecc5dfb0",
+      "src/workbench/sphere-lab.css": "f0be65042fc2255e356411800799e833187b935311655f86593a46d17106ef17",
       "src/workbench/sphere-models.test.ts": "cc4be5ccf50f38a3d38f8046b48f77d89a34ef2d02c7437d0164b6de12049132",
       "src/workbench/sphere-models.ts": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d",
       "src/workbench/sphere-quantum.test.ts": "cadcedd26f2cb187cf8249079438829aa8b963929403795b2bcd9c8247cc78f5",
@@ -1793,12 +1793,12 @@
       "tsconfig.node.json": "c3dd0fb522feba3596713f51b95bd53d781d845d24aedbfa2ac093d8b39c5120",
       "vite.config.ts": "ba9676a351a36c475fa4f4d736e66d7b2db57ed9f75be941e4f71257ffa62a54"
     },
-    "digest": "b337974cd9197cba68a6302107c4a55938be50841d2faed29a6afbb59b606cd0",
+    "digest": "b85c416f42862b17e21f680ef88ca671629e758fd7ef5a15904bd2722aa55b29",
     "unavailable": [],
     "note": "Captured before compilation; live source observation remains separate"
   },
   "observedImplementation": {
-    "generatedAt": "2026-11-17T15:21:31.065Z",
+    "generatedAt": "2026-11-17T15:25:26.243Z",
     "source": "live-filesystem",
     "complete": true,
     "algorithm": "SHA-256 of UTF-8 JSON sorted filename-to-SHA256 map",
@@ -1814,8 +1814,8 @@
       "public/assets/devices/passive-circuit-concept.png": "f734386147d73b5b5fb61fea843e36ddc906e5aa1e7787c2226d385d21da48d1",
       "public/assets/research/nataraja-image.jpg": "f80fff80cc71999645eae304932b3ec45180662a7e39c2398e9f5c12d886136a",
       "public/data/blueprint-build-guides.json": "413aca7caa3150652e74f79118fabf4ce1b431ee1d44cc2c54bc3b0b4e55083d",
-      "public/data/blueprints-manifest.json": "1d4dc916d86e35832a348ebc6e0f1f1e7d2bbb358c0148d04565960d7a2f3eae",
-      "public/data/blueprints.json": "090c8c9bc178747c84674a63114b3f7df2ee727458cc76d4f3a0381b5e6c54e1",
+      "public/data/blueprints-manifest.json": "353890f26849e34b335a8cbc249a6f6a1ec28b7f0269367a9184307b1160f148",
+      "public/data/blueprints.json": "094eb8a2f154d3178961c7cf7753ecaec2f49f7de5c2d55dbb875d00bc552543",
       "public/data/dashboard-release.json": "ea4bce4719a6ddb459da5eac703a3e1cfb20584c1940c206714b08c35cc01901",
       "public/data/patent-literature.json": "9811c4e45947ef84142a72d0ed84d1d885b7535e51ee6ab35353932559b1f7bb",
       "public/data/patent-overlays.json": "f966942f85706bf522fed76fd5628b77c65589877dc6b831541bd24cc61ad37d",
@@ -2322,7 +2322,7 @@
       "src/workbench/sphere-acoustics.ts": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473",
       "src/workbench/sphere-drawings.test.ts": "1ac334a0ac10daeea189ad7b1105773c9bc9deabc2c2badd6ee3a9855f638dda",
       "src/workbench/sphere-drawings.ts": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb",
-      "src/workbench/sphere-lab.css": "7e7dd38ce372bfd8f557076bc705bd83a85a27f559bc7dfcfb59cfa7ecc5dfb0",
+      "src/workbench/sphere-lab.css": "f0be65042fc2255e356411800799e833187b935311655f86593a46d17106ef17",
       "src/workbench/sphere-models.test.ts": "cc4be5ccf50f38a3d38f8046b48f77d89a34ef2d02c7437d0164b6de12049132",
       "src/workbench/sphere-models.ts": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d",
       "src/workbench/sphere-quantum.test.ts": "cadcedd26f2cb187cf8249079438829aa8b963929403795b2bcd9c8247cc78f5",
@@ -2339,7 +2339,7 @@
       "tsconfig.node.json": "c3dd0fb522feba3596713f51b95bd53d781d845d24aedbfa2ac093d8b39c5120",
       "vite.config.ts": "ba9676a351a36c475fa4f4d736e66d7b2db57ed9f75be941e4f71257ffa62a54"
     },
-    "digest": "b337974cd9197cba68a6302107c4a55938be50841d2faed29a6afbb59b606cd0",
+    "digest": "b85c416f42862b17e21f680ef88ca671629e758fd7ef5a15904bd2722aa55b29",
     "unavailable": []
   }
 }

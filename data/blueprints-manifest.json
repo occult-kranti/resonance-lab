@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "artifact": "blueprints.json",
-  "sha256": "090c8c9bc178747c84674a63114b3f7df2ee727458cc76d4f3a0381b5e6c54e1",
+  "sha256": "094eb8a2f154d3178961c7cf7753ecaec2f49f7de5c2d55dbb875d00bc552543",
   "sourcePins": [
     {
       "repository": "newton-tesla-research-lab",
