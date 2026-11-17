@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-11-17T04:58:01.832160+00:00",
+  "scope": "Bounded 2023\u20132026 research search and selected primary-text reading; not an exhaustive SOTA, patentability or freedom-to-operate search.",
+  "sources": [
+    {
+      "id": "paper-wpt-2025",
+      "title": "Maximizing wireless power transfer efficiency at exceptional points (2025)",
+      "url": "https://www.nature.com/articles/s44172-025-00445-y",
+      "kind": "modern primary research paper",
+      "readingDepth": "Selected full-text sections read: Abstract, Results: exceptional point and maximum efficiency; Conclusions; selected coupled-mode model paragraphs",
+      "section": "Abstract, Results: exceptional point and maximum efficiency; Conclusions; selected coupled-mode model paragraphs",
+      "finding": "The authors propose adaptive virtual-load loss adjustment in an active parity-time-symmetric WPT system; source gain and receiver losses are explicit.",
+      "limit": "This active converter system is not the existing passive R1/R2 fixture. No efficiency, component value or hardware performance is transferred to this workbench.",
+      "sha256": "cce6c431e2c86f88e75555ebc7ae6e6249122ad8c8769f7bd8eb550756be20d1",
+      "capture": "docs/patent-standard/sources/paper-wpt-2025.html"
+    },
+    {
+      "id": "paper-rir-2025",
+      "title": "Deep room impulse response completion (2025)",
+      "url": "https://link.springer.com/article/10.1186/s13636-024-00383-1",
+      "kind": "modern primary research paper",
+      "readingDepth": "Selected full-text sections read: Abstract, Introduction, Discussion, Conclusion and data-availability paragraphs",
+      "section": "Abstract, Introduction, Discussion, Conclusion and data-availability paragraphs",
+      "finding": "DECOR predicts a late reverberation tail from an early room impulse response; the authors report degraded performance on an unseen dataset.",
+      "limit": "A predicted tail is synthetic. It cannot recover a unique monument geometry, material response or historical sound without independent measurements.",
+      "sha256": "d28347346b4745ac09825715e737427aaabde10252a0fc38aa3509fbd4186835",
+      "capture": "docs/patent-standard/sources/paper-rir-2025.html"
+    },
+    {
+      "id": "US20260246304A1",
+      "title": "US20260246304A1 - Systems and Methods for Dynamically Tuning a Wireless Power Transfer System",
+      "url": "https://patents.google.com/patent/US20260246304A1/en",
+      "kind": "published patent application; legal status not assessed",
+      "readingDepth": "Abstract and claim1 read; selected controller-description context",
+      "finding": "The application describes jointly configurable drive frequency, supply voltage and a capacitor bank under transmitter control.",
+      "limit": "Published application text is a proposal, not independent validation. Its controller/converter cannot be substituted into the fixed passive source model or treated as permission to manufacture.",
+      "sha256": "8fcb2338a5314bab7f6b521211fe198655a2ed14dba2ad36026f3aa9cb6ba69d",
+      "capture": "docs/patent-standard/sources/US20260246304A1.html"
+    },
+    {
+      "id": "US20260233630A1",
+      "title": "US20260233630A1 - Method and system for metering electricity transmitted to electric vehicles over a wireless power transfer system",
+      "url": "https://patents.google.com/patent/US20260233630A1/en",
+      "kind": "published patent application; legal status not assessed",
+      "readingDepth": "Abstract and claims1\u20135 read; selected field/background definitions",
+      "finding": "The application separates management-unit energy input and per-transmitter distribution for energy metering.",
+      "limit": "Road/vehicle accounting is a different system boundary; current-only allocation is not sufficient proof of full phase-aware receiver energy in this bench.",
+      "sha256": "9701a317b517d92e113eed96bccce69498b6539741a7e010a2c8fde549ba4085",
+      "capture": "docs/patent-standard/sources/US20260233630A1.html"
+    },
+    {
+      "id": "US20260229927A1",
+      "title": "US20260229927A1 - Dynamic control of wireless power for a variable load",
+      "url": "https://patents.google.com/patent/US20260229927A1/en",
+      "kind": "published patent application; legal status not assessed",
+      "readingDepth": "Abstract and claims1\u20138 read; selected technical-field context",
+      "finding": "The application describes reference load states, feedback, coupling-factor references and synchronization of control changes.",
+      "limit": "A communication/control proposal does not establish a calibrated coupling factor, stable closed-loop operation or improved efficiency in this fixture.",
+      "sha256": "9418f3fec43d30d015b61401b9e158a1119f9e0395eb481e677a9a423ee1929e",
+      "capture": "docs/patent-standard/sources/US20260229927A1.html"
+    },
+    {
+      "id": "US20240029705A1",
+      "title": "US20240029705A1 - Acoustic levitation system, computer-implemented method for levitating an object, computer program and non-volatile data carrier",
+      "url": "https://patents.google.com/patent/US20240029705A1/en",
+      "kind": "published patent application; legal status not assessed",
+      "readingDepth": "Abstract read; selected claim1 and description-of-figures context",
+      "finding": "The application describes phased acoustic transducer elements and a reflector-relative standing-wave arrangement.",
+      "limit": "This is a separate ultrasonic hardware proposal, not an effect produced by phone audio, a monument image or the current audible sonification. No operating power, exposure limit or compatible hardware is established here.",
+      "sha256": "89f6acc71f1917e56c00238cd91c11ad320f0b9f836cb688b103522203abdf66",
+      "capture": "docs/patent-standard/sources/US20240029705A1.html"
+    }
+  ],
+  "improvements": [
+    {
+      "id": "wpt-calibrated-load-sweep",
+      "title": "Compare coupling and load robustness before adaptive control",
+      "recordIds": [
+        "nt:coupled-coils",
+        "atlas:v4-electric-energy"
+      ],
+      "proposal": "Record a calibrated baseline across coil placement and receiving load. Evaluate an adaptive-load candidate as a separate design branch with its converter and controller power inside the energy boundary.",
+      "rationale": "The 2025 primary paper makes source gain and receiver loss explicit; its active PT model motivates a controlled comparison rather than silently modifying the passive source fixture.",
+      "requiredValidation": [
+        "Keep source R1/R2 peak-voltage values unchanged in the baseline.",
+        "Characterize actual self/mutual inductance and phase-aware sensing at each geometry.",
+        "Include every controller/drive/auxiliary supply, load heat, winding loss and endpoint storage in the energy account.",
+        "Predefine comparable operating points, uncertainties and pass/fail criteria before a new hardware branch."
+      ],
+      "sourceIds": [
+        "paper-wpt-2025"
+      ],
+      "status": "proposed research improvement; not implemented or physically validated"
+    },
+    {
+      "id": "rir-prediction-labeled-branch",
+      "title": "Evaluate synthetic late reverberation separately from measured room response",
+      "recordIds": [
+        "atlas:v4-phone-witness-plan",
+        "atlas:v4-phone-witness-3d",
+        "atlas:v4-dual-channel-plan",
+        "atlas:v4-dual-channel-3d"
+      ],
+      "proposal": "Retain the raw measured response and deterministic early-reflection baseline. In a separate optional research branch, compare a predicted late tail with held-out measured rooms and clearly label all inferred samples.",
+      "rationale": "The 2025 DECOR full-text discussion identifies unseen-room generalization losses. A modelled tail is useful for auralization while retaining the measurement and inference boundary.",
+      "requiredValidation": [
+        "Review code/data licenses before any model import; no model is downloaded or added here.",
+        "Keep held-out rooms separate from training or tuning.",
+        "Record sampling rate, excitation, microphone calibration, source and receiver positions and processing.",
+        "Compare frequency-dependent decay and waveform/energy diagnostics against actual measured tails; report uncertainty and failure cases.",
+        "Do not label the predicted tail as a measured monument resonance or intrinsic material damping."
+      ],
+      "sourceIds": [
+        "paper-rir-2025"
+      ],
+      "status": "proposed research improvement; not implemented or physically validated"
+    },
+    {
+      "id": "proposal-US20260246304A1",
+      "title": "Log frequency, supply and tuning state as separate control variables",
+      "recordIds": [
+        "nt:coupled-coils",
+        "atlas:v4-electric-energy"
+      ],
+      "proposal": "Define a separate controlled-excitation test branch whose experimental log records drive frequency, supply voltage, selected capacitor configuration and source power at each step.",
+      "rationale": "A recent 2026 application distinguishes these control variables. Keeping them separately recorded prevents an apparent improvement caused by an unnoticed input-power change.",
+      "requiredValidation": [
+        "Preserve the frozen source baseline and proposed branch as different revisions.",
+        "Document all switched capacitance ratings, transient limits and controller/converter auxiliary power before assembly.",
+        "Run fixed-load and fixed-source controls with calibrated simultaneous voltage/current acquisition.",
+        "Compare total energy and uncertainty, not receiver voltage alone."
+      ],
+      "sourceIds": [
+        "US20260246304A1"
+      ],
+      "status": "proposed research improvement; not implemented or physically validated"
+    },
+    {
+      "id": "proposal-US20260233630A1",
+      "title": "Separate input, branch and load energy measurement boundaries",
+      "recordIds": [
+        "nt:coupled-coils",
+        "atlas:v4-electric-energy",
+        "atlas:v4-magnetic-work"
+      ],
+      "proposal": "Create a commissioning worksheet with independently identified input, transfer-branch and receiving-load energy channels, signed polarity and start/end storage states.",
+      "rationale": "The 2026 application explicitly distinguishes input and distributed energy accounting. The transferable research question is boundary completeness; its road-metering implementation is not adopted.",
+      "requiredValidation": [
+        "Calibrate each voltage/current channel including phase and clock alignment.",
+        "Include internal loss, external supports/auxiliary sources and endpoint stored energy.",
+        "Compare an independent energy quadrature with the original solver accounting.",
+        "Do not equate current allocation with measured load energy without the corresponding voltage and phase."
+      ],
+      "sourceIds": [
+        "US20260233630A1"
+      ],
+      "status": "proposed research improvement; not implemented or physically validated"
+    },
+    {
+      "id": "proposal-US20260229927A1",
+      "title": "Test load-state transition timing and feedback delay",
+      "recordIds": [
+        "nt:coupled-coils",
+        "nt:environmental-witness",
+        "atlas:v4-electric-energy"
+      ],
+      "proposal": "Preregister a test for whether load changes, acquisition timing or delayed feedback can create apparent power-gain peaks; keep fixed-state baselines and state-transition receipts.",
+      "rationale": "The 2026 application identifies load states, coupling references and synchronization. They motivate controls for transient artifacts before any adaptive control is added.",
+      "requiredValidation": [
+        "Log the exact source, load and feedback state against a shared clock.",
+        "Compare delayed and exchanged-channel controls.",
+        "Measure rather than infer coupling from gap or a product name.",
+        "Record every drive/controller supply and validate stability before a hardware fork."
+      ],
+      "sourceIds": [
+        "US20260229927A1"
+      ],
+      "status": "proposed research improvement; not implemented or physically validated"
+    },
+    {
+      "id": "proposal-US20240029705A1",
+      "title": "Keep ultrasonic trapping as a separately specified experimental branch",
+      "recordIds": [
+        "atlas:v4-phone-witness-plan",
+        "atlas:v4-dual-channel-plan"
+      ],
+      "proposal": "If acoustic manipulation is investigated, create a separate transducer/controller/reflector specification and position-calibration protocol rather than interpreting a phone or image-mapped pitch as a trapping field.",
+      "rationale": "The 2024 application is an explicit controlled phase-and-reflector proposal. It identifies why the current audible mixed-recording setup cannot itself establish levitation.",
+      "requiredValidation": [
+        "Obtain an actual transducer, drive, geometry and exposure specification before a hardware procedure.",
+        "Define calibrated position/force observations and ordinary mechanical/acoustic alternatives.",
+        "Retain source-only, reflector-position and object-removed controls.",
+        "No ultrasonic drive instructions, exposure limits or claimed trapping performance are supplied by this documentation."
+      ],
+      "sourceIds": [
+        "US20240029705A1"
+      ],
+      "status": "proposed research improvement; not implemented or physically validated"
+    }
+  ]
+}

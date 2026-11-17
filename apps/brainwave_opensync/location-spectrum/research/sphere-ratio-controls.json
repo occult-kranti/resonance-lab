@@ -1,0 +1,94 @@
+{
+  "schema": "independent-sphere-ratio-control/v1",
+  "executedAt": "2026-11-17T06:39:08.471131+00:00",
+  "status": "synthetic-arithmetic-not-measurement",
+  "method": "60-digit Decimal arithmetic from four raw frequency estimates; distinct implementation from root first-order producer",
+  "units": {
+    "rawFrequency": "Hz",
+    "rA": "dimensionless test/reference atA",
+    "rB": "dimensionless test/reference atB",
+    "relativeBoverAppm": "1e6*(rB/rA-1)",
+    "registeredAminusBppb": "1e9*(rA-rB)"
+  },
+  "baseline": {
+    "rawHz": {
+      "testA": "250000",
+      "referenceA": "200000",
+      "testB": "249999.75",
+      "referenceB": "200000"
+    },
+    "result": {
+      "rA": "1.25",
+      "rB": "1.24999875",
+      "relativeBoverAppm": "-1.000000",
+      "registeredAminusBppb": "1250.00000000"
+    }
+  },
+  "varyingSharedMultiplicativeClock": {
+    "positionAErrorPpm": "15",
+    "positionBErrorPpm": "-30",
+    "result": {
+      "rA": "1.25",
+      "rB": "1.24999875",
+      "relativeBoverAppm": "-1.000000",
+      "registeredAminusBppb": "1250.00000000"
+    },
+    "verdict": "Both contrast quantities unchanged because error is identical between channels at each position."
+  },
+  "wrongModelControls": {
+    "naiveUnitConversion": {
+      "predictedPpb": "1000.000000",
+      "actualRegisteredPpb": "1250.00000000",
+      "verdict": "Fails because baseline rA=1.25 is omitted."
+    },
+    "channelClockMismatchWithNoTrueShift": {
+      "testBOnlyErrorPpm": "1",
+      "result": {
+        "rA": "1.25",
+        "rB": "1.25000125",
+        "relativeBoverAppm": "1.000000",
+        "registeredAminusBppb": "-1250.00000000"
+      },
+      "verdict": "Produces apparent signal without a true mechanical location shift; cancellation is conditional."
+    }
+  },
+  "rootProducerCheck": {
+    "source": "src/workbench/sphere-models.ts",
+    "sha256": "9515254ba39198de1235dce685f8d278acfa844f1d76c821692ff494deb1da20",
+    "defaultMetrics": [
+      {
+        "label": "Apparent ratio shift",
+        "value": -1,
+        "unit": "ppm",
+        "meaning": "First-order differential thermal term plus deliberately injected location term."
+      },
+      {
+        "label": "Frequency equivalent",
+        "value": -0.25,
+        "unit": "Hz",
+        "meaning": "Selected assumed mode times the fractional ratio shift."
+      },
+      {
+        "label": "Thermal contribution",
+        "value": -1,
+        "unit": "ppm",
+        "meaning": "Can imitate the location signal unless independently calibrated."
+      }
+    ],
+    "commonClockPpmSweep": [
+      -100,
+      100
+    ],
+    "observedPpm": [
+      -1,
+      -1
+    ],
+    "injectedThermalCancellationPpm": 0,
+    "verdict": "Matches independent thermal fixture within the stated first-order model; no uncertainty or measured effect inferred."
+  },
+  "limits": [
+    "No equivalence margin, uncertainty interval, covariance estimate or physical data is supplied.",
+    "The host ratio toy omits differential reference temperature, channel-specific clocks and time mismatch.",
+    "Same-clock cancellation is exact only for the declared common multiplicative error model."
+  ]
+}

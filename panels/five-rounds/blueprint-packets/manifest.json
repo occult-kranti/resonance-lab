@@ -1,0 +1,279 @@
+{
+  "schema": "authored-blueprint-packet-set/v1",
+  "generatedAt": "2026-11-17T04:32:55.903Z",
+  "inventory": {
+    "proposalIds": 15,
+    "active": 13,
+    "excluded": 2,
+    "records": 11
+  },
+  "scope": "Source-stipulated geometry and explanatory flows, with original source pins and explicit unknown specifications. No real device validation.",
+  "pdfGenerated": true,
+  "terms": 64,
+  "glossarySha256": "12781e44b174ccb07a6a295fd20ccb64f8b3fc87cc315491b89ac1f34ebe405e",
+  "records": [
+    {
+      "id": "nt:coupled-coils",
+      "title": "Coupled-coil energy and phase bench",
+      "view": "plan",
+      "units": "mm",
+      "kind": "setup family",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "projectionViews": [
+        "plan",
+        "elevation",
+        "flow"
+      ],
+      "componentCount": 9,
+      "dimensionCount": 7,
+      "termCount": 39,
+      "files": {
+        "nt-coupled-coils.svg": "706342f5a8ab01d86ef49df4d7e7479a695bd2d36e73147daa51a153838588c7",
+        "nt-coupled-coils.json": "162c6f282ec4013be8caafbc55631e28dbc2dda76a04bb7fce8b17595ace6c78",
+        "nt-coupled-coils.html": "685a8610df53f6c4c6edafbea886ae194dbda9009d558d119207722aeca6e3dd",
+        "nt-coupled-coils.md": "8cb0e9e62545fe02e19eb2c85b1b88d9a28fbcceb201e8b8444114fdf3a0e342",
+        "nt-coupled-coils-elevation.svg": "984791ca78e1bbf76b92b597b6883e0735fb98717069d4607d6df7f3c0f70bfc",
+        "nt-coupled-coils-flow.svg": "88b295a8981f541766034fd64acb081b7eac84d611eef6c9deca83b258c62877",
+        "nt-coupled-coils.pdf": "cdee65511cc859cb814f8dacbc2833bdcd383de2abf05b9923dbb516f44d1fb1"
+      }
+    },
+    {
+      "id": "nt:environmental-witness",
+      "title": "Environmental witness and signal leakage",
+      "view": "plan",
+      "units": "mm",
+      "kind": "setup family",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "projectionViews": [
+        "plan",
+        "elevation",
+        "flow"
+      ],
+      "componentCount": 1,
+      "dimensionCount": 4,
+      "termCount": 25,
+      "files": {
+        "nt-environmental-witness.svg": "7d23cea6aa76ed8ff5ccf9d0eda28d1d034dc23cc6a2efa4d6b5b0d4b748d783",
+        "nt-environmental-witness.json": "6da485df9b10984c81478b22a70ef9d7a50d4a9c3ddb713bafe6e9c3dff50465",
+        "nt-environmental-witness.html": "00a9a34f653b7dfa54a0831b7f99a0f226657d19189f9bf5a8bcb420a24bbc74",
+        "nt-environmental-witness.md": "5ae31e258d0fcb7aaeec4dd5dd2def16b92c6558864df54e3d646cd8ef79402a",
+        "nt-environmental-witness-elevation.svg": "80465ceb7847215f570e5a0bc7b37d321f8be1961ebe3c5baa65c0fa02b72dc1",
+        "nt-environmental-witness-flow.svg": "ecef20389e97a055cd98e83e81badd76bcb9e5e73cec073846de2943143fa773",
+        "nt-environmental-witness.pdf": "18c40732782273c7525046b25ed3b56304b47f8b7a031f807398abae9c62469e"
+      }
+    },
+    {
+      "id": "nt:newton-prism",
+      "title": "Newton-style prism control study",
+      "view": "plan",
+      "units": "mm",
+      "kind": "setup family",
+      "status": "source_supported_modern_reconstruction",
+      "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "projectionViews": [
+        "plan",
+        "flow"
+      ],
+      "componentCount": 2,
+      "dimensionCount": 6,
+      "termCount": 7,
+      "files": {
+        "nt-newton-prism.svg": "53662c375492bc771e7876af680c68c972a63f577d65ddddd65576d23e166ae2",
+        "nt-newton-prism.json": "1f3d6b6167902cd73329f1380b8d6d4779575a7d12d2f314fb6898b776d5c6d3",
+        "nt-newton-prism.html": "7dd438c27d1291404dcceca60fb72b11db1aa21ffadb4ccf17bbaa52d3bdbfd0",
+        "nt-newton-prism.md": "f744614e04c489b712f907ab70b2efdd552daa4700255b67d522d22ee9c6e147",
+        "nt-newton-prism-flow.svg": "73a1079d10ffd51141be7401f638b9f0bab783dea83a04599d86ce5f3d099ae0",
+        "nt-newton-prism.pdf": "32897537b20bbeebdaa355ab41155d715416f074b0b8011b86f430c5d2cace2e"
+      }
+    },
+    {
+      "id": "atlas:v4-phone-witness-plan",
+      "title": "Two phones, one mixed recording",
+      "view": "flow",
+      "units": "mm",
+      "kind": "dimensioned SVG apparatus plan",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 17,
+      "files": {
+        "atlas-v4-phone-witness-plan.svg": "7b00e44c91f35b2f39fb87754b19a13284424de18671197f83969c3c81f25881",
+        "atlas-v4-phone-witness-plan.json": "4abd7bae2949b06ac5aebb2c4c96a98e5da5dfe3a3d43384d0456e0ad6f68396",
+        "atlas-v4-phone-witness-plan.html": "a9305262fb7e918fbce1f2205fd1fe7e5cf0d32301146d3f74f6e4b88ed1d533",
+        "atlas-v4-phone-witness-plan.md": "96fafdab3874bc8c3c7943571c7f2249c02363aacffc9f5bb2a65188d291286d",
+        "atlas-v4-phone-witness-plan.pdf": "7dccde13297ed1483804752b75fc436988fa72094a62ac40416e962b0f0c8630"
+      }
+    },
+    {
+      "id": "atlas:v4-phone-witness-3d",
+      "title": "Least-material bench in three dimensions",
+      "view": "flow",
+      "units": "mm",
+      "kind": "deterministic 3D geometry render",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 17,
+      "files": {
+        "atlas-v4-phone-witness-3d.svg": "ed57a5e80c4ad4ae0751f8116f4db0bdcc3efaf6320d2918decf5c039fbaf3ed",
+        "atlas-v4-phone-witness-3d.json": "ca489f24a0aaf80bab7ec898ce10bbe2da9ef000e1df1f23aef1eaffb2813a98",
+        "atlas-v4-phone-witness-3d.html": "25add13627f5715cfc3b43f4b6370ef3e59c449100787d4a290950a04cd18813",
+        "atlas-v4-phone-witness-3d.md": "e5aae0e6d1391141211aba418e554f3deee470a92e61b3f4a0ea436560543da8",
+        "atlas-v4-phone-witness-3d.pdf": "724d4a8ab7a81326dd131a769964f141d65ad18a95272be67fa4afe90738404e"
+      }
+    },
+    {
+      "id": "atlas:v4-dual-channel-plan",
+      "title": "Optional source-monitor channel",
+      "view": "flow",
+      "units": "mm",
+      "kind": "dimensioned SVG apparatus plan",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 17,
+      "files": {
+        "atlas-v4-dual-channel-plan.svg": "110dca605f90fd6dafadbbcd9e4dfe5935afa0c18e963a93a74ede92fd405430",
+        "atlas-v4-dual-channel-plan.json": "bf30167b545995466dc2a3aa4beb8c2704976238e63bde5773fac0931e88fcb3",
+        "atlas-v4-dual-channel-plan.html": "1c8037cace62c9f7c7d0e757c86996f5ca6c139137174c061bf1c01a4332a9d3",
+        "atlas-v4-dual-channel-plan.md": "f37016e7bd9daa2cad7ce7b3d66bca394946411f943acb13d1295e436a5920e4",
+        "atlas-v4-dual-channel-plan.pdf": "a451dd6efd422720f11f7d29b9f77f7be32ea78ba50cb0a3524d5341fee39463"
+      }
+    },
+    {
+      "id": "atlas:v4-dual-channel-3d",
+      "title": "Two-channel observation in three dimensions",
+      "view": "flow",
+      "units": "mm",
+      "kind": "deterministic 3D geometry render",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 17,
+      "files": {
+        "atlas-v4-dual-channel-3d.svg": "69a5348781fd97c0905071bdf37a425fb9e6d0aad66dae1e11dceb5584f9a813",
+        "atlas-v4-dual-channel-3d.json": "b20c2eb48f4f3c7203075b51c1d8171b25f1587fb3331f573e68e2373935eafc",
+        "atlas-v4-dual-channel-3d.html": "ebb2ecfbeb11f0972caff58b6168c8d3b9c9fea5ff89f1ab3568ed5ea18a3652",
+        "atlas-v4-dual-channel-3d.md": "5d61f03414822cd2d2198ce5293c0561894b2364663674a536ee9591fa3992d3",
+        "atlas-v4-dual-channel-3d.pdf": "cba628145443d439d036379ea1248e16858bab80e32aba55a4b610672ba86594"
+      }
+    },
+    {
+      "id": "atlas:v4-electric-energy",
+      "title": "Series RLC: source, load and stored energy",
+      "view": "flow",
+      "units": "mm",
+      "kind": "exact SVG circuit and measurement-boundary diagram",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 22,
+      "files": {
+        "atlas-v4-electric-energy.svg": "cd99e515dcdaa36de47bbf41e181db7fd513d3442dc60ec9319b37f25e7b4e86",
+        "atlas-v4-electric-energy.json": "f0e91d7d43f8e746105b885f7e78aacd0aeb268defd2e2ede006b030e1e938d6",
+        "atlas-v4-electric-energy.html": "9acadaa1d2eed4ce34fd0a71a05300a57501e63a79007db1480931d100227484",
+        "atlas-v4-electric-energy.md": "b8b7b66efd09e5915b1a412fff266e27526d670de4c218f53138f18dab75b825",
+        "atlas-v4-electric-energy.pdf": "076d8da7f51ab92cf2c2719d68882a6daf8a3ff137fa7bf80c521b96f6d94223"
+      }
+    },
+    {
+      "id": "atlas:v4-magnetic-force-plan",
+      "title": "Magnetic force changes contact force",
+      "view": "flow",
+      "units": "mm",
+      "kind": "dimensioned SVG apparatus and force diagram",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 8,
+      "files": {
+        "atlas-v4-magnetic-force-plan.svg": "8822e6bcefc100366327e5885c2489dc230c289a8ee4e90f45ca85ef9626caa4",
+        "atlas-v4-magnetic-force-plan.json": "6ad23449dd7155171ff26187c7522d8b59646a948b0fa92c5cfb465d3d296332",
+        "atlas-v4-magnetic-force-plan.html": "05ced5f7f4d984bd36bbeaf4a1beb0fc6d6b90d708d84834e20d6faf8a6e42b9",
+        "atlas-v4-magnetic-force-plan.md": "90a4ec493e8c6ced9588b11e2f3dd8c4177e23f1645abc9f38654f97e85e81eb",
+        "atlas-v4-magnetic-force-plan.pdf": "2de843c990fbdf4ac5054705a8b179abb54cba501717e16352ef83a2fb0b9547"
+      }
+    },
+    {
+      "id": "atlas:v4-magnetic-force-3d",
+      "title": "Magnet, balance and external reaction support",
+      "view": "flow",
+      "units": "mm",
+      "kind": "deterministic 3D geometry render",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 8,
+      "files": {
+        "atlas-v4-magnetic-force-3d.svg": "e47b4225f6c6e9482329e2715a04796b63ec6f6c3bd2a1041e3a247550781298",
+        "atlas-v4-magnetic-force-3d.json": "8e50cd9936b11ab5996a0de2ec21ba92c0a70118223c055373085d6ba503440e",
+        "atlas-v4-magnetic-force-3d.html": "8ef2cc9e7c39cd0055347c3ca04152f12f2c43d0820317df1e983a23eb96b201",
+        "atlas-v4-magnetic-force-3d.md": "ef04c18f69d52f182fe6bb9d1e520502aaf331604ed07d347f38347c1c3a6dab",
+        "atlas-v4-magnetic-force-3d.pdf": "cdb51aa15a838a2e48771c8cac1acb503fc4daec5bf4dc9689dea21874575803"
+      }
+    },
+    {
+      "id": "atlas:v4-magnetic-work",
+      "title": "Magnetic storage and mechanical work",
+      "view": "flow",
+      "units": "mm",
+      "kind": "exact SVG electromechanical model boundary",
+      "status": "proposed_unbuilt",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "projectionViews": [
+        "flow"
+      ],
+      "componentCount": 0,
+      "dimensionCount": 0,
+      "termCount": 17,
+      "files": {
+        "atlas-v4-magnetic-work.svg": "b06ff8eec0355c633d1cb7bec2abda9968a435144b6545221904456731100c87",
+        "atlas-v4-magnetic-work.json": "64e4c22b19ce613272c31da58c9b0fb4dbdac5c2e88c7862b0f06074ca25c251",
+        "atlas-v4-magnetic-work.html": "f60c891c8960a98053fa38c01ad379d39b8a22484f872a5c53e1d0fa73f7dbe1",
+        "atlas-v4-magnetic-work.md": "112b0597458ebdc741dd85d41ae389526bb8ee3da7ac02537632050b41deaac7",
+        "atlas-v4-magnetic-work.pdf": "7796f3c656aaae490bc3c122d905a9087f3a332bc821cc61a0f0f95fcb349bd1"
+      }
+    }
+  ]
+}

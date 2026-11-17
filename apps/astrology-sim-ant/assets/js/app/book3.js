@@ -1,0 +1,212 @@
+// ============================================================================
+//  book3.js — the Nativity (birth chart) calculator for Book III. Reuses the
+//  engine and adds the Lord of the Geniture (almuten of the whole figure) and a
+//  simplified humoral temperament estimate after Lilly's method.
+// ============================================================================
+import { castChart, formatLon, signOf, PLANET_GLYPHS, untimedPositions, norm360 } from '../core/astro.js';
+import { zonedCivilDay, validLocation } from '../core/time.js';
+import { essentialDignity, accidentalDignity } from '../core/dignities.js';
+import { allAspects } from '../core/aspects.js';
+import { renderChart } from '../core/chart.js';
+import { SIGNS } from '../core/data/signs.js';
+import { DOMICILE } from '../core/data/dignities-data.js';
+import { toUTC, nowLocalFields, autolinkResultPanels } from './shared.js';
+import { attachVedicPanel } from './vedic-panel.js';
+import { fullReading } from '../core/reading.js';
+import { renderExplainBlock, ensureExplainMount } from './explain-block.js';
+import { explainNativity } from '../core/explain/nativity.js';
+import { initGlosstip } from './glosstip.js';
+
+const $ = id => document.getElementById(id);
+const PL = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn'];
+const G = p => PLANET_GLYPHS[p] || p;
+const motionOK = () => { try { return matchMedia('(prefers-reduced-motion: no-preference)').matches; } catch { return false; } };
+let vedicUpdate = null;
+const ENH = {}; let bar = null, picker = null, lastSummary = '';
+
+// Each sign's elemental qualities (hot/cold, dry/moist) for temperament.
+const QUALITY = { // [hot(+)/cold(-), dry(+)/moist(-)] and humour
+  Fire: { humour: 'Choleric', hot: 1, dry: 1 }, Earth: { humour: 'Melancholic', hot: -1, dry: 1 },
+  Air: { humour: 'Sanguine', hot: 1, dry: -1 }, Water: { humour: 'Phlegmatic', hot: -1, dry: -1 }
+};
+
+export async function initNativity() {
+  $('n-date').value = '1990-01-01'; $('n-time').value = '12:00'; $('n-offset').value = 0;
+  $('n-lat').value = 51.5074; $('n-lon').value = -0.1278;
+  $('n-form').addEventListener('submit', e => { e.preventDefault(); doCompute(); });
+  await mountEnh();
+  $('n-orb-mode').addEventListener('change', () => { $('n-orb').disabled = $('n-orb-mode').value !== 'fixed'; compute(); });
+  $('n-orb').addEventListener('change', compute);
+  $('n-system').addEventListener('change', compute);
+  $('n-certainty').addEventListener('change', () => { picker?.setTimeKnown($('n-certainty').value === 'known'); compute(); });
+  try { initGlosstip(); } catch { /* non-fatal */ }
+  compute();
+}
+
+async function mountEnh() {
+  const L = async p => { try { return await import(p); } catch { return null; } };
+  ENH.mp = await L('./moment-picker.js'); ENH.ab = await L('./action-bar.js');
+  ENH.fig = await L('./viz/figure.js'); ENH.wi = await L('./viz/wheel-interact.js'); ENH.wr = await L('./wheel-rotate.js');
+  try { const i = await L('./viz/inspect.js'); i && i.initInspect && i.initInspect(); } catch { /* */ }
+  const ids = { lat: 'n-lat', lon: 'n-lon', date: 'n-date', time: 'n-time', offset: 'n-offset' };
+  if (ENH.mp && ENH.mp.mountMomentPicker) { try { picker = ENH.mp.mountMomentPicker($('n-picker'), { mode: 'birth', label: 'Birth moment & place', persist: 'wb', ids, onChange: () => compute() }); } catch { pickerFallback('n-picker', ids); } } else pickerFallback('n-picker', ids);
+  if (ENH.ab && ENH.ab.mountActionBar) { try { bar = ENH.ab.mountActionBar($('n-actionbar'), { variant: 'tool', exports: [], askAI: null, summary: () => ({ verdict: '', text: lastSummary }) }); } catch { bar = null; } }
+}
+
+function doCompute() {
+  const btn = $('n-form').querySelector('button[type="submit"]');
+  const cf = ENH.ab && ENH.ab.computeFlow;
+  if (cf) { try { cf(btn, $('n-summary'), () => compute(), { banner: $('n-summary'), firstPanel: $('n-p-planets') }); return; } catch { /* */ } }
+  compute();
+  try { const s = $('n-summary'); s.tabIndex = -1; s.focus({ preventScroll: true }); s.scrollIntoView({ block: 'start', behavior: motionOK() ? 'smooth' : 'auto' }); } catch { /* */ }
+}
+
+// Shared fallbacks (only used when B1's picker is absent at runtime).
+function pickerFallback(boxId, ids) {
+  const box = document.getElementById(boxId); if (!box || box.dataset.fb) return; box.dataset.fb = '1';
+  const M = { lat: ['number', 'Lat °N', '0.0001'], lon: ['number', 'Lon °E', '0.0001'], date: ['date', 'Date'], time: ['time', 'Time (local)'], offset: ['number', 'UTC offset', '0.5'] };
+  const row = document.createElement('div'); row.className = 'field-row';
+  for (const k of Object.keys(ids)) { const inp = $(ids[k]); if (!inp) continue; const [t, l, s] = M[k] || ['text', k]; inp.type = t; if (s) inp.step = s; inp.style.width = t === 'number' ? '7rem' : ''; const fd = document.createElement('div'); fd.className = 'field'; const lb = document.createElement('label'); lb.htmlFor = ids[k]; lb.textContent = l; fd.append(lb, inp); row.appendChild(fd); }
+  box.appendChild(row);
+}
+
+function compute() {
+  try { return computeValidated(); } catch (error) {
+    $('n-summary').textContent = error.message;
+    $('n-summary').setAttribute('role', 'alert');
+    $('n-wheel').replaceChildren(); $('n-planets').replaceChildren();
+    $('n-lord').textContent = 'Unavailable until the input is corrected.';
+    $('n-temperament').textContent = ''; $('n-method').textContent = ''; lastSummary = 'Invalid input — no current chart.';
+    hideReadingActions();
+    document.querySelectorAll('.vedic-panel, #n-explain-mount').forEach(el => { el.hidden = true; });
+  }
+}
+
+function hideReadingActions() {
+  // Refresh the summary before hiding so an earlier timed chart cannot remain
+  // in the action bar's DOM or reappear when its focus listener runs.
+  try { bar?.show?.(); bar?.hide?.(); } catch { /* optional enhancement */ }
+}
+
+function computeValidated() {
+  if (picker && !picker.validate().ok) throw new RangeError('Correct the highlighted date, time, location or time-zone fields.');
+  $('n-summary').setAttribute('role', 'status');
+  const offset = Number($('n-offset').value);
+  const date = toUTC($('n-date').value, $('n-time').value, offset);
+  const lat = parseFloat($('n-lat').value), lon = parseFloat($('n-lon').value);
+  validLocation(lat, lon);
+  const known = $('n-certainty').value === 'known';
+  $('n-system').disabled = !known;
+  document.querySelectorAll('.vedic-panel, #n-explain-mount').forEach(el => { el.hidden = !known; });
+  if (!known) {
+    const fields = picker?.fields() || {};
+    const next = toUTC($('n-date').value, '00:00', 0); next.setUTCDate(next.getUTCDate() + 1);
+    const nextDate = next.toISOString().split('T')[0];
+    const day = fields.timeZone ? zonedCivilDay($('n-date').value, fields.timeZone) : { start: toUTC($('n-date').value, '00:00', offset), end: toUTC(nextDate, '00:00', offset) };
+    const { start, end } = day;
+    const result = untimedPositions(start, end);
+    $('n-summary').textContent = 'Birth time unknown — planetary positions across the selected civil day.';
+    $('n-method').textContent = result.method + ' ' + start.toISOString() + ' to ' + end.toISOString() + '.';
+    $('n-wheel').textContent = 'A timed chart cannot be drawn without a birth time. No ascendant, Midheaven, houses or Part of Fortune is calculated.';
+    $('n-lord').textContent = 'Unavailable without birth time and the associated houses and sect.';
+    $('n-temperament').textContent = 'Time-dependent interpretations are withheld.';
+    $('n-planet-head').innerHTML = '<tr><th scope="col">Planet</th><th scope="col">Midpoint position (approximate)</th><th scope="col">Sampled range across the day</th></tr>';
+    $('n-planets').innerHTML = Object.entries(result.planets).map(([name, p]) => `<tr><td>${G(name)} ${name}</td><td>${formatLon(p.longitude)}</td><td>${formatLon(norm360(p.longitude + p.minDelta))} → ${formatLon(norm360(p.longitude + p.maxDelta))}</td></tr>`).join('');
+    lastSummary = 'Unknown birth time: planetary ranges only.';
+    hideReadingActions();
+    return;
+  }
+  $('n-planet-head').innerHTML = '<tr><th scope="col" class="l">Planet</th><th scope="col" class="l">Position</th><th scope="col">Ho.</th><th scope="col" class="num">Ess.</th><th scope="col" class="num">Acc.</th></tr>';
+  const chart = castChart(date, lat, lon, $('n-system').value);
+  chart.timeZone = picker?.fields().timeZone || null;
+  chart.utcOffset = offset;
+  $('n-method').textContent = `${chart.system} houses · ${date.toISOString()} · geocentric tropical positions. ${chart.houseWarning || ''}`;
+  const isDay = chart.isDay;
+  try { if (!vedicUpdate) vedicUpdate = attachVedicPanel(); vedicUpdate(chart); } catch { /* non-fatal */ }
+
+  const bodies = {}; for (const p of PL) bodies[p] = chart.planets[p];
+  const orb = $('n-orb-mode').value === 'fixed' ? Number($('n-orb').value) : null;
+  if ($('n-orb-mode').value === 'fixed' && $('n-orb').value === '') throw new RangeError('Enter a maximum aspect orb.');
+  const asps = allAspects(bodies, { orbOverride: orb });
+  $('n-method').textContent += orb === null ? ' Wheel aspects use Lilly’s sum-of-moieties rule; historical readings retain their own conventions.' : ` Wheel aspects use a fixed ${orb}° maximum orb; historical readings retain Lilly’s original orb conventions.`;
+  renderWheel($('n-wheel'), chart, asps);
+
+  $('n-summary').innerHTML = `<strong>${formatLon(chart.asc)}</strong> ascending · MC
+    <strong>${formatLon(chart.mc)}</strong> · ${isDay ? 'day' : 'night'} birth`;
+  lastSummary = `${formatLon(chart.asc)} rising · ${isDay ? 'day' : 'night'} birth`;
+  try { picker && picker.commitRecent && picker.commitRecent(); } catch { /* */ }
+  try { bar && bar.show && bar.show(); } catch { /* */ }
+
+  // planet table with essential + accidental
+  let rows = '';
+  const totals = {};
+  for (const name of PL) {
+    const p = chart.planets[name];
+    const ed = essentialDignity(name, p.lon, isDay);
+    const ad = accidentalDignity(name, chart);
+    totals[name] = ed.total + ad.total;
+    rows += `<tr><td>${G(name)} ${name}</td><td class="l">${formatLon(p.lon)}${p.retrograde ? ' ℞' : ''}</td>
+      <td>${p.house}</td><td class="num ${ed.total >= 0 ? 'pos' : 'neg'}">${ed.total >= 0 ? '+' : ''}${ed.total}</td>
+      <td class="num ${ad.total >= 0 ? 'pos' : 'neg'}">${ad.total >= 0 ? '+' : ''}${ad.total}</td></tr>`;
+  }
+  $('n-planets').innerHTML = rows;
+
+  // Lord of the Geniture: highest combined dignity, well placed
+  let lord = null, best = -999;
+  for (const [p, t] of Object.entries(totals)) if (t > best) { best = t; lord = p; }
+  $('n-lord').innerHTML = `<b>${G(lord)} ${lord}</b> bears the most dignity in the figure
+    (essential + accidental = ${best >= 0 ? '+' : ''}${best}) and is the <b>Lord of the Geniture</b> —
+    the planet Lilly takes as “the most powerful and predominant” in the nativity, colouring the native's
+    whole disposition.`;
+
+  // Temperament: tally hot/cold & dry/moist from Asc sign, Moon sign, Sun sign, Lord of Geniture sign
+  const contributors = [
+    ['Ascendant sign', signOf(chart.asc).name],
+    ['Moon in', signOf(chart.planets.Moon.lon).name],
+    ['Sun in', signOf(chart.planets.Sun.lon).name],
+    ['Lord of Geniture in', signOf(chart.planets[lord].lon).name]
+  ];
+  let hot = 0, dry = 0; const humours = { Choleric: 0, Melancholic: 0, Sanguine: 0, Phlegmatic: 0 };
+  for (const [, sName] of contributors) {
+    const el = SIGNS.find(s => s.name === sName).element;
+    const q = QUALITY[el]; hot += q.hot; dry += q.dry; humours[q.humour]++;
+  }
+  const dominant = Object.entries(humours).sort((a, b) => b[1] - a[1])[0][0];
+  $('n-temperament').innerHTML = `
+    <p>Weighing the Ascendant, the Moon, the Sun and the Lord of the Geniture, the chart leans
+      <b>${hot > 0 ? 'hot' : hot < 0 ? 'cold' : 'balanced (hot/cold)'}</b> and
+      <b>${dry > 0 ? 'dry' : dry < 0 ? 'moist' : 'balanced (dry/moist)'}</b> —
+      a predominantly <b>${dominant}</b> temperament.</p>
+    <ul class="small">${contributors.map(([lbl, s]) => {
+      const el = SIGNS.find(x => x.name === s).element;
+      return `<li>${lbl} <b>${s}</b> — ${el} (${QUALITY[el].humour})</li>`;
+    }).join('')}</ul>
+    <p class="small muted">This is a simplified rendering of Lilly's temperament method, which also weighs the
+      planets aspecting the Ascendant, the Moon's phase, and the season — see Book III.</p>`;
+
+  // The "In plain words" block, mounted under the summary banner: what Book III's
+  // apparatus makes of the figure (Lord of the Geniture + temperament), in the
+  // attributed voice (chart-ux §7.4). Reuses the verified reading spine + the
+  // temperament tally just computed above.
+  try {
+    const reading = fullReading(chart, { includeVedic: false });
+    const mount = ensureExplainMount($('n-summary'), 'n-explain-mount');
+    if (mount) renderExplainBlock(mount, explainNativity(reading, { temperament: { hot, dry, dominant } }), { textId: 'n-explain-text' });
+    autolinkResultPanels(['n-explain-text', 'n-lord', 'n-temperament']);
+  } catch { /* non-fatal: the panels below still render */ }
+}
+
+function renderWheel(container, chart, asps) {
+  if (ENH.fig && ENH.fig.mountFigure) {
+    try {
+      const svgEl = renderChart(document.createElement('div'), chart, asps, { size: 540 });
+      container.innerHTML = '';
+      ENH.fig.mountFigure(container, { svg: svgEl.outerHTML, ariaLabel: 'Nativity chart wheel — planets are buttons', caption: '' });
+      const m = container.querySelector('svg');
+      try { ENH.wi && ENH.wi.wireWheel && ENH.wi.wireWheel(m, chart, asps); } catch { /* */ }
+      try { ENH.wr && ENH.wr.attachWheelRotate && ENH.wr.attachWheelRotate(container, chart); } catch { /* */ }
+      return;
+    } catch { /* fall through */ }
+  }
+  renderChart(container, chart, asps, { size: 540 });
+}

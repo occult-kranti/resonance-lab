@@ -1,0 +1,930 @@
+{
+  "schema": "resonance-blueprint-packet/v1",
+  "createdAt": "2026-11-17T04:32:53.789Z",
+  "recordId": "nt:newton-prism",
+  "revision": "five-panels-authored-review-v1",
+  "status": "authored-review-not-manufacturing-approval",
+  "record": {
+    "id": "nt:newton-prism",
+    "title": "Newton-style prism control study",
+    "repository": "newton-tesla-research-lab",
+    "kind": "setup family",
+    "domain": "optics / historical method",
+    "status": "source_supported_modern_reconstruction",
+    "summary": "A dimensioned modern first-prism illustration with computed Snell-law ray paths for three stipulated indices.",
+    "modelBoundary": "The 120 mm equilateral prism, 20 degree incident direction and indices 1.51/1.52/1.53 are teaching inputs, not Newton apparatus dimensions or measured glass dispersion.",
+    "source": {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "data/setups.json",
+      "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "committedSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    "documentation": [
+      {
+        "repository": "newton-tesla-research-lab",
+        "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "path": "docs/apparatus.md",
+        "sha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+        "committedSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+        "checkoutMatchesCommit": true,
+        "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md",
+        "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+      }
+    ],
+    "sourceRecord": {
+      "id": "newton-prism",
+      "title": "Newton-style prism control study",
+      "status": "source_supported_modern_reconstruction",
+      "domain": "optics / historical method",
+      "summary": "A dimensioned modern first-prism illustration with computed Snell-law ray paths for three stipulated indices.",
+      "modelBoundary": "The 120 mm equilateral prism, 20 degree incident direction and indices 1.51/1.52/1.53 are teaching inputs, not Newton apparatus dimensions or measured glass dispersion.",
+      "parameterSource": "assets/setups/geometry.json",
+      "contractPaths": [],
+      "sourceIds": [
+        "NT-NEWTON-LIGHT1672"
+      ],
+      "assets": [
+        {
+          "kind": "ray_diagram",
+          "path": "assets/setups/newton-prism-rays.svg",
+          "label": "Calculated ray paths and screen intersections"
+        }
+      ],
+      "geometryPath": "assets/setups/geometry.json",
+      "components": [
+        {
+          "id": "aperture",
+          "role": "restrict incident ray bundle"
+        },
+        {
+          "id": "prism",
+          "role": "stipulated dispersion and calculated refraction"
+        },
+        {
+          "id": "screen",
+          "role": "record wavelength-dependent position in an actual future test"
+        }
+      ],
+      "wiring": [],
+      "measurements": [
+        "For an actual study, record prism angle, aperture width, incidence, screen distance, wavelength calibration and repeatability.",
+        "Add a second-prism discrimination and aperture/incidence controls before interpreting the full historical inference."
+      ],
+      "limitations": [
+        "Not performed; the figure is a deterministic optical calculation.",
+        "One-prism separation does not reproduce Newton’s complete experiment.",
+        "No intensity, diffraction, finite solar disk or real glass dispersion is modeled."
+      ]
+    },
+    "proposalIds": [
+      "NT-H06"
+    ],
+    "relationStatus": "Editorial relevance mapping, not an upstream claim that the apparatus validates these proposals.",
+    "assets": [
+      {
+        "kind": "ray_diagram",
+        "path": "assets/setups/newton-prism-rays.svg",
+        "label": "Calculated ray paths and screen intersections",
+        "repository": "newton-tesla-research-lab",
+        "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "sourceSha256": "abed26035112e24f847afcc956e47e8ae6b18515d2edd1eabdcd82871c51a0ae",
+        "committedSha256": "abed26035112e24f847afcc956e47e8ae6b18515d2edd1eabdcd82871c51a0ae",
+        "checkoutMatchesCommit": true,
+        "localHref": "/apps/newton-tesla-research-lab/assets/setups/newton-prism-rays.svg",
+        "sourceHref": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/newton-prism-rays.svg",
+        "servedSha256": "abed26035112e24f847afcc956e47e8ae6b18515d2edd1eabdcd82871c51a0ae",
+        "servedCopyMatchesSource": true,
+        "scope": "Existing server adapter serves the sibling dist copy; source bytes and served copy are different observations."
+      }
+    ],
+    "geometry": {
+      "source": {
+        "repository": "newton-tesla-research-lab",
+        "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "path": "assets/setups/geometry.json",
+        "sha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+        "committedSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+        "checkoutMatchesCommit": true,
+        "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/geometry.json",
+        "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+      },
+      "record": {
+        "units": "mm",
+        "side_mm": 120,
+        "apex_angle_deg": 60,
+        "incident_angle_deg": 20,
+        "screen_x_mm": 450,
+        "rayCalculations": [
+          {
+            "wavelength_nm": 650,
+            "stipulated_refractive_index": 1.51,
+            "entry_mm": [
+              34.64101615137755,
+              60
+            ],
+            "exit_mm": [
+              85.11226745633827,
+              60.42732532649628
+            ],
+            "screen_mm": [
+              450,
+              -58.588492172584075
+            ],
+            "exit_angle_deg": -18.06482731407568,
+            "color": "#b94437",
+            "entry_snell_residual": 2.220446049250313e-16,
+            "exit_snell_residual": 1.1102230246251565e-16
+          },
+          {
+            "wavelength_nm": 550,
+            "stipulated_refractive_index": 1.52,
+            "entry_mm": [
+              34.64101615137755,
+              60
+            ],
+            "exit_mm": [
+              85.22470322646923,
+              60.23258086004134
+            ],
+            "screen_mm": [
+              450,
+              -64.89119908588516
+            ],
+            "exit_angle_deg": -18.932790827614134,
+            "color": "#368368",
+            "entry_snell_residual": 2.220446049250313e-16,
+            "exit_snell_residual": 0
+          },
+          {
+            "wavelength_nm": 450,
+            "stipulated_refractive_index": 1.53,
+            "entry_mm": [
+              34.64101615137755,
+              60
+            ],
+            "exit_mm": [
+              85.3359075956137,
+              60.03996924265946
+            ],
+            "screen_mm": [
+              450,
+              -71.3487135384735
+            ],
+            "exit_angle_deg": -19.814120798723902,
+            "color": "#3962ab",
+            "entry_snell_residual": 2.220446049250313e-16,
+            "exit_snell_residual": 0
+          }
+        ]
+      }
+    },
+    "contracts": [],
+    "materials": [
+      {
+        "id": "aperture",
+        "label": "restrict incident ray bundle",
+        "position_m": null,
+        "size_m": null,
+        "radius_m": null,
+        "length_m": null,
+        "turn_count": null
+      },
+      {
+        "id": "prism",
+        "label": "stipulated dispersion and calculated refraction",
+        "position_m": null,
+        "size_m": null,
+        "radius_m": null,
+        "length_m": null,
+        "turn_count": null
+      },
+      {
+        "id": "screen",
+        "label": "record wavelength-dependent position in an actual future test",
+        "position_m": null,
+        "size_m": null,
+        "radius_m": null,
+        "length_m": null,
+        "turn_count": null
+      }
+    ],
+    "measurements": [
+      "For an actual study, record prism angle, aperture width, incidence, screen distance, wavelength calibration and repeatability.",
+      "Add a second-prism discrimination and aperture/incidence controls before interpreting the full historical inference."
+    ],
+    "limitations": [
+      "Not performed; the figure is a deterministic optical calculation.",
+      "One-prism separation does not reproduce Newton’s complete experiment.",
+      "No intensity, diffraction, finite solar disk or real glass dispersion is modeled."
+    ],
+    "sourceIds": [
+      "NT-NEWTON-LIGHT1672"
+    ],
+    "equationStatus": "Source-supported modern optical reconstruction; geometry and indices are stipulated teaching inputs."
+  },
+  "authored": {
+    "scenario": {
+      "modifications": [],
+      "electricalParametersChanged": false,
+      "calibrationInferred": false
+    },
+    "sketch": {
+      "schemaVersion": 1,
+      "kind": "geometry-only-documentation-not-physical-prediction",
+      "family": "nt:newton-prism",
+      "view": "plan",
+      "units": "mm",
+      "availableViews": [
+        "plan",
+        "flow"
+      ],
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 760\" role=\"img\" aria-labelledby=\"sketch-title sketch-desc\"><title id=\"sketch-title\">Newton-style prism control study · plan</title><desc id=\"sketch-desc\">Source-pinned proposed plan documentation. Equilateral prism side: 120 mm; Screen x: 450 mm; Prism apex angle: 60 deg; Stipulated wavelength: 650 nm; Stipulated wavelength: 550 nm; Stipulated wavelength: 450 nm. The 120 mm equilateral prism, 20 degree incident direction and indices 1.51/1.52/1.53 are teaching inputs, not Newton apparatus dimensions or measured glass dispersion. Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.</desc><metadata id=\"source-provenance\">{&quot;method&quot;:&quot;source-coordinate-sketch-v1&quot;,&quot;sourcePins&quot;:[{&quot;repository&quot;:&quot;newton-tesla-research-lab&quot;,&quot;commit&quot;:&quot;2faece1d6dde6be63f7758c2754a0369d1a34fce&quot;,&quot;path&quot;:&quot;data/setups.json&quot;,&quot;sha256&quot;:&quot;889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e&quot;,&quot;committedSha256&quot;:&quot;889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;},{&quot;repository&quot;:&quot;newton-tesla-research-lab&quot;,&quot;commit&quot;:&quot;2faece1d6dde6be63f7758c2754a0369d1a34fce&quot;,&quot;path&quot;:&quot;assets/setups/geometry.json&quot;,&quot;sha256&quot;:&quot;441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09&quot;,&quot;committedSha256&quot;:&quot;441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/geometry.json&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;},{&quot;repository&quot;:&quot;newton-tesla-research-lab&quot;,&quot;commit&quot;:&quot;2faece1d6dde6be63f7758c2754a0369d1a34fce&quot;,&quot;path&quot;:&quot;docs/apparatus.md&quot;,&quot;sha256&quot;:&quot;c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d&quot;,&quot;committedSha256&quot;:&quot;c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;}],&quot;scenario&quot;:{&quot;modifications&quot;:[],&quot;electricalParametersChanged&quot;:false,&quot;calibrationInferred&quot;:false},&quot;dimensions&quot;:[{&quot;id&quot;:&quot;prism-side&quot;,&quot;label&quot;:&quot;Equilateral prism side&quot;,&quot;value&quot;:120,&quot;unit&quot;:&quot;mm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;screen-x&quot;,&quot;label&quot;:&quot;Screen x&quot;,&quot;value&quot;:450,&quot;unit&quot;:&quot;mm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;prism-apex&quot;,&quot;label&quot;:&quot;Prism apex angle&quot;,&quot;value&quot;:60,&quot;unit&quot;:&quot;deg&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;wavelength-650&quot;,&quot;label&quot;:&quot;Stipulated wavelength&quot;,&quot;value&quot;:650,&quot;unit&quot;:&quot;nm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;wavelength-550&quot;,&quot;label&quot;:&quot;Stipulated wavelength&quot;,&quot;value&quot;:550,&quot;unit&quot;:&quot;nm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;wavelength-450&quot;,&quot;label&quot;:&quot;Stipulated wavelength&quot;,&quot;value&quot;:450,&quot;unit&quot;:&quot;nm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;}],&quot;warnings&quot;:[&quot;The 120 mm equilateral prism, 20 degree incident direction and indices 1.51/1.52/1.53 are teaching inputs, not Newton apparatus dimensions or measured glass dispersion.&quot;,&quot;Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.&quot;]}</metadata><rect width=\"1200\" height=\"760\" fill=\"#f5f3e9\"/><style>text{font-family:system-ui,sans-serif;fill:#213e32} .part{stroke:#315744;fill:#c9d6c0;stroke-width:1.8} .wire{stroke:#647b69;fill:none;stroke-width:1.4} .dim{stroke:#526b5b;fill:none;stroke-width:1} .small{font-size:13px}.label{font-size:15px;font-weight:600}</style><text x=\"38\" y=\"35\" font-size=\"23\" font-weight=\"600\">Newton-style prism control study · plan</text><text x=\"38\" y=\"61\" class=\"small\">PROPOSED / SOURCE-STIPULATED GEOMETRY · NOT MANUFACTURING OR PHYSICAL VALIDATION</text><text x=\"45\" y=\"110\" class=\"label\">Source-defined optical cross-section · thickness/elevation not supplied</text><g data-component-id=\"prism\"><path class=\"part\" d=\"M100 420L214 222.546207937148L328 420Z\"/></g><g data-component-id=\"screen\"><path class=\"dim\" d=\"M955 170V630\"/><text x=\"955\" y=\"650\" text-anchor=\"middle\" class=\"label\">Screen x = 450 mm</text></g><path d=\"M165.81793068761732 306L261.7133081670427 305.1880818796571L955 531.3181351279097\" fill=\"none\" stroke=\"#b94437\" stroke-width=\"2\"/><text x=\"967\" y=\"535.3181351279097\" class=\"small\">650 nm · n=1.51</text><path d=\"M165.81793068761732 306L261.92693613029155 305.5580963659215L955 543.2932782631818\" fill=\"none\" stroke=\"#368368\" stroke-width=\"2\"/><text x=\"967\" y=\"547.2932782631818\" class=\"small\">550 nm · n=1.52</text><path d=\"M165.81793068761732 306L262.138224431666 305.92405843894704L955 555.5625557230996\" fill=\"none\" stroke=\"#3962ab\" stroke-width=\"2\"/><text x=\"967\" y=\"559.5625557230996\" class=\"small\">450 nm · n=1.53</text><path class=\"dim\" d=\"M100 420V596M328 420V596M100 590H328M96 585l8 10M324 585l8 10\"/><text x=\"214\" y=\"581\" text-anchor=\"middle\" class=\"small\">Prism side 120 mm</text><text x=\"38\" y=\"682\" class=\"small\">Source newton-tesla-research-lab @ 2faece1d6dde · full source/scenario identity in SVG metadata</text><text x=\"38\" y=\"706\" class=\"small\">SOURCE-STIPULATED LAYOUT · Exact geometry is not a measured or construction-approved device.</text><text x=\"38\" y=\"731\" class=\"small\">Prism thickness, real glass dispersion, finite aperture, measured intensity and optical calibration are not supplied.</text></svg>",
+      "components": [
+        {
+          "id": "prism",
+          "label": "Stipulated equilateral prism cross-section",
+          "termIds": [
+            "optics.refractive-index"
+          ],
+          "notes": [
+            "Source side and refractive indices are teaching assumptions; prism thickness is not supplied."
+          ]
+        },
+        {
+          "id": "screen",
+          "label": "Calculated ray observation screen",
+          "termIds": [
+            "optics.wavelength"
+          ],
+          "notes": [
+            "Screen position is stipulated, not a measured instrument."
+          ]
+        }
+      ],
+      "dimensions": [
+        {
+          "id": "prism-side",
+          "label": "Equilateral prism side",
+          "value": 120,
+          "unit": "mm",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "screen-x",
+          "label": "Screen x",
+          "value": 450,
+          "unit": "mm",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "prism-apex",
+          "label": "Prism apex angle",
+          "value": 60,
+          "unit": "deg",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "wavelength-650",
+          "label": "Stipulated wavelength",
+          "value": 650,
+          "unit": "nm",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "wavelength-550",
+          "label": "Stipulated wavelength",
+          "value": 550,
+          "unit": "nm",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "wavelength-450",
+          "label": "Stipulated wavelength",
+          "value": 450,
+          "unit": "nm",
+          "status": "source-stipulated"
+        }
+      ],
+      "sourcePins": [
+        {
+          "repository": "newton-tesla-research-lab",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "path": "data/setups.json",
+          "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+          "committedSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "newton-tesla-research-lab",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "path": "assets/setups/geometry.json",
+          "sha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+          "committedSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/geometry.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "newton-tesla-research-lab",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "path": "docs/apparatus.md",
+          "sha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+          "committedSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "scenario": {
+        "modifications": [],
+        "electricalParametersChanged": false,
+        "calibrationInferred": false
+      },
+      "warnings": [
+        "The 120 mm equilateral prism, 20 degree incident direction and indices 1.51/1.52/1.53 are teaching inputs, not Newton apparatus dimensions or measured glass dispersion.",
+        "Dimensions are stipulated source layout or explicit user annotations, not measured component specifications."
+      ]
+    },
+    "terms": [
+      {
+        "id": "measurement.not-to-scale",
+        "label": "Not to scale",
+        "symbols": [
+          "NTS",
+          "not to scale"
+        ],
+        "unit": "drawing convention; not a measurement",
+        "plain": "A sketch may show relationships without preserving size ratios.",
+        "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+        "cautions": [
+          "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "optics.refractive-index",
+        "label": "Refractive index",
+        "symbols": [
+          "n",
+          "n1",
+          "n2"
+        ],
+        "unit": "dimensionless",
+        "plain": "Refractive index describes light propagation relative to vacuum.",
+        "meaning": "The prism drawing uses stipulated indices, not a measured wavelength-dependent glass model.",
+        "cautions": [
+          "n here differs from integer acoustic mode indices."
+        ],
+        "equation": "n1 sin θ1 = n2 sin θ2",
+        "aliases": [],
+        "domain": "optics",
+        "sourceRefs": [
+          "newton-tesla-research-lab/assets/setups/geometry.json"
+        ]
+      },
+      {
+        "id": "optics.wavelength",
+        "label": "Wavelength and angle of incidence",
+        "symbols": [
+          "λ",
+          "wavelength",
+          "θ",
+          "incidence"
+        ],
+        "unit": "metre (m), often nanometre (nm); rad or declared degrees",
+        "plain": "Wavelength is the spatial length of a wave cycle.",
+        "meaning": "Incidence/refraction angles in Snell’s law are measured from the surface normal; a drawing direction needs its own axis reference.",
+        "cautions": [
+          "Do not confuse a 20° drawing direction with a surface-normal incidence without checking geometry."
+        ],
+        "aliases": [],
+        "domain": "optics",
+        "sourceRefs": [
+          "newton-tesla-research-lab/assets/setups/geometry.json"
+        ]
+      },
+      {
+        "id": "units.si",
+        "label": "SI and unit prefixes",
+        "symbols": [
+          "SI",
+          "m",
+          "cm",
+          "mm",
+          "µ",
+          "milli",
+          "micro",
+          "nano"
+        ],
+        "unit": "declared physical unit",
+        "plain": "SI is the international system of measurement units.",
+        "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+        "cautions": [
+          "A source drawing in cm or mm is not silently a metres-based parts table."
+        ],
+        "aliases": [],
+        "domain": "units",
+        "sourceRefs": [
+          "https://www.bipm.org/en/measurement-units"
+        ]
+      },
+      {
+        "id": "digital.svg",
+        "label": "Scalable Vector Graphics",
+        "symbols": [
+          "SVG"
+        ],
+        "unit": "file format; no physical unit",
+        "plain": "SVG stores a drawing as shapes and text.",
+        "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+        "cautions": [
+          "A precise-looking SVG is not a validated construction drawing."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.json",
+        "label": "JavaScript Object Notation",
+        "symbols": [
+          "JSON"
+        ],
+        "unit": "data format; no physical unit",
+        "plain": "JSON stores structured data that can be exported and inspected.",
+        "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+        "cautions": [
+          "Serialization does not authenticate a claim or measure a device."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.sha256",
+        "label": "SHA-256 content digest",
+        "symbols": [
+          "SHA-256",
+          "SHA256"
+        ],
+        "unit": "256-bit digest",
+        "plain": "A digest helps compare whether two files have the same bytes.",
+        "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+        "cautions": [
+          "A matching digest proves neither the truth of content nor its author."
+        ],
+        "aliases": [
+          "hash"
+        ],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      }
+    ],
+    "equations": [
+      {
+        "id": "snell-law",
+        "title": "Angles need a declared reference",
+        "equation": "n1 sin θ1 = n2 sin θ2",
+        "plain": "Light changes direction at a boundary between two declared optical media.",
+        "convention": "Angles measured from the local surface normal; fixed stipulated refractive indices.",
+        "termIds": [
+          "optics.refractive-index",
+          "optics.wavelength",
+          "units.si"
+        ],
+        "units": "n dimensionless; angles rad or explicitly converted degrees; drawing lengths mm.",
+        "cautions": [
+          "A one-prism teaching drawing is not a reproduction of Newton’s full experiment."
+        ],
+        "sourceRefs": [
+          "newton-tesla-research-lab/assets/setups/geometry.json"
+        ]
+      }
+    ],
+    "handbook": {
+      "schema": "blueprint-handbook/v1",
+      "recordId": "nt:newton-prism",
+      "title": "Newton-style prism control study",
+      "kind": "setup family",
+      "status": "source_supported_modern_reconstruction",
+      "overview": "A dimensioned modern first-prism illustration with computed Snell-law ray paths for three stipulated indices.",
+      "goal": "Understand how a declared prism geometry and chosen refractive indices redirect rays, while keeping a modern calculation separate from Newton’s full historical inference.",
+      "signalSteps": [
+        "An aperture restricts the illustrated incident ray bundle.",
+        "The stipulated refractive index and interface angle determine the calculated ray direction.",
+        "A screen records a calculated ray location for each selected wavelength.",
+        "A second-prism and incidence control would be separate steps in a future physical study."
+      ],
+      "variables": [
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "optics.refractive-index",
+          "label": "Refractive index",
+          "symbols": [
+            "n",
+            "n1",
+            "n2"
+          ],
+          "unit": "dimensionless",
+          "plain": "Refractive index describes light propagation relative to vacuum.",
+          "meaning": "The prism drawing uses stipulated indices, not a measured wavelength-dependent glass model.",
+          "cautions": [
+            "n here differs from integer acoustic mode indices."
+          ],
+          "equation": "n1 sin θ1 = n2 sin θ2",
+          "aliases": [],
+          "domain": "optics",
+          "sourceRefs": [
+            "newton-tesla-research-lab/assets/setups/geometry.json"
+          ]
+        },
+        {
+          "id": "optics.wavelength",
+          "label": "Wavelength and angle of incidence",
+          "symbols": [
+            "λ",
+            "wavelength",
+            "θ",
+            "incidence"
+          ],
+          "unit": "metre (m), often nanometre (nm); rad or declared degrees",
+          "plain": "Wavelength is the spatial length of a wave cycle.",
+          "meaning": "Incidence/refraction angles in Snell’s law are measured from the surface normal; a drawing direction needs its own axis reference.",
+          "cautions": [
+            "Do not confuse a 20° drawing direction with a surface-normal incidence without checking geometry."
+          ],
+          "aliases": [],
+          "domain": "optics",
+          "sourceRefs": [
+            "newton-tesla-research-lab/assets/setups/geometry.json"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "optics.refractive-index",
+          "label": "Refractive index",
+          "symbols": [
+            "n",
+            "n1",
+            "n2"
+          ],
+          "unit": "dimensionless",
+          "plain": "Refractive index describes light propagation relative to vacuum.",
+          "meaning": "The prism drawing uses stipulated indices, not a measured wavelength-dependent glass model.",
+          "cautions": [
+            "n here differs from integer acoustic mode indices."
+          ],
+          "equation": "n1 sin θ1 = n2 sin θ2",
+          "aliases": [],
+          "domain": "optics",
+          "sourceRefs": [
+            "newton-tesla-research-lab/assets/setups/geometry.json"
+          ]
+        },
+        {
+          "id": "optics.wavelength",
+          "label": "Wavelength and angle of incidence",
+          "symbols": [
+            "λ",
+            "wavelength",
+            "θ",
+            "incidence"
+          ],
+          "unit": "metre (m), often nanometre (nm); rad or declared degrees",
+          "plain": "Wavelength is the spatial length of a wave cycle.",
+          "meaning": "Incidence/refraction angles in Snell’s law are measured from the surface normal; a drawing direction needs its own axis reference.",
+          "cautions": [
+            "Do not confuse a 20° drawing direction with a surface-normal incidence without checking geometry."
+          ],
+          "aliases": [],
+          "domain": "optics",
+          "sourceRefs": [
+            "newton-tesla-research-lab/assets/setups/geometry.json"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "equations": [
+        {
+          "id": "snell-law",
+          "title": "Angles need a declared reference",
+          "equation": "n1 sin θ1 = n2 sin θ2",
+          "plain": "Light changes direction at a boundary between two declared optical media.",
+          "convention": "Angles measured from the local surface normal; fixed stipulated refractive indices.",
+          "termIds": [
+            "optics.refractive-index",
+            "optics.wavelength",
+            "units.si"
+          ],
+          "units": "n dimensionless; angles rad or explicitly converted degrees; drawing lengths mm.",
+          "cautions": [
+            "A one-prism teaching drawing is not a reproduction of Newton’s full experiment."
+          ],
+          "sourceRefs": [
+            "newton-tesla-research-lab/assets/setups/geometry.json"
+          ]
+        }
+      ],
+      "contractFields": [],
+      "whatKnown": [
+        "This record is a source-supported modern reconstruction, not a performed optical experiment.",
+        "Its geometry uses explicitly stated millimetres and angles; those units must not be silently treated as metres.",
+        "Original source status: source_supported_modern_reconstruction."
+      ],
+      "whatUnknown": [
+        "Actual glass dispersion, intensity, diffraction and the finite solar disk are not modeled.",
+        "No real prism material, calibration, uncertainty or repeatability has been verified by this illustration."
+      ],
+      "measurementChecklist": [
+        "For a physical study, record prism/aperture geometry, incidence, screen distance and wavelength calibration.",
+        "Keep geometric lengths and angle conventions explicit; record repeatability rather than assuming perfect rays.",
+        "For an actual study, record prism angle, aperture width, incidence, screen distance, wavelength calibration and repeatability.",
+        "Add a second-prism discrimination and aperture/incidence controls before interpreting the full historical inference."
+      ],
+      "questions": [
+        "Which refractive index is stipulated for which wavelength?",
+        "Which conclusion requires a second-prism control rather than this one drawing?",
+        "Is a number an angle in degrees or radians, or a length in millimetres?"
+      ],
+      "sourceHierarchy": [
+        {
+          "label": "Why this subject is here",
+          "meaning": "Historical or external publications provide context; their claims and reading depth do not become new measurements.",
+          "references": [
+            {
+              "title": "New Theory about Light and Colors",
+              "url": "https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00006",
+              "readingDepth": "Selected primary letter in normalized transcription."
+            }
+          ]
+        },
+        {
+          "label": "How the model or drawing was declared",
+          "meaning": "Pinned source records and contracts identify assumptions. Drawing geometry does not determine missing electrical or material properties.",
+          "references": [
+            {
+              "title": "newton-tesla-research-lab/data/setups.json",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            },
+            {
+              "title": "newton-tesla-research-lab/docs/apparatus.md",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            }
+          ]
+        },
+        {
+          "label": "Which file was viewed",
+          "meaning": "Source and already-served copies are different observations. A content hash identifies bytes, not scientific truth, authorship certification or construction readiness.",
+          "references": [
+            {
+              "title": "Calculated ray paths and screen intersections",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/newton-prism-rays.svg",
+              "readingDepth": "Pinned artifact reference; no physical apparatus verification follows."
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The 120 mm equilateral prism, 20 degree incident direction and indices 1.51/1.52/1.53 are teaching inputs, not Newton apparatus dimensions or measured glass dispersion.",
+        "Not performed; the figure is a deterministic optical calculation.",
+        "One-prism separation does not reproduce Newton’s complete experiment.",
+        "No intensity, diffraction, finite solar disk or real glass dispersion is modeled.",
+        "This guide explains the declared study. It supplies no missing engineering specification, calibration, purchase requirement or construction approval."
+      ],
+      "coverage": {
+        "recordSpecific": true,
+        "termCount": 7,
+        "equationCount": 1,
+        "claim": "Explicit guide and selected contextual terms for this record; not automatic coverage of every raw source symbol or an exhaustive technical dictionary."
+      }
+    },
+    "notes": "Source-based explanatory sketch and reading packet. Not a manufacturing drawing, rated bill of parts, physical calibration or observed device-performance result."
+  },
+  "limitations": [
+    "Not performed; the figure is a deterministic optical calculation.",
+    "One-prism separation does not reproduce Newton’s complete experiment.",
+    "No intensity, diffraction, finite solar disk or real glass dispersion is modeled.",
+    "Authored scenario and sketch revisions are separate from the pinned source record.",
+    "Missing ratings, turns, insulation, materials and calibration remain unknown.",
+    "This packet is an explanatory review, not a manufacturing drawing, hardware validation or operating approval."
+  ]
+}

@@ -1,0 +1,2271 @@
+{
+  "schema": "sphere-study-dossier/v1",
+  "id": "acoustic",
+  "title": "Can pressure support a particle?",
+  "status": "proposed-setup-with-synthetic-computation",
+  "sourceIdentity": {
+    "implementation": [
+      {
+        "path": "src/workbench/sphere-models.ts",
+        "sha256": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d"
+      },
+      {
+        "path": "src/workbench/sphere-acoustics.ts",
+        "sha256": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473"
+      },
+      {
+        "path": "src/workbench/sphere-quantum.ts",
+        "sha256": "15a1a416362bc53aac4ae2dee9554b78ffa738b1f52a21e81cef53fee446ce4c"
+      },
+      {
+        "path": "src/workbench/sphere-drawings.ts",
+        "sha256": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb"
+      },
+      {
+        "path": "src/workbench/patent-drawings.ts",
+        "sha256": "6a7eec387096b9a751c82ce40afa31e63fcd71b146ca20691d0e2a64a24df61e"
+      },
+      {
+        "path": "scripts/export-sphere-studies.mjs",
+        "sha256": "2ab576971a197b047c958ab1bfc20a3e1773806aac22d213ebfab7dbbe5a70cc"
+      }
+    ],
+    "scene": {
+      "id": "acoustic-levitation",
+      "source": {
+        "path": "scripts/render-sphere-studies.py",
+        "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+      }
+    },
+    "sourceIds": [
+      "audio-levitation-mri-2025",
+      "audio-large-objects-2025"
+    ],
+    "reviewedAt": "2026-11-17T06:38:10.690068+00:00"
+  },
+  "study": {
+    "id": "acoustic",
+    "title": "Can pressure support a particle?",
+    "kicker": "02 / Acoustic levitation",
+    "sceneId": "acoustic-levitation",
+    "sourceIds": [
+      "audio-levitation-mri-2025",
+      "audio-large-objects-2025"
+    ],
+    "summary": "Compare standing-wave radiation force with gravity, inside a declared small-particle approximation.",
+    "inputs": [
+      {
+        "key": "frequencyHz",
+        "label": "Acoustic frequency",
+        "symbol": "f",
+        "unit": "Hz",
+        "min": 20000,
+        "max": 80000,
+        "step": 1000,
+        "value": 40000,
+        "meaning": "Cycles of sound pressure per second."
+      },
+      {
+        "key": "pressurePa",
+        "label": "Peak antinode pressure",
+        "symbol": "p_a",
+        "unit": "Pa",
+        "min": 0,
+        "max": 5000,
+        "step": 10,
+        "value": 1000,
+        "meaning": "Standing-wave peak pressure in pascals; must be calibrated independently, not inferred from supply voltage."
+      },
+      {
+        "key": "radiusM",
+        "label": "Particle radius",
+        "symbol": "a",
+        "unit": "m",
+        "min": 0.00001,
+        "max": 0.003,
+        "step": 0.00001,
+        "value": 0.0001,
+        "meaning": "Spherical particle radius; Rayleigh validity depends on a times wave number."
+      },
+      {
+        "key": "density",
+        "label": "Particle density",
+        "symbol": "rho_p",
+        "unit": "kg/m3",
+        "min": 1,
+        "max": 9000,
+        "step": 1,
+        "value": 25,
+        "meaning": "Assumed particle density; not a measured specimen."
+      },
+      {
+        "key": "phi",
+        "label": "Acoustic contrast",
+        "symbol": "Phi",
+        "unit": "1",
+        "min": 0,
+        "max": 1,
+        "step": 0.01,
+        "value": 0.8,
+        "meaning": "Assumed dimensionless material contrast. It is not fitted to force an equilibrium."
+      }
+    ],
+    "assumptions": [
+      "One-dimensional standing wave in air: density 1.204 kg/m3, sound speed 343 m/s.",
+      "Small spherical particle, weak linear field, no streaming, heating, viscosity correction or stability guarantee.",
+      "The visible concept bead is 8 mm in diameter for illustration, outside this small-particle model at 40 kHz. The default calculation uses a 0.2 mm diameter particle. No force prediction is attached to the rendered bead."
+    ],
+    "setup": [
+      "Use a manufacturer-rated acoustic levitator as a supervised apparatus lead; this scene is not a wiring or drive design.",
+      "Measure air conditions, particle size/density and peak pressure with a calibrated suitable microphone.",
+      "Record particle displacement with a scale and camera; compare predicted and observed positions while varying drive."
+    ],
+    "controls": [
+      "Drive-off and empty-fixture baseline.",
+      "Change radius, material contrast and pressure independently.",
+      "Withhold prediction outside small-particle/linear-field validity."
+    ],
+    "falsifier": "A pressure/radius sweep inconsistent with the declared force law after calibration rejects this ideal approximation for that apparatus.",
+    "scope": "Simulated force support, not antigravity. Momentum is exchanged with the acoustic apparatus."
+  },
+  "defaultInputs": {
+    "frequencyHz": 40000,
+    "pressurePa": 1000,
+    "radiusM": 0.0001,
+    "density": 25,
+    "phi": 0.8
+  },
+  "defaultCalculation": {
+    "metrics": [
+      {
+        "label": "Particle size parameter",
+        "value": 0.07327329804291063,
+        "unit": "1",
+        "meaning": "k*a, with k=2*pi*f/c; conservative small-particle gate is 0.1."
+      },
+      {
+        "label": "Maximum upward force",
+        "value": 1.3000823799398536e-8,
+        "unit": "N",
+        "meaning": "Ideal maximum radiation force; does not establish stable capture."
+      },
+      {
+        "label": "Effective weight",
+        "value": 9.774920751922423e-10,
+        "unit": "N",
+        "meaning": "Weight minus buoyancy in the declared medium."
+      }
+    ],
+    "curve": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 0.0000669921875,
+        "y": 1.2743035707455375e-9
+      },
+      {
+        "x": 0.000133984375,
+        "y": 2.5363349014996044e-9
+      },
+      {
+        "x": 0.00020097656249999998,
+        "y": 3.773939940650537e-9
+      },
+      {
+        "x": 0.00026796875,
+        "y": 4.975199875127579e-9
+      },
+      {
+        "x": 0.00033496093749999997,
+        "y": 6.128545915086237e-9
+      },
+      {
+        "x": 0.00040195312499999997,
+        "y": 7.222870707678634e-9
+      },
+      {
+        "x": 0.00046894531249999996,
+        "y": 8.247635306933319e-9
+      },
+      {
+        "x": 0.0005359375,
+        "y": 9.19297066956616e-9
+      },
+      {
+        "x": 0.0006029296875,
+        "y": 1.0049772699262121e-8
+      },
+      {
+        "x": 0.0006699218749999999,
+        "y": 1.0809789924099602e-8
+      },
+      {
+        "x": 0.0007369140624999999,
+        "y": 1.146570296273574e-8
+      },
+      {
+        "x": 0.0008039062499999999,
+        "y": 1.2011195014049929e-8
+      },
+      {
+        "x": 0.0008708984374999999,
+        "y": 1.2441012691391726e-8
+      },
+      {
+        "x": 0.0009378906249999999,
+        "y": 1.2751016615566085e-8
+      },
+      {
+        "x": 0.0010048828125,
+        "y": 1.2938221279317824e-8
+      },
+      {
+        "x": 0.001071875,
+        "y": 1.3000823799398536e-8
+      },
+      {
+        "x": 0.0011388671875,
+        "y": 1.2938221279317824e-8
+      },
+      {
+        "x": 0.001205859375,
+        "y": 1.2751016615566085e-8
+      },
+      {
+        "x": 0.0012728515625,
+        "y": 1.2441012691391726e-8
+      },
+      {
+        "x": 0.0013398437499999999,
+        "y": 1.201119501404993e-8
+      },
+      {
+        "x": 0.0014068359374999999,
+        "y": 1.1465702962735741e-8
+      },
+      {
+        "x": 0.0014738281249999999,
+        "y": 1.0809789924099606e-8
+      },
+      {
+        "x": 0.0015408203124999999,
+        "y": 1.0049772699262124e-8
+      },
+      {
+        "x": 0.0016078124999999999,
+        "y": 9.19297066956616e-9
+      },
+      {
+        "x": 0.0016748046874999999,
+        "y": 8.247635306933325e-9
+      },
+      {
+        "x": 0.0017417968749999999,
+        "y": 7.222870707678639e-9
+      },
+      {
+        "x": 0.0018087890624999999,
+        "y": 6.1285459150862414e-9
+      },
+      {
+        "x": 0.0018757812499999998,
+        "y": 4.9751998751275855e-9
+      },
+      {
+        "x": 0.0019427734374999998,
+        "y": 3.7739399406505375e-9
+      },
+      {
+        "x": 0.002009765625,
+        "y": 2.536334901499603e-9
+      },
+      {
+        "x": 0.0020767578125,
+        "y": 1.2743035707455404e-9
+      },
+      {
+        "x": 0.00214375,
+        "y": 1.5921417252212147e-24
+      },
+      {
+        "x": 0.0022107421875,
+        "y": -1.2743035707455373e-9
+      },
+      {
+        "x": 0.002277734375,
+        "y": -2.5363349014996e-9
+      },
+      {
+        "x": 0.0023447265625,
+        "y": -3.773939940650534e-9
+      },
+      {
+        "x": 0.00241171875,
+        "y": -4.975199875127578e-9
+      },
+      {
+        "x": 0.0024787109375,
+        "y": -6.128545915086233e-9
+      },
+      {
+        "x": 0.002545703125,
+        "y": -7.222870707678631e-9
+      },
+      {
+        "x": 0.0026126953125,
+        "y": -8.247635306933317e-9
+      },
+      {
+        "x": 0.0026796874999999998,
+        "y": -9.192970669566155e-9
+      },
+      {
+        "x": 0.0027466796874999998,
+        "y": -1.0049772699262118e-8
+      },
+      {
+        "x": 0.0028136718749999998,
+        "y": -1.0809789924099604e-8
+      },
+      {
+        "x": 0.0028806640624999998,
+        "y": -1.146570296273574e-8
+      },
+      {
+        "x": 0.0029476562499999998,
+        "y": -1.2011195014049928e-8
+      },
+      {
+        "x": 0.0030146484374999998,
+        "y": -1.2441012691391723e-8
+      },
+      {
+        "x": 0.0030816406249999997,
+        "y": -1.2751016615566083e-8
+      },
+      {
+        "x": 0.0031486328124999997,
+        "y": -1.2938221279317824e-8
+      },
+      {
+        "x": 0.0032156249999999997,
+        "y": -1.3000823799398536e-8
+      },
+      {
+        "x": 0.0032826171874999997,
+        "y": -1.2938221279317824e-8
+      },
+      {
+        "x": 0.0033496093749999997,
+        "y": -1.2751016615566088e-8
+      },
+      {
+        "x": 0.0034166015624999997,
+        "y": -1.2441012691391726e-8
+      },
+      {
+        "x": 0.0034835937499999997,
+        "y": -1.2011195014049932e-8
+      },
+      {
+        "x": 0.0035505859374999997,
+        "y": -1.1465702962735741e-8
+      },
+      {
+        "x": 0.0036175781249999997,
+        "y": -1.0809789924099606e-8
+      },
+      {
+        "x": 0.0036845703124999997,
+        "y": -1.0049772699262121e-8
+      },
+      {
+        "x": 0.0037515624999999997,
+        "y": -9.192970669566171e-9
+      },
+      {
+        "x": 0.0038185546874999997,
+        "y": -8.247635306933327e-9
+      },
+      {
+        "x": 0.0038855468749999997,
+        "y": -7.222870707678634e-9
+      },
+      {
+        "x": 0.0039525390625,
+        "y": -6.128545915086242e-9
+      },
+      {
+        "x": 0.00401953125,
+        "y": -4.975199875127576e-9
+      },
+      {
+        "x": 0.0040865234375,
+        "y": -3.773939940650539e-9
+      },
+      {
+        "x": 0.004153515625,
+        "y": -2.53633490149961e-9
+      },
+      {
+        "x": 0.0042205078125,
+        "y": -1.2743035707455478e-9
+      },
+      {
+        "x": 0.0042875,
+        "y": -3.1842834504424295e-24
+      }
+    ],
+    "xLabel": "Position within half-wavelength (m)",
+    "yLabel": "Ideal radiation force (N)",
+    "warnings": [],
+    "equations": [
+      {
+        "expression": "F_rad(z) = 4*pi*a^3*k*E_ac*Phi*sin(2*k*z)",
+        "meaning": "a radius (m), k wave number (rad/m), E_ac=p_a^2/(4*rho*c^2) energy density (J/m3), Phi dimensionless contrast; z position (m). Force is newton (N)."
+      },
+      {
+        "expression": "F_weight,eff = (4*pi*a^3/3)*(rho_p-rho)*g",
+        "meaning": "rho_p particle and rho medium density (kg/m3); g=9.80665 m/s2 is assumed standard gravity."
+      }
+    ],
+    "interpretation": "Simulated force support, not antigravity. Momentum is exchanged with the acoustic apparatus."
+  },
+  "glossary": {
+    "SI": "International System of Units.",
+    "Hz": "Hertz, cycles per second.",
+    "kHz": "Kilohertz, one thousand hertz.",
+    "Pa": "Pascal, pressure equal to one newton per square metre.",
+    "K": "Kelvin, the SI unit of temperature; temperature differences of 1K and 1°C have equal size.",
+    "ppm": "Parts per million; a relative value multiplied by one million.",
+    "ppb": "Parts per billion; a relative value multiplied by one billion.",
+    "RLC": "A circuit containing resistance R in ohms, inductance L in henry and capacitance C in farad.",
+    "RMS": "Root mean square, a waveform amplitude convention distinct from peak.",
+    "DAC": "Digital-to-analog converter, the electronic stage that turns numeric samples into a voltage.",
+    "EEG": "Electroencephalography, a measured scalp electrical signal; not simulated here.",
+    "SPL": "Sound pressure level, an acoustic measurement requiring calibration.",
+    "GLB": "Binary glTF, a 3D scene file format; this file contains illustrative geometry.",
+    "SVG": "Scalable Vector Graphics, a vector drawing format.",
+    "OSF": "Open Science Framework, the repository hosting the independently retrieved registration.",
+    "TOST": "Two one-sided tests, an equivalence-testing method; its margin and uncertainty need a declared plan.",
+    "A": "Position or condition A in the named protocol; not an ampere unless explicitly stated.",
+    "B": "Position or condition B in the named protocol; not magnetic flux density unless explicitly stated.",
+    "LOC1": "The external Sphere location-comparison protocol, with its own registered estimand."
+  },
+  "referenceDictionary": [
+    {
+      "reference": "801",
+      "componentId": "transducer",
+      "label": "Ultrasonic transducer placeholder",
+      "meaning": "External drive supplies acoustic energy. Frequency, electrical rating and radiated field are unspecified.",
+      "positionM": [
+        0,
+        0,
+        0.066
+      ],
+      "dimensionsM": [
+        0.088,
+        0.088,
+        0.055
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "802",
+      "componentId": "reflector",
+      "label": "Assumed reflector",
+      "meaning": "Proposed acoustic boundary. Spacing is a visual assumption, not a standing-wave condition.",
+      "positionM": [
+        0,
+        0,
+        0.245
+      ],
+      "dimensionsM": [
+        0.11,
+        0.11,
+        0.009
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "803",
+      "componentId": "bead",
+      "label": "Target bead placement",
+      "meaning": "Shown at a proposed target position. No levitation, stable node, force balance or physical observation is claimed.",
+      "positionM": [
+        0,
+        0,
+        0.165
+      ],
+      "dimensionsM": [
+        0.008,
+        0.008,
+        0.008
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "804",
+      "componentId": "driver",
+      "label": "Blank driver/readout",
+      "meaning": "Drive chain placeholder. No voltage, acoustic pressure, operating frequency or measured result.",
+      "positionM": [
+        0.19,
+        -0.075,
+        0.06
+      ],
+      "dimensionsM": [
+        0.14,
+        0.085,
+        0.08
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "805",
+      "componentId": "scale",
+      "label": "Length reference",
+      "meaning": "Assumed 180 mm ruler with 10 mm ticks. No calibrated uncertainty.",
+      "positionM": [
+        -0.07,
+        -0.13,
+        0.024
+      ],
+      "dimensionsM": [
+        0.18,
+        0.022,
+        0.002
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    }
+  ],
+  "worksheetReferences": [
+    {
+      "reference": "601",
+      "label": "Declared question or prediction",
+      "sourceFieldPaths": [
+        "sourceRecord.question"
+      ],
+      "missingFieldKeys": [
+        "prediction"
+      ],
+      "meaning": "Source-declared question/prediction text, not a verified result or completed experiment. Actual raw fields: question.",
+      "fieldExplanations": [
+        {
+          "key": "question",
+          "meaning": "Original question field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "602",
+      "label": "Source identity, model and proposed resources",
+      "sourceFieldPaths": [
+        "source",
+        "sourceRecord.model",
+        "sourceRecord.inputs",
+        "sourceRecord.materials"
+      ],
+      "missingFieldKeys": [
+        "category",
+        "novelty"
+      ],
+      "meaning": "Actual source identity and any declared model/input/resource fields. Their presence is not a validated apparatus, complete model or bill of materials. Actual raw fields: model, inputs, materials.",
+      "fieldExplanations": [
+        {
+          "key": "model",
+          "meaning": "Original model field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "inputs",
+          "meaning": "Original inputs field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "materials",
+          "meaning": "Original materials field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "603",
+      "label": "Declared observable or observation channel",
+      "sourceFieldPaths": [
+        "sourceRecord.observable"
+      ],
+      "missingFieldKeys": [],
+      "meaning": "Source-declared observation text. Unstated units, transfer functions, calibration and acquired data remain missing. Actual raw fields: observable.",
+      "fieldExplanations": [
+        {
+          "key": "observable",
+          "meaning": "Original observable field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "604",
+      "label": "Proposed controls, rivals and falsifiers",
+      "sourceFieldPaths": [
+        "sourceRecord.controls",
+        "sourceRecord.falsifier"
+      ],
+      "missingFieldKeys": [
+        "rival",
+        "acceptance"
+      ],
+      "meaning": "Declared discriminating conditions and alternatives. A listed control or acceptance criterion has not thereby been executed. Actual raw fields: controls, falsifier.",
+      "fieldExplanations": [
+        {
+          "key": "controls",
+          "meaning": "Original controls field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "falsifier",
+          "meaning": "Original falsifier field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "605",
+      "label": "Status, limitations and disclosure gaps",
+      "sourceFieldPaths": [
+        "sourceRecord.status",
+        "sourceRecord.limitations",
+        "status",
+        "gaps"
+      ],
+      "missingFieldKeys": [
+        "limit",
+        "limits"
+      ],
+      "meaning": "Original status and declared limits, plus worksheet gaps where present. No completion, legal filing readiness or physical validity is inferred. Actual raw fields: status, limitations.",
+      "fieldExplanations": [
+        {
+          "key": "status",
+          "meaning": "Original status field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "limitations",
+          "meaning": "Original limitations field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    }
+  ],
+  "scene": {
+    "id": "acoustic-levitation",
+    "title": "Proposed acoustic levitation apparatus",
+    "status": "proposed-unbuilt-concept",
+    "geometryStatus": "assumed-for-illustration",
+    "units": "m",
+    "source": {
+      "path": "scripts/render-sphere-studies.py",
+      "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+    },
+    "camera": {
+      "positionM": [
+        0.64,
+        -0.88,
+        0.72
+      ],
+      "targetM": [
+        0,
+        0,
+        0.12
+      ],
+      "projection": "orthographic",
+      "orthoScaleM": 0.83,
+      "pngPixels": [
+        800,
+        500
+      ],
+      "glbConvention": "glTF Y-up converted from Blender Z-up; one model unit is one metre"
+    },
+    "geometry": {
+      "transducerFaceHeightM": 0.097,
+      "reflectorLowerFaceM": 0.2405,
+      "visualCavityGapM": 0.1435,
+      "targetBeadDiameterM": 0.008,
+      "equilibriumSolved": false,
+      "driveFrequencyHz": null
+    },
+    "components": [
+      {
+        "id": "transducer",
+        "label": "Ultrasonic transducer placeholder",
+        "positionM": [
+          0,
+          0,
+          0.066
+        ],
+        "dimensionsM": [
+          0.088,
+          0.088,
+          0.055
+        ],
+        "shape": "cylindrical placeholder",
+        "material": "brushed aluminum illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "External drive supplies acoustic energy. Frequency, electrical rating and radiated field are unspecified."
+      },
+      {
+        "id": "reflector",
+        "label": "Assumed reflector",
+        "positionM": [
+          0,
+          0,
+          0.245
+        ],
+        "dimensionsM": [
+          0.11,
+          0.11,
+          0.009
+        ],
+        "shape": "flat circular plate",
+        "material": "stainless steel illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Proposed acoustic boundary. Spacing is a visual assumption, not a standing-wave condition."
+      },
+      {
+        "id": "bead",
+        "label": "Target bead placement",
+        "positionM": [
+          0,
+          0,
+          0.165
+        ],
+        "dimensionsM": [
+          0.008,
+          0.008,
+          0.008
+        ],
+        "shape": "8 mm diameter spherical target marker",
+        "material": "diffuse white fixture",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Shown at a proposed target position. No levitation, stable node, force balance or physical observation is claimed."
+      },
+      {
+        "id": "driver",
+        "label": "Blank driver/readout",
+        "positionM": [
+          0.19,
+          -0.075,
+          0.06
+        ],
+        "dimensionsM": [
+          0.14,
+          0.085,
+          0.08
+        ],
+        "shape": "rectangular instrument enclosure with blank display",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Drive chain placeholder. No voltage, acoustic pressure, operating frequency or measured result."
+      },
+      {
+        "id": "scale",
+        "label": "Length reference",
+        "positionM": [
+          -0.07,
+          -0.13,
+          0.024
+        ],
+        "dimensionsM": [
+          0.18,
+          0.022,
+          0.002
+        ],
+        "shape": "visual scale",
+        "material": "stainless steel illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Assumed 180 mm ruler with 10 mm ticks. No calibrated uncertainty."
+      }
+    ],
+    "legend": [
+      {
+        "reference": 1,
+        "componentId": "transducer",
+        "label": "Ultrasonic transducer placeholder",
+        "meaning": "External drive supplies acoustic energy. Frequency, electrical rating and radiated field are unspecified."
+      },
+      {
+        "reference": 2,
+        "componentId": "reflector",
+        "label": "Assumed reflector",
+        "meaning": "Proposed acoustic boundary. Spacing is a visual assumption, not a standing-wave condition."
+      },
+      {
+        "reference": 3,
+        "componentId": "bead",
+        "label": "Target bead placement",
+        "meaning": "Shown at a proposed target position. No levitation, stable node, force balance or physical observation is claimed."
+      },
+      {
+        "reference": 4,
+        "componentId": "driver",
+        "label": "Blank driver/readout",
+        "meaning": "Drive chain placeholder. No voltage, acoustic pressure, operating frequency or measured result."
+      },
+      {
+        "reference": 5,
+        "componentId": "scale",
+        "label": "Length reference",
+        "meaning": "Assumed 180 mm ruler with 10 mm ticks. No calibrated uncertainty."
+      }
+    ],
+    "objectGeometry": [
+      {
+        "name": "assumed 600 by 380 mm apparatus base",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.01
+        ],
+        "dimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.01
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ultrasound transducer placeholder",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.066
+        ],
+        "dimensionsM": [
+          0.088,
+          0.088,
+          0.055
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.066
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.088,
+          0.088,
+          0.055
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "transducer active face",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.095
+        ],
+        "dimensionsM": [
+          0.076,
+          0.076,
+          0.004
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.095
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.076,
+          0.076,
+          0.004
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "reflector support post",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          0.045,
+          0.15
+        ],
+        "dimensionsM": [
+          0.012,
+          0.012,
+          0.25
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          0.045,
+          0.15
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.012,
+          0.012,
+          0.25
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "post foot",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          0.045,
+          0.029
+        ],
+        "dimensionsM": [
+          0.05,
+          0.06,
+          0.014
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          0.045,
+          0.029
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.05,
+          0.06,
+          0.014
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "reflector support post.001",
+        "type": "MESH",
+        "positionM": [
+          0.12,
+          0.045,
+          0.15
+        ],
+        "dimensionsM": [
+          0.012,
+          0.012,
+          0.25
+        ],
+        "worldEnvelopeCentreM": [
+          0.12,
+          0.045,
+          0.15
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.012,
+          0.012,
+          0.25
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "post foot.001",
+        "type": "MESH",
+        "positionM": [
+          0.12,
+          0.045,
+          0.029
+        ],
+        "dimensionsM": [
+          0.05,
+          0.06,
+          0.014
+        ],
+        "worldEnvelopeCentreM": [
+          0.12,
+          0.045,
+          0.029
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.05,
+          0.06,
+          0.014
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "reflector support bridge",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.045,
+          0.269
+        ],
+        "dimensionsM": [
+          0.27,
+          0.035,
+          0.014
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.045,
+          0.269
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.27,
+          0.035,
+          0.014
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "reflector plate",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.245
+        ],
+        "dimensionsM": [
+          0.11,
+          0.11,
+          0.009
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.245
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.11,
+          0.11,
+          0.009
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "target bead placeholder",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.165
+        ],
+        "dimensionsM": [
+          0.008,
+          0.008,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.165
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.008,
+          0.008,
+          0.008
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "driver",
+        "type": "MESH",
+        "positionM": [
+          0.19,
+          -0.075,
+          0.06
+        ],
+        "dimensionsM": [
+          0.14,
+          0.085,
+          0.08
+        ],
+        "worldEnvelopeCentreM": [
+          0.19,
+          -0.075,
+          0.06
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.14,
+          0.085,
+          0.08
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "driver blank display",
+        "type": "MESH",
+        "positionM": [
+          0.1732,
+          -0.118,
+          0.0672
+        ],
+        "dimensionsM": [
+          0.0784,
+          0.001,
+          0.0384
+        ],
+        "worldEnvelopeCentreM": [
+          0.1732,
+          -0.118,
+          0.0672
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0784,
+          0.001,
+          0.0384
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "driver knob -1",
+        "type": "MESH",
+        "positionM": [
+          0.2348,
+          -0.121,
+          0.044
+        ],
+        "dimensionsM": [
+          0.0104,
+          0.0104,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          0.2348,
+          -0.121,
+          0.044
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0104,
+          0.008,
+          0.0104
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "driver knob 1",
+        "type": "MESH",
+        "positionM": [
+          0.2348,
+          -0.121,
+          0.076
+        ],
+        "dimensionsM": [
+          0.0104,
+          0.0104,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          0.2348,
+          -0.121,
+          0.076
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0104,
+          0.008,
+          0.0104
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "illustrative ruler",
+        "type": "MESH",
+        "positionM": [
+          -0.07,
+          -0.13,
+          0.024
+        ],
+        "dimensionsM": [
+          0.18,
+          0.022,
+          0.002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.07,
+          -0.13,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.18,
+          0.022,
+          0.002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 0",
+        "type": "MESH",
+        "positionM": [
+          -0.16,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.16,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 1",
+        "type": "MESH",
+        "positionM": [
+          -0.15,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.15,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 2",
+        "type": "MESH",
+        "positionM": [
+          -0.14,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.14,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 3",
+        "type": "MESH",
+        "positionM": [
+          -0.13,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.13,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 4",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 5",
+        "type": "MESH",
+        "positionM": [
+          -0.11,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.11,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 6",
+        "type": "MESH",
+        "positionM": [
+          -0.1,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.1,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 7",
+        "type": "MESH",
+        "positionM": [
+          -0.09,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.09,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 8",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.08,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 9",
+        "type": "MESH",
+        "positionM": [
+          -0.07,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.07,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 10",
+        "type": "MESH",
+        "positionM": [
+          -0.06,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.06,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 11",
+        "type": "MESH",
+        "positionM": [
+          -0.05,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.05,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 12",
+        "type": "MESH",
+        "positionM": [
+          -0.04,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.04,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 13",
+        "type": "MESH",
+        "positionM": [
+          -0.03,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.03,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 14",
+        "type": "MESH",
+        "positionM": [
+          -0.02,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.02,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 15",
+        "type": "MESH",
+        "positionM": [
+          -0.01,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.01,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 16",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 17",
+        "type": "MESH",
+        "positionM": [
+          0.01,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.01,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 18",
+        "type": "MESH",
+        "positionM": [
+          0.02,
+          -0.135,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.02,
+          -0.135,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1 plaque",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.065,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.065,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.065,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.000012,
+          -0.064508,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.04,
+          0.105,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.04,
+          0.105,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2",
+        "type": "MESH",
+        "positionM": [
+          -0.04,
+          0.105,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.04,
+          0.105546,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.065,
+          -0.02,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.065,
+          -0.02,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3",
+        "type": "MESH",
+        "positionM": [
+          0.065,
+          -0.02,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.064928,
+          -0.019508,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.21,
+          -0.14,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.21,
+          -0.14,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4",
+        "type": "MESH",
+        "positionM": [
+          0.21,
+          -0.14,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.209892,
+          -0.139454,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.19,
+          -0.13,
+          0.026
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.19,
+          -0.13,
+          0.026
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5",
+        "type": "MESH",
+        "positionM": [
+          -0.19,
+          -0.13,
+          0.0268
+        ],
+        "dimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.190072,
+          -0.129562,
+          0.0268
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "dimensionConvention": "Logical components use evaluated world-axis envelope centres/extents in metres; objectGeometry retains raw Blender origin/dimensions/rotation and explicit world envelopes. All geometry assumed, not manufacturing dimensions.",
+    "limitations": [
+      "Proposed, unbuilt apparatus concept. This is a 3D illustration, not hardware evidence or an engineering construction drawing.",
+      "Every geometry dimension is assumed in metres. No manufacturing tolerance, load rating, insulation rating, material assay or safety certification.",
+      "Natural-looking materials are rendering choices. No acoustic, electromagnetic, optical or quantum field is simulated.",
+      "Blank instrument screens contain no invented measurements. Numeric plaques refer only to the separate legend.",
+      "The PNG and GLB are companions to source-bound technical documents, not US/EPO filing-compliance certification."
+    ],
+    "files": {
+      "png": {
+        "path": "/sphere-lab/scenes/acoustic-levitation.png",
+        "sha256": "42994d0042a10d730543ca966d50e0657e43291685116ef6973ca74a36e43b45",
+        "bytes": 435231
+      },
+      "glb": {
+        "path": "/sphere-lab/scenes/acoustic-levitation.glb",
+        "sha256": "41049db94f7f7c89faf2569056e286fe109fd5222cb0432017a4bee13fe34f88",
+        "bytes": 417468
+      }
+    }
+  },
+  "sourceRecords": [
+    {
+      "id": "audio-levitation-mri-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12032270/",
+      "canonicalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12032270/",
+      "sha256": "d7037aee137b34bd20cbc365ca3103e8e67cafa89017cedf2af1706326320e98",
+      "capture": "docs/sphere-panel/sources/audio-levitation-mri-2025.xml",
+      "text": "docs/sphere-panel/sources/audio-levitation-mri-2025.txt",
+      "retrievedAt": "2026-11-17T06:27:45.582122+00:00",
+      "title": "Contact-free magnetic resonance imaging and spectroscopy with acoustic levitation",
+      "doi": "10.1038/s41467-025-58949-2",
+      "status": "primary-experiment",
+      "readDepth": "Abstract, introduction, Results acoustic levitator paragraph, Discussion, Methods acoustic levitation apparatus read; no supplementary datasets or replication.",
+      "passage": "The operating frequency of the transducer was set, through an Arduino Uno board and a module Si5351, at 40 kHz.",
+      "claim": "Reports contact-free MR imaging/spectroscopy of 0.5–5 microlitre droplets with a demagnetized 40kHz levitator, including apparatus-specific stability and deformation effects.",
+      "limitations": "Small droplets and a specific multi-transducer field; not a hollow copper-sphere force calibration, large-body levitation, human health result or validation of this simplified 1D model.",
+      "reviewOwner": "audio panel agent",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized.",
+      "publication": {
+        "date": "2025-04-25",
+        "doi": "10.1038/s41467-025-58949-2",
+        "kind": "Primary research"
+      }
+    },
+    {
+      "id": "audio-large-objects-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12630794/",
+      "canonicalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12630794/",
+      "sha256": "ea11c9d6d1c2e6a5bd8cbb7aa079867785c85ce9611af769aea15855543ae0ac",
+      "capture": "docs/sphere-panel/sources/audio-large-objects-2025.xml",
+      "text": "docs/sphere-panel/sources/audio-large-objects-2025.txt",
+      "retrievedAt": "2026-11-17T06:27:51.215842+00:00",
+      "title": "Sparse identification of nonlinear dynamics applied to the acoustic levitation of acoustically large objects",
+      "doi": "10.1038/s41598-025-24666-5",
+      "status": "primary-experiment-and-model-identification",
+      "readDepth": "Abstract, introduction, Gor’kov small-object methodology and experimental-setup sections read. XML equations contain inline images; equations from image-only content were not recovered or claimed independently transcribed.",
+      "passage": "Gorkov’s theory fails to capture the more complex dynamical behaviour exhibited by acoustically large or deformable objects",
+      "claim": "Reports separate synthetic small-object benchmark and experimental larger-object identification, illustrating failure of small-sphere extrapolation.",
+      "limitations": "Data-driven, setup-dependent dynamics; not a universal extension of Gor’kov or proof that a large copper shell can be supported by the implemented force law.",
+      "reviewOwner": "audio panel agent",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized.",
+      "publication": {
+        "date": "2025-11-19",
+        "doi": "10.1038/s41598-025-24666-5",
+        "kind": "Primary research"
+      }
+    }
+  ],
+  "setupFromScratch": [
+    "Use a manufacturer-rated acoustic levitator as a supervised apparatus lead; this scene is not a wiring or drive design.",
+    "Measure air conditions, particle size/density and peak pressure with a calibrated suitable microphone.",
+    "Record particle displacement with a scale and camera; compare predicted and observed positions while varying drive."
+  ],
+  "productSelectionLeads": [
+    "Manufacturer-rated acoustic levitation apparatus and matching controller: request field geometry, operating limits and published pressure calibration.",
+    "Appropriate calibrated ultrasonic microphone, size/density reference and camera scale: verify bandwidth rather than assuming an ordinary audio microphone suffices."
+  ],
+  "procurementStatus": "Equipment classes and evaluation criteria; not verified stock, supplier quotes, certified compatibility or a complete bill of materials.",
+  "improvements": [
+    {
+      "sourceId": "audio-levitation-mri-2025",
+      "proposal": "Evaluate Contact-free magnetic resonance imaging and spectroscopy with acoustic levitation only within the scope of its inspected passages.",
+      "evidenceLimit": "Small droplets and a specific multi-transducer field; not a hollow copper-sphere force calibration, large-body levitation, human health result or validation of this simplified 1D model."
+    },
+    {
+      "sourceId": "audio-large-objects-2025",
+      "proposal": "Evaluate Sparse identification of nonlinear dynamics applied to the acoustic levitation of acoustically large objects only within the scope of its inspected passages.",
+      "evidenceLimit": "Data-driven, setup-dependent dynamics; not a universal extension of Gor’kov or proof that a large copper shell can be supported by the implemented force law."
+    }
+  ],
+  "standards": [
+    {
+      "title": "US drawing requirements:37CFR1.84",
+      "url": "https://www.ecfr.gov/current/title-37/chapter-I/subchapter-A/part-1/subpart-B/section-1.84"
+    },
+    {
+      "title": "EPO President decision on presentation of application documents, OJ2025A49",
+      "url": "https://www.epo.org/en/legal/official-journal/2025/07/a49"
+    }
+  ],
+  "draftingChecks": {
+    "worksheet": {
+      "a4": true,
+      "insideCommonMargins": true,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "minimumReferenceHeightMm": 3.469851517107812,
+      "referenceHeightPass": true,
+      "uniformLineWidthMm": 0.25,
+      "contentBoundsMm": [
+        27.875,
+        27.076694641704325,
+        185.125,
+        229.125
+      ],
+      "referenceCount": 5,
+      "figureNumber": 0,
+      "mechanicalDraftOnly": true
+    },
+    "apparatus": {
+      "a4": true,
+      "widthMm": 210,
+      "heightMm": 297,
+      "commonMarginsMm": {
+        "top": 25,
+        "left": 25,
+        "right": 15,
+        "bottom": 10
+      },
+      "contentBoundsMm": [
+        35.323047127178825,
+        27.076694641704325,
+        183.81755971594575,
+        213.6
+      ],
+      "minimumReferenceInkHeightMm": 3.469851517107812,
+      "referenceHeightAtLeast3_2Mm": true,
+      "lineWidthMm": 0.25,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "figureNumber": 0
+    }
+  },
+  "limitations": [
+    "Standalone single-view draft; no FIG label. A filing-specific drawing set needs consistent figure numbering and complete claimed views.",
+    "Illustrated dimensions are assumed, not measured or manufacturing specifications.",
+    "Only declared component envelopes are projected; decorative meshes, mounts, internal wiring, optical paths and safety enclosures are omitted.",
+    "Geometric projection and drafting-format checks do not certify US/EPO filing compliance, enablement, patentability or physical validity.",
+    "Leader lines may cross projected parts in crowded layouts; every identity is also recorded in the companion numbered reference table.",
+    "Documentation concept map only: undirected connections are not execution order, causal proof, acquired data or invented hardware.",
+    "Numerals601–605 identify actual worksheet/schema field groups; companion sourceFieldPaths and missingFieldKeys explain their coverage.",
+    "Missing raw fields remain gaps; a field-group box does not establish that a physical apparatus or complete model was declared.",
+    "This single-view A4 draft omits the printed FIG. label and is not legal filing approval, patentability or scientific validation.",
+    "Source review is a selected dated corpus; no exhaustive state-of-the-art, novelty or legal conclusion.",
+    "Geometry remains fixed illustration; changing a simulation input does not update the scene or imply a measured setup."
+  ]
+}

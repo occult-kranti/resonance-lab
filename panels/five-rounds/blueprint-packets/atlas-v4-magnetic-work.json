@@ -1,0 +1,1443 @@
+{
+  "schema": "resonance-blueprint-packet/v1",
+  "createdAt": "2026-11-17T04:32:55.674Z",
+  "recordId": "atlas:v4-magnetic-work",
+  "revision": "five-panels-authored-review-v1",
+  "status": "authored-review-not-manufacturing-approval",
+  "record": {
+    "id": "atlas:v4-magnetic-work",
+    "title": "Magnetic storage and mechanical work",
+    "repository": "resonance-research-atlas",
+    "kind": "exact SVG electromechanical model boundary",
+    "domain": "magnetism",
+    "status": "proposed_unbuilt",
+    "summary": "R4 analytic model schematic, not measured apparatus. The current is 0.2 A, the hypothetical inductance law is 0.01 plus 0.1z henries, and the imposed motion takes 0.2 s. Magnetic storage and mechanical output each receive 40 microjoules from the source. This is separate from the qualitative permanent-magnet bench.",
+    "modelBoundary": "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+    "source": {
+      "repository": "resonance-research-atlas",
+      "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "path": "docs/panel-v4/setup-catalog.json",
+      "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "committedSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    "documentation": [
+      {
+        "repository": "resonance-research-atlas",
+        "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "path": "docs/panel-v4/apparatus.md",
+        "sha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+        "committedSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+        "checkoutMatchesCommit": true,
+        "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+        "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+      }
+    ],
+    "sourceRecord": {
+      "id": "v4-magnetic-work",
+      "kind": "exact SVG electromechanical model boundary",
+      "title": "Magnetic storage and mechanical work",
+      "file": "assets/sound-lab-v4/magnetic-work-boundary.svg",
+      "alt": "Closed maintained-current circuit with a five-ohm resistor and hypothetical variable inductance linked to a prescribed two-centimetre mechanical motion. The diagram includes source power, resistive heat, field energy and mechanical work. A separate static test-mass calculation fixes gravity.",
+      "caption": "R4 analytic model schematic, not measured apparatus. The current is 0.2 A, the hypothetical inductance law is 0.01 plus 0.1z henries, and the imposed motion takes 0.2 s. Magnetic storage and mechanical output each receive 40 microjoules from the source. This is separate from the qualitative permanent-magnet bench.",
+      "experiment": "magnetic"
+    },
+    "proposalIds": [
+      "NT-H05"
+    ],
+    "relationStatus": "Editorial topical relevance only; this drawing does not validate the linked proposal.",
+    "assets": [
+      {
+        "id": "v4-magnetic-work",
+        "kind": "exact SVG electromechanical model boundary",
+        "title": "Magnetic storage and mechanical work",
+        "file": "assets/sound-lab-v4/magnetic-work-boundary.svg",
+        "alt": "Closed maintained-current circuit with a five-ohm resistor and hypothetical variable inductance linked to a prescribed two-centimetre mechanical motion. The diagram includes source power, resistive heat, field energy and mechanical work. A separate static test-mass calculation fixes gravity.",
+        "caption": "R4 analytic model schematic, not measured apparatus. The current is 0.2 A, the hypothetical inductance law is 0.01 plus 0.1z henries, and the imposed motion takes 0.2 s. Magnetic storage and mechanical output each receive 40 microjoules from the source. This is separate from the qualitative permanent-magnet bench.",
+        "experiment": "magnetic",
+        "path": "assets/sound-lab-v4/magnetic-work-boundary.svg",
+        "repository": "resonance-research-atlas",
+        "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sourceSha256": "d5359beef032676a7498e98e9218b609a95cb44a01127c9695682eda4bf3ed60",
+        "committedSha256": "d5359beef032676a7498e98e9218b609a95cb44a01127c9695682eda4bf3ed60",
+        "checkoutMatchesCommit": true,
+        "localHref": "/apps/resonance-research-atlas/assets/sound-lab-v4/magnetic-work-boundary.svg",
+        "sourceHref": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/assets/sound-lab-v4/magnetic-work-boundary.svg",
+        "servedSha256": "d5359beef032676a7498e98e9218b609a95cb44a01127c9695682eda4bf3ed60",
+        "servedCopyMatchesSource": true,
+        "scope": "Existing server adapter serves the sibling dist copy; source bytes and served copy are different observations."
+      }
+    ],
+    "geometry": null,
+    "contracts": [],
+    "materials": [],
+    "measurements": [],
+    "limitations": [
+      "R4 analytic model schematic, not measured apparatus. The current is 0.2 A, the hypothetical inductance law is 0.01 plus 0.1z henries, and the imposed motion takes 0.2 s. Magnetic storage and mechanical output each receive 40 microjoules from the source. This is separate from the qualitative permanent-magnet bench.",
+      "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation."
+    ],
+    "sourceIds": [],
+    "equationStatus": "Drawing view with original caption; not a numerical solver or hardware result."
+  },
+  "authored": {
+    "scenario": {
+      "modifications": [],
+      "electricalParametersChanged": false,
+      "calibrationInferred": false
+    },
+    "sketch": {
+      "schemaVersion": 1,
+      "kind": "geometry-only-documentation-not-physical-prediction",
+      "family": "atlas:v4-magnetic-work",
+      "view": "flow",
+      "units": "mm",
+      "availableViews": [
+        "flow"
+      ],
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 760\" role=\"img\" aria-labelledby=\"sketch-title sketch-desc\"><title id=\"sketch-title\">Magnetic storage and mechanical work · flow</title><desc id=\"sketch-desc\">Source-pinned proposed flow documentation. . All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration. Dimensions are stipulated source layout or explicit user annotations, not measured component specifications. This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint.</desc><metadata id=\"source-provenance\">{&quot;method&quot;:&quot;source-coordinate-sketch-v1&quot;,&quot;sourcePins&quot;:[{&quot;repository&quot;:&quot;resonance-research-atlas&quot;,&quot;commit&quot;:&quot;aabc79d42adf4b72677fdd8e45fbade76b159192&quot;,&quot;path&quot;:&quot;docs/panel-v4/setup-catalog.json&quot;,&quot;sha256&quot;:&quot;c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa&quot;,&quot;committedSha256&quot;:&quot;c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;},{&quot;repository&quot;:&quot;resonance-research-atlas&quot;,&quot;commit&quot;:&quot;aabc79d42adf4b72677fdd8e45fbade76b159192&quot;,&quot;path&quot;:&quot;docs/panel-v4/apparatus.md&quot;,&quot;sha256&quot;:&quot;2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6&quot;,&quot;committedSha256&quot;:&quot;2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;}],&quot;scenario&quot;:{&quot;modifications&quot;:[],&quot;electricalParametersChanged&quot;:false,&quot;calibrationInferred&quot;:false},&quot;dimensions&quot;:[],&quot;warnings&quot;:[&quot;All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.&quot;,&quot;Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.&quot;,&quot;This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint.&quot;]}</metadata><rect width=\"1200\" height=\"760\" fill=\"#f5f3e9\"/><style>text{font-family:system-ui,sans-serif;fill:#213e32} .part{stroke:#315744;fill:#c9d6c0;stroke-width:1.8} .wire{stroke:#647b69;fill:none;stroke-width:1.4} .dim{stroke:#526b5b;fill:none;stroke-width:1} .small{font-size:13px}.label{font-size:15px;font-weight:600}</style><text x=\"38\" y=\"35\" font-size=\"23\" font-weight=\"600\">Magnetic storage and mechanical work · flow</text><text x=\"38\" y=\"61\" class=\"small\">PROPOSED / SOURCE-STIPULATED GEOMETRY · NOT MANUFACTURING OR PHYSICAL VALIDATION</text><text x=\"45\" y=\"115\" class=\"label\">Conceptual signal / observation map · diagram positions are not apparatus dimensions</text><g ><rect class=\"part\" x=\"45\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"152.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Electrical input</text></g><path class=\"wire\" d=\"M260 285h60m-8-6 8 6-8 6\"/><g ><rect class=\"part\" x=\"320\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"427.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Magnetic storage</text></g><path class=\"wire\" d=\"M535 285h60m-8-6 8 6-8 6\"/><g ><rect class=\"part\" x=\"595\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"702.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Mechanical work and heat</text></g><path class=\"wire\" d=\"M810 285h60m-8-6 8 6-8 6\"/><g ><rect class=\"part\" x=\"870\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"977.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Complete energy boundary</text></g><text x=\"45\" y=\"390\" class=\"label\">Source work = useful-load work + loss + change in stored energy, where that electrical model applies.</text><text x=\"45\" y=\"430\" class=\"small\">Readout locations and mathematical variables are documentation; no acquired sensor readings are shown.</text><text x=\"38\" y=\"682\" class=\"small\">Source resonance-research-atlas @ aabc79d42adf · full source/scenario identity in SVG metadata</text><text x=\"38\" y=\"706\" class=\"small\">SOURCE-STIPULATED LAYOUT · Exact geometry is not a measured or construction-approved device.</text><text x=\"38\" y=\"731\" class=\"small\">No normalized apparatus dimensions, calibrated readout or manufacturing ratings are established by this registry view.</text></svg>",
+      "components": [],
+      "dimensions": [],
+      "sourcePins": [
+        {
+          "repository": "resonance-research-atlas",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "committedSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "resonance-research-atlas",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "path": "docs/panel-v4/apparatus.md",
+          "sha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+          "committedSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "scenario": {
+        "modifications": [],
+        "electricalParametersChanged": false,
+        "calibrationInferred": false
+      },
+      "warnings": [
+        "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+        "Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.",
+        "This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint."
+      ]
+    },
+    "terms": [
+      {
+        "id": "electricity.inductance",
+        "label": "Inductance",
+        "symbols": [
+          "L",
+          "L1",
+          "L2"
+        ],
+        "unit": "henry (H)",
+        "plain": "Inductance tells how current stores magnetic energy.",
+        "meaning": "A scalar coil coefficient or symmetric inductance matrix, according to the attached contract.",
+        "cautions": [
+          "Drawing diameter and turns are not a measured inductance."
+        ],
+        "equation": "E = ½ L i²",
+        "aliases": [
+          "coil"
+        ],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.resistance",
+        "label": "Resistance and useful load",
+        "symbols": [
+          "R",
+          "R1",
+          "R2",
+          "RL",
+          "Rload",
+          "Rloss",
+          "Ri"
+        ],
+        "unit": "ohm (Ω)",
+        "plain": "Resistance converts electrical energy to heat.",
+        "meaning": "The receiving load and winding/internal losses are accounted for separately.",
+        "cautions": [
+          "R1 can also name a research round; ℝ denotes real numbers, not resistance."
+        ],
+        "equation": "P = I_rms² R",
+        "aliases": [
+          "copper loss",
+          "load"
+        ],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.current",
+        "label": "Electrical current",
+        "symbols": [
+          "i",
+          "I",
+          "I1",
+          "I2"
+        ],
+        "unit": "ampere (A)",
+        "plain": "Current is the flow rate of electric charge.",
+        "meaning": "Lowercase i(t) is instantaneous; uppercase I is a phasor whose peak/RMS convention must be declared.",
+        "cautions": [
+          "The imaginary unit i in an impedance equation is a different meaning."
+        ],
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.voltage",
+        "label": "Voltage and source-port drive",
+        "symbols": [
+          "v",
+          "V",
+          "e1",
+          "e2",
+          "Vc",
+          "Vs",
+          "Vl"
+        ],
+        "unit": "volt (V)",
+        "plain": "Voltage is electrical potential difference between two points.",
+        "meaning": "Instantaneous voltages and complex source-port phasors are distinct representations.",
+        "cautions": [
+          "A source knob is not automatically a measured port voltage; declare peak or RMS."
+        ],
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.power",
+        "label": "Real average power",
+        "symbols": [
+          "P",
+          "Pin",
+          "Psource",
+          "Pload",
+          "Ploss"
+        ],
+        "unit": "watt (W), equivalent to J/s",
+        "plain": "Power is the rate at which energy is transferred.",
+        "meaning": "Real average source power uses the real part of voltage times conjugate current, with a convention-dependent factor.",
+        "cautions": [
+          "Peak phasors need a factor ½; RMS phasors do not."
+        ],
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.stored-energy",
+        "label": "Stored energy",
+        "symbols": [
+          "E",
+          "ΔE"
+        ],
+        "unit": "joule (J)",
+        "plain": "Energy can remain in the capacitor and magnetic field.",
+        "meaning": "Initial and final stored states belong in a finite-time source-work budget.",
+        "cautions": [
+          "Released initial energy is not unexplained energy production."
+        ],
+        "equation": "E = ½Li² + ½CvC²",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.work",
+        "label": "Work transferred over time",
+        "symbols": [
+          "W",
+          "Win",
+          "Wload",
+          "Wloss"
+        ],
+        "unit": "joule (J)",
+        "plain": "Work is energy transferred during a chosen interval.",
+        "meaning": "Integrating signed instantaneous power gives work; uppercase W here is a variable, while W after a number is the watt unit.",
+        "cautions": [
+          "Lowercase w in the witness contract denotes a voltage, not work."
+        ],
+        "equation": "Win = ∫v(t)i(t)dt",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "measurement.calibration",
+        "label": "Calibration and deterministic error bounds",
+        "symbols": [
+          "ε",
+          "epsilon",
+          "epsilon_y",
+          "epsilon_w",
+          "ΔM",
+          "Δa",
+          "Delta_a"
+        ],
+        "unit": "unit of the bounded quantity",
+        "plain": "Calibration connects instrument readings with a stated reference.",
+        "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+        "cautions": [
+          "A stipulated error radius is not measured sensor performance or a confidence interval."
+        ],
+        "aliases": [
+          "uncertainty",
+          "error radius"
+        ],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.not-to-scale",
+        "label": "Not to scale",
+        "symbols": [
+          "NTS",
+          "not to scale"
+        ],
+        "unit": "drawing convention; not a measurement",
+        "plain": "A sketch may show relationships without preserving size ratios.",
+        "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+        "cautions": [
+          "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "math.estimates",
+        "label": "Estimate, difference and time derivative",
+        "symbols": [
+          "hat",
+          "ˆ",
+          "δ",
+          "Δ",
+          "dot",
+          "qdot",
+          "idot",
+          "ż"
+        ],
+        "unit": "depends on quantity; derivative adds /s",
+        "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+        "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+        "cautions": [
+          "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+        ],
+        "equation": "ż = dz/dt",
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "magnetism.contact-force",
+        "label": "Contact and magnetic force",
+        "symbols": [
+          "N",
+          "Fm",
+          "F",
+          "mg"
+        ],
+        "unit": "newton (N)",
+        "plain": "A magnet can change how strongly an object presses on a balance.",
+        "meaning": "N is upward contact force; Fm is the stipulated upward magnetic force and mg the downward weight.",
+        "cautions": [
+          "A smaller contact reading does not establish changed gravity; N the variable differs from N the unit."
+        ],
+        "equation": "N = mg − Fm, while N ≥ 0",
+        "aliases": [],
+        "domain": "magnetism",
+        "sourceRefs": [
+          "resonance-research-atlas/research/sound-lab-v4/R4"
+        ]
+      },
+      {
+        "id": "magnetism.mass-gravity",
+        "label": "Mass and gravitational acceleration",
+        "symbols": [
+          "m",
+          "g"
+        ],
+        "unit": "kilogram (kg); metre per second squared (m/s²)",
+        "plain": "Mass and gravitational acceleration together determine weight.",
+        "meaning": "In the static comparison g is stipulated as 9.80665 m/s², not inferred from a balance change.",
+        "cautions": [
+          "m as mass differs from m as the metre unit."
+        ],
+        "equation": "weight = mg",
+        "aliases": [],
+        "domain": "magnetism",
+        "sourceRefs": [
+          "resonance-research-atlas/research/sound-lab-v4/R4"
+        ]
+      },
+      {
+        "id": "magnetism.motion",
+        "label": "Position, velocity and inductance gradient",
+        "symbols": [
+          "z",
+          "ż",
+          "dL/dz"
+        ],
+        "unit": "m; m/s; H/m",
+        "plain": "Changing position can change the modeled inductance.",
+        "meaning": "z is prescribed position, ż its time derivative and dL/dz the stipulated inductance change per metre.",
+        "cautions": [
+          "This z is not impedance Z; prescribed motion is not a solved free trajectory."
+        ],
+        "equation": "F = ½ I² dL/dz",
+        "aliases": [],
+        "domain": "magnetism",
+        "sourceRefs": [
+          "resonance-research-atlas/research/sound-lab-v4/R4"
+        ]
+      },
+      {
+        "id": "units.si",
+        "label": "SI and unit prefixes",
+        "symbols": [
+          "SI",
+          "m",
+          "cm",
+          "mm",
+          "µ",
+          "milli",
+          "micro",
+          "nano"
+        ],
+        "unit": "declared physical unit",
+        "plain": "SI is the international system of measurement units.",
+        "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+        "cautions": [
+          "A source drawing in cm or mm is not silently a metres-based parts table."
+        ],
+        "aliases": [],
+        "domain": "units",
+        "sourceRefs": [
+          "https://www.bipm.org/en/measurement-units"
+        ]
+      },
+      {
+        "id": "digital.svg",
+        "label": "Scalable Vector Graphics",
+        "symbols": [
+          "SVG"
+        ],
+        "unit": "file format; no physical unit",
+        "plain": "SVG stores a drawing as shapes and text.",
+        "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+        "cautions": [
+          "A precise-looking SVG is not a validated construction drawing."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.json",
+        "label": "JavaScript Object Notation",
+        "symbols": [
+          "JSON"
+        ],
+        "unit": "data format; no physical unit",
+        "plain": "JSON stores structured data that can be exported and inspected.",
+        "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+        "cautions": [
+          "Serialization does not authenticate a claim or measure a device."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.sha256",
+        "label": "SHA-256 content digest",
+        "symbols": [
+          "SHA-256",
+          "SHA256"
+        ],
+        "unit": "256-bit digest",
+        "plain": "A digest helps compare whether two files have the same bytes.",
+        "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+        "cautions": [
+          "A matching digest proves neither the truth of content nor its author."
+        ],
+        "aliases": [
+          "hash"
+        ],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      }
+    ],
+    "equations": [
+      {
+        "id": "magnetic-work",
+        "title": "Motion and storage both draw on source work",
+        "equation": "vI = RI² + d(½LI²)/dt + Fż; F = ½I² dL/dz",
+        "plain": "The source supplies heat, stored field change and mechanical work.",
+        "convention": "Maintained current; stipulated L(z); externally prescribed motion, not free dynamics.",
+        "termIds": [
+          "magnetism.motion",
+          "magnetism.contact-force",
+          "electricity.inductance",
+          "electricity.current",
+          "electricity.voltage",
+          "electricity.resistance",
+          "electricity.power",
+          "electricity.stored-energy",
+          "electricity.work",
+          "math.estimates"
+        ],
+        "units": "Every power term W; F N, ż m/s, dL/dz H/m.",
+        "cautions": [
+          "The chosen inductance law and motion are not measured hardware."
+        ],
+        "sourceRefs": [
+          "resonance-research-atlas/research/sound-lab-v4/R4"
+        ]
+      }
+    ],
+    "handbook": {
+      "schema": "blueprint-handbook/v1",
+      "recordId": "atlas:v4-magnetic-work",
+      "title": "Magnetic storage and mechanical work",
+      "kind": "exact SVG electromechanical model boundary",
+      "status": "proposed_unbuilt",
+      "overview": "R4 analytic model schematic, not measured apparatus. The current is 0.2 A, the hypothetical inductance law is 0.01 plus 0.1z henries, and the imposed motion takes 0.2 s. Magnetic storage and mechanical output each receive 40 microjoules from the source. This is separate from the qualitative permanent-magnet bench.",
+      "goal": "Read the hypothetical variable-inductance account as a model of source energy, magnetic storage and mechanical work—not the permanent-magnet balance experiment.",
+      "signalSteps": [
+        "The source maintains the stipulated current while the modeled inductance changes with position.",
+        "Account for both magnetic stored-energy change and mechanical output.",
+        "Keep the imposed motion, model parameters and source work inside the same boundary."
+      ],
+      "variables": [
+        {
+          "id": "electricity.inductance",
+          "label": "Inductance",
+          "symbols": [
+            "L",
+            "L1",
+            "L2"
+          ],
+          "unit": "henry (H)",
+          "plain": "Inductance tells how current stores magnetic energy.",
+          "meaning": "A scalar coil coefficient or symmetric inductance matrix, according to the attached contract.",
+          "cautions": [
+            "Drawing diameter and turns are not a measured inductance."
+          ],
+          "equation": "E = ½ L i²",
+          "aliases": [
+            "coil"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.resistance",
+          "label": "Resistance and useful load",
+          "symbols": [
+            "R",
+            "R1",
+            "R2",
+            "RL",
+            "Rload",
+            "Rloss",
+            "Ri"
+          ],
+          "unit": "ohm (Ω)",
+          "plain": "Resistance converts electrical energy to heat.",
+          "meaning": "The receiving load and winding/internal losses are accounted for separately.",
+          "cautions": [
+            "R1 can also name a research round; ℝ denotes real numbers, not resistance."
+          ],
+          "equation": "P = I_rms² R",
+          "aliases": [
+            "copper loss",
+            "load"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.current",
+          "label": "Electrical current",
+          "symbols": [
+            "i",
+            "I",
+            "I1",
+            "I2"
+          ],
+          "unit": "ampere (A)",
+          "plain": "Current is the flow rate of electric charge.",
+          "meaning": "Lowercase i(t) is instantaneous; uppercase I is a phasor whose peak/RMS convention must be declared.",
+          "cautions": [
+            "The imaginary unit i in an impedance equation is a different meaning."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.voltage",
+          "label": "Voltage and source-port drive",
+          "symbols": [
+            "v",
+            "V",
+            "e1",
+            "e2",
+            "Vc",
+            "Vs",
+            "Vl"
+          ],
+          "unit": "volt (V)",
+          "plain": "Voltage is electrical potential difference between two points.",
+          "meaning": "Instantaneous voltages and complex source-port phasors are distinct representations.",
+          "cautions": [
+            "A source knob is not automatically a measured port voltage; declare peak or RMS."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.power",
+          "label": "Real average power",
+          "symbols": [
+            "P",
+            "Pin",
+            "Psource",
+            "Pload",
+            "Ploss"
+          ],
+          "unit": "watt (W), equivalent to J/s",
+          "plain": "Power is the rate at which energy is transferred.",
+          "meaning": "Real average source power uses the real part of voltage times conjugate current, with a convention-dependent factor.",
+          "cautions": [
+            "Peak phasors need a factor ½; RMS phasors do not."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.stored-energy",
+          "label": "Stored energy",
+          "symbols": [
+            "E",
+            "ΔE"
+          ],
+          "unit": "joule (J)",
+          "plain": "Energy can remain in the capacitor and magnetic field.",
+          "meaning": "Initial and final stored states belong in a finite-time source-work budget.",
+          "cautions": [
+            "Released initial energy is not unexplained energy production."
+          ],
+          "equation": "E = ½Li² + ½CvC²",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.work",
+          "label": "Work transferred over time",
+          "symbols": [
+            "W",
+            "Win",
+            "Wload",
+            "Wloss"
+          ],
+          "unit": "joule (J)",
+          "plain": "Work is energy transferred during a chosen interval.",
+          "meaning": "Integrating signed instantaneous power gives work; uppercase W here is a variable, while W after a number is the watt unit.",
+          "cautions": [
+            "Lowercase w in the witness contract denotes a voltage, not work."
+          ],
+          "equation": "Win = ∫v(t)i(t)dt",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "measurement.calibration",
+          "label": "Calibration and deterministic error bounds",
+          "symbols": [
+            "ε",
+            "epsilon",
+            "epsilon_y",
+            "epsilon_w",
+            "ΔM",
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "unit of the bounded quantity",
+          "plain": "Calibration connects instrument readings with a stated reference.",
+          "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+          "cautions": [
+            "A stipulated error radius is not measured sensor performance or a confidence interval."
+          ],
+          "aliases": [
+            "uncertainty",
+            "error radius"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "math.estimates",
+          "label": "Estimate, difference and time derivative",
+          "symbols": [
+            "hat",
+            "ˆ",
+            "δ",
+            "Δ",
+            "dot",
+            "qdot",
+            "idot",
+            "ż"
+          ],
+          "unit": "depends on quantity; derivative adds /s",
+          "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+          "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+          "cautions": [
+            "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+          ],
+          "equation": "ż = dz/dt",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "magnetism.contact-force",
+          "label": "Contact and magnetic force",
+          "symbols": [
+            "N",
+            "Fm",
+            "F",
+            "mg"
+          ],
+          "unit": "newton (N)",
+          "plain": "A magnet can change how strongly an object presses on a balance.",
+          "meaning": "N is upward contact force; Fm is the stipulated upward magnetic force and mg the downward weight.",
+          "cautions": [
+            "A smaller contact reading does not establish changed gravity; N the variable differs from N the unit."
+          ],
+          "equation": "N = mg − Fm, while N ≥ 0",
+          "aliases": [],
+          "domain": "magnetism",
+          "sourceRefs": [
+            "resonance-research-atlas/research/sound-lab-v4/R4"
+          ]
+        },
+        {
+          "id": "magnetism.mass-gravity",
+          "label": "Mass and gravitational acceleration",
+          "symbols": [
+            "m",
+            "g"
+          ],
+          "unit": "kilogram (kg); metre per second squared (m/s²)",
+          "plain": "Mass and gravitational acceleration together determine weight.",
+          "meaning": "In the static comparison g is stipulated as 9.80665 m/s², not inferred from a balance change.",
+          "cautions": [
+            "m as mass differs from m as the metre unit."
+          ],
+          "equation": "weight = mg",
+          "aliases": [],
+          "domain": "magnetism",
+          "sourceRefs": [
+            "resonance-research-atlas/research/sound-lab-v4/R4"
+          ]
+        },
+        {
+          "id": "magnetism.motion",
+          "label": "Position, velocity and inductance gradient",
+          "symbols": [
+            "z",
+            "ż",
+            "dL/dz"
+          ],
+          "unit": "m; m/s; H/m",
+          "plain": "Changing position can change the modeled inductance.",
+          "meaning": "z is prescribed position, ż its time derivative and dL/dz the stipulated inductance change per metre.",
+          "cautions": [
+            "This z is not impedance Z; prescribed motion is not a solved free trajectory."
+          ],
+          "equation": "F = ½ I² dL/dz",
+          "aliases": [],
+          "domain": "magnetism",
+          "sourceRefs": [
+            "resonance-research-atlas/research/sound-lab-v4/R4"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "id": "electricity.inductance",
+          "label": "Inductance",
+          "symbols": [
+            "L",
+            "L1",
+            "L2"
+          ],
+          "unit": "henry (H)",
+          "plain": "Inductance tells how current stores magnetic energy.",
+          "meaning": "A scalar coil coefficient or symmetric inductance matrix, according to the attached contract.",
+          "cautions": [
+            "Drawing diameter and turns are not a measured inductance."
+          ],
+          "equation": "E = ½ L i²",
+          "aliases": [
+            "coil"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.resistance",
+          "label": "Resistance and useful load",
+          "symbols": [
+            "R",
+            "R1",
+            "R2",
+            "RL",
+            "Rload",
+            "Rloss",
+            "Ri"
+          ],
+          "unit": "ohm (Ω)",
+          "plain": "Resistance converts electrical energy to heat.",
+          "meaning": "The receiving load and winding/internal losses are accounted for separately.",
+          "cautions": [
+            "R1 can also name a research round; ℝ denotes real numbers, not resistance."
+          ],
+          "equation": "P = I_rms² R",
+          "aliases": [
+            "copper loss",
+            "load"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.current",
+          "label": "Electrical current",
+          "symbols": [
+            "i",
+            "I",
+            "I1",
+            "I2"
+          ],
+          "unit": "ampere (A)",
+          "plain": "Current is the flow rate of electric charge.",
+          "meaning": "Lowercase i(t) is instantaneous; uppercase I is a phasor whose peak/RMS convention must be declared.",
+          "cautions": [
+            "The imaginary unit i in an impedance equation is a different meaning."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.voltage",
+          "label": "Voltage and source-port drive",
+          "symbols": [
+            "v",
+            "V",
+            "e1",
+            "e2",
+            "Vc",
+            "Vs",
+            "Vl"
+          ],
+          "unit": "volt (V)",
+          "plain": "Voltage is electrical potential difference between two points.",
+          "meaning": "Instantaneous voltages and complex source-port phasors are distinct representations.",
+          "cautions": [
+            "A source knob is not automatically a measured port voltage; declare peak or RMS."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.power",
+          "label": "Real average power",
+          "symbols": [
+            "P",
+            "Pin",
+            "Psource",
+            "Pload",
+            "Ploss"
+          ],
+          "unit": "watt (W), equivalent to J/s",
+          "plain": "Power is the rate at which energy is transferred.",
+          "meaning": "Real average source power uses the real part of voltage times conjugate current, with a convention-dependent factor.",
+          "cautions": [
+            "Peak phasors need a factor ½; RMS phasors do not."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.stored-energy",
+          "label": "Stored energy",
+          "symbols": [
+            "E",
+            "ΔE"
+          ],
+          "unit": "joule (J)",
+          "plain": "Energy can remain in the capacitor and magnetic field.",
+          "meaning": "Initial and final stored states belong in a finite-time source-work budget.",
+          "cautions": [
+            "Released initial energy is not unexplained energy production."
+          ],
+          "equation": "E = ½Li² + ½CvC²",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.work",
+          "label": "Work transferred over time",
+          "symbols": [
+            "W",
+            "Win",
+            "Wload",
+            "Wloss"
+          ],
+          "unit": "joule (J)",
+          "plain": "Work is energy transferred during a chosen interval.",
+          "meaning": "Integrating signed instantaneous power gives work; uppercase W here is a variable, while W after a number is the watt unit.",
+          "cautions": [
+            "Lowercase w in the witness contract denotes a voltage, not work."
+          ],
+          "equation": "Win = ∫v(t)i(t)dt",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "measurement.calibration",
+          "label": "Calibration and deterministic error bounds",
+          "symbols": [
+            "ε",
+            "epsilon",
+            "epsilon_y",
+            "epsilon_w",
+            "ΔM",
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "unit of the bounded quantity",
+          "plain": "Calibration connects instrument readings with a stated reference.",
+          "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+          "cautions": [
+            "A stipulated error radius is not measured sensor performance or a confidence interval."
+          ],
+          "aliases": [
+            "uncertainty",
+            "error radius"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "math.estimates",
+          "label": "Estimate, difference and time derivative",
+          "symbols": [
+            "hat",
+            "ˆ",
+            "δ",
+            "Δ",
+            "dot",
+            "qdot",
+            "idot",
+            "ż"
+          ],
+          "unit": "depends on quantity; derivative adds /s",
+          "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+          "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+          "cautions": [
+            "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+          ],
+          "equation": "ż = dz/dt",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "magnetism.contact-force",
+          "label": "Contact and magnetic force",
+          "symbols": [
+            "N",
+            "Fm",
+            "F",
+            "mg"
+          ],
+          "unit": "newton (N)",
+          "plain": "A magnet can change how strongly an object presses on a balance.",
+          "meaning": "N is upward contact force; Fm is the stipulated upward magnetic force and mg the downward weight.",
+          "cautions": [
+            "A smaller contact reading does not establish changed gravity; N the variable differs from N the unit."
+          ],
+          "equation": "N = mg − Fm, while N ≥ 0",
+          "aliases": [],
+          "domain": "magnetism",
+          "sourceRefs": [
+            "resonance-research-atlas/research/sound-lab-v4/R4"
+          ]
+        },
+        {
+          "id": "magnetism.mass-gravity",
+          "label": "Mass and gravitational acceleration",
+          "symbols": [
+            "m",
+            "g"
+          ],
+          "unit": "kilogram (kg); metre per second squared (m/s²)",
+          "plain": "Mass and gravitational acceleration together determine weight.",
+          "meaning": "In the static comparison g is stipulated as 9.80665 m/s², not inferred from a balance change.",
+          "cautions": [
+            "m as mass differs from m as the metre unit."
+          ],
+          "equation": "weight = mg",
+          "aliases": [],
+          "domain": "magnetism",
+          "sourceRefs": [
+            "resonance-research-atlas/research/sound-lab-v4/R4"
+          ]
+        },
+        {
+          "id": "magnetism.motion",
+          "label": "Position, velocity and inductance gradient",
+          "symbols": [
+            "z",
+            "ż",
+            "dL/dz"
+          ],
+          "unit": "m; m/s; H/m",
+          "plain": "Changing position can change the modeled inductance.",
+          "meaning": "z is prescribed position, ż its time derivative and dL/dz the stipulated inductance change per metre.",
+          "cautions": [
+            "This z is not impedance Z; prescribed motion is not a solved free trajectory."
+          ],
+          "equation": "F = ½ I² dL/dz",
+          "aliases": [],
+          "domain": "magnetism",
+          "sourceRefs": [
+            "resonance-research-atlas/research/sound-lab-v4/R4"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "equations": [
+        {
+          "id": "magnetic-work",
+          "title": "Motion and storage both draw on source work",
+          "equation": "vI = RI² + d(½LI²)/dt + Fż; F = ½I² dL/dz",
+          "plain": "The source supplies heat, stored field change and mechanical work.",
+          "convention": "Maintained current; stipulated L(z); externally prescribed motion, not free dynamics.",
+          "termIds": [
+            "magnetism.motion",
+            "magnetism.contact-force",
+            "electricity.inductance",
+            "electricity.current",
+            "electricity.voltage",
+            "electricity.resistance",
+            "electricity.power",
+            "electricity.stored-energy",
+            "electricity.work",
+            "math.estimates"
+          ],
+          "units": "Every power term W; F N, ż m/s, dL/dz H/m.",
+          "cautions": [
+            "The chosen inductance law and motion are not measured hardware."
+          ],
+          "sourceRefs": [
+            "resonance-research-atlas/research/sound-lab-v4/R4"
+          ]
+        }
+      ],
+      "contractFields": [],
+      "whatKnown": [
+        "The caption declares a hypothetical analytic model with chosen current, inductance law and imposed motion.",
+        "Its numerical energy split is a calculation under those assumptions, not a measured apparatus output.",
+        "Original source status: proposed_unbuilt."
+      ],
+      "whatUnknown": [
+        "A real actuator, inductance-versus-position law, friction, controller losses and component ratings are not specified or calibrated.",
+        "The source has no normalized construction-ready parts list for this drawing view."
+      ],
+      "measurementChecklist": [
+        "A future physical study would synchronize current, voltage, position and mechanical-force records.",
+        "Include motion-control power, losses and initial/final magnetic storage."
+      ],
+      "questions": [
+        "Is the inductance law measured or stipulated?",
+        "Who imposes the motion and supplies its work?",
+        "Has the model been mistaken for the separate permanent-magnet control?"
+      ],
+      "sourceHierarchy": [
+        {
+          "label": "Why this subject is here",
+          "meaning": "Historical or external publications provide context; their claims and reading depth do not become new measurements.",
+          "references": []
+        },
+        {
+          "label": "How the model or drawing was declared",
+          "meaning": "Pinned source records and contracts identify assumptions. Drawing geometry does not determine missing electrical or material properties.",
+          "references": [
+            {
+              "title": "resonance-research-atlas/docs/panel-v4/setup-catalog.json",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            },
+            {
+              "title": "resonance-research-atlas/docs/panel-v4/apparatus.md",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            }
+          ]
+        },
+        {
+          "label": "Which file was viewed",
+          "meaning": "Source and already-served copies are different observations. A content hash identifies bytes, not scientific truth, authorship certification or construction readiness.",
+          "references": [
+            {
+              "title": "assets/sound-lab-v4/magnetic-work-boundary.svg",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/assets/sound-lab-v4/magnetic-work-boundary.svg",
+              "readingDepth": "Pinned artifact reference; no physical apparatus verification follows."
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+        "R4 analytic model schematic, not measured apparatus. The current is 0.2 A, the hypothetical inductance law is 0.01 plus 0.1z henries, and the imposed motion takes 0.2 s. Magnetic storage and mechanical output each receive 40 microjoules from the source. This is separate from the qualitative permanent-magnet bench.",
+        "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation.",
+        "This guide explains the declared study. It supplies no missing engineering specification, calibration, purchase requirement or construction approval."
+      ],
+      "coverage": {
+        "recordSpecific": true,
+        "termCount": 17,
+        "equationCount": 1,
+        "claim": "Explicit guide and selected contextual terms for this record; not automatic coverage of every raw source symbol or an exhaustive technical dictionary."
+      }
+    },
+    "notes": "Source-based explanatory sketch and reading packet. Not a manufacturing drawing, rated bill of parts, physical calibration or observed device-performance result."
+  },
+  "limitations": [
+    "R4 analytic model schematic, not measured apparatus. The current is 0.2 A, the hypothetical inductance law is 0.01 plus 0.1z henries, and the imposed motion takes 0.2 s. Magnetic storage and mechanical output each receive 40 microjoules from the source. This is separate from the qualitative permanent-magnet bench.",
+    "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation.",
+    "Authored scenario and sketch revisions are separate from the pinned source record.",
+    "Missing ratings, turns, insulation, materials and calibration remain unknown.",
+    "This packet is an explanatory review, not a manufacturing drawing, hardware validation or operating approval."
+  ]
+}

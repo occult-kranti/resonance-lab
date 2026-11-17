@@ -1,0 +1,486 @@
+{
+  "schema": "sphere-study-packets/v1",
+  "generatedAt": "2026-11-17T06:45:22.613Z",
+  "status": "proposed-and-synthetic-not-measured",
+  "implementation": [
+    {
+      "path": "src/workbench/sphere-models.ts",
+      "sha256": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d"
+    },
+    {
+      "path": "src/workbench/sphere-acoustics.ts",
+      "sha256": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473"
+    },
+    {
+      "path": "src/workbench/sphere-quantum.ts",
+      "sha256": "15a1a416362bc53aac4ae2dee9554b78ffa738b1f52a21e81cef53fee446ce4c"
+    },
+    {
+      "path": "src/workbench/sphere-drawings.ts",
+      "sha256": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb"
+    },
+    {
+      "path": "src/workbench/patent-drawings.ts",
+      "sha256": "6a7eec387096b9a751c82ce40afa31e63fcd71b146ca20691d0e2a64a24df61e"
+    },
+    {
+      "path": "scripts/export-sphere-studies.mjs",
+      "sha256": "2ab576971a197b047c958ab1bfc20a3e1773806aac22d213ebfab7dbbe5a70cc"
+    }
+  ],
+  "standards": [
+    {
+      "title": "US drawing requirements:37CFR1.84",
+      "url": "https://www.ecfr.gov/current/title-37/chapter-I/subchapter-A/part-1/subpart-B/section-1.84"
+    },
+    {
+      "title": "EPO President decision on presentation of application documents, OJ2025A49",
+      "url": "https://www.epo.org/en/legal/official-journal/2025/07/a49"
+    }
+  ],
+  "records": [
+    {
+      "id": "sphere",
+      "title": "Where does the shift come from?",
+      "files": [
+        {
+          "path": "drawings/sphere.svg",
+          "sha256": "ad9dc9635db810459faddc6e9a94895c7983da69643f1d65a1d4d4a0044d126d",
+          "bytes": 36035
+        },
+        {
+          "path": "setups/sphere.svg",
+          "sha256": "818eac51048070591504a85a856f8ebbe9bf331a7a85a33478570d0295cb08e3",
+          "bytes": 32545
+        },
+        {
+          "path": "dossiers/sphere.json",
+          "sha256": "dfa6d1dabb496e1ea19d1a6cfabca3da068c6629a6493e35b7d64ff38336750d",
+          "bytes": 65635
+        },
+        {
+          "path": "dossiers/sphere.md",
+          "sha256": "cf9245b6709fedf96608a3d21baf8f6ab51ee9cc9e509424d77b9ec36216115e",
+          "bytes": 12295
+        }
+      ],
+      "sourceIds": [
+        "sphere-about",
+        "sphere-protocol",
+        "sphere-osf-registration",
+        "sphere-zenodo-pdf",
+        "metrology-gum"
+      ],
+      "checks": {
+        "worksheet": {
+          "a4": true,
+          "insideCommonMargins": true,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "minimumReferenceHeightMm": 3.469851517107812,
+          "referenceHeightPass": true,
+          "uniformLineWidthMm": 0.25,
+          "contentBoundsMm": [
+            27.875,
+            27.076694641704325,
+            185.125,
+            229.125
+          ],
+          "referenceCount": 5,
+          "figureNumber": 0,
+          "mechanicalDraftOnly": true
+        },
+        "apparatus": {
+          "a4": true,
+          "widthMm": 210,
+          "heightMm": 297,
+          "commonMarginsMm": {
+            "top": 25,
+            "left": 25,
+            "right": 15,
+            "bottom": 10
+          },
+          "contentBoundsMm": [
+            35.323047127178825,
+            27.076694641704325,
+            183.66881859264038,
+            213.6
+          ],
+          "minimumReferenceInkHeightMm": 3.469851517107812,
+          "referenceHeightAtLeast3_2Mm": true,
+          "lineWidthMm": 0.25,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "figureNumber": 0
+        }
+      }
+    },
+    {
+      "id": "acoustic",
+      "title": "Can pressure support a particle?",
+      "files": [
+        {
+          "path": "drawings/acoustic.svg",
+          "sha256": "98110fb7e24210259db61aef295db66a33ec97b1eb23e67e1350899d17d2cd64",
+          "bytes": 35974
+        },
+        {
+          "path": "setups/acoustic.svg",
+          "sha256": "fae49b99e8711dd44ba63128784922f3966e294908fd21ace487d3c2f7c82246",
+          "bytes": 32558
+        },
+        {
+          "path": "dossiers/acoustic.json",
+          "sha256": "904a26792f61ea487d3388bdc871394d2ccd9556f1b99df566dd8f6d84d83d2d",
+          "bytes": 58873
+        },
+        {
+          "path": "dossiers/acoustic.md",
+          "sha256": "a28233ae228ee9702834a5396dd7b0d195683416d898d5ffa98e3f66f70a5dc1",
+          "bytes": 10352
+        }
+      ],
+      "sourceIds": [
+        "audio-levitation-mri-2025",
+        "audio-large-objects-2025"
+      ],
+      "checks": {
+        "worksheet": {
+          "a4": true,
+          "insideCommonMargins": true,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "minimumReferenceHeightMm": 3.469851517107812,
+          "referenceHeightPass": true,
+          "uniformLineWidthMm": 0.25,
+          "contentBoundsMm": [
+            27.875,
+            27.076694641704325,
+            185.125,
+            229.125
+          ],
+          "referenceCount": 5,
+          "figureNumber": 0,
+          "mechanicalDraftOnly": true
+        },
+        "apparatus": {
+          "a4": true,
+          "widthMm": 210,
+          "heightMm": 297,
+          "commonMarginsMm": {
+            "top": 25,
+            "left": 25,
+            "right": 15,
+            "bottom": 10
+          },
+          "contentBoundsMm": [
+            35.323047127178825,
+            27.076694641704325,
+            183.81755971594575,
+            213.6
+          ],
+          "minimumReferenceInkHeightMm": 3.469851517107812,
+          "referenceHeightAtLeast3_2Mm": true,
+          "lineWidthMm": 0.25,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "figureNumber": 0
+        }
+      }
+    },
+    {
+      "id": "electromagnetic",
+      "title": "Follow every joule.",
+      "files": [
+        {
+          "path": "drawings/electromagnetic.svg",
+          "sha256": "4aa76c5a1b5d40f4c819947539a291e51231ba0366942d1c0c4f29ebae24a957",
+          "bytes": 35925
+        },
+        {
+          "path": "setups/electromagnetic.svg",
+          "sha256": "0cd6c7e35316a25acbf64ad8a209cedbf61d9beb015b54185727ca4700ee0a23",
+          "bytes": 44276
+        },
+        {
+          "path": "dossiers/electromagnetic.json",
+          "sha256": "80c1a6cab8db0e7ff39cfda295fa1635acc8c5bc1d17080d31efbdafebbd3f42",
+          "bytes": 53859
+        },
+        {
+          "path": "dossiers/electromagnetic.md",
+          "sha256": "c0e673bf2dfa7e17912d5d68c149b76e0d992c0d6a7d843562bdd264c3b59e66",
+          "bytes": 10180
+        }
+      ],
+      "sourceIds": [
+        "em-poynting",
+        "historical-tesla"
+      ],
+      "checks": {
+        "worksheet": {
+          "a4": true,
+          "insideCommonMargins": true,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "minimumReferenceHeightMm": 3.469851517107812,
+          "referenceHeightPass": true,
+          "uniformLineWidthMm": 0.25,
+          "contentBoundsMm": [
+            27.875,
+            27.076694641704325,
+            185.125,
+            229.125
+          ],
+          "referenceCount": 5,
+          "figureNumber": 0,
+          "mechanicalDraftOnly": true
+        },
+        "apparatus": {
+          "a4": true,
+          "widthMm": 210,
+          "heightMm": 297,
+          "commonMarginsMm": {
+            "top": 25,
+            "left": 25,
+            "right": 15,
+            "bottom": 10
+          },
+          "contentBoundsMm": [
+            35.323047127178825,
+            27.076694641704325,
+            183.7850225952227,
+            213.6
+          ],
+          "minimumReferenceInkHeightMm": 3.469851517107812,
+          "referenceHeightAtLeast3_2Mm": true,
+          "lineWidthMm": 0.25,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "figureNumber": 0
+        }
+      }
+    },
+    {
+      "id": "audio",
+      "title": "A beat is a signal, not an outcome.",
+      "files": [
+        {
+          "path": "drawings/audio.svg",
+          "sha256": "edc772805cacd9a4d706a07ee3cd5db8f27d49e7ef59ba6823a987ffe5b87970",
+          "bytes": 35969
+        },
+        {
+          "path": "setups/audio.svg",
+          "sha256": "088d2625e50c2e9c91e2f8a187ff3d4b645abfa783ca58a535fadef80c4b498c",
+          "bytes": 32633
+        },
+        {
+          "path": "dossiers/audio.json",
+          "sha256": "006261c5c25584648e254c2ee5de0d6535975c1c317f911659d677a550ee3d8d",
+          "bytes": 190420
+        },
+        {
+          "path": "dossiers/audio.md",
+          "sha256": "98d416e472a932dec3f91d7d49adc44b7570b3643820e3cf15e6ee8cb1b91553",
+          "bytes": 10653
+        }
+      ],
+      "sourceIds": [
+        "audio-binaural-review-2023",
+        "clinical-dental-2025"
+      ],
+      "checks": {
+        "worksheet": {
+          "a4": true,
+          "insideCommonMargins": true,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "minimumReferenceHeightMm": 3.469851517107812,
+          "referenceHeightPass": true,
+          "uniformLineWidthMm": 0.25,
+          "contentBoundsMm": [
+            27.875,
+            27.076694641704325,
+            185.125,
+            229.125
+          ],
+          "referenceCount": 5,
+          "figureNumber": 0,
+          "mechanicalDraftOnly": true
+        },
+        "apparatus": {
+          "a4": true,
+          "widthMm": 210,
+          "heightMm": 297,
+          "commonMarginsMm": {
+            "top": 25,
+            "left": 25,
+            "right": 15,
+            "bottom": 10
+          },
+          "contentBoundsMm": [
+            35.323047127178825,
+            27.076694641704325,
+            183.7036797934151,
+            213.6
+          ],
+          "minimumReferenceInkHeightMm": 3.469851517107812,
+          "referenceHeightAtLeast3_2Mm": true,
+          "lineWidthMm": 0.25,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "figureNumber": 0
+        }
+      }
+    },
+    {
+      "id": "quantum",
+      "title": "Transfer a state. Keep the channel.",
+      "files": [
+        {
+          "path": "drawings/quantum.svg",
+          "sha256": "5a70378f505663aebfc784f2bebb7e474a578b80d6e291c8a193da9ced3a2159",
+          "bytes": 36006
+        },
+        {
+          "path": "setups/quantum.svg",
+          "sha256": "f75abbc0852bfad77f2c36a39e5b781cf07d39f497e999f33deb6c5cf2e6ce10",
+          "bytes": 44511
+        },
+        {
+          "path": "dossiers/quantum.json",
+          "sha256": "337aea378d3f505146a81b0d08853041be1b34f507b20d1eb45b7b111d75b214",
+          "bytes": 166007
+        },
+        {
+          "path": "dossiers/quantum.md",
+          "sha256": "5f752b65f0f156ec7b1908801105a3b45c53e07f0e7c6b5879751477d7770dd9",
+          "bytes": 11426
+        }
+      ],
+      "sourceIds": [
+        "quantum-bennett-1993",
+        "quantum-horodecki-1999",
+        "quantum-thomas-2024"
+      ],
+      "checks": {
+        "worksheet": {
+          "a4": true,
+          "insideCommonMargins": true,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "minimumReferenceHeightMm": 3.469851517107812,
+          "referenceHeightPass": true,
+          "uniformLineWidthMm": 0.25,
+          "contentBoundsMm": [
+            27.875,
+            27.076694641704325,
+            185.125,
+            229.125
+          ],
+          "referenceCount": 5,
+          "figureNumber": 0,
+          "mechanicalDraftOnly": true
+        },
+        "apparatus": {
+          "a4": true,
+          "widthMm": 210,
+          "heightMm": 297,
+          "commonMarginsMm": {
+            "top": 25,
+            "left": 25,
+            "right": 15,
+            "bottom": 10
+          },
+          "contentBoundsMm": [
+            35.323047127178825,
+            27.076694641704325,
+            183.81755971594575,
+            213.6
+          ],
+          "minimumReferenceInkHeightMm": 3.469851517107812,
+          "referenceHeightAtLeast3_2Mm": true,
+          "lineWidthMm": 0.25,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "figureNumber": 0
+        }
+      }
+    },
+    {
+      "id": "pattern",
+      "title": "One shape, many possible scales.",
+      "files": [
+        {
+          "path": "drawings/pattern.svg",
+          "sha256": "ad4b13cae401d6c2ed7d1d97814c68d3ac0200e42fe80cf814b738ba8f4bf93c",
+          "bytes": 35978
+        },
+        {
+          "path": "setups/pattern.svg",
+          "sha256": "c4d9c6361dab5f91ee7f0785d9b363e81a2ac72d1d8cb68018dc60597822ef74",
+          "bytes": 32602
+        },
+        {
+          "path": "dossiers/pattern.json",
+          "sha256": "14d87c91d31e8dc9793ccca7a7d250943e7fc90ef7361bfdafe7301562718b11",
+          "bytes": 64945
+        },
+        {
+          "path": "dossiers/pattern.md",
+          "sha256": "72c9f445fc8f5ee5a2727de0a763c4b77a92871219291e0fcb2cbeec725a69d6",
+          "bytes": 9922
+        }
+      ],
+      "sourceIds": [
+        "historical-newton",
+        "historical-tesla",
+        "sphere-about"
+      ],
+      "checks": {
+        "worksheet": {
+          "a4": true,
+          "insideCommonMargins": true,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "minimumReferenceHeightMm": 3.469851517107812,
+          "referenceHeightPass": true,
+          "uniformLineWidthMm": 0.25,
+          "contentBoundsMm": [
+            27.875,
+            27.076694641704325,
+            185.125,
+            229.125
+          ],
+          "referenceCount": 5,
+          "figureNumber": 0,
+          "mechanicalDraftOnly": true
+        },
+        "apparatus": {
+          "a4": true,
+          "widthMm": 210,
+          "heightMm": 297,
+          "commonMarginsMm": {
+            "top": 25,
+            "left": 25,
+            "right": 15,
+            "bottom": 10
+          },
+          "contentBoundsMm": [
+            35.323047127178825,
+            27.076694641704325,
+            183.7036797934151,
+            213.6
+          ],
+          "minimumReferenceInkHeightMm": 3.469851517107812,
+          "referenceHeightAtLeast3_2Mm": true,
+          "lineWidthMm": 0.25,
+          "noPrintedFrame": true,
+          "monochrome": true,
+          "figureNumber": 0
+        }
+      }
+    }
+  ]
+}

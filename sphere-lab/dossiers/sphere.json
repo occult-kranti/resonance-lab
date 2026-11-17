@@ -1,0 +1,2539 @@
+{
+  "schema": "sphere-study-dossier/v1",
+  "id": "sphere",
+  "title": "Where does the shift come from?",
+  "status": "proposed-setup-with-synthetic-computation",
+  "sourceIdentity": {
+    "implementation": [
+      {
+        "path": "src/workbench/sphere-models.ts",
+        "sha256": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d"
+      },
+      {
+        "path": "src/workbench/sphere-acoustics.ts",
+        "sha256": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473"
+      },
+      {
+        "path": "src/workbench/sphere-quantum.ts",
+        "sha256": "15a1a416362bc53aac4ae2dee9554b78ffa738b1f52a21e81cef53fee446ce4c"
+      },
+      {
+        "path": "src/workbench/sphere-drawings.ts",
+        "sha256": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb"
+      },
+      {
+        "path": "src/workbench/patent-drawings.ts",
+        "sha256": "6a7eec387096b9a751c82ce40afa31e63fcd71b146ca20691d0e2a64a24df61e"
+      },
+      {
+        "path": "scripts/export-sphere-studies.mjs",
+        "sha256": "2ab576971a197b047c958ab1bfc20a3e1773806aac22d213ebfab7dbbe5a70cc"
+      }
+    ],
+    "scene": {
+      "id": "copper-spheres",
+      "source": {
+        "path": "scripts/render-sphere-studies.py",
+        "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+      }
+    },
+    "sourceIds": [
+      "sphere-about",
+      "sphere-protocol",
+      "sphere-osf-registration",
+      "sphere-zenodo-pdf",
+      "metrology-gum"
+    ],
+    "reviewedAt": "2026-11-17T06:38:10.690068+00:00"
+  },
+  "study": {
+    "id": "sphere",
+    "title": "Where does the shift come from?",
+    "kicker": "01 / Copper sphere metrology",
+    "sceneId": "copper-spheres",
+    "sourceIds": [
+      "sphere-about",
+      "sphere-protocol",
+      "sphere-osf-registration",
+      "sphere-zenodo-pdf",
+      "metrology-gum"
+    ],
+    "summary": "Separate an injected location term from differential temperature and common clock drift.",
+    "inputs": [
+      {
+        "key": "modeHz",
+        "label": "Selected mode",
+        "symbol": "f0",
+        "unit": "Hz",
+        "min": 10000,
+        "max": 500000,
+        "step": 1000,
+        "value": 250000,
+        "meaning": "An assumed identified mechanical mode, not a frequency derived from this illustration."
+      },
+      {
+        "key": "deltaK",
+        "label": "Temperature mismatch",
+        "symbol": "dT",
+        "unit": "K",
+        "min": -0.05,
+        "max": 0.05,
+        "step": 0.001,
+        "value": 0.01,
+        "meaning": "Test-sphere temperature at B minus A after reference correction; K is kelvin."
+      },
+      {
+        "key": "alpha",
+        "label": "Mode temperature coefficient",
+        "symbol": "alpha",
+        "unit": "ppm/K",
+        "min": -500,
+        "max": 500,
+        "step": 1,
+        "value": -100,
+        "meaning": "Assumed calibration slope; ppm means parts per million. Must be measured for the actual mode."
+      },
+      {
+        "key": "injectedPpm",
+        "label": "Injected location term",
+        "symbol": "epsilon",
+        "unit": "ppm",
+        "min": -10,
+        "max": 10,
+        "step": 0.1,
+        "value": 0,
+        "meaning": "Synthetic test signal only, with zero as the established-model null."
+      },
+      {
+        "key": "commonPpm",
+        "label": "Common clock drift",
+        "symbol": "c",
+        "unit": "ppm",
+        "min": -100,
+        "max": 100,
+        "step": 1,
+        "value": 15,
+        "meaning": "Same fractional drift applied to test and reference channels; cancels in their ratio."
+      }
+    ],
+    "assumptions": [
+      "First-order small fractional shifts; matched common clock factors cancel exactly in the defined ratio.",
+      "The reference has no differential temperature change in this toy model. No measured sphere coefficient or mode identification is supplied.",
+      "The paired 3D specimens have illustrative 0.16 m centre spacing; they are not LOC-1 positions A/B, which are 0.40 m apart. Test/reference object roles and position labels must be assigned separately."
+    ],
+    "setup": [
+      "Start with the preserved Copper Sphere Lab and its source-bound model contract.",
+      "For a proposed physical study, identify a mode, acquire both test and stationary reference channels on a shared timebase, then calibrate temperature and mounting response.",
+      "Freeze randomized blinded A/B positions, sham moves, orientation swaps, exclusion rules and an uncertainty budget before collection."
+    ],
+    "controls": [
+      "Set injected location term to zero and vary temperature.",
+      "Change common clock drift: the ratio result must stay constant.",
+      "Swap sensors and mounts, include sham motion and hold-out temperature calibration."
+    ],
+    "falsifier": "An alleged location signal that follows differential temperature, mounting, readout gain or clock mismatch does not discriminate the location hypothesis.",
+    "scope": "Synthetic differential-ratio teaching model. The OSF registration pd3st was independently retrieved. This toy uses B/A relative change in ppm; LOC-1 specifies 10^9*(mean r_A - mean r_B) in ppb (parts per billion), with covariance and equivalence analysis. These estimands differ in sign, normalization and unit. This is not a replication or registered analysis."
+  },
+  "defaultInputs": {
+    "modeHz": 250000,
+    "deltaK": 0.01,
+    "alpha": -100,
+    "injectedPpm": 0,
+    "commonPpm": 15
+  },
+  "defaultCalculation": {
+    "metrics": [
+      {
+        "label": "Apparent ratio shift",
+        "value": -1,
+        "unit": "ppm",
+        "meaning": "First-order differential thermal term plus deliberately injected location term."
+      },
+      {
+        "label": "Frequency equivalent",
+        "value": -0.25,
+        "unit": "Hz",
+        "meaning": "Selected assumed mode times the fractional ratio shift."
+      },
+      {
+        "label": "Thermal contribution",
+        "value": -1,
+        "unit": "ppm",
+        "meaning": "Can imitate the location signal unless independently calibrated."
+      }
+    ],
+    "curve": [
+      {
+        "x": -0.05,
+        "y": 5
+      },
+      {
+        "x": -0.048,
+        "y": 4.8
+      },
+      {
+        "x": -0.046,
+        "y": 4.6
+      },
+      {
+        "x": -0.044,
+        "y": 4.3999999999999995
+      },
+      {
+        "x": -0.042,
+        "y": 4.2
+      },
+      {
+        "x": -0.04,
+        "y": 4
+      },
+      {
+        "x": -0.038,
+        "y": 3.8
+      },
+      {
+        "x": -0.036,
+        "y": 3.5999999999999996
+      },
+      {
+        "x": -0.034,
+        "y": 3.4000000000000004
+      },
+      {
+        "x": -0.032,
+        "y": 3.2
+      },
+      {
+        "x": -0.03,
+        "y": 3
+      },
+      {
+        "x": -0.028,
+        "y": 2.8000000000000003
+      },
+      {
+        "x": -0.026,
+        "y": 2.6
+      },
+      {
+        "x": -0.024,
+        "y": 2.4
+      },
+      {
+        "x": -0.022,
+        "y": 2.1999999999999997
+      },
+      {
+        "x": -0.02,
+        "y": 2
+      },
+      {
+        "x": -0.018,
+        "y": 1.7999999999999998
+      },
+      {
+        "x": -0.016,
+        "y": 1.6
+      },
+      {
+        "x": -0.014,
+        "y": 1.4000000000000001
+      },
+      {
+        "x": -0.012,
+        "y": 1.2
+      },
+      {
+        "x": -0.01,
+        "y": 1
+      },
+      {
+        "x": -0.008,
+        "y": 0.8
+      },
+      {
+        "x": -0.006,
+        "y": 0.6
+      },
+      {
+        "x": -0.004,
+        "y": 0.4
+      },
+      {
+        "x": -0.002,
+        "y": 0.2
+      },
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 0.002,
+        "y": -0.2
+      },
+      {
+        "x": 0.004,
+        "y": -0.4
+      },
+      {
+        "x": 0.006,
+        "y": -0.6
+      },
+      {
+        "x": 0.008,
+        "y": -0.8
+      },
+      {
+        "x": 0.01,
+        "y": -1
+      },
+      {
+        "x": 0.012,
+        "y": -1.2
+      },
+      {
+        "x": 0.014,
+        "y": -1.4000000000000001
+      },
+      {
+        "x": 0.016,
+        "y": -1.6
+      },
+      {
+        "x": 0.018,
+        "y": -1.7999999999999998
+      },
+      {
+        "x": 0.02,
+        "y": -2
+      },
+      {
+        "x": 0.022,
+        "y": -2.1999999999999997
+      },
+      {
+        "x": 0.024,
+        "y": -2.4
+      },
+      {
+        "x": 0.026,
+        "y": -2.6
+      },
+      {
+        "x": 0.028,
+        "y": -2.8000000000000003
+      },
+      {
+        "x": 0.03,
+        "y": -3
+      },
+      {
+        "x": 0.032,
+        "y": -3.2
+      },
+      {
+        "x": 0.034,
+        "y": -3.4000000000000004
+      },
+      {
+        "x": 0.036,
+        "y": -3.5999999999999996
+      },
+      {
+        "x": 0.038,
+        "y": -3.8
+      },
+      {
+        "x": 0.04,
+        "y": -4
+      },
+      {
+        "x": 0.042,
+        "y": -4.2
+      },
+      {
+        "x": 0.044,
+        "y": -4.3999999999999995
+      },
+      {
+        "x": 0.046,
+        "y": -4.6
+      },
+      {
+        "x": 0.048,
+        "y": -4.8
+      },
+      {
+        "x": 0.05,
+        "y": -5
+      }
+    ],
+    "xLabel": "Differential temperature (K)",
+    "yLabel": "Ratio shift (ppm)",
+    "warnings": [
+      "No uncertainty interval or detection claim is inferred from this deterministic example.",
+      "The illustrated sphere dimensions do not determine the selected 250 kHz mode."
+    ],
+    "equations": [
+      {
+        "expression": "r = f_test / f_reference; D = 10^6 (r_B/r_A - 1)",
+        "meaning": "r is a dimensionless ratio, D is its A/B fractional change in parts per million. Common multiplicative drift cancels."
+      },
+      {
+        "expression": "D ≈ alpha*dT + epsilon",
+        "meaning": "First-order teaching approximation. alpha is an assumed calibration slope in ppm/K that must be measured for the actual mode; dT is differential kelvin; epsilon is a synthetic location term in ppm."
+      }
+    ],
+    "interpretation": "Synthetic differential-ratio teaching model. The OSF registration pd3st was independently retrieved. This toy uses B/A relative change in ppm; LOC-1 specifies 10^9*(mean r_A - mean r_B) in ppb (parts per billion), with covariance and equivalence analysis. These estimands differ in sign, normalization and unit. This is not a replication or registered analysis."
+  },
+  "glossary": {
+    "SI": "International System of Units.",
+    "Hz": "Hertz, cycles per second.",
+    "kHz": "Kilohertz, one thousand hertz.",
+    "Pa": "Pascal, pressure equal to one newton per square metre.",
+    "K": "Kelvin, the SI unit of temperature; temperature differences of 1K and 1°C have equal size.",
+    "ppm": "Parts per million; a relative value multiplied by one million.",
+    "ppb": "Parts per billion; a relative value multiplied by one billion.",
+    "RLC": "A circuit containing resistance R in ohms, inductance L in henry and capacitance C in farad.",
+    "RMS": "Root mean square, a waveform amplitude convention distinct from peak.",
+    "DAC": "Digital-to-analog converter, the electronic stage that turns numeric samples into a voltage.",
+    "EEG": "Electroencephalography, a measured scalp electrical signal; not simulated here.",
+    "SPL": "Sound pressure level, an acoustic measurement requiring calibration.",
+    "GLB": "Binary glTF, a 3D scene file format; this file contains illustrative geometry.",
+    "SVG": "Scalable Vector Graphics, a vector drawing format.",
+    "OSF": "Open Science Framework, the repository hosting the independently retrieved registration.",
+    "TOST": "Two one-sided tests, an equivalence-testing method; its margin and uncertainty need a declared plan.",
+    "A": "Position or condition A in the named protocol; not an ampere unless explicitly stated.",
+    "B": "Position or condition B in the named protocol; not magnetic flux density unless explicitly stated.",
+    "LOC1": "The external Sphere location-comparison protocol, with its own registered estimand."
+  },
+  "referenceDictionary": [
+    {
+      "reference": "801",
+      "componentId": "sphere-a",
+      "label": "Copper sphere A",
+      "meaning": "Proposed paired-sphere metrology specimen. No field, resonance or anomalous force is simulated.",
+      "positionM": [
+        -0.08,
+        0,
+        0.135
+      ],
+      "dimensionsM": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "802",
+      "componentId": "sphere-b",
+      "label": "Copper sphere B",
+      "meaning": "Proposed paired-sphere metrology specimen. No field, resonance or anomalous force is simulated.",
+      "positionM": [
+        0.08,
+        0,
+        0.135
+      ],
+      "dimensionsM": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "803",
+      "componentId": "scale",
+      "label": "Length scale",
+      "meaning": "Illustrative 280 mm scale with 10 mm ticks. Not an instrument calibration certificate.",
+      "positionM": [
+        0,
+        -0.125,
+        0.024
+      ],
+      "dimensionsM": [
+        0.28,
+        0.022,
+        0.002
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "804",
+      "componentId": "readout",
+      "label": "Blank displacement readout",
+      "meaning": "Proposed displacement data acquisition. No measured value or sensitivity is provided.",
+      "positionM": [
+        0.18,
+        0.1,
+        0.066
+      ],
+      "dimensionsM": [
+        0.14,
+        0.075,
+        0.09
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "805",
+      "componentId": "sensor",
+      "label": "Displacement sensor placeholder",
+      "meaning": "Optical or capacitive modality, mounting stiffness and calibration remain to be selected.",
+      "positionM": [
+        -0.205,
+        0.015,
+        0.12
+      ],
+      "dimensionsM": [
+        0.065,
+        0.05,
+        0.045
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    }
+  ],
+  "worksheetReferences": [
+    {
+      "reference": "601",
+      "label": "Declared question or prediction",
+      "sourceFieldPaths": [
+        "sourceRecord.question"
+      ],
+      "missingFieldKeys": [
+        "prediction"
+      ],
+      "meaning": "Source-declared question/prediction text, not a verified result or completed experiment. Actual raw fields: question.",
+      "fieldExplanations": [
+        {
+          "key": "question",
+          "meaning": "Original question field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "602",
+      "label": "Source identity, model and proposed resources",
+      "sourceFieldPaths": [
+        "source",
+        "sourceRecord.model",
+        "sourceRecord.inputs",
+        "sourceRecord.materials"
+      ],
+      "missingFieldKeys": [
+        "category",
+        "novelty"
+      ],
+      "meaning": "Actual source identity and any declared model/input/resource fields. Their presence is not a validated apparatus, complete model or bill of materials. Actual raw fields: model, inputs, materials.",
+      "fieldExplanations": [
+        {
+          "key": "model",
+          "meaning": "Original model field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "inputs",
+          "meaning": "Original inputs field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "materials",
+          "meaning": "Original materials field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "603",
+      "label": "Declared observable or observation channel",
+      "sourceFieldPaths": [
+        "sourceRecord.observable"
+      ],
+      "missingFieldKeys": [],
+      "meaning": "Source-declared observation text. Unstated units, transfer functions, calibration and acquired data remain missing. Actual raw fields: observable.",
+      "fieldExplanations": [
+        {
+          "key": "observable",
+          "meaning": "Original observable field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "604",
+      "label": "Proposed controls, rivals and falsifiers",
+      "sourceFieldPaths": [
+        "sourceRecord.controls",
+        "sourceRecord.falsifier"
+      ],
+      "missingFieldKeys": [
+        "rival",
+        "acceptance"
+      ],
+      "meaning": "Declared discriminating conditions and alternatives. A listed control or acceptance criterion has not thereby been executed. Actual raw fields: controls, falsifier.",
+      "fieldExplanations": [
+        {
+          "key": "controls",
+          "meaning": "Original controls field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "falsifier",
+          "meaning": "Original falsifier field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "605",
+      "label": "Status, limitations and disclosure gaps",
+      "sourceFieldPaths": [
+        "sourceRecord.status",
+        "sourceRecord.limitations",
+        "status",
+        "gaps"
+      ],
+      "missingFieldKeys": [
+        "limit",
+        "limits"
+      ],
+      "meaning": "Original status and declared limits, plus worksheet gaps where present. No completion, legal filing readiness or physical validity is inferred. Actual raw fields: status, limitations.",
+      "fieldExplanations": [
+        {
+          "key": "status",
+          "meaning": "Original status field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "limitations",
+          "meaning": "Original limitations field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    }
+  ],
+  "scene": {
+    "id": "copper-spheres",
+    "title": "Copper paired-sphere metrology",
+    "status": "proposed-unbuilt-concept",
+    "geometryStatus": "assumed-for-illustration",
+    "units": "m",
+    "source": {
+      "path": "scripts/render-sphere-studies.py",
+      "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+    },
+    "camera": {
+      "positionM": [
+        0.64,
+        -0.88,
+        0.72
+      ],
+      "targetM": [
+        0,
+        0,
+        0.12
+      ],
+      "projection": "orthographic",
+      "orthoScaleM": 0.83,
+      "pngPixels": [
+        800,
+        500
+      ],
+      "glbConvention": "glTF Y-up converted from Blender Z-up; one model unit is one metre"
+    },
+    "geometry": {
+      "sphereDiameterM": 0.1,
+      "centreSpacingM": 0.16,
+      "surfaceGapM": 0.06,
+      "derivedGeometryOnly": "gap = centre spacing minus the two assumed radii; no force or mode calculation"
+    },
+    "components": [
+      {
+        "id": "sphere-a",
+        "label": "Copper sphere A",
+        "positionM": [
+          -0.08,
+          0,
+          0.135
+        ],
+        "dimensionsM": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "shape": "sphere diameter 100 mm",
+        "material": "copper illustration; composition unverified",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Proposed paired-sphere metrology specimen. No field, resonance or anomalous force is simulated."
+      },
+      {
+        "id": "sphere-b",
+        "label": "Copper sphere B",
+        "positionM": [
+          0.08,
+          0,
+          0.135
+        ],
+        "dimensionsM": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "shape": "sphere diameter 100 mm",
+        "material": "copper illustration; composition unverified",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Proposed paired-sphere metrology specimen. No field, resonance or anomalous force is simulated."
+      },
+      {
+        "id": "scale",
+        "label": "Length scale",
+        "positionM": [
+          0,
+          -0.125,
+          0.024
+        ],
+        "dimensionsM": [
+          0.28,
+          0.022,
+          0.002
+        ],
+        "shape": "graduated visual length reference",
+        "material": "stainless steel illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Illustrative 280 mm scale with 10 mm ticks. Not an instrument calibration certificate."
+      },
+      {
+        "id": "readout",
+        "label": "Blank displacement readout",
+        "positionM": [
+          0.18,
+          0.1,
+          0.066
+        ],
+        "dimensionsM": [
+          0.14,
+          0.075,
+          0.09
+        ],
+        "shape": "rectangular instrument enclosure with blank display",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Proposed displacement data acquisition. No measured value or sensitivity is provided."
+      },
+      {
+        "id": "sensor",
+        "label": "Displacement sensor placeholder",
+        "positionM": [
+          -0.205,
+          0.015,
+          0.12
+        ],
+        "dimensionsM": [
+          0.065,
+          0.05,
+          0.045
+        ],
+        "shape": "sensor enclosure",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Optical or capacitive modality, mounting stiffness and calibration remain to be selected."
+      }
+    ],
+    "legend": [
+      {
+        "reference": 1,
+        "componentId": "sphere-a",
+        "label": "Copper sphere A",
+        "meaning": "Proposed paired-sphere metrology specimen. No field, resonance or anomalous force is simulated."
+      },
+      {
+        "reference": 2,
+        "componentId": "sphere-b",
+        "label": "Copper sphere B",
+        "meaning": "Proposed paired-sphere metrology specimen. No field, resonance or anomalous force is simulated."
+      },
+      {
+        "reference": 3,
+        "componentId": "scale",
+        "label": "Length scale",
+        "meaning": "Illustrative 280 mm scale with 10 mm ticks. Not an instrument calibration certificate."
+      },
+      {
+        "reference": 4,
+        "componentId": "readout",
+        "label": "Blank displacement readout",
+        "meaning": "Proposed displacement data acquisition. No measured value or sensitivity is provided."
+      },
+      {
+        "reference": 5,
+        "componentId": "sensor",
+        "label": "Displacement sensor placeholder",
+        "meaning": "Optical or capacitive modality, mounting stiffness and calibration remain to be selected."
+      }
+    ],
+    "objectGeometry": [
+      {
+        "name": "assumed 600 by 380 mm apparatus base",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.01
+        ],
+        "dimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.01
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "sphere-a foot",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          0,
+          0.03
+        ],
+        "dimensionsM": [
+          0.065,
+          0.065,
+          0.012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.08,
+          0,
+          0.03
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.065,
+          0.065,
+          0.012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "sphere-a post",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          0,
+          0.061
+        ],
+        "dimensionsM": [
+          0.014,
+          0.014,
+          0.05
+        ],
+        "worldEnvelopeCentreM": [
+          -0.08,
+          0,
+          0.061
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.014,
+          0.014,
+          0.05
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "sphere-a",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          0,
+          0.135
+        ],
+        "dimensionsM": [
+          0.1000001,
+          0.1,
+          0.1
+        ],
+        "worldEnvelopeCentreM": [
+          -0.08,
+          0,
+          0.135
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.1000001,
+          0.1,
+          0.1
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "sphere-b foot",
+        "type": "MESH",
+        "positionM": [
+          0.08,
+          0,
+          0.03
+        ],
+        "dimensionsM": [
+          0.065,
+          0.065,
+          0.012
+        ],
+        "worldEnvelopeCentreM": [
+          0.08,
+          0,
+          0.03
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.065,
+          0.065,
+          0.012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "sphere-b post",
+        "type": "MESH",
+        "positionM": [
+          0.08,
+          0,
+          0.061
+        ],
+        "dimensionsM": [
+          0.014,
+          0.014,
+          0.05
+        ],
+        "worldEnvelopeCentreM": [
+          0.08,
+          0,
+          0.061
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.014,
+          0.014,
+          0.05
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "sphere-b",
+        "type": "MESH",
+        "positionM": [
+          0.08,
+          0,
+          0.135
+        ],
+        "dimensionsM": [
+          0.1000001,
+          0.1,
+          0.1
+        ],
+        "worldEnvelopeCentreM": [
+          0.08,
+          0,
+          0.135
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.1000001,
+          0.1,
+          0.1
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "illustrative ruler",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.125,
+          0.024
+        ],
+        "dimensionsM": [
+          0.28,
+          0.022,
+          0.002
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.125,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.28,
+          0.022,
+          0.002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 0",
+        "type": "MESH",
+        "positionM": [
+          -0.14,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.14,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 1",
+        "type": "MESH",
+        "positionM": [
+          -0.13,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.13,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 2",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 3",
+        "type": "MESH",
+        "positionM": [
+          -0.11,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.11,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 4",
+        "type": "MESH",
+        "positionM": [
+          -0.1,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.1,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 5",
+        "type": "MESH",
+        "positionM": [
+          -0.09,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.09,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 6",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.08,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 7",
+        "type": "MESH",
+        "positionM": [
+          -0.07,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.07,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 8",
+        "type": "MESH",
+        "positionM": [
+          -0.06,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.06,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 9",
+        "type": "MESH",
+        "positionM": [
+          -0.05,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.05,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 10",
+        "type": "MESH",
+        "positionM": [
+          -0.04,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.04,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 11",
+        "type": "MESH",
+        "positionM": [
+          -0.03,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.03,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 12",
+        "type": "MESH",
+        "positionM": [
+          -0.02,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.02,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 13",
+        "type": "MESH",
+        "positionM": [
+          -0.01,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          -0.01,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 14",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 15",
+        "type": "MESH",
+        "positionM": [
+          0.01,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.01,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 16",
+        "type": "MESH",
+        "positionM": [
+          0.02,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.02,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 17",
+        "type": "MESH",
+        "positionM": [
+          0.03,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.03,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 18",
+        "type": "MESH",
+        "positionM": [
+          0.04,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.04,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 19",
+        "type": "MESH",
+        "positionM": [
+          0.05,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.05,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 20",
+        "type": "MESH",
+        "positionM": [
+          0.06,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.06,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 21",
+        "type": "MESH",
+        "positionM": [
+          0.07,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.07,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 22",
+        "type": "MESH",
+        "positionM": [
+          0.08,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.08,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 23",
+        "type": "MESH",
+        "positionM": [
+          0.09,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.09,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 24",
+        "type": "MESH",
+        "positionM": [
+          0.1,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.1,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 25",
+        "type": "MESH",
+        "positionM": [
+          0.11,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.11,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.01,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 26",
+        "type": "MESH",
+        "positionM": [
+          0.12,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.12,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 27",
+        "type": "MESH",
+        "positionM": [
+          0.13,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.13,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "ruler tick 28",
+        "type": "MESH",
+        "positionM": [
+          0.14,
+          -0.13,
+          0.0253
+        ],
+        "dimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "worldEnvelopeCentreM": [
+          0.14,
+          -0.13,
+          0.0253
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0006,
+          0.005,
+          0.0002
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "readout",
+        "type": "MESH",
+        "positionM": [
+          0.18,
+          0.1,
+          0.066
+        ],
+        "dimensionsM": [
+          0.14,
+          0.075,
+          0.09
+        ],
+        "worldEnvelopeCentreM": [
+          0.18,
+          0.1,
+          0.066
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.14,
+          0.075,
+          0.09
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "readout blank display",
+        "type": "MESH",
+        "positionM": [
+          0.1632,
+          0.062,
+          0.0741
+        ],
+        "dimensionsM": [
+          0.0784,
+          0.001,
+          0.0432
+        ],
+        "worldEnvelopeCentreM": [
+          0.1632,
+          0.062,
+          0.0741
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0784,
+          0.001,
+          0.0432
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "readout knob -1",
+        "type": "MESH",
+        "positionM": [
+          0.2248,
+          0.059,
+          0.048
+        ],
+        "dimensionsM": [
+          0.0117,
+          0.0117,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          0.2248,
+          0.059,
+          0.048
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0117,
+          0.008,
+          0.0117
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "readout knob 1",
+        "type": "MESH",
+        "positionM": [
+          0.2248,
+          0.059,
+          0.084
+        ],
+        "dimensionsM": [
+          0.0117,
+          0.0117,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          0.2248,
+          0.059,
+          0.084
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0117,
+          0.008,
+          0.0117
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "unrated sensor housing",
+        "type": "MESH",
+        "positionM": [
+          -0.205,
+          0.015,
+          0.12
+        ],
+        "dimensionsM": [
+          0.065,
+          0.05,
+          0.045
+        ],
+        "worldEnvelopeCentreM": [
+          -0.205,
+          0.015,
+          0.12
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.065,
+          0.05,
+          0.045
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "sensor aperture",
+        "type": "MESH",
+        "positionM": [
+          -0.171,
+          0.015,
+          0.12
+        ],
+        "dimensionsM": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "worldEnvelopeCentreM": [
+          -0.171,
+          0.015,
+          0.12
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.003,
+          0.02,
+          0.02
+        ],
+        "rotationRadians": [
+          0,
+          1.5707964,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          -0.073,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.08,
+          -0.073,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          -0.073,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.079988,
+          -0.072508,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.08,
+          -0.073,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.08,
+          -0.073,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2",
+        "type": "MESH",
+        "positionM": [
+          0.08,
+          -0.073,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.08,
+          -0.072454,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.17,
+          -0.125,
+          0.026
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.17,
+          -0.125,
+          0.026
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3",
+        "type": "MESH",
+        "positionM": [
+          -0.17,
+          -0.125,
+          0.0268
+        ],
+        "dimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.170072,
+          -0.124508,
+          0.0268
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.18,
+          0.045,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.18,
+          0.045,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4",
+        "type": "MESH",
+        "positionM": [
+          0.18,
+          0.045,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.179892,
+          0.045546,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.21,
+          -0.035,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.21,
+          -0.035,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5",
+        "type": "MESH",
+        "positionM": [
+          -0.21,
+          -0.035,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.210072,
+          -0.034562,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "dimensionConvention": "Logical components use evaluated world-axis envelope centres/extents in metres; objectGeometry retains raw Blender origin/dimensions/rotation and explicit world envelopes. All geometry assumed, not manufacturing dimensions.",
+    "limitations": [
+      "Proposed, unbuilt apparatus concept. This is a 3D illustration, not hardware evidence or an engineering construction drawing.",
+      "Every geometry dimension is assumed in metres. No manufacturing tolerance, load rating, insulation rating, material assay or safety certification.",
+      "Natural-looking materials are rendering choices. No acoustic, electromagnetic, optical or quantum field is simulated.",
+      "Blank instrument screens contain no invented measurements. Numeric plaques refer only to the separate legend.",
+      "The PNG and GLB are companions to source-bound technical documents, not US/EPO filing-compliance certification."
+    ],
+    "files": {
+      "png": {
+        "path": "/sphere-lab/scenes/copper-spheres.png",
+        "sha256": "759a30cbdffa9345c51badd092864a0b538150ba04cfda89fe7f905e3ab8152a",
+        "bytes": 451474
+      },
+      "glb": {
+        "path": "/sphere-lab/scenes/copper-spheres.glb",
+        "sha256": "d10805c4781804d8807388c086f8223cd5ca8c9de70aeede53ca29dfde5c7968",
+        "bytes": 438728
+      }
+    }
+  },
+  "sourceRecords": [
+    {
+      "id": "sphere-about",
+      "title": "Project S.P.H.E.R.E. — About",
+      "url": "https://spheredesci.org/about/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Captured page: key facts, project status, method, exclusions and license.",
+      "passage": "No measurements have been taken yet. There are no results.",
+      "claim": "The project proposes a controlled location comparison of a hollow copper sphere; its >230 kHz band is a proposed selection, not a validated threshold.",
+      "limitations": "A first-party description establishes what is proposed, not physical validation. Research-page text: SPHERE Research, LLC, CC BY 4.0.",
+      "sha256": "61488b44b54a7c3d34ae70643c4474cd30a3d20969bba1f4730f5f564394c8b9",
+      "capture": "docs/sphere-panel/sources/sphere-about.html",
+      "retrievedAt": "2026-11-17T06:21:51.663637+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt."
+    },
+    {
+      "id": "sphere-protocol",
+      "title": "Protocol LOC-1 — plain-language overview",
+      "url": "https://spheredesci.org/protocol/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Captured full plain-language protocol sections, controls, amendment and interpretation.",
+      "passage": "A scanning instrument that visits four points in turn is not equivalent.",
+      "claim": "Mechanical/optical resonance tracking and RF response require separate definitions and simultaneous readout qualification.",
+      "limitations": "The OSF registration controls exact specifications. Four objects yield six correlated pairs, not six independent replications.",
+      "sha256": "82d39e1d0b6cd8db0d215d9e7a81d1050f5d74802438b17e00a4351f6e618f06",
+      "capture": "docs/sphere-panel/sources/sphere-protocol.html",
+      "retrievedAt": "2026-11-17T06:21:51.663637+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt."
+    },
+    {
+      "id": "sphere-osf-registration",
+      "title": "OSF Preregistration pd3st — Protocol LOC-1",
+      "url": "https://osf.io/pd3st/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Parent node metadata and registrations relationship retrieved; actual registration attributes and registered_meta on questions, sample, blinding, design, outcomes and analysis read.",
+      "passage": "registration=true; withdrawn=false; registered2026-10-23T03:12:22Z; “Data does not yet exist.",
+      "claim": "Registration pd3st specifies80 placements(40 A / 40 B),10 blocks of8,0.40 m separation, default30 min settling and ratio/covariance analysis. The parent5b6mj is a project node with registration=false and links this registration.",
+      "limitations": "These are preregistered choices, not verified power, achieved stability or results. Default settling must still be qualified experimentally; the four-object proposal is not silently substituted.",
+      "sha256": "f31cf900ac8f710f91ac82769d6a6196538e6b03234c895bea2f7d075c42c08e",
+      "capture": "docs/sphere-panel/sources/sphere-osf-registrations.json",
+      "retrievedAt": "2026-11-17T06:28:26.341601+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "2026-10-23",
+        "kind": "OSF Preregistration",
+        "registrationId": "pd3st"
+      }
+    },
+    {
+      "id": "sphere-zenodo-pdf",
+      "title": "Archived SPHERE-Whitepaper-LOC1-Draft-v1.0.pdf",
+      "url": "https://zenodo.org/api/records/23583932/files/SPHERE-Whitepaper-LOC1-Draft-v1.0.pdf/content",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Downloaded38-page PDF; extracted text; selected introduction, primary-measurand, digital-twin and risk passages read.",
+      "passage": "The project ... without collected experimental data” and “instrument bandwidth alone does not establish sub-hertz measurement accuracy.",
+      "claim": "The actual archived PDF is a proposal; its SHA matches the file named in the OSF registration.",
+      "limitations": "Full PDF downloaded does not mean every page or cited underlying source was reviewed. Attribution: Michael P. Goodman / SPHERE Research, LLC, CC BY4.0.",
+      "sha256": "184a6573317bee342e419f3ee689b28aebafbe249bf864026677c04585e60dc2",
+      "capture": "docs/sphere-panel/sources/sphere-zenodo-pdf.pdf",
+      "retrievedAt": "2026-11-17T06:27:34.610216+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "2026-10-22",
+        "version": "1.0",
+        "kind": "Working paper / project draft",
+        "doi": "10.5281/zenodo.23583932"
+      }
+    },
+    {
+      "id": "metrology-gum",
+      "title": "JCGM100:2008 — Guide to the expression of uncertainty in measurement",
+      "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Official PDF downloaded/text extracted; §§5.2.2,5.2.5,6.2.2–6.3.3 read.",
+      "passage": "Correlations between input quantities cannot be ignored if present and significant.",
+      "claim": "A/B differences and shared-reference ratios need covariance terms. A chosen coverage factor is not automatically a calibrated95% interval.",
+      "limitations": "Metrology guidance does not provide this apparatus’s uncertainty or detect an intrinsic location variable. Local copies are research captures; publisher terms retained.",
+      "sha256": "41bbf068fbc0d7986c98691b2d1af6680cb3044f6a1a89b3560933ed9ef9626c",
+      "capture": "docs/sphere-panel/sources/metrology-gum.pdf",
+      "retrievedAt": "2026-11-17T06:26:46.059793+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt.",
+      "publication": {
+        "year": 2008,
+        "kind": "Metrology guidance; corrected2010"
+      }
+    }
+  ],
+  "setupFromScratch": [
+    "Start with the preserved Copper Sphere Lab and its source-bound model contract.",
+    "For a proposed physical study, identify a mode, acquire both test and stationary reference channels on a shared timebase, then calibrate temperature and mounting response.",
+    "Freeze randomized blinded A/B positions, sham moves, orientation swaps, exclusion rules and an uncertainty budget before collection."
+  ],
+  "productSelectionLeads": [
+    "Precision hollow copper specimens: supplier material certificate, actual wall geometry and repeatable mounting; no price or accuracy assumed.",
+    "Partner-lab laser Doppler vibrometer, shared timebase and synchronized acquisition: verify bandwidth, phase, clock locking and calibration certificates.",
+    "Temperature probes and enclosure: determine mode-specific thermal slope and actual spatial stability before choosing a tolerance."
+  ],
+  "procurementStatus": "Equipment classes and evaluation criteria; not verified stock, supplier quotes, certified compatibility or a complete bill of materials.",
+  "improvements": [
+    {
+      "sourceId": "sphere-about",
+      "proposal": "Evaluate Project S.P.H.E.R.E. — About only within the scope of its inspected passages.",
+      "evidenceLimit": "A first-party description establishes what is proposed, not physical validation. Research-page text: SPHERE Research, LLC, CC BY 4.0."
+    },
+    {
+      "sourceId": "sphere-protocol",
+      "proposal": "Evaluate Protocol LOC-1 — plain-language overview only within the scope of its inspected passages.",
+      "evidenceLimit": "The OSF registration controls exact specifications. Four objects yield six correlated pairs, not six independent replications."
+    },
+    {
+      "sourceId": "sphere-osf-registration",
+      "proposal": "Evaluate OSF Preregistration pd3st — Protocol LOC-1 only within the scope of its inspected passages.",
+      "evidenceLimit": "These are preregistered choices, not verified power, achieved stability or results. Default settling must still be qualified experimentally; the four-object proposal is not silently substituted."
+    },
+    {
+      "sourceId": "sphere-zenodo-pdf",
+      "proposal": "Evaluate Archived SPHERE-Whitepaper-LOC1-Draft-v1.0.pdf only within the scope of its inspected passages.",
+      "evidenceLimit": "Full PDF downloaded does not mean every page or cited underlying source was reviewed. Attribution: Michael P. Goodman / SPHERE Research, LLC, CC BY4.0."
+    },
+    {
+      "sourceId": "metrology-gum",
+      "proposal": "Evaluate JCGM100:2008 — Guide to the expression of uncertainty in measurement only within the scope of its inspected passages.",
+      "evidenceLimit": "Metrology guidance does not provide this apparatus’s uncertainty or detect an intrinsic location variable. Local copies are research captures; publisher terms retained."
+    }
+  ],
+  "standards": [
+    {
+      "title": "US drawing requirements:37CFR1.84",
+      "url": "https://www.ecfr.gov/current/title-37/chapter-I/subchapter-A/part-1/subpart-B/section-1.84"
+    },
+    {
+      "title": "EPO President decision on presentation of application documents, OJ2025A49",
+      "url": "https://www.epo.org/en/legal/official-journal/2025/07/a49"
+    }
+  ],
+  "draftingChecks": {
+    "worksheet": {
+      "a4": true,
+      "insideCommonMargins": true,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "minimumReferenceHeightMm": 3.469851517107812,
+      "referenceHeightPass": true,
+      "uniformLineWidthMm": 0.25,
+      "contentBoundsMm": [
+        27.875,
+        27.076694641704325,
+        185.125,
+        229.125
+      ],
+      "referenceCount": 5,
+      "figureNumber": 0,
+      "mechanicalDraftOnly": true
+    },
+    "apparatus": {
+      "a4": true,
+      "widthMm": 210,
+      "heightMm": 297,
+      "commonMarginsMm": {
+        "top": 25,
+        "left": 25,
+        "right": 15,
+        "bottom": 10
+      },
+      "contentBoundsMm": [
+        35.323047127178825,
+        27.076694641704325,
+        183.66881859264038,
+        213.6
+      ],
+      "minimumReferenceInkHeightMm": 3.469851517107812,
+      "referenceHeightAtLeast3_2Mm": true,
+      "lineWidthMm": 0.25,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "figureNumber": 0
+    }
+  },
+  "limitations": [
+    "Standalone single-view draft; no FIG label. A filing-specific drawing set needs consistent figure numbering and complete claimed views.",
+    "Illustrated dimensions are assumed, not measured or manufacturing specifications.",
+    "Only declared component envelopes are projected; decorative meshes, mounts, internal wiring, optical paths and safety enclosures are omitted.",
+    "Geometric projection and drafting-format checks do not certify US/EPO filing compliance, enablement, patentability or physical validity.",
+    "Leader lines may cross projected parts in crowded layouts; every identity is also recorded in the companion numbered reference table.",
+    "Documentation concept map only: undirected connections are not execution order, causal proof, acquired data or invented hardware.",
+    "Numerals601–605 identify actual worksheet/schema field groups; companion sourceFieldPaths and missingFieldKeys explain their coverage.",
+    "Missing raw fields remain gaps; a field-group box does not establish that a physical apparatus or complete model was declared.",
+    "This single-view A4 draft omits the printed FIG. label and is not legal filing approval, patentability or scientific validation.",
+    "Source review is a selected dated corpus; no exhaustive state-of-the-art, novelty or legal conclusion.",
+    "Geometry remains fixed illustration; changing a simulation input does not update the scene or imply a measured setup."
+  ]
+}

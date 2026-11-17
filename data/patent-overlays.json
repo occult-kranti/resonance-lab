@@ -1,0 +1,906 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-17T05:00:10.382Z",
+  "scope": "Separate host documentation-overlay register. Historical originals remain preserved and unconverted; file links are not whole-file technical/legal conformance.",
+  "overlays": [
+    {
+      "id": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "newton-tesla-research-lab",
+        "path": "data/setups.json",
+        "head": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": [
+        "NT-H01",
+        "NT-H02",
+        "NT-H04"
+      ]
+    },
+    {
+      "id": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "newton-tesla-research-lab",
+        "path": "data/setups.json",
+        "head": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": [
+        "NT-H03",
+        "NT-H04"
+      ]
+    },
+    {
+      "id": "drawing-dossier:nt:newton-prism",
+      "recordId": "nt:newton-prism",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "newton-tesla-research-lab",
+        "path": "data/setups.json",
+        "head": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": [
+        "NT-H06"
+      ]
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-phone-witness-plan",
+      "recordId": "atlas:v4-phone-witness-plan",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": []
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-phone-witness-3d",
+      "recordId": "atlas:v4-phone-witness-3d",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": []
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-dual-channel-plan",
+      "recordId": "atlas:v4-dual-channel-plan",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": []
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-dual-channel-3d",
+      "recordId": "atlas:v4-dual-channel-3d",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": []
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-electric-energy",
+      "recordId": "atlas:v4-electric-energy",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": [
+        "NT-H01"
+      ]
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-magnetic-force-plan",
+      "recordId": "atlas:v4-magnetic-force-plan",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": [
+        "NT-H05"
+      ]
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-magnetic-force-3d",
+      "recordId": "atlas:v4-magnetic-force-3d",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": [
+        "NT-H05"
+      ]
+    },
+    {
+      "id": "drawing-dossier:atlas:v4-magnetic-work",
+      "recordId": "atlas:v4-magnetic-work",
+      "status": "registered-host-overlay-not-original-conversion",
+      "originalStatus": "preserved-unconverted",
+      "source": {
+        "repository": "resonance-research-atlas",
+        "path": "docs/panel-v4/setup-catalog.json",
+        "head": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa"
+      },
+      "profilePolicy": "New or refreshed host documentation must apply the shared current source-led drawing/disclosure profile. Profile application is not filing or hardware readiness.",
+      "worksheetIds": [
+        "NT-H05"
+      ]
+    }
+  ],
+  "protocolWorksheetIds": [
+    "NT-H01",
+    "NT-H02",
+    "NT-H03",
+    "NT-H04",
+    "NT-H05",
+    "NT-H06",
+    "NT-H07",
+    "NT-H08",
+    "NT-H09",
+    "NT-H10",
+    "NT-H11",
+    "NT-H12",
+    "NT-H14",
+    "HOST:image-match-null",
+    "HOST:room-sensitivity",
+    "HOST:heritage-impulse-response",
+    "HOST:mantra-recording"
+  ],
+  "artifacts": [
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/dual-channel-3d.png",
+      "overlayId": "drawing-dossier:atlas:v4-dual-channel-3d",
+      "recordId": "atlas:v4-dual-channel-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "883e979cd3445aad73e2dfb48839935bb8b664a6251ab6df4f5199affb218848",
+      "matchedSourceRelations": [
+        "atlas:v4-dual-channel-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/dual-channel-plan.svg",
+      "overlayId": "drawing-dossier:atlas:v4-dual-channel-plan",
+      "recordId": "atlas:v4-dual-channel-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "7982120a7cc4e404dfa0f2735516b378d3b75e6ad72d46d5477c59b6ed0beabc",
+      "matchedSourceRelations": [
+        "atlas:v4-dual-channel-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/electrical-energy-boundary.svg",
+      "overlayId": "drawing-dossier:atlas:v4-electric-energy",
+      "recordId": "atlas:v4-electric-energy",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "5ae38232d30b81491cc0016c1d126c6051d2645bd88337d8dbbc9b46359e77f2",
+      "matchedSourceRelations": [
+        "atlas:v4-electric-energy"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/magnetic-force-3d.png",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-3d",
+      "recordId": "atlas:v4-magnetic-force-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "4f145800bff9efe875e1f8b2a9711f4b972c0b47ae126c445d870697d2cd6725",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-force-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/magnetic-force-plan.svg",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-plan",
+      "recordId": "atlas:v4-magnetic-force-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "f618e6d385eec51efede5779cc556f36643e5800d288173f3ebb99a30cf9c348",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-force-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/magnetic-work-boundary.svg",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-work",
+      "recordId": "atlas:v4-magnetic-work",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "d5359beef032676a7498e98e9218b609a95cb44a01127c9695682eda4bf3ed60",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-work"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/phone-witness-3d.png",
+      "overlayId": "drawing-dossier:atlas:v4-phone-witness-3d",
+      "recordId": "atlas:v4-phone-witness-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "831a231b26c4f98c4992de13080cc62bae4fe17bf6519a2a07c6f654098c89b4",
+      "matchedSourceRelations": [
+        "atlas:v4-phone-witness-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:assets/sound-lab-v4/phone-witness-plan.svg",
+      "overlayId": "drawing-dossier:atlas:v4-phone-witness-plan",
+      "recordId": "atlas:v4-phone-witness-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "3663e2496265e5a264d00cfc3802314e088cca6feb535a29752a339832d0e242",
+      "matchedSourceRelations": [
+        "atlas:v4-phone-witness-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-phone-witness-plan",
+      "recordId": "atlas:v4-phone-witness-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-phone-witness-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-phone-witness-3d",
+      "recordId": "atlas:v4-phone-witness-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-phone-witness-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-dual-channel-plan",
+      "recordId": "atlas:v4-dual-channel-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-dual-channel-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-dual-channel-3d",
+      "recordId": "atlas:v4-dual-channel-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-dual-channel-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-electric-energy",
+      "recordId": "atlas:v4-electric-energy",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-electric-energy"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-plan",
+      "recordId": "atlas:v4-magnetic-force-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-force-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-3d",
+      "recordId": "atlas:v4-magnetic-force-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-force-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/apparatus.md",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-work",
+      "recordId": "atlas:v4-magnetic-work",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-work"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-phone-witness-plan",
+      "recordId": "atlas:v4-phone-witness-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-phone-witness-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-phone-witness-3d",
+      "recordId": "atlas:v4-phone-witness-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-phone-witness-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-dual-channel-plan",
+      "recordId": "atlas:v4-dual-channel-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-dual-channel-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-dual-channel-3d",
+      "recordId": "atlas:v4-dual-channel-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-dual-channel-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-electric-energy",
+      "recordId": "atlas:v4-electric-energy",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-electric-energy"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-plan",
+      "recordId": "atlas:v4-magnetic-force-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-force-plan"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-3d",
+      "recordId": "atlas:v4-magnetic-force-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-force-3d"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "resonance-research-atlas:docs/panel-v4/setup-catalog.json",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-work",
+      "recordId": "atlas:v4-magnetic-work",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "sourceSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "matchedSourceRelations": [
+        "atlas:v4-magnetic-work"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/coherent-readout.svg",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "768652ef32bbfae9d7de14311a67dee894d8f5693a5bd2c42058bf3230a949d3",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/coupled-coils-3d.png",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "6cf5c0513a903d7f4d836b304df5171880a9d996c4f827ce66e1ea257d6cde7c",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/coupled-coils-circuit.svg",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "0d684c8ce4710a2cc1508f148db9f44bc9c05164353d2c34a10d9d543fe43cba",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/coupled-coils-elevation.svg",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "0bbc89ee1e73abf615bb0863f968a6925dd12f36ac05e7e8649fd17d9dc673d5",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/coupled-coils-plan.svg",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "d9f2b7ad7573f89d51cfde4accacbbc0427a6527d095bc081a05707213418999",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/environmental-witness-3d.png",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "3b29a88085813c95e60f6dc13f33c1ec91c547e4cbd395efd2bcfbd59a8532cf",
+      "matchedSourceRelations": [
+        "nt:environmental-witness"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/environmental-witness-map.svg",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "85495452c3850e800e38e4c7f9b3c4fc1ea63ea64e3f99d25de4ba0ae69ef638",
+      "matchedSourceRelations": [
+        "nt:environmental-witness"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/environmental-witness-plan.svg",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "09e927d051012454856b181ec879bc53323b15402e74a2ddb20595065a6e7aaf",
+      "matchedSourceRelations": [
+        "nt:environmental-witness"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/geometry.json",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/geometry.json",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+      "matchedSourceRelations": [
+        "nt:environmental-witness"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/geometry.json",
+      "overlayId": "drawing-dossier:nt:newton-prism",
+      "recordId": "nt:newton-prism",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+      "matchedSourceRelations": [
+        "nt:newton-prism"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:assets/setups/newton-prism-rays.svg",
+      "overlayId": "drawing-dossier:nt:newton-prism",
+      "recordId": "nt:newton-prism",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "abed26035112e24f847afcc956e47e8ae6b18515d2edd1eabdcd82871c51a0ae",
+      "matchedSourceRelations": [
+        "nt:newton-prism"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/hypotheses.json",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "matchedSourceRelations": [
+        "NT-H01",
+        "NT-H02",
+        "NT-H04"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/hypotheses.json",
+      "overlayId": "drawing-dossier:atlas:v4-electric-energy",
+      "recordId": "atlas:v4-electric-energy",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "matchedSourceRelations": [
+        "NT-H01"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/hypotheses.json",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "matchedSourceRelations": [
+        "NT-H03",
+        "NT-H04"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/hypotheses.json",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-plan",
+      "recordId": "atlas:v4-magnetic-force-plan",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "matchedSourceRelations": [
+        "NT-H05"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/hypotheses.json",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-force-3d",
+      "recordId": "atlas:v4-magnetic-force-3d",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "matchedSourceRelations": [
+        "NT-H05"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/hypotheses.json",
+      "overlayId": "drawing-dossier:atlas:v4-magnetic-work",
+      "recordId": "atlas:v4-magnetic-work",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "matchedSourceRelations": [
+        "NT-H05"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/hypotheses.json",
+      "overlayId": "drawing-dossier:nt:newton-prism",
+      "recordId": "nt:newton-prism",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "matchedSourceRelations": [
+        "NT-H06"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/setups.json",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/setups.json",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "matchedSourceRelations": [
+        "nt:environmental-witness"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:data/setups.json",
+      "overlayId": "drawing-dossier:nt:newton-prism",
+      "recordId": "nt:newton-prism",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "matchedSourceRelations": [
+        "nt:newton-prism"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:docs/apparatus.md",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:docs/apparatus.md",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+      "matchedSourceRelations": [
+        "nt:environmental-witness"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:docs/apparatus.md",
+      "overlayId": "drawing-dossier:nt:newton-prism",
+      "recordId": "nt:newton-prism",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+      "matchedSourceRelations": [
+        "nt:newton-prism"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:docs/contracts/R1.json",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "328c7b2250e594e5f666b8020360d5e23d264ac5cc13492d378d0a05a2b60956",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:docs/contracts/R2.json",
+      "overlayId": "drawing-dossier:nt:coupled-coils",
+      "recordId": "nt:coupled-coils",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "611e3faa6c3550e697e12faa968ff75ec39fa1553572685845882a324bdfbb2d",
+      "matchedSourceRelations": [
+        "nt:coupled-coils"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    },
+    {
+      "inventoryId": "newton-tesla-research-lab:docs/contracts/R3.json",
+      "overlayId": "drawing-dossier:nt:environmental-witness",
+      "recordId": "nt:environmental-witness",
+      "status": "registered-reference-link-only",
+      "originalStatus": "preserved-unconverted",
+      "sourceHead": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "sourceSha256": "12d23bdce8f7f41a65eebef36540e14551c7986f25106ab496f8b9b974f0526a",
+      "matchedSourceRelations": [
+        "nt:environmental-witness"
+      ],
+      "relation": "Exact current catalogue file or contained-proposal relation; not a claim that all content in the file is covered or converted."
+    }
+  ],
+  "counts": {
+    "registeredDrawingDossiers": 11,
+    "exactSourceRepresentations": 26,
+    "fileToDossierLinks": 52,
+    "protocolWorksheets": 17
+  },
+  "futurePolicy": {
+    "scope": "New/modified host overlays only; preserved historical originals keep original status.",
+    "requirements": [
+      "shared US/currentEPO rule-informed mechanical preflight",
+      "description/symbol/control/outcome/source identity worksheet",
+      "explicit unresolved enablement/components/calibration and proposed-vs-measured labels",
+      "reviewed source reading depth and no new matter/claimed scope inference"
+    ],
+    "notEstablished": [
+      "legal compliance",
+      "patentability",
+      "novelty",
+      "freedom to operate",
+      "manufacturing readiness",
+      "physical performance"
+    ]
+  },
+  "unconvertedOriginals": {
+    "broadCandidateCount": 2429,
+    "status": "all preserved originals remain unconverted or unassessed; many candidates are nontechnical logos, plots, illustrations or UI/research documents, not engineering sheets",
+    "inventoryPath": "docs/patent-standard/scope-inventory.json"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "sphere-downloads/v1",
+  "pdfCount": 18,
+  "bundle": {
+    "path": "sphere-study-bundle.zip",
+    "bytes": 6518016,
+    "sha256": "88efd49ed5b458f62e0bbe2de4d5911b08dbd00d27370f9b8494a618cd6a13b5"
+  },
+  "pdfs": [
+    {
+      "path": "pdf/acoustic-study.pdf",
+      "bytes": 488850,
+      "sha256": "19234d3456d807ba763d57548d2f50e3ec73749bbcb53b40462f1fff82596c10",
+      "pages": 5
+    },
+    {
+      "path": "pdf/acoustic-protocol.pdf",
+      "bytes": 3539,
+      "sha256": "ae4031d272207adf5eb217f7f8b434afba23c2a23dc0f9f3d8602fd3c9293f20",
+      "pages": 1
+    },
+    {
+      "path": "pdf/acoustic-setup.pdf",
+      "bytes": 3761,
+      "sha256": "e2727d30e5b668455f82379371e9ac04515f2c29f089d2eb10d94b250a2b46f5",
+      "pages": 1
+    },
+    {
+      "path": "pdf/audio-study.pdf",
+      "bytes": 550988,
+      "sha256": "5c8a7cd4bdbced1eccc3afcbfd2d1f1fc4bbc362e53b65839d83c2d046b1ebbe",
+      "pages": 5
+    },
+    {
+      "path": "pdf/audio-protocol.pdf",
+      "bytes": 3539,
+      "sha256": "ae4031d272207adf5eb217f7f8b434afba23c2a23dc0f9f3d8602fd3c9293f20",
+      "pages": 1
+    },
+    {
+      "path": "pdf/audio-setup.pdf",
+      "bytes": 3770,
+      "sha256": "b15b881e81a46adfd57c11d946ccc57a509ffd5e8580dd73211334396a92f428",
+      "pages": 1
+    },
+    {
+      "path": "pdf/electromagnetic-study.pdf",
+      "bytes": 546726,
+      "sha256": "9bae08bb88afc87dc690fc855159d20a1adf9a5890226a09e8ab9d4308f2df81",
+      "pages": 5
+    },
+    {
+      "path": "pdf/electromagnetic-protocol.pdf",
+      "bytes": 3539,
+      "sha256": "ae4031d272207adf5eb217f7f8b434afba23c2a23dc0f9f3d8602fd3c9293f20",
+      "pages": 1
+    },
+    {
+      "path": "pdf/electromagnetic-setup.pdf",
+      "bytes": 4547,
+      "sha256": "5a27f0eeb09dc3827a6adc3e0c4c23b56f44881938d554c1ffc747dea6a278d8",
+      "pages": 1
+    },
+    {
+      "path": "pdf/pattern-study.pdf",
+      "bytes": 510860,
+      "sha256": "f4b2c1f2419b1ffb3826b724cc6ed650b6a5f57dbffa3e83a8a186cfe5265323",
+      "pages": 5
+    },
+    {
+      "path": "pdf/pattern-protocol.pdf",
+      "bytes": 3539,
+      "sha256": "ae4031d272207adf5eb217f7f8b434afba23c2a23dc0f9f3d8602fd3c9293f20",
+      "pages": 1
+    },
+    {
+      "path": "pdf/pattern-setup.pdf",
+      "bytes": 3750,
+      "sha256": "3fdcefb3970d35abf98ced773c92782413816be9f666a9ef24f6fa36c7fbc048",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quantum-study.pdf",
+      "bytes": 554136,
+      "sha256": "b91463f405927ad9cb5e405d832c35c45f6b38298d1fc569d94c040ff37faedd",
+      "pages": 6
+    },
+    {
+      "path": "pdf/quantum-protocol.pdf",
+      "bytes": 3539,
+      "sha256": "ae4031d272207adf5eb217f7f8b434afba23c2a23dc0f9f3d8602fd3c9293f20",
+      "pages": 1
+    },
+    {
+      "path": "pdf/quantum-setup.pdf",
+      "bytes": 4540,
+      "sha256": "901b4f09d39a7be0b2476dcd5837617680fd393dfc3ddf96a3ee2b87de7c8b97",
+      "pages": 1
+    },
+    {
+      "path": "pdf/sphere-study.pdf",
+      "bytes": 527807,
+      "sha256": "52b5677d328dbfd6da4c38ce8bf09ccc9ac71f8f5eccefbf991a2dc917451482",
+      "pages": 6
+    },
+    {
+      "path": "pdf/sphere-protocol.pdf",
+      "bytes": 3539,
+      "sha256": "ae4031d272207adf5eb217f7f8b434afba23c2a23dc0f9f3d8602fd3c9293f20",
+      "pages": 1
+    },
+    {
+      "path": "pdf/sphere-setup.pdf",
+      "bytes": 3884,
+      "sha256": "3815bae94a3e9347572b05c29acf43e03f46873f5469c4345a909598eff6498b",
+      "pages": 1
+    }
+  ],
+  "includedPanelReports": 18
+}

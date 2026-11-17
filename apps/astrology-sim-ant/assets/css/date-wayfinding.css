@@ -1,0 +1,173 @@
+/* Date navigation: themed ink, celestial marks and source-labelled categories. */
+.date-nav{--dn-paper:#f6f1e7;--dn-ink:#263b36;--dn-muted:#566158;--dn-rule:#b8b9a8;--dn-copper:#873d27;color:var(--dn-ink);background:var(--dn-paper);border-block:1px solid var(--dn-rule);padding:1rem 0;margin:1rem 0;min-width:0;max-width:100%;font-family:var(--font-sans,var(--sans,system-ui,sans-serif));line-height:1.45;position:relative;isolation:isolate}
+.date-nav,.date-nav *{box-sizing:border-box}.date-nav [hidden]{display:none!important}
+.date-nav [data-kind]{--dn-kind:#4c5d55;--dn-tint:#ecefe8}
+.date-nav [data-kind=traditional-favorable],.date-nav [data-kind=historical-peace]{--dn-kind:#285c3f;--dn-tint:#e0eddf}
+.date-nav [data-kind=historical-conflict]{--dn-kind:#8c302d;--dn-tint:#f5e5df}
+.date-nav [data-kind=traditional-caution],.date-nav [data-kind=observance]{--dn-kind:#725018;--dn-tint:#f3ead1}
+.date-nav [data-kind=mixed]{--dn-kind:#6b522d;--dn-tint:#eee8dc}
+.date-nav [data-kind=astronomy]{--dn-kind:#285a6a;--dn-tint:#e2ecec}
+.date-nav [data-kind=source-claim]{--dn-kind:#6c4967;--dn-tint:#eee5ed}
+.date-nav [data-kind=unavailable]{--dn-kind:#5f605a;--dn-tint:#ecebe4}
+.date-nav-head{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem 1rem;flex-wrap:wrap;margin-bottom:.7rem}
+.date-nav .date-nav-heading{font-family:var(--font-serif,var(--serif,Georgia,serif));font-size:1.2rem;line-height:1.3;margin:0;padding:0;border:0;text-transform:none;letter-spacing:0;color:var(--dn-ink);overflow-wrap:anywhere}
+.date-nav-count,.date-nav-ends,.date-nav-explanation,.date-nav-status,.date-nav-bookmark-note{font-size:.78rem;color:var(--dn-muted)}
+.date-nav-count{font-variant-numeric:tabular-nums}.date-nav-controls{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:.6rem}
+.date-nav button,.date-nav input,.date-nav summary{font-family:inherit;font-size:1rem}
+.date-nav button{min-width:44px;min-height:44px;border:1px solid var(--dn-rule);border-radius:3px;color:var(--dn-ink);background:#fffbf1;cursor:pointer;line-height:1.35;padding:.5rem .7rem;white-space:normal;overflow-wrap:anywhere;box-shadow:none;text-transform:none;letter-spacing:normal}
+.date-nav button:hover:not(:disabled){border-color:var(--dn-copper);background:#fffdf7}.date-nav button:disabled,.date-nav input:disabled{cursor:default;opacity:.55}
+.date-nav :is(button,input,summary,a):focus-visible{outline:3px solid var(--dn-copper);outline-offset:3px;scroll-margin-block:5rem}
+.date-nav-slider-wrap{min-width:0}.date-nav .date-nav-slider{display:block;width:100%;height:44px;min-height:44px;padding:0;margin:0;accent-color:var(--dn-copper);cursor:pointer;background:transparent;border:0}
+.date-nav-overview{display:flex;gap:2px;height:8px;margin:.2rem 0 0;pointer-events:none}.date-nav-segment{display:flex;flex:1;min-width:0;overflow:hidden;border-radius:1px}.date-nav-segment i{display:block;flex:1;min-width:0;background:var(--dn-kind)}
+.date-nav-ends{display:flex;justify-content:space-between;gap:1rem;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.date-nav-ends span{min-width:0}.date-nav-ends span:last-child{text-align:right}
+.date-nav-selected-wrap{position:relative;margin-top:.75rem;min-width:0}.date-nav .date-nav-selected{display:grid;grid-template-columns:minmax(0,1fr) auto;width:100%;text-align:left;border-left:4px solid var(--dn-kind);background:var(--dn-tint);gap:.15rem 1rem;padding:.65rem .8rem}
+.date-nav-selected-kind{font-size:.72rem;color:var(--dn-kind);font-weight:650}.date-nav-selected-date{grid-column:1;font-size:1.15rem;font-variant-numeric:tabular-nums}.date-nav-selected-label{grid-column:1;font-size:.82rem}.date-nav-selected-action{grid-column:2;grid-row:1 / span 3;align-self:center;font-size:.78rem;color:var(--dn-ink)}
+.date-nav-popover{position:absolute;top:calc(100% + 6px);left:0;z-index:20;width:min(100%,620px);max-height:min(70vh,560px);overflow:auto;overscroll-behavior:contain;padding:1rem;background:#fffbf1;border:1px solid var(--dn-ink);border-top:4px solid var(--dn-copper);border-radius:3px;box-shadow:0 12px 28px #263b3626;overflow-wrap:anywhere;scrollbar-gutter:stable}
+.date-nav.date-nav-open{z-index:40}.date-nav.date-nav-portal{position:fixed;z-index:10000;margin:0;padding:0;border:0;background:transparent;max-width:calc(100vw - 24px);isolation:isolate}.date-nav-portal .date-nav-popover{position:static;top:auto;left:auto;width:100%;margin:0}
+.date-nav-popover-head{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem}.date-nav .date-nav-popover-title{font-family:var(--font-serif,var(--serif,Georgia,serif));font-size:1.25rem;line-height:1.35;margin:0;padding:0;letter-spacing:0;text-transform:none;border:0;color:var(--dn-ink)}
+.date-nav .date-nav-close{flex:none;font-size:.8rem}.date-nav-detail-date{font-size:1rem;margin:.6rem 0;font-variant-numeric:tabular-nums}.date-nav-badge{display:inline-block;color:var(--dn-kind);background:var(--dn-tint);border-left:3px solid var(--dn-kind);padding:.2rem .45rem;font-size:.8rem;font-weight:600}
+.date-nav-summary{font-size:.9rem;margin:.8rem 0}.date-nav-facts{display:grid;grid-template-columns:minmax(80px,1fr) minmax(0,2fr);gap:.5rem 1rem;padding:.7rem 0;border-block:1px solid var(--dn-rule);font-size:.82rem;margin:.8rem 0}.date-nav-facts dt{color:var(--dn-muted)}.date-nav-facts dd{margin:0;min-width:0}.date-nav-source{font-size:.8rem;margin:.6rem 0}.date-nav-source a{display:block;width:fit-content;min-height:44px;padding:.55rem 0;color:var(--dn-copper);text-decoration:underline;text-underline-offset:3px}
+.date-nav .date-nav-bookmark{background:var(--dn-ink);color:#fffbf1;border-color:var(--dn-ink);margin-top:.3rem}.date-nav .date-nav-bookmark:hover:not(:disabled){background:#344e46;color:#fffbf1}.date-nav-bookmark-note{margin:.5rem 0 0}
+.date-nav .date-nav-list>summary{min-height:44px;padding:.7rem 0;cursor:pointer;font-size:.82rem;font-weight:600;color:var(--dn-ink)}.date-nav .date-nav-list>summary::before,.date-nav .date-nav-list>summary::after{content:none}
+.date-nav-explanation{margin:.2rem 0 .65rem;max-width:85ch}.date-nav-legend{display:flex;flex-wrap:wrap;gap:.4rem .8rem;list-style:none;padding:0;margin:.5rem 0 1rem}.date-nav-legend li{font-size:.72rem;color:var(--dn-kind);border-left:3px solid var(--dn-kind);padding-left:.4rem}
+.date-nav-list-tools{display:flex;align-items:end;gap:.5rem 1rem;flex-wrap:wrap}.date-nav-search-label{display:grid;gap:.3rem;min-width:0;flex:1 1 180px;font-size:.82rem}.date-nav .date-nav-search{width:100%;max-width:100%;min-width:0;min-height:44px;padding:.5rem;border:1px solid var(--dn-rule);border-radius:3px;background:#fffbf1;color:var(--dn-ink)}
+.date-nav-saved-label{display:flex;align-items:center;min-height:44px;gap:.5rem;cursor:pointer;font-size:.82rem}.date-nav-saved-label input{width:44px;height:44px;min-width:44px;min-height:44px;margin:0;accent-color:var(--dn-copper)}
+.date-nav-items{list-style:none;padding:0;margin:.5rem 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem}.date-nav-items li{min-width:0}.date-nav .date-nav-list-item{display:flex;flex-direction:column;gap:.15rem;text-align:left;width:100%;height:100%;border-left:3px solid var(--dn-kind);font-size:.8rem}.date-nav-list-item strong{font-variant-numeric:tabular-nums}.date-nav-list-item small{color:var(--dn-kind);font-size:.72rem}.date-nav .date-nav-list-item[aria-current=true]{outline:1px solid var(--dn-ink);background:var(--dn-tint)}
+.date-nav-list-message{font-size:.78rem;color:var(--dn-muted);margin:.5rem 0}.date-nav-list-controls{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}.date-nav .date-nav-list-controls button{font-size:.78rem}.date-nav-list-count{font-size:.78rem;font-variant-numeric:tabular-nums}.date-nav-status{margin:.4rem 0 0;overflow-wrap:anywhere;min-height:0}.date-nav-status:empty{display:none}
+.date-nav-manager{margin-top:.6rem;border-top:1px solid var(--dn-rule)}.date-nav .date-nav-manager>summary{min-height:44px;display:list-item;padding:.65rem 0;cursor:pointer;font-size:.8rem;font-weight:600}.date-nav-manager-items{padding:0;margin:.5rem 0;list-style:none}.date-nav-manager-items li{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.4rem 0;border-top:1px solid var(--dn-rule)}.date-nav-saved-reference{display:flex;min-width:0;flex-direction:column;gap:.2rem;font-size:.78rem;overflow-wrap:anywhere}.date-nav-saved-reference>span{font-family:ui-monospace,monospace;font-size:.7rem;color:var(--dn-muted)}.date-nav .date-nav-remove-bookmark{flex:none;font-size:.78rem}
+.date-nav-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.date-nav-compact{padding:.6rem 0;margin:.6rem 0}.date-nav-compact .date-nav-head{margin-bottom:.3rem}.date-nav-compact .date-nav-heading{font-size:1rem}.date-nav-compact .date-nav-count{font-size:.7rem}.date-nav-compact .date-nav-selected{padding:.4rem .65rem;grid-template-columns:minmax(0,1fr) auto}.date-nav-compact .date-nav-selected-label{display:none}.date-nav-compact .date-nav-selected-kind{font-size:.68rem}.date-nav-compact .date-nav-selected-date{font-size:.92rem}.date-nav-compact .date-nav-selected-action{grid-row:1 / span 2}.date-nav-compact .date-nav-selected-wrap{margin-top:.25rem}.date-nav-compact .date-nav-ends{font-size:.7rem}.date-nav-compact .date-nav-list>summary{padding:.4rem 0;display:flex;align-items:center;font-size:.72rem}
+@media(max-width:600px){.date-nav-controls{gap:.35rem}.date-nav-popover{position:relative;top:auto;margin-top:.4rem;max-height:65vh;width:100%}.date-nav-selected-action{grid-column:1;grid-row:auto}.date-nav .date-nav-selected{grid-template-columns:minmax(0,1fr)}.date-nav-items{grid-template-columns:minmax(0,1fr)}.date-nav-facts{grid-template-columns:minmax(0,1fr);gap:.2rem}.date-nav-facts dd{margin-bottom:.4rem}.date-nav-popover{padding:.7rem}.date-nav-compact .date-nav-selected{grid-template-columns:minmax(0,1fr) auto}.date-nav-compact .date-nav-selected-action{grid-column:2}.date-nav .date-nav-popover-title{font-size:1.1rem}}
+@media(prefers-reduced-motion:reduce){.date-nav,.date-nav *{scroll-behavior:auto;animation:none;transition:none}}
+@media(forced-colors:active){.date-nav [data-kind]{--dn-kind:CanvasText;--dn-tint:Canvas}.date-nav .date-nav-selected,.date-nav .date-nav-list-item{border:1px solid ButtonText}.date-nav-segment i{border-inline:1px solid CanvasText}.date-nav .date-nav-bookmark{color:ButtonText;background:ButtonFace}}
+
+/* Celestial marks use a separate vocabulary from source judgements. A season
+   colour identifies its solar longitude, never a favourable or dangerous day. */
+.date-nav {
+  --dn-celestial-surface: #fffdf6; --dn-orbit-track: #7e8c87; --dn-orbit-active: #285a6a;
+  --dn-march: #176778; --dn-june: #835210; --dn-september: #6e418e; --dn-december: #265b8a;
+  --dn-moon: #385f74; --dn-bookmark-star: #795514;
+  --dn-phase-dark: #2b3d47; --dn-phase-light: #fffdf6; --dn-phase-rim: #385f74;
+  --dn-moon-halo: 0 0 0 3px #285a6a14; --dn-card-shadow: 0 14px 38px #263b3626;
+}
+html[data-ui-theme="midnight"] .date-nav {
+  --dn-celestial-surface: #000000; --dn-orbit-track: #657184; --dn-orbit-active: #35e9ff;
+  --dn-march: #35e9ff; --dn-june: #ffe45e; --dn-september: #c792ff; --dn-december: #8ccfff;
+  --dn-moon: #dbeeff; --dn-bookmark-star: #ffe070;
+  --dn-phase-dark: #000000; --dn-phase-light: #e9f4ff; --dn-phase-rim: #8da9be;
+  --dn-moon-halo: 0 0 0 3px #35e9ff20, 0 0 14px #35e9ff38;
+  --dn-card-shadow: 0 18px 48px #000c;
+}
+.date-nav [data-celestial-kind] { --dn-celestial: var(--dn-moon); }
+.date-nav [data-celestial-kind="march-equinox"] { --dn-celestial: var(--dn-march); }
+.date-nav [data-celestial-kind="june-solstice"] { --dn-celestial: var(--dn-june); }
+.date-nav [data-celestial-kind="september-equinox"] { --dn-celestial: var(--dn-september); }
+.date-nav [data-celestial-kind="december-solstice"] { --dn-celestial: var(--dn-december); }
+
+/* The real range input keeps its full 44px pointer and keyboard surface. The
+   phase is a noninteractive drawing over its precisely aligned native thumb. */
+.date-nav-slider-stage { position: relative; height: 44px; min-width: 0; }
+.date-nav .date-nav-slider { appearance: none; -webkit-appearance: none; border-radius: 0; }
+.date-nav-slider::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(to right,var(--dn-orbit-active) var(--dn-progress,0%),var(--dn-orbit-track) var(--dn-progress,0%)); }
+.date-nav-slider::-moz-range-track { height: 4px; border: 0; border-radius: 2px; background: var(--dn-orbit-track); }
+.date-nav-slider::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--dn-orbit-active); }
+.date-nav-slider::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; box-sizing: border-box; width: 24px; height: 24px; margin-top: -10px; border: 1px solid var(--dn-phase-rim); border-radius: 50%; background: var(--dn-phase-light); box-shadow: var(--dn-moon-halo); }
+.date-nav-slider::-moz-range-thumb { box-sizing: border-box; width: 24px; height: 24px; border: 1px solid var(--dn-phase-rim); border-radius: 50%; background: var(--dn-phase-light); box-shadow: var(--dn-moon-halo); }
+.date-nav-phase-thumb { position: absolute; left: calc(12px + (100% - 24px) * var(--dn-progress-ratio,0)); top: 50%; transform: translate(-50%,-50%); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--dn-phase-dark); box-shadow: var(--dn-moon-halo); pointer-events: none; color: var(--dn-moon); }
+.date-nav-phase-thumb svg { display: block; width: 24px; height: 24px; overflow: visible; }
+.date-nav-slider-stage:has(.date-nav-phase-thumb:not([hidden])) .date-nav-slider::-webkit-slider-thumb { background: transparent; border-color: transparent; box-shadow: none; }
+.date-nav-slider-stage:has(.date-nav-phase-thumb:not([hidden])) .date-nav-slider::-moz-range-thumb { background: transparent; border-color: transparent; box-shadow: none; }
+.date-nav-slider-stage:focus-within .date-nav-phase-thumb { outline: 2px solid var(--dn-orbit-active); outline-offset: 4px; }
+.date-nav-overview { height: 5px; gap: 2px; }
+.date-nav-segment { border-radius: 2px; }
+.date-nav-overview:has(.date-nav-phase-tick) { height: 26px; padding-inline: 8px; align-items: flex-end; }
+.date-nav-overview:has(.date-nav-phase-tick) .date-nav-segment { position: relative; height: 5px; overflow: visible; }
+.date-nav .date-nav-phase-tick { position: absolute; top: -21px; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; pointer-events: none; }
+
+.date-nav-celestial-section { min-width: 0; margin-top: .7rem; padding-top: .7rem; border-top: 1px solid var(--dn-rule); }
+.date-nav .date-nav-celestial-title { margin: 0; padding: 0; border: 0; color: var(--dn-ink); font: 600 .8rem/1.5 var(--font-sans,var(--sans,system-ui,sans-serif)); letter-spacing: .02em; }
+.date-nav-celestial-note,.date-nav-celestial-count,.date-nav-marker-action-note { color: var(--dn-muted); font-size: .75rem; line-height: 1.5; overflow-wrap: anywhere; }
+.date-nav-celestial-note { margin: .3rem 0 .6rem; }
+.date-nav-season-bookmarks { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .35rem; min-width: 0; margin: .6rem 0; }
+.date-nav .date-nav-season-bookmark { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .25rem; min-width: 44px; min-height: 78px; padding: .45rem .15rem; border: 1px solid var(--dn-rule); border-top: 2px solid var(--dn-celestial); border-radius: 6px; background: var(--dn-celestial-surface); }
+html[data-ui-theme] .date-nav .date-nav-season-bookmark { color: var(--dn-celestial); background: var(--dn-celestial-surface); }
+.date-nav .date-nav-season-bookmark:is(:hover,:focus-visible) { border-color: var(--dn-celestial); }
+.date-nav-season-bookmark .date-nav-celestial-label { color: var(--dn-celestial); font-size: .68rem; font-weight: 600; line-height: 1.25; }
+.date-nav-season-bookmark .date-nav-celestial-date { font-size: .65rem; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.date-nav-season-bookmark .date-nav-bookmark-star { position: absolute; top: 3px; right: 3px; width: 12px; height: 12px; }
+.date-nav-celestial { position: relative; min-width: 0; max-width: 100%; padding: .1rem 0; background: var(--dn-celestial-surface); border-block: 1px solid var(--dn-rule); }
+.date-nav-celestial-lane { position: relative; height: 56px; min-width: 0; }
+.date-nav-celestial-lane::before { content: ""; position: absolute; top: 21px; left: 22px; right: 22px; height: 1px; background: var(--dn-orbit-track); }
+.date-nav-celestial-lane[data-celestial-family="lunar"]::before { background: repeating-linear-gradient(to right,var(--dn-orbit-track) 0 3px,transparent 3px 8px); }
+.date-nav .date-nav-celestial-mark { position: absolute; left: clamp(22px,var(--dn-position,0%),calc(100% - 22px)); top: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; width: 44px; min-width: 44px; height: 48px; min-height: 44px; padding: 3px 0; border: 1px solid transparent; border-radius: 6px; background: var(--dn-celestial-surface); box-shadow: none; color: var(--dn-celestial); }
+html[data-ui-theme] .date-nav .date-nav-celestial-mark { color: var(--dn-celestial); background: var(--dn-celestial-surface); }
+.date-nav .date-nav-celestial-mark:is(:hover,:focus-visible,[aria-current="true"]) { border-color: var(--dn-celestial); background: var(--dn-celestial-surface); }
+html[data-ui-theme] .date-nav .date-nav-celestial-mark:is(:hover,:focus-visible,[aria-current="true"]) { background: var(--dn-celestial-surface); }
+.date-nav-celestial-glyph { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 24px; height: 24px; color: var(--dn-celestial,var(--dn-moon)); }
+.date-nav-celestial-glyph svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.date-nav-celestial-glyph:is(svg) { display: block; }
+.date-nav-celestial-mark .date-nav-celestial-label { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.date-nav-celestial-mark .date-nav-celestial-date { font: 500 .65rem/1.1 var(--font-sans,var(--sans,system-ui,sans-serif)); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.date-nav-celestial-legend { display: flex; flex-wrap: wrap; gap: .35rem 1rem; padding: 0; margin: .6rem 0 .4rem; list-style: none; }
+.date-nav-celestial-legend li { display: flex; align-items: center; gap: .35rem; min-width: 0; color: var(--dn-celestial); font-size: .75rem; line-height: 1.5; }
+.date-nav-celestial-legend .date-nav-celestial-glyph { width: 18px; height: 18px; }
+.date-nav .date-nav-celestial-list>summary { display: list-item; min-height: 44px; padding: .65rem 0; color: var(--dn-ink); font-size: .8rem; font-weight: 600; cursor: pointer; }
+.date-nav-celestial-items { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .45rem; list-style: none; margin: .5rem 0; padding: 0; }
+.date-nav-celestial-items li { min-width: 0; }
+.date-nav .date-nav-celestial-items button { display: grid; grid-template-columns: 24px minmax(0,1fr) auto; gap: .15rem .5rem; align-items: center; width: 100%; height: 100%; text-align: left; border-left: 3px solid var(--dn-celestial); }
+.date-nav-celestial-items .date-nav-celestial-glyph { grid-row: 1 / span 2; }
+.date-nav-celestial-items .date-nav-celestial-label { grid-column: 2; color: var(--dn-ink); font-size: .8rem; font-weight: 600; }
+.date-nav-celestial-items .date-nav-celestial-date { grid-column: 2; font-size: .72rem; color: var(--dn-muted); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.date-nav .date-nav-celestial-prev,.date-nav .date-nav-celestial-next { font-size: .78rem; }
+.date-nav-selected-celestial { display: flex; align-items: center; flex-wrap: wrap; gap: .3rem .5rem; grid-column: 1; min-width: 0; font-size: .75rem; line-height: 1.5; color: var(--dn-ink); }
+.date-nav-selected-celestial .date-nav-celestial-glyph { width: 20px; height: 20px; }
+.date-nav-selected-celestial:empty { display: none; }
+
+/* Saved stars are redundant with the words Bookmarked/Remove bookmark. They
+   belong to public references, not to the confidence or meaning of a record. */
+.date-nav-bookmark-star { display: inline-grid; place-items: center; flex: none; width: 20px; height: 20px; color: var(--dn-bookmark-star); font-size: 1rem; line-height: 1; }
+.date-nav-bookmark-star[data-saved="false"] { color: var(--dn-muted); }
+.date-nav-bookmark-ribbon { position: absolute; right: .65rem; top: 0; display: grid; place-items: start center; width: 23px; height: 30px; padding-top: 3px; border: 1px solid var(--dn-bookmark-star); border-top: 0; background: var(--dn-celestial-surface); clip-path: polygon(0 0,100% 0,100% 100%,50% 77%,0 100%); pointer-events: none; }
+.date-nav-selected { position: relative; }
+.date-nav-selected>.date-nav-bookmark-star { position: absolute; top: .3rem; right: .7rem; z-index: 1; }
+.date-nav-selected[data-saved="true"]::after { content: ""; position: absolute; right: .6rem; top: 0; width: 23px; height: 31px; border: 1px solid var(--dn-bookmark-star); border-top: 0; background: var(--dn-celestial-surface); clip-path: polygon(0 0,100% 0,100% 100%,50% 77%,0 100%); pointer-events: none; }
+.date-nav-selected[data-saved="true"] .date-nav-selected-action { padding-inline-end: 1.4rem; }
+.date-nav-celestial-mark .date-nav-bookmark-star { position: absolute; right: -2px; top: -1px; width: 14px; height: 14px; font-size: .7rem; background: var(--dn-celestial-surface); border-radius: 50%; }
+.date-nav-celestial-items .date-nav-bookmark-star { grid-column: 3; grid-row: 1 / span 2; }
+.date-nav .date-nav-manager-items li { border: 1px solid var(--dn-rule); border-left: 3px solid var(--dn-bookmark-star); border-radius: 4px; padding: .6rem .7rem; margin: .4rem 0; }
+.date-nav .date-nav-popover { border-radius: 8px; box-shadow: var(--dn-card-shadow); border-top: 2px solid var(--dn-orbit-active); }
+html[data-ui-theme="midnight"] .date-nav .date-nav-popover { background: var(--dn-celestial-surface); }
+.date-nav-popover-head { padding-bottom: .65rem; border-bottom: 1px solid var(--dn-rule); }
+.date-nav-marker-action-note { margin: .45rem 0 .7rem; }
+.date-nav .date-nav-marker-select { margin: .35rem .5rem .35rem 0; border-color: var(--dn-orbit-active); }
+.date-nav .date-nav-marker-select:focus-visible { outline-color: var(--dn-orbit-active); }
+
+@media(max-width:600px) {
+  .date-nav-celestial-items { grid-template-columns: minmax(0,1fr); }
+  .date-nav-celestial-legend { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .35rem .6rem; }
+  .date-nav-celestial-legend li { font-size: .7rem; }
+  .date-nav-celestial-legend .date-nav-celestial-glyph { width: 16px; height: 16px; }
+  .date-nav .date-nav-search,.date-nav select,.date-nav textarea { font-size: 16px; }
+  .date-nav-celestial-items .date-nav-celestial-label { font-size: .85rem; }
+  .date-nav-manager-items li { align-items: flex-start; }
+}
+@media(max-width:300px) {
+  .date-nav-season-bookmarks { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .date-nav-phase-thumb,.date-nav-celestial-mark,.date-nav-popover { animation: none; transition: none; }
+}
+@media(forced-colors:active) {
+  html[data-ui-theme] .date-nav,.date-nav { --dn-celestial-surface: Canvas; --dn-orbit-track: CanvasText; --dn-orbit-active: Highlight; --dn-march: CanvasText; --dn-june: CanvasText; --dn-september: CanvasText; --dn-december: CanvasText; --dn-moon: CanvasText; --dn-bookmark-star: CanvasText; --dn-phase-dark: Canvas; --dn-phase-light: CanvasText; --dn-phase-rim: CanvasText; --dn-moon-halo: none; --dn-card-shadow: none; }
+  .date-nav .date-nav-celestial-mark,.date-nav .date-nav-celestial-items button { border: 1px solid ButtonText; }
+  .date-nav .date-nav-celestial-mark[aria-current="true"] { outline: 2px solid Highlight; outline-offset: 1px; }
+  .date-nav-bookmark-ribbon { clip-path: none; border: 1px solid CanvasText; }
+  .date-nav-selected[data-saved="true"]::after { clip-path: none; border: 1px solid CanvasText; }
+  .date-nav .date-nav-popover { border: 1px solid CanvasText; box-shadow: none; }
+}
+@media print {
+  html[data-ui-theme] .date-nav,.date-nav { --dn-celestial-surface: #ffffff; --dn-orbit-track: #555555; --dn-orbit-active: #222222; --dn-march: #176778; --dn-june: #835210; --dn-september: #6e418e; --dn-december: #265b8a; --dn-moon: #385f74; --dn-bookmark-star: #795514; --dn-phase-dark: #2b3d47; --dn-phase-light: #ffffff; --dn-phase-rim: #385f74; --dn-moon-halo: none; --dn-card-shadow: none; }
+  .date-nav-slider-stage,.date-nav-celestial,.date-nav-celestial-list,.date-nav-bookmark-ribbon,.date-nav-portal,.date-nav-selected[data-saved="true"]::after { display: none!important; }
+  .date-nav-celestial-section { break-inside: avoid; }
+  .date-nav .date-nav-popover { position: static; box-shadow: none; }
+}

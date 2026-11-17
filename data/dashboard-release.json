@@ -1,0 +1,148 @@
+{
+  "schema": "resonance-dashboard-release/v1",
+  "version": "0.7.0",
+  "generatedAt": "2026-11-17T06:43:46.135Z",
+  "releaseGeneratedAt": "2026-11-17T05:16:17.540Z",
+  "manifest": {
+    "path": "/patent-library/manifest.json",
+    "sha256": "095f406d10e321e8a36a4097a05458e7d125a3869f4ff3129c9c8248363885e1"
+  },
+  "counts": {
+    "projects": 9,
+    "blueprints": 11,
+    "diagrams": 33,
+    "worksheets": 17,
+    "standardsSources": 18,
+    "researchSources": 6
+  },
+  "evidenceBoundary": "Source-bound models and proposed experiments remain distinct from measurements. This dated snapshot is not a live repository-health check, hardware validation or filing-compliance certification. Historical originals remain preserved and unconverted.",
+  "links": [
+    {
+      "label": "Sphere research · six studies",
+      "path": "/#sphere"
+    },
+    {
+      "label": "Sphere study diagrams & 3D bundle",
+      "path": "/sphere-lab/sphere-study-bundle.zip"
+    },
+    {
+      "label": "Diagram & experiment library",
+      "path": "/patent-library/index.html"
+    },
+    {
+      "label": "Example notation · coupled coils",
+      "path": "/patent-library/nt-coupled-coils-notation.html"
+    },
+    {
+      "label": "Setups & proposed parts",
+      "path": "/patent-library/index.html"
+    },
+    {
+      "label": "Experiment worksheets",
+      "path": "/patent-library/index.html#proposal-protocols"
+    },
+    {
+      "label": "Research collection",
+      "path": "/#collection"
+    },
+    {
+      "label": "Current US/EPO standards sources",
+      "path": "/data/patent-standards.json"
+    },
+    {
+      "label": "Device observatory",
+      "path": "/apps/brainwave_opensync/device-observatory/"
+    },
+    {
+      "label": "Energy observatory",
+      "path": "/apps/brainwave_opensync/energy-observatory/"
+    },
+    {
+      "label": "Location spectrum",
+      "path": "/apps/brainwave_opensync/location-spectrum/"
+    }
+  ],
+  "projects": [
+    {
+      "id": "resonance-lab",
+      "title": "resonance lab",
+      "path": "/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "f6cf8c3fed3cf5ba10c1d73da8974e282aa397d2",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "brainwave_opensync",
+      "title": "brainwave opensync",
+      "path": "/apps/brainwave_opensync/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "90c4652fd268d1bdc52a62964f1204e258adae4d",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "open-sync",
+      "title": "open sync",
+      "path": "/apps/open-sync/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "02425613cd057406d92c4f3ee33b5fc54a493601",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "crop-circle-pattern-lab",
+      "title": "crop circle pattern lab",
+      "path": "/apps/crop-circle-pattern-lab/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "ca6da8566a8bccbf6596292267dd45d6c52d6d11",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "resonance-research-atlas",
+      "title": "resonance research atlas",
+      "path": "/apps/resonance-research-atlas/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "newton-tesla-research-lab",
+      "title": "newton tesla research lab",
+      "path": "/apps/newton-tesla-research-lab/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "newton-tesla-alchemy",
+      "title": "newton tesla alchemy",
+      "path": "/apps/newton-tesla-alchemy/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "1c7b9971b74aa14aeae426d40ba8eda0ae0d8644",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "resonant-vessels",
+      "title": "resonant vessels",
+      "path": "/apps/resonant-vessels/",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "9249e3d4596cd4f20575120f635ab2073371d18c",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    },
+    {
+      "id": "astrology-sim-ant",
+      "title": "astrology sim ant",
+      "path": "/apps/astrology-sim-ant/pages/sigil-studio.html",
+      "stage": "source/model/proposed; no hardware validation inferred",
+      "sourceCommit": "39d622394bed9f8d370695502a9e753478695434",
+      "adapterObservationAt": "2026-11-17T06:43:45.439Z",
+      "adapterReadiness": "entry-readable"
+    }
+  ]
+}

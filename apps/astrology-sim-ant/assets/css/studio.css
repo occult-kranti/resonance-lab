@@ -1,0 +1,83 @@
+/* Live Studio extends the existing DS2 study-desk vocabulary. */
+.studio { padding-bottom: var(--sp-6, 2rem); }
+.studio-intro { display:flex; align-items:center; justify-content:space-between; gap:var(--sp-5,1.5rem); flex-wrap:wrap; margin:1.4rem 0 1rem; }
+.studio-intro h1 { margin:.2rem 0 .6rem; }
+.studio-intro .lede { margin:0; max-width:40rem; }
+.studio-kicker { font:700 .72rem/1.5 var(--font-sans,var(--sans)); text-transform:uppercase; letter-spacing:.1em; color:var(--accent-strong,var(--link)); margin:0 0 .4rem; }
+.studio-frame { max-width:64rem; font-size:.88rem; border-left:3px solid var(--accent,var(--gold)); padding-left:1rem; margin-bottom:1.8rem; }
+.studio-context,.studio-result,.studio-saved,.studio-connections { border:1px solid var(--border,var(--rule)); background:var(--surface-card,var(--card)); border-radius:var(--rad-3,12px); padding:clamp(1rem,2.5vw,1.8rem); margin:1.3rem 0; }
+.studio-section-head { display:flex; gap:1rem; flex-wrap:wrap; align-items:baseline; justify-content:space-between; border-bottom:1px solid var(--border,var(--rule)); margin-bottom:1.2rem; padding-bottom:.5rem; }
+.studio-section-head h2 { margin:0 0 .5rem; }
+.studio-clock { margin:0 0 .5rem; font:600 .84rem/1.5 var(--font-sans,var(--sans)); font-variant-numeric:tabular-nums; color:var(--accent-strong,var(--link)); }
+.studio-clock[data-mode="live"]::before { content:'● '; }
+.studio-fields { display:grid; grid-template-columns:minmax(0,1.5fr) repeat(2,minmax(0,1fr)); gap:1rem; margin:1.1rem 0 .7rem; }
+.studio-task-fields { grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); }
+.studio .field { min-width:0; }
+.studio input,.studio select { width:100%; min-width:0; max-width:100%; min-height:44px; box-sizing:border-box; }
+.studio button,.studio .btn-secondary,.studio summary { min-height:44px; }
+.studio-actions,.studio-export { display:flex; gap:.55rem; align-items:center; flex-wrap:wrap; margin:.8rem 0; }
+.studio-actions p { flex:1 1 260px; margin:0; }
+.studio button { cursor:pointer; }
+.studio button:disabled { cursor:not-allowed; opacity:.6; }
+.studio :focus-visible { outline:3px solid var(--focus,var(--gold)); outline-offset:3px; }
+.studio-check { display:flex; align-items:center; gap:.7rem; min-height:44px; font:500 .9rem/1.5 var(--font-sans,var(--sans)); }
+.studio-check input { flex:0 0 24px; width:24px; min-height:24px; height:24px; }
+#studioText { font-size:1.1rem; }
+#studioStatus[data-error="true"] { color:var(--bad-ink,var(--malefic)); font-weight:600; }
+#studioResultContext { max-width:30rem; margin:.2rem 0 .6rem; font-variant-numeric:tabular-nums; }
+.studio-spread { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:clamp(1rem,3vw,2.2rem); align-items:start; }
+.studio-figure { margin:0; min-width:0; }
+#studioFigure { width:100%; min-height:12rem; display:flex; align-items:center; justify-content:center; }
+#studioFigure svg { width:100%; max-width:540px; height:auto; }
+#studioFigureCaption { margin:.7rem 0; }
+.studio-reading h3 { margin-top:0; }
+.studio-reading dl { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.5fr); gap:.5rem .8rem; margin:0; }
+.studio-reading dt { color:var(--text-muted,var(--muted)); }
+.studio-reading dd { margin:0; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
+.studio-reading ol,.studio-reading ul { padding-left:1.3rem; }
+.studio-reading table { width:100%; font-size:.86rem; table-layout:fixed; }
+.studio-reading th,.studio-reading td { overflow-wrap:anywhere; padding:.5rem .35rem; }
+.studio-trace { border-top:1px solid var(--border,var(--rule)); margin:1.2rem 0; padding-top:1rem; }
+.studio-trace input { max-width:36rem; display:block; }
+.studio-trace output { display:block; font-size:.85rem; }
+.studio-methods { border-top:1px solid var(--border,var(--rule)); padding-top:.6rem; margin-top:1.2rem; }
+.studio-methods summary,.studio-connections summary { cursor:pointer; font:600 .9rem/1.5 var(--font-sans,var(--sans)); display:list-item; padding:.65rem 0; }
+#studioMethods { font-size:.9rem; max-width:70ch; }
+#studioMethods p { margin:.7rem 0; }
+.studio-export { border-top:1px solid var(--border,var(--rule)); padding-top:1rem; }
+#studioSnapshots { list-style:none; padding:0; margin:0; }
+#studioSnapshots li { display:flex; justify-content:space-between; align-items:center; gap:.7rem; padding:.7rem 0; border-bottom:1px solid var(--border,var(--rule)); }
+#studioSnapshots button:first-child { text-align:left; flex:1; min-width:0; overflow-wrap:anywhere; }
+.studio-related { display:flex; gap:1rem 1.5rem; flex-wrap:wrap; margin:1.5rem 0; }
+.studio-connections pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+.studio [hidden] { display:none!important; }
+.session-steps { display:flex; gap:.35rem; flex-wrap:wrap; padding:.55rem 0; border-block:1px solid var(--border,var(--rule)); margin-block:1.3rem; }
+.session-steps a,.session-steps button { display:flex; align-items:center; min-height:44px; padding:.45rem .7rem; font:600 .9rem/1.3 var(--font-sans,var(--sans)); color:var(--text,var(--ink)); border:0; background:transparent; text-decoration:none; border-radius:var(--rad-1,4px); }
+.session-steps a:hover,.session-steps button:hover { background:var(--surface-inset,var(--parchment-2)); }
+.session-observe,.session-intent,.session-study,.session-journal,.session-compare { border-block-start:1px solid var(--border,var(--rule)); padding-block:1.2rem; margin-block:1.3rem; }
+.session-observe h2,.session-intent h2,.session-study h2 { margin-top:0; }
+.studio textarea { width:100%; max-width:100%; min-width:0; resize:vertical; min-height:88px; padding:.65rem; font:inherit; color:var(--text,var(--ink)); background:var(--surface-card,var(--card)); border:1px solid var(--border,var(--rule)); border-radius:var(--rad-2,8px); }
+.session-journal>.field { margin-block:1rem; }
+.session-intent summary,.session-journal summary,.session-compare>summary { padding:.6rem 0; cursor:pointer; font-weight:600; }
+#sessionObservation[data-error="true"] { color:var(--bad-ink,var(--malefic)); }
+#sessionLensContent { max-width:74ch; overflow-wrap:anywhere; }
+#sessionLensContent li { margin-block:.65rem; }
+.session-table { max-width:100%; overflow:auto; }
+.session-table table { width:100%; table-layout:fixed; }
+.session-table th,.session-table td { padding:.5rem; overflow-wrap:anywhere; vertical-align:top; }
+.session-ai-controls { min-width:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr)); gap:1rem; border:1px solid var(--border,var(--rule)); margin-block:1rem; }
+.session-ai-check { display:flex; align-items:center; gap:.6rem; min-height:44px; }
+.studio .session-ai-check input { flex:0 0 22px; width:22px; min-height:22px; height:22px; }
+.session-ai-actions { display:flex; flex-wrap:wrap; gap:.55rem; margin-block:1rem; }
+.session-ai pre { white-space:pre-wrap; overflow-wrap:anywhere; min-inline-size:0; max-height:24rem; overflow:auto; font-size:.8rem; }
+.session-ai-response { white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.65; }
+[id="sessionJournalStatus"][data-error="true"] { color:var(--bad-ink,var(--malefic)); }
+#sessionJournal { padding:0; list-style:none; }
+#sessionJournal>li { border-block-start:1px solid var(--border,var(--rule)); padding-block:.9rem; overflow-wrap:anywhere; }
+#sessionJournal .studio-actions { margin-bottom:0; }
+.studio [id^="session"] { scroll-margin-top:10rem; }
+@media(max-width:760px) { .studio textarea { font-size:16px; } .session-table table { font-size:.88rem; } .session-table th,.session-table td { padding:.4rem .25rem; } }
+.studio-number { font:600 clamp(2rem,5vw,3rem)/1.4 var(--font-serif,var(--serif)); overflow-wrap:anywhere; width:100%; text-align:center; }
+@media(max-width:760px) { .studio-spread { grid-template-columns:1fr; } .studio-fields { grid-template-columns:1fr 1fr; } .studio-fields>.field:first-child { grid-column:1/-1; } .studio input,.studio select { font-size:16px; } .studio-intro { gap:1rem; } }
+@media(max-width:420px) { .studio-fields { grid-template-columns:1fr; } .studio .studio-context,.studio .studio-result,.studio .studio-saved,.studio .studio-connections { padding:1rem .8rem; } .studio-export button { flex:1 1 135px; } .studio-reading dl { grid-template-columns:1fr; gap:.2rem; } .studio-reading dd { margin-bottom:.6rem; } }
+@media(prefers-reduced-motion:reduce) { .studio * { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }

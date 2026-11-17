@@ -1,0 +1,23 @@
+{
+  "kind": "deterministic-concept-geometry-not-engineering-blueprint",
+  "generator": "Blender 4.3.2",
+  "source": "scripts/render_device_blender.py",
+  "dimensionsSI": {
+    "platformLengthM": 0.18,
+    "platformWidthM": 0.1,
+    "platformThicknessM": 0.003,
+    "illustrativeCoilDiameterM": 0.018,
+    "illustrativeCoilHeightM": 0.016,
+    "illustrativeTurns": 5
+  },
+  "dimensionsStatus": "Chosen for visual layout; not derived from electrical parameters or validated components.",
+  "limitations": [
+    "No coil inductance is inferred from this mesh.",
+    "Connectors are diagrammatic, not verified wiring.",
+    "No tolerances, insulation rating, power rating, electromagnetic solver, fabrication or hardware measurements."
+  ],
+  "outputs": [
+    "passive-circuit-concept.blend",
+    "passive-circuit-concept.png"
+  ]
+}

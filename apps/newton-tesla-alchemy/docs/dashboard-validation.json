@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-11-17T05:49:15.007187+00:00",
+  "baseline": "No pre-existing HTML/index/dashboard; README and four research Markdown files",
+  "browser": {
+    "origin": "http://127.0.0.1:4182",
+    "engine": "Chromium /usr/bin/chromium via Playwright",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "results": [
+      "newton-tesla-alchemy/index.html: bridge mounted",
+      "Alchemy: search, reset, original-text reader and close passed",
+      "newton-tesla-alchemy: desktop/mobile capture and no horizontal overflow"
+    ],
+    "pageErrors": [],
+    "horizontalOverflow": false,
+    "visualPass": "One batched initial inspection, one correction batch, one confirmation. Corrected inherited mobile Vessels navigation crowding and decorative glyph fallback in Alchemy."
+  },
+  "bridge": {
+    "repo": "newton-tesla-alchemy",
+    "status": "11 blueprint dossiers \u00b7 33 A4 diagrams \u00b7 17 experiment worksheets. Release snapshot: 2026-11-17.",
+    "linkCount": 2,
+    "managedLinksSameOrigin": true,
+    "canonicalSha256": "7912c0cb8c323e2acac472609cd6e9bd0df4356474c1e00e1aa7875b9adb1067",
+    "copiedSha256": "7912c0cb8c323e2acac472609cd6e9bd0df4356474c1e00e1aa7875b9adb1067",
+    "identicalBytes": true,
+    "synchronizedAt": "2026-11-17T05:56:20.112113+00:00",
+    "syncReason": "Final coordinated copy: truthful Save standalone URL label; Setups overview link retained.",
+    "previousObservedStatus": "The release snapshot is unavailable. Open the shared library for its dated contents; no live repository or hardware status is inferred.",
+    "focusedFinalSettingsCheck": {
+      "repo": "newton-tesla-alchemy",
+      "label": "Save standalone URL",
+      "managedLinksRemainSameOrigin": true,
+      "noFetchToSavedStandaloneUrl": true,
+      "status": "11 blueprint dossiers \u00b7 33 A4 diagrams \u00b7 17 experiment worksheets. Release snapshot: 2026-11-17."
+    },
+    "checkedAt": "2026-11-17T05:56:59.186581+00:00"
+  },
+  "localLinks": {
+    "checkedReferences": 15,
+    "broken": []
+  },
+  "originalResearchMarkdownUnchanged": true,
+  "fileSha256": {
+    "index.html": "13dc7b9c6e5c3e5dd96ce2524a0217f57c888f67f1257667140725b02e546715",
+    "assets/reading-desk.js": "5225240d812cbf7c26d9f75d14db7e94c5c4465cf290b8791acb7a1cbc4b4fa1",
+    "assets/reading-desk.css": "931471ee5ed080f56ba6630da77967e7b205baee48ede262c97fb07ccbaeac69",
+    "assets/integration/dashboard-bridge.js": "7912c0cb8c323e2acac472609cd6e9bd0df4356474c1e00e1aa7875b9adb1067"
+  },
+  "evidenceSha256": {
+    "docs/dashboard-evidence/desktop.png": "b756bf2906c63537ce8dcffbab92db58562d2011394df9b6616c9f0b15de112f",
+    "docs/dashboard-evidence/mobile.png": "2b16ac2964a6d7f9f0b7b00f9a9d374aa670156d7ef817364336e4f150701d14"
+  },
+  "limits": [
+    "No physical validation, new source review, live hardware status or publication claimed.",
+    "Visual review was bounded to owned current entry surfaces at two viewport sizes.",
+    "Release counts are a dated 2026-11-17 snapshot, not live repository or hardware status."
+  ]
+}

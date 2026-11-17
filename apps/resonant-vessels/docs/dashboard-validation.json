@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-11-17T05:49:14.994206+00:00",
+  "baseline": "Existing archive screenshot captured before additive changes",
+  "browser": {
+    "origin": "http://127.0.0.1:4182",
+    "engine": "Chromium /usr/bin/chromium via Playwright",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "results": [
+      "resonant-vessels/index.html: bridge mounted",
+      "resonant-vessels/lab.html: bridge mounted",
+      "resonant-vessels/experiments.html: bridge mounted",
+      "resonant-vessels/research-corrections.html: bridge mounted",
+      "resonant-vessels/research-continuation.html: bridge mounted",
+      "resonant-vessels: desktop/mobile capture and no horizontal overflow"
+    ],
+    "pageErrors": [],
+    "horizontalOverflow": false,
+    "visualPass": "One batched initial inspection, one correction batch, one confirmation. Corrected inherited mobile Vessels navigation crowding and decorative glyph fallback in Alchemy."
+  },
+  "bridge": {
+    "repo": "resonant-vessels",
+    "status": "11 blueprint dossiers \u00b7 33 A4 diagrams \u00b7 17 experiment worksheets. Release snapshot: 2026-11-17.",
+    "linkCount": 2,
+    "managedLinksSameOrigin": true,
+    "canonicalSha256": "7912c0cb8c323e2acac472609cd6e9bd0df4356474c1e00e1aa7875b9adb1067",
+    "copiedSha256": "7912c0cb8c323e2acac472609cd6e9bd0df4356474c1e00e1aa7875b9adb1067",
+    "identicalBytes": true,
+    "synchronizedAt": "2026-11-17T05:56:20.111599+00:00",
+    "syncReason": "Final coordinated copy: truthful Save standalone URL label; Setups overview link retained.",
+    "previousObservedStatus": "The release snapshot is unavailable. Open the shared library for its dated contents; no live repository or hardware status is inferred.",
+    "focusedFinalSettingsCheck": {
+      "repo": "resonant-vessels",
+      "label": "Save standalone URL",
+      "managedLinksRemainSameOrigin": true,
+      "noFetchToSavedStandaloneUrl": true,
+      "status": "11 blueprint dossiers \u00b7 33 A4 diagrams \u00b7 17 experiment worksheets. Release snapshot: 2026-11-17."
+    },
+    "checkedAt": "2026-11-17T05:56:59.186184+00:00"
+  },
+  "localLinks": {
+    "checkedReferences": 157,
+    "broken": []
+  },
+  "originalResearchMarkdownUnchanged": true,
+  "fileSha256": {
+    "assets/integration/dashboard-bridge.js": "7912c0cb8c323e2acac472609cd6e9bd0df4356474c1e00e1aa7875b9adb1067",
+    "assets/integration/archive-entry.css": "43178bdd0f4125abf9aca4786d34d821e52be75961f75ac76aee96939754e3a1",
+    "index.html": "c9c00ea287ae24c5b1b655c6f98e9d83d9b0713c5a31e412972ea71bcda3f7ed",
+    "lab.html": "3120ff759a7678cc7d264b4c24b1eb02359731657e6f5068ce1591d282028731",
+    "experiments.html": "f77b5de522d3285590cca3c65e55ebd3328353870fac5ce083e366a61eaa9e3c",
+    "research-corrections.html": "fdcbfb52e97c2d1bf8d2555faa6031dd5d69bc02c0001935bbcb4d2ed377e99b",
+    "research-continuation.html": "c733239d478419c93bd8312cf7ef4284b055e5adc7115f859e464ef638822e78"
+  },
+  "evidenceSha256": {
+    "docs/dashboard-evidence/desktop.png": "cd2b90a4cee6a59ca3c90282ca3c2192c76fc8ce14c6b235a3df22421d69a484",
+    "docs/dashboard-evidence/mobile.png": "70449c4e54e3b20d27a5dab4e2b3454f4e9b28c413f14662956682aee2935438",
+    "docs/dashboard-evidence/baseline-desktop.png": "7bbc04f68ff8d84d39c7abbc4bf7d2d5a75d27fdf431dc9c916cf3e86aecef19"
+  },
+  "limits": [
+    "No physical validation, new source review, live hardware status or publication claimed.",
+    "Visual review was bounded to owned current entry surfaces at two viewport sizes.",
+    "Release counts are a dated 2026-11-17 snapshot, not live repository or hardware status."
+  ]
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "repo": "newton-tesla-research-lab",
+    "device": "desktop",
+    "links": [
+      {
+        "label": "Open shared workbench",
+        "href": "http://127.0.0.1:4182/"
+      },
+      {
+        "label": "Diagram & experiment library",
+        "href": "http://127.0.0.1:4182/patent-library/index.html"
+      },
+      {
+        "label": "Example notation · coupled coils",
+        "href": "http://127.0.0.1:4182/patent-library/nt-coupled-coils-notation.html"
+      },
+      {
+        "label": "Experiment worksheets",
+        "href": "http://127.0.0.1:4182/patent-library/index.html#proposal-protocols"
+      },
+      {
+        "label": "Research collection",
+        "href": "http://127.0.0.1:4182/#collection"
+      },
+      {
+        "label": "Current US/EPO standards sources",
+        "href": "http://127.0.0.1:4182/data/patent-standards.json"
+      },
+      {
+        "label": "Device observatory",
+        "href": "http://127.0.0.1:4182/apps/brainwave_opensync/device-observatory/"
+      },
+      {
+        "label": "Energy observatory",
+        "href": "http://127.0.0.1:4182/apps/brainwave_opensync/energy-observatory/"
+      },
+      {
+        "label": "Location spectrum",
+        "href": "http://127.0.0.1:4182/apps/brainwave_opensync/location-spectrum/"
+      }
+    ],
+    "overflow": {
+      "width": 1440,
+      "scroll": 1440
+    },
+    "errors": [],
+    "releaseState": "11 blueprint dossiers · 33 A4 diagrams · 17 experiment worksheets. Release snapshot: 2026-11-17.",
+    "inputSurvivedDisclosure": true
+  },
+  {
+    "repo": "newton-tesla-research-lab",
+    "device": "mobile",
+    "links": [
+      {
+        "label": "Open shared workbench",
+        "href": "http://127.0.0.1:4182/"
+      },
+      {
+        "label": "Diagram & experiment library",
+        "href": "http://127.0.0.1:4182/patent-library/index.html"
+      },
+      {
+        "label": "Example notation · coupled coils",
+        "href": "http://127.0.0.1:4182/patent-library/nt-coupled-coils-notation.html"
+      },
+      {
+        "label": "Experiment worksheets",
+        "href": "http://127.0.0.1:4182/patent-library/index.html#proposal-protocols"
+      },
+      {
+        "label": "Research collection",
+        "href": "http://127.0.0.1:4182/#collection"
+      },
+      {
+        "label": "Current US/EPO standards sources",
+        "href": "http://127.0.0.1:4182/data/patent-standards.json"
+      },
+      {
+        "label": "Device observatory",
+        "href": "http://127.0.0.1:4182/apps/brainwave_opensync/device-observatory/"
+      },
+      {
+        "label": "Energy observatory",
+        "href": "http://127.0.0.1:4182/apps/brainwave_opensync/energy-observatory/"
+      },
+      {
+        "label": "Location spectrum",
+        "href": "http://127.0.0.1:4182/apps/brainwave_opensync/location-spectrum/"
+      }
+    ],
+    "overflow": {
+      "width": 390,
+      "scroll": 390
+    },
+    "errors": [],
+    "releaseState": "11 blueprint dossiers · 33 A4 diagrams · 17 experiment worksheets. Release snapshot: 2026-11-17.",
+    "inputSurvivedDisclosure": true
+  },
+  {
+    "repo": "newton-tesla-research-lab",
+    "standalone": true,
+    "externalRequests": [],
+    "explicitUrlConfigured": true
+  }
+]

@@ -1,0 +1,2732 @@
+{
+  "schema": "resonance-blueprint-packet/v1",
+  "createdAt": "2026-11-17T04:32:53.479Z",
+  "recordId": "nt:environmental-witness",
+  "revision": "five-panels-authored-review-v1",
+  "status": "authored-review-not-manufacturing-approval",
+  "record": {
+    "id": "nt:environmental-witness",
+    "title": "Environmental witness and signal leakage",
+    "repository": "newton-tesla-research-lab",
+    "kind": "setup family",
+    "domain": "magnetic pickup / inverse observation",
+    "status": "proposed_unbuilt",
+    "summary": "An independently read pickup and calibrated complex transfer test whether ordinary background can be separated from a receiver-port residual.",
+    "modelBoundary": "The R3 quantities y and w are effective calibrated voltages, not automatically raw coil readings. Pickup geometry establishes neither transfer a nor signal leakage beta.",
+    "source": {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "data/setups.json",
+      "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "committedSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    "documentation": [
+      {
+        "repository": "newton-tesla-research-lab",
+        "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "path": "docs/apparatus.md",
+        "sha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+        "committedSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+        "checkoutMatchesCommit": true,
+        "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md",
+        "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+      }
+    ],
+    "sourceRecord": {
+      "id": "environmental-witness",
+      "title": "Environmental witness and signal leakage",
+      "status": "proposed_unbuilt",
+      "domain": "magnetic pickup / inverse observation",
+      "summary": "An independently read pickup and calibrated complex transfer test whether ordinary background can be separated from a receiver-port residual.",
+      "modelBoundary": "The R3 quantities y and w are effective calibrated voltages, not automatically raw coil readings. Pickup geometry establishes neither transfer a nor signal leakage beta.",
+      "parameterSource": "docs/contracts/R3.json",
+      "contractPaths": [
+        "docs/contracts/R3.json"
+      ],
+      "sourceIds": [
+        "NT-ABRA2021"
+      ],
+      "assets": [
+        {
+          "kind": "plan",
+          "path": "assets/setups/environmental-witness-plan.svg",
+          "label": "Third pickup and isolated differential leads"
+        },
+        {
+          "kind": "3d",
+          "path": "assets/setups/environmental-witness-3d.png",
+          "label": "Deterministic witness coordinate 3D"
+        },
+        {
+          "kind": "observation",
+          "path": "assets/setups/environmental-witness-map.svg",
+          "label": "Calibration, subtraction and cross-leak map"
+        }
+      ],
+      "geometryPath": "assets/setups/geometry.json",
+      "components": [
+        {
+          "id": "W",
+          "center_m": [
+            0.84,
+            0.5,
+            0.105
+          ],
+          "radius_m": 0.028,
+          "length_m": 0.05,
+          "winding_pack_inner_radius_m": 0.016,
+          "turn_count": null,
+          "role": "proposed environmental pickup; raw voltage requires independent complex calibration to w; not assumed blind to signal"
+        }
+      ],
+      "wiring": [
+        {
+          "role": "witness differential leads",
+          "vertices_m": [
+            [
+              0.815,
+              0.528,
+              0.105
+            ],
+            [
+              0.815,
+              0.57,
+              0.04
+            ],
+            [
+              1.01,
+              0.57,
+              0.045
+            ]
+          ]
+        },
+        {
+          "role": "witness differential leads",
+          "vertices_m": [
+            [
+              0.865,
+              0.528,
+              0.105
+            ],
+            [
+              0.865,
+              0.585,
+              0.04
+            ],
+            [
+              1.01,
+              0.585,
+              0.045
+            ]
+          ]
+        }
+      ],
+      "measurements": [
+        "Calibrate raw pickup voltage to witness-equivalent w and reconstruct y from the coherent two-current readout.",
+        "Use synchronous channels and independently characterized complex nuisance transfer a.",
+        "Record background-only, source-off and known receiver-port injections; test phase, orientation, position and temporal stability.",
+        "Test signal leakage beta into the witness and additional pickup loading/coupling before reusing a two-loop model."
+      ],
+      "limitations": [
+        "No hardware data or electromagnetic field solution.",
+        "Unknown a admits an exact zero-signal rival; known cross-leak is singular at 1-a beta=0.",
+        "Even perfect subtraction retains ordinary same-port physical-source rivals.",
+        "No dark-matter coupling, detector sensitivity, gravity modification or free-energy identification."
+      ]
+    },
+    "proposalIds": [
+      "NT-H03",
+      "NT-H04"
+    ],
+    "relationStatus": "Editorial relevance mapping, not an upstream claim that the apparatus validates these proposals.",
+    "assets": [
+      {
+        "kind": "plan",
+        "path": "assets/setups/environmental-witness-plan.svg",
+        "label": "Third pickup and isolated differential leads",
+        "repository": "newton-tesla-research-lab",
+        "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "sourceSha256": "09e927d051012454856b181ec879bc53323b15402e74a2ddb20595065a6e7aaf",
+        "committedSha256": "09e927d051012454856b181ec879bc53323b15402e74a2ddb20595065a6e7aaf",
+        "checkoutMatchesCommit": true,
+        "localHref": "/apps/newton-tesla-research-lab/assets/setups/environmental-witness-plan.svg",
+        "sourceHref": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/environmental-witness-plan.svg",
+        "servedSha256": "09e927d051012454856b181ec879bc53323b15402e74a2ddb20595065a6e7aaf",
+        "servedCopyMatchesSource": true,
+        "scope": "Existing server adapter serves the sibling dist copy; source bytes and served copy are different observations."
+      },
+      {
+        "kind": "3d",
+        "path": "assets/setups/environmental-witness-3d.png",
+        "label": "Deterministic witness coordinate 3D",
+        "repository": "newton-tesla-research-lab",
+        "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "sourceSha256": "3b29a88085813c95e60f6dc13f33c1ec91c547e4cbd395efd2bcfbd59a8532cf",
+        "committedSha256": "3b29a88085813c95e60f6dc13f33c1ec91c547e4cbd395efd2bcfbd59a8532cf",
+        "checkoutMatchesCommit": true,
+        "localHref": "/apps/newton-tesla-research-lab/assets/setups/environmental-witness-3d.png",
+        "sourceHref": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/environmental-witness-3d.png",
+        "servedSha256": "3b29a88085813c95e60f6dc13f33c1ec91c547e4cbd395efd2bcfbd59a8532cf",
+        "servedCopyMatchesSource": true,
+        "scope": "Existing server adapter serves the sibling dist copy; source bytes and served copy are different observations."
+      },
+      {
+        "kind": "observation",
+        "path": "assets/setups/environmental-witness-map.svg",
+        "label": "Calibration, subtraction and cross-leak map",
+        "repository": "newton-tesla-research-lab",
+        "sourceCommit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "sourceSha256": "85495452c3850e800e38e4c7f9b3c4fc1ea63ea64e3f99d25de4ba0ae69ef638",
+        "committedSha256": "85495452c3850e800e38e4c7f9b3c4fc1ea63ea64e3f99d25de4ba0ae69ef638",
+        "checkoutMatchesCommit": true,
+        "localHref": "/apps/newton-tesla-research-lab/assets/setups/environmental-witness-map.svg",
+        "sourceHref": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/environmental-witness-map.svg",
+        "servedSha256": "85495452c3850e800e38e4c7f9b3c4fc1ea63ea64e3f99d25de4ba0ae69ef638",
+        "servedCopyMatchesSource": true,
+        "scope": "Existing server adapter serves the sibling dist copy; source bytes and served copy are different observations."
+      }
+    ],
+    "geometry": {
+      "source": {
+        "repository": "newton-tesla-research-lab",
+        "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+        "path": "assets/setups/geometry.json",
+        "sha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+        "committedSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+        "checkoutMatchesCommit": true,
+        "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/geometry.json",
+        "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+      },
+      "record": {
+        "pickup": {
+          "id": "W",
+          "center_m": [
+            0.84,
+            0.5,
+            0.105
+          ],
+          "radius_m": 0.028,
+          "length_m": 0.05,
+          "winding_pack_inner_radius_m": 0.016,
+          "turn_count": null,
+          "role": "proposed environmental pickup; raw voltage requires independent complex calibration to w; not assumed blind to signal"
+        },
+        "differentialLeads_m": [
+          [
+            [
+              0.815,
+              0.528,
+              0.105
+            ],
+            [
+              0.815,
+              0.57,
+              0.04
+            ],
+            [
+              1.01,
+              0.57,
+              0.045
+            ]
+          ],
+          [
+            [
+              0.865,
+              0.528,
+              0.105
+            ],
+            [
+              0.865,
+              0.585,
+              0.04
+            ],
+            [
+              1.01,
+              0.585,
+              0.045
+            ]
+          ]
+        ],
+        "contractPath": "docs/contracts/R3.json",
+        "limitation": "Proposed raw pickup voltage must be mapped to witness-equivalent w by independent complex calibration; geometric position does not establish a or beta."
+      }
+    },
+    "contracts": [
+      {
+        "source": {
+          "repository": "newton-tesla-research-lab",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "path": "docs/contracts/R3.json",
+          "sha256": "12d23bdce8f7f41a65eebef36540e14551c7986f25106ab496f8b9b974f0526a",
+          "committedSha256": "12d23bdce8f7f41a65eebef36540e14551c7986f25106ab496f8b9b974f0526a",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/contracts/R3.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        "record": {
+          "schema": "newton-tesla-contract-v1",
+          "round": "R3",
+          "frozen_at": "2026-09-27T02:52:04.567768+00:00",
+          "title": "A witness channel: subtracting ordinary pickup without inventing a cause",
+          "question": "Can a calibrated environmental witness separate a stipulated receiver-port signal from ordinary pickup, and which transfer/crosstalk assumptions remain necessary?",
+          "incoming_evidence": {
+            "previous_review": "research/reviews/R2-review.json",
+            "verdict": "accepted_narrow",
+            "accepted": "Full calibrated coherent readout localizes effective drives, while restricted readouts and uncalibrated phase admit exact or instrumental rivals.",
+            "selected_objection": "R2B requests an environmental witness with explicit uncertainty, unknown-transfer rivals, singular crosstalk and remaining physical-source identity ambiguity.",
+            "previous_review_sha256": "fe8e495cfd359cd2951b295dc20657c29ec18aa00ea826904a90bcc962d68c28"
+          },
+          "historical_lenses": {
+            "Newton": "Add an observation that changes the inverse map, then identify remaining hidden-cause fibers.",
+            "Tesla": "Include the complete pickup/readout pathway and challenge omitted coupling into the witness."
+          },
+          "source_records": [
+            {
+              "id": "NT-ABRA2021",
+              "url": "https://arxiv.org/html/2102.06722v1",
+              "section": "Calibration and Supplementary III, magnet-off veto, moving/background lines and fringe-field vibration",
+              "reading_status_at_freeze": "Source researcher selected full-text reading; advisor opened source and read report",
+              "relation": "inspires controls and calibration obligations; no borrowed apparatus sensitivity"
+            }
+          ],
+          "classification": "Synthetic effective-voltage observation model, not an axion experiment, physical environmental measurement or new force mechanism.",
+          "state_and_units": {
+            "s": "stipulated signal contribution at receiver port, complex V peak",
+            "b": "environmental witness-equivalent nuisance, complex V peak",
+            "y": "reconstructed receiver effective voltage, complex V peak",
+            "w": "calibrated witness-equivalent voltage, complex V peak; not automatically raw coil voltage",
+            "a": "complex dimensionless nuisance-to-receiver transfer",
+            "beta": "complex dimensionless signal leakage into witness",
+            "epsilon_y,epsilon_w": "supplied deterministic complex measurement-error radii, V",
+            "Delta_a": "supplied complex transfer uncertainty radius, dimensionless"
+          },
+          "parameters": {
+            "signal_amplitude_V": 0.005,
+            "signal_phase_rad": 1.0471975511965976,
+            "background_amplitude_V": 0.02,
+            "background_phase_rad": 0.5235987755982988,
+            "nominal_transfer_a": [
+              0.6,
+              0.2
+            ],
+            "receiver_error_bound_V": 0.002,
+            "witness_error_bound_V": 0.0005,
+            "transfer_error_bound": 0.02,
+            "boundary_phase_points": 8,
+            "crossleak_path_t": [
+              0,
+              0.25,
+              0.5,
+              0.9,
+              0.99,
+              1,
+              1.01,
+              1.1
+            ]
+          },
+          "model": {
+            "clean_witness": "y=s+a b; w=b. Known a gives linear map [[1,a],[0,1]] over C² (four real dimensions) and s=y-a w.",
+            "without_witness": "y only has real rank2, domain4, nullity2 with complex kernel(-a t,t), t in V.",
+            "uncertain_transfer": "a_true=ahat+δa, |δa|≤Delta_a; yhat=y+ηy, what=b+ηw, |ηy|≤epsilon_y, |ηw|≤epsilon_w; shat=yhat-ahat what.",
+            "deterministic_disk": "|shat-s| ≤ epsilon_y+|ahat|epsilon_w+Delta_a(|what|+epsilon_w). Prove triangle inequality and test boundary fixtures; distinguish bound from confidence interval.",
+            "calibration_scope": "The 2mV receiver error bound is a NEW stipulated effective-voltage bound, chosen slightly above the R2 nominal1.932mV scale. It is not derived for all R3 circuit conditions and must be separately calibrated physically. No real sensor performance is asserted.",
+            "unknown_transfer_rival": "If a is unbounded, a'=a+δa and s'=s-δa b reproduce both y and w. For the nonzero fixture choose δa=s/b so s'=0. Domain(s,b,a) is C³=R⁶, local real rank4/nullity2; explicit tangent kernel(-b t,0,t), t dimensionless.",
+            "witness_crossleak": "If w=b+beta s with known beta, matrix [[1,a],[beta,1]] has complex determinant1-a beta. Along beta=t/a report inversion/conditioning for t≠1. At t=1 provide exact kernel(-a u,u), u in V, and withhold unique inversion. Unknown beta is not assumed harmless.",
+            "physical_identity": "Even with a clean known witness, s=s_exotic+d with unmonitored ordinary same-port drive d gives domain(s_exotic,d,b)=C³=R⁶, rank4/nullity2 and exact kernel(t,-t,0), t in V. Save finite pair with all5mV assigned to s_exotic versus all to d and identical y,w.",
+            "boundary": "Effective single-frequency linear transfer model only. No stochastic noise/search statistics, geometric axion coupling, electromagnetic field solve, thermal mechanics, gravity law or actual environmental observations."
+          },
+          "controls": [
+            "Clean exact witness recovers injected complex5mV signal",
+            "Zero stipulated signal with background alone subtracts to zero for known exact transfer",
+            "512 boundary cases: eight phases each for receiver error, witness error and transfer error; report inclusion, not probability",
+            "Construct one aligned error fixture attaining the data-dependent bound within tolerance",
+            "Unknown a admits exact zero-signal rival matching BOTH readouts",
+            "Real ranks/domain/nullities and explicit kernels for no witness, clean known witness, unknowna local map, singular crossleak and expanded source-identity map",
+            "Near-singular crossleak path: determinant, rank and condition; singularpoint returns no unique inverse",
+            "Remaining physical-source identity exact rival survives perfect witness subtraction"
+          ],
+          "acceptance": {
+            "exact_reconstruction_absolute_V": 1e-12,
+            "raw_rival_observation_error_V": 1e-12,
+            "kernel_residual": 1e-10,
+            "boundary_disk_exceedance_tolerance_V": 1e-12,
+            "aligned_sharpness_error_V": 1e-12,
+            "expected_real_ranks": {
+              "no_witness": 2,
+              "clean_known_witness": 4,
+              "unknown_transfer_local": 4,
+              "singular_crossleak": 2,
+              "expanded_physical_identity": 4
+            },
+            "expected_real_nullities": {
+              "no_witness": 2,
+              "clean_known_witness": 0,
+              "unknown_transfer_local": 2,
+              "singular_crossleak": 2,
+              "expanded_physical_identity": 2
+            },
+            "positive_control": "Nominal5mV signal disk excludes zero under statedcleanwitness/calibration assumptions; otherwise reportfailurewithoutretuning.",
+            "unknown_transfer_or_identity": "Withhold unconditional exotic-source interval/detection claim."
+          },
+          "artifacts": [
+            "research/R3/result.json",
+            "research/R3/report.md",
+            "research/R3/manifest.json",
+            "CSV uncertainty/crosstalk paths and exact rivals",
+            "Deterministic SVG uncertainty and conditioning plots"
+          ],
+          "falsifier": "Failure of the predicted calibrated subtraction or bound rejects this implementation. An exact ordinary rival blocks an exotic-source interpretation even if a nonzero effective signal remains.",
+          "limits": [
+            "Witness calibration and stationarity must be measured; sensor blindness to the signal is an assumption to test",
+            "Known crosstalk can be inverted only away from its singular boundary",
+            "No real apparatus, dark-matter sensitivity, free-energy extraction or gravity modification is established",
+            "Three authorized rounds end here; future physical tests are roadmap items, not hidden extra loops"
+          ],
+          "next_round_rule": "No further research round is authorized in this program. R3B selects physical calibration and source-discrimination obligations for the roadmap; finalize three rounds/six loops and stop numerical expansion."
+        }
+      }
+    ],
+    "materials": [
+      {
+        "id": "W",
+        "label": "proposed environmental pickup; raw voltage requires independent complex calibration to w; not assumed blind to signal",
+        "position_m": [
+          0.84,
+          0.5,
+          0.105
+        ],
+        "size_m": null,
+        "radius_m": 0.028,
+        "length_m": 0.05,
+        "turn_count": null
+      }
+    ],
+    "measurements": [
+      "Calibrate raw pickup voltage to witness-equivalent w and reconstruct y from the coherent two-current readout.",
+      "Use synchronous channels and independently characterized complex nuisance transfer a.",
+      "Record background-only, source-off and known receiver-port injections; test phase, orientation, position and temporal stability.",
+      "Test signal leakage beta into the witness and additional pickup loading/coupling before reusing a two-loop model."
+    ],
+    "limitations": [
+      "No hardware data or electromagnetic field solution.",
+      "Unknown a admits an exact zero-signal rival; known cross-leak is singular at 1-a beta=0.",
+      "Even perfect subtraction retains ordinary same-port physical-source rivals.",
+      "No dark-matter coupling, detector sensitivity, gravity modification or free-energy identification."
+    ],
+    "sourceIds": [
+      "NT-ABRA2021"
+    ],
+    "equationStatus": "Numerical fixture equations in linked frozen contracts; layout geometry does not determine circuit parameters."
+  },
+  "authored": {
+    "scenario": {
+      "modifications": [],
+      "electricalParametersChanged": false,
+      "calibrationInferred": false
+    },
+    "sketch": {
+      "schemaVersion": 1,
+      "kind": "geometry-only-documentation-not-physical-prediction",
+      "family": "nt:environmental-witness",
+      "view": "plan",
+      "units": "mm",
+      "availableViews": [
+        "plan",
+        "elevation",
+        "flow"
+      ],
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 760\" role=\"img\" aria-labelledby=\"sketch-title sketch-desc\"><title id=\"sketch-title\">Environmental witness and signal leakage · plan</title><desc id=\"sketch-desc\">Source-pinned proposed plan documentation. Witness centre x: 840 mm; Witness axis height: 105 mm; Witness generic radius: 28 mm; Witness generic axial length: 50 mm. The R3 quantities y and w are effective calibrated voltages, not automatically raw coil readings. Pickup geometry establishes neither transfer a nor signal leakage beta. Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.</desc><metadata id=\"source-provenance\">{&quot;method&quot;:&quot;source-coordinate-sketch-v1&quot;,&quot;sourcePins&quot;:[{&quot;repository&quot;:&quot;newton-tesla-research-lab&quot;,&quot;commit&quot;:&quot;2faece1d6dde6be63f7758c2754a0369d1a34fce&quot;,&quot;path&quot;:&quot;data/setups.json&quot;,&quot;sha256&quot;:&quot;889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e&quot;,&quot;committedSha256&quot;:&quot;889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;},{&quot;repository&quot;:&quot;newton-tesla-research-lab&quot;,&quot;commit&quot;:&quot;2faece1d6dde6be63f7758c2754a0369d1a34fce&quot;,&quot;path&quot;:&quot;assets/setups/geometry.json&quot;,&quot;sha256&quot;:&quot;441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09&quot;,&quot;committedSha256&quot;:&quot;441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/geometry.json&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;},{&quot;repository&quot;:&quot;newton-tesla-research-lab&quot;,&quot;commit&quot;:&quot;2faece1d6dde6be63f7758c2754a0369d1a34fce&quot;,&quot;path&quot;:&quot;docs/apparatus.md&quot;,&quot;sha256&quot;:&quot;c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d&quot;,&quot;committedSha256&quot;:&quot;c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;}],&quot;scenario&quot;:{&quot;modifications&quot;:[],&quot;electricalParametersChanged&quot;:false,&quot;calibrationInferred&quot;:false},&quot;dimensions&quot;:[{&quot;id&quot;:&quot;witness-x&quot;,&quot;label&quot;:&quot;Witness centre x&quot;,&quot;value&quot;:840,&quot;unit&quot;:&quot;mm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;witness-axis-height&quot;,&quot;label&quot;:&quot;Witness axis height&quot;,&quot;value&quot;:105,&quot;unit&quot;:&quot;mm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;witness-radius&quot;,&quot;label&quot;:&quot;Witness generic radius&quot;,&quot;value&quot;:28,&quot;unit&quot;:&quot;mm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;},{&quot;id&quot;:&quot;witness-length&quot;,&quot;label&quot;:&quot;Witness generic axial length&quot;,&quot;value&quot;:50,&quot;unit&quot;:&quot;mm&quot;,&quot;status&quot;:&quot;source-stipulated&quot;}],&quot;warnings&quot;:[&quot;The R3 quantities y and w are effective calibrated voltages, not automatically raw coil readings. Pickup geometry establishes neither transfer a nor signal leakage beta.&quot;,&quot;Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.&quot;]}</metadata><rect width=\"1200\" height=\"760\" fill=\"#f5f3e9\"/><style>text{font-family:system-ui,sans-serif;fill:#213e32} .part{stroke:#315744;fill:#c9d6c0;stroke-width:1.8} .wire{stroke:#647b69;fill:none;stroke-width:1.4} .dim{stroke:#526b5b;fill:none;stroke-width:1} .small{font-size:13px}.label{font-size:15px;font-weight:600}</style><text x=\"38\" y=\"35\" font-size=\"23\" font-weight=\"600\">Environmental witness and signal leakage · plan</text><text x=\"38\" y=\"61\" class=\"small\">PROPOSED / SOURCE-STIPULATED GEOMETRY · NOT MANUFACTURING OR PHYSICAL VALIDATION</text><rect x=\"86\" y=\"110\" width=\"326.3888888888889\" height=\"470\" fill=\"none\" stroke=\"#a4b2a2\"/><text x=\"86\" y=\"93\" class=\"small\">Plan: x–y projection · displayed units mm</text><g data-component-id=\"W\"><title>Environmental witness pickup W · source coordinate proxy, not rated part</title><rect class=\"part\" x=\"161.06944444444446\" y=\"235.33333333333331\" width=\"32.63888888888889\" height=\"36.55555555555556\"/><text x=\"177.3888888888889\" y=\"258.6111111111111\" text-anchor=\"middle\" class=\"label\">W</text></g><path class=\"dim\" d=\"M86 580v7\"/><text x=\"86\" y=\"605\" text-anchor=\"middle\" class=\"small\">700</text><path class=\"dim\" d=\"M167.59722222222223 580v7\"/><text x=\"167.59722222222223\" y=\"605\" text-anchor=\"middle\" class=\"small\">825</text><path class=\"dim\" d=\"M249.19444444444446 580v7\"/><text x=\"249.19444444444446\" y=\"605\" text-anchor=\"middle\" class=\"small\">950</text><path class=\"dim\" d=\"M330.7916666666667 580v7\"/><text x=\"330.7916666666667\" y=\"605\" text-anchor=\"middle\" class=\"small\">1075</text><path class=\"dim\" d=\"M412.3888888888889 580v7\"/><text x=\"412.3888888888889\" y=\"605\" text-anchor=\"middle\" class=\"small\">1200</text><text x=\"1120\" y=\"605\" class=\"small\">x (mm)</text><text x=\"35\" y=\"95\" class=\"small\">y (mm)</text><text x=\"74\" y=\"584\" text-anchor=\"end\" class=\"small\">0</text><text x=\"74\" y=\"466.50000000000006\" text-anchor=\"end\" class=\"small\">180</text><text x=\"74\" y=\"349\" text-anchor=\"end\" class=\"small\">360</text><text x=\"74\" y=\"231.49999999999997\" text-anchor=\"end\" class=\"small\">540</text><text x=\"74\" y=\"114\" text-anchor=\"end\" class=\"small\">720</text><text x=\"500\" y=\"195\" class=\"label\">Witness pickup W · generic source proxy</text><text x=\"500\" y=\"227\" class=\"small\">Source centre: x=840, y=500, z=105 mm</text><text x=\"500\" y=\"255\" class=\"small\">Radius 28 mm · axial length 50 mm</text><text x=\"500\" y=\"287\" class=\"small\">Turns, wire, ratings and transfer calibration are unspecified.</text><text x=\"500\" y=\"315\" class=\"small\">Placement alone does not determine the witness coefficient.</text><text x=\"38\" y=\"682\" class=\"small\">Source newton-tesla-research-lab @ 2faece1d6dde · full source/scenario identity in SVG metadata</text><text x=\"38\" y=\"706\" class=\"small\">SOURCE-STIPULATED LAYOUT · Exact geometry is not a measured or construction-approved device.</text><text x=\"38\" y=\"731\" class=\"small\">Pickup turns, gauge, ratings and transfer calibration remain unspecified. Position does not establish a or β.</text></svg>",
+      "components": [
+        {
+          "id": "W",
+          "label": "Environmental witness pickup W",
+          "termIds": [
+            "witness.voltage"
+          ],
+          "positionM": [
+            0.84,
+            0.5,
+            0.105
+          ],
+          "radiusM": 0.028,
+          "lengthM": 0.05,
+          "notes": [
+            "Position is a source-defined centre.",
+            "Original source identifier/label: W.",
+            "Generic geometry proxy; turns, gauge, ratings and calibration are not supplied."
+          ]
+        }
+      ],
+      "dimensions": [
+        {
+          "id": "witness-x",
+          "label": "Witness centre x",
+          "value": 840,
+          "unit": "mm",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "witness-axis-height",
+          "label": "Witness axis height",
+          "value": 105,
+          "unit": "mm",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "witness-radius",
+          "label": "Witness generic radius",
+          "value": 28,
+          "unit": "mm",
+          "status": "source-stipulated"
+        },
+        {
+          "id": "witness-length",
+          "label": "Witness generic axial length",
+          "value": 50,
+          "unit": "mm",
+          "status": "source-stipulated"
+        }
+      ],
+      "sourcePins": [
+        {
+          "repository": "newton-tesla-research-lab",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "path": "data/setups.json",
+          "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+          "committedSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "newton-tesla-research-lab",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "path": "assets/setups/geometry.json",
+          "sha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+          "committedSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/geometry.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "newton-tesla-research-lab",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "path": "docs/apparatus.md",
+          "sha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+          "committedSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "scenario": {
+        "modifications": [],
+        "electricalParametersChanged": false,
+        "calibrationInferred": false
+      },
+      "warnings": [
+        "The R3 quantities y and w are effective calibrated voltages, not automatically raw coil readings. Pickup geometry establishes neither transfer a nor signal leakage beta.",
+        "Dimensions are stipulated source layout or explicit user annotations, not measured component specifications."
+      ]
+    },
+    "terms": [
+      {
+        "id": "measurement.peak",
+        "label": "Peak amplitude",
+        "symbols": [
+          "peak",
+          "Vpeak",
+          "Ipeak"
+        ],
+        "unit": "same unit as the signal",
+        "plain": "Peak amplitude is the largest excursion from zero.",
+        "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+        "cautions": [
+          "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.phase",
+        "label": "Phase and coherent readout",
+        "symbols": [
+          "φ",
+          "phase",
+          "CH",
+          "CH1",
+          "CH2"
+        ],
+        "unit": "radian (rad), or declared degrees",
+        "plain": "Phase locates one repeating signal relative to another.",
+        "meaning": "Coherent complex readout preserves relative amplitude and phase under a declared shared reference.",
+        "cautions": [
+          "Sharing a sample clock does not establish equal gain, stable transfer or calibration."
+        ],
+        "aliases": [
+          "coherence",
+          "channel"
+        ],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.calibration",
+        "label": "Calibration and deterministic error bounds",
+        "symbols": [
+          "ε",
+          "epsilon",
+          "epsilon_y",
+          "epsilon_w",
+          "ΔM",
+          "Δa",
+          "Delta_a"
+        ],
+        "unit": "unit of the bounded quantity",
+        "plain": "Calibration connects instrument readings with a stated reference.",
+        "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+        "cautions": [
+          "A stipulated error radius is not measured sensor performance or a confidence interval."
+        ],
+        "aliases": [
+          "uncertainty",
+          "error radius"
+        ],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.not-to-scale",
+        "label": "Not to scale",
+        "symbols": [
+          "NTS",
+          "not to scale"
+        ],
+        "unit": "drawing convention; not a measurement",
+        "plain": "A sketch may show relationships without preserving size ratios.",
+        "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+        "cautions": [
+          "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "math.imaginary-unit",
+        "label": "Imaginary unit",
+        "symbols": [
+          "j",
+          "i",
+          "√−1"
+        ],
+        "unit": "dimensionless",
+        "plain": "The imaginary unit represents a quarter-turn in complex arithmetic.",
+        "meaning": "j² = −1; imported contracts often write i instead. It is not electrical current i(t).",
+        "cautions": [
+          "Interpret i from its equation context, not from its character alone."
+        ],
+        "equation": "j² = −1",
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.phasor",
+        "label": "Phasor",
+        "symbols": [
+          "phasor"
+        ],
+        "unit": "same unit as represented voltage/current",
+        "plain": "A phasor combines a sinusoid’s size and phase into one complex number.",
+        "meaning": "It represents a single-frequency sinusoid under an explicitly selected peak or RMS convention.",
+        "cautions": [
+          "A phasor is not an instantaneous waveform or automatically a physical electromagnetic field."
+        ],
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.complex-field",
+        "label": "Complex and real-number domains",
+        "symbols": [
+          "ℂ",
+          "C²",
+          "ℝ",
+          "R⁴"
+        ],
+        "unit": "dimensionless domain notation",
+        "plain": "A complex number has a real and an imaginary part.",
+        "meaning": "Two complex source values have four real coordinates: ℂ² is represented by ℝ⁴.",
+        "cautions": [
+          "ℂ is not capacitance C; ℝ is not electrical resistance R."
+        ],
+        "equation": "ℂ² ≅ ℝ⁴",
+        "aliases": [
+          "complex numbers",
+          "real numbers",
+          "domain dimension"
+        ],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.complex-parts",
+        "label": "Real part, imaginary part and conjugate",
+        "symbols": [
+          "Re",
+          "Im",
+          "conj",
+          "conjugate",
+          "*"
+        ],
+        "unit": "same unit as the complex quantity",
+        "plain": "These operations separate or reverse parts of a complex number.",
+        "meaning": "For z = a + jb, Re(z)=a, Im(z)=b and conjugate(z)=a−jb.",
+        "cautions": [
+          "The a and b here are generic coordinates, not automatically witness transfer parameters."
+        ],
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.magnitude",
+        "label": "Magnitude and squared magnitude",
+        "symbols": [
+          "|z|",
+          "|I|²",
+          "squared_magnitudes"
+        ],
+        "unit": "signal unit; its square for squared magnitude",
+        "plain": "Magnitude measures the size of a complex quantity without its phase.",
+        "meaning": "For z=a+jb, |z|²=a²+b²; measuring magnitude discards phase information.",
+        "cautions": [
+          "A² is squared amperes here; it is not a new kind of current."
+        ],
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.estimates",
+        "label": "Estimate, difference and time derivative",
+        "symbols": [
+          "hat",
+          "ˆ",
+          "δ",
+          "Δ",
+          "dot",
+          "qdot",
+          "idot",
+          "ż"
+        ],
+        "unit": "depends on quantity; derivative adds /s",
+        "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+        "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+        "cautions": [
+          "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+        ],
+        "equation": "ż = dz/dt",
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.matrix",
+        "label": "Matrix, transpose, diagonal and inverse",
+        "symbols": [
+          "T",
+          "diag",
+          "Z^-1",
+          "matrix"
+        ],
+        "unit": "depends on its mapping",
+        "plain": "A matrix collects several linked equations into one map.",
+        "meaning": "Transpose T swaps rows/columns; diag forms a diagonal matrix; inverse undoes an invertible map.",
+        "cautions": [
+          "A matrix inverse is not defined at a singular parameter choice."
+        ],
+        "aliases": [
+          "transpose",
+          "diagonal",
+          "inverse"
+        ],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.rank-nullity",
+        "label": "Rank, nullity and kernel",
+        "symbols": [
+          "rank",
+          "nullity",
+          "kernel"
+        ],
+        "unit": "counts of real or complex dimensions, explicitly declared",
+        "plain": "Some different inputs can produce exactly the same observations.",
+        "meaning": "Rank counts independent observed directions; nullity counts unobserved directions; a kernel vector maps to zero.",
+        "cautions": [
+          "State whether dimensions are real or complex. A nonzero kernel defeats unique reconstruction."
+        ],
+        "equation": "domain dimension = rank + nullity",
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.determinant",
+        "label": "Determinant and conditioning",
+        "symbols": [
+          "det",
+          "1−aβ",
+          "conditioning"
+        ],
+        "unit": "depends on matrix units; dimensionless for witness map",
+        "plain": "A determinant can reveal when a square map cannot be inverted.",
+        "meaning": "The witness map is singular when 1−aβ=0; conditioning describes sensitivity near inversion.",
+        "cautions": [
+          "A small numerical residual is not a guarantee of stable physical inference."
+        ],
+        "equation": "det([[1,a],[β,1]]) = 1−aβ",
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "witness.signal",
+        "label": "Signal and nuisance contributions",
+        "symbols": [
+          "s",
+          "b",
+          "y"
+        ],
+        "unit": "volt (V), complex peak",
+        "plain": "The receiver can mix the intended signal with ordinary background.",
+        "meaning": "s is a stipulated receiver signal, b a witness-equivalent nuisance and y their combined effective receiver voltage.",
+        "cautions": [
+          "A recovered same-port signal is not automatically an exotic physical source."
+        ],
+        "equation": "y = s + ab",
+        "aliases": [],
+        "domain": "witness",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "witness.voltage",
+        "label": "Calibrated witness-equivalent voltage",
+        "symbols": [
+          "w",
+          "W"
+        ],
+        "unit": "volt (V), complex peak",
+        "plain": "A witness channel observes a declared background reference.",
+        "meaning": "The variable w is a calibrated equivalent voltage, not automatically the raw pickup-coil voltage.",
+        "cautions": [
+          "w is not work; a label W on a recorder identifies its role, not watts."
+        ],
+        "equation": "w = b  (clean witness)",
+        "aliases": [],
+        "domain": "witness",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "witness.transfer",
+        "label": "Nuisance transfer",
+        "symbols": [
+          "a",
+          "ahat"
+        ],
+        "unit": "complex dimensionless ratio",
+        "plain": "Transfer tells how the background enters the receiver.",
+        "meaning": "a maps witness-equivalent nuisance voltage into receiver effective voltage at one selected frequency.",
+        "cautions": [
+          "Geometry alone does not calibrate a; unknown transfer can preserve rival explanations."
+        ],
+        "aliases": [],
+        "domain": "witness",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "witness.transfer-uncertainty",
+        "label": "Transfer uncertainty radius",
+        "symbols": [
+          "Δa",
+          "Delta_a"
+        ],
+        "unit": "dimensionless",
+        "plain": "The contract places a bound on how much the transfer ratio may be wrong.",
+        "meaning": "Δa bounds the magnitude of the difference between true and estimated complex nuisance transfer.",
+        "cautions": [
+          "It is not a voltage or a final-minus-initial time change; the bound is supplied, not measured here."
+        ],
+        "equation": "|a_true − ahat| ≤ Δa",
+        "aliases": [],
+        "domain": "witness",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "witness.leakage",
+        "label": "Signal leakage into the witness",
+        "symbols": [
+          "β",
+          "beta"
+        ],
+        "unit": "complex dimensionless ratio",
+        "plain": "A reference channel can accidentally contain the signal too.",
+        "meaning": "β maps the intended receiver signal into the witness channel.",
+        "cautions": [
+          "This β is not a pressure-reflection coefficient or a statistical error probability."
+        ],
+        "equation": "w = b + βs",
+        "aliases": [],
+        "domain": "witness",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "witness.error-disk",
+        "label": "Deterministic reconstruction disk",
+        "symbols": [
+          "reconstruction_disk",
+          "disk",
+          "εy",
+          "εw"
+        ],
+        "unit": "volt (V)",
+        "plain": "The stated assumptions bound the reconstruction inside a disk.",
+        "meaning": "Triangle inequalities propagate supplied complex error radii into a worst-case voltage radius.",
+        "cautions": [
+          "A deterministic bound is not a confidence interval or evidence of a new force."
+        ],
+        "aliases": [],
+        "domain": "witness",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "protocol.sampling-grid",
+        "label": "Numerical sample and grid counts",
+        "symbols": [
+          "frequency_points",
+          "load_points",
+          "transient_samples",
+          "error_phase_points",
+          "boundary_phase_points"
+        ],
+        "unit": "integer count, dimensionless",
+        "plain": "A grid count says how many numerical evaluations were requested.",
+        "meaning": "These are computational sampling choices, not counts of physical measurements or participants.",
+        "cautions": [
+          "More grid points do not themselves establish model accuracy or experimental replication."
+        ],
+        "aliases": [],
+        "domain": "protocol",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "protocol.crossleak-path",
+        "label": "Dimensionless witness-leakage path",
+        "symbols": [
+          "t",
+          "crossleak_path_t"
+        ],
+        "unit": "dimensionless",
+        "plain": "This parameter moves along a family of leakage settings.",
+        "meaning": "In the R3 conditioning probe, β=t/a so aβ=t. At t=1 the witness map is singular.",
+        "cautions": [
+          "This t is not elapsed time in seconds or the acoustic path delay."
+        ],
+        "equation": "β = t/a; det = 1−t",
+        "aliases": [],
+        "domain": "protocol",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "units.si",
+        "label": "SI and unit prefixes",
+        "symbols": [
+          "SI",
+          "m",
+          "cm",
+          "mm",
+          "µ",
+          "milli",
+          "micro",
+          "nano"
+        ],
+        "unit": "declared physical unit",
+        "plain": "SI is the international system of measurement units.",
+        "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+        "cautions": [
+          "A source drawing in cm or mm is not silently a metres-based parts table."
+        ],
+        "aliases": [],
+        "domain": "units",
+        "sourceRefs": [
+          "https://www.bipm.org/en/measurement-units"
+        ]
+      },
+      {
+        "id": "digital.svg",
+        "label": "Scalable Vector Graphics",
+        "symbols": [
+          "SVG"
+        ],
+        "unit": "file format; no physical unit",
+        "plain": "SVG stores a drawing as shapes and text.",
+        "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+        "cautions": [
+          "A precise-looking SVG is not a validated construction drawing."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.json",
+        "label": "JavaScript Object Notation",
+        "symbols": [
+          "JSON"
+        ],
+        "unit": "data format; no physical unit",
+        "plain": "JSON stores structured data that can be exported and inspected.",
+        "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+        "cautions": [
+          "Serialization does not authenticate a claim or measure a device."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.sha256",
+        "label": "SHA-256 content digest",
+        "symbols": [
+          "SHA-256",
+          "SHA256"
+        ],
+        "unit": "256-bit digest",
+        "plain": "A digest helps compare whether two files have the same bytes.",
+        "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+        "cautions": [
+          "A matching digest proves neither the truth of content nor its author."
+        ],
+        "aliases": [
+          "hash"
+        ],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      }
+    ],
+    "equations": [
+      {
+        "id": "witness-subtraction",
+        "title": "A witness needs a known transfer",
+        "equation": "y=s+ab; w=b+βs; det =1−aβ",
+        "plain": "Subtracting background works only under the declared transfer and leakage assumptions.",
+        "convention": "Complex peak effective voltages at one frequency; a and β dimensionless.",
+        "termIds": [
+          "witness.signal",
+          "witness.voltage",
+          "witness.transfer",
+          "witness.transfer-uncertainty",
+          "witness.leakage",
+          "witness.error-disk",
+          "math.imaginary-unit",
+          "math.phasor",
+          "math.complex-field",
+          "math.complex-parts",
+          "math.magnitude",
+          "math.estimates",
+          "math.matrix",
+          "math.rank-nullity",
+          "math.determinant",
+          "measurement.phase",
+          "measurement.peak",
+          "measurement.calibration",
+          "protocol.sampling-grid",
+          "protocol.crossleak-path"
+        ],
+        "units": "s,b,y,w V; a,β dimensionless; error radii V.",
+        "cautions": [
+          "At aβ=1 the map is singular. A separated same-port contribution is not a uniquely identified exotic source."
+        ],
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      }
+    ],
+    "handbook": {
+      "schema": "blueprint-handbook/v1",
+      "recordId": "nt:environmental-witness",
+      "title": "Environmental witness and signal leakage",
+      "kind": "setup family",
+      "status": "proposed_unbuilt",
+      "overview": "An independently read pickup and calibrated complex transfer test whether ordinary background can be separated from a receiver-port residual.",
+      "goal": "Ask whether an extra observation can help separate an assumed signal from ordinary background without giving the residual a new physical identity.",
+      "signalSteps": [
+        "The receiver observation contains a stipulated signal plus transferred background.",
+        "The witness channel is a second measurement related to that background after calibration.",
+        "Subtract the calibrated background contribution while carrying the stated measurement and transfer errors.",
+        "Check whether signal leakage into the witness or an alternative ordinary source can reproduce the same observations."
+      ],
+      "variables": [
+        {
+          "id": "measurement.peak",
+          "label": "Peak amplitude",
+          "symbols": [
+            "peak",
+            "Vpeak",
+            "Ipeak"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "Peak amplitude is the largest excursion from zero.",
+          "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+          "cautions": [
+            "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.phase",
+          "label": "Phase and coherent readout",
+          "symbols": [
+            "φ",
+            "phase",
+            "CH",
+            "CH1",
+            "CH2"
+          ],
+          "unit": "radian (rad), or declared degrees",
+          "plain": "Phase locates one repeating signal relative to another.",
+          "meaning": "Coherent complex readout preserves relative amplitude and phase under a declared shared reference.",
+          "cautions": [
+            "Sharing a sample clock does not establish equal gain, stable transfer or calibration."
+          ],
+          "aliases": [
+            "coherence",
+            "channel"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.calibration",
+          "label": "Calibration and deterministic error bounds",
+          "symbols": [
+            "ε",
+            "epsilon",
+            "epsilon_y",
+            "epsilon_w",
+            "ΔM",
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "unit of the bounded quantity",
+          "plain": "Calibration connects instrument readings with a stated reference.",
+          "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+          "cautions": [
+            "A stipulated error radius is not measured sensor performance or a confidence interval."
+          ],
+          "aliases": [
+            "uncertainty",
+            "error radius"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "math.imaginary-unit",
+          "label": "Imaginary unit",
+          "symbols": [
+            "j",
+            "i",
+            "√−1"
+          ],
+          "unit": "dimensionless",
+          "plain": "The imaginary unit represents a quarter-turn in complex arithmetic.",
+          "meaning": "j² = −1; imported contracts often write i instead. It is not electrical current i(t).",
+          "cautions": [
+            "Interpret i from its equation context, not from its character alone."
+          ],
+          "equation": "j² = −1",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.phasor",
+          "label": "Phasor",
+          "symbols": [
+            "phasor"
+          ],
+          "unit": "same unit as represented voltage/current",
+          "plain": "A phasor combines a sinusoid’s size and phase into one complex number.",
+          "meaning": "It represents a single-frequency sinusoid under an explicitly selected peak or RMS convention.",
+          "cautions": [
+            "A phasor is not an instantaneous waveform or automatically a physical electromagnetic field."
+          ],
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.complex-field",
+          "label": "Complex and real-number domains",
+          "symbols": [
+            "ℂ",
+            "C²",
+            "ℝ",
+            "R⁴"
+          ],
+          "unit": "dimensionless domain notation",
+          "plain": "A complex number has a real and an imaginary part.",
+          "meaning": "Two complex source values have four real coordinates: ℂ² is represented by ℝ⁴.",
+          "cautions": [
+            "ℂ is not capacitance C; ℝ is not electrical resistance R."
+          ],
+          "equation": "ℂ² ≅ ℝ⁴",
+          "aliases": [
+            "complex numbers",
+            "real numbers",
+            "domain dimension"
+          ],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.complex-parts",
+          "label": "Real part, imaginary part and conjugate",
+          "symbols": [
+            "Re",
+            "Im",
+            "conj",
+            "conjugate",
+            "*"
+          ],
+          "unit": "same unit as the complex quantity",
+          "plain": "These operations separate or reverse parts of a complex number.",
+          "meaning": "For z = a + jb, Re(z)=a, Im(z)=b and conjugate(z)=a−jb.",
+          "cautions": [
+            "The a and b here are generic coordinates, not automatically witness transfer parameters."
+          ],
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.magnitude",
+          "label": "Magnitude and squared magnitude",
+          "symbols": [
+            "|z|",
+            "|I|²",
+            "squared_magnitudes"
+          ],
+          "unit": "signal unit; its square for squared magnitude",
+          "plain": "Magnitude measures the size of a complex quantity without its phase.",
+          "meaning": "For z=a+jb, |z|²=a²+b²; measuring magnitude discards phase information.",
+          "cautions": [
+            "A² is squared amperes here; it is not a new kind of current."
+          ],
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.estimates",
+          "label": "Estimate, difference and time derivative",
+          "symbols": [
+            "hat",
+            "ˆ",
+            "δ",
+            "Δ",
+            "dot",
+            "qdot",
+            "idot",
+            "ż"
+          ],
+          "unit": "depends on quantity; derivative adds /s",
+          "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+          "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+          "cautions": [
+            "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+          ],
+          "equation": "ż = dz/dt",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.matrix",
+          "label": "Matrix, transpose, diagonal and inverse",
+          "symbols": [
+            "T",
+            "diag",
+            "Z^-1",
+            "matrix"
+          ],
+          "unit": "depends on its mapping",
+          "plain": "A matrix collects several linked equations into one map.",
+          "meaning": "Transpose T swaps rows/columns; diag forms a diagonal matrix; inverse undoes an invertible map.",
+          "cautions": [
+            "A matrix inverse is not defined at a singular parameter choice."
+          ],
+          "aliases": [
+            "transpose",
+            "diagonal",
+            "inverse"
+          ],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.rank-nullity",
+          "label": "Rank, nullity and kernel",
+          "symbols": [
+            "rank",
+            "nullity",
+            "kernel"
+          ],
+          "unit": "counts of real or complex dimensions, explicitly declared",
+          "plain": "Some different inputs can produce exactly the same observations.",
+          "meaning": "Rank counts independent observed directions; nullity counts unobserved directions; a kernel vector maps to zero.",
+          "cautions": [
+            "State whether dimensions are real or complex. A nonzero kernel defeats unique reconstruction."
+          ],
+          "equation": "domain dimension = rank + nullity",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.determinant",
+          "label": "Determinant and conditioning",
+          "symbols": [
+            "det",
+            "1−aβ",
+            "conditioning"
+          ],
+          "unit": "depends on matrix units; dimensionless for witness map",
+          "plain": "A determinant can reveal when a square map cannot be inverted.",
+          "meaning": "The witness map is singular when 1−aβ=0; conditioning describes sensitivity near inversion.",
+          "cautions": [
+            "A small numerical residual is not a guarantee of stable physical inference."
+          ],
+          "equation": "det([[1,a],[β,1]]) = 1−aβ",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.signal",
+          "label": "Signal and nuisance contributions",
+          "symbols": [
+            "s",
+            "b",
+            "y"
+          ],
+          "unit": "volt (V), complex peak",
+          "plain": "The receiver can mix the intended signal with ordinary background.",
+          "meaning": "s is a stipulated receiver signal, b a witness-equivalent nuisance and y their combined effective receiver voltage.",
+          "cautions": [
+            "A recovered same-port signal is not automatically an exotic physical source."
+          ],
+          "equation": "y = s + ab",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.voltage",
+          "label": "Calibrated witness-equivalent voltage",
+          "symbols": [
+            "w",
+            "W"
+          ],
+          "unit": "volt (V), complex peak",
+          "plain": "A witness channel observes a declared background reference.",
+          "meaning": "The variable w is a calibrated equivalent voltage, not automatically the raw pickup-coil voltage.",
+          "cautions": [
+            "w is not work; a label W on a recorder identifies its role, not watts."
+          ],
+          "equation": "w = b  (clean witness)",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.transfer",
+          "label": "Nuisance transfer",
+          "symbols": [
+            "a",
+            "ahat"
+          ],
+          "unit": "complex dimensionless ratio",
+          "plain": "Transfer tells how the background enters the receiver.",
+          "meaning": "a maps witness-equivalent nuisance voltage into receiver effective voltage at one selected frequency.",
+          "cautions": [
+            "Geometry alone does not calibrate a; unknown transfer can preserve rival explanations."
+          ],
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.transfer-uncertainty",
+          "label": "Transfer uncertainty radius",
+          "symbols": [
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "dimensionless",
+          "plain": "The contract places a bound on how much the transfer ratio may be wrong.",
+          "meaning": "Δa bounds the magnitude of the difference between true and estimated complex nuisance transfer.",
+          "cautions": [
+            "It is not a voltage or a final-minus-initial time change; the bound is supplied, not measured here."
+          ],
+          "equation": "|a_true − ahat| ≤ Δa",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.leakage",
+          "label": "Signal leakage into the witness",
+          "symbols": [
+            "β",
+            "beta"
+          ],
+          "unit": "complex dimensionless ratio",
+          "plain": "A reference channel can accidentally contain the signal too.",
+          "meaning": "β maps the intended receiver signal into the witness channel.",
+          "cautions": [
+            "This β is not a pressure-reflection coefficient or a statistical error probability."
+          ],
+          "equation": "w = b + βs",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.error-disk",
+          "label": "Deterministic reconstruction disk",
+          "symbols": [
+            "reconstruction_disk",
+            "disk",
+            "εy",
+            "εw"
+          ],
+          "unit": "volt (V)",
+          "plain": "The stated assumptions bound the reconstruction inside a disk.",
+          "meaning": "Triangle inequalities propagate supplied complex error radii into a worst-case voltage radius.",
+          "cautions": [
+            "A deterministic bound is not a confidence interval or evidence of a new force."
+          ],
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "protocol.sampling-grid",
+          "label": "Numerical sample and grid counts",
+          "symbols": [
+            "frequency_points",
+            "load_points",
+            "transient_samples",
+            "error_phase_points",
+            "boundary_phase_points"
+          ],
+          "unit": "integer count, dimensionless",
+          "plain": "A grid count says how many numerical evaluations were requested.",
+          "meaning": "These are computational sampling choices, not counts of physical measurements or participants.",
+          "cautions": [
+            "More grid points do not themselves establish model accuracy or experimental replication."
+          ],
+          "aliases": [],
+          "domain": "protocol",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "protocol.crossleak-path",
+          "label": "Dimensionless witness-leakage path",
+          "symbols": [
+            "t",
+            "crossleak_path_t"
+          ],
+          "unit": "dimensionless",
+          "plain": "This parameter moves along a family of leakage settings.",
+          "meaning": "In the R3 conditioning probe, β=t/a so aβ=t. At t=1 the witness map is singular.",
+          "cautions": [
+            "This t is not elapsed time in seconds or the acoustic path delay."
+          ],
+          "equation": "β = t/a; det = 1−t",
+          "aliases": [],
+          "domain": "protocol",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "id": "measurement.peak",
+          "label": "Peak amplitude",
+          "symbols": [
+            "peak",
+            "Vpeak",
+            "Ipeak"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "Peak amplitude is the largest excursion from zero.",
+          "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+          "cautions": [
+            "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.phase",
+          "label": "Phase and coherent readout",
+          "symbols": [
+            "φ",
+            "phase",
+            "CH",
+            "CH1",
+            "CH2"
+          ],
+          "unit": "radian (rad), or declared degrees",
+          "plain": "Phase locates one repeating signal relative to another.",
+          "meaning": "Coherent complex readout preserves relative amplitude and phase under a declared shared reference.",
+          "cautions": [
+            "Sharing a sample clock does not establish equal gain, stable transfer or calibration."
+          ],
+          "aliases": [
+            "coherence",
+            "channel"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.calibration",
+          "label": "Calibration and deterministic error bounds",
+          "symbols": [
+            "ε",
+            "epsilon",
+            "epsilon_y",
+            "epsilon_w",
+            "ΔM",
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "unit of the bounded quantity",
+          "plain": "Calibration connects instrument readings with a stated reference.",
+          "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+          "cautions": [
+            "A stipulated error radius is not measured sensor performance or a confidence interval."
+          ],
+          "aliases": [
+            "uncertainty",
+            "error radius"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "math.imaginary-unit",
+          "label": "Imaginary unit",
+          "symbols": [
+            "j",
+            "i",
+            "√−1"
+          ],
+          "unit": "dimensionless",
+          "plain": "The imaginary unit represents a quarter-turn in complex arithmetic.",
+          "meaning": "j² = −1; imported contracts often write i instead. It is not electrical current i(t).",
+          "cautions": [
+            "Interpret i from its equation context, not from its character alone."
+          ],
+          "equation": "j² = −1",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.phasor",
+          "label": "Phasor",
+          "symbols": [
+            "phasor"
+          ],
+          "unit": "same unit as represented voltage/current",
+          "plain": "A phasor combines a sinusoid’s size and phase into one complex number.",
+          "meaning": "It represents a single-frequency sinusoid under an explicitly selected peak or RMS convention.",
+          "cautions": [
+            "A phasor is not an instantaneous waveform or automatically a physical electromagnetic field."
+          ],
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.complex-field",
+          "label": "Complex and real-number domains",
+          "symbols": [
+            "ℂ",
+            "C²",
+            "ℝ",
+            "R⁴"
+          ],
+          "unit": "dimensionless domain notation",
+          "plain": "A complex number has a real and an imaginary part.",
+          "meaning": "Two complex source values have four real coordinates: ℂ² is represented by ℝ⁴.",
+          "cautions": [
+            "ℂ is not capacitance C; ℝ is not electrical resistance R."
+          ],
+          "equation": "ℂ² ≅ ℝ⁴",
+          "aliases": [
+            "complex numbers",
+            "real numbers",
+            "domain dimension"
+          ],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.complex-parts",
+          "label": "Real part, imaginary part and conjugate",
+          "symbols": [
+            "Re",
+            "Im",
+            "conj",
+            "conjugate",
+            "*"
+          ],
+          "unit": "same unit as the complex quantity",
+          "plain": "These operations separate or reverse parts of a complex number.",
+          "meaning": "For z = a + jb, Re(z)=a, Im(z)=b and conjugate(z)=a−jb.",
+          "cautions": [
+            "The a and b here are generic coordinates, not automatically witness transfer parameters."
+          ],
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.magnitude",
+          "label": "Magnitude and squared magnitude",
+          "symbols": [
+            "|z|",
+            "|I|²",
+            "squared_magnitudes"
+          ],
+          "unit": "signal unit; its square for squared magnitude",
+          "plain": "Magnitude measures the size of a complex quantity without its phase.",
+          "meaning": "For z=a+jb, |z|²=a²+b²; measuring magnitude discards phase information.",
+          "cautions": [
+            "A² is squared amperes here; it is not a new kind of current."
+          ],
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.estimates",
+          "label": "Estimate, difference and time derivative",
+          "symbols": [
+            "hat",
+            "ˆ",
+            "δ",
+            "Δ",
+            "dot",
+            "qdot",
+            "idot",
+            "ż"
+          ],
+          "unit": "depends on quantity; derivative adds /s",
+          "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+          "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+          "cautions": [
+            "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+          ],
+          "equation": "ż = dz/dt",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.matrix",
+          "label": "Matrix, transpose, diagonal and inverse",
+          "symbols": [
+            "T",
+            "diag",
+            "Z^-1",
+            "matrix"
+          ],
+          "unit": "depends on its mapping",
+          "plain": "A matrix collects several linked equations into one map.",
+          "meaning": "Transpose T swaps rows/columns; diag forms a diagonal matrix; inverse undoes an invertible map.",
+          "cautions": [
+            "A matrix inverse is not defined at a singular parameter choice."
+          ],
+          "aliases": [
+            "transpose",
+            "diagonal",
+            "inverse"
+          ],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.rank-nullity",
+          "label": "Rank, nullity and kernel",
+          "symbols": [
+            "rank",
+            "nullity",
+            "kernel"
+          ],
+          "unit": "counts of real or complex dimensions, explicitly declared",
+          "plain": "Some different inputs can produce exactly the same observations.",
+          "meaning": "Rank counts independent observed directions; nullity counts unobserved directions; a kernel vector maps to zero.",
+          "cautions": [
+            "State whether dimensions are real or complex. A nonzero kernel defeats unique reconstruction."
+          ],
+          "equation": "domain dimension = rank + nullity",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.determinant",
+          "label": "Determinant and conditioning",
+          "symbols": [
+            "det",
+            "1−aβ",
+            "conditioning"
+          ],
+          "unit": "depends on matrix units; dimensionless for witness map",
+          "plain": "A determinant can reveal when a square map cannot be inverted.",
+          "meaning": "The witness map is singular when 1−aβ=0; conditioning describes sensitivity near inversion.",
+          "cautions": [
+            "A small numerical residual is not a guarantee of stable physical inference."
+          ],
+          "equation": "det([[1,a],[β,1]]) = 1−aβ",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.signal",
+          "label": "Signal and nuisance contributions",
+          "symbols": [
+            "s",
+            "b",
+            "y"
+          ],
+          "unit": "volt (V), complex peak",
+          "plain": "The receiver can mix the intended signal with ordinary background.",
+          "meaning": "s is a stipulated receiver signal, b a witness-equivalent nuisance and y their combined effective receiver voltage.",
+          "cautions": [
+            "A recovered same-port signal is not automatically an exotic physical source."
+          ],
+          "equation": "y = s + ab",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.voltage",
+          "label": "Calibrated witness-equivalent voltage",
+          "symbols": [
+            "w",
+            "W"
+          ],
+          "unit": "volt (V), complex peak",
+          "plain": "A witness channel observes a declared background reference.",
+          "meaning": "The variable w is a calibrated equivalent voltage, not automatically the raw pickup-coil voltage.",
+          "cautions": [
+            "w is not work; a label W on a recorder identifies its role, not watts."
+          ],
+          "equation": "w = b  (clean witness)",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.transfer",
+          "label": "Nuisance transfer",
+          "symbols": [
+            "a",
+            "ahat"
+          ],
+          "unit": "complex dimensionless ratio",
+          "plain": "Transfer tells how the background enters the receiver.",
+          "meaning": "a maps witness-equivalent nuisance voltage into receiver effective voltage at one selected frequency.",
+          "cautions": [
+            "Geometry alone does not calibrate a; unknown transfer can preserve rival explanations."
+          ],
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.transfer-uncertainty",
+          "label": "Transfer uncertainty radius",
+          "symbols": [
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "dimensionless",
+          "plain": "The contract places a bound on how much the transfer ratio may be wrong.",
+          "meaning": "Δa bounds the magnitude of the difference between true and estimated complex nuisance transfer.",
+          "cautions": [
+            "It is not a voltage or a final-minus-initial time change; the bound is supplied, not measured here."
+          ],
+          "equation": "|a_true − ahat| ≤ Δa",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.leakage",
+          "label": "Signal leakage into the witness",
+          "symbols": [
+            "β",
+            "beta"
+          ],
+          "unit": "complex dimensionless ratio",
+          "plain": "A reference channel can accidentally contain the signal too.",
+          "meaning": "β maps the intended receiver signal into the witness channel.",
+          "cautions": [
+            "This β is not a pressure-reflection coefficient or a statistical error probability."
+          ],
+          "equation": "w = b + βs",
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "witness.error-disk",
+          "label": "Deterministic reconstruction disk",
+          "symbols": [
+            "reconstruction_disk",
+            "disk",
+            "εy",
+            "εw"
+          ],
+          "unit": "volt (V)",
+          "plain": "The stated assumptions bound the reconstruction inside a disk.",
+          "meaning": "Triangle inequalities propagate supplied complex error radii into a worst-case voltage radius.",
+          "cautions": [
+            "A deterministic bound is not a confidence interval or evidence of a new force."
+          ],
+          "aliases": [],
+          "domain": "witness",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "protocol.sampling-grid",
+          "label": "Numerical sample and grid counts",
+          "symbols": [
+            "frequency_points",
+            "load_points",
+            "transient_samples",
+            "error_phase_points",
+            "boundary_phase_points"
+          ],
+          "unit": "integer count, dimensionless",
+          "plain": "A grid count says how many numerical evaluations were requested.",
+          "meaning": "These are computational sampling choices, not counts of physical measurements or participants.",
+          "cautions": [
+            "More grid points do not themselves establish model accuracy or experimental replication."
+          ],
+          "aliases": [],
+          "domain": "protocol",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "protocol.crossleak-path",
+          "label": "Dimensionless witness-leakage path",
+          "symbols": [
+            "t",
+            "crossleak_path_t"
+          ],
+          "unit": "dimensionless",
+          "plain": "This parameter moves along a family of leakage settings.",
+          "meaning": "In the R3 conditioning probe, β=t/a so aβ=t. At t=1 the witness map is singular.",
+          "cautions": [
+            "This t is not elapsed time in seconds or the acoustic path delay."
+          ],
+          "equation": "β = t/a; det = 1−t",
+          "aliases": [],
+          "domain": "protocol",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "equations": [
+        {
+          "id": "witness-subtraction",
+          "title": "A witness needs a known transfer",
+          "equation": "y=s+ab; w=b+βs; det =1−aβ",
+          "plain": "Subtracting background works only under the declared transfer and leakage assumptions.",
+          "convention": "Complex peak effective voltages at one frequency; a and β dimensionless.",
+          "termIds": [
+            "witness.signal",
+            "witness.voltage",
+            "witness.transfer",
+            "witness.transfer-uncertainty",
+            "witness.leakage",
+            "witness.error-disk",
+            "math.imaginary-unit",
+            "math.phasor",
+            "math.complex-field",
+            "math.complex-parts",
+            "math.magnitude",
+            "math.estimates",
+            "math.matrix",
+            "math.rank-nullity",
+            "math.determinant",
+            "measurement.phase",
+            "measurement.peak",
+            "measurement.calibration",
+            "protocol.sampling-grid",
+            "protocol.crossleak-path"
+          ],
+          "units": "s,b,y,w V; a,β dimensionless; error radii V.",
+          "cautions": [
+            "At aβ=1 the map is singular. A separated same-port contribution is not a uniquely identified exotic source."
+          ],
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        }
+      ],
+      "contractFields": [
+        {
+          "path": "docs/contracts/R3.json",
+          "coverage": {
+            "contractId": "R3",
+            "known": true,
+            "covered": [
+              {
+                "section": "state_and_units",
+                "key": "s"
+              },
+              {
+                "section": "state_and_units",
+                "key": "b"
+              },
+              {
+                "section": "state_and_units",
+                "key": "y"
+              },
+              {
+                "section": "state_and_units",
+                "key": "w"
+              },
+              {
+                "section": "state_and_units",
+                "key": "a"
+              },
+              {
+                "section": "state_and_units",
+                "key": "beta"
+              },
+              {
+                "section": "state_and_units",
+                "key": "epsilon_y,epsilon_w"
+              },
+              {
+                "section": "state_and_units",
+                "key": "Delta_a"
+              },
+              {
+                "section": "parameters",
+                "key": "signal_amplitude_V"
+              },
+              {
+                "section": "parameters",
+                "key": "signal_phase_rad"
+              },
+              {
+                "section": "parameters",
+                "key": "background_amplitude_V"
+              },
+              {
+                "section": "parameters",
+                "key": "background_phase_rad"
+              },
+              {
+                "section": "parameters",
+                "key": "nominal_transfer_a"
+              },
+              {
+                "section": "parameters",
+                "key": "receiver_error_bound_V"
+              },
+              {
+                "section": "parameters",
+                "key": "witness_error_bound_V"
+              },
+              {
+                "section": "parameters",
+                "key": "transfer_error_bound"
+              },
+              {
+                "section": "parameters",
+                "key": "boundary_phase_points"
+              },
+              {
+                "section": "parameters",
+                "key": "crossleak_path_t"
+              }
+            ],
+            "missing": [],
+            "missingSections": [],
+            "extraDefinitions": [],
+            "scope": "Only the actual state_and_units and parameters keys are audited. Equation prose, other sections and future unknown keys are not automatically interpreted or scientifically validated."
+          },
+          "fields": [
+            {
+              "section": "state_and_units",
+              "key": "s",
+              "valueOrNull": "stipulated signal contribution at receiver port, complex V peak",
+              "hasValue": true,
+              "plain": "Stipulated signal contribution at the receiver port.",
+              "unit": "V complex peak",
+              "convention": "Physical identity is not established by algebraic separation.",
+              "termIds": [
+                "witness.signal"
+              ]
+            },
+            {
+              "section": "state_and_units",
+              "key": "b",
+              "valueOrNull": "environmental witness-equivalent nuisance, complex V peak",
+              "hasValue": true,
+              "plain": "Environmental witness-equivalent nuisance voltage.",
+              "unit": "V complex peak",
+              "convention": "Equivalent signal quantity, not a measured magnetic field.",
+              "termIds": [
+                "witness.signal"
+              ]
+            },
+            {
+              "section": "state_and_units",
+              "key": "y",
+              "valueOrNull": "reconstructed receiver effective voltage, complex V peak",
+              "hasValue": true,
+              "plain": "Reconstructed effective receiver voltage.",
+              "unit": "V complex peak",
+              "convention": "Contains signal and nuisance transfer.",
+              "termIds": [
+                "witness.signal"
+              ]
+            },
+            {
+              "section": "state_and_units",
+              "key": "w",
+              "valueOrNull": "calibrated witness-equivalent voltage, complex V peak; not automatically raw coil voltage",
+              "hasValue": true,
+              "plain": "Calibrated witness-equivalent voltage.",
+              "unit": "V complex peak",
+              "convention": "Not automatically a raw coil voltage or work.",
+              "termIds": [
+                "witness.voltage"
+              ]
+            },
+            {
+              "section": "state_and_units",
+              "key": "a",
+              "valueOrNull": "complex dimensionless nuisance-to-receiver transfer",
+              "hasValue": true,
+              "plain": "Nuisance-to-receiver transfer ratio.",
+              "unit": "complex dimensionless",
+              "convention": "Needs separate calibration.",
+              "termIds": [
+                "witness.transfer"
+              ]
+            },
+            {
+              "section": "state_and_units",
+              "key": "beta",
+              "valueOrNull": "complex dimensionless signal leakage into witness",
+              "hasValue": true,
+              "plain": "Signal leakage into the witness.",
+              "unit": "complex dimensionless",
+              "convention": "Not the acoustic reflection coefficient.",
+              "termIds": [
+                "witness.leakage"
+              ]
+            },
+            {
+              "section": "state_and_units",
+              "key": "epsilon_y,epsilon_w",
+              "valueOrNull": "supplied deterministic complex measurement-error radii, V",
+              "hasValue": true,
+              "plain": "Supplied measurement-error radii for receiver and witness.",
+              "unit": "V",
+              "convention": "Deterministic bounds, not experimental uncertainty estimates.",
+              "termIds": [
+                "measurement.calibration",
+                "witness.error-disk"
+              ]
+            },
+            {
+              "section": "state_and_units",
+              "key": "Delta_a",
+              "valueOrNull": "supplied complex transfer uncertainty radius, dimensionless",
+              "hasValue": true,
+              "plain": "Supplied uncertainty radius of transfer a.",
+              "unit": "dimensionless",
+              "convention": "Not a voltage or temporal increment.",
+              "termIds": [
+                "witness.transfer-uncertainty"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "signal_amplitude_V",
+              "valueOrNull": 0.005,
+              "hasValue": true,
+              "plain": "Synthetic signal contribution amplitude.",
+              "unit": "V peak",
+              "convention": "A stipulated fixture, not a measured novel field.",
+              "termIds": [
+                "witness.signal",
+                "measurement.peak"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "signal_phase_rad",
+              "valueOrNull": 1.0471975511965976,
+              "hasValue": true,
+              "plain": "Selected signal phase.",
+              "unit": "rad",
+              "convention": "Relative to the shared complex reference.",
+              "termIds": [
+                "measurement.phase"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "background_amplitude_V",
+              "valueOrNull": 0.02,
+              "hasValue": true,
+              "plain": "Synthetic nuisance-equivalent amplitude.",
+              "unit": "V peak",
+              "convention": "An effective voltage, not field strength.",
+              "termIds": [
+                "witness.signal",
+                "measurement.peak"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "background_phase_rad",
+              "valueOrNull": 0.5235987755982988,
+              "hasValue": true,
+              "plain": "Selected nuisance phase.",
+              "unit": "rad",
+              "convention": "Relative phase in the fixed-frequency model.",
+              "termIds": [
+                "measurement.phase"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "nominal_transfer_a",
+              "valueOrNull": [
+                0.6,
+                0.2
+              ],
+              "hasValue": true,
+              "plain": "Nominal transfer as real and imaginary components.",
+              "unit": "complex dimensionless",
+              "convention": "Two array coordinates, not separate measurements.",
+              "termIds": [
+                "witness.transfer",
+                "math.complex-parts"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "receiver_error_bound_V",
+              "valueOrNull": 0.002,
+              "hasValue": true,
+              "plain": "Supplied receiver effective-voltage error radius.",
+              "unit": "V",
+              "convention": "A new stipulated R3 bound; no real sensor performance claimed.",
+              "termIds": [
+                "measurement.calibration"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "witness_error_bound_V",
+              "valueOrNull": 0.0005,
+              "hasValue": true,
+              "plain": "Supplied witness equivalent-voltage error radius.",
+              "unit": "V",
+              "convention": "Deterministic bound, not confidence.",
+              "termIds": [
+                "measurement.calibration"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "transfer_error_bound",
+              "valueOrNull": 0.02,
+              "hasValue": true,
+              "plain": "Supplied complex transfer-error radius.",
+              "unit": "dimensionless",
+              "convention": "Matches Δa, not volts.",
+              "termIds": [
+                "witness.transfer-uncertainty"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "boundary_phase_points",
+              "valueOrNull": 8,
+              "hasValue": true,
+              "plain": "Number of directions sampled on an error boundary.",
+              "unit": "integer count",
+              "convention": "Finite numerical probe, not calibrated coverage probability.",
+              "termIds": [
+                "protocol.sampling-grid"
+              ]
+            },
+            {
+              "section": "parameters",
+              "key": "crossleak_path_t",
+              "valueOrNull": [
+                0,
+                0.25,
+                0.5,
+                0.9,
+                0.99,
+                1,
+                1.01,
+                1.1
+              ],
+              "hasValue": true,
+              "plain": "Selected leakage-path values along β=t/a.",
+              "unit": "dimensionless",
+              "convention": "t=1 is singular; this t is not time.",
+              "termIds": [
+                "protocol.crossleak-path",
+                "math.determinant"
+              ]
+            }
+          ]
+        }
+      ],
+      "whatKnown": [
+        "R3 declares an effective-voltage model and explicit competing source explanations.",
+        "The witness voltage is a calibrated equivalent quantity, not automatically the raw voltage from the drawn pickup.",
+        "Original source status: proposed_unbuilt."
+      ],
+      "whatUnknown": [
+        "The actual complex transfer, its drift and the pickup calibration are not measured here.",
+        "How much the desired signal leaks into the witness is not known from its position alone.",
+        "A residual does not distinguish an exotic cause from an unmonitored ordinary drive at the same effective port."
+      ],
+      "measurementChecklist": [
+        "Calibrate the raw witness and both coherent current channels.",
+        "Record source-off, background-only and deliberate known-injection controls.",
+        "Vary orientation and position; quantify signal leakage and calibration stability.",
+        "Calibrate raw pickup voltage to witness-equivalent w and reconstruct y from the coherent two-current readout.",
+        "Use synchronous channels and independently characterized complex nuisance transfer a.",
+        "Record background-only, source-off and known receiver-port injections; test phase, orientation, position and temporal stability.",
+        "Test signal leakage beta into the witness and additional pickup loading/coupling before reusing a two-loop model."
+      ],
+      "questions": [
+        "What calibration makes this witness comparable to the receiver?",
+        "Can an allowed change in transfer remove the claimed signal?",
+        "What happens when the declared inversion becomes singular?"
+      ],
+      "sourceHierarchy": [
+        {
+          "label": "Why this subject is here",
+          "meaning": "Historical or external publications provide context; their claims and reading depth do not become new measurements.",
+          "references": [
+            {
+              "title": "NT-ABRA2021 · Calibration and Supplementary III, magnet-off veto, moving/background lines and fringe-field vibration",
+              "url": "https://arxiv.org/html/2102.06722v1",
+              "readingDepth": "Frozen contract reports: Source researcher selected full-text reading; advisor opened source and read report. This is not a new primary-source reading."
+            }
+          ]
+        },
+        {
+          "label": "How the model or drawing was declared",
+          "meaning": "Pinned source records and contracts identify assumptions. Drawing geometry does not determine missing electrical or material properties.",
+          "references": [
+            {
+              "title": "newton-tesla-research-lab/data/setups.json",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            },
+            {
+              "title": "newton-tesla-research-lab/docs/contracts/R3.json",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/contracts/R3.json",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            },
+            {
+              "title": "newton-tesla-research-lab/docs/apparatus.md",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            }
+          ]
+        },
+        {
+          "label": "Which file was viewed",
+          "meaning": "Source and already-served copies are different observations. A content hash identifies bytes, not scientific truth, authorship certification or construction readiness.",
+          "references": [
+            {
+              "title": "Third pickup and isolated differential leads",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/environmental-witness-plan.svg",
+              "readingDepth": "Pinned artifact reference; no physical apparatus verification follows."
+            },
+            {
+              "title": "Deterministic witness coordinate 3D",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/environmental-witness-3d.png",
+              "readingDepth": "Pinned artifact reference; no physical apparatus verification follows."
+            },
+            {
+              "title": "Calibration, subtraction and cross-leak map",
+              "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/environmental-witness-map.svg",
+              "readingDepth": "Pinned artifact reference; no physical apparatus verification follows."
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The R3 quantities y and w are effective calibrated voltages, not automatically raw coil readings. Pickup geometry establishes neither transfer a nor signal leakage beta.",
+        "No hardware data or electromagnetic field solution.",
+        "Unknown a admits an exact zero-signal rival; known cross-leak is singular at 1-a beta=0.",
+        "Even perfect subtraction retains ordinary same-port physical-source rivals.",
+        "No dark-matter coupling, detector sensitivity, gravity modification or free-energy identification.",
+        "This guide explains the declared study. It supplies no missing engineering specification, calibration, purchase requirement or construction approval."
+      ],
+      "coverage": {
+        "recordSpecific": true,
+        "termCount": 25,
+        "equationCount": 1,
+        "claim": "Explicit guide and selected contextual terms for this record; not automatic coverage of every raw source symbol or an exhaustive technical dictionary."
+      }
+    },
+    "notes": "Source-based explanatory sketch and reading packet. Not a manufacturing drawing, rated bill of parts, physical calibration or observed device-performance result."
+  },
+  "limitations": [
+    "No hardware data or electromagnetic field solution.",
+    "Unknown a admits an exact zero-signal rival; known cross-leak is singular at 1-a beta=0.",
+    "Even perfect subtraction retains ordinary same-port physical-source rivals.",
+    "No dark-matter coupling, detector sensitivity, gravity modification or free-energy identification.",
+    "Authored scenario and sketch revisions are separate from the pinned source record.",
+    "Missing ratings, turns, insulation, materials and calibration remain unknown.",
+    "This packet is an explanatory review, not a manufacturing drawing, hardware validation or operating approval."
+  ]
+}

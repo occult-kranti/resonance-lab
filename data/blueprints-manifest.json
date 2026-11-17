@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "artifact": "blueprints.json",
+  "sha256": "090c8c9bc178747c84674a63114b3f7df2ee727458cc76d4f3a0381b5e6c54e1",
+  "sourcePins": [
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "data/hypotheses.json",
+      "sha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "committedSha256": "2e20de76497493752eaadedd5bed90ca86ae26ccac413ad2c5bdee899c3a1874",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/hypotheses.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "data/setups.json",
+      "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "committedSha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "assets/setups/geometry.json",
+      "sha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+      "committedSha256": "441c6726add1895745d9467615246ed86d11b3ac436044433e6bd704afb6fd09",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/assets/setups/geometry.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "data/sources.json",
+      "sha256": "0f550c938df0e3d9a813016c54189f3dca4610a6fde2b5af3d456b58dcb69c24",
+      "committedSha256": "0f550c938df0e3d9a813016c54189f3dca4610a6fde2b5af3d456b58dcb69c24",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/sources.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "resonance-research-atlas",
+      "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "path": "docs/panel-v4/setup-catalog.json",
+      "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "committedSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "docs/apparatus.md",
+      "sha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+      "committedSha256": "c046be0c4bb17266bd2886a7dd5a488049eef55f8cf806e8d605e6291a72ae7d",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/apparatus.md",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "resonance-research-atlas",
+      "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "path": "docs/panel-v4/apparatus.md",
+      "sha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "committedSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "docs/contracts/R1.json",
+      "sha256": "328c7b2250e594e5f666b8020360d5e23d264ac5cc13492d378d0a05a2b60956",
+      "committedSha256": "328c7b2250e594e5f666b8020360d5e23d264ac5cc13492d378d0a05a2b60956",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/contracts/R1.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "docs/contracts/R2.json",
+      "sha256": "611e3faa6c3550e697e12faa968ff75ec39fa1553572685845882a324bdfbb2d",
+      "committedSha256": "611e3faa6c3550e697e12faa968ff75ec39fa1553572685845882a324bdfbb2d",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/contracts/R2.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    {
+      "repository": "newton-tesla-research-lab",
+      "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+      "path": "docs/contracts/R3.json",
+      "sha256": "12d23bdce8f7f41a65eebef36540e14551c7986f25106ab496f8b9b974f0526a",
+      "committedSha256": "12d23bdce8f7f41a65eebef36540e14551c7986f25106ab496f8b9b974f0526a",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/docs/contracts/R3.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    }
+  ],
+  "scope": "Content consistency receipt; not a signature, hardware validation or fresh source observation."
+}

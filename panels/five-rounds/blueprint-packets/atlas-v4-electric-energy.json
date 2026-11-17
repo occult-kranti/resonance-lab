@@ -1,0 +1,1803 @@
+{
+  "schema": "resonance-blueprint-packet/v1",
+  "createdAt": "2026-11-17T04:32:55.002Z",
+  "recordId": "atlas:v4-electric-energy",
+  "revision": "five-panels-authored-review-v1",
+  "status": "authored-review-not-manufacturing-approval",
+  "record": {
+    "id": "atlas:v4-electric-energy",
+    "title": "Series RLC: source, load and stored energy",
+    "repository": "resonance-research-atlas",
+    "kind": "exact SVG circuit and measurement-boundary diagram",
+    "domain": "electricity",
+    "status": "proposed_unbuilt",
+    "summary": "Exact R3 model topology; a physical measurement arrangement is proposed and unbuilt. Voltage gain can exceed one while source work closes against load heat, internal loss and storage change. Probe symbols indicate waveform acquisition, not slow-meter readings; real sensor loading and bandwidth need characterization.",
+    "modelBoundary": "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+    "source": {
+      "repository": "resonance-research-atlas",
+      "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "path": "docs/panel-v4/setup-catalog.json",
+      "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "committedSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    "documentation": [
+      {
+        "repository": "resonance-research-atlas",
+        "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "path": "docs/panel-v4/apparatus.md",
+        "sha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+        "committedSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+        "checkoutMatchesCommit": true,
+        "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+        "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+      }
+    ],
+    "sourceRecord": {
+      "id": "v4-electric-energy",
+      "kind": "exact SVG circuit and measurement-boundary diagram",
+      "title": "Series RLC: source, load and stored energy",
+      "file": "assets/sound-lab-v4/electrical-energy-boundary.svg",
+      "alt": "Closed series circuit with isolated source, series current probe, one-ohm internal resistor, ten-millihenry inductor, one-hundred-microfarad capacitor and four-ohm load. Differential voltage probes connect across source, capacitor and load; a synchronized known-bandwidth recorder is specified. Values are from the synthetic R3 contract.",
+      "caption": "Exact R3 model topology; a physical measurement arrangement is proposed and unbuilt. Voltage gain can exceed one while source work closes against load heat, internal loss and storage change. Probe symbols indicate waveform acquisition, not slow-meter readings; real sensor loading and bandwidth need characterization.",
+      "experiment": "electric"
+    },
+    "proposalIds": [
+      "NT-H01"
+    ],
+    "relationStatus": "Editorial topical relevance only; this drawing does not validate the linked proposal.",
+    "assets": [
+      {
+        "id": "v4-electric-energy",
+        "kind": "exact SVG circuit and measurement-boundary diagram",
+        "title": "Series RLC: source, load and stored energy",
+        "file": "assets/sound-lab-v4/electrical-energy-boundary.svg",
+        "alt": "Closed series circuit with isolated source, series current probe, one-ohm internal resistor, ten-millihenry inductor, one-hundred-microfarad capacitor and four-ohm load. Differential voltage probes connect across source, capacitor and load; a synchronized known-bandwidth recorder is specified. Values are from the synthetic R3 contract.",
+        "caption": "Exact R3 model topology; a physical measurement arrangement is proposed and unbuilt. Voltage gain can exceed one while source work closes against load heat, internal loss and storage change. Probe symbols indicate waveform acquisition, not slow-meter readings; real sensor loading and bandwidth need characterization.",
+        "experiment": "electric",
+        "path": "assets/sound-lab-v4/electrical-energy-boundary.svg",
+        "repository": "resonance-research-atlas",
+        "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sourceSha256": "5ae38232d30b81491cc0016c1d126c6051d2645bd88337d8dbbc9b46359e77f2",
+        "committedSha256": "5ae38232d30b81491cc0016c1d126c6051d2645bd88337d8dbbc9b46359e77f2",
+        "checkoutMatchesCommit": true,
+        "localHref": "/apps/resonance-research-atlas/assets/sound-lab-v4/electrical-energy-boundary.svg",
+        "sourceHref": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/assets/sound-lab-v4/electrical-energy-boundary.svg",
+        "servedSha256": "5ae38232d30b81491cc0016c1d126c6051d2645bd88337d8dbbc9b46359e77f2",
+        "servedCopyMatchesSource": true,
+        "scope": "Existing server adapter serves the sibling dist copy; source bytes and served copy are different observations."
+      }
+    ],
+    "geometry": null,
+    "contracts": [],
+    "materials": [],
+    "measurements": [],
+    "limitations": [
+      "Exact R3 model topology; a physical measurement arrangement is proposed and unbuilt. Voltage gain can exceed one while source work closes against load heat, internal loss and storage change. Probe symbols indicate waveform acquisition, not slow-meter readings; real sensor loading and bandwidth need characterization.",
+      "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation."
+    ],
+    "sourceIds": [],
+    "equationStatus": "Drawing view with original caption; not a numerical solver or hardware result."
+  },
+  "authored": {
+    "scenario": {
+      "modifications": [],
+      "electricalParametersChanged": false,
+      "calibrationInferred": false
+    },
+    "sketch": {
+      "schemaVersion": 1,
+      "kind": "geometry-only-documentation-not-physical-prediction",
+      "family": "atlas:v4-electric-energy",
+      "view": "flow",
+      "units": "mm",
+      "availableViews": [
+        "flow"
+      ],
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 760\" role=\"img\" aria-labelledby=\"sketch-title sketch-desc\"><title id=\"sketch-title\">Series RLC: source, load and stored energy · flow</title><desc id=\"sketch-desc\">Source-pinned proposed flow documentation. . All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration. Dimensions are stipulated source layout or explicit user annotations, not measured component specifications. This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint.</desc><metadata id=\"source-provenance\">{&quot;method&quot;:&quot;source-coordinate-sketch-v1&quot;,&quot;sourcePins&quot;:[{&quot;repository&quot;:&quot;resonance-research-atlas&quot;,&quot;commit&quot;:&quot;aabc79d42adf4b72677fdd8e45fbade76b159192&quot;,&quot;path&quot;:&quot;docs/panel-v4/setup-catalog.json&quot;,&quot;sha256&quot;:&quot;c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa&quot;,&quot;committedSha256&quot;:&quot;c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;},{&quot;repository&quot;:&quot;resonance-research-atlas&quot;,&quot;commit&quot;:&quot;aabc79d42adf4b72677fdd8e45fbade76b159192&quot;,&quot;path&quot;:&quot;docs/panel-v4/apparatus.md&quot;,&quot;sha256&quot;:&quot;2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6&quot;,&quot;committedSha256&quot;:&quot;2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;}],&quot;scenario&quot;:{&quot;modifications&quot;:[],&quot;electricalParametersChanged&quot;:false,&quot;calibrationInferred&quot;:false},&quot;dimensions&quot;:[],&quot;warnings&quot;:[&quot;All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.&quot;,&quot;Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.&quot;,&quot;This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint.&quot;]}</metadata><rect width=\"1200\" height=\"760\" fill=\"#f5f3e9\"/><style>text{font-family:system-ui,sans-serif;fill:#213e32} .part{stroke:#315744;fill:#c9d6c0;stroke-width:1.8} .wire{stroke:#647b69;fill:none;stroke-width:1.4} .dim{stroke:#526b5b;fill:none;stroke-width:1} .small{font-size:13px}.label{font-size:15px;font-weight:600}</style><text x=\"38\" y=\"35\" font-size=\"23\" font-weight=\"600\">Series RLC: source, load and stored energy · flow</text><text x=\"38\" y=\"61\" class=\"small\">PROPOSED / SOURCE-STIPULATED GEOMETRY · NOT MANUFACTURING OR PHYSICAL VALIDATION</text><text x=\"45\" y=\"115\" class=\"label\">Conceptual signal / observation map · diagram positions are not apparatus dimensions</text><g ><rect class=\"part\" x=\"45\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"152.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Known source port</text></g><path class=\"wire\" d=\"M260 285h60m-8-6 8 6-8 6\"/><g ><rect class=\"part\" x=\"320\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"427.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Declared circuit fixture</text></g><path class=\"wire\" d=\"M535 285h60m-8-6 8 6-8 6\"/><g ><rect class=\"part\" x=\"595\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"702.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Load and internal loss</text></g><path class=\"wire\" d=\"M810 285h60m-8-6 8 6-8 6\"/><g ><rect class=\"part\" x=\"870\" y=\"240\" width=\"215\" height=\"90\" rx=\"6\"/><text x=\"977.5\" y=\"290\" text-anchor=\"middle\" font-size=\"14\">Signed work and storage</text></g><text x=\"45\" y=\"390\" class=\"label\">Source work = useful-load work + loss + change in stored energy, where that electrical model applies.</text><text x=\"45\" y=\"430\" class=\"small\">Readout locations and mathematical variables are documentation; no acquired sensor readings are shown.</text><text x=\"38\" y=\"682\" class=\"small\">Source resonance-research-atlas @ aabc79d42adf · full source/scenario identity in SVG metadata</text><text x=\"38\" y=\"706\" class=\"small\">SOURCE-STIPULATED LAYOUT · Exact geometry is not a measured or construction-approved device.</text><text x=\"38\" y=\"731\" class=\"small\">No normalized apparatus dimensions, calibrated readout or manufacturing ratings are established by this registry view.</text></svg>",
+      "components": [],
+      "dimensions": [],
+      "sourcePins": [
+        {
+          "repository": "resonance-research-atlas",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "committedSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "resonance-research-atlas",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "path": "docs/panel-v4/apparatus.md",
+          "sha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+          "committedSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "scenario": {
+        "modifications": [],
+        "electricalParametersChanged": false,
+        "calibrationInferred": false
+      },
+      "warnings": [
+        "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+        "Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.",
+        "This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint."
+      ]
+    },
+    "terms": [
+      {
+        "id": "electricity.inductance",
+        "label": "Inductance",
+        "symbols": [
+          "L",
+          "L1",
+          "L2"
+        ],
+        "unit": "henry (H)",
+        "plain": "Inductance tells how current stores magnetic energy.",
+        "meaning": "A scalar coil coefficient or symmetric inductance matrix, according to the attached contract.",
+        "cautions": [
+          "Drawing diameter and turns are not a measured inductance."
+        ],
+        "equation": "E = ½ L i²",
+        "aliases": [
+          "coil"
+        ],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.mutual-inductance",
+        "label": "Mutual inductance",
+        "symbols": [
+          "M"
+        ],
+        "unit": "henry (H)",
+        "plain": "Changing current in one coil can induce voltage in another.",
+        "meaning": "The signed cross-coil coefficient; its sign depends on the chosen winding/dot convention.",
+        "cautions": [
+          "Mutual coupling does not supply energy."
+        ],
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.coupling",
+        "label": "Coupling coefficient",
+        "symbols": [
+          "k"
+        ],
+        "unit": "dimensionless",
+        "plain": "Coupling describes how strongly two modeled coils interact.",
+        "meaning": "In this passive positive-definite two-coil fixture, M = k√(L1 L2) and |k| < 1.",
+        "cautions": [
+          "A selected k is not a measured coil calibration."
+        ],
+        "equation": "M = k√(L1 L2)",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.capacitance",
+        "label": "Capacitance",
+        "symbols": [
+          "C",
+          "C1",
+          "C2"
+        ],
+        "unit": "farad (F)",
+        "plain": "A capacitor stores energy in an electric field.",
+        "meaning": "The capacitance coefficient; it is not the mathematical field of complex numbers ℂ.",
+        "cautions": [
+          "C as capacitance differs from C used for coulombs or ℂ."
+        ],
+        "equation": "E = ½ C v²",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.resistance",
+        "label": "Resistance and useful load",
+        "symbols": [
+          "R",
+          "R1",
+          "R2",
+          "RL",
+          "Rload",
+          "Rloss",
+          "Ri"
+        ],
+        "unit": "ohm (Ω)",
+        "plain": "Resistance converts electrical energy to heat.",
+        "meaning": "The receiving load and winding/internal losses are accounted for separately.",
+        "cautions": [
+          "R1 can also name a research round; ℝ denotes real numbers, not resistance."
+        ],
+        "equation": "P = I_rms² R",
+        "aliases": [
+          "copper loss",
+          "load"
+        ],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.charge",
+        "label": "Electric charge",
+        "symbols": [
+          "q"
+        ],
+        "unit": "coulomb (C)",
+        "plain": "Charge measures how much electricity has accumulated.",
+        "meaning": "q is an instantaneous scalar or vector; its time derivative is current.",
+        "cautions": [
+          "The unit C means coulomb here, not capacitance."
+        ],
+        "equation": "dq/dt = i",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.current",
+        "label": "Electrical current",
+        "symbols": [
+          "i",
+          "I",
+          "I1",
+          "I2"
+        ],
+        "unit": "ampere (A)",
+        "plain": "Current is the flow rate of electric charge.",
+        "meaning": "Lowercase i(t) is instantaneous; uppercase I is a phasor whose peak/RMS convention must be declared.",
+        "cautions": [
+          "The imaginary unit i in an impedance equation is a different meaning."
+        ],
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.voltage",
+        "label": "Voltage and source-port drive",
+        "symbols": [
+          "v",
+          "V",
+          "e1",
+          "e2",
+          "Vc",
+          "Vs",
+          "Vl"
+        ],
+        "unit": "volt (V)",
+        "plain": "Voltage is electrical potential difference between two points.",
+        "meaning": "Instantaneous voltages and complex source-port phasors are distinct representations.",
+        "cautions": [
+          "A source knob is not automatically a measured port voltage; declare peak or RMS."
+        ],
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.angular-frequency",
+        "label": "Angular frequency",
+        "symbols": [
+          "ω",
+          "omega"
+        ],
+        "unit": "radian per second (rad/s)",
+        "plain": "Angular frequency counts how quickly a cycle turns through angle.",
+        "meaning": "One cycle is 2π radians, so ω = 2π f.",
+        "cautions": [
+          "Radians per second and hertz differ by 2π."
+        ],
+        "equation": "ω = 2πf",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.impedance",
+        "label": "Impedance and reactance",
+        "symbols": [
+          "Z",
+          "X",
+          "Z11",
+          "Z22",
+          "Z12"
+        ],
+        "unit": "ohm (Ω)",
+        "plain": "Impedance describes opposition to an alternating current.",
+        "meaning": "Complex impedance combines resistance with reactive phase response; X = ωL − 1/(ωC) in the host series circuit.",
+        "cautions": [
+          "Voltage magnification across storage elements is not power gain."
+        ],
+        "equation": "Z = R + jX",
+        "aliases": [
+          "reactance"
+        ],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.power",
+        "label": "Real average power",
+        "symbols": [
+          "P",
+          "Pin",
+          "Psource",
+          "Pload",
+          "Ploss"
+        ],
+        "unit": "watt (W), equivalent to J/s",
+        "plain": "Power is the rate at which energy is transferred.",
+        "meaning": "Real average source power uses the real part of voltage times conjugate current, with a convention-dependent factor.",
+        "cautions": [
+          "Peak phasors need a factor ½; RMS phasors do not."
+        ],
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.stored-energy",
+        "label": "Stored energy",
+        "symbols": [
+          "E",
+          "ΔE"
+        ],
+        "unit": "joule (J)",
+        "plain": "Energy can remain in the capacitor and magnetic field.",
+        "meaning": "Initial and final stored states belong in a finite-time source-work budget.",
+        "cautions": [
+          "Released initial energy is not unexplained energy production."
+        ],
+        "equation": "E = ½Li² + ½CvC²",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "electricity.work",
+        "label": "Work transferred over time",
+        "symbols": [
+          "W",
+          "Win",
+          "Wload",
+          "Wloss"
+        ],
+        "unit": "joule (J)",
+        "plain": "Work is energy transferred during a chosen interval.",
+        "meaning": "Integrating signed instantaneous power gives work; uppercase W here is a variable, while W after a number is the watt unit.",
+        "cautions": [
+          "Lowercase w in the witness contract denotes a voltage, not work."
+        ],
+        "equation": "Win = ∫v(t)i(t)dt",
+        "aliases": [],
+        "domain": "electricity",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "measurement.rms",
+        "label": "Root mean square",
+        "symbols": [
+          "RMS",
+          "Vrms",
+          "Irms"
+        ],
+        "unit": "same unit as the signal",
+        "plain": "RMS is the square root of the mean squared signal.",
+        "meaning": "For a pure sine only, peak amplitude is √2 times RMS. For a fixed resistor, RMS determines average heating.",
+        "cautions": [
+          "RMS is not the arithmetic mean or a universal peak conversion."
+        ],
+        "equation": "x_rms = √mean(x²); sine: x_peak = √2 x_rms",
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.peak",
+        "label": "Peak amplitude",
+        "symbols": [
+          "peak",
+          "Vpeak",
+          "Ipeak"
+        ],
+        "unit": "same unit as the signal",
+        "plain": "Peak amplitude is the largest excursion from zero.",
+        "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+        "cautions": [
+          "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.not-to-scale",
+        "label": "Not to scale",
+        "symbols": [
+          "NTS",
+          "not to scale"
+        ],
+        "unit": "drawing convention; not a measurement",
+        "plain": "A sketch may show relationships without preserving size ratios.",
+        "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+        "cautions": [
+          "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "math.estimates",
+        "label": "Estimate, difference and time derivative",
+        "symbols": [
+          "hat",
+          "ˆ",
+          "δ",
+          "Δ",
+          "dot",
+          "qdot",
+          "idot",
+          "ż"
+        ],
+        "unit": "depends on quantity; derivative adds /s",
+        "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+        "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+        "cautions": [
+          "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+        ],
+        "equation": "ż = dz/dt",
+        "aliases": [],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "math.matrix",
+        "label": "Matrix, transpose, diagonal and inverse",
+        "symbols": [
+          "T",
+          "diag",
+          "Z^-1",
+          "matrix"
+        ],
+        "unit": "depends on its mapping",
+        "plain": "A matrix collects several linked equations into one map.",
+        "meaning": "Transpose T swaps rows/columns; diag forms a diagonal matrix; inverse undoes an invertible map.",
+        "cautions": [
+          "A matrix inverse is not defined at a singular parameter choice."
+        ],
+        "aliases": [
+          "transpose",
+          "diagonal",
+          "inverse"
+        ],
+        "domain": "math",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "newton-tesla-research-lab/docs/contracts/R2.json",
+          "newton-tesla-research-lab/docs/contracts/R3.json"
+        ]
+      },
+      {
+        "id": "units.si",
+        "label": "SI and unit prefixes",
+        "symbols": [
+          "SI",
+          "m",
+          "cm",
+          "mm",
+          "µ",
+          "milli",
+          "micro",
+          "nano"
+        ],
+        "unit": "declared physical unit",
+        "plain": "SI is the international system of measurement units.",
+        "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+        "cautions": [
+          "A source drawing in cm or mm is not silently a metres-based parts table."
+        ],
+        "aliases": [],
+        "domain": "units",
+        "sourceRefs": [
+          "https://www.bipm.org/en/measurement-units"
+        ]
+      },
+      {
+        "id": "digital.svg",
+        "label": "Scalable Vector Graphics",
+        "symbols": [
+          "SVG"
+        ],
+        "unit": "file format; no physical unit",
+        "plain": "SVG stores a drawing as shapes and text.",
+        "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+        "cautions": [
+          "A precise-looking SVG is not a validated construction drawing."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.json",
+        "label": "JavaScript Object Notation",
+        "symbols": [
+          "JSON"
+        ],
+        "unit": "data format; no physical unit",
+        "plain": "JSON stores structured data that can be exported and inspected.",
+        "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+        "cautions": [
+          "Serialization does not authenticate a claim or measure a device."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.sha256",
+        "label": "SHA-256 content digest",
+        "symbols": [
+          "SHA-256",
+          "SHA256"
+        ],
+        "unit": "256-bit digest",
+        "plain": "A digest helps compare whether two files have the same bytes.",
+        "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+        "cautions": [
+          "A matching digest proves neither the truth of content nor its author."
+        ],
+        "aliases": [
+          "hash"
+        ],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      }
+    ],
+    "equations": [
+      {
+        "id": "sine-amplitude",
+        "title": "Peak and RMS are different conventions",
+        "equation": "Vpeak = √2 Vrms; P_R = Vrms²/R = Vpeak²/(2R)",
+        "plain": "For a sine across a resistor, 1 V peak gives half the heating power of 1 V RMS at the same resistance.",
+        "convention": "Pure sinusoid; ideal fixed resistor; upstream phasors peak, host circuit input RMS.",
+        "termIds": [
+          "measurement.rms",
+          "measurement.peak",
+          "electricity.voltage",
+          "electricity.resistance",
+          "electricity.power"
+        ],
+        "units": "V, Ω, W; at R=1 Ω: 1 V peak →0.5 W, 1 V RMS →1 W.",
+        "cautions": [
+          "Do not apply the √2 conversion to arbitrary waveforms."
+        ],
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      },
+      {
+        "id": "circuit-energy",
+        "title": "Account for all source work",
+        "equation": "Win = Wload + Wloss + ΔE; E = ½ iᵀLi + ½ qᵀdiag(1/C)q",
+        "plain": "Source work goes to useful load, heating losses and a change of stored energy.",
+        "convention": "Instantaneous states and signed finite-time work; no RMS substitution into instantaneous storage.",
+        "termIds": [
+          "electricity.work",
+          "electricity.stored-energy",
+          "electricity.current",
+          "electricity.charge",
+          "electricity.inductance",
+          "electricity.capacitance",
+          "math.matrix",
+          "math.estimates"
+        ],
+        "units": "Each work/storage term J; i A, q C, L H, capacitance F.",
+        "cautions": [
+          "Initial stored energy is included. Voltage gain alone is not surplus energy."
+        ],
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R1.json",
+          "resonance-lab/src/workbench/device-model.ts"
+        ]
+      }
+    ],
+    "handbook": {
+      "schema": "blueprint-handbook/v1",
+      "recordId": "atlas:v4-electric-energy",
+      "title": "Series RLC: source, load and stored energy",
+      "kind": "exact SVG circuit and measurement-boundary diagram",
+      "status": "proposed_unbuilt",
+      "overview": "Exact R3 model topology; a physical measurement arrangement is proposed and unbuilt. Voltage gain can exceed one while source work closes against load heat, internal loss and storage change. Probe symbols indicate waveform acquisition, not slow-meter readings; real sensor loading and bandwidth need characterization.",
+      "goal": "Follow one series resistance–inductance–capacitance energy account and see why a large component voltage need not imply energy gain.",
+      "signalSteps": [
+        "A declared source supplies current through the series circuit.",
+        "Resistance dissipates energy while inductance and capacitance store and return energy.",
+        "Integrate signed source power and compare load heat, internal losses and the storage change."
+      ],
+      "variables": [
+        {
+          "id": "electricity.inductance",
+          "label": "Inductance",
+          "symbols": [
+            "L",
+            "L1",
+            "L2"
+          ],
+          "unit": "henry (H)",
+          "plain": "Inductance tells how current stores magnetic energy.",
+          "meaning": "A scalar coil coefficient or symmetric inductance matrix, according to the attached contract.",
+          "cautions": [
+            "Drawing diameter and turns are not a measured inductance."
+          ],
+          "equation": "E = ½ L i²",
+          "aliases": [
+            "coil"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.mutual-inductance",
+          "label": "Mutual inductance",
+          "symbols": [
+            "M"
+          ],
+          "unit": "henry (H)",
+          "plain": "Changing current in one coil can induce voltage in another.",
+          "meaning": "The signed cross-coil coefficient; its sign depends on the chosen winding/dot convention.",
+          "cautions": [
+            "Mutual coupling does not supply energy."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.coupling",
+          "label": "Coupling coefficient",
+          "symbols": [
+            "k"
+          ],
+          "unit": "dimensionless",
+          "plain": "Coupling describes how strongly two modeled coils interact.",
+          "meaning": "In this passive positive-definite two-coil fixture, M = k√(L1 L2) and |k| < 1.",
+          "cautions": [
+            "A selected k is not a measured coil calibration."
+          ],
+          "equation": "M = k√(L1 L2)",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.capacitance",
+          "label": "Capacitance",
+          "symbols": [
+            "C",
+            "C1",
+            "C2"
+          ],
+          "unit": "farad (F)",
+          "plain": "A capacitor stores energy in an electric field.",
+          "meaning": "The capacitance coefficient; it is not the mathematical field of complex numbers ℂ.",
+          "cautions": [
+            "C as capacitance differs from C used for coulombs or ℂ."
+          ],
+          "equation": "E = ½ C v²",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.resistance",
+          "label": "Resistance and useful load",
+          "symbols": [
+            "R",
+            "R1",
+            "R2",
+            "RL",
+            "Rload",
+            "Rloss",
+            "Ri"
+          ],
+          "unit": "ohm (Ω)",
+          "plain": "Resistance converts electrical energy to heat.",
+          "meaning": "The receiving load and winding/internal losses are accounted for separately.",
+          "cautions": [
+            "R1 can also name a research round; ℝ denotes real numbers, not resistance."
+          ],
+          "equation": "P = I_rms² R",
+          "aliases": [
+            "copper loss",
+            "load"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.charge",
+          "label": "Electric charge",
+          "symbols": [
+            "q"
+          ],
+          "unit": "coulomb (C)",
+          "plain": "Charge measures how much electricity has accumulated.",
+          "meaning": "q is an instantaneous scalar or vector; its time derivative is current.",
+          "cautions": [
+            "The unit C means coulomb here, not capacitance."
+          ],
+          "equation": "dq/dt = i",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.current",
+          "label": "Electrical current",
+          "symbols": [
+            "i",
+            "I",
+            "I1",
+            "I2"
+          ],
+          "unit": "ampere (A)",
+          "plain": "Current is the flow rate of electric charge.",
+          "meaning": "Lowercase i(t) is instantaneous; uppercase I is a phasor whose peak/RMS convention must be declared.",
+          "cautions": [
+            "The imaginary unit i in an impedance equation is a different meaning."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.voltage",
+          "label": "Voltage and source-port drive",
+          "symbols": [
+            "v",
+            "V",
+            "e1",
+            "e2",
+            "Vc",
+            "Vs",
+            "Vl"
+          ],
+          "unit": "volt (V)",
+          "plain": "Voltage is electrical potential difference between two points.",
+          "meaning": "Instantaneous voltages and complex source-port phasors are distinct representations.",
+          "cautions": [
+            "A source knob is not automatically a measured port voltage; declare peak or RMS."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.angular-frequency",
+          "label": "Angular frequency",
+          "symbols": [
+            "ω",
+            "omega"
+          ],
+          "unit": "radian per second (rad/s)",
+          "plain": "Angular frequency counts how quickly a cycle turns through angle.",
+          "meaning": "One cycle is 2π radians, so ω = 2π f.",
+          "cautions": [
+            "Radians per second and hertz differ by 2π."
+          ],
+          "equation": "ω = 2πf",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.impedance",
+          "label": "Impedance and reactance",
+          "symbols": [
+            "Z",
+            "X",
+            "Z11",
+            "Z22",
+            "Z12"
+          ],
+          "unit": "ohm (Ω)",
+          "plain": "Impedance describes opposition to an alternating current.",
+          "meaning": "Complex impedance combines resistance with reactive phase response; X = ωL − 1/(ωC) in the host series circuit.",
+          "cautions": [
+            "Voltage magnification across storage elements is not power gain."
+          ],
+          "equation": "Z = R + jX",
+          "aliases": [
+            "reactance"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.power",
+          "label": "Real average power",
+          "symbols": [
+            "P",
+            "Pin",
+            "Psource",
+            "Pload",
+            "Ploss"
+          ],
+          "unit": "watt (W), equivalent to J/s",
+          "plain": "Power is the rate at which energy is transferred.",
+          "meaning": "Real average source power uses the real part of voltage times conjugate current, with a convention-dependent factor.",
+          "cautions": [
+            "Peak phasors need a factor ½; RMS phasors do not."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.stored-energy",
+          "label": "Stored energy",
+          "symbols": [
+            "E",
+            "ΔE"
+          ],
+          "unit": "joule (J)",
+          "plain": "Energy can remain in the capacitor and magnetic field.",
+          "meaning": "Initial and final stored states belong in a finite-time source-work budget.",
+          "cautions": [
+            "Released initial energy is not unexplained energy production."
+          ],
+          "equation": "E = ½Li² + ½CvC²",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.work",
+          "label": "Work transferred over time",
+          "symbols": [
+            "W",
+            "Win",
+            "Wload",
+            "Wloss"
+          ],
+          "unit": "joule (J)",
+          "plain": "Work is energy transferred during a chosen interval.",
+          "meaning": "Integrating signed instantaneous power gives work; uppercase W here is a variable, while W after a number is the watt unit.",
+          "cautions": [
+            "Lowercase w in the witness contract denotes a voltage, not work."
+          ],
+          "equation": "Win = ∫v(t)i(t)dt",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "measurement.rms",
+          "label": "Root mean square",
+          "symbols": [
+            "RMS",
+            "Vrms",
+            "Irms"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "RMS is the square root of the mean squared signal.",
+          "meaning": "For a pure sine only, peak amplitude is √2 times RMS. For a fixed resistor, RMS determines average heating.",
+          "cautions": [
+            "RMS is not the arithmetic mean or a universal peak conversion."
+          ],
+          "equation": "x_rms = √mean(x²); sine: x_peak = √2 x_rms",
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.peak",
+          "label": "Peak amplitude",
+          "symbols": [
+            "peak",
+            "Vpeak",
+            "Ipeak"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "Peak amplitude is the largest excursion from zero.",
+          "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+          "cautions": [
+            "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "math.estimates",
+          "label": "Estimate, difference and time derivative",
+          "symbols": [
+            "hat",
+            "ˆ",
+            "δ",
+            "Δ",
+            "dot",
+            "qdot",
+            "idot",
+            "ż"
+          ],
+          "unit": "depends on quantity; derivative adds /s",
+          "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+          "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+          "cautions": [
+            "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+          ],
+          "equation": "ż = dz/dt",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.matrix",
+          "label": "Matrix, transpose, diagonal and inverse",
+          "symbols": [
+            "T",
+            "diag",
+            "Z^-1",
+            "matrix"
+          ],
+          "unit": "depends on its mapping",
+          "plain": "A matrix collects several linked equations into one map.",
+          "meaning": "Transpose T swaps rows/columns; diag forms a diagonal matrix; inverse undoes an invertible map.",
+          "cautions": [
+            "A matrix inverse is not defined at a singular parameter choice."
+          ],
+          "aliases": [
+            "transpose",
+            "diagonal",
+            "inverse"
+          ],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "id": "electricity.inductance",
+          "label": "Inductance",
+          "symbols": [
+            "L",
+            "L1",
+            "L2"
+          ],
+          "unit": "henry (H)",
+          "plain": "Inductance tells how current stores magnetic energy.",
+          "meaning": "A scalar coil coefficient or symmetric inductance matrix, according to the attached contract.",
+          "cautions": [
+            "Drawing diameter and turns are not a measured inductance."
+          ],
+          "equation": "E = ½ L i²",
+          "aliases": [
+            "coil"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.mutual-inductance",
+          "label": "Mutual inductance",
+          "symbols": [
+            "M"
+          ],
+          "unit": "henry (H)",
+          "plain": "Changing current in one coil can induce voltage in another.",
+          "meaning": "The signed cross-coil coefficient; its sign depends on the chosen winding/dot convention.",
+          "cautions": [
+            "Mutual coupling does not supply energy."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.coupling",
+          "label": "Coupling coefficient",
+          "symbols": [
+            "k"
+          ],
+          "unit": "dimensionless",
+          "plain": "Coupling describes how strongly two modeled coils interact.",
+          "meaning": "In this passive positive-definite two-coil fixture, M = k√(L1 L2) and |k| < 1.",
+          "cautions": [
+            "A selected k is not a measured coil calibration."
+          ],
+          "equation": "M = k√(L1 L2)",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.capacitance",
+          "label": "Capacitance",
+          "symbols": [
+            "C",
+            "C1",
+            "C2"
+          ],
+          "unit": "farad (F)",
+          "plain": "A capacitor stores energy in an electric field.",
+          "meaning": "The capacitance coefficient; it is not the mathematical field of complex numbers ℂ.",
+          "cautions": [
+            "C as capacitance differs from C used for coulombs or ℂ."
+          ],
+          "equation": "E = ½ C v²",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.resistance",
+          "label": "Resistance and useful load",
+          "symbols": [
+            "R",
+            "R1",
+            "R2",
+            "RL",
+            "Rload",
+            "Rloss",
+            "Ri"
+          ],
+          "unit": "ohm (Ω)",
+          "plain": "Resistance converts electrical energy to heat.",
+          "meaning": "The receiving load and winding/internal losses are accounted for separately.",
+          "cautions": [
+            "R1 can also name a research round; ℝ denotes real numbers, not resistance."
+          ],
+          "equation": "P = I_rms² R",
+          "aliases": [
+            "copper loss",
+            "load"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.charge",
+          "label": "Electric charge",
+          "symbols": [
+            "q"
+          ],
+          "unit": "coulomb (C)",
+          "plain": "Charge measures how much electricity has accumulated.",
+          "meaning": "q is an instantaneous scalar or vector; its time derivative is current.",
+          "cautions": [
+            "The unit C means coulomb here, not capacitance."
+          ],
+          "equation": "dq/dt = i",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.current",
+          "label": "Electrical current",
+          "symbols": [
+            "i",
+            "I",
+            "I1",
+            "I2"
+          ],
+          "unit": "ampere (A)",
+          "plain": "Current is the flow rate of electric charge.",
+          "meaning": "Lowercase i(t) is instantaneous; uppercase I is a phasor whose peak/RMS convention must be declared.",
+          "cautions": [
+            "The imaginary unit i in an impedance equation is a different meaning."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.voltage",
+          "label": "Voltage and source-port drive",
+          "symbols": [
+            "v",
+            "V",
+            "e1",
+            "e2",
+            "Vc",
+            "Vs",
+            "Vl"
+          ],
+          "unit": "volt (V)",
+          "plain": "Voltage is electrical potential difference between two points.",
+          "meaning": "Instantaneous voltages and complex source-port phasors are distinct representations.",
+          "cautions": [
+            "A source knob is not automatically a measured port voltage; declare peak or RMS."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.angular-frequency",
+          "label": "Angular frequency",
+          "symbols": [
+            "ω",
+            "omega"
+          ],
+          "unit": "radian per second (rad/s)",
+          "plain": "Angular frequency counts how quickly a cycle turns through angle.",
+          "meaning": "One cycle is 2π radians, so ω = 2π f.",
+          "cautions": [
+            "Radians per second and hertz differ by 2π."
+          ],
+          "equation": "ω = 2πf",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.impedance",
+          "label": "Impedance and reactance",
+          "symbols": [
+            "Z",
+            "X",
+            "Z11",
+            "Z22",
+            "Z12"
+          ],
+          "unit": "ohm (Ω)",
+          "plain": "Impedance describes opposition to an alternating current.",
+          "meaning": "Complex impedance combines resistance with reactive phase response; X = ωL − 1/(ωC) in the host series circuit.",
+          "cautions": [
+            "Voltage magnification across storage elements is not power gain."
+          ],
+          "equation": "Z = R + jX",
+          "aliases": [
+            "reactance"
+          ],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.power",
+          "label": "Real average power",
+          "symbols": [
+            "P",
+            "Pin",
+            "Psource",
+            "Pload",
+            "Ploss"
+          ],
+          "unit": "watt (W), equivalent to J/s",
+          "plain": "Power is the rate at which energy is transferred.",
+          "meaning": "Real average source power uses the real part of voltage times conjugate current, with a convention-dependent factor.",
+          "cautions": [
+            "Peak phasors need a factor ½; RMS phasors do not."
+          ],
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.stored-energy",
+          "label": "Stored energy",
+          "symbols": [
+            "E",
+            "ΔE"
+          ],
+          "unit": "joule (J)",
+          "plain": "Energy can remain in the capacitor and magnetic field.",
+          "meaning": "Initial and final stored states belong in a finite-time source-work budget.",
+          "cautions": [
+            "Released initial energy is not unexplained energy production."
+          ],
+          "equation": "E = ½Li² + ½CvC²",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "electricity.work",
+          "label": "Work transferred over time",
+          "symbols": [
+            "W",
+            "Win",
+            "Wload",
+            "Wloss"
+          ],
+          "unit": "joule (J)",
+          "plain": "Work is energy transferred during a chosen interval.",
+          "meaning": "Integrating signed instantaneous power gives work; uppercase W here is a variable, while W after a number is the watt unit.",
+          "cautions": [
+            "Lowercase w in the witness contract denotes a voltage, not work."
+          ],
+          "equation": "Win = ∫v(t)i(t)dt",
+          "aliases": [],
+          "domain": "electricity",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "measurement.rms",
+          "label": "Root mean square",
+          "symbols": [
+            "RMS",
+            "Vrms",
+            "Irms"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "RMS is the square root of the mean squared signal.",
+          "meaning": "For a pure sine only, peak amplitude is √2 times RMS. For a fixed resistor, RMS determines average heating.",
+          "cautions": [
+            "RMS is not the arithmetic mean or a universal peak conversion."
+          ],
+          "equation": "x_rms = √mean(x²); sine: x_peak = √2 x_rms",
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.peak",
+          "label": "Peak amplitude",
+          "symbols": [
+            "peak",
+            "Vpeak",
+            "Ipeak"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "Peak amplitude is the largest excursion from zero.",
+          "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+          "cautions": [
+            "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "math.estimates",
+          "label": "Estimate, difference and time derivative",
+          "symbols": [
+            "hat",
+            "ˆ",
+            "δ",
+            "Δ",
+            "dot",
+            "qdot",
+            "idot",
+            "ż"
+          ],
+          "unit": "depends on quantity; derivative adds /s",
+          "plain": "Marks over a symbol tell you which version, change or bound is meant.",
+          "meaning": "A hat denotes an estimate; δ often a difference or perturbation; Δ can denote a final-minus-initial change or a supplied error bound, according to the contract; a dot is a time derivative.",
+          "cautions": [
+            "Δa and ΔM in these contracts are error-bound radii, not temporal changes. Every symbol needs declared units; ż is velocity, not position."
+          ],
+          "equation": "ż = dz/dt",
+          "aliases": [],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "math.matrix",
+          "label": "Matrix, transpose, diagonal and inverse",
+          "symbols": [
+            "T",
+            "diag",
+            "Z^-1",
+            "matrix"
+          ],
+          "unit": "depends on its mapping",
+          "plain": "A matrix collects several linked equations into one map.",
+          "meaning": "Transpose T swaps rows/columns; diag forms a diagonal matrix; inverse undoes an invertible map.",
+          "cautions": [
+            "A matrix inverse is not defined at a singular parameter choice."
+          ],
+          "aliases": [
+            "transpose",
+            "diagonal",
+            "inverse"
+          ],
+          "domain": "math",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "newton-tesla-research-lab/docs/contracts/R2.json",
+            "newton-tesla-research-lab/docs/contracts/R3.json"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "equations": [
+        {
+          "id": "sine-amplitude",
+          "title": "Peak and RMS are different conventions",
+          "equation": "Vpeak = √2 Vrms; P_R = Vrms²/R = Vpeak²/(2R)",
+          "plain": "For a sine across a resistor, 1 V peak gives half the heating power of 1 V RMS at the same resistance.",
+          "convention": "Pure sinusoid; ideal fixed resistor; upstream phasors peak, host circuit input RMS.",
+          "termIds": [
+            "measurement.rms",
+            "measurement.peak",
+            "electricity.voltage",
+            "electricity.resistance",
+            "electricity.power"
+          ],
+          "units": "V, Ω, W; at R=1 Ω: 1 V peak →0.5 W, 1 V RMS →1 W.",
+          "cautions": [
+            "Do not apply the √2 conversion to arbitrary waveforms."
+          ],
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        },
+        {
+          "id": "circuit-energy",
+          "title": "Account for all source work",
+          "equation": "Win = Wload + Wloss + ΔE; E = ½ iᵀLi + ½ qᵀdiag(1/C)q",
+          "plain": "Source work goes to useful load, heating losses and a change of stored energy.",
+          "convention": "Instantaneous states and signed finite-time work; no RMS substitution into instantaneous storage.",
+          "termIds": [
+            "electricity.work",
+            "electricity.stored-energy",
+            "electricity.current",
+            "electricity.charge",
+            "electricity.inductance",
+            "electricity.capacitance",
+            "math.matrix",
+            "math.estimates"
+          ],
+          "units": "Each work/storage term J; i A, q C, L H, capacitance F.",
+          "cautions": [
+            "Initial stored energy is included. Voltage gain alone is not surplus energy."
+          ],
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R1.json",
+            "resonance-lab/src/workbench/device-model.ts"
+          ]
+        }
+      ],
+      "contractFields": [],
+      "whatKnown": [
+        "The source caption identifies an exact numerical model topology and a proposed unbuilt measurement arrangement.",
+        "Probe symbols denote waveform acquisition, not complete information from a slow meter.",
+        "Original source status: proposed_unbuilt."
+      ],
+      "whatUnknown": [
+        "Physical probe bandwidth, loading, calibration and real component ratings are not inferred.",
+        "The source drawing does not supply a complete normalized manufacturing or parts specification."
+      ],
+      "measurementChecklist": [
+        "Acquire simultaneous voltage and current waveforms with signs and time alignment.",
+        "Include endpoint stored energy and every implemented loss/source in the finite-time account."
+      ],
+      "questions": [
+        "Is the comparison about voltage, power or energy?",
+        "Which source of stored energy is present at the start of the window?",
+        "Does a sensor alter the circuit being measured?"
+      ],
+      "sourceHierarchy": [
+        {
+          "label": "Why this subject is here",
+          "meaning": "Historical or external publications provide context; their claims and reading depth do not become new measurements.",
+          "references": []
+        },
+        {
+          "label": "How the model or drawing was declared",
+          "meaning": "Pinned source records and contracts identify assumptions. Drawing geometry does not determine missing electrical or material properties.",
+          "references": [
+            {
+              "title": "resonance-research-atlas/docs/panel-v4/setup-catalog.json",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            },
+            {
+              "title": "resonance-research-atlas/docs/panel-v4/apparatus.md",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            }
+          ]
+        },
+        {
+          "label": "Which file was viewed",
+          "meaning": "Source and already-served copies are different observations. A content hash identifies bytes, not scientific truth, authorship certification or construction readiness.",
+          "references": [
+            {
+              "title": "assets/sound-lab-v4/electrical-energy-boundary.svg",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/assets/sound-lab-v4/electrical-energy-boundary.svg",
+              "readingDepth": "Pinned artifact reference; no physical apparatus verification follows."
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+        "Exact R3 model topology; a physical measurement arrangement is proposed and unbuilt. Voltage gain can exceed one while source work closes against load heat, internal loss and storage change. Probe symbols indicate waveform acquisition, not slow-meter readings; real sensor loading and bandwidth need characterization.",
+        "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation.",
+        "This guide explains the declared study. It supplies no missing engineering specification, calibration, purchase requirement or construction approval."
+      ],
+      "coverage": {
+        "recordSpecific": true,
+        "termCount": 22,
+        "equationCount": 2,
+        "claim": "Explicit guide and selected contextual terms for this record; not automatic coverage of every raw source symbol or an exhaustive technical dictionary."
+      }
+    },
+    "notes": "Source-based explanatory sketch and reading packet. Not a manufacturing drawing, rated bill of parts, physical calibration or observed device-performance result."
+  },
+  "limitations": [
+    "Exact R3 model topology; a physical measurement arrangement is proposed and unbuilt. Voltage gain can exceed one while source work closes against load heat, internal loss and storage change. Probe symbols indicate waveform acquisition, not slow-meter readings; real sensor loading and bandwidth need characterization.",
+    "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation.",
+    "Authored scenario and sketch revisions are separate from the pinned source record.",
+    "Missing ratings, turns, insulation, materials and calibration remain unknown.",
+    "This packet is an explanatory review, not a manufacturing drawing, hardware validation or operating approval."
+  ]
+}

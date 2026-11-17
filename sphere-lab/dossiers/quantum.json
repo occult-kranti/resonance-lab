@@ -1,0 +1,7993 @@
+{
+  "schema": "sphere-study-dossier/v1",
+  "id": "quantum",
+  "title": "Transfer a state. Keep the channel.",
+  "status": "proposed-setup-with-synthetic-computation",
+  "sourceIdentity": {
+    "implementation": [
+      {
+        "path": "src/workbench/sphere-models.ts",
+        "sha256": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d"
+      },
+      {
+        "path": "src/workbench/sphere-acoustics.ts",
+        "sha256": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473"
+      },
+      {
+        "path": "src/workbench/sphere-quantum.ts",
+        "sha256": "15a1a416362bc53aac4ae2dee9554b78ffa738b1f52a21e81cef53fee446ce4c"
+      },
+      {
+        "path": "src/workbench/sphere-drawings.ts",
+        "sha256": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb"
+      },
+      {
+        "path": "src/workbench/patent-drawings.ts",
+        "sha256": "6a7eec387096b9a751c82ce40afa31e63fcd71b146ca20691d0e2a64a24df61e"
+      },
+      {
+        "path": "scripts/export-sphere-studies.mjs",
+        "sha256": "2ab576971a197b047c958ab1bfc20a3e1773806aac22d213ebfab7dbbe5a70cc"
+      }
+    ],
+    "scene": {
+      "id": "quantum-teleportation",
+      "source": {
+        "path": "scripts/render-sphere-studies.py",
+        "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+      }
+    },
+    "sourceIds": [
+      "quantum-bennett-1993",
+      "quantum-horodecki-1999",
+      "quantum-thomas-2024"
+    ],
+    "reviewedAt": "2026-11-17T06:38:10.690068+00:00"
+  },
+  "study": {
+    "id": "quantum",
+    "title": "Transfer a state. Keep the channel.",
+    "kicker": "05 / Quantum teleportation",
+    "sceneId": "quantum-teleportation",
+    "sourceIds": [
+      "quantum-bennett-1993",
+      "quantum-horodecki-1999",
+      "quantum-thomas-2024"
+    ],
+    "summary": "Inspect Bell branches, classical correction and receiver uncertainty in an ideal qubit channel.",
+    "inputs": [
+      {
+        "key": "thetaRad",
+        "label": "State polar angle",
+        "symbol": "theta",
+        "unit": "rad",
+        "min": 0,
+        "max": 3.141592653589793,
+        "step": 0.01,
+        "value": 1.05,
+        "meaning": "Bloch-sphere polar angle in radians."
+      },
+      {
+        "key": "phiRad",
+        "label": "State azimuth",
+        "symbol": "phi",
+        "unit": "rad",
+        "min": 0,
+        "max": 6.283185307179586,
+        "step": 0.01,
+        "value": 0.7,
+        "meaning": "Bloch-sphere azimuth in radians."
+      },
+      {
+        "key": "visibility",
+        "label": "Bell-resource visibility",
+        "symbol": "v",
+        "unit": "1",
+        "min": 0,
+        "max": 1,
+        "step": 0.01,
+        "value": 0.85,
+        "meaning": "Assumed ideal Bell-resource fraction; remaining fraction is maximally mixed noise."
+      }
+    ],
+    "assumptions": [
+      "Ideal Bell measurement, feed-forward and single-qubit channel; isotropic Bell resource noise only.",
+      "Two classical bits are required. The receiver without the message is maximally mixed."
+    ],
+    "setup": [
+      "Start with the state-vector/density-matrix simulation; the 3D optics scene is a conceptual layout without an optical link budget.",
+      "A laboratory implementation needs a characterized entanglement source, detectors, timing, interference, Bell analyzer and classical feed-forward.",
+      "Define heralding, success rate and fair comparison before evaluating fidelity; no matter transport is modeled."
+    ],
+    "controls": [
+      "Visibility zero gives fidelity 1/2.",
+      "Visibility one and corrected branches return the input state.",
+      "Remove classical messages: receiver density matrix stays I/2 for every input."
+    ],
+    "falsifier": "A state-dependent receiver before the classical message would contradict this no-signalling model; branch probabilities and corrections are independently checked.",
+    "scope": "Quantum information transfer under stated assumptions, with a uniform pure-qubit classical benchmark of 2/3. No macroscopic object teleportation."
+  },
+  "defaultInputs": {
+    "thetaRad": 1.05,
+    "phiRad": 0.7,
+    "visibility": 0.85
+  },
+  "defaultCalculation": {
+    "metrics": [
+      {
+        "label": "Corrected state fidelity",
+        "value": 0.925,
+        "unit": "1",
+        "meaning": "Overlap between input pure state and corrected noisy output."
+      },
+      {
+        "label": "Classical average benchmark",
+        "value": 0.6666666666666666,
+        "unit": "1",
+        "meaning": "Uniform pure-qubit ensemble measure-and-prepare benchmark; not a threshold for matter transport."
+      },
+      {
+        "label": "Classical message",
+        "value": 2,
+        "unit": "bit",
+        "meaning": "Two binary symbols specify the correction. Entanglement alone sends no usable input information."
+      }
+    ],
+    "curve": [
+      {
+        "x": 0,
+        "y": 0.5
+      },
+      {
+        "x": 0.02,
+        "y": 0.51
+      },
+      {
+        "x": 0.04,
+        "y": 0.52
+      },
+      {
+        "x": 0.06,
+        "y": 0.53
+      },
+      {
+        "x": 0.08,
+        "y": 0.54
+      },
+      {
+        "x": 0.1,
+        "y": 0.55
+      },
+      {
+        "x": 0.12,
+        "y": 0.56
+      },
+      {
+        "x": 0.14,
+        "y": 0.5700000000000001
+      },
+      {
+        "x": 0.16,
+        "y": 0.58
+      },
+      {
+        "x": 0.18,
+        "y": 0.59
+      },
+      {
+        "x": 0.2,
+        "y": 0.6
+      },
+      {
+        "x": 0.22,
+        "y": 0.61
+      },
+      {
+        "x": 0.24,
+        "y": 0.62
+      },
+      {
+        "x": 0.26,
+        "y": 0.63
+      },
+      {
+        "x": 0.28,
+        "y": 0.64
+      },
+      {
+        "x": 0.3,
+        "y": 0.65
+      },
+      {
+        "x": 0.32,
+        "y": 0.66
+      },
+      {
+        "x": 0.34,
+        "y": 0.67
+      },
+      {
+        "x": 0.36,
+        "y": 0.6799999999999999
+      },
+      {
+        "x": 0.38,
+        "y": 0.69
+      },
+      {
+        "x": 0.4,
+        "y": 0.7
+      },
+      {
+        "x": 0.42,
+        "y": 0.71
+      },
+      {
+        "x": 0.44,
+        "y": 0.72
+      },
+      {
+        "x": 0.46,
+        "y": 0.73
+      },
+      {
+        "x": 0.48,
+        "y": 0.74
+      },
+      {
+        "x": 0.5,
+        "y": 0.75
+      },
+      {
+        "x": 0.52,
+        "y": 0.76
+      },
+      {
+        "x": 0.54,
+        "y": 0.77
+      },
+      {
+        "x": 0.56,
+        "y": 0.78
+      },
+      {
+        "x": 0.58,
+        "y": 0.79
+      },
+      {
+        "x": 0.6,
+        "y": 0.8
+      },
+      {
+        "x": 0.62,
+        "y": 0.81
+      },
+      {
+        "x": 0.64,
+        "y": 0.8200000000000001
+      },
+      {
+        "x": 0.66,
+        "y": 0.8300000000000001
+      },
+      {
+        "x": 0.68,
+        "y": 0.8400000000000001
+      },
+      {
+        "x": 0.7,
+        "y": 0.85
+      },
+      {
+        "x": 0.72,
+        "y": 0.86
+      },
+      {
+        "x": 0.74,
+        "y": 0.87
+      },
+      {
+        "x": 0.76,
+        "y": 0.88
+      },
+      {
+        "x": 0.78,
+        "y": 0.89
+      },
+      {
+        "x": 0.8,
+        "y": 0.9
+      },
+      {
+        "x": 0.82,
+        "y": 0.9099999999999999
+      },
+      {
+        "x": 0.84,
+        "y": 0.9199999999999999
+      },
+      {
+        "x": 0.86,
+        "y": 0.9299999999999999
+      },
+      {
+        "x": 0.88,
+        "y": 0.94
+      },
+      {
+        "x": 0.9,
+        "y": 0.95
+      },
+      {
+        "x": 0.92,
+        "y": 0.96
+      },
+      {
+        "x": 0.94,
+        "y": 0.97
+      },
+      {
+        "x": 0.96,
+        "y": 0.98
+      },
+      {
+        "x": 0.98,
+        "y": 0.99
+      },
+      {
+        "x": 1,
+        "y": 1
+      }
+    ],
+    "xLabel": "Resource visibility (dimensionless)",
+    "yLabel": "Uniform pure-state fidelity",
+    "warnings": [
+      "This ideal channel assumes successful Bell measurement and correction. Physical success rates, detector losses and an optical link budget are not modeled."
+    ],
+    "equations": [
+      {
+        "expression": "rho_out = v*rho_in + (1-v)*I/2; F = (1+v)/2",
+        "meaning": "rho is a density matrix (dimensionless), v is resource visibility, I is the two-dimensional identity matrix and F is state overlap."
+      },
+      {
+        "expression": "rho_receiver(no message) = I/2",
+        "meaning": "Average over all four Bell-measurement branches before the two classical bits arrive. State does not depend on the input."
+      },
+      {
+        "expression": "Bell branches: Phi+, Phi-, Psi+, Psi-; corrections I, Z, X, XZ",
+        "meaning": "These are names of four maximally entangled basis states. I leaves a state unchanged, Z reverses relative phase, X swaps the two basis amplitudes, XZ applies both (global phase is unobservable). Each branch has probability 1/4 here. A bit is one binary symbol. Bloch x/y/z are three dimensionless coordinates representing the qubit density matrix, not physical locations. Matrix entries use i=sqrt(-1), the imaginary unit."
+      }
+    ],
+    "interpretation": "Quantum information transfer under stated assumptions, with a uniform pure-qubit classical benchmark of 2/3. No macroscopic object teleportation.",
+    "tables": [
+      {
+        "title": "All Bell-measurement branches (ideal model)",
+        "columns": [
+          "Bell state",
+          "Classical bits (phase, flip)",
+          "Probability",
+          "Correction",
+          "Uncorrected Bloch x/y/z",
+          "Corrected Bloch x/y/z"
+        ],
+        "rows": [
+          [
+            "Phi+",
+            "00",
+            "0.25",
+            "I",
+            "(0.563926, 0.474988, 0.422935)",
+            "(0.563926, 0.474988, 0.422935)"
+          ],
+          [
+            "Phi-",
+            "10",
+            "0.25",
+            "Z",
+            "(-0.563926, -0.474988, 0.422935)",
+            "(0.563926, 0.474988, 0.422935)"
+          ],
+          [
+            "Psi+",
+            "01",
+            "0.25",
+            "X",
+            "(0.563926, -0.474988, -0.422935)",
+            "(0.563926, 0.474988, 0.422935)"
+          ],
+          [
+            "Psi-",
+            "11",
+            "0.25",
+            "XZ",
+            "(-0.563926, 0.474988, -0.422935)",
+            "(0.563926, 0.474988, 0.422935)"
+          ]
+        ]
+      },
+      {
+        "title": "Receiver density matrix before the classical message",
+        "columns": [
+          "Row",
+          "Column 0",
+          "Column 1"
+        ],
+        "rows": [
+          [
+            "0",
+            "0.500000 + 0i",
+            "0 + 0i"
+          ],
+          [
+            "1",
+            "0 + 0i",
+            "0.500000 + 0i"
+          ]
+        ]
+      }
+    ]
+  },
+  "glossary": {
+    "SI": "International System of Units.",
+    "Hz": "Hertz, cycles per second.",
+    "kHz": "Kilohertz, one thousand hertz.",
+    "Pa": "Pascal, pressure equal to one newton per square metre.",
+    "K": "Kelvin, the SI unit of temperature; temperature differences of 1K and 1°C have equal size.",
+    "ppm": "Parts per million; a relative value multiplied by one million.",
+    "ppb": "Parts per billion; a relative value multiplied by one billion.",
+    "RLC": "A circuit containing resistance R in ohms, inductance L in henry and capacitance C in farad.",
+    "RMS": "Root mean square, a waveform amplitude convention distinct from peak.",
+    "DAC": "Digital-to-analog converter, the electronic stage that turns numeric samples into a voltage.",
+    "EEG": "Electroencephalography, a measured scalp electrical signal; not simulated here.",
+    "SPL": "Sound pressure level, an acoustic measurement requiring calibration.",
+    "GLB": "Binary glTF, a 3D scene file format; this file contains illustrative geometry.",
+    "SVG": "Scalable Vector Graphics, a vector drawing format.",
+    "OSF": "Open Science Framework, the repository hosting the independently retrieved registration.",
+    "TOST": "Two one-sided tests, an equivalence-testing method; its margin and uncertainty need a declared plan.",
+    "A": "Position or condition A in the named protocol; not an ampere unless explicitly stated.",
+    "B": "Position or condition B in the named protocol; not magnetic flux density unless explicitly stated.",
+    "LOC1": "The external Sphere location-comparison protocol, with its own registered estimand."
+  },
+  "referenceDictionary": [
+    {
+      "reference": "801",
+      "componentId": "resource-source",
+      "label": "Entangled-resource source placeholder",
+      "meaning": "A pre-shared Bell resource is assumed by the ideal qubit model. Real preparation, heralding and noise calibration are missing.",
+      "positionM": [
+        -0.205,
+        0.07,
+        0.073
+      ],
+      "dimensionsM": [
+        0.085,
+        0.065,
+        0.072
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "802",
+      "componentId": "crystal",
+      "label": "Nonlinear-optics mount placeholder",
+      "meaning": "Not a selected entanglement source. Phase matching, pump, filters and efficiencies are unspecified.",
+      "positionM": [
+        -0.12,
+        0.07,
+        0.07
+      ],
+      "dimensionsM": [
+        0.035,
+        0.035,
+        0.052
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "803",
+      "componentId": "alice-analysis",
+      "label": "Alice joint-analysis placeholder",
+      "meaning": "Symbol for Alice Bell measurement only. This optical layout does not implement or verify a complete Bell-state analyzer.",
+      "positionM": [
+        0,
+        0.07,
+        0.072
+      ],
+      "dimensionsM": [
+        0.045,
+        0.045,
+        0.06
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "804",
+      "componentId": "input-state",
+      "label": "Input-state preparation placeholder",
+      "meaning": "Proposed independent input qubit preparation; source and state tomography hardware remain unspecified.",
+      "positionM": [
+        -0.03,
+        -0.1,
+        0.071
+      ],
+      "dimensionsM": [
+        0.052,
+        0.052,
+        0.058
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "805",
+      "componentId": "alice-detector",
+      "label": "Alice Detector",
+      "meaning": "Detection, heralding, timing and tomography are not supplied.",
+      "positionM": [
+        0,
+        0.135,
+        0.075
+      ],
+      "dimensionsM": [
+        0.06,
+        0.045,
+        0.07
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "806",
+      "componentId": "bob-receiver",
+      "label": "Bob Receiver",
+      "meaning": "Bob requires the classical result and a conditional Pauli correction. No superluminal channel or matter transport.",
+      "positionM": [
+        0.2,
+        0.07,
+        0.075
+      ],
+      "dimensionsM": [
+        0.06,
+        0.045,
+        0.07
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "807",
+      "componentId": "classical-channel",
+      "label": "Classical feed-forward placeholder",
+      "meaning": "Two classical bits in the ideal protocol. No active electronics, timing, correction optics or real feed-forward implementation.",
+      "positionM": [
+        0.16,
+        -0.1,
+        0.065
+      ],
+      "dimensionsM": [
+        0.12,
+        0.07,
+        0.05
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    }
+  ],
+  "worksheetReferences": [
+    {
+      "reference": "601",
+      "label": "Declared question or prediction",
+      "sourceFieldPaths": [
+        "sourceRecord.question"
+      ],
+      "missingFieldKeys": [
+        "prediction"
+      ],
+      "meaning": "Source-declared question/prediction text, not a verified result or completed experiment. Actual raw fields: question.",
+      "fieldExplanations": [
+        {
+          "key": "question",
+          "meaning": "Original question field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "602",
+      "label": "Source identity, model and proposed resources",
+      "sourceFieldPaths": [
+        "source",
+        "sourceRecord.model",
+        "sourceRecord.inputs",
+        "sourceRecord.materials"
+      ],
+      "missingFieldKeys": [
+        "category",
+        "novelty"
+      ],
+      "meaning": "Actual source identity and any declared model/input/resource fields. Their presence is not a validated apparatus, complete model or bill of materials. Actual raw fields: model, inputs, materials.",
+      "fieldExplanations": [
+        {
+          "key": "model",
+          "meaning": "Original model field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "inputs",
+          "meaning": "Original inputs field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "materials",
+          "meaning": "Original materials field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "603",
+      "label": "Declared observable or observation channel",
+      "sourceFieldPaths": [
+        "sourceRecord.observable"
+      ],
+      "missingFieldKeys": [],
+      "meaning": "Source-declared observation text. Unstated units, transfer functions, calibration and acquired data remain missing. Actual raw fields: observable.",
+      "fieldExplanations": [
+        {
+          "key": "observable",
+          "meaning": "Original observable field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "604",
+      "label": "Proposed controls, rivals and falsifiers",
+      "sourceFieldPaths": [
+        "sourceRecord.controls",
+        "sourceRecord.falsifier"
+      ],
+      "missingFieldKeys": [
+        "rival",
+        "acceptance"
+      ],
+      "meaning": "Declared discriminating conditions and alternatives. A listed control or acceptance criterion has not thereby been executed. Actual raw fields: controls, falsifier.",
+      "fieldExplanations": [
+        {
+          "key": "controls",
+          "meaning": "Original controls field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "falsifier",
+          "meaning": "Original falsifier field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "605",
+      "label": "Status, limitations and disclosure gaps",
+      "sourceFieldPaths": [
+        "sourceRecord.status",
+        "sourceRecord.limitations",
+        "status",
+        "gaps"
+      ],
+      "missingFieldKeys": [
+        "limit",
+        "limits"
+      ],
+      "meaning": "Original status and declared limits, plus worksheet gaps where present. No completion, legal filing readiness or physical validity is inferred. Actual raw fields: status, limitations.",
+      "fieldExplanations": [
+        {
+          "key": "status",
+          "meaning": "Original status field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "limitations",
+          "meaning": "Original limitations field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    }
+  ],
+  "scene": {
+    "id": "quantum-teleportation",
+    "title": "Quantum teleportation: optical educational arrangement",
+    "status": "proposed-unbuilt-concept",
+    "geometryStatus": "assumed-for-illustration",
+    "units": "m",
+    "source": {
+      "path": "scripts/render-sphere-studies.py",
+      "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+    },
+    "camera": {
+      "positionM": [
+        0.64,
+        -0.88,
+        0.72
+      ],
+      "targetM": [
+        0,
+        0,
+        0.12
+      ],
+      "projection": "orthographic",
+      "orthoScaleM": 0.83,
+      "pngPixels": [
+        800,
+        500
+      ],
+      "glbConvention": "glTF Y-up converted from Blender Z-up; one model unit is one metre"
+    },
+    "geometry": {
+      "opticalTableSizeM": [
+        0.57,
+        0.34,
+        0.016
+      ],
+      "illustrativeHolePitchM": 0.027,
+      "opticalPathSolved": false,
+      "quantumHardwareImplemented": false,
+      "meaning": "Educational arrangement, not an optical design. Ideal protocol uses three qubits, Bell measurement, two classical bits, Bob correction."
+    },
+    "components": [
+      {
+        "id": "resource-source",
+        "label": "Entangled-resource source placeholder",
+        "positionM": [
+          -0.205,
+          0.07,
+          0.073
+        ],
+        "dimensionsM": [
+          0.085,
+          0.065,
+          0.072
+        ],
+        "shape": "optical source enclosure",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "A pre-shared Bell resource is assumed by the ideal qubit model. Real preparation, heralding and noise calibration are missing."
+      },
+      {
+        "id": "crystal",
+        "label": "Nonlinear-optics mount placeholder",
+        "positionM": [
+          -0.12,
+          0.07,
+          0.07
+        ],
+        "dimensionsM": [
+          0.035,
+          0.035,
+          0.052
+        ],
+        "shape": "mount with crystal proxy",
+        "material": "matte polymer illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Not a selected entanglement source. Phase matching, pump, filters and efficiencies are unspecified."
+      },
+      {
+        "id": "alice-analysis",
+        "label": "Alice joint-analysis placeholder",
+        "positionM": [
+          0,
+          0.07,
+          0.072
+        ],
+        "dimensionsM": [
+          0.045,
+          0.045,
+          0.06
+        ],
+        "shape": "beam-splitter proxy",
+        "material": "translucent-looking crystal placeholder",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Symbol for Alice Bell measurement only. This optical layout does not implement or verify a complete Bell-state analyzer."
+      },
+      {
+        "id": "input-state",
+        "label": "Input-state preparation placeholder",
+        "positionM": [
+          -0.03,
+          -0.1,
+          0.071
+        ],
+        "dimensionsM": [
+          0.052,
+          0.052,
+          0.058
+        ],
+        "shape": "optics mount",
+        "material": "matte polymer illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Proposed independent input qubit preparation; source and state tomography hardware remain unspecified."
+      },
+      {
+        "id": "alice-detector",
+        "label": "Alice Detector",
+        "positionM": [
+          0,
+          0.135,
+          0.075
+        ],
+        "dimensionsM": [
+          0.06,
+          0.045,
+          0.07
+        ],
+        "shape": "detector/receiver enclosure proxy",
+        "material": "matte polymer illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Detection, heralding, timing and tomography are not supplied."
+      },
+      {
+        "id": "bob-receiver",
+        "label": "Bob Receiver",
+        "positionM": [
+          0.2,
+          0.07,
+          0.075
+        ],
+        "dimensionsM": [
+          0.06,
+          0.045,
+          0.07
+        ],
+        "shape": "detector/receiver enclosure proxy",
+        "material": "matte polymer illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Bob requires the classical result and a conditional Pauli correction. No superluminal channel or matter transport."
+      },
+      {
+        "id": "classical-channel",
+        "label": "Classical feed-forward placeholder",
+        "positionM": [
+          0.16,
+          -0.1,
+          0.065
+        ],
+        "dimensionsM": [
+          0.12,
+          0.07,
+          0.05
+        ],
+        "shape": "electronics enclosure",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Two classical bits in the ideal protocol. No active electronics, timing, correction optics or real feed-forward implementation."
+      }
+    ],
+    "legend": [
+      {
+        "reference": 1,
+        "componentId": "resource-source",
+        "label": "Entangled-resource source placeholder",
+        "meaning": "A pre-shared Bell resource is assumed by the ideal qubit model. Real preparation, heralding and noise calibration are missing."
+      },
+      {
+        "reference": 2,
+        "componentId": "crystal",
+        "label": "Nonlinear-optics mount placeholder",
+        "meaning": "Not a selected entanglement source. Phase matching, pump, filters and efficiencies are unspecified."
+      },
+      {
+        "reference": 3,
+        "componentId": "alice-analysis",
+        "label": "Alice joint-analysis placeholder",
+        "meaning": "Symbol for Alice Bell measurement only. This optical layout does not implement or verify a complete Bell-state analyzer."
+      },
+      {
+        "reference": 4,
+        "componentId": "input-state",
+        "label": "Input-state preparation placeholder",
+        "meaning": "Proposed independent input qubit preparation; source and state tomography hardware remain unspecified."
+      },
+      {
+        "reference": 5,
+        "componentId": "alice-detector",
+        "label": "Alice Detector",
+        "meaning": "Detection, heralding, timing and tomography are not supplied."
+      },
+      {
+        "reference": 6,
+        "componentId": "bob-receiver",
+        "label": "Bob Receiver",
+        "meaning": "Bob requires the classical result and a conditional Pauli correction. No superluminal channel or matter transport."
+      },
+      {
+        "reference": 7,
+        "componentId": "classical-channel",
+        "label": "Classical feed-forward placeholder",
+        "meaning": "Two classical bits in the ideal protocol. No active electronics, timing, correction optics or real feed-forward implementation."
+      }
+    ],
+    "objectGeometry": [
+      {
+        "name": "assumed 600 by 380 mm apparatus base",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.01
+        ],
+        "dimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.01
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "assumed optical tabletop",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.028
+        ],
+        "dimensionsM": [
+          0.57,
+          0.34,
+          0.016
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.028
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.57,
+          0.34,
+          0.016
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 0",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 1",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 2",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 3",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 4",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -9 5",
+        "type": "MESH",
+        "positionM": [
+          -0.243,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.243,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 0",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 1",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 2",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 3",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 4",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -8 5",
+        "type": "MESH",
+        "positionM": [
+          -0.216,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.216,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 0",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 1",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 2",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 3",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 4",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -7 5",
+        "type": "MESH",
+        "positionM": [
+          -0.189,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.189,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 0",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 1",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 2",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 3",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 4",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -6 5",
+        "type": "MESH",
+        "positionM": [
+          -0.162,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.162,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 0",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 1",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 2",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 3",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 4",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -5 5",
+        "type": "MESH",
+        "positionM": [
+          -0.135,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.135,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 0",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 1",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 2",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 3",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 4",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -4 5",
+        "type": "MESH",
+        "positionM": [
+          -0.108,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.108,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 0",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 1",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 2",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 3",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 4",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -3 5",
+        "type": "MESH",
+        "positionM": [
+          -0.081,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.081,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 0",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 1",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 2",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 3",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 4",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -2 5",
+        "type": "MESH",
+        "positionM": [
+          -0.054,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.054,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 -5",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 -4",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 -3",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 -2",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 -1",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 0",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 1",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 2",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 3",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 4",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole -1 5",
+        "type": "MESH",
+        "positionM": [
+          -0.027,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          -0.027,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 -5",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 -4",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 -3",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 -2",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 -1",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 0",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 1",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 2",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 3",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 4",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 0 5",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 -5",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 -4",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 -3",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 -2",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 -1",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 0",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 1",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 2",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 3",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 4",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 1 5",
+        "type": "MESH",
+        "positionM": [
+          0.027,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.027,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 -5",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 -4",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 -3",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 -2",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 -1",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 0",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 1",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 2",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 3",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 4",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 2 5",
+        "type": "MESH",
+        "positionM": [
+          0.054,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.054,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 -5",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 -4",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 -3",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 -2",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 -1",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 0",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 1",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 2",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 3",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 4",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 3 5",
+        "type": "MESH",
+        "positionM": [
+          0.081,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.081,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 -5",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 -4",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 -3",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 -2",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 -1",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 0",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 1",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 2",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 3",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 4",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 4 5",
+        "type": "MESH",
+        "positionM": [
+          0.108,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.108,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 -5",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 -4",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 -3",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 -2",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 -1",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 0",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 1",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 2",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 3",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 4",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 5 5",
+        "type": "MESH",
+        "positionM": [
+          0.135,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.135,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 -5",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 -4",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 -3",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 -2",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 -1",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 0",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 1",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 2",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 3",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 4",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 6 5",
+        "type": "MESH",
+        "positionM": [
+          0.162,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.162,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 -5",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 -4",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 -3",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 -2",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 -1",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 0",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 1",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 2",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 3",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 4",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 7 5",
+        "type": "MESH",
+        "positionM": [
+          0.189,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.189,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 -5",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 -4",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 -3",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 -2",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 -1",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 0",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 1",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 2",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 3",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 4",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 8 5",
+        "type": "MESH",
+        "positionM": [
+          0.216,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.216,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 -5",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          -0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          -0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 -4",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          -0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          -0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 -3",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          -0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          -0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 -2",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          -0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          -0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 -1",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          -0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          -0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 0",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          0,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          0,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 1",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          0.027,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          0.027,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 2",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          0.054,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          0.054,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 3",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          0.081,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          0.081,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 4",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          0.108,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          0.108,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "visual board hole 9 5",
+        "type": "MESH",
+        "positionM": [
+          0.243,
+          0.135,
+          0.0364
+        ],
+        "dimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "worldEnvelopeCentreM": [
+          0.243,
+          0.135,
+          0.0364
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0032,
+          0.0032,
+          0.0005
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "entangled-resource source housing",
+        "type": "MESH",
+        "positionM": [
+          -0.205,
+          0.07,
+          0.073
+        ],
+        "dimensionsM": [
+          0.085,
+          0.065,
+          0.072
+        ],
+        "worldEnvelopeCentreM": [
+          -0.205,
+          0.07,
+          0.073
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.085,
+          0.065,
+          0.072
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "crystal mount placeholder",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          0.07,
+          0.07
+        ],
+        "dimensionsM": [
+          0.035,
+          0.035,
+          0.052
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          0.07,
+          0.07
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.035,
+          0.035,
+          0.052
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "crystal placeholder",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          0.048,
+          0.073
+        ],
+        "dimensionsM": [
+          0.015,
+          0.006,
+          0.025
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          0.048,
+          0.073
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.015,
+          0.006,
+          0.025
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Alice Bell analysis placeholder",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.07,
+          0.072
+        ],
+        "dimensionsM": [
+          0.045,
+          0.045,
+          0.06
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.07,
+          0.072
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.045,
+          0.045,
+          0.06
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "input preparation mount",
+        "type": "MESH",
+        "positionM": [
+          -0.03,
+          -0.1,
+          0.071
+        ],
+        "dimensionsM": [
+          0.052,
+          0.052,
+          0.058
+        ],
+        "worldEnvelopeCentreM": [
+          -0.03,
+          -0.1,
+          0.071
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.052,
+          0.052,
+          0.058
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "alice-detector",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.135,
+          0.075
+        ],
+        "dimensionsM": [
+          0.06,
+          0.045,
+          0.07
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.135,
+          0.075
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.06,
+          0.045,
+          0.07
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "bob-receiver",
+        "type": "MESH",
+        "positionM": [
+          0.2,
+          0.07,
+          0.075
+        ],
+        "dimensionsM": [
+          0.06,
+          0.045,
+          0.07
+        ],
+        "worldEnvelopeCentreM": [
+          0.2,
+          0.07,
+          0.075
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.06,
+          0.045,
+          0.07
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "classical electronics placeholder",
+        "type": "MESH",
+        "positionM": [
+          0.16,
+          -0.1,
+          0.065
+        ],
+        "dimensionsM": [
+          0.12,
+          0.07,
+          0.05
+        ],
+        "worldEnvelopeCentreM": [
+          0.16,
+          -0.1,
+          0.065
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.12,
+          0.07,
+          0.05
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.205,
+          0.02,
+          0.039
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.205,
+          0.02,
+          0.039
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1",
+        "type": "MESH",
+        "positionM": [
+          -0.205,
+          0.02,
+          0.0398
+        ],
+        "dimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.204988,
+          0.020492,
+          0.0398
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          0.02,
+          0.039
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          0.02,
+          0.039
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2",
+        "type": "MESH",
+        "positionM": [
+          -0.12,
+          0.02,
+          0.0398
+        ],
+        "dimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.12,
+          0.020546,
+          0.0398
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3 plaque",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.02,
+          0.039
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.02,
+          0.039
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.02,
+          0.0398
+        ],
+        "dimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.000072,
+          0.020492,
+          0.0398
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.03,
+          -0.148,
+          0.039
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.03,
+          -0.148,
+          0.039
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4",
+        "type": "MESH",
+        "positionM": [
+          -0.03,
+          -0.148,
+          0.0398
+        ],
+        "dimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.030108,
+          -0.147454,
+          0.0398
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5 plaque",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.168,
+          0.039
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.168,
+          0.039
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0.168,
+          0.0398
+        ],
+        "dimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.000072,
+          0.168438,
+          0.0398
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 6 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.2,
+          0.018,
+          0.039
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.2,
+          0.018,
+          0.039
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 6",
+        "type": "MESH",
+        "positionM": [
+          0.2,
+          0.018,
+          0.0398
+        ],
+        "dimensionsM": [
+          0.005052,
+          0.0084,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.200054,
+          0.018492,
+          0.0398
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005052,
+          0.0084,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 7 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.19,
+          -0.15,
+          0.039
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.19,
+          -0.15,
+          0.039
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 7",
+        "type": "MESH",
+        "positionM": [
+          0.19,
+          -0.15,
+          0.0398
+        ],
+        "dimensionsM": [
+          0.005292,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.190234,
+          -0.149562,
+          0.0398
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005292,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "illustrative route guide 0",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.12,
+          0.002,
+          0.0019021
+        ],
+        "worldEnvelopeCentreM": [
+          -0.1,
+          0.07,
+          0.075
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.12,
+          0.002,
+          0.0019021
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "illustrative route guide 1",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.13,
+          0.002,
+          0.0019021
+        ],
+        "worldEnvelopeCentreM": [
+          0.105,
+          0.07,
+          0.075
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.13,
+          0.002,
+          0.0019021
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "illustrative route guide 2",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.0319295,
+          0.1105262,
+          0.0019021
+        ],
+        "worldEnvelopeCentreM": [
+          -0.015,
+          -0.015,
+          0.075
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0319295,
+          0.1105262,
+          0.0019021
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "illustrative route guide 3",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.002,
+          0.025,
+          0.0019021
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0.1025,
+          0.075
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.002,
+          0.025,
+          0.0019021
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "classical channel visual cable",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.0770261,
+          0.2535481,
+          0.0214046
+        ],
+        "worldEnvelopeCentreM": [
+          0.0630562,
+          0.025026,
+          0.0509475
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0770261,
+          0.2535481,
+          0.0214046
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "dimensionConvention": "Logical components use evaluated world-axis envelope centres/extents in metres; objectGeometry retains raw Blender origin/dimensions/rotation and explicit world envelopes. All geometry assumed, not manufacturing dimensions.",
+    "limitations": [
+      "Proposed, unbuilt apparatus concept. This is a 3D illustration, not hardware evidence or an engineering construction drawing.",
+      "Every geometry dimension is assumed in metres. No manufacturing tolerance, load rating, insulation rating, material assay or safety certification.",
+      "Natural-looking materials are rendering choices. No acoustic, electromagnetic, optical or quantum field is simulated.",
+      "Blank instrument screens contain no invented measurements. Numeric plaques refer only to the separate legend.",
+      "The PNG and GLB are companions to source-bound technical documents, not US/EPO filing-compliance certification."
+    ],
+    "files": {
+      "png": {
+        "path": "/sphere-lab/scenes/quantum-teleportation.png",
+        "sha256": "a9b5c5f2d6272d62241b28cd0b6067b6fab84d0e98f89893aad60682054f7014",
+        "bytes": 462783
+      },
+      "glb": {
+        "path": "/sphere-lab/scenes/quantum-teleportation.glb",
+        "sha256": "55a8c86e22f3e4b93eea2014b7f1643a577adc63974825798acf15affbc91673",
+        "bytes": 5627704
+      }
+    }
+  },
+  "sourceRecords": [
+    {
+      "id": "quantum-bennett-1993",
+      "title": "Teleporting an unknown quantum state via dual classical and Einstein-Podolsky-Rosen channels",
+      "url": "https://research.ibm.com/publications/teleporting-an-unknown-quantum-state-via-dual-classical-and-einstein-podolsky-rosen-channels",
+      "status": "read-primary",
+      "version": "Publication entry dated 29 March 1993",
+      "readDepth": "Author-institution publication entry and complete abstract only; original paper not retrieved",
+      "passage": "Alice shares EPR correlations, makes a joint measurement, sends the classical result; Bob conditionally reconstructs the state.",
+      "claim": "Entanglement and an ordinary classical message are separate required resources.",
+      "limitations": "Abstract supports protocol overview, not apparatus rates, noise assumptions or new research novelty.",
+      "capture": "docs/sphere-panel/sources/quantum-1993.html",
+      "sha256": "262da64417cdf0b52390885a86b4c88f0a492a39661fa5232f983c9089b5254c",
+      "reviewOwner": "quantum panel agent",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "1993-03-29",
+        "kind": "Institutional abstract of primary paper"
+      }
+    },
+    {
+      "id": "quantum-horodecki-1999",
+      "title": "General teleportation channel, singlet fraction and quasi-distillation",
+      "url": "https://arxiv.org/abs/quant-ph/9807091v2",
+      "status": "read-primary",
+      "version": "arXiv quant-ph/9807091v2, 2 March 1999",
+      "readDepth": "Selected PDF passages: section II Eq.10; section III B/C Eqs.14–20; section IV classical fidelity derivation; abstract. Remaining proofs/sections not fully reviewed.",
+      "passage": "Eq.10 uniformly averages pure-state input fidelity; Eqs.14–20 relate noisy Bell resources to depolarizing channels; section IV gives f_cl=2/(d+1).",
+      "claim": "For d=2 the model channel is vρ+(1−v)I/2 with pure-input fidelity (1+v)/2; deterministic uniform-pure-qubit classical benchmark is 2/3.",
+      "limitations": "Not an arbitrary restricted-ensemble, known-state or postselected-experiment benchmark; no physical-copper or acoustic implication.",
+      "capture": "docs/sphere-panel/sources/quantum-horodecki-paper.pdf",
+      "sha256": "037d66b6648910b78947fcf974fb75853b86852c1a4eb5f7d0702f1022d09a55",
+      "reviewOwner": "quantum panel agent",
+      "passageKind": "research-note",
+      "publication": {
+        "year": 1999,
+        "repositoryVersion": "quant-ph/9807091v2",
+        "kind": "Selected primary PDF passages"
+      }
+    },
+    {
+      "id": "quantum-thomas-2024",
+      "title": "Quantum teleportation coexisting with classical communications in optical fiber",
+      "url": "https://arxiv.org/abs/2404.10738v4",
+      "status": "read-primary",
+      "version": "arXiv2404.10738v4, 26 October2024; publisher metadata verified Optica11(12):1700 DOI10.1364/optica.540362 published20December2024",
+      "readDepth": "Selected preprint PDF: title/version, abstract, section1 introduction, section2/Fig.1 protocol and apparatus description. Results tables and supplementary methods not fully reviewed.",
+      "passage": "Abstract reports 30.2-km fiber with 400-Gbps conventional traffic; Fig.1 describes polarization qubits, entangled photon pair, Bell-state measurement, four-fold coincidence evaluation and Bob Pauli operation or postprocessing.",
+      "claim": "A physical quantum channel uses independently prepared/heralded photons, entanglement, filtering, joint detection and classical correction; it is not an acoustic resonance or matter-transport demonstration.",
+      "limitations": "Selected 2024 experiment, not exhaustive 2026 state-of-art survey; reported abstract values are source claims, not reproduced data; ideal four-outcome deterministic model does not reproduce probabilistic optical hardware.",
+      "capture": "docs/sphere-panel/sources/quantum-optica-preprint.pdf",
+      "sha256": "7faac4bd12cb8b2c62d782837eac9c770650c277ef30eea3eb335caa92a0e361",
+      "reviewOwner": "quantum panel agent",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "2024-12-20",
+        "repositoryVersion": "arXiv:2404.10738v4 (2024-10-26)",
+        "doi": "10.1364/optica.540362",
+        "kind": "Selected repository preprint passages; publisher full text not read"
+      }
+    }
+  ],
+  "setupFromScratch": [
+    "Start with the state-vector/density-matrix simulation; the 3D optics scene is a conceptual layout without an optical link budget.",
+    "A laboratory implementation needs a characterized entanglement source, detectors, timing, interference, Bell analyzer and classical feed-forward.",
+    "Define heralding, success rate and fair comparison before evaluating fidelity; no matter transport is modeled."
+  ],
+  "productSelectionLeads": [
+    "Access to an optical quantum-information laboratory; conceptual scene is not a procurement-complete photonic design.",
+    "Characterized entanglement source, photon detectors, interferometric optics and timing/feed-forward equipment; efficiency, losses and success criteria remain unspecified."
+  ],
+  "procurementStatus": "Equipment classes and evaluation criteria; not verified stock, supplier quotes, certified compatibility or a complete bill of materials.",
+  "improvements": [
+    {
+      "sourceId": "quantum-bennett-1993",
+      "proposal": "Evaluate Teleporting an unknown quantum state via dual classical and Einstein-Podolsky-Rosen channels only within the scope of its inspected passages.",
+      "evidenceLimit": "Abstract supports protocol overview, not apparatus rates, noise assumptions or new research novelty."
+    },
+    {
+      "sourceId": "quantum-horodecki-1999",
+      "proposal": "Evaluate General teleportation channel, singlet fraction and quasi-distillation only within the scope of its inspected passages.",
+      "evidenceLimit": "Not an arbitrary restricted-ensemble, known-state or postselected-experiment benchmark; no physical-copper or acoustic implication."
+    },
+    {
+      "sourceId": "quantum-thomas-2024",
+      "proposal": "Evaluate Quantum teleportation coexisting with classical communications in optical fiber only within the scope of its inspected passages.",
+      "evidenceLimit": "Selected 2024 experiment, not exhaustive 2026 state-of-art survey; reported abstract values are source claims, not reproduced data; ideal four-outcome deterministic model does not reproduce probabilistic optical hardware."
+    }
+  ],
+  "standards": [
+    {
+      "title": "US drawing requirements:37CFR1.84",
+      "url": "https://www.ecfr.gov/current/title-37/chapter-I/subchapter-A/part-1/subpart-B/section-1.84"
+    },
+    {
+      "title": "EPO President decision on presentation of application documents, OJ2025A49",
+      "url": "https://www.epo.org/en/legal/official-journal/2025/07/a49"
+    }
+  ],
+  "draftingChecks": {
+    "worksheet": {
+      "a4": true,
+      "insideCommonMargins": true,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "minimumReferenceHeightMm": 3.469851517107812,
+      "referenceHeightPass": true,
+      "uniformLineWidthMm": 0.25,
+      "contentBoundsMm": [
+        27.875,
+        27.076694641704325,
+        185.125,
+        229.125
+      ],
+      "referenceCount": 5,
+      "figureNumber": 0,
+      "mechanicalDraftOnly": true
+    },
+    "apparatus": {
+      "a4": true,
+      "widthMm": 210,
+      "heightMm": 297,
+      "commonMarginsMm": {
+        "top": 25,
+        "left": 25,
+        "right": 15,
+        "bottom": 10
+      },
+      "contentBoundsMm": [
+        35.323047127178825,
+        27.076694641704325,
+        183.81755971594575,
+        213.6
+      ],
+      "minimumReferenceInkHeightMm": 3.469851517107812,
+      "referenceHeightAtLeast3_2Mm": true,
+      "lineWidthMm": 0.25,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "figureNumber": 0
+    }
+  },
+  "limitations": [
+    "Standalone single-view draft; no FIG label. A filing-specific drawing set needs consistent figure numbering and complete claimed views.",
+    "Illustrated dimensions are assumed, not measured or manufacturing specifications.",
+    "Only declared component envelopes are projected; decorative meshes, mounts, internal wiring, optical paths and safety enclosures are omitted.",
+    "Geometric projection and drafting-format checks do not certify US/EPO filing compliance, enablement, patentability or physical validity.",
+    "Leader lines may cross projected parts in crowded layouts; every identity is also recorded in the companion numbered reference table.",
+    "Documentation concept map only: undirected connections are not execution order, causal proof, acquired data or invented hardware.",
+    "Numerals601–605 identify actual worksheet/schema field groups; companion sourceFieldPaths and missingFieldKeys explain their coverage.",
+    "Missing raw fields remain gaps; a field-group box does not establish that a physical apparatus or complete model was declared.",
+    "This single-view A4 draft omits the printed FIG. label and is not legal filing approval, patentability or scientific validation.",
+    "Source review is a selected dated corpus; no exhaustive state-of-the-art, novelty or legal conclusion.",
+    "Geometry remains fixed illustration; changing a simulation input does not update the scene or imply a measured setup."
+  ]
+}

@@ -1,0 +1,712 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-17T04:51:22.859321+00:00",
+  "scope": "Source-led US utility/EPO/PCT documentation profile; mechanical checks, disclosure sufficiency and legal filing acceptance are separate. EPO is not synonymous with the European Union.",
+  "sources": [
+    {
+      "id": "uspto-mpep-608",
+      "title": "USPTO MPEP §608.02 — Drawing",
+      "url": "https://www.uspto.gov/web/offices/pac/mpep/s608.html",
+      "kind": "US examination guidance",
+      "section": "§608.02 [R-01.2024]; 35 USC113/37 CFR1.81; selected §608.02(b),(d),(e),(p)",
+      "accessedAt": "2026-11-17T04:45:04.240725+00:00",
+      "readingDepth": "Selected drawing/completeness/correction passages read from the official §608 page; not all 874 kB.",
+      "sha256": "5184705d4692c7d49dd14cae4e19eafb1c572e77aedd6dc727d209b5e3da13a6",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 874614,
+      "evidencePath": "docs/patent-standard/evidence/uspto-mpep-608.html",
+      "textEvidencePath": "docs/patent-standard/evidence/uspto-mpep-608.txt",
+      "finding": "Necessary drawings and consistent disclosure matter; later drawings cannot cure original insufficient disclosure or add original claim scope.",
+      "limit": "MPEP guidance is distinct from the current regulation; displayed subsection revision is January 2024.",
+      "requirements": [
+        "new-matter"
+      ]
+    },
+    {
+      "id": "ecfr-rule-1-84",
+      "title": "37 CFR §1.84 — Standards for drawings",
+      "url": "https://www.ecfr.gov/current/title-37/chapter-I/subchapter-A/part-1/subpart-B/subject-group-ECFRc7605aa2d3f3782/section-1.84",
+      "kind": "US regulation",
+      "section": "§1.84(a), (f)–(m), (p)–(u)",
+      "accessedAt": "2026-11-17T04:45:04.365735+00:00",
+      "readingDepth": "Current eCFR title displayed as of 13 November 2026. Selected drawing standards read.",
+      "sha256": "02d1732f752fbbbd6418614432d009b706c98e78d8e2c73156cf8e5b37250b88",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 114134,
+      "evidencePath": "docs/patent-standard/evidence/ecfr-rule-1-84.html",
+      "textEvidencePath": "docs/patent-standard/evidence/ecfr-rule-1-84.txt",
+      "finding": "A4 or US Letter, specified margins, black-line default, ≥3.2 mm characters, consistent references and US figure/sheet rules.",
+      "limit": "Current regulation text retrieved; not an audit of every filing channel, exception or application type.",
+      "requirements": [
+        "sheet-size",
+        "drawing-margins",
+        "glyph-size",
+        "reproduction",
+        "line-profile",
+        "no-sheet-legend",
+        "reference-consistency",
+        "leader-lines",
+        "views",
+        "figure-numbering",
+        "sheet-numbering",
+        "scan-targets",
+        "hatching",
+        "scale"
+      ]
+    },
+    {
+      "id": "epo-rule-46",
+      "title": "EPC Rule46 — deleted historical form-of-drawings provision",
+      "url": "https://www.epo.org/en/legal/epc/2020/r46.html",
+      "kind": "historical EPC rule",
+      "section": "Deletion note; former Rule46(1),(2)",
+      "accessedAt": "2026-11-17T04:45:04.597629+00:00",
+      "readingDepth": "Current official page and deletion/version-history note read; historical text distinguished from current law.",
+      "sha256": "eaa5ecd0ccf3184c53dbd8cfd725e453d2f28203dd8c49184242918b1feb8aa4",
+      "status": "historical-deleted",
+      "httpStatus": 200,
+      "responseBytes": 667745,
+      "evidencePath": "docs/patent-standard/evidence/epo-rule-46.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-rule-46.txt",
+      "finding": "Deleted effective 1 February 2023 by CA/D10/22; do not cite former Rule46 as the current drawing authority.",
+      "limit": "Historical text remains displayed on the official page and can mislead a title-only reading.",
+      "requirements": []
+    },
+    {
+      "id": "epo-rule-42",
+      "title": "EPC Rule42 — content of description",
+      "url": "https://www.epo.org/en/legal/epc/2020/r42.html",
+      "kind": "EPC rule",
+      "section": "Rule42(1)(a)–(f),(2)",
+      "accessedAt": "2026-11-17T04:45:05.281519+00:00",
+      "readingDepth": "Full short operative description provision read.",
+      "sha256": "39db2e5e7dee19d9a3d21e0190bf340c30b6f5308f3b339f21fc7f1081f496c5",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 660559,
+      "evidencePath": "docs/patent-standard/evidence/epo-rule-42.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-rule-42.txt",
+      "finding": "Technical field, background art, problem/solution, figures, at least one detailed way of carrying out, industrial applicability where not obvious.",
+      "limit": "A description template cannot supply absent enabling parameters or establish a claimed technical effect.",
+      "requirements": [
+        "description-structure",
+        "definitions"
+      ]
+    },
+    {
+      "id": "epo-rule-43",
+      "title": "EPC Rule43 — form and content of claims",
+      "url": "https://www.epo.org/en/legal/epc/2020/r43.html",
+      "kind": "EPC rule",
+      "section": "Rule43(1),(4)–(7)",
+      "accessedAt": "2026-11-17T04:45:05.522719+00:00",
+      "readingDepth": "Selected technical-feature, dependent-claim, numbering and reference-sign provisions read.",
+      "sha256": "8fd895758548db27560c9d4d643d74d1f3fa8cbc6337f2fc53ac6ab41fe37987",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 662487,
+      "evidencePath": "docs/patent-standard/evidence/epo-rule-43.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-rule-43.txt",
+      "finding": "Claims define technical features; number claims; avoid reliance on figures alone; parenthesised reference signs may aid intelligibility without limiting the claim.",
+      "limit": "No legal claim drafting or novelty/inventive-step conclusion for the repositories is provided.",
+      "requirements": [
+        "claims-support"
+      ]
+    },
+    {
+      "id": "epo-article-83",
+      "title": "EPC Article83 — disclosure of invention",
+      "url": "https://www.epo.org/en/legal/epc/2020/a83.html",
+      "kind": "EPC article",
+      "section": "Article83 operative sentence",
+      "accessedAt": "2026-11-17T04:45:07.036811+00:00",
+      "readingDepth": "Full short operative disclosure provision read.",
+      "sha256": "25b8e6efd4c8e6dae8368ca6ff1b49b5e55e93d5d24bc6d51b8f04b9961a724e",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 656435,
+      "evidencePath": "docs/patent-standard/evidence/epo-article-83.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-article-83.txt",
+      "finding": "Disclose sufficiently clearly and completely for a person skilled in the art to carry out the invention.",
+      "limit": "A neat drawing does not satisfy sufficiency when necessary operating information is missing.",
+      "requirements": [
+        "enablement",
+        "proposed-vs-measured"
+      ]
+    },
+    {
+      "id": "epo-guidelines-f-ii-4-1",
+      "title": "EPO Guidelines2026 F-II4.1 — general description remarks",
+      "url": "https://www.epo.org/en/legal/guidelines-epc/2026/f_ii_4_1.html",
+      "kind": "EPO examination guidance",
+      "section": "F-II4.1 opening explanation",
+      "accessedAt": "2026-11-17T04:45:05.519773+00:00",
+      "readingDepth": "Selected purpose-of-description paragraphs read.",
+      "sha256": "823167571fece600587fec603eec825267d039be84585203d1ecef2524780bae",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 804948,
+      "evidencePath": "docs/patent-standard/evidence/epo-guidelines-f-ii-4-1.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-guidelines-f-ii-4-1.txt",
+      "finding": "Description enables practice and understanding of the contribution to the art.",
+      "limit": "Guidance on examination, not a substitute for the EPC or case-specific legal assessment.",
+      "requirements": [
+        "description-structure"
+      ]
+    },
+    {
+      "id": "wipo-pct-rule-11",
+      "title": "PCT Rule11 — physical requirements of international application",
+      "url": "https://www.wipo.int/en/web/pct-system/texts/rules/r11",
+      "kind": "PCT rule",
+      "section": "11.4–11.7;11.9(d);11.11;11.13(a)–(n)",
+      "accessedAt": "2026-11-17T04:45:07.315063+00:00",
+      "readingDepth": "Selected sheet/margin/numbering/text/drawing provisions read.",
+      "sha256": "3f50f7ec0428938822952d51859cfbd59c820c441d73628555072b008a2d91e0",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 101794,
+      "evidencePath": "docs/patent-standard/evidence/wipo-pct-rule-11.html",
+      "textEvidencePath": "docs/patent-standard/evidence/wipo-pct-rule-11.txt",
+      "finding": "A4, drawing margins, minimal words, black-line drawings, ≥3.2mm drawing characters and consistent reference signs.",
+      "limit": "PCT international-phase rules differ from EPO regional electronic practice; request-text2.1mm and ordinary-text2.8mm are not drawing-glyph minima.",
+      "requirements": [
+        "sheet-size",
+        "drawing-margins",
+        "glyph-size",
+        "reproduction",
+        "line-profile",
+        "no-sheet-legend",
+        "reference-consistency",
+        "leader-lines",
+        "views",
+        "figure-numbering",
+        "sheet-numbering",
+        "hatching",
+        "scale"
+      ]
+    },
+    {
+      "id": "epo-rule-49",
+      "title": "EPC Rule49(2) — presentation requirements delegated to EPO President",
+      "url": "https://www.epo.org/en/legal/epc/2020/r49.html",
+      "kind": "EPC rule",
+      "section": "Rule49(2); footnote81 current-decision references",
+      "accessedAt": "2026-11-17T04:46:17.679137+00:00",
+      "readingDepth": "Selected current paragraph and references read; tracked/deleted prior paragraphs not treated as current authority.",
+      "sha256": "3555195774ca9f819ede5f2dba95ad87ff35261f7da9933dcc2b5b026d1c2083",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 676943,
+      "evidencePath": "docs/patent-standard/evidence/epo-rule-49.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-rule-49.txt",
+      "finding": "The President determines presentation requirements; page links OJ2025A49 and A57.",
+      "limit": "Current and struck/deleted historical wording coexist in the page; use the current President decision for mechanical details.",
+      "requirements": []
+    },
+    {
+      "id": "epo-presentation-decision-2022-a113",
+      "title": "EPO President decision25November2022 — OJ2022A113",
+      "url": "https://www.epo.org/en/legal/official-journal/2022/12/a113",
+      "kind": "superseded EPO decision",
+      "section": "Arts1,2 and entry-into-force; supersession checked against2025A49 Art6",
+      "accessedAt": "2026-11-17T04:46:18.103495+00:00",
+      "readingDepth": "Selected drawing/presentation provisions and successor supersession text read.",
+      "sha256": "9ec8fac27a2ef79f8472dfe1c6a3fe018d2691b86894788ad5136b4fadeaf03d",
+      "status": "historical-superseded",
+      "httpStatus": 200,
+      "responseBytes": 162923,
+      "evidencePath": "docs/patent-standard/evidence/epo-presentation-decision-2022-a113.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-presentation-decision-2022-a113.txt",
+      "finding": "Former delegated presentation requirements, superseded on 1 October 2025 by OJ2025A49.",
+      "limit": "Not the current EPO drawing authority.",
+      "requirements": []
+    },
+    {
+      "id": "epo-guidelines-a-ix-3",
+      "title": "EPO Guidelines2026 A-IX3 — paper-drawing conditions",
+      "url": "https://www.epo.org/en/legal/guidelines-epc/2026/a_ix_3.html",
+      "kind": "EPO examination guidance",
+      "section": "A-IX3 paper conditions and current decision reference",
+      "accessedAt": "2026-11-17T04:46:18.173605+00:00",
+      "readingDepth": "Selected paper/reproduction paragraphs and A49 cross-reference read.",
+      "sha256": "bacf6bc9cb5507b7917ea585035bfd1f80e0886e4a5bb2c75b12ddd7f7307db2",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 803368,
+      "evidencePath": "docs/patent-standard/evidence/epo-guidelines-a-ix-3.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-guidelines-a-ix-3.txt",
+      "finding": "Paper conditions remain relevant to paper filings; the page updates its decision reference to2025A49.",
+      "limit": "Not used as an electronic-colour prohibition; current A49 controls that distinction.",
+      "requirements": []
+    },
+    {
+      "id": "epo-guidelines-f-iii-1",
+      "title": "EPO Guidelines2026 F-III1 — sufficiency",
+      "url": "https://www.epo.org/en/legal/guidelines-epc/2026/f_iii_1.html",
+      "kind": "EPO examination guidance",
+      "section": "F-III1 selected first,third and structure/function paragraphs",
+      "accessedAt": "2026-11-17T04:46:18.703541+00:00",
+      "readingDepth": "Selected essential-feature, whole-area-claimed and structure/function discussion read.",
+      "sha256": "11b166b674226ff8be2024f5d5b6f24d2e5c3f4fdb0e2bf6462528b5fcf5df9e",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 807325,
+      "evidencePath": "docs/patent-standard/evidence/epo-guidelines-f-iii-1.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-guidelines-f-iii-1.txt",
+      "finding": "Essential features need sufficient detail; broad claims need enabling coverage without undue burden; structure and function must be explained.",
+      "limit": "A beginner tutorial is an educational extension; the legal addressee is the person skilled in the art.",
+      "requirements": [
+        "enablement",
+        "scratch-docs"
+      ]
+    },
+    {
+      "id": "epo-article-84",
+      "title": "EPC Article84 — claims",
+      "url": "https://www.epo.org/en/legal/epc/2020/a84.html",
+      "kind": "EPC article",
+      "section": "Article84 operative sentence",
+      "accessedAt": "2026-11-17T04:46:18.172531+00:00",
+      "readingDepth": "Full short operative claims provision read.",
+      "sha256": "8c4cc883aa90b78ce98872613b7935f001d8f22107896d473ca69e0d4493bf91",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 658567,
+      "evidencePath": "docs/patent-standard/evidence/epo-article-84.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-article-84.txt",
+      "finding": "Claims define protection sought and must be clear, concise and supported by the description.",
+      "limit": "Model correlations and unexplained performance assertions do not create claim support.",
+      "requirements": [
+        "definitions",
+        "claims-support"
+      ]
+    },
+    {
+      "id": "uspto-mpep-2164",
+      "title": "USPTO MPEP §2164 — Enablement requirement",
+      "url": "https://www.uspto.gov/web/offices/pac/mpep/s2164.html",
+      "kind": "US examination guidance",
+      "section": "§2164 opening discussion: make/use and undue experimentation",
+      "accessedAt": "2026-11-17T04:46:17.172045+00:00",
+      "readingDepth": "Selected opening enablement discussion and undue-experimentation passages read.",
+      "sha256": "d877540cd71cfca5b00880130deb0b6e61cd4ec95e0c94eaa820f9c12424900a",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 235752,
+      "evidencePath": "docs/patent-standard/evidence/uspto-mpep-2164.html",
+      "textEvidencePath": "docs/patent-standard/evidence/uspto-mpep-2164.txt",
+      "finding": "Claims define the invention to enable; sufficient making/using information is required without undue experimentation.",
+      "limit": "No conclusion that a hypothetical setup satisfies 35 USC112(a); later case law beyond passages read was not exhaustively audited.",
+      "requirements": [
+        "definitions",
+        "enablement",
+        "proposed-vs-measured"
+      ]
+    },
+    {
+      "id": "epo-presentation-decision-2025-a49",
+      "title": "EPO President decision7July2025 — OJ2025A49",
+      "url": "https://www.epo.org/en/legal/official-journal/2025/07/a49",
+      "kind": "current EPO presentation decision",
+      "section": "Arts1(1),1(2)(a)–(j),1(3);2(1)–(8);6–7",
+      "accessedAt": "2026-11-17T04:46:57.909513+00:00",
+      "readingDepth": "Operative drawing/presentation articles, supersession and effective-date provisions read.",
+      "sha256": "5c1ef7a88fa0f8d90537ada979be8f7200dd994ebf59bb527c3dad024896c9e1",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 161093,
+      "evidencePath": "docs/patent-standard/evidence/epo-presentation-decision-2025-a49.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-presentation-decision-2025-a49.txt",
+      "finding": "Effective1October2025: A4, margins, ≥3.2mm drawing characters, minimal text; electronic colour/greyscale permitted subject to contrast and300dpi suitability.",
+      "limit": "Technical profile alignment is not certification, acceptance, sufficiency or a claim of EU-wide harmonised patent law.",
+      "requirements": [
+        "sheet-size",
+        "drawing-margins",
+        "glyph-size",
+        "reproduction",
+        "line-profile",
+        "no-sheet-legend",
+        "reference-consistency",
+        "leader-lines",
+        "views",
+        "figure-numbering",
+        "sheet-numbering",
+        "hatching",
+        "scale"
+      ]
+    },
+    {
+      "id": "epo-colour-notice-2025-a57",
+      "title": "EPO notice5September2025 — colour/greyscale drawings, OJ2025A57",
+      "url": "https://www.epo.org/en/legal/official-journal/2025/09/a57",
+      "kind": "EPO procedure notice",
+      "section": "Selected paras1–11,17–21; particularly8–11",
+      "accessedAt": "2026-11-17T04:46:57.909587+00:00",
+      "readingDepth": "Selected Euro-direct, PCT and Euro-PCT transition paragraphs read.",
+      "sha256": "ff9bc486067857245204302b897cbea3189aab4ef370a173e95a08f0bdc19ff3",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 163348,
+      "evidencePath": "docs/patent-standard/evidence/epo-colour-notice-2025-a57.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-colour-notice-2025-a57.txt",
+      "finding": "EPO electronic colour is permitted under A49; PCT international-phase colour remains inadmissible; Euro-PCT transition depends on dates and PATENTSCOPE availability.",
+      "limit": "Do not generalise EPO electronic colour permission to every office, paper filing or PCT international publication.",
+      "requirements": [
+        "line-profile"
+      ]
+    },
+    {
+      "id": "epo-article-123",
+      "title": "EPC Article123 — amendments",
+      "url": "https://www.epo.org/en/legal/epc/2020/a123.html",
+      "kind": "EPC article",
+      "section": "Article123(2),(3)",
+      "accessedAt": "2026-11-17T04:48:45.031746+00:00",
+      "readingDepth": "Selected no-added-subject-matter and post-grant scope provisions read.",
+      "sha256": "4c5669f67a76eeb3cb25004412726bc5b1467dee9430d3f7dea84d92c029a862",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 662323,
+      "evidencePath": "docs/patent-standard/evidence/epo-article-123.html",
+      "textEvidencePath": "docs/patent-standard/evidence/epo-article-123.txt",
+      "finding": "An amended European application/patent may not extend beyond the content as filed; post-grant protection may not be extended.",
+      "limit": "An educational later drawing is not a reconstruction of what an earlier patent application disclosed.",
+      "requirements": [
+        "new-matter"
+      ]
+    },
+    {
+      "id": "ecfr-rule-1-71",
+      "title": "37 CFR §1.71 — Detailed description and specification",
+      "url": "https://www.ecfr.gov/current/title-37/chapter-I/subchapter-A/part-1/subpart-B/subject-group-ECFRfde9ad8bf027d31/section-1.71",
+      "kind": "US regulation",
+      "section": "§1.71(a)–(c)",
+      "accessedAt": "2026-11-17T04:48:47.521338+00:00",
+      "readingDepth": "Current eCFR title as of 13 November 2026; selected description paragraphs read.",
+      "sha256": "fc3b2bb95d8e3ba27ec412cf6ef5f2f3b809a6b6eef4a91bce404a5f99d27a12",
+      "status": "official-selected-sections-read",
+      "httpStatus": 200,
+      "responseBytes": 89021,
+      "evidencePath": "docs/patent-standard/evidence/ecfr-rule-1-71.html",
+      "textEvidencePath": "docs/patent-standard/evidence/ecfr-rule-1-71.txt",
+      "finding": "Describe making and using in full, clear, concise and exact terms sufficient for a person skilled in the art.",
+      "limit": "Not an assessment that any repository proposal is enabled or patentable.",
+      "requirements": [
+        "description-structure",
+        "enablement",
+        "scratch-docs"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "sheet-size",
+      "label": "Drawing sheet size",
+      "rule": "US §1.84(f): A4 210×297mm or US Letter216×279mm; EPO A49Art2(2)/PCT11.5 use A4 (PCT receiving-office exception does not alter A4 record-copy rule).",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-drawing",
+      "profileChoice": "A4 portrait210×297mm"
+    },
+    {
+      "id": "drawing-margins",
+      "label": "Drawing margins and sight",
+      "rule": "US1.84(g), A49Art1(1), PCT11.6(c): minimum top25,left25,right15,bottom10mm; A4 sight no greater than170×262mm; no frame around usable area.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-drawing",
+      "minimumMarginsMm": {
+        "top": 25,
+        "left": 25,
+        "right": 15,
+        "bottom": 10
+      },
+      "maximumSightMm": {
+        "width": 170,
+        "height": 262
+      }
+    },
+    {
+      "id": "glyph-size",
+      "label": "Reference-number and letter height",
+      "rule": "US1.84(p)(3), A49Art1(2)(g), PCT11.13(h): drawing numbers/letters at least3.2mm high. Do not substitute EPO2.1mm description text minimum.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-drawing",
+      "minimumHeightMm": 3.2
+    },
+    {
+      "id": "reproduction",
+      "label": "Two-thirds reproduction readability",
+      "rule": "US1.84(k), A49Art1(2)(c), PCT11.13(c): details remain distinguishable after linear reduction to two-thirds; requires actual legibility review, not only a numeric SVG test.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-and-visual-review"
+    },
+    {
+      "id": "line-profile",
+      "label": "Monochrome common profile",
+      "rule": "US1.84(a),(l) and PCT11.13(a) support black-line default. A49Art1(2)(a) allows electronically filed colour/greyscale with contrast/300dpi suitability; monochrome here is a conservative profile choice.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11",
+        "epo-colour-notice-2025-a57"
+      ],
+      "scope": "jurisdiction-specific-and-profile-choice"
+    },
+    {
+      "id": "no-sheet-legend",
+      "label": "Keep lengthy explanation off drawing sheet",
+      "rule": "A49Art1(2)(j), PCT11.11 permit only indispensable short words; keep full definitions, products and teaching prose in separate description/reference documents.",
+      "sourceIds": [
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11",
+        "ecfr-rule-1-84"
+      ],
+      "scope": "drawing-versus-description-boundary"
+    },
+    {
+      "id": "reference-consistency",
+      "label": "Stable reference signs and cross-reference legend",
+      "rule": "US1.84(p)(4)–(5), A49Art1(2)(i), PCT11.13(l)–(n): same feature uses same sign; drawing/description references correspond; separate feature list is useful.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "reference-and-description"
+    },
+    {
+      "id": "leader-lines",
+      "label": "Unambiguous leader lines",
+      "rule": "US1.84(q): short lines from near character to feature, noncrossing; surface/section exception uses underline. Reference signs must not obscure drawing lines/hatching.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-drawing"
+    },
+    {
+      "id": "views",
+      "label": "Sufficient distinct views",
+      "rule": "US1.84(h)–(j), A49Art1(2)(h), PCT11.13(i)–(k): necessary views separated, not overlapping; partial views assemble without obscuring detail.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-and-description"
+    },
+    {
+      "id": "figure-numbering",
+      "label": "Figure and sheet numbers are separate",
+      "rule": "US1.84(u): sequential FIG.1 etc, larger than reference signs; a single-view US application must have neither view number nor FIG. EPO/PCT sequential Arabic figure numbering is independent of sheets.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "jurisdiction-specific"
+    },
+    {
+      "id": "sheet-numbering",
+      "label": "Sheet numbering placement",
+      "rule": "US1.84(t): if present, sheet/total format and larger than reference characters within sight; EPOA49Art2(5) top-centred not in margin; PCT11.7 top/bottom-centred not margin.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "jurisdiction-specific"
+    },
+    {
+      "id": "scan-targets",
+      "label": "US scan targets are recommended, not mandatory",
+      "rule": "US1.84(g) says sheets should have scan target crosshairs on two catercorner margin corners. This is not a four-marker must requirement and not an EPO/PCT common mandate.",
+      "sourceIds": [
+        "ecfr-rule-1-84"
+      ],
+      "scope": "US-recommendation"
+    },
+    {
+      "id": "hatching",
+      "label": "Cross-section hatching",
+      "rule": "US1.84(h)(3), A49Art1(2)(b), PCT11.13(b): hatching should remain distinguishable and not impede reference signs/leaders. No section/material is inferred where source geometry is absent.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-and-source-boundary"
+    },
+    {
+      "id": "scale",
+      "label": "Proportions and scale indications",
+      "rule": "US1.84(k) prohibits actual-size/scale1/2 indications. EPO/PCT exceptional scale indications use a graphic scale; preserve proportions unless a clarity exception is explicit.",
+      "sourceIds": [
+        "ecfr-rule-1-84",
+        "epo-presentation-decision-2025-a49",
+        "wipo-pct-rule-11"
+      ],
+      "scope": "mechanical-drawing"
+    },
+    {
+      "id": "description-structure",
+      "label": "Separate description structure",
+      "rule": "EPC Rule42(1)(a)–(f): field, useful known background, problem/solution and advantageous effects, brief figures, at least one detailed way of carrying out, industrial applicability when not obvious. US1.71(a)–(c) asks full/clear making-and-using description.",
+      "sourceIds": [
+        "epo-rule-42",
+        "ecfr-rule-1-71",
+        "epo-guidelines-f-ii-4-1"
+      ],
+      "scope": "description-content"
+    },
+    {
+      "id": "definitions",
+      "label": "Define symbols and reference features without changing conventions",
+      "rule": "Explain source-dependent units, peak/RMS conventions and feature functions in the description/reference table; distinguish this educational completeness policy from a claim that every symbol is legally prescribed.",
+      "sourceIds": [
+        "epo-rule-42",
+        "epo-article-84",
+        "uspto-mpep-2164"
+      ],
+      "scope": "engineering-documentation-extension"
+    },
+    {
+      "id": "claims-support",
+      "label": "Claim language and support",
+      "rule": "EPC Art84 and Rule43: clear concise supported technical features, proper dependency/numbering; claims cannot merely say as shown in a figure; reference signs in claims are parenthesised where useful.",
+      "sourceIds": [
+        "epo-article-84",
+        "epo-rule-43"
+      ],
+      "scope": "claims-and-support"
+    },
+    {
+      "id": "enablement",
+      "label": "Enablement is separate from drawing mechanics",
+      "rule": "US1.71/MPEP2164 and EPCArt83/F-III1 require sufficient making/using information for a skilled person without undue experimentation/burden. Unknown essential turns/ratings/calibration or unproven effects remain gaps, not invented values.",
+      "sourceIds": [
+        "ecfr-rule-1-71",
+        "uspto-mpep-2164",
+        "epo-article-83",
+        "epo-guidelines-f-iii-1"
+      ],
+      "scope": "sufficiency-not-mechanical-certification"
+    },
+    {
+      "id": "new-matter",
+      "label": "Later drawings cannot silently add original disclosure",
+      "rule": "MPEP608.02 quotes35USC113/37CFR1.81(d): later drawings cannot cure missing enabling disclosure or supplement original claim scope. EPCArt123(2) forbids extension beyond content as filed; label new educational geometry as new authored material.",
+      "sourceIds": [
+        "uspto-mpep-608",
+        "epo-article-123"
+      ],
+      "scope": "amendment-and-version-control"
+    },
+    {
+      "id": "proposed-vs-measured",
+      "label": "Proposed examples and operated setups remain separate",
+      "rule": "For this product, record whether an example is a source assertion, hypothetical procedure, deterministic model or measured apparatus. No mechanical-sheet check establishes physical validation or claim sufficiency.",
+      "sourceIds": [
+        "uspto-mpep-2164",
+        "epo-article-83"
+      ],
+      "scope": "engineering-documentation-extension"
+    },
+    {
+      "id": "scratch-docs",
+      "label": "Scratch setup document is an educational extension",
+      "rule": "A reader setup guide should list known components, tools, units, prerequisites, interfaces, measurement/calibration plan, controls and missing specifications; standards address the skilled person, not a guarantee of novice buildability.",
+      "sourceIds": [
+        "epo-guidelines-f-iii-1",
+        "ecfr-rule-1-71"
+      ],
+      "scope": "engineering-documentation-extension"
+    }
+  ],
+  "commonProfile": {
+    "id": "conservative-a4-monochrome-v1",
+    "label": "Conservative A4 monochrome documentation profile",
+    "status": "engineering-profile-not-certified-filing-compliance",
+    "sheetMm": {
+      "width": 210,
+      "height": 297
+    },
+    "minimumMarginsMm": {
+      "top": 25,
+      "left": 25,
+      "right": 15,
+      "bottom": 10
+    },
+    "maximumSightMm": {
+      "width": 170,
+      "height": 262
+    },
+    "minimumDrawingCharacterHeightMm": 3.2,
+    "noVisibleFrame": true,
+    "colourChoice": "Black lines/white background chosen for shared-profile portability, not an EPO electronic-colour prohibition.",
+    "lineWidthMm": {
+      "status": "engineering-choice",
+      "suggested": 0.25,
+      "limit": "The cited provisions specify durable/reproducible lines, not a universal0.25mm stroke requirement."
+    },
+    "assumedFigureSet": "Multiple figures; USsingle-view exception must be handled separately.",
+    "descriptionMinimumMarginsMm": {
+      "top": 20,
+      "left": 25,
+      "right": 20,
+      "bottom": 20
+    },
+    "descriptionTextNote": "EPOA49Art2(7) capital-height2.1mm/1.5spacing differs from3.2mm drawing glyphs; PCT11.9(d) ordinarytext2.8mm (requesttext2.1mm exception).",
+    "automatedChecksCanShow": [
+      "physical SVG page dimensions",
+      "graphic bounding box/margins",
+      "reference glyph geometry height",
+      "allowed monochrome marks",
+      "reference mapping consistency",
+      "preserved source and authored-version identities"
+    ],
+    "automatedChecksCannotShow": [
+      "complete novelty/inventive step/eligibility",
+      "enablement or claims supported over their whole scope",
+      "mechanical manufacturability or safe operation",
+      "office filing acceptance or legal compliance certification",
+      "legibility of every semantic detail without actual rendered review"
+    ]
+  },
+  "legalHistory": [
+    {
+      "sourceId": "epo-rule-46",
+      "status": "deleted-effective2023-02-01",
+      "successor": "Presentation authority moved to President decisions underRule49(2)"
+    },
+    {
+      "sourceId": "epo-presentation-decision-2022-a113",
+      "status": "superseded-effective2025-10-01",
+      "successorSourceId": "epo-presentation-decision-2025-a49"
+    }
+  ],
+  "limitations": [
+    "Selected operative provisions and passages were read; this is not an exhaustive audit of all patent law, prosecution procedures, national offices or later changes.",
+    "The sheet profile does not certify legal filing compliance, novelty, sufficiency, physical performance or manufacturing readiness.",
+    "Current pages sometimes retain deleted/struck historical wording; the current2025Presidentdecision was cross-checked rather than treating historicalRule46 as operative."
+  ]
+}

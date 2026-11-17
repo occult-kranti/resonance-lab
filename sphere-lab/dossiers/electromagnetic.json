@@ -1,0 +1,2020 @@
+{
+  "schema": "sphere-study-dossier/v1",
+  "id": "electromagnetic",
+  "title": "Follow every joule.",
+  "status": "proposed-setup-with-synthetic-computation",
+  "sourceIdentity": {
+    "implementation": [
+      {
+        "path": "src/workbench/sphere-models.ts",
+        "sha256": "91fef14bac21692d6bfd8d3775a19c6e283881f8f403b013a2c7c03814ecf50d"
+      },
+      {
+        "path": "src/workbench/sphere-acoustics.ts",
+        "sha256": "561880987217232467212a3d0c3c60b964ace6b11aaa63ed5feee7f52ec12473"
+      },
+      {
+        "path": "src/workbench/sphere-quantum.ts",
+        "sha256": "15a1a416362bc53aac4ae2dee9554b78ffa738b1f52a21e81cef53fee446ce4c"
+      },
+      {
+        "path": "src/workbench/sphere-drawings.ts",
+        "sha256": "4cec2252a15181dc3000c7937bd54fe4888024985083da6861550d8d964da8bb"
+      },
+      {
+        "path": "src/workbench/patent-drawings.ts",
+        "sha256": "6a7eec387096b9a751c82ce40afa31e63fcd71b146ca20691d0e2a64a24df61e"
+      },
+      {
+        "path": "scripts/export-sphere-studies.mjs",
+        "sha256": "2ab576971a197b047c958ab1bfc20a3e1773806aac22d213ebfab7dbbe5a70cc"
+      }
+    ],
+    "scene": {
+      "id": "passive-rlc",
+      "source": {
+        "path": "scripts/render-sphere-studies.py",
+        "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+      }
+    },
+    "sourceIds": [
+      "em-poynting",
+      "historical-tesla"
+    ],
+    "reviewedAt": "2026-11-17T06:38:10.690068+00:00"
+  },
+  "study": {
+    "id": "electromagnetic",
+    "title": "Follow every joule.",
+    "kicker": "03 / Tesla mechanism lens",
+    "sceneId": "passive-rlc",
+    "sourceIds": [
+      "em-poynting",
+      "historical-tesla"
+    ],
+    "summary": "Inspect resonance, useful load power, copper loss and stored energy in a passive series circuit.",
+    "inputs": [
+      {
+        "key": "frequencyHz",
+        "label": "Drive frequency",
+        "symbol": "f",
+        "unit": "Hz",
+        "min": 20,
+        "max": 1000,
+        "step": 1,
+        "value": 159.15,
+        "meaning": "Frequency of the assumed sinusoidal voltage source."
+      },
+      {
+        "key": "voltageRms",
+        "label": "Source voltage",
+        "symbol": "V_rms",
+        "unit": "V",
+        "min": 0,
+        "max": 5,
+        "step": 0.01,
+        "value": 0.15,
+        "meaning": "Root mean square voltage; equivalent heating measure for the sinusoidal source."
+      },
+      {
+        "key": "loadOhm",
+        "label": "Load resistance",
+        "symbol": "R_load",
+        "unit": "ohm",
+        "min": 0.1,
+        "max": 100,
+        "step": 0.1,
+        "value": 16,
+        "meaning": "Useful resistive load; ideal constant resistance."
+      },
+      {
+        "key": "copperOhm",
+        "label": "Series loss",
+        "symbol": "R_loss",
+        "unit": "ohm",
+        "min": 0.1,
+        "max": 100,
+        "step": 0.1,
+        "value": 4,
+        "meaning": "Effective series dissipation in this teaching model."
+      }
+    ],
+    "assumptions": [
+      "Ideal series circuit, inductance L=0.01 H (henry), capacitance C=0.0001 F (farad), periodic steady state.",
+      "Finite energy window 0.025 s; capacitor may be initially charged. Source, load, losses and stored-energy change are all counted."
+    ],
+    "setup": [
+      "Begin with the virtual model; keep source, load and stored energy as separate channels.",
+      "For a future low-voltage test, obtain rated passive components and an isolated limited source through a qualified lab; component ratings and tolerances remain unspecified.",
+      "Measure time-aligned voltage and current across every energy port, including meter supplies and grounds."
+    ],
+    "controls": [
+      "Source off, zero initial energy.",
+      "Detune the source and substitute a known load.",
+      "Independently integrate signed source work and verify the complete energy identity."
+    ],
+    "falsifier": "A nonzero residual beyond independently propagated uncertainty shows missing ports, phase/timing error or model failure, and does not establish free energy.",
+    "scope": "Known passive RLC model applied here, not a new energy device or proof of a Tesla extraordinary claim."
+  },
+  "defaultInputs": {
+    "frequencyHz": 159.15,
+    "voltageRms": 0.15,
+    "loadOhm": 16,
+    "copperOhm": 4
+  },
+  "defaultCalculation": {
+    "metrics": [
+      {
+        "label": "Load power",
+        "value": 0.0008999999991318132,
+        "unit": "W",
+        "meaning": "Energy delivered to the useful resistance each second."
+      },
+      {
+        "label": "Copper loss",
+        "value": 0.0002249999997829533,
+        "unit": "W",
+        "meaning": "Energy dissipated by the series loss resistance each second."
+      },
+      {
+        "label": "Energy residual",
+        "value": -3.1763735522036263e-22,
+        "unit": "J",
+        "meaning": "Source work minus load energy, loss and stored-energy change over 0.025 s."
+      },
+      {
+        "label": "Resonance",
+        "value": 159.15494309189532,
+        "unit": "Hz",
+        "meaning": "Ideal reactance-cancellation frequency, not a new source of energy."
+      }
+    ],
+    "curve": [
+      {
+        "x": 20,
+        "y": 0.00005509512766227794
+      },
+      {
+        "x": 32.25,
+        "y": 0.00013638610822383425
+      },
+      {
+        "x": 44.5,
+        "y": 0.00024210403260832493
+      },
+      {
+        "x": 56.75,
+        "y": 0.0003602766826621131
+      },
+      {
+        "x": 69,
+        "y": 0.0004794674868955941
+      },
+      {
+        "x": 81.25,
+        "y": 0.0005903928830040215
+      },
+      {
+        "x": 93.5,
+        "y": 0.0006866838209032144
+      },
+      {
+        "x": 105.75,
+        "y": 0.0007648917132573652
+      },
+      {
+        "x": 118,
+        "y": 0.0008240098338943248
+      },
+      {
+        "x": 130.25,
+        "y": 0.0008647942810939746
+      },
+      {
+        "x": 142.5,
+        "y": 0.0008890925262850857
+      },
+      {
+        "x": 154.75,
+        "y": 0.0008992913761387022
+      },
+      {
+        "x": 167,
+        "y": 0.0008979196117759421
+      },
+      {
+        "x": 179.25,
+        "y": 0.000887394787619848
+      },
+      {
+        "x": 191.5,
+        "y": 0.0008698838650717434
+      },
+      {
+        "x": 203.75,
+        "y": 0.0008472439582263183
+      },
+      {
+        "x": 216,
+        "y": 0.0008210140924969361
+      },
+      {
+        "x": 228.25,
+        "y": 0.0007924360655594865
+      },
+      {
+        "x": 240.5,
+        "y": 0.0007624894188101163
+      },
+      {
+        "x": 252.75,
+        "y": 0.0007319310707333763
+      },
+      {
+        "x": 265,
+        "y": 0.0007013341532084746
+      },
+      {
+        "x": 277.25,
+        "y": 0.0006711232483774005
+      },
+      {
+        "x": 289.5,
+        "y": 0.0006416048773008084
+      },
+      {
+        "x": 301.75,
+        "y": 0.0006129930507369685
+      },
+      {
+        "x": 314,
+        "y": 0.000585430199836168
+      },
+      {
+        "x": 326.25,
+        "y": 0.000559004034134828
+      },
+      {
+        "x": 338.5,
+        "y": 0.0005337609425641543
+      },
+      {
+        "x": 350.75,
+        "y": 0.0005097165346298955
+      },
+      {
+        "x": 363,
+        "y": 0.00048686385877685413
+      },
+      {
+        "x": 375.25,
+        "y": 0.00046517975950495066
+      },
+      {
+        "x": 387.5,
+        "y": 0.00044462975838684506
+      },
+      {
+        "x": 399.75,
+        "y": 0.0004251717738645165
+      },
+      {
+        "x": 412,
+        "y": 0.0004067589335021013
+      },
+      {
+        "x": 424.25,
+        "y": 0.00038934168086944445
+      },
+      {
+        "x": 436.5,
+        "y": 0.0003728693368770152
+      },
+      {
+        "x": 448.75,
+        "y": 0.0003572912411122043
+      },
+      {
+        "x": 461,
+        "y": 0.0003425575713191342
+      },
+      {
+        "x": 473.25,
+        "y": 0.00032861991743261647
+      },
+      {
+        "x": 485.5,
+        "y": 0.0003154316694567203
+      },
+      {
+        "x": 497.75,
+        "y": 0.00030294826505665044
+      },
+      {
+        "x": 510,
+        "y": 0.0002911273322496595
+      },
+      {
+        "x": 522.25,
+        "y": 0.0002799287544169928
+      },
+      {
+        "x": 534.5,
+        "y": 0.0002693146785161634
+      },
+      {
+        "x": 546.75,
+        "y": 0.00025924948245464516
+      },
+      {
+        "x": 559,
+        "y": 0.00024969971377894885
+      },
+      {
+        "x": 571.25,
+        "y": 0.00024063400889078198
+      },
+      {
+        "x": 583.5,
+        "y": 0.00023202299973179387
+      },
+      {
+        "x": 595.75,
+        "y": 0.00022383921312985565
+      },
+      {
+        "x": 608,
+        "y": 0.00021605696665571566
+      },
+      {
+        "x": 620.25,
+        "y": 0.0002086522638081055
+      },
+      {
+        "x": 632.5,
+        "y": 0.000201602690557159
+      },
+      {
+        "x": 644.75,
+        "y": 0.00019488731467538168
+      },
+      {
+        "x": 657,
+        "y": 0.0001884865888297588
+      },
+      {
+        "x": 669.25,
+        "y": 0.0001823822580648309
+      },
+      {
+        "x": 681.5,
+        "y": 0.0001765572720490533
+      },
+      {
+        "x": 693.75,
+        "y": 0.00017099570226562807
+      },
+      {
+        "x": 706,
+        "y": 0.00016568266418882018
+      },
+      {
+        "x": 718.25,
+        "y": 0.0001606042443856332
+      },
+      {
+        "x": 730.5,
+        "y": 0.00015574743241135902
+      },
+      {
+        "x": 742.75,
+        "y": 0.00015110005731879263
+      },
+      {
+        "x": 755,
+        "y": 0.0001466507285692736
+      },
+      {
+        "x": 767.25,
+        "y": 0.00014238878111492496
+      },
+      {
+        "x": 779.5,
+        "y": 0.0001383042244121968
+      },
+      {
+        "x": 791.75,
+        "y": 0.00013438769512457503
+      },
+      {
+        "x": 804,
+        "y": 0.00013063041327511935
+      },
+      {
+        "x": 816.25,
+        "y": 0.00012702414161588888
+      },
+      {
+        "x": 828.5,
+        "y": 0.0001235611479901398
+      },
+      {
+        "x": 840.75,
+        "y": 0.00012023417047361114
+      },
+      {
+        "x": 853,
+        "y": 0.0001170363850925821
+      },
+      {
+        "x": 865.25,
+        "y": 0.00011396137592822896
+      },
+      {
+        "x": 877.5,
+        "y": 0.00011100310742876851
+      },
+      {
+        "x": 889.75,
+        "y": 0.00010815589876269565
+      },
+      {
+        "x": 902,
+        "y": 0.00010541440005792699
+      },
+      {
+        "x": 914.25,
+        "y": 0.00010277357038272632
+      },
+      {
+        "x": 926.5,
+        "y": 0.00010022865733482705
+      },
+      {
+        "x": 938.75,
+        "y": 0.0000977751781151423
+      },
+      {
+        "x": 951,
+        "y": 0.00009540890197182906
+      },
+      {
+        "x": 963.25,
+        "y": 0.00009312583390925682
+      },
+      {
+        "x": 975.5,
+        "y": 0.00009092219956461813
+      },
+      {
+        "x": 987.75,
+        "y": 0.00008879443116253243
+      },
+      {
+        "x": 1000,
+        "y": 0.00008673915446505382
+      }
+    ],
+    "xLabel": "Drive frequency (Hz)",
+    "yLabel": "Load power (W)",
+    "warnings": [
+      "Periodic steady state can contain initially stored capacitor energy; do not omit it from a finite-window budget."
+    ],
+    "equations": [
+      {
+        "expression": "Z = R_loss + R_load + i*(2*pi*f*L - 1/(2*pi*f*C))",
+        "meaning": "Z is complex impedance in ohms; i is the imaginary unit, pi is the circle constant; L in henry and C in farad."
+      },
+      {
+        "expression": "W_source = W_load + W_loss + (E_final - E_initial)",
+        "meaning": "Each W here is integrated work in joules, not watt; E is stored electric plus magnetic energy in joules."
+      }
+    ],
+    "interpretation": "Known passive RLC model applied here, not a new energy device or proof of a Tesla extraordinary claim."
+  },
+  "glossary": {
+    "SI": "International System of Units.",
+    "Hz": "Hertz, cycles per second.",
+    "kHz": "Kilohertz, one thousand hertz.",
+    "Pa": "Pascal, pressure equal to one newton per square metre.",
+    "K": "Kelvin, the SI unit of temperature; temperature differences of 1K and 1°C have equal size.",
+    "ppm": "Parts per million; a relative value multiplied by one million.",
+    "ppb": "Parts per billion; a relative value multiplied by one billion.",
+    "RLC": "A circuit containing resistance R in ohms, inductance L in henry and capacitance C in farad.",
+    "RMS": "Root mean square, a waveform amplitude convention distinct from peak.",
+    "DAC": "Digital-to-analog converter, the electronic stage that turns numeric samples into a voltage.",
+    "EEG": "Electroencephalography, a measured scalp electrical signal; not simulated here.",
+    "SPL": "Sound pressure level, an acoustic measurement requiring calibration.",
+    "GLB": "Binary glTF, a 3D scene file format; this file contains illustrative geometry.",
+    "SVG": "Scalable Vector Graphics, a vector drawing format.",
+    "OSF": "Open Science Framework, the repository hosting the independently retrieved registration.",
+    "TOST": "Two one-sided tests, an equivalence-testing method; its margin and uncertainty need a declared plan.",
+    "A": "Position or condition A in the named protocol; not an ampere unless explicitly stated.",
+    "B": "Position or condition B in the named protocol; not magnetic flux density unless explicitly stated.",
+    "LOC1": "The external Sphere location-comparison protocol, with its own registered estimand."
+  },
+  "referenceDictionary": [
+    {
+      "reference": "801",
+      "componentId": "source",
+      "label": "External source placeholder",
+      "meaning": "External electrical input is required. No source amplitude, internal impedance or rating chosen.",
+      "positionM": [
+        -0.2,
+        0.055,
+        0.078
+      ],
+      "dimensionsM": [
+        0.14,
+        0.1,
+        0.115
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "802",
+      "componentId": "analyzer",
+      "label": "Blank waveform analyzer",
+      "meaning": "Proposed source/load probes and waveform acquisition. Blank screen; no measured trace.",
+      "positionM": [
+        0.17,
+        0.085,
+        0.096
+      ],
+      "dimensionsM": [
+        0.19,
+        0.1,
+        0.15
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "803",
+      "componentId": "inductor",
+      "label": "Illustrative inductor",
+      "meaning": "Assumed coil geometry only. Inductance, resistance, parasitic capacitance and ratings are not inferred.",
+      "positionM": [
+        -0.065,
+        -0.035001,
+        0.077535
+      ],
+      "dimensionsM": [
+        0.047398,
+        0.047304,
+        0.068298
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "804",
+      "componentId": "capacitor",
+      "label": "Capacitor placeholder",
+      "meaning": "Capacitance, dielectric, voltage rating and loss are unspecified.",
+      "positionM": [
+        0.01,
+        -0.035,
+        0.067
+      ],
+      "dimensionsM": [
+        0.034,
+        0.034,
+        0.052
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "805",
+      "componentId": "load",
+      "label": "Resistive load placeholder",
+      "meaning": "Useful load dissipates supplied energy. Resistance, temperature coefficient and power rating unselected.",
+      "positionM": [
+        0.085,
+        -0.035,
+        0.054
+      ],
+      "dimensionsM": [
+        0.05,
+        0.022,
+        0.022
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "806",
+      "componentId": "source-probe",
+      "label": "Source Probe",
+      "meaning": "Measurement channel placeholder, not a verified connection, bandwidth or calibration.",
+      "positionM": [
+        -0.08,
+        -0.11,
+        0.055
+      ],
+      "dimensionsM": [
+        0.008,
+        0.06,
+        0.008
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    },
+    {
+      "reference": "807",
+      "componentId": "load-probe",
+      "label": "Load Probe",
+      "meaning": "Measurement channel placeholder, not a verified connection, bandwidth or calibration.",
+      "positionM": [
+        0.08,
+        -0.11,
+        0.055
+      ],
+      "dimensionsM": [
+        0.008,
+        0.06,
+        0.008
+      ],
+      "dimensionConvention": "[width x, depth y, height z] in metres; centre position, assumed illustration geometry."
+    }
+  ],
+  "worksheetReferences": [
+    {
+      "reference": "601",
+      "label": "Declared question or prediction",
+      "sourceFieldPaths": [
+        "sourceRecord.question"
+      ],
+      "missingFieldKeys": [
+        "prediction"
+      ],
+      "meaning": "Source-declared question/prediction text, not a verified result or completed experiment. Actual raw fields: question.",
+      "fieldExplanations": [
+        {
+          "key": "question",
+          "meaning": "Original question field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "602",
+      "label": "Source identity, model and proposed resources",
+      "sourceFieldPaths": [
+        "source",
+        "sourceRecord.model",
+        "sourceRecord.inputs",
+        "sourceRecord.materials"
+      ],
+      "missingFieldKeys": [
+        "category",
+        "novelty"
+      ],
+      "meaning": "Actual source identity and any declared model/input/resource fields. Their presence is not a validated apparatus, complete model or bill of materials. Actual raw fields: model, inputs, materials.",
+      "fieldExplanations": [
+        {
+          "key": "model",
+          "meaning": "Original model field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "inputs",
+          "meaning": "Original inputs field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "materials",
+          "meaning": "Original materials field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "603",
+      "label": "Declared observable or observation channel",
+      "sourceFieldPaths": [
+        "sourceRecord.observable"
+      ],
+      "missingFieldKeys": [],
+      "meaning": "Source-declared observation text. Unstated units, transfer functions, calibration and acquired data remain missing. Actual raw fields: observable.",
+      "fieldExplanations": [
+        {
+          "key": "observable",
+          "meaning": "Original observable field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "604",
+      "label": "Proposed controls, rivals and falsifiers",
+      "sourceFieldPaths": [
+        "sourceRecord.controls",
+        "sourceRecord.falsifier"
+      ],
+      "missingFieldKeys": [
+        "rival",
+        "acceptance"
+      ],
+      "meaning": "Declared discriminating conditions and alternatives. A listed control or acceptance criterion has not thereby been executed. Actual raw fields: controls, falsifier.",
+      "fieldExplanations": [
+        {
+          "key": "controls",
+          "meaning": "Original controls field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "falsifier",
+          "meaning": "Original falsifier field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    },
+    {
+      "reference": "605",
+      "label": "Status, limitations and disclosure gaps",
+      "sourceFieldPaths": [
+        "sourceRecord.status",
+        "sourceRecord.limitations",
+        "status",
+        "gaps"
+      ],
+      "missingFieldKeys": [
+        "limit",
+        "limits"
+      ],
+      "meaning": "Original status and declared limits, plus worksheet gaps where present. No completion, legal filing readiness or physical validity is inferred. Actual raw fields: status, limitations.",
+      "fieldExplanations": [
+        {
+          "key": "status",
+          "meaning": "Original status field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        },
+        {
+          "key": "limitations",
+          "meaning": "Original limitations field of this study packet.",
+          "unitOrConvention": "See full parameter and reference dictionaries; retain stated SI/peak/RMS conventions.",
+          "reviewLimit": "A declared field is not evidence of a completed physical experiment."
+        }
+      ]
+    }
+  ],
+  "scene": {
+    "id": "passive-rlc",
+    "title": "Passive RLC source, load and probe bench",
+    "status": "proposed-unbuilt-concept",
+    "geometryStatus": "assumed-for-illustration",
+    "units": "m",
+    "source": {
+      "path": "scripts/render-sphere-studies.py",
+      "sha256": "5f1e703adac1c9ff1bf4eeedac6a85e99de8067f080b53e2d65d210394fa92f2"
+    },
+    "camera": {
+      "positionM": [
+        0.64,
+        -0.88,
+        0.72
+      ],
+      "targetM": [
+        0,
+        0,
+        0.12
+      ],
+      "projection": "orthographic",
+      "orthoScaleM": 0.83,
+      "pngPixels": [
+        800,
+        500
+      ],
+      "glbConvention": "glTF Y-up converted from Blender Z-up; one model unit is one metre"
+    },
+    "geometry": {
+      "illustrativeTurns": 8,
+      "illustrativeCoilCentreRadiusM": 0.022,
+      "illustrativeCoilRiseM": 0.065,
+      "electricalValuesInferred": false,
+      "wiringVerified": false,
+      "accounting": "Input work = load loss + internal loss + change of stored energy within a declared model."
+    },
+    "components": [
+      {
+        "id": "source",
+        "label": "External source placeholder",
+        "positionM": [
+          -0.2,
+          0.055,
+          0.078
+        ],
+        "dimensionsM": [
+          0.14,
+          0.1,
+          0.115
+        ],
+        "shape": "rectangular instrument enclosure with blank display",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "External electrical input is required. No source amplitude, internal impedance or rating chosen."
+      },
+      {
+        "id": "analyzer",
+        "label": "Blank waveform analyzer",
+        "positionM": [
+          0.17,
+          0.085,
+          0.096
+        ],
+        "dimensionsM": [
+          0.19,
+          0.1,
+          0.15
+        ],
+        "shape": "rectangular instrument enclosure with blank display",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Proposed source/load probes and waveform acquisition. Blank screen; no measured trace."
+      },
+      {
+        "id": "inductor",
+        "label": "Illustrative inductor",
+        "positionM": [
+          -0.065,
+          -0.035001,
+          0.077535
+        ],
+        "dimensionsM": [
+          0.047398,
+          0.047304,
+          0.068298
+        ],
+        "shape": "eight-turn cylindrical helix",
+        "material": "copper illustration; composition unverified",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Assumed coil geometry only. Inductance, resistance, parasitic capacitance and ratings are not inferred."
+      },
+      {
+        "id": "capacitor",
+        "label": "Capacitor placeholder",
+        "positionM": [
+          0.01,
+          -0.035,
+          0.067
+        ],
+        "dimensionsM": [
+          0.034,
+          0.034,
+          0.052
+        ],
+        "shape": "cylindrical can",
+        "material": "matte polymer illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Capacitance, dielectric, voltage rating and loss are unspecified."
+      },
+      {
+        "id": "load",
+        "label": "Resistive load placeholder",
+        "positionM": [
+          0.085,
+          -0.035,
+          0.054
+        ],
+        "dimensionsM": [
+          0.05,
+          0.022,
+          0.022
+        ],
+        "shape": "rectangular resistor body",
+        "material": "off-white instrument enclosure",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Useful load dissipates supplied energy. Resistance, temperature coefficient and power rating unselected."
+      },
+      {
+        "id": "source-probe",
+        "label": "Source Probe",
+        "positionM": [
+          -0.08,
+          -0.11,
+          0.055
+        ],
+        "dimensionsM": [
+          0.008,
+          0.06,
+          0.008
+        ],
+        "shape": "unconnected probe placeholder",
+        "material": "matte polymer illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Measurement channel placeholder, not a verified connection, bandwidth or calibration."
+      },
+      {
+        "id": "load-probe",
+        "label": "Load Probe",
+        "positionM": [
+          0.08,
+          -0.11,
+          0.055
+        ],
+        "dimensionsM": [
+          0.008,
+          0.06,
+          0.008
+        ],
+        "shape": "unconnected probe placeholder",
+        "material": "matte polymer illustration",
+        "assumption": "All geometry dimensions selected for illustration; no manufacturing tolerance or rating.",
+        "meaning": "Measurement channel placeholder, not a verified connection, bandwidth or calibration."
+      }
+    ],
+    "legend": [
+      {
+        "reference": 1,
+        "componentId": "source",
+        "label": "External source placeholder",
+        "meaning": "External electrical input is required. No source amplitude, internal impedance or rating chosen."
+      },
+      {
+        "reference": 2,
+        "componentId": "analyzer",
+        "label": "Blank waveform analyzer",
+        "meaning": "Proposed source/load probes and waveform acquisition. Blank screen; no measured trace."
+      },
+      {
+        "reference": 3,
+        "componentId": "inductor",
+        "label": "Illustrative inductor",
+        "meaning": "Assumed coil geometry only. Inductance, resistance, parasitic capacitance and ratings are not inferred."
+      },
+      {
+        "reference": 4,
+        "componentId": "capacitor",
+        "label": "Capacitor placeholder",
+        "meaning": "Capacitance, dielectric, voltage rating and loss are unspecified."
+      },
+      {
+        "reference": 5,
+        "componentId": "load",
+        "label": "Resistive load placeholder",
+        "meaning": "Useful load dissipates supplied energy. Resistance, temperature coefficient and power rating unselected."
+      },
+      {
+        "reference": 6,
+        "componentId": "source-probe",
+        "label": "Source Probe",
+        "meaning": "Measurement channel placeholder, not a verified connection, bandwidth or calibration."
+      },
+      {
+        "reference": 7,
+        "componentId": "load-probe",
+        "label": "Load Probe",
+        "meaning": "Measurement channel placeholder, not a verified connection, bandwidth or calibration."
+      }
+    ],
+    "objectGeometry": [
+      {
+        "name": "assumed 600 by 380 mm apparatus base",
+        "type": "MESH",
+        "positionM": [
+          0,
+          0,
+          0.01
+        ],
+        "dimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          0,
+          0.01
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.6,
+          0.38,
+          0.02
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "source",
+        "type": "MESH",
+        "positionM": [
+          -0.2,
+          0.055,
+          0.078
+        ],
+        "dimensionsM": [
+          0.14,
+          0.1,
+          0.115
+        ],
+        "worldEnvelopeCentreM": [
+          -0.2,
+          0.055,
+          0.078
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.14,
+          0.1,
+          0.115
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "source blank display",
+        "type": "MESH",
+        "positionM": [
+          -0.2168,
+          0.0045,
+          0.08835
+        ],
+        "dimensionsM": [
+          0.0784,
+          0.001,
+          0.0552
+        ],
+        "worldEnvelopeCentreM": [
+          -0.2168,
+          0.0045,
+          0.08835
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0784,
+          0.001,
+          0.0552
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "source knob -1",
+        "type": "MESH",
+        "positionM": [
+          -0.1552,
+          0.0015,
+          0.055
+        ],
+        "dimensionsM": [
+          0.01495,
+          0.01495,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          -0.1552,
+          0.0015,
+          0.055
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.01495,
+          0.008,
+          0.01495
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "source knob 1",
+        "type": "MESH",
+        "positionM": [
+          -0.1552,
+          0.0015,
+          0.101
+        ],
+        "dimensionsM": [
+          0.01495,
+          0.01495,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          -0.1552,
+          0.0015,
+          0.101
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.01495,
+          0.008,
+          0.01495
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "analyzer",
+        "type": "MESH",
+        "positionM": [
+          0.17,
+          0.085,
+          0.096
+        ],
+        "dimensionsM": [
+          0.19,
+          0.1,
+          0.15
+        ],
+        "worldEnvelopeCentreM": [
+          0.17,
+          0.085,
+          0.096
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.19,
+          0.1,
+          0.15
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "analyzer blank display",
+        "type": "MESH",
+        "positionM": [
+          0.1472,
+          0.0345,
+          0.1095
+        ],
+        "dimensionsM": [
+          0.1064,
+          0.001,
+          0.072
+        ],
+        "worldEnvelopeCentreM": [
+          0.1472,
+          0.0345,
+          0.1095
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.1064,
+          0.001,
+          0.072
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "analyzer knob -1",
+        "type": "MESH",
+        "positionM": [
+          0.2308,
+          0.0315,
+          0.066
+        ],
+        "dimensionsM": [
+          0.0195,
+          0.0195,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          0.2308,
+          0.0315,
+          0.066
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0195,
+          0.008,
+          0.0195
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "analyzer knob 1",
+        "type": "MESH",
+        "positionM": [
+          0.2308,
+          0.0315,
+          0.126
+        ],
+        "dimensionsM": [
+          0.0195,
+          0.0195,
+          0.008
+        ],
+        "worldEnvelopeCentreM": [
+          0.2308,
+          0.0315,
+          0.126
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0195,
+          0.008,
+          0.0195
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "passive circuit carrier",
+        "type": "MESH",
+        "positionM": [
+          0,
+          -0.055,
+          0.033
+        ],
+        "dimensionsM": [
+          0.25,
+          0.16,
+          0.014
+        ],
+        "worldEnvelopeCentreM": [
+          0,
+          -0.055,
+          0.033
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.25,
+          0.16,
+          0.014
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "illustrative coil",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.0473977,
+          0.0473038,
+          0.0682976
+        ],
+        "worldEnvelopeCentreM": [
+          -0.0650001,
+          -0.0350012,
+          0.0775348
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0473977,
+          0.0473038,
+          0.0682976
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "capacitor placeholder",
+        "type": "MESH",
+        "positionM": [
+          0.01,
+          -0.035,
+          0.067
+        ],
+        "dimensionsM": [
+          0.034,
+          0.034,
+          0.052
+        ],
+        "worldEnvelopeCentreM": [
+          0.01,
+          -0.035,
+          0.067
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.034,
+          0.034,
+          0.052
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "resistive load placeholder",
+        "type": "MESH",
+        "positionM": [
+          0.085,
+          -0.035,
+          0.054
+        ],
+        "dimensionsM": [
+          0.05,
+          0.022,
+          0.022
+        ],
+        "worldEnvelopeCentreM": [
+          0.085,
+          -0.035,
+          0.054
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.05,
+          0.022,
+          0.022
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "source-probe",
+        "type": "MESH",
+        "positionM": [
+          -0.08,
+          -0.11,
+          0.055
+        ],
+        "dimensionsM": [
+          0.008,
+          0.008,
+          0.06
+        ],
+        "worldEnvelopeCentreM": [
+          -0.08,
+          -0.11,
+          0.055
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.008,
+          0.06,
+          0.008
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "load-probe",
+        "type": "MESH",
+        "positionM": [
+          0.08,
+          -0.11,
+          0.055
+        ],
+        "dimensionsM": [
+          0.008,
+          0.008,
+          0.06
+        ],
+        "worldEnvelopeCentreM": [
+          0.08,
+          -0.11,
+          0.055
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.008,
+          0.06,
+          0.008
+        ],
+        "rotationRadians": [
+          1.5707964,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "source lead conceptual not wiring",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.0719728,
+          0.1223971,
+          0.0188438
+        ],
+        "worldEnvelopeCentreM": [
+          -0.1059864,
+          -0.0207906,
+          0.0524659
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.0719728,
+          0.1223971,
+          0.0188438
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "return lead conceptual not wiring",
+        "type": "CURVE",
+        "positionM": [
+          0,
+          0,
+          0
+        ],
+        "dimensionsM": [
+          0.3337906,
+          0.1167747,
+          0.0239161
+        ],
+        "worldEnvelopeCentreM": [
+          -0.0350474,
+          -0.0530456,
+          0.0500069
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.3337906,
+          0.1167747,
+          0.0239161
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.22,
+          -0.015,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.22,
+          -0.015,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 1",
+        "type": "MESH",
+        "positionM": [
+          -0.22,
+          -0.015,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.219988,
+          -0.014508,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.001176,
+          0.008184,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.2,
+          0.015,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.2,
+          0.015,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 2",
+        "type": "MESH",
+        "positionM": [
+          0.2,
+          0.015,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.2,
+          0.015546,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005184,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.065,
+          0.02,
+          0.043
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.065,
+          0.02,
+          0.043
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 3",
+        "type": "MESH",
+        "positionM": [
+          -0.065,
+          0.02,
+          0.0438
+        ],
+        "dimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.065072,
+          0.020492,
+          0.0438
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00432,
+          0.0084,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.01,
+          -0.085,
+          0.043
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.01,
+          -0.085,
+          0.043
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 4",
+        "type": "MESH",
+        "positionM": [
+          0.01,
+          -0.085,
+          0.0438
+        ],
+        "dimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.009892,
+          -0.084454,
+          0.0438
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.00552,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.085,
+          -0.085,
+          0.043
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.085,
+          -0.085,
+          0.043
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 5",
+        "type": "MESH",
+        "positionM": [
+          0.085,
+          -0.085,
+          0.0438
+        ],
+        "dimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.084928,
+          -0.084562,
+          0.0438
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.004656,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 6 plaque",
+        "type": "MESH",
+        "positionM": [
+          -0.11,
+          -0.135,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          -0.11,
+          -0.135,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 6",
+        "type": "MESH",
+        "positionM": [
+          -0.11,
+          -0.135,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.005052,
+          0.0084,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          -0.109946,
+          -0.134508,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005052,
+          0.0084,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 7 plaque",
+        "type": "MESH",
+        "positionM": [
+          0.11,
+          -0.135,
+          0.024
+        ],
+        "dimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "worldEnvelopeCentreM": [
+          0.11,
+          -0.135,
+          0.024
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.022,
+          0.017,
+          0.0012
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "legend marker 7",
+        "type": "MESH",
+        "positionM": [
+          0.11,
+          -0.135,
+          0.0248
+        ],
+        "dimensionsM": [
+          0.005292,
+          0.008292,
+          0
+        ],
+        "worldEnvelopeCentreM": [
+          0.110234,
+          -0.134562,
+          0.0248
+        ],
+        "worldEnvelopeDimensionsM": [
+          0.005292,
+          0.008292,
+          0
+        ],
+        "rotationRadians": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "dimensionConvention": "Logical components use evaluated world-axis envelope centres/extents in metres; objectGeometry retains raw Blender origin/dimensions/rotation and explicit world envelopes. All geometry assumed, not manufacturing dimensions.",
+    "limitations": [
+      "Proposed, unbuilt apparatus concept. This is a 3D illustration, not hardware evidence or an engineering construction drawing.",
+      "Every geometry dimension is assumed in metres. No manufacturing tolerance, load rating, insulation rating, material assay or safety certification.",
+      "Natural-looking materials are rendering choices. No acoustic, electromagnetic, optical or quantum field is simulated.",
+      "Blank instrument screens contain no invented measurements. Numeric plaques refer only to the separate legend.",
+      "The PNG and GLB are companions to source-bound technical documents, not US/EPO filing-compliance certification."
+    ],
+    "files": {
+      "png": {
+        "path": "/sphere-lab/scenes/passive-rlc.png",
+        "sha256": "e516da5b6536d31f989c558885e5d7bb9c409866b62b2aca49e2a4843eb1331f",
+        "bytes": 467306
+      },
+      "glb": {
+        "path": "/sphere-lab/scenes/passive-rlc.glb",
+        "sha256": "f45907d4c5c4a69a35e904022fe1ab3118393c45989e6988872c92a61cf09932",
+        "bytes": 559908
+      }
+    }
+  },
+  "sourceRecords": [
+    {
+      "id": "em-poynting",
+      "title": "Haus & Melcher — Electromagnetic Fields and Energy §11.2, Poynting’s theorem",
+      "url": "https://web.mit.edu/6.013_book/www/chapter11/11.2.html",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Official MIT textbook section: energy-conservation derivation, work density, stored energy and flux roles read.",
+      "passage": "The objective ... is to derive a statement of energy conservation from Maxwell’s equations.",
+      "claim": "EM resonance models must account for source work, stored energy, flux and dissipation; response amplitude alone does not show net energy generation.",
+      "limitations": "This is a foundational source, not a recent experimental paper. It does not establish any proposed device’s efficiency, passivity or safety.",
+      "sha256": "c092e1c44d34ef6925e0057b2ddf401b01ecb48d765d8deed45efb3825f5b9ff",
+      "capture": "docs/sphere-panel/sources/em-poynting.html",
+      "retrievedAt": "2026-11-17T06:27:34.616698+00:00",
+      "passageKind": "research-note"
+    },
+    {
+      "id": "historical-tesla",
+      "title": "Tesla, US645576A — System of transmission of electrical energy (1900)",
+      "url": "https://patents.google.com/patent/US645576A/en",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Patent description passages identifying driven oscillator, condenser and generator read; not a full claim construction or replication.",
+      "passage": "The source describes oscillatory condenser discharges through the primary and charging from a generator.",
+      "claim": "The historical proposal has an explicit energy source and tuned transmitter/receiver mechanism. A patent documents a proposal rather than tested efficiency.",
+      "limitations": "Historical high-voltage details are not apparatus instructions here. No free energy, antigravity or copper teleportation result follows from this patent.",
+      "sha256": "bd6060540d3e96f3aa03aea5a177ac94cd80760db830ba53be2b3920e60e729c",
+      "capture": "docs/sphere-panel/sources/historical-tesla.html",
+      "retrievedAt": "2026-11-17T06:26:46.064825+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "1900-03-20",
+        "patent": "US645576A",
+        "kind": "Historical patent proposal"
+      }
+    }
+  ],
+  "setupFromScratch": [
+    "Begin with the virtual model; keep source, load and stored energy as separate channels.",
+    "For a future low-voltage test, obtain rated passive components and an isolated limited source through a qualified lab; component ratings and tolerances remain unspecified.",
+    "Measure time-aligned voltage and current across every energy port, including meter supplies and grounds."
+  ],
+  "productSelectionLeads": [
+    "Rated resistor, inductor and capacitor with measured values, tolerances, parasitics and thermal ratings.",
+    "Isolated current-limited low-voltage source and synchronized voltage/current probes: verify bandwidth, phase error and loading."
+  ],
+  "procurementStatus": "Equipment classes and evaluation criteria; not verified stock, supplier quotes, certified compatibility or a complete bill of materials.",
+  "improvements": [
+    {
+      "sourceId": "em-poynting",
+      "proposal": "Evaluate Haus & Melcher — Electromagnetic Fields and Energy §11.2, Poynting’s theorem only within the scope of its inspected passages.",
+      "evidenceLimit": "This is a foundational source, not a recent experimental paper. It does not establish any proposed device’s efficiency, passivity or safety."
+    },
+    {
+      "sourceId": "historical-tesla",
+      "proposal": "Evaluate Tesla, US645576A — System of transmission of electrical energy (1900) only within the scope of its inspected passages.",
+      "evidenceLimit": "Historical high-voltage details are not apparatus instructions here. No free energy, antigravity or copper teleportation result follows from this patent."
+    }
+  ],
+  "standards": [
+    {
+      "title": "US drawing requirements:37CFR1.84",
+      "url": "https://www.ecfr.gov/current/title-37/chapter-I/subchapter-A/part-1/subpart-B/section-1.84"
+    },
+    {
+      "title": "EPO President decision on presentation of application documents, OJ2025A49",
+      "url": "https://www.epo.org/en/legal/official-journal/2025/07/a49"
+    }
+  ],
+  "draftingChecks": {
+    "worksheet": {
+      "a4": true,
+      "insideCommonMargins": true,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "minimumReferenceHeightMm": 3.469851517107812,
+      "referenceHeightPass": true,
+      "uniformLineWidthMm": 0.25,
+      "contentBoundsMm": [
+        27.875,
+        27.076694641704325,
+        185.125,
+        229.125
+      ],
+      "referenceCount": 5,
+      "figureNumber": 0,
+      "mechanicalDraftOnly": true
+    },
+    "apparatus": {
+      "a4": true,
+      "widthMm": 210,
+      "heightMm": 297,
+      "commonMarginsMm": {
+        "top": 25,
+        "left": 25,
+        "right": 15,
+        "bottom": 10
+      },
+      "contentBoundsMm": [
+        35.323047127178825,
+        27.076694641704325,
+        183.7850225952227,
+        213.6
+      ],
+      "minimumReferenceInkHeightMm": 3.469851517107812,
+      "referenceHeightAtLeast3_2Mm": true,
+      "lineWidthMm": 0.25,
+      "noPrintedFrame": true,
+      "monochrome": true,
+      "figureNumber": 0
+    }
+  },
+  "limitations": [
+    "Standalone single-view draft; no FIG label. A filing-specific drawing set needs consistent figure numbering and complete claimed views.",
+    "Illustrated dimensions are assumed, not measured or manufacturing specifications.",
+    "Only declared component envelopes are projected; decorative meshes, mounts, internal wiring, optical paths and safety enclosures are omitted.",
+    "Geometric projection and drafting-format checks do not certify US/EPO filing compliance, enablement, patentability or physical validity.",
+    "Leader lines may cross projected parts in crowded layouts; every identity is also recorded in the companion numbered reference table.",
+    "Documentation concept map only: undirected connections are not execution order, causal proof, acquired data or invented hardware.",
+    "Numerals601–605 identify actual worksheet/schema field groups; companion sourceFieldPaths and missingFieldKeys explain their coverage.",
+    "Missing raw fields remain gaps; a field-group box does not establish that a physical apparatus or complete model was declared.",
+    "This single-view A4 draft omits the printed FIG. label and is not legal filing approval, patentability or scientific validation.",
+    "Source review is a selected dated corpus; no exhaustive state-of-the-art, novelty or legal conclusion.",
+    "Geometry remains fixed illustration; changing a simulation input does not update the scene or imply a measured setup."
+  ]
+}

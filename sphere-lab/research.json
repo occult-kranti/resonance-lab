@@ -1,0 +1,499 @@
+{
+  "schema": "sphere-research/v1",
+  "reviewedAt": "2026-11-17T06:38:10.690068+00:00",
+  "summary": "A bounded primary-source review: LOC-1 is a verified preregistered proposal with no reported measurements. Existing simulations, acoustic force models, clinical questions and quantum channels require distinct observables and evidence.",
+  "sphere": {
+    "sourceIds": [
+      "sphere-about",
+      "sphere-home",
+      "sphere-protocol",
+      "sphere-whitepaper",
+      "sphere-zenodo-pdf",
+      "sphere-osf-registration",
+      "sphere-visual-index"
+    ],
+    "publicationStatus": "Verified OSF preregistration pd3st and Zenodo working paper v1.0; no experimental results verified or reported by the project.",
+    "declaredScope": "A same-laboratory randomized comparison of a selected hollow copper sphere resonance against a stationary reference. >230kHz is an inherited selection criterion, not a validated fundamental threshold.",
+    "comparisonBoundary": "Independent local learning tools are not the external Sphere project, its registered analysis or its experimentally validated digital twin.",
+    "attribution": "Research-page excerpts and working paper: Michael P. Goodman / SPHERE Research, LLC, CC BY4.0; source links and bounded quotations retained. Third-party materials retain their own terms."
+  },
+  "sources": [
+    {
+      "id": "sphere-about",
+      "title": "Project S.P.H.E.R.E. — About",
+      "url": "https://spheredesci.org/about/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Captured page: key facts, project status, method, exclusions and license.",
+      "passage": "No measurements have been taken yet. There are no results.",
+      "claim": "The project proposes a controlled location comparison of a hollow copper sphere; its >230 kHz band is a proposed selection, not a validated threshold.",
+      "limitations": "A first-party description establishes what is proposed, not physical validation. Research-page text: SPHERE Research, LLC, CC BY 4.0.",
+      "sha256": "61488b44b54a7c3d34ae70643c4474cd30a3d20969bba1f4730f5f564394c8b9",
+      "capture": "docs/sphere-panel/sources/sphere-about.html",
+      "retrievedAt": "2026-11-17T06:21:51.663637+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt."
+    },
+    {
+      "id": "sphere-home",
+      "title": "Project S.P.H.E.R.E. — project homepage",
+      "url": "https://spheredesci.org/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Captured page: hypothesis/null, LOC-1, proposed amendment, metrology and explicit exclusions.",
+      "passage": "Any candidate signal requires artifact checks and independent replication.",
+      "claim": "The page distinguishes the registered two-sphere design from a proposed four-object amendment and calls SPHEREVL educational.",
+      "limitations": "The simplified video transcript overstates causal identification if read alone; a residual shift needs confound investigation and replication. Current date or website update does not establish results.",
+      "sha256": "2920f2be4a4d36c8398fd59a1d39986f8a9f9c4abd39194aded44abda8be54d0",
+      "capture": "docs/sphere-panel/sources/sphere-home.html",
+      "retrievedAt": "2026-11-17T06:21:51.663637+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt."
+    },
+    {
+      "id": "sphere-protocol",
+      "title": "Protocol LOC-1 — plain-language overview",
+      "url": "https://spheredesci.org/protocol/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Captured full plain-language protocol sections, controls, amendment and interpretation.",
+      "passage": "A scanning instrument that visits four points in turn is not equivalent.",
+      "claim": "Mechanical/optical resonance tracking and RF response require separate definitions and simultaneous readout qualification.",
+      "limitations": "The OSF registration controls exact specifications. Four objects yield six correlated pairs, not six independent replications.",
+      "sha256": "82d39e1d0b6cd8db0d215d9e7a81d1050f5d74802438b17e00a4351f6e618f06",
+      "capture": "docs/sphere-panel/sources/sphere-protocol.html",
+      "retrievedAt": "2026-11-17T06:21:51.663637+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt."
+    },
+    {
+      "id": "sphere-whitepaper",
+      "title": "S.P.H.E.R.E. whitepaper, HTML version 1.0",
+      "url": "https://spheredesci.org/whitepaper/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Selected sections1.1–1.3,2.1–2.2,3.1 and5.1; not every governance or cost claim checked.",
+      "passage": "Instrument bandwidth alone does not establish sub-hertz measurement accuracy.",
+      "claim": "The declared primary measurand is r(t)=f_T(t)/f_R(t), with location contrast 10^9(mean(r_A)-mean(r_B)). The document labels intrinsic location and the230 kHz threshold speculative.",
+      "limitations": "Proposed architecture, quoted capabilities and planning costs are not installed equipment, measured performance or proof of the hypothesis.",
+      "sha256": "5bf01f98d064590f695f8b23c7222c3c368821bc0055c0c890c7ae0d59854cd3",
+      "capture": "docs/sphere-panel/sources/sphere-whitepaper.html",
+      "retrievedAt": "2026-11-17T06:26:46.057168+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt.",
+      "publication": {
+        "date": "2026-10-22",
+        "version": "1.0",
+        "kind": "Working paper / project draft",
+        "doi": "10.5281/zenodo.23583932"
+      }
+    },
+    {
+      "id": "sphere-zenodo",
+      "title": "Zenodo archived whitepaper metadata, record23583932",
+      "url": "https://zenodo.org/api/records/23583932",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Primary API metadata, version, resource type, license and attached-file metadata read.",
+      "passage": "resource_type: Working paper; version1.0; publication_date2026-10-22; license cc-by-4.0.",
+      "claim": "An independent repository archive of the project working paper exists; DOI10.5281/zenodo.23583932 resolves to a working paper, not a journal acceptance.",
+      "limitations": "Archive custody and DOI do not establish peer review or experimental correctness.",
+      "sha256": "0c9053945aef03bdccfd87be56fad9229c0a1dd8ce37dfc84172cfea13c5df10",
+      "capture": "docs/sphere-panel/sources/sphere-zenodo.json",
+      "retrievedAt": "2026-11-17T06:26:46.058183+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "2026-10-22",
+        "version": "1.0",
+        "kind": "Working paper / project draft",
+        "doi": "10.5281/zenodo.23583932"
+      }
+    },
+    {
+      "id": "sphere-zenodo-pdf",
+      "title": "Archived SPHERE-Whitepaper-LOC1-Draft-v1.0.pdf",
+      "url": "https://zenodo.org/api/records/23583932/files/SPHERE-Whitepaper-LOC1-Draft-v1.0.pdf/content",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Downloaded38-page PDF; extracted text; selected introduction, primary-measurand, digital-twin and risk passages read.",
+      "passage": "The project ... without collected experimental data” and “instrument bandwidth alone does not establish sub-hertz measurement accuracy.",
+      "claim": "The actual archived PDF is a proposal; its SHA matches the file named in the OSF registration.",
+      "limitations": "Full PDF downloaded does not mean every page or cited underlying source was reviewed. Attribution: Michael P. Goodman / SPHERE Research, LLC, CC BY4.0.",
+      "sha256": "184a6573317bee342e419f3ee689b28aebafbe249bf864026677c04585e60dc2",
+      "capture": "docs/sphere-panel/sources/sphere-zenodo-pdf.pdf",
+      "retrievedAt": "2026-11-17T06:27:34.610216+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "2026-10-22",
+        "version": "1.0",
+        "kind": "Working paper / project draft",
+        "doi": "10.5281/zenodo.23583932"
+      }
+    },
+    {
+      "id": "sphere-osf-registration",
+      "title": "OSF Preregistration pd3st — Protocol LOC-1",
+      "url": "https://osf.io/pd3st/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Parent node metadata and registrations relationship retrieved; actual registration attributes and registered_meta on questions, sample, blinding, design, outcomes and analysis read.",
+      "passage": "registration=true; withdrawn=false; registered2026-10-23T03:12:22Z; “Data does not yet exist.",
+      "claim": "Registration pd3st specifies80 placements(40 A / 40 B),10 blocks of8,0.40 m separation, default30 min settling and ratio/covariance analysis. The parent5b6mj is a project node with registration=false and links this registration.",
+      "limitations": "These are preregistered choices, not verified power, achieved stability or results. Default settling must still be qualified experimentally; the four-object proposal is not silently substituted.",
+      "sha256": "f31cf900ac8f710f91ac82769d6a6196538e6b03234c895bea2f7d075c42c08e",
+      "capture": "docs/sphere-panel/sources/sphere-osf-registrations.json",
+      "retrievedAt": "2026-11-17T06:28:26.341601+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "2026-10-23",
+        "kind": "OSF Preregistration",
+        "registrationId": "pd3st"
+      }
+    },
+    {
+      "id": "sphere-visual-index",
+      "title": "SPHEREVL — Visual Lab documentation",
+      "url": "https://spheredesci.org/vl/",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Educational-purpose, exclusions and repository-description passages read; live app HTML metadata/intro also retrieved.",
+      "passage": "Educational simulation ... No physical equipment is connected.",
+      "claim": "The external visual lab is a workflow simulator, with proposed chamber/timebase/VNA/LDV interactions.",
+      "limitations": "No interactive operation or external code audit was completed by this source review. Static capture is not simulator verification.",
+      "sha256": "c8992526fd126367bae074c75cc1c7a3815e7f743fcee1ce24032ed10b25f13f",
+      "capture": "docs/sphere-panel/sources/sphere-visual-index.html",
+      "retrievedAt": "2026-11-17T06:27:34.611625+00:00",
+      "passageKind": "research-note"
+    },
+    {
+      "id": "metrology-gum",
+      "title": "JCGM100:2008 — Guide to the expression of uncertainty in measurement",
+      "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Official PDF downloaded/text extracted; §§5.2.2,5.2.5,6.2.2–6.3.3 read.",
+      "passage": "Correlations between input quantities cannot be ignored if present and significant.",
+      "claim": "A/B differences and shared-reference ratios need covariance terms. A chosen coverage factor is not automatically a calibrated95% interval.",
+      "limitations": "Metrology guidance does not provide this apparatus’s uncertainty or detect an intrinsic location variable. Local copies are research captures; publisher terms retained.",
+      "sha256": "41bbf068fbc0d7986c98691b2d1af6680cb3044f6a1a89b3560933ed9ef9626c",
+      "capture": "docs/sphere-panel/sources/metrology-gum.pdf",
+      "retrievedAt": "2026-11-17T06:26:46.059793+00:00",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt.",
+      "publication": {
+        "year": 2008,
+        "kind": "Metrology guidance; corrected2010"
+      }
+    },
+    {
+      "id": "resonator-2025-pdf",
+      "title": "Kramer et al. — Acoustic resonators above100 GHz (2025)",
+      "url": "https://arxiv.org/pdf/2502.03632",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "arXiv v2 abstract and journal metadata read; primary PDF downloaded, abstract/introduction read; no full performance audit.",
+      "passage": "Three lithium-niobate layers with alternating crystallographic orientations support higher-order modes while retaining coupling/quality factor.",
+      "claim": "Recent primary engineering work identifies concrete material/geometry/mode tradeoffs. Journal reference: Applied Physics Letters127,012204(2025), DOI10.1063/5.0275691.",
+      "limitations": "A thin-film piezoelectric resonator is not a hollow copper sphere, acoustic levitator or biological treatment. Paper-reported performance is not reproduced here.",
+      "sha256": "1dba06b4058095f0ddc443fa0f20685d18e8199ad4340c6efa9c9b326bfea7d8",
+      "capture": "docs/sphere-panel/sources/resonator-2025-pdf.pdf",
+      "retrievedAt": "2026-11-17T06:28:26.342801+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "year": 2025,
+        "doi": "10.1063/5.0275691",
+        "repositoryId": "arXiv:2502.03632v2",
+        "kind": "Primary research; selected repository PDF passages"
+      }
+    },
+    {
+      "id": "em-poynting",
+      "title": "Haus & Melcher — Electromagnetic Fields and Energy §11.2, Poynting’s theorem",
+      "url": "https://web.mit.edu/6.013_book/www/chapter11/11.2.html",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Official MIT textbook section: energy-conservation derivation, work density, stored energy and flux roles read.",
+      "passage": "The objective ... is to derive a statement of energy conservation from Maxwell’s equations.",
+      "claim": "EM resonance models must account for source work, stored energy, flux and dissipation; response amplitude alone does not show net energy generation.",
+      "limitations": "This is a foundational source, not a recent experimental paper. It does not establish any proposed device’s efficiency, passivity or safety.",
+      "sha256": "c092e1c44d34ef6925e0057b2ddf401b01ecb48d765d8deed45efb3825f5b9ff",
+      "capture": "docs/sphere-panel/sources/em-poynting.html",
+      "retrievedAt": "2026-11-17T06:27:34.616698+00:00",
+      "passageKind": "research-note"
+    },
+    {
+      "id": "historical-newton",
+      "title": "Newton, Opticks BookIII, Query31 — Newton Project transcription",
+      "url": "https://www.newtonproject.ox.ac.uk/view/texts/normalized/NATP00051",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Selected closing analysis/synthesis passage read from primary-text scholarly transcription; not the whole Opticks.",
+      "passage": "This is the Method of Analysis: And the Synthesis consists in assuming the Causes discover’d ... and ... proving the Explanations.",
+      "claim": "Historical method can inspire infer→predict→countercheck workflows. Alchemical vocabulary and modern model parameters remain separate interpretations.",
+      "limitations": "Historical propositions and symbolic patterns are not modern material spectra or evidence of healing, levitation or location encoding.",
+      "sha256": "89ecab033bd97d53b6aa5efda91b1365ca488c94b94af4de3a5a79ba434ec8e2",
+      "capture": "docs/sphere-panel/sources/historical-newton.html",
+      "retrievedAt": "2026-11-17T06:26:46.061007+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "year": 1718,
+        "kind": "Historical primary-text transcription; Opticks2ndEnglish edition"
+      }
+    },
+    {
+      "id": "historical-tesla",
+      "title": "Tesla, US645576A — System of transmission of electrical energy (1900)",
+      "url": "https://patents.google.com/patent/US645576A/en",
+      "status": "Retrieved; selected passages read",
+      "readDepth": "Patent description passages identifying driven oscillator, condenser and generator read; not a full claim construction or replication.",
+      "passage": "The source describes oscillatory condenser discharges through the primary and charging from a generator.",
+      "claim": "The historical proposal has an explicit energy source and tuned transmitter/receiver mechanism. A patent documents a proposal rather than tested efficiency.",
+      "limitations": "Historical high-voltage details are not apparatus instructions here. No free energy, antigravity or copper teleportation result follows from this patent.",
+      "sha256": "bd6060540d3e96f3aa03aea5a177ac94cd80760db830ba53be2b3920e60e729c",
+      "capture": "docs/sphere-panel/sources/historical-tesla.html",
+      "retrievedAt": "2026-11-17T06:26:46.064825+00:00",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "1900-03-20",
+        "patent": "US645576A",
+        "kind": "Historical patent proposal"
+      }
+    },
+    {
+      "id": "audio-levitation-mri-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12032270/",
+      "canonicalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12032270/",
+      "sha256": "d7037aee137b34bd20cbc365ca3103e8e67cafa89017cedf2af1706326320e98",
+      "capture": "docs/sphere-panel/sources/audio-levitation-mri-2025.xml",
+      "text": "docs/sphere-panel/sources/audio-levitation-mri-2025.txt",
+      "retrievedAt": "2026-11-17T06:27:45.582122+00:00",
+      "title": "Contact-free magnetic resonance imaging and spectroscopy with acoustic levitation",
+      "doi": "10.1038/s41467-025-58949-2",
+      "status": "primary-experiment",
+      "readDepth": "Abstract, introduction, Results acoustic levitator paragraph, Discussion, Methods acoustic levitation apparatus read; no supplementary datasets or replication.",
+      "passage": "The operating frequency of the transducer was set, through an Arduino Uno board and a module Si5351, at 40 kHz.",
+      "claim": "Reports contact-free MR imaging/spectroscopy of 0.5–5 microlitre droplets with a demagnetized 40kHz levitator, including apparatus-specific stability and deformation effects.",
+      "limitations": "Small droplets and a specific multi-transducer field; not a hollow copper-sphere force calibration, large-body levitation, human health result or validation of this simplified 1D model.",
+      "reviewOwner": "audio panel agent",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized.",
+      "publication": {
+        "date": "2025-04-25",
+        "doi": "10.1038/s41467-025-58949-2",
+        "kind": "Primary research"
+      }
+    },
+    {
+      "id": "audio-large-objects-2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12630794/",
+      "canonicalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12630794/",
+      "sha256": "ea11c9d6d1c2e6a5bd8cbb7aa079867785c85ce9611af769aea15855543ae0ac",
+      "capture": "docs/sphere-panel/sources/audio-large-objects-2025.xml",
+      "text": "docs/sphere-panel/sources/audio-large-objects-2025.txt",
+      "retrievedAt": "2026-11-17T06:27:51.215842+00:00",
+      "title": "Sparse identification of nonlinear dynamics applied to the acoustic levitation of acoustically large objects",
+      "doi": "10.1038/s41598-025-24666-5",
+      "status": "primary-experiment-and-model-identification",
+      "readDepth": "Abstract, introduction, Gor’kov small-object methodology and experimental-setup sections read. XML equations contain inline images; equations from image-only content were not recovered or claimed independently transcribed.",
+      "passage": "Gorkov’s theory fails to capture the more complex dynamical behaviour exhibited by acoustically large or deformable objects",
+      "claim": "Reports separate synthetic small-object benchmark and experimental larger-object identification, illustrating failure of small-sphere extrapolation.",
+      "limitations": "Data-driven, setup-dependent dynamics; not a universal extension of Gor’kov or proof that a large copper shell can be supported by the implemented force law.",
+      "reviewOwner": "audio panel agent",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized.",
+      "publication": {
+        "date": "2025-11-19",
+        "doi": "10.1038/s41598-025-24666-5",
+        "kind": "Primary research"
+      }
+    },
+    {
+      "id": "audio-binaural-review-2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10198548/",
+      "canonicalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10198548/",
+      "sha256": "8c46e03b2b288f81b3272198146b16e63dc2ff58cd02374783a7c16fabbbef79",
+      "capture": "docs/sphere-panel/sources/audio-binaural-review-2023.xml",
+      "text": "docs/sphere-panel/sources/audio-binaural-review-2023.txt",
+      "retrievedAt": "2026-11-17T06:27:56.376569+00:00",
+      "title": "Binaural beats to entrain the brain? A systematic review of the effects of binaural beat stimulation on brain oscillatory activity, and the implications for psychological research and intervention",
+      "doi": "10.1371/journal.pone.0286023",
+      "status": "systematic-review",
+      "readDepth": "Abstract, study selection/inclusion criteria, Results overview, Discussion, Limitations and Conclusion read; individual primary trials and supplementary data not independently reanalysed.",
+      "passage": "The methodological heterogeneity in this field of study ultimately limits the comparability of research outcomes.",
+      "claim": "Fourteen included studies: abstract/discussion summarize five supportive, eight contradictory and one mixed; authors find inconsistent EEG entrainment and cannot pool effect sizes.",
+      "limitations": "Review concerns dichotic binaural stimulation and EEG in selected healthy adults, not all music or all treatments; monaural arithmetic cannot establish clinical healing. Results count overlapping support/mixed categories internally, so no vote-count probability or effect estimate is inferred.",
+      "reviewOwner": "audio panel agent",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized.",
+      "publication": {
+        "date": "2023-05-19",
+        "doi": "10.1371/journal.pone.0286023",
+        "kind": "Systematic review"
+      }
+    },
+    {
+      "id": "clinical-dental-2025",
+      "title": "Shukla et al. — Effectiveness of Binaural Beats in Reducing Dental Pain and Anxiety among Children and Adults: A Systematic Review and Meta-analysis (2025)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12451561/",
+      "status": "Systematic review and meta-analysis; low-certainty clinical evidence",
+      "readDepth": "Primary full-text XML retrieved. Abstract, inclusion criteria, Results risk-of-bias/GRADE and comparisons, Discussion limitations and Conclusion read. Individual trials and forest plots not independently reanalysed.",
+      "passage": "The level of evidence inferred from this systematic review inferred a low certainty for reduction of dental pain and anxiety using the GRADE approach.",
+      "claim": "Nine studies entered qualitative review and six quantitative analysis. Some anxiety comparisons favored binaural beats; dental pain versus no intervention was inconclusive with substantial heterogeneity. The authors report high selection/detection bias and urge caution.",
+      "limitations": "A specific dental-procedure evidence base is not universal healing, proof of a unique curative frequency, or a validation of this app. Pre/post change alone does not identify a specific binaural mechanism. EEG entrainment and clinical benefit are distinct outcomes.",
+      "sha256": "005cdce1b33c6a936306c1b81aa531e1c9c4413891102d8c80c634280d076378",
+      "capture": "docs/sphere-panel/sources/clinical-dental-2025.xml",
+      "retrievedAt": "2026-11-17T06:32:07.621289+00:00",
+      "doi": "10.5005/jp-journals-10005-3230",
+      "passageKind": "verbatim-excerpt",
+      "passageConvention": "Verbatim words; extracted whitespace normalized. No omitted words in this excerpt.",
+      "publication": {
+        "date": "2025-09-04",
+        "doi": "10.5005/jp-journals-10005-3230",
+        "kind": "Systematic review"
+      }
+    },
+    {
+      "id": "quantum-bennett-1993",
+      "title": "Teleporting an unknown quantum state via dual classical and Einstein-Podolsky-Rosen channels",
+      "url": "https://research.ibm.com/publications/teleporting-an-unknown-quantum-state-via-dual-classical-and-einstein-podolsky-rosen-channels",
+      "status": "read-primary",
+      "version": "Publication entry dated 29 March 1993",
+      "readDepth": "Author-institution publication entry and complete abstract only; original paper not retrieved",
+      "passage": "Alice shares EPR correlations, makes a joint measurement, sends the classical result; Bob conditionally reconstructs the state.",
+      "claim": "Entanglement and an ordinary classical message are separate required resources.",
+      "limitations": "Abstract supports protocol overview, not apparatus rates, noise assumptions or new research novelty.",
+      "capture": "docs/sphere-panel/sources/quantum-1993.html",
+      "sha256": "262da64417cdf0b52390885a86b4c88f0a492a39661fa5232f983c9089b5254c",
+      "reviewOwner": "quantum panel agent",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "1993-03-29",
+        "kind": "Institutional abstract of primary paper"
+      }
+    },
+    {
+      "id": "quantum-horodecki-1999",
+      "title": "General teleportation channel, singlet fraction and quasi-distillation",
+      "url": "https://arxiv.org/abs/quant-ph/9807091v2",
+      "status": "read-primary",
+      "version": "arXiv quant-ph/9807091v2, 2 March 1999",
+      "readDepth": "Selected PDF passages: section II Eq.10; section III B/C Eqs.14–20; section IV classical fidelity derivation; abstract. Remaining proofs/sections not fully reviewed.",
+      "passage": "Eq.10 uniformly averages pure-state input fidelity; Eqs.14–20 relate noisy Bell resources to depolarizing channels; section IV gives f_cl=2/(d+1).",
+      "claim": "For d=2 the model channel is vρ+(1−v)I/2 with pure-input fidelity (1+v)/2; deterministic uniform-pure-qubit classical benchmark is 2/3.",
+      "limitations": "Not an arbitrary restricted-ensemble, known-state or postselected-experiment benchmark; no physical-copper or acoustic implication.",
+      "capture": "docs/sphere-panel/sources/quantum-horodecki-paper.pdf",
+      "sha256": "037d66b6648910b78947fcf974fb75853b86852c1a4eb5f7d0702f1022d09a55",
+      "reviewOwner": "quantum panel agent",
+      "passageKind": "research-note",
+      "publication": {
+        "year": 1999,
+        "repositoryVersion": "quant-ph/9807091v2",
+        "kind": "Selected primary PDF passages"
+      }
+    },
+    {
+      "id": "quantum-thomas-2024",
+      "title": "Quantum teleportation coexisting with classical communications in optical fiber",
+      "url": "https://arxiv.org/abs/2404.10738v4",
+      "status": "read-primary",
+      "version": "arXiv2404.10738v4, 26 October2024; publisher metadata verified Optica11(12):1700 DOI10.1364/optica.540362 published20December2024",
+      "readDepth": "Selected preprint PDF: title/version, abstract, section1 introduction, section2/Fig.1 protocol and apparatus description. Results tables and supplementary methods not fully reviewed.",
+      "passage": "Abstract reports 30.2-km fiber with 400-Gbps conventional traffic; Fig.1 describes polarization qubits, entangled photon pair, Bell-state measurement, four-fold coincidence evaluation and Bob Pauli operation or postprocessing.",
+      "claim": "A physical quantum channel uses independently prepared/heralded photons, entanglement, filtering, joint detection and classical correction; it is not an acoustic resonance or matter-transport demonstration.",
+      "limitations": "Selected 2024 experiment, not exhaustive 2026 state-of-art survey; reported abstract values are source claims, not reproduced data; ideal four-outcome deterministic model does not reproduce probabilistic optical hardware.",
+      "capture": "docs/sphere-panel/sources/quantum-optica-preprint.pdf",
+      "sha256": "7faac4bd12cb8b2c62d782837eac9c770650c277ef30eea3eb335caa92a0e361",
+      "reviewOwner": "quantum panel agent",
+      "passageKind": "research-note",
+      "publication": {
+        "date": "2024-12-20",
+        "repositoryVersion": "arXiv:2404.10738v4 (2024-10-26)",
+        "doi": "10.1364/optica.540362",
+        "kind": "Selected repository preprint passages; publisher full text not read"
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "sphere-metrology",
+      "title": "Location comparison: proposal versus existing numerical lab",
+      "sourceIds": [
+        "sphere-about",
+        "sphere-protocol",
+        "sphere-osf-registration",
+        "sphere-zenodo-pdf",
+        "metrology-gum"
+      ],
+      "currentImplementation": "Location Spectrum Lab simulates selected hollow/solid elastic modes, passive fixture coupling, projection and temperature confounds. Defaults include44.45 mm radius and illustrative0.5 mm shell; no physical measurements.",
+      "sphereProposal": "Track an identified >230 kHz hollow-sphere mode against a stationary reference under the registered randomized A/B protocol.",
+      "evidenceBoundary": "The existing ~23 kHz illustrative shell mode is not the proposed >230 kHz target; geometry, mode family and estimator must be chosen explicitly. Registration is a study plan.",
+      "nextTest": "Compare like-for-like mode definitions and covariance-aware synthetic trial blocks; preserve source protocol versus exploratory controls as separate configurations."
+    },
+    {
+      "id": "acoustic-lift",
+      "title": "Acoustic trapping is a force-balance problem",
+      "sourceIds": [
+        "audio-levitation-mri-2025",
+        "audio-large-objects-2025"
+      ],
+      "currentImplementation": "A separate bounded Rayleigh/Gor’kov model is under panel review.",
+      "sphereProposal": "LOC-1 does not claim acoustic levitation or weight cancellation.",
+      "evidenceBoundary": "Radiation-force trapping uses external acoustic power, finite particle contrast and stable equilibria; it does not establish intrinsic location encoding.",
+      "nextTest": "Require force versus gravity, curvature/stability, radius-to-wavelength validity and drive-off controls."
+    },
+    {
+      "id": "beats-health",
+      "title": "Beat arithmetic and clinical claims are separate",
+      "sourceIds": [
+        "audio-binaural-review-2023",
+        "clinical-dental-2025"
+      ],
+      "currentImplementation": "Two-tone audio can model carrier frequencies, spectral lines and an envelope.",
+      "sphereProposal": "Sphere project explicitly excludes medical benefit.",
+      "evidenceBoundary": "A 2023 review finds inconsistent EEG entrainment; a 2025 dental review reports some favorable anxiety outcomes but low-certainty evidence, high bias and inconclusive pain versus no intervention. Neither proves universal healing or a unique curative frequency. Monaural beat arithmetic is not dichotic binaural stimulation.",
+      "nextTest": "Keep acoustic beat predictions deterministic; assess health claims only through outcome-specific controlled clinical evidence, supplied separately."
+    },
+    {
+      "id": "em-passivity",
+      "title": "Resonance amplification requires an energy budget",
+      "sourceIds": [
+        "em-poynting",
+        "historical-tesla"
+      ],
+      "currentImplementation": "Existing coupled-coil and passive fixture models declare sources, storage and losses.",
+      "sphereProposal": "RF instrumentation can characterize a channel; it does not turn optical/mechanical and EM spectra into the same observable.",
+      "evidenceBoundary": "Large amplitude or voltage at resonance does not by itself show power gain or energy creation.",
+      "nextTest": "Check zero drive, stronger loss, timestep convergence and independently integrated work/energy balance."
+    },
+    {
+      "id": "quantum-channel",
+      "title": "Quantum information transfer has a different object and protocol",
+      "sourceIds": [
+        "quantum-bennett-1993",
+        "quantum-horodecki-1999",
+        "quantum-thomas-2024"
+      ],
+      "currentImplementation": "A separate exact qubit-channel model is under panel review.",
+      "sphereProposal": "Sphere explicitly excludes teleportation findings.",
+      "evidenceBoundary": "Quantum state transfer uses entanglement and classical communication. The selected 2024 fiber preprint is a probabilistic optical experiment; an ideal four-outcome qubit simulation does not reproduce its hardware and does not transport copper matter.",
+      "nextTest": "Compare conditional versus feed-forward-corrected output and resource/classical-channel requirements."
+    },
+    {
+      "id": "historical-pattern",
+      "title": "Historical and occult patterns can motivate testable maps",
+      "sourceIds": [
+        "historical-newton",
+        "historical-tesla",
+        "sphere-about"
+      ],
+      "currentImplementation": "The integrated archive preserves historical claims, selected symbolic patterns and explicit image-to-sound mappings.",
+      "sphereProposal": "The project attributes motivation to Bashar material without treating it as established physical evidence.",
+      "evidenceBoundary": "A motif, sigil, statue or chosen pitch does not determine a unique physical resonance or prove hidden causal connection.",
+      "nextTest": "Freeze the mapping and channel, include alternative/null patterns and report sensitivity before interpreting meaning."
+    }
+  ],
+  "nextResearchQueue": [
+    {
+      "question": "Clinical outcome-specific updates",
+      "lead": "Europe PMC bounded query returned 2026 theta-beat and young-adult reviews plus a 2025 perioperative review. Metadata only; not read or used as clinical support.",
+      "sourceCapture": "docs/sphere-panel/sources/clinical-search.json"
+    },
+    {
+      "question": "Registered estimator details versus attainable sensitivity",
+      "lead": "Independently audit OSF registered analysis, covariance, exclusions and power before apparatus acquisition; do not equate sample count with proven sensitivity."
+    },
+    {
+      "question": "External simulator engineering",
+      "lead": "Review actual version-pinned external simulator code and interactive behavior separately from documentation; no external interactive audit completed here."
+    }
+  ],
+  "quotationPolicy": "passageKind=verbatim-excerpt identifies exact source words after extraction whitespace normalization; research-note identifies reviewer paraphrase, metadata summary or mathematical interpretation, not a quotation."
+}

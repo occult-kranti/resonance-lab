@@ -1,0 +1,1593 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+  "scope": "Source-led staged setup guides and representative product roles, not construction approval, purchasing, exhaustive SOTA or measured performance. All apparatus stages remain gated by missing actual specifications.",
+  "coverage": {
+    "expectedRecordIds": [
+      "nt:coupled-coils",
+      "nt:environmental-witness",
+      "nt:newton-prism",
+      "atlas:v4-phone-witness-plan",
+      "atlas:v4-phone-witness-3d",
+      "atlas:v4-dual-channel-plan",
+      "atlas:v4-dual-channel-3d",
+      "atlas:v4-electric-energy",
+      "atlas:v4-magnetic-force-plan",
+      "atlas:v4-magnetic-force-3d",
+      "atlas:v4-magnetic-work"
+    ],
+    "recordCount": 11,
+    "familyCount": 7
+  },
+  "guides": [
+    {
+      "id": "coupled-resonator",
+      "recordIds": [
+        "nt:coupled-coils"
+      ],
+      "title": "Two coupled loops: reproduce the budget before hardware",
+      "goal": "Track source loading, receiver response and the complete signed energy account.",
+      "status": "proposed-not-commissioned",
+      "prerequisites": [
+        "Understand peak versusRMS, common phase reference and passive energy storage.",
+        "Use an isolated low-voltage source only after actual component/probe limits are documented."
+      ],
+      "steps": [
+        {
+          "id": "desk",
+          "title": "Start with the pinned model",
+          "instructions": [
+            "Open the source record and attached contract; write down the observed quantity, units and rival explanation.",
+            "Run the existing numerical controls before selecting physical parts; record the exact source commit and original parameter conventions."
+          ],
+          "checks": [
+            "The source record remains proposed/unbuilt.",
+            "A completed software test is not a completed apparatus test."
+          ],
+          "stopIf": [
+            "The contract or source identity is missing, or its peak/RMS and unit convention is unresolved."
+          ]
+        },
+        {
+          "id": "specify",
+          "title": "Close the specification gap",
+          "instructions": [
+            "Transcribe the pinned two-loop topology and winding-dot convention into a reviewed connection drawing.",
+            "List actual coil, capacitor, load, source and probe part numbers; measure L, M and R before comparing hardware with the numerical contract."
+          ],
+          "checks": [
+            "Record turn count, wire, core and ratings as chosen implementation values, not inherited facts."
+          ],
+          "stopIf": [
+            "Any rating, ground path, isolation requirement or actual inductance is unknown."
+          ]
+        },
+        {
+          "id": "commission",
+          "title": "Commission ordinary controls before a claimed gain",
+          "instructions": [
+            "With the source at zero, record background and instrument offsets.",
+            "Use a known dummy load and minimum documented source setting; acquire all channels on the same reference.",
+            "Change receiving load and coupling one variable at a time; retain raw traces and endpoints for storage."
+          ],
+          "checks": [
+            "Source-off yields the declared null within measured uncertainty.",
+            "Uncoupled receiver and sign-reversedM controls match the implemented model."
+          ],
+          "stopIf": [
+            "Clipping, heating, drift,ground coupling or missing source/storage work prevents a closed account."
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "source-readout",
+          "role": "Drive and simultaneous phase-aware readout",
+          "quantity": "One source; enough coherent channels for all observables",
+          "measurableQuantity": "Source voltage, primary current, receiver current and load voltage; bandwidth and phase error",
+          "specification": "Source voltage, primary current, receiver current and load voltage; bandwidth and phase error",
+          "selectionCriteria": [
+            "Select differential or isolated channels with a common timebase.",
+            "Characterize source impedance, channel phase and the burden added by every probe. A two-input audio interface alone is not the required four-observable electrical readout."
+          ],
+          "searchKeywords": [
+            "isolated low-voltage waveform generator",
+            "coherent differential four-channel acquisition"
+          ],
+          "representativeProducts": []
+        },
+        {
+          "id": "coils",
+          "role": "Two adjustable coils",
+          "quantity": "Two coils",
+          "measurableQuantity": "Self-inductance L1/L2, mutual inductance M, resistance and geometry",
+          "specification": "Self-inductance L1/L2, mutual inductance M, resistance and geometry",
+          "selectionCriteria": [
+            "Frozen R1 declares 10 mH and 40 mH, with M = 3 mH. Geometry does not supply a winding turn count.",
+            "Measure signed mutual inductance and both self-inductances at every gap; choose wire, core, insulation and thermal ratings separately."
+          ],
+          "searchKeywords": [
+            "coupled inductors",
+            "measured mutual inductance",
+            "winding resistance"
+          ],
+          "representativeProducts": []
+        },
+        {
+          "id": "caps",
+          "role": "Resonating capacitances",
+          "quantity": "Two capacitors",
+          "measurableQuantity": "C1/C2, AC voltage, ripple current and tolerance",
+          "specification": "C1/C2, AC voltage, ripple current and tolerance",
+          "selectionCriteria": [
+            "The R1 values 10 µF and 2.5 µF are numerical targets, not verified MKP10 stock codes.",
+            "Inspect the chosen part’s AC, ripple, tolerance and temperature specifications."
+          ],
+          "searchKeywords": [
+            "polypropylene pulse capacitor",
+            "10 uF 2.5 uF AC rating"
+          ],
+          "representativeProducts": [
+            {
+              "name": "MKP10 film-capacitor family",
+              "manufacturer": "WIMA",
+              "datasheetURL": "https://www.wima.de/en/our-product-range/pulse-capacitors/mkp-10/",
+              "documentKind": "manufacturer product specifications",
+              "sourceId": "wima-mkp10",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "shunts-load",
+          "role": "Current readout and useful load",
+          "quantity": "Two current-sense roles and one useful load",
+          "measurableQuantity": "Resistance, power rating and temperature coefficient",
+          "specification": "Resistance, power rating and temperature coefficient",
+          "selectionCriteria": [
+            "Choose shunts so their burden is included in the circuit model.",
+            "Recalculate dissipation and bandwidth. A WSL current-sense part is not a recommendation for the 20 Ω useful load."
+          ],
+          "searchKeywords": [
+            "four-terminal current shunt",
+            "noninductive load resistor power rating"
+          ],
+          "representativeProducts": [
+            {
+              "name": "WSL current-sense resistor family",
+              "manufacturer": "Vishay",
+              "datasheetURL": "https://www.vishay.com/docs/30100/wsl.pdf",
+              "documentKind": "manufacturer datasheet",
+              "sourceId": "vishay-wsl",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        }
+      ],
+      "buildabilityGate": {
+        "decision": "desk study ready; apparatus conditional—not released for construction",
+        "requiredEvidence": [
+          "Chosen complete part numbers and current manufacturer documentation",
+          "Documented ratings, tolerances, connections and measurement uncertainty for the actual implementation",
+          "Independent topology/measurement review and successful commissioning controls"
+        ],
+        "missing": [
+          "Coil turns, core, wire, actual L/M, component ratings, source impedance and calibrated four-observable readout remain unspecified."
+        ]
+      },
+      "commissioningControls": [
+        "Source off; uncoupled coils; known load; reversed winding sign; repeated gap settings.",
+        "Independent signed-work quadrature and endpoint storage; peak/RMS check."
+      ],
+      "successCriteria": [
+        "The passive forward model predicts held-out load changes within a predeclared uncertainty.",
+        "Measure every energy term or identify it explicitly as modeled; report residuals with uncertainty."
+      ],
+      "falsifier": [
+        "A repeatable budget failure beyond uncertainty rejects the present implementation or measurement account.",
+        "Voltage gain alone cannot establish unexplained energy or identify its source."
+      ],
+      "termsUsed": [
+        "L",
+        "M",
+        "k",
+        "C",
+        "R",
+        "RL",
+        "peak",
+        "RMS",
+        "phase",
+        "signed work"
+      ],
+      "sources": [
+        {
+          "id": "wima-mkp10",
+          "title": "WIMA MKP10 polypropylene pulse capacitors",
+          "url": "https://www.wima.de/en/our-product-range/pulse-capacitors/mkp-10/",
+          "kind": "manufacturer product specifications",
+          "readingDepth": "Product-page construction, capacitance/voltage range and electrical-data overview read",
+          "finding": "Manufacturer describes polypropylene pulse capacitors and model-dependent capacitance, voltage and lead-spacing ranges.",
+          "limit": "Family range does not verify availability, tolerance or AC/ripple rating of a chosen10µF/2.5µF part. No purchasing recommendation or complete BOM approval.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.301473+00:00",
+          "capture": "docs/patent-standard/sources/wima-mkp10.html",
+          "sha256": "77352de05f889b351261b5240c793d94e5a0247902e98bb6af33b495176617de"
+        },
+        {
+          "id": "vishay-wsl",
+          "title": "Vishay WSL Power Metal Strip resistors · document30100",
+          "url": "https://www.vishay.com/docs/30100/wsl.pdf",
+          "kind": "manufacturer datasheet",
+          "readingDepth": "PDF p1 standard electrical specifications and rating/derating note read; full device design not evaluated",
+          "finding": "Model-specific low-value resistance, tolerance and power ratings are tabulated; WSL2512 values above0.1Ω have a derating note.",
+          "limit": "A current-sense shunt is not a direct replacement for the frozen2Ω/3Ω winding resistance or20Ω load. Final value/package/thermal design must be selected and measured.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.301044+00:00",
+          "capture": "docs/patent-standard/sources/vishay-wsl.pdf",
+          "sha256": "96c2dc89ae1e3039815ed6c41f566a6e9f6b53035f8e45ea2ada1697935a44dc"
+        },
+        {
+          "id": "abra-2021",
+          "title": "The search for low-mass axion dark matter with ABRACADABRA-10cm ·2021",
+          "url": "https://arxiv.org/html/2102.06722v1",
+          "kind": "primary research paper",
+          "readingDepth": "Actual arXiv fullHTML: abstract, selected magnet-off-veto discussion and SupplementaryIII Detector calibration read; entire paper not read",
+          "finding": "End-to-end calibration, known injection and magnet-off/background checks address the complete transfer; the paper reports no significant evidence for axions.",
+          "limit": "This bench borrows calibration logic, not cryogenic apparatus specifications, sensitivity, axion coupling or discovery significance. Their peak-to-peak/RMS conversion is specific to their readout.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:43.738752+00:00",
+          "capture": "docs/patent-standard/sources/abra-2021.html",
+          "sha256": "13a884e4c3685cfea353e7c5787d8cf087a20e6db4960c69277a89edd2af17de"
+        },
+        {
+          "id": "tesla-patent",
+          "title": "Tesla US1119732A · Apparatus for transmitting electrical energy",
+          "url": "https://patents.google.com/patent/US1119732A/en",
+          "kind": "historical patent",
+          "readingDepth": "GooglePatents metadata and selected apparatus-description paragraphs on coupled/tuned circuits read; legal claims not fully analyzed",
+          "finding": "The patent describes primary/secondary inductive relationships and resonant adjustment.",
+          "limit": "A patent records an asserted design, not tested efficiency, overunity, safety or a construction release. No high-voltage patent apparatus is proposed for this bench.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:44.537544+00:00",
+          "capture": "docs/patent-standard/sources/tesla-patent.html",
+          "sha256": "9e599b8f88f38cf94020ba099aa7b8e3804fe22aace0939b7b0081c591b4ee79"
+        },
+        {
+          "id": "paper-wpt-2025",
+          "title": "Maximizing wireless power transfer efficiency at exceptional points (2025)",
+          "url": "https://www.nature.com/articles/s44172-025-00445-y",
+          "kind": "modern primary research paper",
+          "readingDepth": "Selected retained full text read independently: abstract, gain/loss Results and inverter/controller description, Conclusions.",
+          "finding": "The authors propose adaptive virtual-load loss adjustment in an active parity-time-symmetric WPT system; source gain and receiver losses are explicit.",
+          "limit": "This active converter system is not the existing passive R1/R2 fixture. No efficiency, component value or hardware performance is transferred to this workbench.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:53:48.227329+00:00",
+          "capture": "docs/patent-standard/sources/paper-wpt-2025.html",
+          "sha256": "cce6c431e2c86f88e75555ebc7ae6e6249122ad8c8769f7bd8eb550756be20d1"
+        }
+      ],
+      "sourceRecords": [
+        {
+          "repository": "newton-tesla-research-lab",
+          "path": "data/setups.json",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "sourceBoundary": "Frozen source values are numerical fixtures or proposed geometry, not inferred product ratings. Representative products illustrate roles; no purchase, price, availability or fitted performance was verified.",
+      "proposedImprovements": [
+        "First retain the unchanged passive source fixture and measure a held-out load/coupling sweep with calibrated phase-aware readout.",
+        "Only as a separate future design branch, compare adaptive receiver loading. Count every converter, controller and auxiliary supply in source work; do not transfer the 2025 active PT system’s efficiency or numerical parameters."
+      ]
+    },
+    {
+      "id": "witness-calibration",
+      "recordIds": [
+        "nt:environmental-witness"
+      ],
+      "title": "Calibrate a witness before subtracting background",
+      "goal": "Determine which ordinary pickup can be removed under bounded transfer and leakage assumptions.",
+      "status": "proposed-not-commissioned",
+      "prerequisites": [
+        "Have a coherent receiver readout or identify the exercise as a software-only fixture.",
+        "Understand complex gain, phase, deterministic error radii and singularity."
+      ],
+      "steps": [
+        {
+          "id": "desk",
+          "title": "Start with the pinned model",
+          "instructions": [
+            "Open the source record and attached contract; write down the observed quantity, units and rival explanation.",
+            "Run the existing numerical controls before selecting physical parts; record the exact source commit and original parameter conventions."
+          ],
+          "checks": [
+            "The source record remains proposed/unbuilt.",
+            "A completed software test is not a completed apparatus test."
+          ],
+          "stopIf": [
+            "The contract or source identity is missing, or its peak/RMS and unit convention is unresolved."
+          ]
+        },
+        {
+          "id": "calibrate",
+          "title": "Measure the transfer before subtraction",
+          "instructions": [
+            "Inject an identified ordinary reference into each observation path separately.",
+            "Fit gain and phase using a training interval; check held-out frequencies and times. Retain the raw-pickup-to-w conversion."
+          ],
+          "checks": [
+            "The calibration bound covers receiver, witness and transfer error at the chosen frequency."
+          ],
+          "stopIf": [
+            "Leakage into the reference is unknown or the transfer is unbounded."
+          ]
+        },
+        {
+          "id": "subtract",
+          "title": "Test rivals before interpretation",
+          "instructions": [
+            "Apply the declared subtraction to source-off, background-only and known-injection cases.",
+            "Vary witness position and orientation; perturb gain and phase deliberately. Withhold inversion at the singular cross-leak case."
+          ],
+          "checks": [
+            "Recover known injections only within documented bounds."
+          ],
+          "stopIf": [
+            "The determinant 1 − aβ approaches zero, stationarity fails or an ordinary source reproduces the observations."
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "pickup",
+          "role": "Independent environmental reference pickup",
+          "quantity": "One reference channel",
+          "measurableQuantity": "Raw voltage converted to calibrated witness-equivalent w; frequency and phase",
+          "specification": "Raw voltage converted to calibrated witness-equivalent w; frequency and phase",
+          "selectionCriteria": [
+            "Characterize the complete pickup, cable and amplifier transfer.",
+            "Do not assume that the witness is blind to the desired signal."
+          ],
+          "searchKeywords": [
+            "pickup coil transfer function",
+            "synchronous calibrated voltage readout"
+          ],
+          "representativeProducts": []
+        },
+        {
+          "id": "recorder",
+          "role": "Coherent channel acquisition",
+          "quantity": "Receiver and witness recorded simultaneously",
+          "measurableQuantity": "Gain, phase, clock and crosstalk",
+          "specification": "Gain, phase, clock and crosstalk",
+          "selectionCriteria": [
+            "Scarlett 2i2 is a two-input audio reference, not an isolated electrical power analyzer or a coil calibration.",
+            "Signals must fit the chosen documented input range and grounding scheme."
+          ],
+          "searchKeywords": [
+            "two-channel audio interface common clock",
+            "input impedance phase calibration"
+          ],
+          "representativeProducts": [
+            {
+              "name": "Scarlett2i2 4th generation",
+              "manufacturer": "Focusrite",
+              "datasheetURL": "https://focusrite.com/products/scarlett-2i2",
+              "documentKind": "manufacturer product specifications",
+              "sourceId": "focusrite-2i2",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        }
+      ],
+      "buildabilityGate": {
+        "decision": "desk study ready; apparatus conditional—not released for construction",
+        "requiredEvidence": [
+          "Chosen complete part numbers and current manufacturer documentation",
+          "Documented ratings, tolerances, connections and measurement uncertainty for the actual implementation",
+          "Independent topology/measurement review and successful commissioning controls"
+        ],
+        "missing": [
+          "Pickup turns, readout burden, complex transfer a, leakage β, drift and physical calibration are not determined by placement."
+        ]
+      },
+      "commissioningControls": [
+        "Known injection at each port; source off; swapped channels; held-out prediction; signal-leakage test."
+      ],
+      "successCriteria": [
+        "Reconstruct the stipulated effective signal within the declared and subsequently measured calibration bounds."
+      ],
+      "falsifier": [
+        "An exact ordinary rival or uncontrolled transfer prevents physical-source identification even when a residual remains."
+      ],
+      "termsUsed": [
+        "s",
+        "b",
+        "y",
+        "w",
+        "a",
+        "beta",
+        "Delta_a",
+        "deterministicdisk"
+      ],
+      "sources": [
+        {
+          "id": "abra-2021",
+          "title": "The search for low-mass axion dark matter with ABRACADABRA-10cm ·2021",
+          "url": "https://arxiv.org/html/2102.06722v1",
+          "kind": "primary research paper",
+          "readingDepth": "Actual arXiv fullHTML: abstract, selected magnet-off-veto discussion and SupplementaryIII Detector calibration read; entire paper not read",
+          "finding": "End-to-end calibration, known injection and magnet-off/background checks address the complete transfer; the paper reports no significant evidence for axions.",
+          "limit": "This bench borrows calibration logic, not cryogenic apparatus specifications, sensitivity, axion coupling or discovery significance. Their peak-to-peak/RMS conversion is specific to their readout.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:43.738752+00:00",
+          "capture": "docs/patent-standard/sources/abra-2021.html",
+          "sha256": "13a884e4c3685cfea353e7c5787d8cf087a20e6db4960c69277a89edd2af17de"
+        },
+        {
+          "id": "focusrite-2i2",
+          "title": "Focusrite Scarlett2i2 4th generation specifications",
+          "url": "https://focusrite.com/products/scarlett-2i2",
+          "kind": "manufacturer product specifications",
+          "readingDepth": "Technical specifications for physical inputs, supported sample rates, input impedance/levels and resolution read",
+          "finding": "The product is a two-physical-input audio interface; manufacturer lists24bit/192kHz capability and channel/input specifications.",
+          "limit": "The four simultaneous I/O marketing count includes loopback; it is not four physical inputs. This is not a calibrated four-channel electrical power analyzer or isolated differential voltage probe.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.302236+00:00",
+          "capture": "docs/patent-standard/sources/focusrite-2i2.html",
+          "sha256": "a9963c9630e56a29ba6d7a7ee815527f4868c804171a709e0cd95cbd80140c9a"
+        }
+      ],
+      "sourceRecords": [
+        {
+          "repository": "newton-tesla-research-lab",
+          "path": "data/setups.json",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "sourceBoundary": "Frozen source values are numerical fixtures or proposed geometry, not inferred product ratings. Representative products illustrate roles; no purchase, price, availability or fitted performance was verified.",
+      "proposedImprovements": [
+        "Record measured transfer functions, uncertainty and chosen part identities before a hardware claim.",
+        "Keep new implementation choices and proposed improvements separate from the frozen source values."
+      ]
+    },
+    {
+      "id": "prism-study",
+      "recordIds": [
+        "nt:newton-prism"
+      ],
+      "title": "Read and test a modern prism illustration",
+      "goal": "Separate declared ray geometry from a measured optical reconstruction.",
+      "status": "proposed-not-commissioned",
+      "prerequisites": [
+        "Use source millimetres and the declared ray-angle conventions.",
+        "Use diffuse, low-intensity white-LED illumination and a replica arrangement; do not substitute direct sun viewing or a laser."
+      ],
+      "steps": [
+        {
+          "id": "desk",
+          "title": "Start with the pinned model",
+          "instructions": [
+            "Open the source record and attached contract; write down the observed quantity, units and rival explanation.",
+            "Run the existing numerical controls before selecting physical parts; record the exact source commit and original parameter conventions."
+          ],
+          "checks": [
+            "The source record remains proposed/unbuilt.",
+            "A completed software test is not a completed apparatus test."
+          ],
+          "stopIf": [
+            "The contract or source identity is missing, or its peak/RMS and unit convention is unresolved."
+          ]
+        },
+        {
+          "id": "replica",
+          "title": "Specify a nonhazardous replica",
+          "instructions": [
+            "Use the pinned ray drawing as a desk prediction, then document actual prism geometry, material and illumination.",
+            "Record the aperture, screen and axis references before comparing ray positions."
+          ],
+          "checks": [
+            "Label changed geometry or material as a new replica scenario."
+          ],
+          "stopIf": [
+            "Verified material/geometry information or suitable illumination is unavailable."
+          ]
+        },
+        {
+          "id": "compare",
+          "title": "Compare predicted and observed positions",
+          "instructions": [
+            "Record repeat images with fixed camera and screen references while varying incidence.",
+            "Treat a second-prism control as a separately documented study."
+          ],
+          "checks": [
+            "Report wavelength and angle calibration with uncertainty."
+          ],
+          "stopIf": [
+            "Dispersion, alignment or source extent cannot be bounded."
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "prism",
+          "role": "Prism with known material and geometry",
+          "quantity": "One prism",
+          "measurableQuantity": "Apex angle, side length and refractive index by wavelength",
+          "specification": "Apex angle, side length and refractive index by wavelength",
+          "selectionCriteria": [
+            "Obtain a manufacturer drawing and material-dispersion data for the actual prism.",
+            "The 120 mm teaching geometry and stipulated indices do not select a commercial part number."
+          ],
+          "searchKeywords": [
+            "equilateral dispersion prism",
+            "material refractive index wavelength drawing"
+          ],
+          "representativeProducts": []
+        },
+        {
+          "id": "light-screen",
+          "role": "Diffuse source, aperture, screen and ruler",
+          "quantity": "One of each role",
+          "measurableQuantity": "Source extent, aperture dimensions, position and angle",
+          "specification": "Source extent, aperture dimensions, position and angle",
+          "selectionCriteria": [
+            "Record source, aperture and screen dimensions with reference axes.",
+            "A bright image does not constitute calibrated optical intensity."
+          ],
+          "searchKeywords": [
+            "low-intensity white LED",
+            "optical aperture matte screen angle ruler"
+          ],
+          "representativeProducts": []
+        }
+      ],
+      "buildabilityGate": {
+        "decision": "desk study ready; apparatus conditional—not released for construction",
+        "requiredEvidence": [
+          "Chosen complete part numbers and current manufacturer documentation",
+          "Documented ratings, tolerances, connections and measurement uncertainty for the actual implementation",
+          "Independent topology/measurement review and successful commissioning controls"
+        ],
+        "missing": [
+          "Optical manufacturer specifications were not verified: Thorlabs returned a web-app shell, Newport and Edmund returned 403, and SCHOTT returned 404.",
+          "No real glass dispersion, intensity, diffraction, finite-source or calibration record is supplied."
+        ]
+      },
+      "commissioningControls": [
+        "Repeat incidence and aperture settings; reference without the prism; unit checks; second-prism discrimination."
+      ],
+      "successCriteria": [
+        "Predict held-out ray positions within explicitly reported geometric and material uncertainty."
+      ],
+      "falsifier": [
+        "Failure under fixed geometry rejects that model or implementation. One prism alone does not reproduce Newton’s complete inference."
+      ],
+      "termsUsed": [
+        "n",
+        "wavelength",
+        "incidence",
+        "normal",
+        "mm",
+        "degree",
+        "radian"
+      ],
+      "sources": [],
+      "sourceRecords": [
+        {
+          "repository": "newton-tesla-research-lab",
+          "path": "data/setups.json",
+          "commit": "2faece1d6dde6be63f7758c2754a0369d1a34fce",
+          "sha256": "889e17f404973a099bdc76784f76d80bceafcc12351d8965385c135667d5db8e",
+          "url": "https://github.com/occult-kranti/newton-tesla-research-lab/blob/2faece1d6dde6be63f7758c2754a0369d1a34fce/data/setups.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "sourceBoundary": "Frozen source values are numerical fixtures or proposed geometry, not inferred product ratings. Representative products illustrate roles; no purchase, price, availability or fitted performance was verified.",
+      "proposedImprovements": [
+        "Record measured transfer functions, uncertainty and chosen part identities before a hardware claim.",
+        "Keep new implementation choices and proposed improvements separate from the frozen source values."
+      ]
+    },
+    {
+      "id": "sound-monitor",
+      "recordIds": [
+        "atlas:v4-phone-witness-plan",
+        "atlas:v4-phone-witness-3d",
+        "atlas:v4-dual-channel-plan",
+        "atlas:v4-dual-channel-3d"
+      ],
+      "title": "From a mixed phone recording to an optional source monitor",
+      "goal": "Record source, room, specimen and recorder contributions without claiming that one channel uniquely separates them.",
+      "status": "proposed-not-commissioned",
+      "prerequisites": [
+        "Use a replica or an authorized recording; do not strike heritage objects.",
+        "Read the source units: plan placements may be centimetres while 3D coordinates are metres."
+      ],
+      "steps": [
+        {
+          "id": "desk",
+          "title": "Start with the pinned model",
+          "instructions": [
+            "Open the source record and attached contract; write down the observed quantity, units and rival explanation.",
+            "Run the existing numerical controls before selecting physical parts; record the exact source commit and original parameter conventions."
+          ],
+          "checks": [
+            "The source record remains proposed/unbuilt.",
+            "A completed software test is not a completed apparatus test."
+          ],
+          "stopIf": [
+            "The contract or source identity is missing, or its peak/RMS and unit convention is unresolved."
+          ]
+        },
+        {
+          "id": "record",
+          "title": "Begin with the least-material observation",
+          "instructions": [
+            "Record background, source-only and permitted gentle-tap or replica responses at declared positions.",
+            "Keep pilot, tap and mixed files distinct; record clipping, automatic gain and provenance."
+          ],
+          "checks": [
+            "Label a mixed recording as mixed, not as a separated material response."
+          ],
+          "stopIf": [
+            "Clipping, unknown processing, unsafe contact or rights constraints invalidate the input."
+          ]
+        },
+        {
+          "id": "monitor",
+          "title": "Add a source monitor only if needed",
+          "instructions": [
+            "Use documented physical inputs and a common clock; characterize both gains and crosstalk.",
+            "Repeat with source-level and position changes, and exchange channel roles."
+          ],
+          "checks": [
+            "The monitor constrains only its measured transfer, not every source or room change."
+          ],
+          "stopIf": [
+            "An extra channel is treated as proof of intrinsic damping, or ordinary noise is ignored."
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "phones",
+          "role": "Existing phone playback and recording roles",
+          "quantity": "Use existing devices; no purchase is required",
+          "measurableQuantity": "Sample format, automatic gain, clipping and positions",
+          "specification": "Sample format, automatic gain, clipping and positions",
+          "selectionCriteria": [
+            "Disable automatic processing only where supported; record the actual settings.",
+            "Preserve the original recordings."
+          ],
+          "searchKeywords": [
+            "unprocessed phone WAV recording",
+            "fixed gain sample rate"
+          ],
+          "representativeProducts": []
+        },
+        {
+          "id": "microphone",
+          "role": "Optional calibrated acoustic reference",
+          "quantity": "One optional microphone",
+          "measurableQuantity": "Frequency response, serial calibration and direction",
+          "specification": "Frequency response, serial calibration and direction",
+          "selectionCriteria": [
+            "UMIK-1 is a single USB measurement reference.",
+            "Two independent USB microphones do not establish a common sampling clock."
+          ],
+          "searchKeywords": [
+            "USB measurement microphone serial calibration"
+          ],
+          "representativeProducts": [
+            {
+              "name": "UMIK-1",
+              "manufacturer": "miniDSP",
+              "datasheetURL": "https://www.minidsp.com/products/acoustic-measurement/umik-1",
+              "documentKind": "manufacturer product specifications",
+              "sourceId": "minidsp-umik1",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "audio-interface",
+          "role": "Optional two-input source-monitor acquisition",
+          "quantity": "One optional interface",
+          "measurableQuantity": "Physical inputs, clock, gain and crosstalk",
+          "specification": "Physical inputs, clock, gain and crosstalk",
+          "selectionCriteria": [
+            "Scarlett 2i2 has two physical inputs; loopback channels are not extra external inputs.",
+            "An interface does not calibrate microphones or guarantee isolation between signals."
+          ],
+          "searchKeywords": [
+            "two-physical-input audio interface",
+            "source monitor phase gain"
+          ],
+          "representativeProducts": [
+            {
+              "name": "Scarlett2i2 4th generation",
+              "manufacturer": "Focusrite",
+              "datasheetURL": "https://focusrite.com/products/scarlett-2i2",
+              "documentKind": "manufacturer product specifications",
+              "sourceId": "focusrite-2i2",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        }
+      ],
+      "buildabilityGate": {
+        "decision": "desk study ready; apparatus conditional—not released for construction",
+        "requiredEvidence": [
+          "Chosen complete part numbers and current manufacturer documentation",
+          "Documented ratings, tolerances, connections and measurement uncertainty for the actual implementation",
+          "Independent topology/measurement review and successful commissioning controls"
+        ],
+        "missing": [
+          "Actual source amplitude, room response, microphone transfer, damping and single-channel separation are unverified.",
+          "Optional products are neither required nor validated for this proposal."
+        ]
+      },
+      "commissioningControls": [
+        "Background; source only; tap only; repeated positions; clipping check; held-out monitor response."
+      ],
+      "successCriteria": [
+        "Preserve raw recordings and reproduce the declared observable with processing and repeatability disclosed."
+      ],
+      "falsifier": [
+        "If source, room or recorder changes explain the result, an intrinsic material-damping interpretation fails."
+      ],
+      "termsUsed": [
+        "pilot",
+        "gain",
+        "phase",
+        "RIR",
+        "clipping",
+        "sample rate",
+        "calibration"
+      ],
+      "sources": [
+        {
+          "id": "focusrite-2i2",
+          "title": "Focusrite Scarlett2i2 4th generation specifications",
+          "url": "https://focusrite.com/products/scarlett-2i2",
+          "kind": "manufacturer product specifications",
+          "readingDepth": "Technical specifications for physical inputs, supported sample rates, input impedance/levels and resolution read",
+          "finding": "The product is a two-physical-input audio interface; manufacturer lists24bit/192kHz capability and channel/input specifications.",
+          "limit": "The four simultaneous I/O marketing count includes loopback; it is not four physical inputs. This is not a calibrated four-channel electrical power analyzer or isolated differential voltage probe.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.302236+00:00",
+          "capture": "docs/patent-standard/sources/focusrite-2i2.html",
+          "sha256": "a9963c9630e56a29ba6d7a7ee815527f4868c804171a709e0cd95cbd80140c9a"
+        },
+        {
+          "id": "minidsp-umik1",
+          "title": "miniDSP UMIK-1 calibrated USB measurement microphone",
+          "url": "https://www.minidsp.com/products/acoustic-measurement/umik-1",
+          "kind": "manufacturer product specifications",
+          "readingDepth": "Calibration-file and measurement-feature sections read",
+          "finding": "A serial-number-specific calibration file and manufacturer-stated response with calibration are available.",
+          "limit": "A calibration file does not remove room/source effects or synchronize two independentUSB microphones. Calibration usability and actual serial file remain unverified.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.302626+00:00",
+          "capture": "docs/patent-standard/sources/minidsp-umik1.html",
+          "sha256": "678820007279ddcc213e78ab189dec93ec55c0f7c751eba87fd3acc6f0784874"
+        },
+        {
+          "id": "temples-2025",
+          "title": "Acoustic analysis of two Hindu temples in Southern India ·2025",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40029174/",
+          "kind": "primary research paper",
+          "readingDepth": "PubMed title/abstract read in this task sequence; full measurement methods not inspected",
+          "finding": "The abstract describes impulse-response/decay analysis and differing low-frequency response quality/width at two temples.",
+          "limit": "No response file, individual-pillar frequency, intrinsic damping or exact measurement protocol is imported from the abstract.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T00:58:08.666969+00:00",
+          "capture": "docs/patent-standard/sources/temples-2025-abstract.json",
+          "sha256": "1b4a3890711f6a2b6bc0e6e6346490b49a10d53bfd67fabe43d549223498020a"
+        },
+        {
+          "id": "paper-rir-2025",
+          "title": "Deep room impulse response completion (2025)",
+          "url": "https://link.springer.com/article/10.1186/s13636-024-00383-1",
+          "kind": "modern primary research paper",
+          "readingDepth": "Selected retained full text read independently: abstract, encoder input50ms/48kHz, Discussion and Conclusion.",
+          "finding": "DECOR predicts a late reverberation tail from an early room impulse response; the authors report degraded performance on an unseen dataset.",
+          "limit": "A predicted tail is synthetic. It cannot recover a unique monument geometry, material response or historical sound without independent measurements.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:53:48.227329+00:00",
+          "capture": "docs/patent-standard/sources/paper-rir-2025.html",
+          "sha256": "d28347346b4745ac09825715e737427aaabde10252a0fc38aa3509fbd4186835"
+        }
+      ],
+      "sourceRecords": [
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "sourceBoundary": "Frozen source values are numerical fixtures or proposed geometry, not inferred product ratings. Representative products illustrate roles; no purchase, price, availability or fitted performance was verified.",
+      "proposedImprovements": [
+        "Retain raw measured responses and the deterministic early-reflection baseline. Any learned late-tail model is a separate optional research branch, not an imported measurement.",
+        "Before adopting DECOR-like completion, review licenses and evaluate entire held-out rooms using the required early-response format. Compare frequency-dependent decay and failure on unseen rooms; do not infer unique monument geometry or material damping."
+      ]
+    },
+    {
+      "id": "series-rlc",
+      "recordIds": [
+        "atlas:v4-electric-energy"
+      ],
+      "title": "One-loop RLC: source, load and storage",
+      "goal": "Use a passive series circuit to distinguish component voltage, average power and finite-time work.",
+      "status": "proposed-not-commissioned",
+      "prerequisites": [
+        "Understand RMS versus peak, initial stored energy and signed voltage/current.",
+        "Host software input bounds are not physical component ratings."
+      ],
+      "steps": [
+        {
+          "id": "desk",
+          "title": "Start with the pinned model",
+          "instructions": [
+            "Open the source record and attached contract; write down the observed quantity, units and rival explanation.",
+            "Run the existing numerical controls before selecting physical parts; record the exact source commit and original parameter conventions."
+          ],
+          "checks": [
+            "The source record remains proposed/unbuilt.",
+            "A completed software test is not a completed apparatus test."
+          ],
+          "stopIf": [
+            "The contract or source identity is missing, or its peak/RMS and unit convention is unresolved."
+          ]
+        },
+        {
+          "id": "rate",
+          "title": "Record actual parts and initial state",
+          "instructions": [
+            "Transcribe the series connections from the pinned view; record actual L/C/R, ratings and probes.",
+            "Specify whether the window begins at zero state or in periodic steady state with stored capacitor energy."
+          ],
+          "checks": [
+            "Keep numerical and physical initial states explicit."
+          ],
+          "stopIf": [
+            "Ratings, initial state or sensor burden remain unknown."
+          ]
+        },
+        {
+          "id": "account",
+          "title": "Commission and account for the complete interval",
+          "instructions": [
+            "Begin with source-off and a known resistive load before adding reactive components.",
+            "Record simultaneous waveforms and endpoint states; integrate signed work independently."
+          ],
+          "checks": [
+            "Source work equals load heat, losses and storage change within measured uncertainty."
+          ],
+          "stopIf": [
+            "Clipping, heating, omitted energy or phase error prevents a complete account."
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "passives",
+          "role": "Series inductor, capacitor, internal loss and useful load",
+          "quantity": "One of each circuit role",
+          "measurableQuantity": "L, C, R, ratings, equivalent series resistance and temperature",
+          "specification": "L, C, R, ratings, equivalent series resistance and temperature",
+          "selectionCriteria": [
+            "Estimate worst-case voltage, current and reactive energy before selecting rated parts.",
+            "WIMA capacitors and Vishay shunts are role examples; load and winding values remain separate."
+          ],
+          "searchKeywords": [
+            "film capacitor AC ripple rating",
+            "measured inductor ESR noninductive load"
+          ],
+          "representativeProducts": [
+            {
+              "name": "MKP10 film-capacitor family",
+              "manufacturer": "WIMA",
+              "datasheetURL": "https://www.wima.de/en/our-product-range/pulse-capacitors/mkp-10/",
+              "documentKind": "manufacturer product specifications",
+              "sourceId": "wima-mkp10",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            },
+            {
+              "name": "WSL current-sense resistor family",
+              "manufacturer": "Vishay",
+              "datasheetURL": "https://www.vishay.com/docs/30100/wsl.pdf",
+              "documentKind": "manufacturer datasheet",
+              "sourceId": "vishay-wsl",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "acquisition",
+          "role": "Synchronous source-voltage/current readout",
+          "quantity": "At least two calibrated channels",
+          "measurableQuantity": "Phase, time alignment and measurement burden",
+          "specification": "Phase, time alignment and measurement burden",
+          "selectionCriteria": [
+            "Audio sampling is not automatically galvanic isolation or a DC response measurement.",
+            "Select electrical instruments from accessible manuals before connection; Digilent/Pico sources were inaccessible."
+          ],
+          "searchKeywords": [
+            "isolated differential oscilloscope",
+            "current shunt phase calibration"
+          ],
+          "representativeProducts": []
+        }
+      ],
+      "buildabilityGate": {
+        "decision": "desk study ready; apparatus conditional—not released for construction",
+        "requiredEvidence": [
+          "Chosen complete part numbers and current manufacturer documentation",
+          "Documented ratings, tolerances, connections and measurement uncertainty for the actual implementation",
+          "Independent topology/measurement review and successful commissioning controls"
+        ],
+        "missing": [
+          "Actual inductor/capacitor ratings, probe phase/bandwidth, source impedance and initial state are unspecified."
+        ]
+      },
+      "commissioningControls": [
+        "Source off; resistive control; known reactive components; independent quadrature; endpoint-state check."
+      ],
+      "successCriteria": [
+        "Close the declared passive energy budget with measured uncertainty, not by requiring voltage gain below one."
+      ],
+      "falsifier": [
+        "A repeatable residual rejects the present measurement/model account; it does not identify free energy."
+      ],
+      "termsUsed": [
+        "RLC",
+        "RMS",
+        "peak",
+        "realpower",
+        "work",
+        "storedenergy"
+      ],
+      "sources": [
+        {
+          "id": "vishay-wsl",
+          "title": "Vishay WSL Power Metal Strip resistors · document30100",
+          "url": "https://www.vishay.com/docs/30100/wsl.pdf",
+          "kind": "manufacturer datasheet",
+          "readingDepth": "PDF p1 standard electrical specifications and rating/derating note read; full device design not evaluated",
+          "finding": "Model-specific low-value resistance, tolerance and power ratings are tabulated; WSL2512 values above0.1Ω have a derating note.",
+          "limit": "A current-sense shunt is not a direct replacement for the frozen2Ω/3Ω winding resistance or20Ω load. Final value/package/thermal design must be selected and measured.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.301044+00:00",
+          "capture": "docs/patent-standard/sources/vishay-wsl.pdf",
+          "sha256": "96c2dc89ae1e3039815ed6c41f566a6e9f6b53035f8e45ea2ada1697935a44dc"
+        },
+        {
+          "id": "wima-mkp10",
+          "title": "WIMA MKP10 polypropylene pulse capacitors",
+          "url": "https://www.wima.de/en/our-product-range/pulse-capacitors/mkp-10/",
+          "kind": "manufacturer product specifications",
+          "readingDepth": "Product-page construction, capacitance/voltage range and electrical-data overview read",
+          "finding": "Manufacturer describes polypropylene pulse capacitors and model-dependent capacitance, voltage and lead-spacing ranges.",
+          "limit": "Family range does not verify availability, tolerance or AC/ripple rating of a chosen10µF/2.5µF part. No purchasing recommendation or complete BOM approval.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.301473+00:00",
+          "capture": "docs/patent-standard/sources/wima-mkp10.html",
+          "sha256": "77352de05f889b351261b5240c793d94e5a0247902e98bb6af33b495176617de"
+        },
+        {
+          "id": "paper-wpt-2025",
+          "title": "Maximizing wireless power transfer efficiency at exceptional points (2025)",
+          "url": "https://www.nature.com/articles/s44172-025-00445-y",
+          "kind": "modern primary research paper",
+          "readingDepth": "Selected retained full text read independently: abstract, gain/loss Results and inverter/controller description, Conclusions.",
+          "finding": "The authors propose adaptive virtual-load loss adjustment in an active parity-time-symmetric WPT system; source gain and receiver losses are explicit.",
+          "limit": "This active converter system is not the existing passive R1/R2 fixture. No efficiency, component value or hardware performance is transferred to this workbench.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:53:48.227329+00:00",
+          "capture": "docs/patent-standard/sources/paper-wpt-2025.html",
+          "sha256": "cce6c431e2c86f88e75555ebc7ae6e6249122ad8c8769f7bd8eb550756be20d1"
+        }
+      ],
+      "sourceRecords": [
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "sourceBoundary": "Frozen source values are numerical fixtures or proposed geometry, not inferred product ratings. Representative products illustrate roles; no purchase, price, availability or fitted performance was verified.",
+      "proposedImprovements": [
+        "First retain the unchanged passive source fixture and measure a held-out load/coupling sweep with calibrated phase-aware readout.",
+        "Only as a separate future design branch, compare adaptive receiver loading. Count every converter, controller and auxiliary supply in source work; do not transfer the 2025 active PT system’s efficiency or numerical parameters."
+      ]
+    },
+    {
+      "id": "magnetic-force",
+      "recordIds": [
+        "atlas:v4-magnetic-force-plan",
+        "atlas:v4-magnetic-force-3d"
+      ],
+      "title": "Ordinary force and balance controls",
+      "goal": "Determine whether an ordinary magnetic force or instrument response explains a changed contact reading.",
+      "status": "proposed-not-commissioned",
+      "prerequisites": [
+        "Use stable, small objects and an external nonmagnetic support; stop if the arrangement becomes unstable.",
+        "Distinguish a mass display, contact force and gravitational acceleration."
+      ],
+      "steps": [
+        {
+          "id": "desk",
+          "title": "Start with the pinned model",
+          "instructions": [
+            "Open the source record and attached contract; write down the observed quantity, units and rival explanation.",
+            "Run the existing numerical controls before selecting physical parts; record the exact source commit and original parameter conventions."
+          ],
+          "checks": [
+            "The source record remains proposed/unbuilt.",
+            "A completed software test is not a completed apparatus test."
+          ],
+          "stopIf": [
+            "The contract or source identity is missing, or its peak/RMS and unit convention is unresolved."
+          ]
+        },
+        {
+          "id": "baseline",
+          "title": "Commission the balance without a magnet",
+          "instructions": [
+            "Level and calibrate according to the selected manufacturer instructions; record repeat-load behaviour and drift.",
+            "Record the support and object geometry before introducing a magnet."
+          ],
+          "checks": [
+            "Establish a documented baseline for the instrument."
+          ],
+          "stopIf": [
+            "Overload, instability or uncharacterized magnetic influence."
+          ]
+        },
+        {
+          "id": "separate",
+          "title": "Separate contact force from instrument response",
+          "instructions": [
+            "Change one position at a time while retaining static contact. Record balance readings and any independent field reference.",
+            "Repeat with the magnet near the instrument but without the target, and with a nonmagnetic dummy."
+          ],
+          "checks": [
+            "Include the external reaction and balance-field response in the account."
+          ],
+          "stopIf": [
+            "The object separates, the fixture moves or instrument response cannot be distinguished."
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "balance",
+          "role": "Balance with documented capacity and repeatability",
+          "quantity": "One balance",
+          "measurableQuantity": "Capacity, readability, calibration and magnetic susceptibility",
+          "specification": "Capacity, readability, calibration and magnetic susceptibility",
+          "selectionCriteria": [
+            "Select capacity for the actual mass. Readability is not accuracy.",
+            "LPB223e is a 220 g / 0.001 g manufacturer example, not a validated magnetic-force instrument."
+          ],
+          "searchKeywords": [
+            "precision balance external calibration",
+            "readability magnetic influence"
+          ],
+          "representativeProducts": [
+            {
+              "name": "Luna LPB223e (model example)",
+              "manufacturer": "Adam Equipment",
+              "datasheetURL": "https://adamequipment.com/luna-precision-balances",
+              "documentKind": "manufacturer product specifications",
+              "sourceId": "adam-luna",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "field-sensor",
+          "role": "Optional independent magnetic-field reference",
+          "quantity": "One optional sensor",
+          "measurableQuantity": "Field component, mT, sensitivity and supply/reference",
+          "specification": "Field component, mT, sensitivity and supply/reference",
+          "selectionCriteria": [
+            "DRV5055 variants have different ranges and sensitivities; calibrate the selected variant and orientation.",
+            "A Hall sensor does not measure force or gravity."
+          ],
+          "searchKeywords": [
+            "DRV5055 linear Hall sensor",
+            "ratiometric calibration"
+          ],
+          "representativeProducts": [
+            {
+              "name": "DRV5055 variant selected for range",
+              "manufacturer": "Texas Instruments",
+              "datasheetURL": "https://www.ti.com/lit/ds/symlink/drv5055.pdf",
+              "documentKind": "manufacturer datasheet",
+              "sourceId": "ti-drv5055",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "role": "Magnet, object, stand and restraint roles",
+          "quantity": "One documented arrangement",
+          "measurableQuantity": "Geometry, stability and reaction-force path",
+          "specification": "Geometry, stability and reaction-force path",
+          "selectionCriteria": [
+            "Choose magnetic strength and material only after reviewing the actual configuration.",
+            "No magnet rating is inferred from the drawing."
+          ],
+          "searchKeywords": [
+            "nonmagnetic fixture",
+            "magnet separation reaction support"
+          ],
+          "representativeProducts": []
+        }
+      ],
+      "buildabilityGate": {
+        "decision": "desk study ready; apparatus conditional—not released for construction",
+        "requiredEvidence": [
+          "Chosen complete part numbers and current manufacturer documentation",
+          "Documented ratings, tolerances, connections and measurement uncertainty for the actual implementation",
+          "Independent topology/measurement review and successful commissioning controls"
+        ],
+        "missing": [
+          "Actual magnetic force, material response, instrument susceptibility and support vibration are unmeasured."
+        ]
+      },
+      "commissioningControls": [
+        "No magnet; nonmagnetic dummy; instrument-only field; changed orientation; external-reaction check."
+      ],
+      "successCriteria": [
+        "Predict the contact change with an ordinary-force model and documented instrument uncertainty."
+      ],
+      "falsifier": [
+        "A balance-display change alone cannot establish changed gravity. An instrument-only response rejects a target-only explanation."
+      ],
+      "termsUsed": [
+        "N",
+        "m",
+        "g",
+        "Fm",
+        "B",
+        "mT",
+        "readability",
+        "calibration"
+      ],
+      "sources": [
+        {
+          "id": "adam-luna",
+          "title": "Adam Equipment Luna precision balance family",
+          "url": "https://adamequipment.com/luna-precision-balances",
+          "kind": "manufacturer product specifications",
+          "readingDepth": "Model capacity/readability table and calibration-option sections read",
+          "finding": "The page distinguishes model-specific capacity/readability and internal/external calibration; LPB223e is listed220g with0.001g readability.",
+          "limit": "Readability is not accuracy, force calibration or magnetic immunity. Magnet influence and off-axis/mechanical effects require tests; model availability and price not verified.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:43.367570+00:00",
+          "capture": "docs/patent-standard/sources/adam-luna.html",
+          "sha256": "977e8b44b8e390624887eed6188c6a1c44f838a9061c381c34801fbd340c8455"
+        },
+        {
+          "id": "ti-drv5055",
+          "title": "Texas Instruments DRV5055 · SBAS640C revisedJune2026",
+          "url": "https://www.ti.com/lit/ds/symlink/drv5055.pdf",
+          "kind": "manufacturer datasheet",
+          "readingDepth": "PDF p1 feature/description/variant sensitivity, supply and bandwidth read",
+          "finding": "A ratiometric linearHall sensor measures one magnetic-flux-density component; supply/reference and variant sensitivity determine conversion.",
+          "limit": "It does not measure force, gravity or complete3D field. This device needs the actual variant, orientation, reference, limits and calibration; no board was built.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.633637+00:00",
+          "capture": "docs/patent-standard/sources/ti-drv5055.pdf",
+          "sha256": "d04305a4ae7a603f95286c957160945ad5c7156b3d4e2137d47d74f614dd3194"
+        }
+      ],
+      "sourceRecords": [
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "sourceBoundary": "Frozen source values are numerical fixtures or proposed geometry, not inferred product ratings. Representative products illustrate roles; no purchase, price, availability or fitted performance was verified.",
+      "proposedImprovements": [
+        "Record measured transfer functions, uncertainty and chosen part identities before a hardware claim.",
+        "Keep new implementation choices and proposed improvements separate from the frozen source values."
+      ]
+    },
+    {
+      "id": "magnetic-work",
+      "recordIds": [
+        "atlas:v4-magnetic-work"
+      ],
+      "title": "Variable inductance is a desk model before an actuator",
+      "goal": "Track source work, magnetic storage and mechanical work in the declared hypothetical L(z) fixture.",
+      "status": "proposed-not-commissioned",
+      "prerequisites": [
+        "Keep this model separate from the permanent-magnet balance drawings.",
+        "Treat imposed motion and maintained current as external model assumptions."
+      ],
+      "steps": [
+        {
+          "id": "desk",
+          "title": "Start with the pinned model",
+          "instructions": [
+            "Open the source record and attached contract; write down the observed quantity, units and rival explanation.",
+            "Run the existing numerical controls before selecting physical parts; record the exact source commit and original parameter conventions."
+          ],
+          "checks": [
+            "The source record remains proposed/unbuilt.",
+            "A completed software test is not a completed apparatus test."
+          ],
+          "stopIf": [
+            "The contract or source identity is missing, or its peak/RMS and unit convention is unresolved."
+          ]
+        },
+        {
+          "id": "sweep",
+          "title": "Keep imposed motion inside the model",
+          "instructions": [
+            "Reproduce the analytical terms while varying current, inductance law and motion duration separately.",
+            "Report source work, storage change and mechanical output as computed quantities."
+          ],
+          "checks": [
+            "Every power term is in watts and every work integral is in joules."
+          ],
+          "stopIf": [
+            "A source of motion or controller work is omitted."
+          ]
+        },
+        {
+          "id": "gate",
+          "title": "Define, but do not claim, a physical actuator",
+          "instructions": [
+            "Specify the missing actuator, inductor, position/force readout and measured L(z).",
+            "Proceed only after independent electrical/mechanical review and a complete commissioning protocol."
+          ],
+          "checks": [
+            "No model parameter has been promoted into a rated hardware part."
+          ],
+          "stopIf": [
+            "Measured L(z), ratings, loss model or controller work are unavailable."
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "model",
+          "role": "Numerical inductance, current, motion and loss model",
+          "quantity": "One desk fixture",
+          "measurableQuantity": "I, z, dL/dz, force and source work",
+          "specification": "I, z, dL/dz, force and source work",
+          "selectionCriteria": [
+            "Use the source’s 0.2 A and hypothetical inductance law as fixture assumptions, not a product specification."
+          ],
+          "searchKeywords": [
+            "variable inductance coenergy force",
+            "source work simulation"
+          ],
+          "representativeProducts": []
+        },
+        {
+          "id": "future-instrumentation",
+          "role": "Potential current, voltage, position and force readout",
+          "quantity": "Not selected; future implementation only",
+          "measurableQuantity": "Synchronous I, V, z, F and controller-input work",
+          "specification": "Synchronous I, V, z, F and controller-input work",
+          "selectionCriteria": [
+            "Measure L(z) and losses, then select actual electrical and mechanical ratings before hardware.",
+            "A Hall sensor is only an optional field reference; it does not independently calibrate force or position."
+          ],
+          "searchKeywords": [
+            "calibrated position force transducer",
+            "controlled current inductance position"
+          ],
+          "representativeProducts": [
+            {
+              "name": "DRV5055 variant selected for range",
+              "manufacturer": "Texas Instruments",
+              "datasheetURL": "https://www.ti.com/lit/ds/symlink/drv5055.pdf",
+              "documentKind": "manufacturer datasheet",
+              "sourceId": "ti-drv5055",
+              "fit": "role reference, not a validated drop-in or commissioned system",
+              "checkedAtUTC": "2026-11-17T04:50:05.027744+00:00",
+              "price": "unverified",
+              "availability": "unverified"
+            }
+          ]
+        }
+      ],
+      "buildabilityGate": {
+        "decision": "desk study ready; apparatus conditional—not released for construction",
+        "requiredEvidence": [
+          "Chosen complete part numbers and current manufacturer documentation",
+          "Documented ratings, tolerances, connections and measurement uncertainty for the actual implementation",
+          "Independent topology/measurement review and successful commissioning controls"
+        ],
+        "missing": [
+          "No actual actuator, measured L(z), controller loss, friction, coil ratings or calibrated force/position readout is supplied."
+        ]
+      },
+      "commissioningControls": [
+        "Zero current; zero motion; reversed motion; loss control; independent work quadrature."
+      ],
+      "successCriteria": [
+        "Reproduce the analytical energy terms under the declared assumptions. Physical agreement would require later measurements."
+      ],
+      "falsifier": [
+        "Omitted actuator/controller energy or unmeasured L(z) prevents a physical energy claim. Numerical gain alone is not energy creation."
+      ],
+      "termsUsed": [
+        "L(z)",
+        "I",
+        "z",
+        "F",
+        "coenergy",
+        "work",
+        "storedenergy"
+      ],
+      "sources": [
+        {
+          "id": "ti-drv5055",
+          "title": "Texas Instruments DRV5055 · SBAS640C revisedJune2026",
+          "url": "https://www.ti.com/lit/ds/symlink/drv5055.pdf",
+          "kind": "manufacturer datasheet",
+          "readingDepth": "PDF p1 feature/description/variant sensitivity, supply and bandwidth read",
+          "finding": "A ratiometric linearHall sensor measures one magnetic-flux-density component; supply/reference and variant sensitivity determine conversion.",
+          "limit": "It does not measure force, gravity or complete3D field. This device needs the actual variant, orientation, reference, limits and calibration; no board was built.",
+          "accessStatus": 200,
+          "retrievedAtUTC": "2026-11-17T04:45:42.633637+00:00",
+          "capture": "docs/patent-standard/sources/ti-drv5055.pdf",
+          "sha256": "d04305a4ae7a603f95286c957160945ad5c7156b3d4e2137d47d74f614dd3194"
+        }
+      ],
+      "sourceRecords": [
+        {
+          "repository": "resonance-research-atlas",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "sourceBoundary": "Frozen source values are numerical fixtures or proposed geometry, not inferred product ratings. Representative products illustrate roles; no purchase, price, availability or fitted performance was verified.",
+      "proposedImprovements": [
+        "Record measured transfer functions, uncertainty and chosen part identities before a hardware claim.",
+        "Keep new implementation choices and proposed improvements separate from the frozen source values."
+      ]
+    }
+  ],
+  "retrievalNotes": [
+    "Optical manufacturer/differential acquisition sources were unavailable or SPA-only; no product spec was invented.",
+    "datasheetURL points to an actual datasheet where documentKind says datasheet; other entries explicitly identify manufacturer product specifications.",
+    "Prices,stock,partfit andlocalprocurement were not checked."
+  ],
+  "sources": [
+    {
+      "id": "vishay-wsl",
+      "title": "Vishay WSL Power Metal Strip resistors · document30100",
+      "url": "https://www.vishay.com/docs/30100/wsl.pdf",
+      "kind": "manufacturer datasheet",
+      "readingDepth": "PDF p1 standard electrical specifications and rating/derating note read; full device design not evaluated",
+      "finding": "Model-specific low-value resistance, tolerance and power ratings are tabulated; WSL2512 values above0.1Ω have a derating note.",
+      "limit": "A current-sense shunt is not a direct replacement for the frozen2Ω/3Ω winding resistance or20Ω load. Final value/package/thermal design must be selected and measured.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:42.301044+00:00",
+      "capture": "docs/patent-standard/sources/vishay-wsl.pdf",
+      "sha256": "96c2dc89ae1e3039815ed6c41f566a6e9f6b53035f8e45ea2ada1697935a44dc"
+    },
+    {
+      "id": "wima-mkp10",
+      "title": "WIMA MKP10 polypropylene pulse capacitors",
+      "url": "https://www.wima.de/en/our-product-range/pulse-capacitors/mkp-10/",
+      "kind": "manufacturer product specifications",
+      "readingDepth": "Product-page construction, capacitance/voltage range and electrical-data overview read",
+      "finding": "Manufacturer describes polypropylene pulse capacitors and model-dependent capacitance, voltage and lead-spacing ranges.",
+      "limit": "Family range does not verify availability, tolerance or AC/ripple rating of a chosen10µF/2.5µF part. No purchasing recommendation or complete BOM approval.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:42.301473+00:00",
+      "capture": "docs/patent-standard/sources/wima-mkp10.html",
+      "sha256": "77352de05f889b351261b5240c793d94e5a0247902e98bb6af33b495176617de"
+    },
+    {
+      "id": "focusrite-2i2",
+      "title": "Focusrite Scarlett2i2 4th generation specifications",
+      "url": "https://focusrite.com/products/scarlett-2i2",
+      "kind": "manufacturer product specifications",
+      "readingDepth": "Technical specifications for physical inputs, supported sample rates, input impedance/levels and resolution read",
+      "finding": "The product is a two-physical-input audio interface; manufacturer lists24bit/192kHz capability and channel/input specifications.",
+      "limit": "The four simultaneous I/O marketing count includes loopback; it is not four physical inputs. This is not a calibrated four-channel electrical power analyzer or isolated differential voltage probe.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:42.302236+00:00",
+      "capture": "docs/patent-standard/sources/focusrite-2i2.html",
+      "sha256": "a9963c9630e56a29ba6d7a7ee815527f4868c804171a709e0cd95cbd80140c9a"
+    },
+    {
+      "id": "minidsp-umik1",
+      "title": "miniDSP UMIK-1 calibrated USB measurement microphone",
+      "url": "https://www.minidsp.com/products/acoustic-measurement/umik-1",
+      "kind": "manufacturer product specifications",
+      "readingDepth": "Calibration-file and measurement-feature sections read",
+      "finding": "A serial-number-specific calibration file and manufacturer-stated response with calibration are available.",
+      "limit": "A calibration file does not remove room/source effects or synchronize two independentUSB microphones. Calibration usability and actual serial file remain unverified.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:42.302626+00:00",
+      "capture": "docs/patent-standard/sources/minidsp-umik1.html",
+      "sha256": "678820007279ddcc213e78ab189dec93ec55c0f7c751eba87fd3acc6f0784874"
+    },
+    {
+      "id": "ti-drv5055",
+      "title": "Texas Instruments DRV5055 · SBAS640C revisedJune2026",
+      "url": "https://www.ti.com/lit/ds/symlink/drv5055.pdf",
+      "kind": "manufacturer datasheet",
+      "readingDepth": "PDF p1 feature/description/variant sensitivity, supply and bandwidth read",
+      "finding": "A ratiometric linearHall sensor measures one magnetic-flux-density component; supply/reference and variant sensitivity determine conversion.",
+      "limit": "It does not measure force, gravity or complete3D field. This device needs the actual variant, orientation, reference, limits and calibration; no board was built.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:42.633637+00:00",
+      "capture": "docs/patent-standard/sources/ti-drv5055.pdf",
+      "sha256": "d04305a4ae7a603f95286c957160945ad5c7156b3d4e2137d47d74f614dd3194"
+    },
+    {
+      "id": "adam-luna",
+      "title": "Adam Equipment Luna precision balance family",
+      "url": "https://adamequipment.com/luna-precision-balances",
+      "kind": "manufacturer product specifications",
+      "readingDepth": "Model capacity/readability table and calibration-option sections read",
+      "finding": "The page distinguishes model-specific capacity/readability and internal/external calibration; LPB223e is listed220g with0.001g readability.",
+      "limit": "Readability is not accuracy, force calibration or magnetic immunity. Magnet influence and off-axis/mechanical effects require tests; model availability and price not verified.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:43.367570+00:00",
+      "capture": "docs/patent-standard/sources/adam-luna.html",
+      "sha256": "977e8b44b8e390624887eed6188c6a1c44f838a9061c381c34801fbd340c8455"
+    },
+    {
+      "id": "abra-2021",
+      "title": "The search for low-mass axion dark matter with ABRACADABRA-10cm ·2021",
+      "url": "https://arxiv.org/html/2102.06722v1",
+      "kind": "primary research paper",
+      "readingDepth": "Actual arXiv fullHTML: abstract, selected magnet-off-veto discussion and SupplementaryIII Detector calibration read; entire paper not read",
+      "finding": "End-to-end calibration, known injection and magnet-off/background checks address the complete transfer; the paper reports no significant evidence for axions.",
+      "limit": "This bench borrows calibration logic, not cryogenic apparatus specifications, sensitivity, axion coupling or discovery significance. Their peak-to-peak/RMS conversion is specific to their readout.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:43.738752+00:00",
+      "capture": "docs/patent-standard/sources/abra-2021.html",
+      "sha256": "13a884e4c3685cfea353e7c5787d8cf087a20e6db4960c69277a89edd2af17de"
+    },
+    {
+      "id": "tesla-patent",
+      "title": "Tesla US1119732A · Apparatus for transmitting electrical energy",
+      "url": "https://patents.google.com/patent/US1119732A/en",
+      "kind": "historical patent",
+      "readingDepth": "GooglePatents metadata and selected apparatus-description paragraphs on coupled/tuned circuits read; legal claims not fully analyzed",
+      "finding": "The patent describes primary/secondary inductive relationships and resonant adjustment.",
+      "limit": "A patent records an asserted design, not tested efficiency, overunity, safety or a construction release. No high-voltage patent apparatus is proposed for this bench.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:45:44.537544+00:00",
+      "capture": "docs/patent-standard/sources/tesla-patent.html",
+      "sha256": "9e599b8f88f38cf94020ba099aa7b8e3804fe22aace0939b7b0081c591b4ee79"
+    },
+    {
+      "id": "temples-2025",
+      "title": "Acoustic analysis of two Hindu temples in Southern India ·2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40029174/",
+      "kind": "primary research paper",
+      "readingDepth": "PubMed title/abstract read in this task sequence; full measurement methods not inspected",
+      "finding": "The abstract describes impulse-response/decay analysis and differing low-frequency response quality/width at two temples.",
+      "limit": "No response file, individual-pillar frequency, intrinsic damping or exact measurement protocol is imported from the abstract.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T00:58:08.666969+00:00",
+      "capture": "docs/patent-standard/sources/temples-2025-abstract.json",
+      "sha256": "1b4a3890711f6a2b6bc0e6e6346490b49a10d53bfd67fabe43d549223498020a"
+    },
+    {
+      "id": "paper-wpt-2025",
+      "title": "Maximizing wireless power transfer efficiency at exceptional points (2025)",
+      "url": "https://www.nature.com/articles/s44172-025-00445-y",
+      "kind": "modern primary research paper",
+      "readingDepth": "Selected retained full text read independently: abstract, gain/loss Results and inverter/controller description, Conclusions.",
+      "finding": "The authors propose adaptive virtual-load loss adjustment in an active parity-time-symmetric WPT system; source gain and receiver losses are explicit.",
+      "limit": "This active converter system is not the existing passive R1/R2 fixture. No efficiency, component value or hardware performance is transferred to this workbench.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:53:48.227329+00:00",
+      "capture": "docs/patent-standard/sources/paper-wpt-2025.html",
+      "sha256": "cce6c431e2c86f88e75555ebc7ae6e6249122ad8c8769f7bd8eb550756be20d1"
+    },
+    {
+      "id": "paper-rir-2025",
+      "title": "Deep room impulse response completion (2025)",
+      "url": "https://link.springer.com/article/10.1186/s13636-024-00383-1",
+      "kind": "modern primary research paper",
+      "readingDepth": "Selected retained full text read independently: abstract, encoder input50ms/48kHz, Discussion and Conclusion.",
+      "finding": "DECOR predicts a late reverberation tail from an early room impulse response; the authors report degraded performance on an unseen dataset.",
+      "limit": "A predicted tail is synthetic. It cannot recover a unique monument geometry, material response or historical sound without independent measurements.",
+      "accessStatus": 200,
+      "retrievedAtUTC": "2026-11-17T04:53:48.227329+00:00",
+      "capture": "docs/patent-standard/sources/paper-rir-2025.html",
+      "sha256": "d28347346b4745ac09825715e737427aaabde10252a0fc38aa3509fbd4186835"
+    }
+  ],
+  "followupReview": {
+    "reviewedAtUTC": "2026-11-17T04:57:28.336275+00:00",
+    "scope": "Selected2025primary proposals checked independently against retained fulltext; no new performance or baseline parameter adopted."
+  }
+}

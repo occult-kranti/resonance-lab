@@ -1,0 +1,12 @@
+{
+  "site": "Fieldwork / Device Observatory",
+  "branch": "research/device-observatory",
+  "commit": "90c4652fd268d1bdc52a62964f1204e258adae4d",
+  "path": "/brainwave_opensync/devices/",
+  "asOf": "2026-10-16",
+  "modelCount": 3,
+  "hypothesisCount": 9,
+  "presetCount": 9,
+  "sourceCount": 34,
+  "runtimeDependencies": 0
+}

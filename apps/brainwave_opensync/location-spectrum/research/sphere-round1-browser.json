@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "at": "2026-11-17T06:33:12.763Z",
+  "scope": "Round1 final built Location Spectrum after direct-OSF receipt upgrade",
+  "checks": [
+    "Current23.318kHz ideal model remains below proposed band, no measured result inferred",
+    "All4 source receipts displayed; direct OSF registration flags and80-placement design separated from unread PDF",
+    "Registered A-minus-B ratio/ppb distinguished from local B-minus-A Hz and k-times-u",
+    "Exact archived registration JSON available with pd3st identity",
+    "Host /#sphere handoff and disclosure>=44px",
+    "Expanded390px page has no horizontal overflow and no JavaScript errors"
+  ],
+  "errors": []
+}

@@ -1,0 +1,1311 @@
+{
+  "schema": "resonance-blueprint-packet/v1",
+  "createdAt": "2026-11-17T04:32:54.295Z",
+  "recordId": "atlas:v4-phone-witness-3d",
+  "revision": "five-panels-authored-review-v1",
+  "status": "authored-review-not-manufacturing-approval",
+  "record": {
+    "id": "atlas:v4-phone-witness-3d",
+    "title": "Least-material bench in three dimensions",
+    "repository": "resonance-research-atlas",
+    "kind": "deterministic 3D geometry render",
+    "domain": "sound / measurement",
+    "status": "proposed_unbuilt",
+    "summary": "Deterministic geometry from declared metre coordinates; not a photograph or observed apparatus. Dashed connectors are signal routes, not simulated sound fields. Use the dimensioned SVG for placement.",
+    "modelBoundary": "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+    "source": {
+      "repository": "resonance-research-atlas",
+      "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+      "path": "docs/panel-v4/setup-catalog.json",
+      "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "committedSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+      "checkoutMatchesCommit": true,
+      "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+      "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+    },
+    "documentation": [
+      {
+        "repository": "resonance-research-atlas",
+        "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "path": "docs/panel-v4/apparatus.md",
+        "sha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+        "committedSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+        "checkoutMatchesCommit": true,
+        "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+        "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+      }
+    ],
+    "sourceRecord": {
+      "id": "v4-phone-witness-3d",
+      "kind": "deterministic 3D geometry render",
+      "title": "Least-material bench in three dimensions",
+      "file": "assets/sound-lab-v4/phone-witness-3d.png",
+      "alt": "Numerically rendered bowl, soft support, pencil eraser, recording phone and upright pilot phone with metre axes and dashed acoustic connectors. Devices stand on supports with their ports unobstructed.",
+      "caption": "Deterministic geometry from declared metre coordinates; not a photograph or observed apparatus. Dashed connectors are signal routes, not simulated sound fields. Use the dimensioned SVG for placement.",
+      "experiment": "reference"
+    },
+    "proposalIds": [],
+    "relationStatus": "Editorial topical relevance only; this drawing does not validate the linked proposal.",
+    "assets": [
+      {
+        "id": "v4-phone-witness-3d",
+        "kind": "deterministic 3D geometry render",
+        "title": "Least-material bench in three dimensions",
+        "file": "assets/sound-lab-v4/phone-witness-3d.png",
+        "alt": "Numerically rendered bowl, soft support, pencil eraser, recording phone and upright pilot phone with metre axes and dashed acoustic connectors. Devices stand on supports with their ports unobstructed.",
+        "caption": "Deterministic geometry from declared metre coordinates; not a photograph or observed apparatus. Dashed connectors are signal routes, not simulated sound fields. Use the dimensioned SVG for placement.",
+        "experiment": "reference",
+        "path": "assets/sound-lab-v4/phone-witness-3d.png",
+        "repository": "resonance-research-atlas",
+        "sourceCommit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+        "sourceSha256": "831a231b26c4f98c4992de13080cc62bae4fe17bf6519a2a07c6f654098c89b4",
+        "committedSha256": "831a231b26c4f98c4992de13080cc62bae4fe17bf6519a2a07c6f654098c89b4",
+        "checkoutMatchesCommit": true,
+        "localHref": "/apps/resonance-research-atlas/assets/sound-lab-v4/phone-witness-3d.png",
+        "sourceHref": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/assets/sound-lab-v4/phone-witness-3d.png",
+        "servedSha256": "831a231b26c4f98c4992de13080cc62bae4fe17bf6519a2a07c6f654098c89b4",
+        "servedCopyMatchesSource": true,
+        "scope": "Existing server adapter serves the sibling dist copy; source bytes and served copy are different observations."
+      }
+    ],
+    "geometry": null,
+    "contracts": [],
+    "materials": [],
+    "measurements": [],
+    "limitations": [
+      "Deterministic geometry from declared metre coordinates; not a photograph or observed apparatus. Dashed connectors are signal routes, not simulated sound fields. Use the dimensioned SVG for placement.",
+      "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation."
+    ],
+    "sourceIds": [],
+    "equationStatus": "Drawing view with original caption; not a numerical solver or hardware result."
+  },
+  "authored": {
+    "scenario": {
+      "modifications": [],
+      "electricalParametersChanged": false,
+      "calibrationInferred": false
+    },
+    "sketch": {
+      "schemaVersion": 1,
+      "kind": "geometry-only-documentation-not-physical-prediction",
+      "family": "atlas:v4-phone-witness-3d",
+      "view": "flow",
+      "units": "mm",
+      "availableViews": [
+        "flow"
+      ],
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 760\" role=\"img\" aria-labelledby=\"sketch-title sketch-desc\"><title id=\"sketch-title\">Least-material bench in three dimensions · flow</title><desc id=\"sketch-desc\">Source-pinned proposed flow documentation. . All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration. Dimensions are stipulated source layout or explicit user annotations, not measured component specifications. This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint.</desc><metadata id=\"source-provenance\">{&quot;method&quot;:&quot;source-coordinate-sketch-v1&quot;,&quot;sourcePins&quot;:[{&quot;repository&quot;:&quot;resonance-research-atlas&quot;,&quot;commit&quot;:&quot;aabc79d42adf4b72677fdd8e45fbade76b159192&quot;,&quot;path&quot;:&quot;docs/panel-v4/setup-catalog.json&quot;,&quot;sha256&quot;:&quot;c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa&quot;,&quot;committedSha256&quot;:&quot;c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;},{&quot;repository&quot;:&quot;resonance-research-atlas&quot;,&quot;commit&quot;:&quot;aabc79d42adf4b72677fdd8e45fbade76b159192&quot;,&quot;path&quot;:&quot;docs/panel-v4/apparatus.md&quot;,&quot;sha256&quot;:&quot;2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6&quot;,&quot;committedSha256&quot;:&quot;2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6&quot;,&quot;checkoutMatchesCommit&quot;:true,&quot;url&quot;:&quot;https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md&quot;,&quot;readingDepth&quot;:&quot;Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth.&quot;}],&quot;scenario&quot;:{&quot;modifications&quot;:[],&quot;electricalParametersChanged&quot;:false,&quot;calibrationInferred&quot;:false},&quot;dimensions&quot;:[],&quot;warnings&quot;:[&quot;All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.&quot;,&quot;Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.&quot;,&quot;This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint.&quot;]}</metadata><rect width=\"1200\" height=\"760\" fill=\"#f5f3e9\"/><style>text{font-family:system-ui,sans-serif;fill:#213e32} .part{stroke:#315744;fill:#c9d6c0;stroke-width:1.8} .wire{stroke:#647b69;fill:none;stroke-width:1.4} .dim{stroke:#526b5b;fill:none;stroke-width:1} .small{font-size:13px}.label{font-size:15px;font-weight:600}</style><text x=\"38\" y=\"35\" font-size=\"23\" font-weight=\"600\">Least-material bench in three dimensions · flow</text><text x=\"38\" y=\"61\" class=\"small\">PROPOSED / SOURCE-STIPULATED GEOMETRY · NOT MANUFACTURING OR PHYSICAL VALIDATION</text><text x=\"45\" y=\"115\" class=\"label\">Conceptual observation map · block positions are not apparatus dimensions</text><g class=\"part\"><rect x=\"80\" y=\"210\" width=\"250\" height=\"80\" rx=\"6\"/><rect x=\"80\" y=\"430\" width=\"250\" height=\"80\" rx=\"6\"/><rect x=\"790\" y=\"210\" width=\"325\" height=\"80\" rx=\"6\"/><rect x=\"790\" y=\"430\" width=\"325\" height=\"80\" rx=\"6\"/></g><g class=\"label\"><text x=\"100\" y=\"255\">Signal contribution s</text><text x=\"100\" y=\"475\">Background b</text><text x=\"810\" y=\"255\">Receiver y = s + a·b</text><text x=\"810\" y=\"475\">Witness w = b + β·s</text></g><g class=\"wire\"><path d=\"M330 250H790m-10-6 10 6-10 6M330 470H790m-10-6 10 6-10 6M330 250 790 470m-11-1 11 1-5-10M330 470 790 250m-11 1 11-1-5 10\"/></g><text x=\"555\" y=\"235\" class=\"small\">Direct signal · coefficient 1</text><text x=\"555\" y=\"495\" class=\"small\">Direct background · coefficient 1</text><text x=\"425\" y=\"365\" class=\"small\">β · signal leakage</text><text x=\"650\" y=\"365\" class=\"small\">a · nuisance transfer</text><text x=\"45\" y=\"580\" class=\"small\">Each output receives both contributions. Crossing arrows do not connect to one another.</text><text x=\"45\" y=\"610\" class=\"small\">w is a separately calibrated witness-equivalent voltage; it is not automatically the raw pickup reading.</text><text x=\"38\" y=\"682\" class=\"small\">Source resonance-research-atlas @ aabc79d42adf · full source/scenario identity in SVG metadata</text><text x=\"38\" y=\"706\" class=\"small\">SOURCE-STIPULATED LAYOUT · Exact geometry is not a measured or construction-approved device.</text><text x=\"38\" y=\"731\" class=\"small\">No normalized apparatus dimensions, calibrated readout or manufacturing ratings are established by this registry view.</text></svg>",
+      "components": [],
+      "dimensions": [],
+      "sourcePins": [
+        {
+          "repository": "resonance-research-atlas",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "path": "docs/panel-v4/setup-catalog.json",
+          "sha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "committedSha256": "c43fc0c8cad4efa4afe3d0ae024ea08a23086f56b86c2d83b568394b50300daa",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        },
+        {
+          "repository": "resonance-research-atlas",
+          "commit": "aabc79d42adf4b72677fdd8e45fbade76b159192",
+          "path": "docs/panel-v4/apparatus.md",
+          "sha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+          "committedSha256": "2ff429200d3e5ac078a84eedfe8ab2142ec269f009a963a68b08fd19c42cb4f6",
+          "checkoutMatchesCommit": true,
+          "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+          "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+        }
+      ],
+      "scenario": {
+        "modifications": [],
+        "electricalParametersChanged": false,
+        "calibrationInferred": false
+      },
+      "warnings": [
+        "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+        "Dimensions are stipulated source layout or explicit user annotations, not measured component specifications.",
+        "This Atlas record supplies a drawing/caption but no normalized dimensional geometry. The flow map is editorial documentation, not a dimensioned blueprint."
+      ]
+    },
+    "terms": [
+      {
+        "id": "measurement.rms",
+        "label": "Root mean square",
+        "symbols": [
+          "RMS",
+          "Vrms",
+          "Irms"
+        ],
+        "unit": "same unit as the signal",
+        "plain": "RMS is the square root of the mean squared signal.",
+        "meaning": "For a pure sine only, peak amplitude is √2 times RMS. For a fixed resistor, RMS determines average heating.",
+        "cautions": [
+          "RMS is not the arithmetic mean or a universal peak conversion."
+        ],
+        "equation": "x_rms = √mean(x²); sine: x_peak = √2 x_rms",
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.peak",
+        "label": "Peak amplitude",
+        "symbols": [
+          "peak",
+          "Vpeak",
+          "Ipeak"
+        ],
+        "unit": "same unit as the signal",
+        "plain": "Peak amplitude is the largest excursion from zero.",
+        "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+        "cautions": [
+          "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.phase",
+        "label": "Phase and coherent readout",
+        "symbols": [
+          "φ",
+          "phase",
+          "CH",
+          "CH1",
+          "CH2"
+        ],
+        "unit": "radian (rad), or declared degrees",
+        "plain": "Phase locates one repeating signal relative to another.",
+        "meaning": "Coherent complex readout preserves relative amplitude and phase under a declared shared reference.",
+        "cautions": [
+          "Sharing a sample clock does not establish equal gain, stable transfer or calibration."
+        ],
+        "aliases": [
+          "coherence",
+          "channel"
+        ],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.calibration",
+        "label": "Calibration and deterministic error bounds",
+        "symbols": [
+          "ε",
+          "epsilon",
+          "epsilon_y",
+          "epsilon_w",
+          "ΔM",
+          "Δa",
+          "Delta_a"
+        ],
+        "unit": "unit of the bounded quantity",
+        "plain": "Calibration connects instrument readings with a stated reference.",
+        "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+        "cautions": [
+          "A stipulated error radius is not measured sensor performance or a confidence interval."
+        ],
+        "aliases": [
+          "uncertainty",
+          "error radius"
+        ],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.drift",
+        "label": "Drift, pilot and cross-talk",
+        "symbols": [
+          "pilot",
+          "drift",
+          "pre-roll"
+        ],
+        "unit": "declared signal unit and time",
+        "plain": "A reference tone can help notice changes during a recording.",
+        "meaning": "Pilot drift can arise in the source, path or recorder; pre-roll records the background before excitation, and cross-talk mixes channels.",
+        "cautions": [
+          "A stable pilot is not a calibration certificate; two microphones do not guarantee isolation."
+        ],
+        "aliases": [
+          "gain drift",
+          "cross-talk",
+          "source monitor"
+        ],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.clipping",
+        "label": "Clipping and bandwidth",
+        "symbols": [
+          "clipping",
+          "bandwidth"
+        ],
+        "unit": "signal amplitude; hertz (Hz)",
+        "plain": "A recorder can cut off large signals or miss frequencies.",
+        "meaning": "Clipping limits waveform amplitude; bandwidth declares which frequencies a system can represent with stated accuracy.",
+        "cautions": [
+          "A non-clipping trace alone does not establish calibrated response."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "measurement.not-to-scale",
+        "label": "Not to scale",
+        "symbols": [
+          "NTS",
+          "not to scale"
+        ],
+        "unit": "drawing convention; not a measurement",
+        "plain": "A sketch may show relationships without preserving size ratios.",
+        "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+        "cautions": [
+          "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+        ],
+        "aliases": [],
+        "domain": "measurement",
+        "sourceRefs": [
+          "newton-tesla-research-lab/docs/contracts/R2.json"
+        ]
+      },
+      {
+        "id": "acoustics.frequency",
+        "label": "Frequency and period",
+        "symbols": [
+          "f",
+          "Hz",
+          "T"
+        ],
+        "unit": "hertz (Hz = cycles/s); second (s)",
+        "plain": "Frequency counts repeating cycles each second.",
+        "meaning": "A period is one cycle duration; f=1/T. A recorded spectrum can contain many peaks.",
+        "cautions": [
+          "Frequency f differs from force F; a monument does not automatically have one scalar frequency."
+        ],
+        "equation": "f = 1/T",
+        "aliases": [],
+        "domain": "acoustics",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/room-response.ts",
+          "resonance-research-atlas/research/sound-lab-v4/R1"
+        ]
+      },
+      {
+        "id": "acoustics.pressure",
+        "label": "Acoustic pressure",
+        "symbols": [
+          "p",
+          "pressure"
+        ],
+        "unit": "pascal (Pa), if calibrated",
+        "plain": "Sound pressure is a changing pressure measured in air.",
+        "meaning": "Pressure spectra, electrical voltage, displacement and digital sample amplitude are different channels.",
+        "cautions": [
+          "The synthetic room model is relative digital amplitude, not calibrated Pa or dB SPL."
+        ],
+        "aliases": [],
+        "domain": "acoustics",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/room-response.ts",
+          "resonance-research-atlas/research/sound-lab-v4/R1"
+        ]
+      },
+      {
+        "id": "acoustics.delay",
+        "label": "Path distance, delay and sound speed",
+        "symbols": [
+          "d",
+          "t",
+          "c"
+        ],
+        "unit": "metre (m); second (s); m/s",
+        "plain": "Longer sound paths arrive later.",
+        "meaning": "The early-reflection model uses t=d/c with c=343 m/s unless otherwise declared.",
+        "cautions": [
+          "This c is sound speed, not vacuum light speed or capacitance C."
+        ],
+        "equation": "t = d/c",
+        "aliases": [],
+        "domain": "acoustics",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/room-response.ts",
+          "resonance-research-atlas/research/sound-lab-v4/R1"
+        ]
+      },
+      {
+        "id": "units.si",
+        "label": "SI and unit prefixes",
+        "symbols": [
+          "SI",
+          "m",
+          "cm",
+          "mm",
+          "µ",
+          "milli",
+          "micro",
+          "nano"
+        ],
+        "unit": "declared physical unit",
+        "plain": "SI is the international system of measurement units.",
+        "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+        "cautions": [
+          "A source drawing in cm or mm is not silently a metres-based parts table."
+        ],
+        "aliases": [],
+        "domain": "units",
+        "sourceRefs": [
+          "https://www.bipm.org/en/measurement-units"
+        ]
+      },
+      {
+        "id": "digital.svg",
+        "label": "Scalable Vector Graphics",
+        "symbols": [
+          "SVG"
+        ],
+        "unit": "file format; no physical unit",
+        "plain": "SVG stores a drawing as shapes and text.",
+        "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+        "cautions": [
+          "A precise-looking SVG is not a validated construction drawing."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.json",
+        "label": "JavaScript Object Notation",
+        "symbols": [
+          "JSON"
+        ],
+        "unit": "data format; no physical unit",
+        "plain": "JSON stores structured data that can be exported and inspected.",
+        "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+        "cautions": [
+          "Serialization does not authenticate a claim or measure a device."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.sha256",
+        "label": "SHA-256 content digest",
+        "symbols": [
+          "SHA-256",
+          "SHA256"
+        ],
+        "unit": "256-bit digest",
+        "plain": "A digest helps compare whether two files have the same bytes.",
+        "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+        "cautions": [
+          "A matching digest proves neither the truth of content nor its author."
+        ],
+        "aliases": [
+          "hash"
+        ],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.fft",
+        "label": "Fast Fourier transform",
+        "symbols": [
+          "FFT",
+          "DFT"
+        ],
+        "unit": "frequency bins in Hz; amplitude units declared separately",
+        "plain": "A Fourier transform separates a sampled waveform into frequency components.",
+        "meaning": "FFT is an efficient algorithm for the discrete Fourier transform; bin spacing is sample rate divided by transform length.",
+        "cautions": [
+          "A spectral peak is not necessarily the fundamental, a material mode or calibrated acoustic pressure."
+        ],
+        "equation": "Δf = sampleRate / N",
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.pcm",
+        "label": "Pulse-code modulation and sampling",
+        "symbols": [
+          "PCM",
+          "sample rate",
+          "Nyquist"
+        ],
+        "unit": "samples/s (Hz); declared bit depth",
+        "plain": "PCM represents a waveform as a sequence of numbered samples.",
+        "meaning": "PCM16 encodes signed 16-bit samples; sample rate sets the time interval. Frequencies must stay below half the sample rate.",
+        "cautions": [
+          "A 48 kHz sample rate is not the pitch of the sound."
+        ],
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      },
+      {
+        "id": "digital.dbfs",
+        "label": "Decibels relative to digital full scale",
+        "symbols": [
+          "dBFS",
+          "sample peak"
+        ],
+        "unit": "decibel (dB) relative to full-scale amplitude",
+        "plain": "dBFS expresses digital signal level below the largest sample value.",
+        "meaning": "For normalized amplitude A, level is 20 log10(|A|). A −24 dBFS master is a digital gain choice.",
+        "cautions": [
+          "It is not calibrated sound-pressure level or a guarantee of safe ear exposure."
+        ],
+        "equation": "dBFS = 20 log10(|A|)",
+        "aliases": [],
+        "domain": "digital",
+        "sourceRefs": [
+          "resonance-lab/src/workbench/dsp.ts"
+        ]
+      }
+    ],
+    "equations": [],
+    "handbook": {
+      "schema": "blueprint-handbook/v1",
+      "recordId": "atlas:v4-phone-witness-3d",
+      "title": "Least-material bench in three dimensions",
+      "kind": "deterministic 3D geometry render",
+      "status": "proposed_unbuilt",
+      "overview": "Deterministic geometry from declared metre coordinates; not a photograph or observed apparatus. Dashed connectors are signal routes, not simulated sound fields. Use the dimensioned SVG for placement.",
+      "goal": "Use the three-dimensional view to understand proposed placement, not to infer a simulated sound field or a photographed apparatus.",
+      "signalSteps": [
+        "Read the declared coordinate layout as a placement illustration.",
+        "Treat dashed connectors as signal routes, not calculated waves.",
+        "Return to the dimensioned plan and source caption before assigning physical meaning."
+      ],
+      "variables": [
+        {
+          "id": "measurement.rms",
+          "label": "Root mean square",
+          "symbols": [
+            "RMS",
+            "Vrms",
+            "Irms"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "RMS is the square root of the mean squared signal.",
+          "meaning": "For a pure sine only, peak amplitude is √2 times RMS. For a fixed resistor, RMS determines average heating.",
+          "cautions": [
+            "RMS is not the arithmetic mean or a universal peak conversion."
+          ],
+          "equation": "x_rms = √mean(x²); sine: x_peak = √2 x_rms",
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.peak",
+          "label": "Peak amplitude",
+          "symbols": [
+            "peak",
+            "Vpeak",
+            "Ipeak"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "Peak amplitude is the largest excursion from zero.",
+          "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+          "cautions": [
+            "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.phase",
+          "label": "Phase and coherent readout",
+          "symbols": [
+            "φ",
+            "phase",
+            "CH",
+            "CH1",
+            "CH2"
+          ],
+          "unit": "radian (rad), or declared degrees",
+          "plain": "Phase locates one repeating signal relative to another.",
+          "meaning": "Coherent complex readout preserves relative amplitude and phase under a declared shared reference.",
+          "cautions": [
+            "Sharing a sample clock does not establish equal gain, stable transfer or calibration."
+          ],
+          "aliases": [
+            "coherence",
+            "channel"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.calibration",
+          "label": "Calibration and deterministic error bounds",
+          "symbols": [
+            "ε",
+            "epsilon",
+            "epsilon_y",
+            "epsilon_w",
+            "ΔM",
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "unit of the bounded quantity",
+          "plain": "Calibration connects instrument readings with a stated reference.",
+          "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+          "cautions": [
+            "A stipulated error radius is not measured sensor performance or a confidence interval."
+          ],
+          "aliases": [
+            "uncertainty",
+            "error radius"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.drift",
+          "label": "Drift, pilot and cross-talk",
+          "symbols": [
+            "pilot",
+            "drift",
+            "pre-roll"
+          ],
+          "unit": "declared signal unit and time",
+          "plain": "A reference tone can help notice changes during a recording.",
+          "meaning": "Pilot drift can arise in the source, path or recorder; pre-roll records the background before excitation, and cross-talk mixes channels.",
+          "cautions": [
+            "A stable pilot is not a calibration certificate; two microphones do not guarantee isolation."
+          ],
+          "aliases": [
+            "gain drift",
+            "cross-talk",
+            "source monitor"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.clipping",
+          "label": "Clipping and bandwidth",
+          "symbols": [
+            "clipping",
+            "bandwidth"
+          ],
+          "unit": "signal amplitude; hertz (Hz)",
+          "plain": "A recorder can cut off large signals or miss frequencies.",
+          "meaning": "Clipping limits waveform amplitude; bandwidth declares which frequencies a system can represent with stated accuracy.",
+          "cautions": [
+            "A non-clipping trace alone does not establish calibrated response."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "acoustics.frequency",
+          "label": "Frequency and period",
+          "symbols": [
+            "f",
+            "Hz",
+            "T"
+          ],
+          "unit": "hertz (Hz = cycles/s); second (s)",
+          "plain": "Frequency counts repeating cycles each second.",
+          "meaning": "A period is one cycle duration; f=1/T. A recorded spectrum can contain many peaks.",
+          "cautions": [
+            "Frequency f differs from force F; a monument does not automatically have one scalar frequency."
+          ],
+          "equation": "f = 1/T",
+          "aliases": [],
+          "domain": "acoustics",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/room-response.ts",
+            "resonance-research-atlas/research/sound-lab-v4/R1"
+          ]
+        },
+        {
+          "id": "acoustics.pressure",
+          "label": "Acoustic pressure",
+          "symbols": [
+            "p",
+            "pressure"
+          ],
+          "unit": "pascal (Pa), if calibrated",
+          "plain": "Sound pressure is a changing pressure measured in air.",
+          "meaning": "Pressure spectra, electrical voltage, displacement and digital sample amplitude are different channels.",
+          "cautions": [
+            "The synthetic room model is relative digital amplitude, not calibrated Pa or dB SPL."
+          ],
+          "aliases": [],
+          "domain": "acoustics",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/room-response.ts",
+            "resonance-research-atlas/research/sound-lab-v4/R1"
+          ]
+        },
+        {
+          "id": "acoustics.delay",
+          "label": "Path distance, delay and sound speed",
+          "symbols": [
+            "d",
+            "t",
+            "c"
+          ],
+          "unit": "metre (m); second (s); m/s",
+          "plain": "Longer sound paths arrive later.",
+          "meaning": "The early-reflection model uses t=d/c with c=343 m/s unless otherwise declared.",
+          "cautions": [
+            "This c is sound speed, not vacuum light speed or capacitance C."
+          ],
+          "equation": "t = d/c",
+          "aliases": [],
+          "domain": "acoustics",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/room-response.ts",
+            "resonance-research-atlas/research/sound-lab-v4/R1"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.fft",
+          "label": "Fast Fourier transform",
+          "symbols": [
+            "FFT",
+            "DFT"
+          ],
+          "unit": "frequency bins in Hz; amplitude units declared separately",
+          "plain": "A Fourier transform separates a sampled waveform into frequency components.",
+          "meaning": "FFT is an efficient algorithm for the discrete Fourier transform; bin spacing is sample rate divided by transform length.",
+          "cautions": [
+            "A spectral peak is not necessarily the fundamental, a material mode or calibrated acoustic pressure."
+          ],
+          "equation": "Δf = sampleRate / N",
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.pcm",
+          "label": "Pulse-code modulation and sampling",
+          "symbols": [
+            "PCM",
+            "sample rate",
+            "Nyquist"
+          ],
+          "unit": "samples/s (Hz); declared bit depth",
+          "plain": "PCM represents a waveform as a sequence of numbered samples.",
+          "meaning": "PCM16 encodes signed 16-bit samples; sample rate sets the time interval. Frequencies must stay below half the sample rate.",
+          "cautions": [
+            "A 48 kHz sample rate is not the pitch of the sound."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.dbfs",
+          "label": "Decibels relative to digital full scale",
+          "symbols": [
+            "dBFS",
+            "sample peak"
+          ],
+          "unit": "decibel (dB) relative to full-scale amplitude",
+          "plain": "dBFS expresses digital signal level below the largest sample value.",
+          "meaning": "For normalized amplitude A, level is 20 log10(|A|). A −24 dBFS master is a digital gain choice.",
+          "cautions": [
+            "It is not calibrated sound-pressure level or a guarantee of safe ear exposure."
+          ],
+          "equation": "dBFS = 20 log10(|A|)",
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "id": "measurement.rms",
+          "label": "Root mean square",
+          "symbols": [
+            "RMS",
+            "Vrms",
+            "Irms"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "RMS is the square root of the mean squared signal.",
+          "meaning": "For a pure sine only, peak amplitude is √2 times RMS. For a fixed resistor, RMS determines average heating.",
+          "cautions": [
+            "RMS is not the arithmetic mean or a universal peak conversion."
+          ],
+          "equation": "x_rms = √mean(x²); sine: x_peak = √2 x_rms",
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.peak",
+          "label": "Peak amplitude",
+          "symbols": [
+            "peak",
+            "Vpeak",
+            "Ipeak"
+          ],
+          "unit": "same unit as the signal",
+          "plain": "Peak amplitude is the largest excursion from zero.",
+          "meaning": "The imported R1/R2/R3 electrical phasors use peak amplitude, while the host circuit inputs use RMS.",
+          "cautions": [
+            "Sample peak, reconstructed true peak and acoustic pressure peak are different measurements."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.phase",
+          "label": "Phase and coherent readout",
+          "symbols": [
+            "φ",
+            "phase",
+            "CH",
+            "CH1",
+            "CH2"
+          ],
+          "unit": "radian (rad), or declared degrees",
+          "plain": "Phase locates one repeating signal relative to another.",
+          "meaning": "Coherent complex readout preserves relative amplitude and phase under a declared shared reference.",
+          "cautions": [
+            "Sharing a sample clock does not establish equal gain, stable transfer or calibration."
+          ],
+          "aliases": [
+            "coherence",
+            "channel"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.calibration",
+          "label": "Calibration and deterministic error bounds",
+          "symbols": [
+            "ε",
+            "epsilon",
+            "epsilon_y",
+            "epsilon_w",
+            "ΔM",
+            "Δa",
+            "Delta_a"
+          ],
+          "unit": "unit of the bounded quantity",
+          "plain": "Calibration connects instrument readings with a stated reference.",
+          "meaning": "These contracts supply deterministic error radii in volts, amperes, henries or dimensionless transfer units, as declared.",
+          "cautions": [
+            "A stipulated error radius is not measured sensor performance or a confidence interval."
+          ],
+          "aliases": [
+            "uncertainty",
+            "error radius"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.drift",
+          "label": "Drift, pilot and cross-talk",
+          "symbols": [
+            "pilot",
+            "drift",
+            "pre-roll"
+          ],
+          "unit": "declared signal unit and time",
+          "plain": "A reference tone can help notice changes during a recording.",
+          "meaning": "Pilot drift can arise in the source, path or recorder; pre-roll records the background before excitation, and cross-talk mixes channels.",
+          "cautions": [
+            "A stable pilot is not a calibration certificate; two microphones do not guarantee isolation."
+          ],
+          "aliases": [
+            "gain drift",
+            "cross-talk",
+            "source monitor"
+          ],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.clipping",
+          "label": "Clipping and bandwidth",
+          "symbols": [
+            "clipping",
+            "bandwidth"
+          ],
+          "unit": "signal amplitude; hertz (Hz)",
+          "plain": "A recorder can cut off large signals or miss frequencies.",
+          "meaning": "Clipping limits waveform amplitude; bandwidth declares which frequencies a system can represent with stated accuracy.",
+          "cautions": [
+            "A non-clipping trace alone does not establish calibrated response."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "measurement.not-to-scale",
+          "label": "Not to scale",
+          "symbols": [
+            "NTS",
+            "not to scale"
+          ],
+          "unit": "drawing convention; not a measurement",
+          "plain": "A sketch may show relationships without preserving size ratios.",
+          "meaning": "Use written dimensions and declared coordinate units rather than measuring screen pixels.",
+          "cautions": [
+            "An accurate-looking diagram is not an engineering drawing or a calibrated photograph."
+          ],
+          "aliases": [],
+          "domain": "measurement",
+          "sourceRefs": [
+            "newton-tesla-research-lab/docs/contracts/R2.json"
+          ]
+        },
+        {
+          "id": "acoustics.frequency",
+          "label": "Frequency and period",
+          "symbols": [
+            "f",
+            "Hz",
+            "T"
+          ],
+          "unit": "hertz (Hz = cycles/s); second (s)",
+          "plain": "Frequency counts repeating cycles each second.",
+          "meaning": "A period is one cycle duration; f=1/T. A recorded spectrum can contain many peaks.",
+          "cautions": [
+            "Frequency f differs from force F; a monument does not automatically have one scalar frequency."
+          ],
+          "equation": "f = 1/T",
+          "aliases": [],
+          "domain": "acoustics",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/room-response.ts",
+            "resonance-research-atlas/research/sound-lab-v4/R1"
+          ]
+        },
+        {
+          "id": "acoustics.pressure",
+          "label": "Acoustic pressure",
+          "symbols": [
+            "p",
+            "pressure"
+          ],
+          "unit": "pascal (Pa), if calibrated",
+          "plain": "Sound pressure is a changing pressure measured in air.",
+          "meaning": "Pressure spectra, electrical voltage, displacement and digital sample amplitude are different channels.",
+          "cautions": [
+            "The synthetic room model is relative digital amplitude, not calibrated Pa or dB SPL."
+          ],
+          "aliases": [],
+          "domain": "acoustics",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/room-response.ts",
+            "resonance-research-atlas/research/sound-lab-v4/R1"
+          ]
+        },
+        {
+          "id": "acoustics.delay",
+          "label": "Path distance, delay and sound speed",
+          "symbols": [
+            "d",
+            "t",
+            "c"
+          ],
+          "unit": "metre (m); second (s); m/s",
+          "plain": "Longer sound paths arrive later.",
+          "meaning": "The early-reflection model uses t=d/c with c=343 m/s unless otherwise declared.",
+          "cautions": [
+            "This c is sound speed, not vacuum light speed or capacitance C."
+          ],
+          "equation": "t = d/c",
+          "aliases": [],
+          "domain": "acoustics",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/room-response.ts",
+            "resonance-research-atlas/research/sound-lab-v4/R1"
+          ]
+        },
+        {
+          "id": "units.si",
+          "label": "SI and unit prefixes",
+          "symbols": [
+            "SI",
+            "m",
+            "cm",
+            "mm",
+            "µ",
+            "milli",
+            "micro",
+            "nano"
+          ],
+          "unit": "declared physical unit",
+          "plain": "SI is the international system of measurement units.",
+          "meaning": "cm=0.01 m, mm=0.001 m, µ=10⁻⁶, milli=10⁻³ and nano=10⁻⁹ of the stated unit.",
+          "cautions": [
+            "A source drawing in cm or mm is not silently a metres-based parts table."
+          ],
+          "aliases": [],
+          "domain": "units",
+          "sourceRefs": [
+            "https://www.bipm.org/en/measurement-units"
+          ]
+        },
+        {
+          "id": "digital.svg",
+          "label": "Scalable Vector Graphics",
+          "symbols": [
+            "SVG"
+          ],
+          "unit": "file format; no physical unit",
+          "plain": "SVG stores a drawing as shapes and text.",
+          "meaning": "A vector drawing can retain dimensions and annotations independently of display resolution.",
+          "cautions": [
+            "A precise-looking SVG is not a validated construction drawing."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.json",
+          "label": "JavaScript Object Notation",
+          "symbols": [
+            "JSON"
+          ],
+          "unit": "data format; no physical unit",
+          "plain": "JSON stores structured data that can be exported and inspected.",
+          "meaning": "A receipt encodes declared inputs, outputs and provenance as text records.",
+          "cautions": [
+            "Serialization does not authenticate a claim or measure a device."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.sha256",
+          "label": "SHA-256 content digest",
+          "symbols": [
+            "SHA-256",
+            "SHA256"
+          ],
+          "unit": "256-bit digest",
+          "plain": "A digest helps compare whether two files have the same bytes.",
+          "meaning": "SHA means Secure Hash Algorithm; the digest identifies content under the named algorithm.",
+          "cautions": [
+            "A matching digest proves neither the truth of content nor its author."
+          ],
+          "aliases": [
+            "hash"
+          ],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.fft",
+          "label": "Fast Fourier transform",
+          "symbols": [
+            "FFT",
+            "DFT"
+          ],
+          "unit": "frequency bins in Hz; amplitude units declared separately",
+          "plain": "A Fourier transform separates a sampled waveform into frequency components.",
+          "meaning": "FFT is an efficient algorithm for the discrete Fourier transform; bin spacing is sample rate divided by transform length.",
+          "cautions": [
+            "A spectral peak is not necessarily the fundamental, a material mode or calibrated acoustic pressure."
+          ],
+          "equation": "Δf = sampleRate / N",
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.pcm",
+          "label": "Pulse-code modulation and sampling",
+          "symbols": [
+            "PCM",
+            "sample rate",
+            "Nyquist"
+          ],
+          "unit": "samples/s (Hz); declared bit depth",
+          "plain": "PCM represents a waveform as a sequence of numbered samples.",
+          "meaning": "PCM16 encodes signed 16-bit samples; sample rate sets the time interval. Frequencies must stay below half the sample rate.",
+          "cautions": [
+            "A 48 kHz sample rate is not the pitch of the sound."
+          ],
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        },
+        {
+          "id": "digital.dbfs",
+          "label": "Decibels relative to digital full scale",
+          "symbols": [
+            "dBFS",
+            "sample peak"
+          ],
+          "unit": "decibel (dB) relative to full-scale amplitude",
+          "plain": "dBFS expresses digital signal level below the largest sample value.",
+          "meaning": "For normalized amplitude A, level is 20 log10(|A|). A −24 dBFS master is a digital gain choice.",
+          "cautions": [
+            "It is not calibrated sound-pressure level or a guarantee of safe ear exposure."
+          ],
+          "equation": "dBFS = 20 log10(|A|)",
+          "aliases": [],
+          "domain": "digital",
+          "sourceRefs": [
+            "resonance-lab/src/workbench/dsp.ts"
+          ]
+        }
+      ],
+      "equations": [],
+      "contractFields": [],
+      "whatKnown": [
+        "This is a deterministic geometry view paired with the least-material proposal.",
+        "A new perspective is another view of a proposal, not another built device.",
+        "Original source status: proposed_unbuilt."
+      ],
+      "whatUnknown": [
+        "A drawing does not establish acoustic paths, microphone transfer or separation of a mixed recording.",
+        "No physical apparatus or material damping was observed."
+      ],
+      "measurementChecklist": [
+        "Use source documentation to recover proposed positions and their units.",
+        "A future recording study still needs source-only and background/reference observations."
+      ],
+      "questions": [
+        "Does this connector represent wiring, data flow or measured sound?",
+        "Which dimensioned source controls the placement?"
+      ],
+      "sourceHierarchy": [
+        {
+          "label": "Why this subject is here",
+          "meaning": "Historical or external publications provide context; their claims and reading depth do not become new measurements.",
+          "references": []
+        },
+        {
+          "label": "How the model or drawing was declared",
+          "meaning": "Pinned source records and contracts identify assumptions. Drawing geometry does not determine missing electrical or material properties.",
+          "references": [
+            {
+              "title": "resonance-research-atlas/docs/panel-v4/setup-catalog.json",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/setup-catalog.json",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            },
+            {
+              "title": "resonance-research-atlas/docs/panel-v4/apparatus.md",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/docs/panel-v4/apparatus.md",
+              "readingDepth": "Local source file read directly by registry generator; upstream primary publications retain their separate source-ledger reading depth."
+            }
+          ]
+        },
+        {
+          "label": "Which file was viewed",
+          "meaning": "Source and already-served copies are different observations. A content hash identifies bytes, not scientific truth, authorship certification or construction readiness.",
+          "references": [
+            {
+              "title": "assets/sound-lab-v4/phone-witness-3d.png",
+              "url": "https://github.com/occult-kranti/resonance-research-atlas/blob/aabc79d42adf4b72677fdd8e45fbade76b159192/assets/sound-lab-v4/phone-witness-3d.png",
+              "readingDepth": "Pinned artifact reference; no physical apparatus verification follows."
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "All apparatus is proposed and unbuilt. Geometry is not a physical measurement or a calibration.",
+        "Deterministic geometry from declared metre coordinates; not a photograph or observed apparatus. Dashed connectors are signal routes, not simulated sound fields. Use the dimensioned SVG for placement.",
+        "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation.",
+        "This guide explains the declared study. It supplies no missing engineering specification, calibration, purchase requirement or construction approval."
+      ],
+      "coverage": {
+        "recordSpecific": true,
+        "termCount": 17,
+        "equationCount": 0,
+        "claim": "Explicit guide and selected contextual terms for this record; not automatic coverage of every raw source symbol or an exhaustive technical dictionary."
+      }
+    },
+    "notes": "Source-based explanatory sketch and reading packet. Not a manufacturing drawing, rated bill of parts, physical calibration or observed device-performance result."
+  },
+  "limitations": [
+    "Deterministic geometry from declared metre coordinates; not a photograph or observed apparatus. Dashed connectors are signal routes, not simulated sound fields. Use the dimensioned SVG for placement.",
+    "Detailed parts, coordinates and calibration are not inferred from the image. Inspect the pinned apparatus documentation.",
+    "Authored scenario and sketch revisions are separate from the pinned source record.",
+    "Missing ratings, turns, insulation, materials and calibration remain unknown.",
+    "This packet is an explanatory review, not a manufacturing drawing, hardware validation or operating approval."
+  ]
+}

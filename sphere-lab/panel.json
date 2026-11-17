@@ -1,0 +1,149 @@
+{
+  "schema": "sphere-adaptive-panel/v1",
+  "generatedAt": "2026-11-17T06:52:43.403Z",
+  "provenance": "Six separate contemporary software agents using selected documented research lenses. Shared model lineage; no historical participation, human peer review, clinical validation or independent laboratory replication.",
+  "experts": [
+    {
+      "id": "architecture",
+      "name": "Newtonian metrology and experiment design"
+    },
+    {
+      "id": "audio",
+      "name": "Acoustics and biological evidence"
+    },
+    {
+      "id": "curator_ui",
+      "name": "Interface and accessible scientific communication"
+    },
+    {
+      "id": "devices",
+      "name": "Tesla mechanism and apparatus geometry"
+    },
+    {
+      "id": "discourse",
+      "name": "Quantum information and skeptical inverse inference"
+    },
+    {
+      "id": "research",
+      "name": "Primary sources, history and literature evidence"
+    }
+  ],
+  "requestedRounds": 3,
+  "completedRounds": 3,
+  "rounds": [
+    {
+      "round": 1,
+      "status": "complete",
+      "frozenAt": "2026-11-17T06:35:25.031466+00:00",
+      "decision": "Proceed to round 2 only on the listed objections. Existing registration verified; models remain synthetic.",
+      "reports": [
+        {
+          "role": "architecture",
+          "sha256": "f13a056334bc5e24386adcb765a9c83d4a6a54d61a39b61b296375b12e589dff",
+          "path": "docs/sphere-panel/round-1/architecture.md"
+        },
+        {
+          "role": "audio",
+          "sha256": "7cf0b98b3e2ec046ecaeb1b7af8e66b7b6580c5991eca923e61d8af45d71bfae",
+          "path": "docs/sphere-panel/round-1/audio.md"
+        },
+        {
+          "role": "curator_ui",
+          "sha256": "02394ec7794ca63a861635e726e9d756125313694c86fbaea068495bd504716c",
+          "path": "docs/sphere-panel/round-1/curator_ui.md"
+        },
+        {
+          "role": "devices",
+          "sha256": "0ed9e668d8be3e9ba6fe8727d30b6fc7cb0d1c67c30e13baf62c433c51197988",
+          "path": "docs/sphere-panel/round-1/devices.md"
+        },
+        {
+          "role": "discourse",
+          "sha256": "499c5e46f7eb7534271b0d01fbbda23d28d6bcc6bf77452ec8c6cccce4a385c3",
+          "path": "docs/sphere-panel/round-1/discourse.md"
+        },
+        {
+          "role": "research",
+          "sha256": "76fecc27f86d78c360003072c5c78650fb769168bd563a9cf0eb259c190a0583",
+          "path": "docs/sphere-panel/round-1/research.md"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "status": "complete",
+      "frozenAt": "2026-11-17T06:43:42.787647+00:00",
+      "decision": "Admit bounded teaching models after actual critiques and repairs; proceed to final compiled/source/geometry/export review.",
+      "reports": [
+        {
+          "role": "architecture",
+          "sha256": "5ba789cfbb84be68c2b5dbc4e1c8696b4d7fec86b238511163cfd7d4e839218b",
+          "path": "docs/sphere-panel/round-2/architecture.md"
+        },
+        {
+          "role": "audio",
+          "sha256": "d8bb38e8ad68d56a9bfab275757b80cce4bdf8dd76740e6c99d36d0028667118",
+          "path": "docs/sphere-panel/round-2/audio.md"
+        },
+        {
+          "role": "curator_ui",
+          "sha256": "f82201f8997f9e938800f588bc8aa0672e0f5b9aab76eac61a98206b620c72f9",
+          "path": "docs/sphere-panel/round-2/curator_ui.md"
+        },
+        {
+          "role": "devices",
+          "sha256": "d87f48d9b98fd7420d35a95d32ead1814951adde9f90849014bd2bf3baed27ec",
+          "path": "docs/sphere-panel/round-2/devices.md"
+        },
+        {
+          "role": "discourse",
+          "sha256": "baa38f2097cbb69578902744ab5117aa0f6c9674459682219edd6b443617e855",
+          "path": "docs/sphere-panel/round-2/discourse.md"
+        },
+        {
+          "role": "research",
+          "sha256": "895bb1ef993b3d837f0b7b8cc86c02d82e07d88d6d2d74a439fc43449272ce65",
+          "path": "docs/sphere-panel/round-2/research.md"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "status": "complete",
+      "frozenAt": "2026-11-17T06:52:43.339038+00:00",
+      "decision": "All six final reviewers accept the bounded models, source provenance, compiled interface, diagrams and offline exports. No blocking findings remain. Stop after three rounds. No measurements or legal/hardware/clinical validation are inferred.",
+      "reports": [
+        {
+          "role": "architecture",
+          "sha256": "7932d9b87d29e5a3299a5a708fb6c20c4d3c8420d4fbf807af882eac2a717b1d",
+          "path": "docs/sphere-panel/round-3/architecture.md"
+        },
+        {
+          "role": "audio",
+          "sha256": "30a265ec63af2d5c2a0849affd87e1511d401e1fd04519889abf9dd39627a674",
+          "path": "docs/sphere-panel/round-3/audio.md"
+        },
+        {
+          "role": "curator_ui",
+          "sha256": "63ed2aa1ba104160589054691e46923e99b4f85d4c87c3856dd7eb83e4b7629f",
+          "path": "docs/sphere-panel/round-3/curator_ui.md"
+        },
+        {
+          "role": "devices",
+          "sha256": "00c3ef5a18e838aeb2f4ba2dd30f7e0b2b8bf17a45804dc016e1f692da06e11c",
+          "path": "docs/sphere-panel/round-3/devices.md"
+        },
+        {
+          "role": "discourse",
+          "sha256": "07d2c37a9b5f2adf6e4c82d2b7730ce6c862a907abdf085a4ae9ac6bac9ff8cb",
+          "path": "docs/sphere-panel/round-3/discourse.md"
+        },
+        {
+          "role": "research",
+          "sha256": "5ade2f537bfdeda478dbeca7cf4ea28a62f374c1b3f35c372b30ea6b43ccbb55",
+          "path": "docs/sphere-panel/round-3/research.md"
+        }
+      ]
+    }
+  ]
+}
