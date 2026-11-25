@@ -1,0 +1,50 @@
+[
+  {
+    "name": "electrostatics",
+    "path": "downloads/electrostatics.pdf",
+    "bytes": 1846805,
+    "sha256": "4d04eb2a2faa11c4d28bc21e86be96ce3c137e99ac21086c958d3036f6d217a1"
+  },
+  {
+    "name": "magnetism",
+    "path": "downloads/magnetism.pdf",
+    "bytes": 1921496,
+    "sha256": "5e31498d48ceebcf1ecb8ff08cff52e4a965c46a34e111215a1461d771836134"
+  },
+  {
+    "name": "gravity",
+    "path": "downloads/gravity.pdf",
+    "bytes": 2030431,
+    "sha256": "527e64967bd4b97c9828fe1eed14cb538cb6587b4841a3f7d7b150f6985ad2f5"
+  },
+  {
+    "name": "frequency",
+    "path": "downloads/frequency.pdf",
+    "bytes": 1722726,
+    "sha256": "725c3ae82c26c1929f4aafc06dd4d5e90bee378a79aeef86c7a912febfe6fa0f"
+  },
+  {
+    "name": "mathematics",
+    "path": "downloads/mathematics.pdf",
+    "bytes": 2306951,
+    "sha256": "f57dca14cc12687fd1f07477be1c9d530cea6c6b4108fb390b4d37f66b8c14f4"
+  },
+  {
+    "name": "ai-mathematics",
+    "path": "downloads/ai-mathematics.pdf",
+    "bytes": 1009126,
+    "sha256": "ea07385079da69b9d5f20d8c595051074271ef7f53b69f547a93158646199262"
+  },
+  {
+    "name": "complete-study",
+    "path": "downloads/complete-study.pdf",
+    "bytes": 10122346,
+    "sha256": "1e73e082d4faa621988e47433b974f9a53532ab1d3764c6d17b9dc17e32607a2"
+  },
+  {
+    "name": "summary",
+    "path": "downloads/summary.pdf",
+    "bytes": 99924,
+    "sha256": "89de09586f5c22d04dd472cc79a53499563e01d25c4c11161bd0a74a03f7f3d2"
+  }
+]

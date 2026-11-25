@@ -1,0 +1,157 @@
+{
+  "schema": "field-study-downloads/v1",
+  "generatedAt": "2026-11-25T07:30:42.744106+00:00",
+  "documents": [
+    {
+      "document": "electrostatics",
+      "pages": 78,
+      "bytes": 1846805,
+      "sha256": "4d04eb2a2faa11c4d28bc21e86be96ce3c137e99ac21086c958d3036f6d217a1",
+      "formulaIdentifiersVerified": 42,
+      "wordNativeMathObjects": 42,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    },
+    {
+      "document": "magnetism",
+      "pages": 88,
+      "bytes": 1921496,
+      "sha256": "5e31498d48ceebcf1ecb8ff08cff52e4a965c46a34e111215a1461d771836134",
+      "formulaIdentifiersVerified": 43,
+      "wordNativeMathObjects": 43,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    },
+    {
+      "document": "gravity",
+      "pages": 90,
+      "bytes": 2030431,
+      "sha256": "527e64967bd4b97c9828fe1eed14cb538cb6587b4841a3f7d7b150f6985ad2f5",
+      "formulaIdentifiersVerified": 45,
+      "wordNativeMathObjects": 45,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    },
+    {
+      "document": "frequency",
+      "pages": 81,
+      "bytes": 1722726,
+      "sha256": "725c3ae82c26c1929f4aafc06dd4d5e90bee378a79aeef86c7a912febfe6fa0f",
+      "formulaIdentifiersVerified": 42,
+      "wordNativeMathObjects": 42,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    },
+    {
+      "document": "mathematics",
+      "pages": 113,
+      "bytes": 2306951,
+      "sha256": "f57dca14cc12687fd1f07477be1c9d530cea6c6b4108fb390b4d37f66b8c14f4",
+      "formulaIdentifiersVerified": 61,
+      "wordNativeMathObjects": 61,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    },
+    {
+      "document": "ai-mathematics",
+      "pages": 59,
+      "bytes": 1009126,
+      "sha256": "ea07385079da69b9d5f20d8c595051074271ef7f53b69f547a93158646199262",
+      "formulaIdentifiersVerified": 4,
+      "wordNativeMathObjects": 4,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    },
+    {
+      "document": "complete-study",
+      "pages": 496,
+      "bytes": 10122346,
+      "sha256": "1e73e082d4faa621988e47433b974f9a53532ab1d3764c6d17b9dc17e32607a2",
+      "formulaIdentifiersVerified": 237,
+      "wordNativeMathObjects": 237,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    },
+    {
+      "document": "summary",
+      "pages": 5,
+      "bytes": 99924,
+      "sha256": "89de09586f5c22d04dd472cc79a53499563e01d25c4c11161bd0a74a03f7f3d2",
+      "formulaIdentifiersVerified": 0,
+      "wordNativeMathObjects": 0,
+      "wordPageSizeMm": [
+        210.0086111111111,
+        297.00361111111107
+      ],
+      "nominalA4ToleranceMm": 0.2,
+      "pageSizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "allA4": true
+    }
+  ],
+  "bundle": {
+    "path": "downloads/research-bundle.zip",
+    "bytes": 17036835,
+    "sha256": "ec75c989401f9b3c5974e9237b4251e5013ff12aba3186e4c1e8da9d44726355"
+  },
+  "corpusSHA256": "4aae7d54a88ad29868aa665f31c7ec83adffadab63b0dff23b77784fd13e8368",
+  "scope": "Selected corpus and recorded review rounds; no raw copyrighted source captures are included."
+}

@@ -1,0 +1,223 @@
+{
+  "schema": "field-study-scientific-controls/v1",
+  "scope": "Representative independent symbolic/numerical counterchecks. Not a complete proof audit of the selected formula corpus or the cited frontier papers.",
+  "sourceSHA256": "84238d122a5b502a822ba773daa0b576a57b98fc80561c77c04f739e528fc2a6",
+  "checks": [
+    {
+      "name": "Poisson/Gauss sign and source",
+      "passed": true,
+      "evidence": {
+        "potential": "-rho*(x**2 + y**2 + z**2)/(6*epsilon)",
+        "divergence": "rho/epsilon"
+      },
+      "scope": "Uniform-source analytic example in an unbounded coordinate patch; boundary data must be specified for a physical region."
+    },
+    {
+      "name": "Electrostatic curl null",
+      "passed": true,
+      "evidence": {
+        "curl": "Matrix([[0], [0], [0]])"
+      },
+      "scope": "Differentiable scalar potential; not arbitrary time-dependent electromagnetic fields."
+    },
+    {
+      "name": "Fixed-voltage source work changes the mechanical potential",
+      "passed": true,
+      "evidence": {
+        "fixedQForce": "Q**2*a/(2*C0)",
+        "fixedVForce": "C0*V**2*a/(2*(-a*x + 1)**2)",
+        "wrongFieldEnergyGradientHasOppositeSign": "-C0*V**2*a/(2*(-a*x + 1)**2)"
+      },
+      "scope": "Ideal quasistatic capacitor coordinate; fixed charge and fixed voltage are different controlled systems."
+    },
+    {
+      "name": "Vector-potential curl and magnetic divergence",
+      "passed": true,
+      "evidence": {
+        "A": "Matrix([[-B*y/2], [B*x/2], [0]])",
+        "curlA": "Matrix([[0], [0], [B]])"
+      },
+      "scope": "Uniform static B in a simply connected coordinate example; gauge representation is not unique."
+    },
+    {
+      "name": "Magnetic Lorentz force does no instantaneous work",
+      "passed": true,
+      "evidence": {
+        "vDotForce": "0"
+      },
+      "scope": "Magnetic q v\u00d7B term only; an induced electric field can do work."
+    },
+    {
+      "name": "Newtonian exterior vacuum Laplacian",
+      "passed": true,
+      "evidence": {
+        "laplacian": "0",
+        "pointSourceExcluded": "r=0"
+      },
+      "scope": "Identity outside the point source; the distributional delta source must not be discarded at the origin."
+    },
+    {
+      "name": "Weak-field redshift expansion",
+      "passed": true,
+      "evidence": {
+        "expansion": "1 - u - u**2/2 + O(u**3)",
+        "u": "GM/(r c^2)"
+      },
+      "scope": "Static Schwarzschild clock relative to infinity, weak field; coordinate time and proper time are distinct."
+    },
+    {
+      "name": "Damped pole differs from forced displacement peak",
+      "passed": true,
+      "evidence": {
+        "dampedFreeOmegaOverOmega0": 0.8660254037844386,
+        "forcedPeakOverOmega0": 0.7071067811865476,
+        "forcedPeakInteriorDomain": "0<zeta<1/sqrt(2)"
+      },
+      "scope": "Viscous single-degree-of-freedom displacement response; response channel and loading matter."
+    },
+    {
+      "name": "Finite sampling admits indistinguishable aliases",
+      "passed": true,
+      "evidence": {
+        "maxSampleDifference": 2.505357032944744e-12,
+        "frequencyHz": 300,
+        "aliasHz": 4396,
+        "sampleRateHz": 4096
+      },
+      "scope": "Uniform ideal samples; anti-alias filtering and input-band assumptions are extra premises."
+    },
+    {
+      "name": "DFT Parseval normalization",
+      "passed": true,
+      "evidence": {
+        "sampleEnergy": 2048.0000000000045,
+        "FFTenergyDividedByN": 2048.0000000000036,
+        "N": 4096
+      },
+      "scope": "NumPy forward DFT has no 1/N factor, inverse has 1/N; other conventions move the normalization."
+    },
+    {
+      "name": "Dispersive phase and group speeds differ",
+      "passed": true,
+      "evidence": {
+        "phaseSpeed": 3.9051248379533274,
+        "groupSpeed": 2.3046638387921274,
+        "asymptoticWaveSpeed": 3.0
+      },
+      "scope": "Ideal waveguide-like dispersion omega\u00b2=omegaCut\u00b2+c\u00b2k\u00b2; a phase speed is not a signal-front speed."
+    },
+    {
+      "name": "Positive returned singular values do not imply an injective rectangular map",
+      "passed": true,
+      "evidence": {
+        "matrix": [
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "returnedSingularValues": [
+          1.4142135623730951
+        ],
+        "domainDimension": 2,
+        "rank": 1,
+        "nullity": 1,
+        "kernelWitness": [
+          1.0,
+          -1.0
+        ]
+      },
+      "scope": "The SVD return array has min(m,n) values; inverse identifiability needs the full domain dimension."
+    },
+    {
+      "name": "Uniform convergence does not justify differentiating the limit",
+      "passed": true,
+      "evidence": {
+        "sequence": "sin(n*x)/n converges uniformly to0",
+        "derivativeAtZero": "cos(n*0)=1 for every n",
+        "derivativeOfLimit": 0
+      },
+      "scope": "A counterexample to interchanging a limit and derivative without additional hypotheses."
+    },
+    {
+      "name": "An invariant spectrum does not preserve all coordinate norms",
+      "passed": true,
+      "evidence": {
+        "operatorNorms": [
+          2.0,
+          3.702459173643833
+        ]
+      },
+      "scope": "Similarity preserves eigenvalues, while Euclidean operator norm requires an appropriate unitary/isometric change of representation."
+    },
+    {
+      "name": "Passive source/load/storage budget with independent refined quadrature",
+      "passed": true,
+      "evidence": {
+        "quadrature": [
+          {
+            "panels": 4000,
+            "sourceWorkJ": 1.6397713420091157e-05,
+            "lossJ": 1.6116463009646234e-05,
+            "storedChangeJ": 2.8125041064162154e-07,
+            "residualJ": -1.966992086212553e-16
+          },
+          {
+            "panels": 8000,
+            "sourceWorkJ": 1.6397713420180007e-05,
+            "lossJ": 1.6116463009623927e-05,
+            "storedChangeJ": 2.8125041064162154e-07,
+            "residualJ": -8.554138088717896e-17
+          }
+        ],
+        "solver": "SciPy solve_ivp trajectory; independent Simpson work/loss quadrature"
+      },
+      "scope": "Ideal driven RLC from zero state; numerical integration checks this declared model, not a built resonator or source-free energy claim."
+    },
+    {
+      "name": "Representative SI dimension audit",
+      "passed": true,
+      "evidence": {
+        "baseOrder": [
+          "kg",
+          "m",
+          "s",
+          "A"
+        ],
+        "derivedVectors": {
+          "CoulombForce": [
+            1,
+            1,
+            -2,
+            0
+          ],
+          "LorentzForce": [
+            1,
+            1,
+            -2,
+            0
+          ],
+          "NewtonForce": [
+            1,
+            1,
+            -2,
+            0
+          ],
+          "PhotonEnergy": [
+            1,
+            2,
+            -2,
+            0
+          ]
+        }
+      },
+      "scope": "Dimensions are necessary consistency checks, not sufficient evidence that a physical law or source claim is correct."
+    }
+  ],
+  "passed": true,
+  "count": 16,
+  "versions": {
+    "numpy": "2.3.5",
+    "sympy": "1.14.0"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "schema": "field-study-panel/v1",
+  "provenance": "Six separate contemporary software-agent specialists, with shared model lineage and inherited model configuration. No historical participation, human peer review or independent laboratory validation is claimed.",
+  "domains": [
+    {
+      "domain": "electrostatics",
+      "agent": "/root/architecture"
+    },
+    {
+      "domain": "magnetism",
+      "agent": "/root/devices"
+    },
+    {
+      "domain": "gravity",
+      "agent": "/root/research"
+    },
+    {
+      "domain": "frequency",
+      "agent": "/root/audio"
+    },
+    {
+      "domain": "mathematics",
+      "agent": "/root/discourse"
+    },
+    {
+      "domain": "ai-mathematics",
+      "agent": "/root/curator_ui"
+    }
+  ],
+  "requestedRounds": 3,
+  "completedRounds": 3,
+  "rounds": [
+    {
+      "round": 1,
+      "status": "complete",
+      "frozenAt": "2026-11-25T06:42:36.560728+00:00",
+      "decision": "Proceed to cross-domain criticism and source-depth repair after six independently produced domain chapters. All235 formula strings typeset in KaTeX and initial schema/104capture-hash checks pass. Selected source pairings and some frontier reading depths require scrutiny; no exhaustive-SOTA or proof-certification claim.",
+      "reports": [
+        {
+          "domain": "electrostatics",
+          "path": "docs/field-atlas/round-1/electrostatics.md",
+          "sha256": "6f388c0ef7606ad7b7a9fa7558f85060e117d64928ebeda628c060cc07973f44"
+        },
+        {
+          "domain": "magnetism",
+          "path": "docs/field-atlas/round-1/magnetism.md",
+          "sha256": "31c1a4f96b440926ec7caf08da2cfca50aa0f23bfb14cd76861d96b836ce7255"
+        },
+        {
+          "domain": "gravity",
+          "path": "docs/field-atlas/round-1/gravity.md",
+          "sha256": "440afe7f9b522f3dd22b9a9630195990615ec42e328faa1b8bb3a527a7f6f261"
+        },
+        {
+          "domain": "frequency",
+          "path": "docs/field-atlas/round-1/frequency.md",
+          "sha256": "5b9d15ab86410345bc71e01bb0ee4973c596d85ce231d12870ffdb0d2048bc14"
+        },
+        {
+          "domain": "mathematics",
+          "path": "docs/field-atlas/round-1/mathematics.md",
+          "sha256": "cb2ef9d35ce68496bd2001271669cf0ec4b05f13c9adebd962ca815e1a013b83"
+        },
+        {
+          "domain": "ai-mathematics",
+          "path": "docs/field-atlas/round-1/ai-mathematics.md",
+          "sha256": "dca5335096b633ce3ca988e978aaeda3fe8c29977ba411b6aed5168f34f7c360"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "status": "complete",
+      "frozenAt": "2026-11-25T06:56:36.783699+00:00",
+      "decision": "Admit the revised selected corpus for final integrated review. Actual source-depth, formula, source-pairing and counterexample repairs supersede first-pass gaps; research proof certification remains explicitly limited.",
+      "reports": [
+        {
+          "domain": "electrostatics",
+          "path": "docs/field-atlas/round-2/electrostatics.md",
+          "sha256": "b98c2fbca7b3515951323f2a59a045ccd54a1b489fc735067dbd1cce7ea4645d"
+        },
+        {
+          "domain": "magnetism",
+          "path": "docs/field-atlas/round-2/magnetism.md",
+          "sha256": "262fa80a44816d145756246f28822147fcda70748637d38b7c23348461002678"
+        },
+        {
+          "domain": "gravity",
+          "path": "docs/field-atlas/round-2/gravity.md",
+          "sha256": "320d8489352db6648d1b3e26948ff61b7dc9b00d2cddce5132e3cac7db9ba9c3"
+        },
+        {
+          "domain": "frequency",
+          "path": "docs/field-atlas/round-2/frequency.md",
+          "sha256": "375c63daca204c7e2a55574a8eff03fa9e28cbbc8661892f368735b87b8e4659"
+        },
+        {
+          "domain": "mathematics",
+          "path": "docs/field-atlas/round-2/mathematics.md",
+          "sha256": "356508cfb69500e06e318b7c769b4ce22d44f496e311ecb019f060d70b89287e"
+        },
+        {
+          "domain": "ai-mathematics",
+          "path": "docs/field-atlas/round-2/ai-mathematics.md",
+          "sha256": "fd99d1189673fd7ad0e2ac205baa12781e0fa69a6a146b25e43d28312a25266b"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "status": "complete",
+      "frozenAt": "2026-11-25T07:30:37.031164+00:00",
+      "decision": "All six specialists accept the bounded corrected corpus; final mechanical export checks confirm the repaired source classification, strict-score visibility, Word page size and hyperlink transfers. No further research round is required.",
+      "reports": [
+        {
+          "domain": "electrostatics",
+          "path": "docs/field-atlas/round-3/electrostatics.md",
+          "sha256": "61f28574d7ddc0c54bef92c9a4886cf75d3f257ea27a943dc6112c1da41c146b"
+        },
+        {
+          "domain": "magnetism",
+          "path": "docs/field-atlas/round-3/magnetism.md",
+          "sha256": "127f6e94905ee29d2bd698af95af3a10b62051baddff5344e98ed0fd02faedbe"
+        },
+        {
+          "domain": "gravity",
+          "path": "docs/field-atlas/round-3/gravity.md",
+          "sha256": "94c6bc9dcf8abd9b746a67109a89fa86317c518a6aa31d3b86ec434c31772fc2"
+        },
+        {
+          "domain": "frequency",
+          "path": "docs/field-atlas/round-3/frequency.md",
+          "sha256": "aacca4a381c9c77742d5931c7e2716c31488d8042e5f27dc351d2a963e3bbd28"
+        },
+        {
+          "domain": "mathematics",
+          "path": "docs/field-atlas/round-3/mathematics.md",
+          "sha256": "70df90601a6a482369084c213c4a28ed2376ecc2aae33d0d64b4457722d0da94"
+        },
+        {
+          "domain": "ai-mathematics",
+          "path": "docs/field-atlas/round-3/ai-mathematics.md",
+          "sha256": "065c6cc34d054e26372151732e2e56e5c62a8690dd6f66733f4ba74ca76576e6"
+        }
+      ]
+    }
+  ]
+}

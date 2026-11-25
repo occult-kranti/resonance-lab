@@ -1,0 +1,86 @@
+{
+  "schema": "field-study-constants/v1",
+  "sourceURL": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+  "sourceSHA256": "77fb90e66c40db3e6eb16630bc9c88e4c7c8beddbe5e71be406f2f26e3f67e67",
+  "sourceVersion": "2022 CODATA adjustment, actual static table inspected 2026-11-25",
+  "constants": [
+    {
+      "symbol": "k_B",
+      "name": "Boltzmann constant",
+      "valueText": "1.380 649 e-23",
+      "standardUncertaintyText": "(exact)",
+      "unit": "J K^-1",
+      "exactBySIDefinition": true,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    },
+    {
+      "symbol": "e",
+      "name": "elementary charge",
+      "valueText": "1.602 176 634 e-19",
+      "standardUncertaintyText": "(exact)",
+      "unit": "C",
+      "exactBySIDefinition": true,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    },
+    {
+      "symbol": "alpha",
+      "name": "fine-structure constant",
+      "valueText": "7.297 352 5643 e-3",
+      "standardUncertaintyText": "0.000 000 0011 e-3",
+      "unit": "dimensionless",
+      "exactBySIDefinition": false,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    },
+    {
+      "symbol": "G",
+      "name": "Newtonian constant of gravitation",
+      "valueText": "6.674 30 e-11",
+      "standardUncertaintyText": "0.000 15 e-11",
+      "unit": "m^3 kg^-1 s^-2",
+      "exactBySIDefinition": false,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    },
+    {
+      "symbol": "h",
+      "name": "Planck constant",
+      "valueText": "6.626 070 15 e-34",
+      "standardUncertaintyText": "(exact)",
+      "unit": "J Hz^-1",
+      "exactBySIDefinition": true,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    },
+    {
+      "symbol": "c",
+      "name": "speed of light in vacuum",
+      "valueText": "299 792 458",
+      "standardUncertaintyText": "(exact)",
+      "unit": "m s^-1",
+      "exactBySIDefinition": true,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    },
+    {
+      "symbol": "epsilon_0",
+      "name": "vacuum electric permittivity",
+      "valueText": "8.854 187 8188 e-12",
+      "standardUncertaintyText": "0.000 000 0014 e-12",
+      "unit": "F m^-1",
+      "exactBySIDefinition": false,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    },
+    {
+      "symbol": "mu_0",
+      "name": "vacuum mag. permeability",
+      "valueText": "1.256 637 061 27 e-6",
+      "standardUncertaintyText": "0.000 000 000 20 e-6",
+      "unit": "N A^-2",
+      "exactBySIDefinition": false,
+      "scope": "Value and standard uncertainty from the 2022 CODATA adjustment; defined constants differ from the uncertainty of their physical realization."
+    }
+  ],
+  "cautions": [
+    "The 2019 SI fixes c, h, e and k_B by definition. Measured realizations still have uncertainty.",
+    "mu_0 and epsilon_0 are not exact defined constants in the revised SI. A textbook value 4*pi*1e-7 is an approximation for mu_0.",
+    "Angular frequency in radians per second and ordinary frequency in hertz need the explicit factor 2*pi.",
+    "G is measured, not fixed exactly; quoted digits and standard uncertainty remain attached."
+  ]
+}

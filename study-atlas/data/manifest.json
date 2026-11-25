@@ -1,0 +1,69 @@
+{
+  "schema": "field-study-manifest/v1",
+  "cutoff": "2026-11-25",
+  "counts": {
+    "topic": 471,
+    "formula": 237,
+    "source": 117,
+    "paper": 43,
+    "question": 34,
+    "claim": 20
+  },
+  "domains": [
+    {
+      "id": "electrostatics",
+      "title": "Electrostatics: fields, matter, interfaces and inference",
+      "topics": 78,
+      "formulas": 42,
+      "sources": 16,
+      "papers": 7,
+      "claims": 0
+    },
+    {
+      "id": "magnetism",
+      "title": "Magnetism: fields, quantum matter and controlled inference",
+      "topics": 90,
+      "formulas": 43,
+      "sources": 20,
+      "papers": 9,
+      "claims": 0
+    },
+    {
+      "id": "gravity",
+      "title": "Gravity: from force laws to spacetime and open quantum questions",
+      "topics": 77,
+      "formulas": 45,
+      "sources": 20,
+      "papers": 12,
+      "claims": 0
+    },
+    {
+      "id": "frequency",
+      "title": "Frequency, spectra and time metrology",
+      "topics": 73,
+      "formulas": 42,
+      "sources": 18,
+      "papers": 6,
+      "claims": 0
+    },
+    {
+      "id": "mathematics",
+      "title": "Mathematics: foundations, structures and frontiers",
+      "topics": 108,
+      "formulas": 61,
+      "sources": 18,
+      "papers": 4,
+      "claims": 0
+    },
+    {
+      "id": "ai-mathematics",
+      "title": "AI-assisted mathematics: claims and proof evidence",
+      "topics": 45,
+      "formulas": 4,
+      "sources": 25,
+      "papers": 5,
+      "claims": 20
+    }
+  ],
+  "atlasSHA256": "4aae7d54a88ad29868aa665f31c7ec83adffadab63b0dff23b77784fd13e8368"
+}

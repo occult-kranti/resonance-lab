@@ -1,7 +1,7 @@
 {
   "schema": "resonance-dashboard-release/v1",
   "version": "0.7.0",
-  "generatedAt": "2026-11-17T06:43:46.135Z",
+  "generatedAt": "2026-11-25T07:32:08.146425+00:00",
   "releaseGeneratedAt": "2026-11-17T05:16:17.540Z",
   "manifest": {
     "path": "/patent-library/manifest.json",
@@ -18,7 +18,7 @@
   "evidenceBoundary": "Source-bound models and proposed experiments remain distinct from measurements. This dated snapshot is not a live repository-health check, hardware validation or filing-compliance certification. Historical originals remain preserved and unconverted.",
   "links": [
     {
-      "label": "Sphere research · six studies",
+      "label": "Sphere research \u00b7 six studies",
       "path": "/#sphere"
     },
     {
@@ -26,11 +26,15 @@
       "path": "/sphere-lab/sphere-study-bundle.zip"
     },
     {
+      "label": "Physics and mathematics study atlas",
+      "path": "/study-atlas/"
+    },
+    {
       "label": "Diagram & experiment library",
       "path": "/patent-library/index.html"
     },
     {
-      "label": "Example notation · coupled coils",
+      "label": "Example notation \u00b7 coupled coils",
       "path": "/patent-library/nt-coupled-coils-notation.html"
     },
     {

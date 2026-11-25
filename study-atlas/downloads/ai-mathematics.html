@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>AI-assisted mathematics: claims and proof evidence</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../book.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AI-assisted mathematics: claims and proof
+evidence</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ai-assisted-mathematics-claims-and-proof-evidence"
+id="toc-ai-assisted-mathematics-claims-and-proof-evidence">AI-assisted
+mathematics: claims and proof evidence</a>
+<ul>
+<li><a href="#si-constants-and-uncertainty"
+id="toc-si-constants-and-uncertainty">SI constants and
+uncertainty</a></li>
+</ul></li>
+<li><a
+href="#ai-assisted-mathematics-what-was-solved-by-whom-and-how-do-we-know"
+id="toc-ai-assisted-mathematics-what-was-solved-by-whom-and-how-do-we-know">AI-assisted
+mathematics: what was solved, by whom, and how do we know?</a>
+<ul>
+<li><a href="#a-practical-ladder-of-evidence"
+id="toc-a-practical-ladder-of-evidence">1. A practical ladder of
+evidence</a></li>
+<li><a href="#how-the-corpus-was-discovered-and-read"
+id="toc-how-the-corpus-was-discovered-and-read">2. How the corpus was
+discovered and read</a></li>
+<li><a href="#competition-performance-and-answer-benchmarks"
+id="toc-competition-performance-and-answer-benchmarks">3. Competition
+performance and answer benchmarks</a></li>
+<li><a href="#a-humanai-research-collaboration-with-an-exact-target"
+id="toc-a-humanai-research-collaboration-with-an-exact-target">4. A
+human–AI research collaboration with an exact target</a></li>
+<li><a
+href="#a-model-origin-proof-with-human-checking-gaussian-learning-curves"
+id="toc-a-model-origin-proof-with-human-checking-gaussian-learning-curves">5.
+A model-origin proof with human checking: Gaussian learning
+curves</a></li>
+<li><a href="#first-proof-corrections-and-controlled-comparison"
+id="toc-first-proof-corrections-and-controlled-comparison">6. First
+Proof: corrections and controlled comparison</a></li>
+<li><a
+href="#the-large-2026-releases-artifacts-hypotheses-and-withdrawal-history"
+id="toc-the-large-2026-releases-artifacts-hypotheses-and-withdrawal-history">7.
+The large 2026 releases: artifacts, hypotheses and withdrawal
+history</a></li>
+<li><a href="#the-cutoff-boundary-and-a-reproducible-next-step"
+id="toc-the-cutoff-boundary-and-a-reproducible-next-step">8. The cutoff
+boundary and a reproducible next step</a></li>
+<li><a href="#twenty-case-audit-ledger"
+id="toc-twenty-case-audit-ledger">9. Twenty-case audit ledger</a></li>
+<li><a href="#reading-and-citation-register"
+id="toc-reading-and-citation-register">10. Reading and citation
+register</a></li>
+<li><a href="#complete-formula-and-theorem-register"
+id="toc-complete-formula-and-theorem-register">Complete formula and
+theorem register</a></li>
+<li><a href="#research-paper-evidence-cards"
+id="toc-research-paper-evidence-cards">Research paper evidence
+cards</a></li>
+<li><a href="#ai-assisted-mathematics-claim-ledger"
+id="toc-ai-assisted-mathematics-claim-ledger">AI-assisted mathematics
+claim ledger</a></li>
+<li><a href="#nested-coverage-map" id="toc-nested-coverage-map">Nested
+coverage map</a></li>
+<li><a href="#glossary" id="toc-glossary">Glossary</a></li>
+<li><a href="#open-questions-and-missing-evidence"
+id="toc-open-questions-and-missing-evidence">Open questions and missing
+evidence</a></li>
+<li><a href="#source-records-and-reading-depth"
+id="toc-source-records-and-reading-depth">Source records and reading
+depth</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ai-assisted-mathematics-claims-and-proof-evidence">AI-assisted
+mathematics: claims and proof evidence</h1>
+<p>Research cutoff: 25 November 2026.</p>
+<p>This is a source-linked selected corpus, with reviewed, mapped and
+lead coverage states. Formulas retain their hypotheses, units and
+derivations. Contemporary software-agent reviews do not constitute human
+peer review or physical validation. Statements about AI mathematics
+distinguish an announced result, a benchmark answer, independent
+mathematical review and formal verification.</p>
+<p>Symbol dictionaries preserve the exact locally scoped identifiers. A
+TeX identifier beginning with a backslash names the rendered symbol in
+the equation. The same letter can represent different quantities in
+different records; units, object type and the accompanying definition
+determine its meaning. Legacy TeX fraction/font syntax is translated
+only for equivalent document typesetting; original formula strings
+remain in the JSON corpus.</p>
+<h2 id="si-constants-and-uncertainty">SI constants and uncertainty</h2>
+<p>Source: <a
+href="https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
+class="uri">https://physics.nist.gov/cuu/Constants/Table/allascii.txt</a>;
+2022 CODATA adjustment, actual static table inspected 2026-11-25.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Quantity</th>
+<th>Value</th>
+<th>Standard uncertainty</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>k_B</td>
+<td>Boltzmann constant</td>
+<td>1.380 649 e-23</td>
+<td>(exact)</td>
+<td>J K^-1</td>
+</tr>
+<tr class="even">
+<td>e</td>
+<td>elementary charge</td>
+<td>1.602 176 634 e-19</td>
+<td>(exact)</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>alpha</td>
+<td>fine-structure constant</td>
+<td>7.297 352 5643 e-3</td>
+<td>0.000 000 0011 e-3</td>
+<td>dimensionless</td>
+</tr>
+<tr class="even">
+<td>G</td>
+<td>Newtonian constant of gravitation</td>
+<td>6.674 30 e-11</td>
+<td>0.000 15 e-11</td>
+<td>m^3 kg^-1 s^-2</td>
+</tr>
+<tr class="odd">
+<td>h</td>
+<td>Planck constant</td>
+<td>6.626 070 15 e-34</td>
+<td>(exact)</td>
+<td>J Hz^-1</td>
+</tr>
+<tr class="even">
+<td>c</td>
+<td>speed of light in vacuum</td>
+<td>299 792 458</td>
+<td>(exact)</td>
+<td>m s^-1</td>
+</tr>
+<tr class="odd">
+<td>epsilon_0</td>
+<td>vacuum electric permittivity</td>
+<td>8.854 187 8188 e-12</td>
+<td>0.000 000 0014 e-12</td>
+<td>F m^-1</td>
+</tr>
+<tr class="even">
+<td>mu_0</td>
+<td>vacuum mag. permeability</td>
+<td>1.256 637 061 27 e-6</td>
+<td>0.000 000 000 20 e-6</td>
+<td>N A^-2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The 2019 SI fixes c, h, e and k_B by definition. Measured
+realizations still have uncertainty.</li>
+<li>mu_0 and epsilon_0 are not exact defined constants in the revised
+SI. A textbook value 4<em>pi</em>1e-7 is an approximation for mu_0.</li>
+<li>Angular frequency in radians per second and ordinary frequency in
+hertz need the explicit factor 2*pi.</li>
+<li>G is measured, not fixed exactly; quoted digits and standard
+uncertainty remain attached.</li>
+</ul>
+<p>The notation e-12 means multiplication by ten to the power minus
+twelve. A standard uncertainty is not automatically a confidence
+interval. Defined exact constants differ from uncertain instrument
+realizations.</p>
+<h1
+id="ai-assisted-mathematics-what-was-solved-by-whom-and-how-do-we-know">AI-assisted
+mathematics: what was solved, by whom, and how do we know?</h1>
+<p><strong>Selected evidence through 25 November 2026.</strong> This
+chapter audits mathematical claims rather than declaring a winner
+between companies. It distinguishes a documented claim from an accepted
+theorem, a checked answer from a proof, and a proof artifact from a
+successful trusted-kernel execution. The accompanying dataset contains
+twenty case records, forty-five topic nodes, four explicit
+mathematical/scoring entries, twenty-five sources and five selected
+paper reviews. The raw source captures are private; public citations,
+reading records and SHA-256 byte identities make the evidence trail
+inspectable.</p>
+<p>The most useful finding is that “AI solved a mathematics problem”
+describes several different events. A model can solve a competition
+exercise whose answer is known, reproduce an unpublished human proof in
+a controlled benchmark, suggest the decisive idea to a researcher,
+generate a new argument subsequently checked by its authors, or release
+a manuscript whose correctness remains disputed. Those events can all
+matter. They should not share one unqualified status. A benchmark
+percentage is also not the fraction of mathematics that a model
+understands.</p>
+<p>This is a substantial selected corpus, not a census of every
+mathematical result between 2024 and the cutoff. In particular, it does
+not independently certify the many major results asserted in OpenAI’s
+August and October 2026 releases. The available originals and
+verification instructions support a detailed claim audit, but a complete
+proof review would require far more work, and in several places the
+scholarly community itself records unfinished review. Very recent
+November 24 claims are included as pending announcements, with that
+limitation visible in each record.</p>
+<h2 id="a-practical-ladder-of-evidence">1. A practical ladder of
+evidence</h2>
+<p>Begin by freezing the exact statement. “A convergence problem” could
+ask whether objective values approach the optimum, whether iterates
+approach the set of minimizers, whether the iterates approach one
+particular minimizer, or whether numerical computations are stable under
+perturbation. Those are different propositions. Likewise, “monotone
+learning” depends on a particular estimator, probability distribution,
+loss direction and expectation. A positive result for a correctly
+specified Gaussian family is not a guarantee that all training benefits
+from more data.</p>
+<p>Next establish the earlier status. Was the problem open to the
+mathematical community, solved but unpublished by its benchmark
+contributor, an exercise in a book, or a rediscovery of prior
+literature? A company’s announcement is useful evidence of what the
+company claims, but it does not settle that historical question. A new
+proof of an old theorem and a new theorem are different contributions.
+First Proof’s third batch is unusually explicit: its ten research-origin
+questions already had human solutions, no longer than twelve pages,
+which were withheld during evaluation. Solving them tests research
+reasoning without automatically adding ten new theorems to the world.
+[ai-src-first-third; ai-src-third-pdf]</p>
+<p>Then separate contribution from validation. Did humans formulate the
+target, provide the key lemma, select the best of many attempts, repair
+an incorrect step, ask the model to expand a proof, or only check and
+transcribe an otherwise model-origin argument? Those roles need not
+diminish a result. They determine what the result says about autonomous
+capability and what credit is due. The original papers often provide a
+more precise account than a headline. The Nesterov paper describes heavy
+assistance and a researcher-led discovery process; the learning-curve
+paper explicitly claims the models supplied proof strategies without
+human scaffolding. Both statements belong in the ledger, with their
+source and evidential limits.</p>
+<p>Verification is another axis. Here the useful categories are: an
+unreviewed output; a provider’s confidence assessment; an author-checked
+manuscript; an expert-reviewed submission; a published formalization
+source; and an independently executed proof certificate under a stated
+kernel and assumptions. These are not automatically a strict ranking of
+usefulness. A human referee may identify that a machine-checked
+statement is not the intended theorem; a kernel may detect a subtle
+logical error missed by a referee. Strong acceptance uses complementary
+checks.</p>
+<p>Finally record revisions. A withdrawn attempt must not keep
+circulating as a solved problem just because its original announcement
+remains discoverable. Conversely, one error in a large release does not
+invalidate every other paper in it. The appropriate unit is the claim
+and its dependency graph, with an exact version. A successful
+trusted-kernel run would establish a proposition relative to its
+assumptions; merely publishing a Lean source file does not establish
+that such a run occurred or that its proposition matches a historical
+problem. This chapter records OpenAI’s explicit correction to First
+Proof Problem 2 and its October 7 withdrawal notice for three related
+manuscripts. It does not generalize those notices into an unsupported
+judgment about all model-generated mathematics. [ai-src-oa-firstproof;
+ai-src-math-history]</p>
+<h2 id="how-the-corpus-was-discovered-and-read">2. How the corpus was
+discovered and read</h2>
+<p>The review used actual HTTP retrieval of official OpenAI, Anthropic
+and DeepMind sitemaps; original linked PDFs; the First Proof project and
+report; arXiv records; public GitHub source files; Epoch AI’s benchmark
+descriptions; and an independent scholarly guest essay hosted on Terence
+Tao’s blog. Each successful included source has the exact captured-byte
+hash and retrieval time. PDFs were converted to text for
+selected-section inspection. Downloading a long paper is not represented
+as reading its entire proof.</p>
+<p>The main original mathematical readings were Jang and Ryu’s Nesterov
+manuscript, version 2 dated 19 January 2026; Sellke and Yin’s
+learning-curve manuscript; the first-batch First Proof statements and
+commentary; selected sections of OpenAI’s submissions; selected
+abstract/statement portions of the ten-advances manuscript, updated 6
+August 2026; and the 46-page independent First Proof third-batch report,
+version 1 dated 14 October 2026. Reading depths are narrower than those
+paper titles suggest. They are listed in the data rather than hidden
+behind a generic “reviewed” label.</p>
+<p>Two limitations matter immediately. The direct Erdős problem 183
+database page returned HTTP 403. Its current independent status
+therefore remains an inaccessible lead, even though OpenAI’s manuscript
+and an actual Lean file explicitly identify the problem. Second, a
+moving repository is not an immutable publication. The captured README
+and history give a reproducible snapshot, but their counters need not be
+synchronized: a README can report 375 families while the next day’s
+history describes newly added families numbered 379 and 380. That is a
+reason to retain both versions and dates, not to manufacture a single
+consistent count.</p>
+<p>The chapter uses paraphrases, not invented quotations. Independent
+evidence is described precisely: a company-linked manuscript is a
+primary mathematical source, but not an independent replication of the
+same collaboration; an organizer’s statement validates what its
+benchmark asks, but does not necessarily validate a later submission by
+a different internal model; and a scholarly committee’s general concerns
+are not a verdict on an individual proof.</p>
+<h2 id="competition-performance-and-answer-benchmarks">3. Competition
+performance and answer benchmarks</h2>
+<p>The 2024 AlphaProof/AlphaGeometry2 announcement is a useful baseline.
+DeepMind reported four of the six IMO problems solved, corresponding to
+28 of 42 points and a silver-medal-level result. It used formal-search
+and a dedicated geometry system. Humans translated statements into
+formal language, and some searches took substantially longer than the
+time allotted to contestants. The comparison is technologically
+important, but it is not a claim that the system participated under
+identical contest conditions or proved a new theorem. This atlas
+inspected the announcement’s methods and result description, not every
+certificate. [ai-src-alpha-proof]</p>
+<p>OpenAI’s February 2026 article retrospectively reports its 2025
+gold-medal-level IMO result as 35/42. That statement is retained as
+contextual company reporting, not promoted into an independently checked
+case. The original marking packet was not obtained in this bounded
+review. This demonstrates a general rule: where a source only mentions
+an earlier result, the record should not pretend that the earlier
+experiment’s full protocol has been inspected.</p>
+<p>FrontierMath has a different design. The original abstract describes
+expert-written unpublished questions, with automatically checkable
+answers, intended to make contamination harder. The current Epoch
+overview distinguishes tiered tasks, an Open Problems track with
+computationally verifiable answers, and a formal Erdős track. These
+distinctions matter because a score on Tiers 1–3 does not establish
+performance on Tier 4 or on a complete-proof task. An original
+abstract’s old state-of-the-art percentage also cannot be imported as
+the current November 2026 result. [ai-src-arxiv-frontier;
+ai-src-epoch-frontier]</p>
+<p>The GPT-5.2 article reports 40.3% on FrontierMath Tiers 1–3 with a
+Python tool and maximum reasoning effort. That is a provider-reported
+evaluation under a named setup. It is not a count of new theorems.
+Python may legitimately help with symbolic, numerical or combinatorial
+work, but the tool budget must accompany the score. Without the exact
+question set, checking protocol, sampling policy and independent rerun,
+the number should remain an attributed result, not a universal measure
+of mathematical ability. [ai-src-oa-52]</p>
+<p>AIME, although not assigned a score in this selected ledger,
+illustrates the same distinction. The American Invitational Mathematics
+Examination supplies short-answer competition questions. Reusing it to
+evaluate a model is a benchmark exercise. Even a perfect score does not
+show that the system has resolved an open conjecture or written a
+referee-ready research paper. No AIME score was added here simply to
+increase the number of successes.</p>
+<h2 id="a-humanai-research-collaboration-with-an-exact-target">4. A
+human–AI research collaboration with an exact target</h2>
+<p>The Nesterov case is stronger evidence of research contribution than
+a short-answer score, but it is not accurately described as a model
+independently producing a finished proof. The original question concerns
+a convex, differentiable, L-smooth function on a finite-dimensional real
+space, with a minimizer that exists, and the particular
+accelerated-gradient schedules in the paper. The familiar accelerated
+objective-value estimate does not by itself establish that the iterates
+settle at one minimizer. [ai-src-ryu-paper]</p>
+<p>The paper studies both critical-damping continuous dynamics and
+discrete Nesterov acceleration. Its continuous equation is a
+second-order differential equation with a damping coefficient
+proportional to 1/t. The selected proof begins with a nonnegative energy
+combining objective error and a squared position/velocity term.
+Convexity makes its derivative nonpositive. That is an important
+ingredient, but bounded energy alone is not a complete point-convergence
+argument; the later cluster-point reasoning and discrete transfer must
+also be checked. This review inspected the initial energy lemma and
+theorem statement, not every subsequent line.</p>
+<p>The provider interview contains a particularly useful attribution
+detail. GPT-5 supplied creative attempts, many flawed. A turning-point
+suggestion was incorrect as written. Ryu recognized its structural
+promise, developed it rigorously, and used further targeted prompting.
+The final manuscript is by Uijeong Jang and Ernest Ryu. That sequence
+supports “AI-assisted proof discovery with substantial human
+mathematical judgment.” It does not support deleting the human work from
+the account. [ai-src-oa-discovery]</p>
+<p>Priority is also not a one-date story. Version 2 explicitly discusses
+another group’s concurrent discrete-time proof: the later group saw an
+October 21 post about continuous-time progress, then contacted the
+authors on October 24 with a manuscript, independently of the October 24
+discrete-time post. That work reportedly also treats a Hilbert-space
+setting and FISTA. The concurrent manuscript itself remains unread here.
+The correct record preserves this qualification rather than announcing a
+unique first discovery based solely on a company case study.</p>
+<p>This case also warns against loose physical analogies. A mathematical
+“momentum” term in optimization is not a new force; point convergence is
+not the same as numerical stability of a practical implementation; and a
+finite-dimensional convex theorem does not prove that arbitrary
+deep-network training converges. The connection to the atlas’s other
+domains is methodological: precise hypotheses determine what the
+conclusion can mean.</p>
+<h2
+id="a-model-origin-proof-with-human-checking-gaussian-learning-curves">5.
+A model-origin proof with human checking: Gaussian learning curves</h2>
+<p>Sellke and Yin provide an unusually explicit assistance statement.
+They say variants of GPT-5.2 Pro derived the results without human proof
+strategies or intermediate arguments, while humans prompted extensions,
+verified and transcribed. The provider separately reports external
+subject-expert checking. Those are stronger contribution claims than
+generic “used ChatGPT” acknowledgments, but they are still
+author/provider testimony unless accompanied by an independent
+reproducible review. [ai-src-mle-paper; ai-src-oa-52]</p>
+<p>The exact first theorem concerns IID centered Gaussian observations
+with a positive-definite covariance matrix in dimension d. The
+maximum-likelihood covariance uses divisor n. Expected
+<strong>forward</strong> Kullback–Leibler divergence is independent of
+the true covariance and strictly decreases once n&gt;d+1. At or below
+that threshold, the expectation is infinite. With unknown mean as well,
+the finiteness threshold shifts. These caveats prevent the slogan “more
+data always improves a model” from swallowing the actual theorem.</p>
+<p>The one-dimensional case supplies a transparent calculation. If the
+true variance is v<em>, then n times the fitted variance divided by
+v</em> has a chi-square distribution with n degrees of freedom. The
+forward divergence between true and fitted centered Gaussians is one
+half of a logarithmic variance ratio plus its reciprocal ratio minus
+one. Taking expectations uses the digamma function and an inverse
+chi-square moment. The result is finite only for n&gt;2. The
+accompanying formula record derives the expression and independently
+recomputes E4≈0.3648185773 and E6≈0.1620860232, in dimensionless
+nats.</p>
+<p>That two-point check is a null/example test, not a substitute for the
+all-n monotonicity proof. It is still useful: reversing the KL direction
+or overlooking the inverse-moment threshold would change the answer.
+Numerical simulation at n=2 could look finite in a particular run even
+though the expectation is infinite. A finite set of ordinary
+observations cannot certify the tail behavior of the expectation.</p>
+<p>The contribution statement also records an illuminating rediscovery
+boundary. The model’s reverse-KL/general-exponential-family extension
+was later connected to a closely related textbook exercise. The paper
+does not conceal that connection. A useful research assistant can
+rediscover a result and help organize it, but novelty should be adjusted
+once prior art is located. That is a success of citation repair, not a
+reason to preserve an inflated new-theorem claim.</p>
+<h2 id="first-proof-corrections-and-controlled-comparison">6. First
+Proof: corrections and controlled comparison</h2>
+<p>The first-batch OpenAI submission is expressly titled “First Proof?”
+and contains ten attempts. The company says humans sometimes suggested
+retrying strategies, requested clarification after expert feedback,
+facilitated model-to-model checking, and selected the best of several
+attempts. These interventions are part of the experimental treatment.
+They make the sprint different from a single clean unattended model
+call. [ai-src-first-submissions; ai-src-oa-firstproof]</p>
+<p>The February 20 announcement says attempts 4, 5, 6, 9 and 10 have a
+high chance of being correct. It also explicitly changes the assessment
+of Problem 2 from likely correct to incorrect after organizer commentary
+and community analysis. The atlas records both the promising attempts
+and the correction. It does not claim that a positive baseline comment
+about GPT-5.2 automatically validates a later internal-model attempt, or
+vice versa. The model identity, submission version and review target
+must match.</p>
+<p>Third-batch First Proof offers a stronger comparative protocol. Five
+systems were evaluated in early October, with no human intervention
+during their runs, on ten researcher-origin questions with hidden human
+solutions. Thirty expert referees considered correctness, exposition and
+attribution separately. A system can obtain a mathematically correct
+result while giving a poor explanation or inadequate credit. This is why
+a single “solved” label loses essential information.
+[ai-src-first-third; ai-src-third-pdf]</p>
+<p>Under the report’s threshold of mean correctness at least 0.5, GPT-6
+Astra counts seven of ten, Anthropic’s Siege workflow on Claude Opus 5.5
+counts three, ProofCouncil counts nine, MerLean four and Humanize zero.
+The count does not mean every counted solution received unanimous
+complete approval. In particular, Siege’s three consist of two mean-1
+correctness results and one mean-0.5 result with minor gaps. Under the
+stricter alternative of requiring a mean correctness grade of exactly 1,
+Siege has two of ten; that is an additional transparent comparison, not
+the organizer’s published count. The same Table2 gives Astra five of ten
+at mean grade exactly1, versus its published seven of ten at the0.5
+threshold. These are different scoring conventions, neither an executed
+formal proof check. [ai-src-third-pdf] Five other Siege questions had no
+submission. Abstention is scored as zero, which is deliberately
+different from an assertive wrong proof.</p>
+<p>The hyperfield example is an especially informative Claude case. The
+benchmark asks whether an ordinary-looking cubic identity implication
+survives multivalued addition. The system produces a counterexample
+using an infinite cyclic projective plane. All three referees find the
+mathematics correct, but they criticize attribution to prior
+constructions by Connes–Consani and Hall. This supports a concrete
+problem-solving result while limiting any claim of first invention. A
+correct derivation and a properly credited paper are not identical
+deliverables.</p>
+<p>The conductivity-estimation example is more qualified. The formal
+statement asks a Darcy inverse-problem minimax rate for a conductivity
+in a small smooth neighborhood of a constant, from Gaussian-white-noise
+observations of a PDE solution. The selected report describes a sound
+estimator/lower-bound strategy with minor gaps, dense notation and
+missing attributions, producing the mean correctness score 0.5. The
+printed contextual discussion also refers to a one-dimensional
+motivation even though the formal question specifies d≥2. This atlas
+preserves that mismatch as a clarification need and does not silently
+merge the two problems or invent an exponent absent from the inspected
+review passage.</p>
+<p>Costs and harnesses also differ. The report lists provider bills,
+token usage and orchestration differences. A multi-agent system spending
+much more compute is not directly comparable to a cheap single prompt as
+a pure statement about one underlying network. The correct inference is
+conditional performance under the recorded system and budget, not a
+timeless ordering of providers.</p>
+<h2
+id="the-large-2026-releases-artifacts-hypotheses-and-withdrawal-history">7.
+The large 2026 releases: artifacts, hypotheses and withdrawal
+history</h2>
+<p>OpenAI’s August announcement asserts ten major advances, and its
+linked manuscript gives more precise statements. The selected ledger
+includes multicolor triangle Ramsey growth, a convex lattice-volume
+bound, arithmetic permanent lower bounds and a non-sofic group
+construction. The mathematical significance of these targets is a reason
+to scrutinize them, not a reason to treat a company release as
+confirmation. Most of their long proofs were not read here.
+[ai-src-oa-ten; ai-src-ten-paper]</p>
+<p>The Ramsey example has unusually concrete artifact evidence. The
+retrieved Lean source contains declarations for logarithmic asymptotics,
+divergence of the kth root and an Erdős183 label. The README maps result
+families to modules and specifies Lean 4.32, mathlib and Lake commands.
+Additional instructions describe Comparator checks using other tools.
+These are real inspectable artifacts, not merely a claim that “a proof
+exists somewhere.” They are also not an execution receipt from this
+atlas. [ai-src-ten-certificate; ai-src-ten-readme;
+ai-src-ten-comparator]</p>
+<p>A convincing formal audit needs more than a source file ending in a
+theorem declaration. It needs a pinned toolchain and dependencies, a
+clean build, an account of allowed axioms and placeholders, and a check
+that the formal statement expresses the intended mathematical question.
+A theorem can be formally correct but irrelevant because an assumption
+was strengthened, a definition changed, or an exceptional case removed.
+Imported axioms and theorem dependencies belong in the trust boundary.
+The reader should not confuse the small trusted kernel with the much
+larger environment that selects and translates a problem.</p>
+<p>The October collection is even more difficult to summarize honestly.
+The captured README reports 730 manuscripts in 375 families, about 42%
+top-line formalizations, and explicitly says that some unformalized
+results could have issues. It describes the manuscripts as raw research
+data rather than polished academic papers. Those counts are attributed
+snapshots. They are not 730 independently verified discoveries, and a
+family can contain companion arguments or alternative proofs.
+[ai-src-openai-math]</p>
+<p>The history records three withdrawals on October 7 after a sign error
+invalidated a construction and dependent manuscripts. It separately
+records revisions, later formalization changes and new results. This is
+precisely why the graph distinguishes “disputes,” “supported by,” and
+“unresolved.” A proof-support edge should mean that a source documents a
+claim or status; it must not visually turn every connected assertion
+into an established theorem. [ai-src-math-history]</p>
+<p>The separate ai-corpus-index.json preserves all 730 manuscript PDF
+links from the captured official catalogue, pinned to repository commit
+3344da59991ed94f9ba711217b29c1d760badfa6. Every row is unread-indexed,
+including any paper whose title resembles one of the selected cases:
+matching a title does not demonstrate identical proof content. All 730
+paths were found in a non-truncated preprints subtree. The parser
+recognized 373 family headings while the catalogue header declares 375.
+This is a parsing observation, not proof that the header is erroneous;
+two families may be unparsed, differently formatted or outside the
+selected view. Metadata breadth must not be confused with proof-review
+depth.</p>
+<p>Independent scholarly response is also bounded. The MathHelm
+committee’s November guest post, hosted by Terence Tao, says most of the
+released papers had not been human-verified and invites specific
+comments on correctness, readability, originality and connections. It
+does not declare them all wrong, and it does not certify them all right.
+The guest authorship is recorded explicitly rather than attributing
+every sentence to the host. Human understanding and literature placement
+remain separate scholarly work. [ai-src-tao-review]</p>
+<h2 id="the-cutoff-boundary-and-a-reproducible-next-step">8. The cutoff
+boundary and a reproducible next step</h2>
+<p>The November 24 history introduces strongly polynomial linear
+programming and an exact matrix-multiplication exponent of nine fourths,
+among other results. These are extraordinarily strong claims. At a
+November 25 cutoff they are also extraordinarily fresh. A strongly
+polynomial linear-programming algorithm would require a polynomial bound
+on arithmetic operations in the problem dimensions independent of
+coefficient bit magnitudes, with controlled representation requirements;
+an ordinary polynomial bit-complexity algorithm is a different claim. An
+exact matrix-multiplication exponent of nine fourths requires both sides
+of an asymptotic equality, not merely one multiplication algorithm. Only
+the history announcements were inspected for those entries, not the
+original papers. They therefore remain pending leads in the claim
+ledger, not additions to an established-theorem list.</p>
+<p>A disciplined continuation would pin each manuscript revision, read
+its complete statement and proof, locate original prior-art problem
+statements, and obtain claim-specific independent review. For formal
+artifacts, it would run the documented checks in a clean environment and
+preserve command output, theorem fingerprints and axiom dependencies.
+This chapter intentionally does not execute downloaded proof code merely
+to turn an available repository into a reassuring badge.</p>
+<p>The representative calculations here are smaller and fully bounded: a
+scalar Gaussian-risk evaluation, exact threshold counting for Siege’s
+reported grades, the two-by-two permanent, and a two-vertex Laplacian
+example. Each can expose a category error without pretending to validate
+the surrounding frontier result. The Laplacian example shows why
+positive-semidefinite order is a universal quadratic-form condition, not
+entrywise comparison. The permanent example separates an elementary
+definition from a deep complexity lower bound.</p>
+<p>The practical conclusion is a workflow rather than a league table.
+Record the question; freeze its version; separate the earlier status,
+human contribution and AI contribution; classify the checking method;
+preserve corrections; and state what remains unread. The result is a
+project tracker in which the tracked object is evidence about a
+mathematical claim. It can grow without silently promoting fresh
+announcements, benchmark scores or machine-source files into accepted
+mathematical knowledge.</p>
+<h2 id="twenty-case-audit-ledger">9. Twenty-case audit ledger</h2>
+<p>These rows preserve provider attribution, prior status and the
+checking method. The existence of a primary source is not an independent
+endorsement of its result.</p>
+<h3 id="nag">1. Nag</h3>
+<p><strong>Provider/model:</strong> OpenAI-assisted academic research /
+GPT-5/ChatGPT</p>
+<p><strong>Exact target or evaluation protocol:</strong> For convex
+L-smooth f:R^n→R with an attained minimum, establish point convergence
+x_k,y_k→x∞∈argmin f for the paper’s classical NAG parameter schedules;
+also critical-damping continuous-time convergence.</p>
+<p><strong>Claimed date:</strong> 2025-10-24</p>
+<p><strong>Earlier status:</strong> Authors describe a longstanding
+point-convergence question, distinct from already-known objective-value
+O(k^-2) convergence.</p>
+<p><strong>AI and human contribution:</strong> Ryu reports repeated
+prompting, rejection of faulty suggestions and a structurally useful but
+incorrect-as-written proposal; Jang/Ryu developed and wrote the
+proof.</p>
+<p><strong>Verification status:</strong> Author-checked preprint,
+arXivv2 January19 2026; full proof not independently verified here.</p>
+<p><strong>Independent evidence actually obtained:</strong> Paper
+Section1.3 reports a concurrent discrete-time proof prompted by the
+October21 public post, with additional Hilbert/FISTA results. No
+separate concurrent paper was read.</p>
+<p><strong>Limits:</strong> Do not turn human-directed collaboration
+into autonomous solving, or mathematical point convergence into
+universal algorithm stability.</p>
+<p>Sources: ai-src-oa-discovery, ai-src-ryu-paper.</p>
+<h3 id="mle">2. Mle</h3>
+<p><strong>Provider/model:</strong> OpenAI-assisted academic research /
+GPT-5.2 Pro variants</p>
+<p><strong>Exact target or evaluation protocol:</strong> For IID
+N(0,Σ<em>) samples in dimensiond, Σ</em>&gt;0, prove expected forward KL
+risk of covariance MLE strictly decreases for n&gt;d+1, and is infinite
+for n≤d+1; paper extends to unknown mean and other families.</p>
+<p><strong>Claimed date:</strong> 2025-12-11</p>
+<p><strong>Earlier status:</strong> Paper traces the correctly specified
+Gaussian question to2019/2022 learning-curve work; reverse-KL extension
+partly reconnects to a known textbook exercise.</p>
+<p><strong>AI and human contribution:</strong> Authors say model
+supplied proof strategies without human intermediate scaffolding; humans
+prompted extensions, checked and transcribed; model later located
+relevant prior art.</p>
+<p><strong>Verification status:</strong> Human-author verification and
+provider-reported external review; no journal verdict or machine proof
+run established.</p>
+<p><strong>Independent evidence actually obtained:</strong> Original
+Sellke/Yin manuscript inspected for exact theorem and assistance
+statement, but it is the same collaboration rather than an independent
+replication.</p>
+<p><strong>Limits:</strong> More data is not universally beneficial
+under misspecification; forward/reverse KL and finite-risk thresholds
+differ.</p>
+<p>Sources: ai-src-oa-52, ai-src-mle-paper.</p>
+<h3 id="fp2">3. Fp2</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unreleased internal
+reasoning model</p>
+<p><strong>Exact target or evaluation protocol:</strong> Let F be a
+non-archimedean local field with ring of integers o; let N_r be the
+upper-triangular unipotent subgroup of GL_r(F). Fix a nontrivial
+additive character ψ of conductor o and a generic irreducible admissible
+representation Π of GL_(n+1)(F) in W(Π,ψ^(-1)). Must there exist one W
+in that Whittaker model such that, for every generic irreducible
+admissible π of GL_n(F) in W(π,ψ), with conductor idealq, generatorQ of
+q^(-1), and u_Q=I_(n+1)+Q E_(n,n+1), some V∈W(π,ψ) makes ∫_(N_n_n(F))
+W(diag(g,1)u_Q)V(g)|det g|^(s−1/2)dg finite and nonzero for every
+s∈C?</p>
+<p><strong>Claimed date:</strong> 2026-02-20</p>
+<p><strong>Earlier status:</strong> A hidden-solution research benchmark
+question, not evidence that all relevant theory was globally
+unsolved.</p>
+<p><strong>AI and human contribution:</strong> Internal model
+generated/typeset attempt; humans selected attempts and requested
+clarification based on feedback.</p>
+<p><strong>Verification status:</strong> Provider explicitly corrected
+its initial likely-correct assessment to incorrect.</p>
+<p><strong>Independent evidence actually obtained:</strong> OpenAI cites
+organizer commentary and community analysis; selected organizer text
+inspected, not an independent re-derivation of this attempt.</p>
+<p><strong>Limits:</strong> The order of quantifiers matters: one W is
+selected before varying π; V may depend on π. The
+representation-theoretic setup is reproduced from organizer Problem2.
+This record audits an explicitly corrected attempt, not a solved
+theorem.</p>
+<p>Sources: ai-src-oa-firstproof, ai-src-first-submissions,
+ai-src-first-comments.</p>
+<h3 id="fp4">4. Fp4</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unreleased internal
+model</p>
+<p><strong>Exact target or evaluation protocol:</strong> For monic
+real-rooted degree-n polynomials p,q with the organizer’s finite free
+additive convolution, is 1/Φ_n(p⊞<em>n q)≥1/Φ_n(p)+1/Φ_n(q), with
+Φ_n(p)=Σ</em>{i≤n}Σ_{j≠i}(1/(λ_i−λ_j))² and Φ=∞ at repeated roots?</p>
+<p><strong>Claimed date:</strong> 2026-02-20</p>
+<p><strong>Earlier status:</strong> Research-level hidden-solution
+challenge; prior human solutions existed.</p>
+<p><strong>AI and human contribution:</strong> Model-generated proof
+attempt, human best-of selection and clarification.</p>
+<p><strong>Verification status:</strong> Company reports high chance of
+correctness, not a machine-checked theorem verdict.</p>
+<p><strong>Independent evidence actually obtained:</strong> Organizer
+provides exact statement; its early GPT-5.2 baseline comments do not
+grade this later internal-model attempt.</p>
+<p><strong>Limits:</strong> Polynomial normalization and repeated-root
+conventions matter; complete proof not independently audited. The Φ
+definition is transcribed as the source’s double sum of squared
+reciprocals.</p>
+<p>Sources: ai-src-oa-firstproof, ai-src-first-submissions,
+ai-src-first-comments.</p>
+<h3 id="fp6">5. Fp6</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unreleased internal
+model</p>
+<p><strong>Exact target or evaluation protocol:</strong> Does a
+universal c&gt;0 exist such that every finite graph and 0&lt;ε&lt;1
+admit S⊂V with |S|≥cε|V| and L_S≼εL, where L_S retains only edges
+insideS?</p>
+<p><strong>Claimed date:</strong> 2026-02-20</p>
+<p><strong>Earlier status:</strong> Hidden human-solved spectral graph
+question in First Proof.</p>
+<p><strong>AI and human contribution:</strong> Generated proof with
+limited human supervision and expert-feedback clarification.</p>
+<p><strong>Verification status:</strong> Provider provisional
+high-confidence result.</p>
+<p><strong>Independent evidence actually obtained:</strong> Organizer
+statement inspected; no independent verification of this exact internal
+attempt obtained.</p>
+<p><strong>Limits:</strong> A sampled graph experiment cannot prove the
+universal existence claim; PSD means positive-semidefinite order.</p>
+<p>Sources: ai-src-oa-firstproof, ai-src-first-submissions,
+ai-src-first-comments.</p>
+<h3 id="fp9">6. Fp9</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unreleased internal
+model</p>
+<p><strong>Exact target or evaluation protocol:</strong> For n≥5 and
+Zariski-generic A<sup>(α)∈R</sup>(3×4), find n-independent-degree
+polynomial relations recognizing exactly the coordinatewise tensor
+scalings λ_αβγδ=u_αv_βw_γx_δ of determinant tensors, with the
+organizer’s nonzero-pattern restriction.</p>
+<p><strong>Claimed date:</strong> 2026-02-20</p>
+<p><strong>Earlier status:</strong> Hidden-solution algebraic research
+challenge.</p>
+<p><strong>AI and human contribution:</strong> Generated candidate
+argument; humans selected and formatted outputs.</p>
+<p><strong>Verification status:</strong> Provider high-chance
+assessment; proof not independently checked here.</p>
+<p><strong>Independent evidence actually obtained:</strong> Exact
+organizer problem and internal submitted section9 retrieved.</p>
+<p><strong>Limits:</strong> Genericity, exceptional index pattern and
+if-and-only-if direction must survive formalization; omitted zero cases
+can change the question.</p>
+<p>Sources: ai-src-oa-firstproof, ai-src-first-submissions,
+ai-src-first-comments.</p>
+<h3 id="fp10">7. Fp10</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unreleased internal
+model</p>
+<p><strong>Exact target or evaluation protocol:</strong> Explain a
+matrix-free preconditioned conjugate-gradient method for the stated
+nr×nr kernelized CP-ALS normal system with missing tensor entries,
+selection matrixS, Kronecker products and RKHS kernelK.</p>
+<p><strong>Claimed date:</strong> 2026-02-20</p>
+<p><strong>Earlier status:</strong> Research-method benchmark with
+existing human solution.</p>
+<p><strong>AI and human contribution:</strong> Model-generated
+linear-algebra derivation and proof attempt, selected under human
+supervision.</p>
+<p><strong>Verification status:</strong> Provider high chance of
+correctness; implementation/runtime advantage not independently
+reproduced.</p>
+<p><strong>Independent evidence actually obtained:</strong> Organizer
+system equation and requested preconditioner/matvec explanation
+inspected.</p>
+<p><strong>Limits:</strong> Positive-semidefinite versus definite
+operators, regularization and solver convergence hypotheses cannot be
+inferred from an equation label.</p>
+<p>Sources: ai-src-oa-firstproof, ai-src-first-submissions,
+ai-src-first-comments.</p>
+<h3 id="ramsey">8. Ramsey</h3>
+<p><strong>Provider/model:</strong> OpenAI / Internal Astra</p>
+<p><strong>Exact target or evaluation protocol:</strong> For k-colour
+triangle Ramsey numberR_k(3), claim logR_k(3)=Θ(k logk), hence
+R_k(3)^(1/k)→∞; reported as resolving Erdős183.</p>
+<p><strong>Claimed date:</strong> 2026-08-01</p>
+<p><strong>Earlier status:</strong> Longstanding superexponential-growth
+question according to announcement/manuscript; direct current database
+access blocked.</p>
+<p><strong>AI and human contribution:</strong> Provider says model
+generated argument; humans/model prepared manuscript and Lean
+certificate.</p>
+<p><strong>Verification status:</strong> Provider-reported
+formalization; manuscript and selected actual Lean declarations
+inspected. No Lean kernel, dependency-axiom audit or Comparator
+execution was performed; proof correctness is not independently
+certified.</p>
+<p><strong>Independent evidence actually obtained:</strong> No
+claim-specific independent correctness verdict located; code existence
+and MathHelm’s broad response are different evidence types.</p>
+<p><strong>Limits:</strong> Do not label accepted solely from provider
+formalization claim; exact theorem/imports/axioms need pinned build and
+comparison.</p>
+<p>Sources: ai-src-oa-ten, ai-src-ten-paper, ai-src-ten-readme,
+ai-src-ten-certificate, ai-src-erdos183.</p>
+<h3 id="ehrhart">9. Ehrhart</h3>
+<p><strong>Provider/model:</strong> OpenAI / Internal Astra</p>
+<p><strong>Exact target or evaluation protocol:</strong> Claim
+vol(K)≤(n+1)^n/n! for convex bodies K⊂R^n whose centroid is the unique
+interior lattice point, in the stated lattice-volume convention.</p>
+<p><strong>Claimed date:</strong> 2026-08-01</p>
+<p><strong>Earlier status:</strong> Ehrhart volume conjecture according
+to authors.</p>
+<p><strong>AI and human contribution:</strong> Generated proof,
+human-assisted manuscript preparation, claimed Lean formalization.</p>
+<p><strong>Verification status:</strong> Announcement and manuscript
+abstract read; proof module/build not audited.</p>
+<p><strong>Independent evidence actually obtained:</strong> No
+independent claim-specific proof review captured.</p>
+<p><strong>Limits:</strong> Convex-body hypotheses and lattice
+normalization are essential; graph node is a documented claim, not
+certified resolution.</p>
+<p>Sources: ai-src-oa-ten, ai-src-ten-paper, ai-src-ten-readme.</p>
+<h3 id="permanent">10. Permanent</h3>
+<p><strong>Provider/model:</strong> OpenAI / Internal Astra</p>
+<p><strong>Exact target or evaluation protocol:</strong> Claim
+division-free arithmetic circuit lower boundΩ(n²loglogn) and
+arithmetic-formula leaf lower boundΩ(n⁴/logn) for the n×n permanent
+under the manuscript’s algebraic model.</p>
+<p><strong>Claimed date:</strong> 2026-08-01</p>
+<p><strong>Earlier status:</strong> Claims improvement of arithmetic
+lower bounds; not itself a P≠NP theorem.</p>
+<p><strong>AI and human contribution:</strong> Provider attributes
+argument to model and preparation/formalization to model plus
+humans.</p>
+<p><strong>Verification status:</strong> Selected abstract/overview
+only; no proof or certificate execution.</p>
+<p><strong>Independent evidence actually obtained:</strong> No
+independent verdict located for this exact lower bound.</p>
+<p><strong>Limits:</strong> Arithmetic circuits, formulas, field and
+allowed operations differ from Boolean computational complexity.</p>
+<p>Sources: ai-src-oa-ten, ai-src-ten-paper, ai-src-ten-readme.</p>
+<h3 id="nonsofic">11. Nonsofic</h3>
+<p><strong>Provider/model:</strong> OpenAI / Internal Astra</p>
+<p><strong>Exact target or evaluation protocol:</strong> Claim an
+explicit countable group which is not sofic, disproving that every
+countable group admits the required finite permutation
+approximations.</p>
+<p><strong>Claimed date:</strong> 2026-08-01</p>
+<p><strong>Earlier status:</strong> Major group-theoretic question as
+identified by authors.</p>
+<p><strong>AI and human contribution:</strong> Model-generated
+construction; manuscript/certificate prepared with human
+involvement.</p>
+<p><strong>Verification status:</strong> Selected primary claim
+inspected; no complete construction or proof audit.</p>
+<p><strong>Independent evidence actually obtained:</strong> Independent
+correctness remains unresolved in this selected corpus.</p>
+<p><strong>Limits:</strong> Existence of a Lean filename is not evidence
+the mathematical statement matches the historical question.</p>
+<p>Sources: ai-src-oa-ten, ai-src-ten-paper, ai-src-ten-readme.</p>
+<h3 id="withdrawal">12. Withdrawal</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unnamed internal model</p>
+<p><strong>Exact target or evaluation protocol:</strong> Three
+manuscripts on split abelian eightfold Weil classes, Kuga–Satake
+correspondences for K3 surfaces, and rational Hodge for products of K3
+surfaces were withdrawn after a sign-error-dependent construction
+failed.</p>
+<p><strong>Claimed date:</strong> 2026-10-07</p>
+<p><strong>Earlier status:</strong> October6 release had presented
+results; history now withdraws these specific manuscripts.</p>
+<p><strong>AI and human contribution:</strong> Model-origin outputs
+entered a large collection; authors maintain corrections/dependency
+notices.</p>
+<p><strong>Verification status:</strong> Withdrawn by issuer on
+October7: these three specific manuscripts are not accepted proofs;
+withdrawal does not apply automatically to other Hodge-related
+claims.</p>
+<p><strong>Independent evidence actually obtained:</strong> Direct
+revision-history notice captured; root mathematical error not
+independently reconstructed.</p>
+<p><strong>Limits:</strong> Do not extend these withdrawals to all
+Hodge-related papers; later CM-abelian-variety formalization is a
+different claim.</p>
+<p>Sources: ai-src-math-history, ai-src-openai-math.</p>
+<h3 id="recent-lp">13. Recent Lp</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unnamed internal model</p>
+<p><strong>Exact target or evaluation protocol:</strong> November24
+history claims a deterministic strongly polynomial algorithm for general
+linear programming, answering Smale’s ninth problem.</p>
+<p><strong>Claimed date:</strong> 2026-11-24</p>
+<p><strong>Earlier status:</strong> Major open complexity question
+according to issuer.</p>
+<p><strong>AI and human contribution:</strong> A newly released
+model-generated manuscript family; no detailed contribution audit
+yet.</p>
+<p><strong>Verification status:</strong> Unverified source claim: newly
+announced; original manuscript unread, independent correctness/novelty
+checks pending.</p>
+<p><strong>Independent evidence actually obtained:</strong> Only history
+announcement retrieved, not original proof or independent review.</p>
+<p><strong>Limits:</strong> Lead-level claim deliberately excluded from
+verified-theorem count; one-day freshness increases review
+uncertainty.</p>
+<p>Sources: ai-src-math-history.</p>
+<h3 id="recent-mm">14. Recent Mm</h3>
+<p><strong>Provider/model:</strong> OpenAI / Unnamed internal model</p>
+<p><strong>Exact target or evaluation protocol:</strong> November24
+history lists “The matrix multiplication exponent is nine fourths,”
+i.e. claims ω=9/4 in the intended arithmetic asymptotic convention.</p>
+<p><strong>Claimed date:</strong> 2026-11-24</p>
+<p><strong>Earlier status:</strong> Claims an exact exponent, a stronger
+statement than an upper bound; original theorem hypotheses not read.</p>
+<p><strong>AI and human contribution:</strong> Issuer lists new
+model-origin tensor-geometry manuscripts.</p>
+<p><strong>Verification status:</strong> Unverified source claim: newly
+announced; original manuscript unread, independent correctness/novelty
+checks pending.</p>
+<p><strong>Independent evidence actually obtained:</strong> No original
+manuscript or independent result captured.</p>
+<p><strong>Limits:</strong> Exact equality in a history title must not
+be silently weakened to a proven algorithmic bound or promoted to
+established fact.</p>
+<p>Sources: ai-src-math-history.</p>
+<h3 id="claude-batch">15. Claude Batch</h3>
+<p><strong>Provider/model:</strong> Anthropic / Siege harness on Claude
+Opus5.5</p>
+<p><strong>Exact target or evaluation protocol:</strong> First Proof
+Batch3: solve ten researcher-origin questions with hidden pre-existing
+human solutions under the specified one-shot/no-human-input
+evaluation.</p>
+<p><strong>Claimed date:</strong> 2026-10-14</p>
+<p><strong>Earlier status:</strong> Unpublished human solutions existed;
+this is research-proof evaluation, not ten newly open theorem
+resolutions.</p>
+<p><strong>AI and human contribution:</strong> Anthropic provided a
+workflow; its performance reflects harness, model, budget and abstention
+policy.</p>
+<p><strong>Verification status:</strong> Independent expert grading:
+published threshold count3/10 at mean correctness≥0.5; two submissions
+have mean1 and one has mean0.5 with minor gaps. No submissions
+for3,4,8,9,10. This is not three strict/unanimous proof acceptances.</p>
+<p><strong>Independent evidence actually obtained:</strong> First
+Proof46-page report, Tables2–5 and detailed reviews inspected.</p>
+<p><strong>Limits:</strong> Some accepted-threshold submissions have
+gaps; exposition/attribution separate; no kernel proofs or
+representative distribution guarantee.</p>
+<p>Sources: ai-src-first-third, ai-src-third-pdf,
+ai-src-third-press.</p>
+<h3 id="claude-hyperfield">16. Claude Hyperfield</h3>
+<p><strong>Provider/model:</strong> Anthropic / Siege/Claude Opus5.5</p>
+<p><strong>Exact target or evaluation protocol:</strong> For a
+hyperfieldH and 0∈x⊞y⊞z, must 0 belong to x³⊞y³⊞z³⊞(−xyz)⊞(−xyz)⊞(−xyz)?
+Batch3P5 asks this universal implication; submitted answer provides a
+counterexample.</p>
+<p><strong>Claimed date:</strong> 2026-10-14</p>
+<p><strong>Earlier status:</strong> Human had already solved benchmark
+problem; reviewers note alternative construction combines prior
+Connes–Consani and Hall work.</p>
+<p><strong>AI and human contribution:</strong> System reconstructed a
+counterexample using an infinite cyclic projective-plane hyperfield.</p>
+<p><strong>Verification status:</strong> All three referees find
+mathematics correct; attribution judged deficient, mean attribution0;
+exposition−.33.</p>
+<p><strong>Independent evidence actually obtained:</strong>
+ReportSections3.5/5.5 inspected, including criticism that reproduced
+prior constructions need explicit citations.</p>
+<p><strong>Limits:</strong> A correct counterexample can still be a
+rediscovery with weak attribution; this does not establish independent
+first discovery by Claude.</p>
+<p>Sources: ai-src-third-pdf.</p>
+<h3 id="claude-darcy">17. Claude Darcy</h3>
+<p><strong>Provider/model:</strong> Anthropic / Siege/Claude Opus5.5</p>
+<p><strong>Exact target or evaluation protocol:</strong> Batch3P2: for
+div(f∇u)=1 on unit ballD⊂R^d,d≥2, zero boundary data, Yn=u_f+n^(-1/2)W
+and f in a small C^α-neighbourhood of1, determine minimax L²
+conductivity-estimation rate up to logarithms.</p>
+<p><strong>Claimed date:</strong> 2026-10-14</p>
+<p><strong>Earlier status:</strong> Hidden human-solved research
+question; printed context includes an inconsistent d=1 discussion, which
+must not overwrite the formal d≥2 statement.</p>
+<p><strong>AI and human contribution:</strong> Plug-in kernel estimation
+and Assouad-type lower bound, without human intervention in the recorded
+run.</p>
+<p><strong>Verification status:</strong> Referees grade correctness.50:
+sound strategy with minor proof gaps; not an unconditional fully audited
+theorem.</p>
+<p><strong>Independent evidence actually obtained:</strong>
+ReportSections3.2/5.2 andTable2 read; reviewers flag missing attribution
+and multivariate notation corrections.</p>
+<p><strong>Limits:</strong> Exact rate formula not transcribed here
+because the reviewed passage does not provide it; problem statement and
+qualified review are recorded, not a fabricated exponent.</p>
+<p>Sources: ai-src-third-pdf.</p>
+<h3 id="astra-batch">18. Astra Batch</h3>
+<p><strong>Provider/model:</strong> OpenAI / GPT-6 Astra</p>
+<p><strong>Exact target or evaluation protocol:</strong> First Proof
+Batch3 ten hidden-human-solution problems under a one-shot24-hour,
+no-human-input protocol.</p>
+<p><strong>Claimed date:</strong> 2026-10-14</p>
+<p><strong>Earlier status:</strong> Already human-solved unpublished
+benchmark problems.</p>
+<p><strong>AI and human contribution:</strong> Public base-model
+prompting rather than a separate human-provided proof outline; system
+and budget are documented.</p>
+<p><strong>Verification status:</strong> Independent First Proof Table2
+reports7/10 at mean correctness≥0.5. The stricter alternative of
+requiring mean grade exactly1 counts5/10. The published7 therefore
+includes partial/qualified judgments; neither count certifies
+machine-verified new theorems.</p>
+<p><strong>Independent evidence actually obtained:</strong> ReportTable2
+and detailed reviews include qualified computational checks; attribution
+adequate for only4/10.</p>
+<p><strong>Limits:</strong> Seven includes threshold/qualified
+judgments; do not compare directly to benchmark percentages with
+different scoring, sampling or compute.</p>
+<p>Sources: ai-src-first-third, ai-src-third-pdf,
+ai-src-third-press.</p>
+<h3 id="frontier52">19. Frontier52</h3>
+<p><strong>Provider/model:</strong> OpenAI / GPT-5.2 Thinking</p>
+<p><strong>Exact target or evaluation protocol:</strong> Answer
+FrontierMath Tiers1–3 expert-designed problems under provider
+maximum-effort reasoning with a Python tool.</p>
+<p><strong>Claimed date:</strong> 2025-12-11</p>
+<p><strong>Earlier status:</strong> Benchmark authored with known
+checkable answers; new/unpublished questions do not necessarily ask
+globally open theorems.</p>
+<p><strong>AI and human contribution:</strong> Model plus tool
+computation under a declared evaluation setup.</p>
+<p><strong>Verification status:</strong> Provider reports40.3%; no
+independent rerun captured.</p>
+<p><strong>Independent evidence actually obtained:</strong> Original
+benchmark abstract/current Epoch track distinctions inspected, but they
+do not independently reproduce this model score.</p>
+<p><strong>Limits:</strong> A score is not a list of new theorems;
+track, tools, version and denominator must accompany it.</p>
+<p>Sources: ai-src-oa-52, ai-src-arxiv-frontier,
+ai-src-epoch-frontier.</p>
+<h3 id="imo24">20. Imo24</h3>
+<p><strong>Provider/model:</strong> Google DeepMind comparison /
+AlphaProof and AlphaGeometry2</p>
+<p><strong>Exact target or evaluation protocol:</strong> Solve the six
+IMO2024 competition problems, with Lean-based formal reasoning on
+translated statements and a dedicated geometry system.</p>
+<p><strong>Claimed date:</strong> 2024-07-25</p>
+<p><strong>Earlier status:</strong> Competition problems with official
+solutions/marking, not an open-problem research theorem collection.</p>
+<p><strong>AI and human contribution:</strong> Formal-search and
+geometry systems; humans translated statements, and some computation
+took much longer than contestant time.</p>
+<p><strong>Verification status:</strong> Provider reports4/6 and28/42
+silver-medal-level; formal system claims are source-reported, not rerun
+here.</p>
+<p><strong>Independent evidence actually obtained:</strong> Official
+technical announcement inspected, not all proof certificates or original
+problem texts.</p>
+<p><strong>Limits:</strong> Do not conflate medal-level scoring with
+actual contest participation or equal time/translation conditions.</p>
+<p>Sources: ai-src-alpha-proof.</p>
+<h2 id="reading-and-citation-register">10. Reading and citation
+register</h2>
+<ul>
+<li><strong>ai-src-oa-discovery</strong> — How GPT-5 helped
+mathematician Ernest Ryu solve a 40-year-old open problem. <a
+href="https://openai.com/index/gpt-5-mathematical-discovery/"
+class="uri">https://openai.com/index/gpt-5-mathematical-discovery/</a>
+Version: Captured current page; exact byte identity retained. Read:
+Dated November 24 2025 article; problem, turning point, attribution and
+verification. Limit: Provider case study; research status and exact
+theorem must be checked in the paper.</li>
+<li><strong>ai-src-ryu-paper</strong> — Point convergence of Nesterov’s
+accelerated gradient method: an AI-assisted proof. <a
+href="https://arxiv.org/pdf/2510.23513"
+class="uri">https://arxiv.org/pdf/2510.23513</a> Version:
+arXiv:2510.23513v2, 19 January 2026. Read: Abstract; introduction
+1.1–1.4; continuous-time Lemma 2.1 and Theorem 2.2; point-convergence
+statement. Limit: Selected proof steps read, not the complete discrete
+proof; no independent formal certificate run.</li>
+<li><strong>ai-src-oa-52</strong> — Advancing science and math with
+GPT-5.2. <a
+href="https://openai.com/index/gpt-5-2-for-science-and-math/"
+class="uri">https://openai.com/index/gpt-5-2-for-science-and-math/</a>
+Version: Captured current page; exact byte identity retained. Read:
+December 11 2025 benchmark protocol and learning-curve case study.
+Limit: Company evaluation and contribution narrative; not an independent
+theorem verdict.</li>
+<li><strong>ai-src-mle-paper</strong> — On Learning-Curve Monotonicity
+for Maximum Likelihood Estimators. <a
+href="https://cdn.openai.com/pdf/a3f3f76c-98bd-47a5-888f-c52c932a8942/colt-monotonicity-problem.pdf"
+class="uri">https://cdn.openai.com/pdf/a3f3f76c-98bd-47a5-888f-c52c932a8942/colt-monotonicity-problem.pdf</a>
+Version: Unversioned provider-hosted manuscript linked December11 2025.
+Read: Abstract; introduction; Statement on AI Assistance;
+Theorems1.1–1.2; scalar specialization of Section3. Limit: No journal
+acceptance or Lean execution established; attribution is author
+testimony. PDF is unversioned, date anchored to official release.</li>
+<li><strong>ai-src-oa-firstproof</strong> — Our First Proof submissions.
+<a href="https://openai.com/index/first-proof-submissions/"
+class="uri">https://openai.com/index/first-proof-submissions/</a>
+Version: Captured current page; exact byte identity retained. Read:
+February20 2026 article in full. Limit: A company’s provisional
+correctness estimate, not official grading of each internal-model
+proof.</li>
+<li><strong>ai-src-first-submissions</strong> — First Proof?. <a
+href="https://cdn.openai.com/pdf/26177a73-3b75-4828-8c91-e8f1cf27aaa0/oai_first_proof.pdf"
+class="uri">https://cdn.openai.com/pdf/26177a73-3b75-4828-8c91-e8f1cf27aaa0/oai_first_proof.pdf</a>
+Version: February20 2026 PDF. Read: February20 title/abstract; contents;
+problem statements1,2,4,6,9,10; prompting appendix headings. Limit:
+Attempt does not mean proof; no full proof audit, no kernel run, some
+claims incorrect.</li>
+<li><strong>ai-src-first-comments</strong> — First Proof: solutions and
+comments. <a
+href="https://1stproof.org/documents/FirstProofSolutionsComments.pdf"
+class="uri">https://1stproof.org/documents/FirstProofSolutionsComments.pdf</a>
+Version: Organizer-hosted current PDF. Read: Problem
+statements2,4,5,6,9,10; Sections4.1–4.6 and4.10 assessment context.
+Limit: Do not transfer a baseline verdict to a different model’s
+submission.</li>
+<li><strong>ai-src-firstproof</strong> — First Proof Project mission and
+chronology. <a href="https://www.1stproof.org/"
+class="uri">https://www.1stproof.org/</a> Version: Captured current
+page; exact byte identity retained. Read: Mission; three batch
+chronology; ethics/funding statement. Limit: Organizational independence
+is contextual evidence, not a proof of every submitted theorem.</li>
+<li><strong>ai-src-first-third</strong> — Third Batch benchmark
+protocol. <a href="https://1stproof.org/third-batch.html"
+class="uri">https://1stproof.org/third-batch.html</a> Version: Captured
+current page; exact byte identity retained. Read: Benchmark design;
+tested systems; links to reports/code/logs. Limit: Research-level
+benchmark does not mean ten globally open problems.</li>
+<li><strong>ai-src-third-pdf</strong> — First Proof Third Batch. <a
+href="https://hexagonmath.org/pdf/2610.00244v1"
+class="uri">https://hexagonmath.org/pdf/2610.00244v1</a> Version:
+Hexagon2610.00244v1; October14 2026;46pages. Read: Abstract; Section1;
+Sections3.2/3.5 problem statements; Section4 system descriptions;
+Tables2–5; Sections5.1/5.2/5.5/5.7–5.9. Limit: Only selected report
+sections read. Human expert grading is not machine kernel verification
+or a population-wide capability estimate.</li>
+<li><strong>ai-src-third-press</strong> — Frontier AI Systems Solve up
+to9/10 Problems in First Proof Benchmark. <a
+href="https://1stproof.org/third-batch-press-release.html"
+class="uri">https://1stproof.org/third-batch-press-release.html</a>
+Version: Captured current page; exact byte identity retained. Read:
+October14 2026 key findings and methods. Limit: Use report tables for
+provider-specific scores, not headline alone.</li>
+<li><strong>ai-src-oa-ten</strong> — Ten advances in mathematics and
+theoretical computer science. <a
+href="https://openai.com/index/ten-advances-in-mathematics/"
+class="uri">https://openai.com/index/ten-advances-in-mathematics/</a>
+Version: Captured current page; exact byte identity retained. Read:
+August1 2026 announcement and result list. Limit: Announcement is not
+independent confirmation of novelty, correctness or statement
+fidelity.</li>
+<li><strong>ai-src-ten-paper</strong> — Ten Advances in Mathematics and
+Theoretical Computer Science. <a
+href="https://cdn.openai.com/pdf/ten-proofs-oai.pdf"
+class="uri">https://cdn.openai.com/pdf/ten-proofs-oai.pdf</a> Version:
+Updated August6 2026; original version separately linked. Read:
+Abstract; contents/version note; headline results5,7,8,9; chapter9
+theorem scope. Limit: Most of the long manuscript’s proofs were not
+read; results remain attributed claims in this atlas.</li>
+<li><strong>ai-src-ten-readme</strong> — Ten-proofs Lean4 artifact
+README. <a
+href="https://raw.githubusercontent.com/openai/ten-proofs/main/README.md"
+class="uri">https://raw.githubusercontent.com/openai/ten-proofs/main/README.md</a>
+Version: Captured current page; exact byte identity retained. Read:
+Result-to-module mapping; build instructions; independent-check
+instructions. Limit: Repository existence/build instructions are not an
+executed verification receipt.</li>
+<li><strong>ai-src-ten-certificate</strong> —
+MulticolorTriangleRamsey.lean. <a
+href="https://raw.githubusercontent.com/openai/ten-proofs/main/MulticolorTriangleRamsey.lean"
+class="uri">https://raw.githubusercontent.com/openai/ten-proofs/main/MulticolorTriangleRamsey.lean</a>
+Version: Retrieved main-branch bytes, content hash pinned. Read: Final
+theorem triangleRamseyNumber_log_isTheta; divergentRamseyRoot;
+erdos_183; explicit lower-bound declaration. Limit: Only selected source
+declarations inspected; imports, axioms, trusted kernel and comparator
+were not executed.</li>
+<li><strong>ai-src-ten-comparator</strong> — Comparator challenge
+checking instructions. <a
+href="https://raw.githubusercontent.com/openai/ten-proofs/main/ComparatorChallenges/README.md"
+class="uri">https://raw.githubusercontent.com/openai/ten-proofs/main/ComparatorChallenges/README.md</a>
+Version: Captured current page; exact byte identity retained. Read:
+Entire short README. Limit: Instructions do not establish that this
+atlas performed those checks.</li>
+<li><strong>ai-src-oa-progress</strong> — Sharing AI progress in
+mathematics. <a
+href="https://openai.com/index/sharing-ai-progress-in-mathematics/"
+class="uri">https://openai.com/index/sharing-ai-progress-in-mathematics/</a>
+Version: Captured current page; exact byte identity retained. Read:
+October6 release and October15 update. Limit: Funding, advisory
+consultation and quantity do not independently validate proofs.</li>
+<li><strong>ai-src-openai-math</strong> — OpenAI mathematics manuscript
+collection README. <a
+href="https://raw.githubusercontent.com/openai/math/main/README.md"
+class="uri">https://raw.githubusercontent.com/openai/math/main/README.md</a>
+Version: Captured current page; exact byte identity retained. Read:
+Entire current README; counts; verification caveats; provenance and
+citations. Limit: Moving repository snapshot; counts are not counts of
+verified new theorems and may lag history entries.</li>
+<li><strong>ai-src-math-history</strong> — OpenAI math collection
+revision history. <a
+href="https://raw.githubusercontent.com/openai/math/main/history.md"
+class="uri">https://raw.githubusercontent.com/openai/math/main/history.md</a>
+Version: Current history retrieved November25 2026. Read: October7
+withdrawals/fixes; October26 additions; November23–24 additions. Limit:
+Author-maintained history is not an independent proof review; November
+claims were not inspected at manuscript level.</li>
+<li><strong>ai-src-tao-review</strong> — Introducing MathHelm: A Place
+to discuss AI-generated papers. <a
+href="https://terrytao.wordpress.com/2026/11/13/introducing-mathhelm-a-place-to-discuss-ai-generated-papers/"
+class="uri">https://terrytao.wordpress.com/2026/11/13/introducing-mathhelm-a-place-to-discuss-ai-generated-papers/</a>
+Version: Captured current page; exact byte identity retained. Read:
+November13 2026 guest essay before comments/sidebar. Limit: Broad
+scholarly response, not a verdict on each paper; guest authorship must
+not be attributed solely to Tao.</li>
+<li><strong>ai-src-arxiv-frontier</strong> — FrontierMath: A Benchmark
+for Evaluating Advanced Mathematical Reasoning in AI. <a
+href="https://arxiv.org/abs/2411.04872"
+class="uri">https://arxiv.org/abs/2411.04872</a> Version:
+arXiv2411.04872v7; December23 2025. Read: Abstract; submission/version
+history. Limit: Abstract/version metadata only; no problem-set audit or
+independent rerun.</li>
+<li><strong>ai-src-epoch-frontier</strong> — FrontierMath benchmark
+program. <a href="https://epoch.ai/frontiermath"
+class="uri">https://epoch.ai/frontiermath</a> Version: Captured current
+page; exact byte identity retained. Read: Definitions of Tiers1–4, Open
+Problems, and FrontierMath Erdős. Limit: Current overview without dated
+results table; no exhaustive problem evaluation.</li>
+<li><strong>ai-src-alpha-proof</strong> — AI solves IMO problems at
+silver-medal level. <a
+href="https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/"
+class="uri">https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/</a>
+Version: Captured current page; exact byte identity retained. Read:
+July25 2024 problem results, human translation and time conditions.
+Limit: Provider report; not a new research theorem, and not the same
+time conditions as contestants.</li>
+<li><strong>ai-src-anthropic-science</strong> — Claude-shaped science.
+<a href="https://www.anthropic.com/research/claude-shaped-science"
+class="uri">https://www.anthropic.com/research/claude-shaped-science</a>
+Version: Captured current page; exact byte identity retained. Read:
+BootLoops workflow and guest-author account of research assistance.
+Limit: Not entered as a verified new mathematical theorem; source role
+differs from Anthropic’s independent First Proof participation.</li>
+<li><strong>ai-src-erdos183</strong> — Erdős problem183 direct database
+page. <a href="https://www.erdosproblems.com/183"
+class="uri">https://www.erdosproblems.com/183</a> Version: Direct
+retrieval unsuccessful. Read: Not read: HTTP403. Limit: HTTP403; cannot
+independently certify current problem status from this page.</li>
+</ul>
+<h2 id="complete-formula-and-theorem-register">Complete formula and
+theorem register</h2>
+<h3 id="scalar-gaussian-forward-kl-risk-ai-formula-kl">Scalar Gaussian
+forward-KL risk — <code>ai-formula-kl</code></h3>
+<p>Status: theorem.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mo stretchy="true" form="prefix">[</mo><mi>ψ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mo>log</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mi>/</mi><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mi>n</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="true" form="postfix">)</mo></mrow><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>,</mo><mspace width="0.222em"></mspace><mi>n</mi><mo>&gt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">
+E_n=\frac12[\psi(n/2)-\log(n/2)+n/(n-2)-1],\ n&gt;2
+</annotation></semantics></math></p>
+<p>The expected predictive log-loss penalty for estimating an unknown
+Gaussian variance has a finite closed form only above its inverse-moment
+threshold.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Unit / convention</th>
+<th>Object type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>n</code></td>
+<td>IID sample count</td>
+<td>dimensionless</td>
+<td>integer</td>
+</tr>
+<tr class="even">
+<td><code>ψ</code></td>
+<td>digamma, derivative of log Gamma</td>
+<td>dimensionless</td>
+<td>function</td>
+</tr>
+<tr class="odd">
+<td><code>E_n</code></td>
+<td>expected forward Kullback–Leibler divergence in nats</td>
+<td>dimensionless</td>
+<td>scalar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditions and domain</strong></p>
+<ul>
+<li>True observations IID N(0,v<em>),v</em>&gt;0; mean known.</li>
+<li>MLE uses divisor n; forward direction true distribution to fitted
+distribution; n&gt;2.</li>
+</ul>
+<p><strong>Derivation or proof guide</strong></p>
+<ol type="1">
+<li>Write X=n vhat/v* as chi-square(n).</li>
+<li>Use KL=.5[log(vhat/v<em>)+v</em>/vhat−1].</li>
+<li>E logX=ψ(n/2)+log2 and E(1/X)=1/(n−2).</li>
+</ol>
+<p><strong>Worked example</strong></p>
+<p>Inputs: {“n”: [4, 6]}</p>
+<ol type="1">
+<li>At4, ψ(2)=1−EulerGamma.</li>
+<li>At6, ψ(3)=1.5−EulerGamma.</li>
+</ol>
+<p>Result: E4≈0.3648185773; E6≈0.1620860232.; units: dimensionless
+mathematical convention</p>
+<p><strong>Limits and counterchecks</strong></p>
+<ul>
+<li>n≤2 gives infinite forward risk.</li>
+<li>E_n→0 as n→∞ under correct specification.</li>
+</ul>
+<p><strong>Common mistakes</strong></p>
+<ul>
+<li>Reverse KL is a different expectation.</li>
+<li>A two-point calculation illustrates but does not prove all-n
+monotonicity.</li>
+</ul>
+<p>Source records: <code>ai-src-mle-paper</code>.</p>
+<h3 id="finite-benchmark-scoring-convention-ai-formula-score">Finite
+benchmark scoring convention — <code>ai-formula-score</code></h3>
+<p>Status: established-model.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">t</mi></mrow></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>10</mn></munderover><mn>𝟏</mn><mrow><mo stretchy="true" form="prefix">(</mo><msub><mover><mi>C</mi><mo accent="true">‾</mo></mover><mi>j</mi></msub><mo>≥</mo><mn>0.5</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">
+N_{\mathrm{correct}}=\sum_{j=1}^{10}{\mathbf{1}}(\bar C_j\ge0.5)
+</annotation></semantics></math></p>
+<p>The reported count applies a threshold to averaged referee scores,
+not a trusted-kernel decision.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Unit / convention</th>
+<th>Object type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Cbar_j</code></td>
+<td>mean correctness grade for submissionj</td>
+<td>dimensionless</td>
+<td>scalar</td>
+</tr>
+<tr class="even">
+<td><code>j</code></td>
+<td>problem index</td>
+<td>dimensionless</td>
+<td>index</td>
+</tr>
+<tr class="odd">
+<td><code>1</code></td>
+<td>indicator of a condition</td>
+<td>dimensionless</td>
+<td>function</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditions and domain</strong></p>
+<ul>
+<li>Use First ProofBatch3 rubric and ten tasks.</li>
+<li>Missing submissions countzero; threshold.5.</li>
+</ul>
+<p><strong>Derivation or proof guide</strong></p>
+<ol type="1">
+<li>Read each mean grade inTable2.</li>
+<li>Apply≥.5 and sum indicators.</li>
+</ol>
+<p><strong>Worked example</strong></p>
+<p>Inputs: {“Siege”: [1, 0.5, 0, 0, 1, 0, 0, 0, 0, 0]}</p>
+<ol type="1">
+<li>Three values meet threshold.</li>
+<li>Two are1 and one is.5.</li>
+</ol>
+<p>Result: 3/10 under the published threshold.; units: dimensionless
+mathematical convention</p>
+<p><strong>Limits and counterchecks</strong></p>
+<ul>
+<li>All abstentions producezero.</li>
+<li>A score.5 is counted despite incomplete confidence.</li>
+</ul>
+<p><strong>Common mistakes</strong></p>
+<ul>
+<li>Do not read3/10 as three fully machine-certified proofs.</li>
+<li>These tasks are not a random sample of all mathematics.</li>
+<li>Under the stricter mean-grade-equals1 convention, Siege has2/10;
+that alternate count is not the report’s published total.</li>
+</ul>
+<p>Source records: <code>ai-src-third-pdf</code>.</p>
+<h3 id="permanent-definition-ai-formula-permanent">Permanent definition
+— <code>ai-formula-permanent</code></h3>
+<p>Status: theorem.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>perm</mo><mrow><mo stretchy="true" form="prefix">(</mo><mi>A</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munder><mo>∑</mo><mrow><mi>σ</mi><mo>∈</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></munder><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>a</mi><mrow><mi>i</mi><mo>,</mo><mi>σ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>i</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msub></mrow><annotation encoding="application/x-tex">
+\operatorname{perm}(A)=\sum_{\sigma\in S_n}\prod_{i=1}^n a_{i,\sigma(i)}
+</annotation></semantics></math></p>
+<p>Sum one product per permutation, without determinant signs.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Unit / convention</th>
+<th>Object type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>A</code></td>
+<td>square matrix over a commutative field</td>
+<td>algebraic convention</td>
+<td>matrix</td>
+</tr>
+<tr class="even">
+<td><code>S_n</code></td>
+<td>permutations of n indices</td>
+<td>dimensionless</td>
+<td>set</td>
+</tr>
+<tr class="odd">
+<td><code>a_ij</code></td>
+<td>matrix entry</td>
+<td>algebraic convention</td>
+<td>scalar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditions and domain</strong></p>
+<ul>
+<li>Square n×n matrix; a commutative coefficient field.</li>
+</ul>
+<p><strong>Derivation or proof guide</strong></p>
+<ol type="1">
+<li>Each permutation chooses one entry from every row and column.</li>
+<li>All chosen products are added with coefficient+1.</li>
+</ol>
+<p><strong>Worked example</strong></p>
+<p>Inputs: {“A”: [[1, 2], [3, 4]]}</p>
+<ol type="1">
+<li>Identity permutation contributes4.</li>
+<li>Swap contributes6.</li>
+</ol>
+<p>Result: perm(A)=10, whereas det(A)=−2.; units: dimensionless
+mathematical convention</p>
+<p><strong>Limits and counterchecks</strong></p>
+<ul>
+<li>For1×1, permanent equals its entry.</li>
+<li>Diagonal matrices give the product of diagonal entries.</li>
+</ul>
+<p><strong>Common mistakes</strong></p>
+<ul>
+<li>Definition does not establish any claimed circuit lower bound.</li>
+<li>Arithmetic model and coefficient field matter for complexity.</li>
+</ul>
+<p>Source records: <code>ai-src-ten-paper</code>.</p>
+<h3 id="ε-light-set-definition-ai-formula-light">ε-light set definition
+— <code>ai-formula-light</code></h3>
+<p>Status: theorem.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mi>S</mi></msub><mo>≼</mo><mi>ε</mi><mi>L</mi><mo>⇔</mo><msup><mi>z</mi><mi>⊤</mi></msup><mrow><mo stretchy="true" form="prefix">(</mo><mi>ε</mi><mi>L</mi><mo>−</mo><msub><mi>L</mi><mi>S</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><mi>z</mi><mo>≥</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>∀</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">
+L_S\preceq\varepsilon L\iff z^\top(\varepsilon L-L_S)z\ge0\ \forall z
+</annotation></semantics></math></p>
+<p>Every quadratic energy of induced edges is bounded by ε times the
+original graph energy.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Unit / convention</th>
+<th>Object type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>L</code></td>
+<td>graph Laplacian</td>
+<td>dimensionless</td>
+<td>matrix</td>
+</tr>
+<tr class="even">
+<td><code>L_S</code></td>
+<td>Laplacian retaining only edges withinS</td>
+<td>dimensionless</td>
+<td>matrix</td>
+</tr>
+<tr class="odd">
+<td><code>ε</code></td>
+<td>comparison parameter in(0,1)</td>
+<td>dimensionless</td>
+<td>scalar</td>
+</tr>
+<tr class="even">
+<td><code>z</code></td>
+<td>real vertex potential vector</td>
+<td>dimensionless</td>
+<td>vector</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditions and domain</strong></p>
+<ul>
+<li>Finite undirected graph and compatible nonnegative edge
+weights.</li>
+<li>PSD order refers to all real vectors, not entrywise
+inequalities.</li>
+</ul>
+<p><strong>Derivation or proof guide</strong></p>
+<ol type="1">
+<li>Laplacian energy is sum over edges of w_uv(z_u−z_v)².</li>
+<li>Subtract induced-edge energy from ε times total.</li>
+</ol>
+<p><strong>Worked example</strong></p>
+<p>Inputs: {“graph”: “one edge between2vertices”, “ε”: 0.5, “S”: “one
+vertex”}</p>
+<ol type="1">
+<li>Induced graph has no edges, soL_S=0.</li>
+<li>εL is PSD.</li>
+</ol>
+<p>Result: SingletonS is ε-light; both vertices are not forε&lt;1.;
+units: dimensionless mathematical convention</p>
+<p><strong>Limits and counterchecks</strong></p>
+<ul>
+<li>EmptyS always passes.</li>
+<li>Atε=1, allV passes.</li>
+</ul>
+<p><strong>Common mistakes</strong></p>
+<ul>
+<li>Checking one test vector is insufficient.</li>
+<li>This example does not prove the universal large-subset theorem.</li>
+</ul>
+<p>Source records: <code>ai-src-first-comments</code>.</p>
+<h2 id="research-paper-evidence-cards">Research paper evidence
+cards</h2>
+<h3 id="ai-paper-ryu">ai-paper-ryu</h3>
+<p><strong>sourceId</strong>: ai-src-ryu-paper</p>
+<p><strong>status</strong>: selected-text-reviewed</p>
+<p><strong>question</strong>: Does critical classical acceleration
+converge to a point?</p>
+<p><strong>method</strong>: Energy/cluster-point analysis, then discrete
+adaptation.</p>
+<p><strong>result</strong>: Authors claim point convergence in finite
+dimensions.</p>
+<p><strong>whatIsNew</strong>: Claims the previously unresolved critical
+schedules; contribution/priority qualified by Section1.3.</p>
+<p><strong>limitations</strong>: Only selected initial proof steps and
+statements read; no independent complete proof.</p>
+<p><strong>replication</strong>: No original proof-system or benchmark
+rerun. Scalar identities and threshold counting are separately
+recomputed.</p>
+<p><strong>nextQuestions</strong>: Pin source revisions and obtain
+claim-specific independent review. Check exact theorem statement,
+assumptions and artifact dependencies before stronger acceptance.</p>
+<h3 id="ai-paper-mle">ai-paper-mle</h3>
+<p><strong>sourceId</strong>: ai-src-mle-paper</p>
+<p><strong>status</strong>: selected-text-reviewed</p>
+<p><strong>question</strong>: When is a correctly specified MLE learning
+curve monotone?</p>
+<p><strong>method</strong>: Gaussian/Wishart and Gamma identities,
+complete monotonicity.</p>
+<p><strong>result</strong>: Exact finite-risk thresholds and
+monotonicity theorems, attributed to GPT5.2-assisted authors.</p>
+<p><strong>whatIsNew</strong>: Authors establish settings not previously
+covered; reverse-KL family links to old textbook insight.</p>
+<p><strong>limitations</strong>: Selected mathematical
+statements/assistance narrative; no formal build or peer-review
+certification.</p>
+<p><strong>replication</strong>: No original proof-system or benchmark
+rerun. Scalar identities and threshold counting are separately
+recomputed.</p>
+<p><strong>nextQuestions</strong>: Pin source revisions and obtain
+claim-specific independent review. Check exact theorem statement,
+assumptions and artifact dependencies before stronger acceptance.</p>
+<h3 id="ai-paper-batch3">ai-paper-batch3</h3>
+<p><strong>sourceId</strong>: ai-src-third-pdf</p>
+<p><strong>status</strong>: selected-text-reviewed</p>
+<p><strong>question</strong>: How do complete AI research proofs survive
+blind review?</p>
+<p><strong>method</strong>: Ten hidden human solutions, five
+systems,30referees, separate axes.</p>
+<p><strong>result</strong>: Threshold scores7,3,9,4,0; qualified details
+matter.</p>
+<p><strong>whatIsNew</strong>: A controlled comparison of public
+models/harnesses and scholarly quality.</p>
+<p><strong>limitations</strong>: Small selected taskset, unequalcompute,
+reviewer uncertainty and human-known solutions.</p>
+<p><strong>replication</strong>: No original proof-system or benchmark
+rerun. Scalar identities and threshold counting are separately
+recomputed.</p>
+<p><strong>nextQuestions</strong>: Pin source revisions and obtain
+claim-specific independent review. Check exact theorem statement,
+assumptions and artifact dependencies before stronger acceptance.</p>
+<h3 id="ai-paper-ten">ai-paper-ten</h3>
+<p><strong>sourceId</strong>: ai-src-ten-paper</p>
+<p><strong>status</strong>: selected-text-reviewed</p>
+<p><strong>question</strong>: What claims accompany the ten-result
+release?</p>
+<p><strong>method</strong>: Long provider manuscript and linked Lean
+source artifacts.</p>
+<p><strong>result</strong>: Abstract and selected statements describe
+major advances.</p>
+<p><strong>whatIsNew</strong>: Novelty is asserted by source; not
+independently certified by this atlas.</p>
+<p><strong>limitations</strong>: Most proofs unread, one selected Lean
+file inspected, no build.</p>
+<p><strong>replication</strong>: No original proof-system or benchmark
+rerun. Scalar identities and threshold counting are separately
+recomputed.</p>
+<p><strong>nextQuestions</strong>: Pin source revisions and obtain
+claim-specific independent review. Check exact theorem statement,
+assumptions and artifact dependencies before stronger acceptance.</p>
+<h3 id="ai-paper-frontier">ai-paper-frontier</h3>
+<p><strong>sourceId</strong>: ai-src-arxiv-frontier</p>
+<p><strong>status</strong>: abstract-only</p>
+<p><strong>question</strong>: How can advanced mathematical answers be
+benchmarked?</p>
+<p><strong>method</strong>: Expert-crafted unpublished problems and
+automatic checking.</p>
+<p><strong>result</strong>: Abstract proposes a challenging
+contamination-conscious testbed.</p>
+<p><strong>whatIsNew</strong>: Benchmark construction, not an automatic
+discovery of new theorems.</p>
+<p><strong>limitations</strong>: Abstract/version metadata only; source
+abstract percentages reflect its reporting context, not current
+SOTA.</p>
+<p><strong>replication</strong>: No original proof-system or benchmark
+rerun. Scalar identities and threshold counting are separately
+recomputed.</p>
+<p><strong>nextQuestions</strong>: Pin source revisions and obtain
+claim-specific independent review. Check exact theorem statement,
+assumptions and artifact dependencies before stronger acceptance.</p>
+<h2 id="ai-assisted-mathematics-claim-ledger">AI-assisted mathematics
+claim ledger</h2>
+<h3 id="ai-claim-nag">ai-claim-nag</h3>
+<p><strong>provider</strong>: OpenAI-assisted academic research</p>
+<p><strong>model</strong>: GPT-5/ChatGPT</p>
+<p><strong>problemStatement</strong>: For convex L-smooth f:R^n→R with
+an attained minimum, establish point convergence x_k,y_k→x∞∈argmin f for
+the paper’s classical NAG parameter schedules; also critical-damping
+continuous-time convergence.</p>
+<p><strong>claimedDate</strong>: 2025-10-24</p>
+<p><strong>priorStatus</strong>: Authors describe a longstanding
+point-convergence question, distinct from already-known objective-value
+O(k^-2) convergence.</p>
+<p><strong>AIContribution</strong>: Ryu reports repeated prompting,
+rejection of faulty suggestions and a structurally useful but
+incorrect-as-written proposal; Jang/Ryu developed and wrote the
+proof.</p>
+<p><strong>verificationStatus</strong>: Author-checked preprint, arXivv2
+January19 2026; full proof not independently verified here.</p>
+<p><strong>independentEvidence</strong>: Paper Section1.3 reports a
+concurrent discrete-time proof prompted by the October21 public post,
+with additional Hilbert/FISTA results. No separate concurrent paper was
+read.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-discovery ai-src-ryu-paper</p>
+<p><strong>limitations</strong>: Do not turn human-directed
+collaboration into autonomous solving, or mathematical point convergence
+into universal algorithm stability.</p>
+<h3 id="ai-claim-mle">ai-claim-mle</h3>
+<p><strong>provider</strong>: OpenAI-assisted academic research</p>
+<p><strong>model</strong>: GPT-5.2 Pro variants</p>
+<p><strong>problemStatement</strong>: For IID N(0,Σ<em>) samples in
+dimensiond, Σ</em>&gt;0, prove expected forward KL risk of covariance
+MLE strictly decreases for n&gt;d+1, and is infinite for n≤d+1; paper
+extends to unknown mean and other families.</p>
+<p><strong>claimedDate</strong>: 2025-12-11</p>
+<p><strong>priorStatus</strong>: Paper traces the correctly specified
+Gaussian question to2019/2022 learning-curve work; reverse-KL extension
+partly reconnects to a known textbook exercise.</p>
+<p><strong>AIContribution</strong>: Authors say model supplied proof
+strategies without human intermediate scaffolding; humans prompted
+extensions, checked and transcribed; model later located relevant prior
+art.</p>
+<p><strong>verificationStatus</strong>: Human-author verification and
+provider-reported external review; no journal verdict or machine proof
+run established.</p>
+<p><strong>independentEvidence</strong>: Original Sellke/Yin manuscript
+inspected for exact theorem and assistance statement, but it is the same
+collaboration rather than an independent replication.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-52 ai-src-mle-paper</p>
+<p><strong>limitations</strong>: More data is not universally beneficial
+under misspecification; forward/reverse KL and finite-risk thresholds
+differ.</p>
+<h3 id="ai-claim-fp2">ai-claim-fp2</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unreleased internal reasoning model</p>
+<p><strong>problemStatement</strong>: Let F be a non-archimedean local
+field with ring of integers o; let N_r be the upper-triangular unipotent
+subgroup of GL_r(F). Fix a nontrivial additive character ψ of conductor
+o and a generic irreducible admissible representation Π of GL_(n+1)(F)
+in W(Π,ψ^(-1)). Must there exist one W in that Whittaker model such
+that, for every generic irreducible admissible π of GL_n(F) in W(π,ψ),
+with conductor idealq, generatorQ of q^(-1), and u_Q=I_(n+1)+Q
+E_(n,n+1), some V∈W(π,ψ) makes ∫_(N_n_n(F)) W(diag(g,1)u_Q)V(g)|det
+g|^(s−1/2)dg finite and nonzero for every s∈C?</p>
+<p><strong>claimedDate</strong>: 2026-02-20</p>
+<p><strong>priorStatus</strong>: A hidden-solution research benchmark
+question, not evidence that all relevant theory was globally
+unsolved.</p>
+<p><strong>AIContribution</strong>: Internal model generated/typeset
+attempt; humans selected attempts and requested clarification based on
+feedback.</p>
+<p><strong>verificationStatus</strong>: Provider explicitly corrected
+its initial likely-correct assessment to incorrect.</p>
+<p><strong>independentEvidence</strong>: OpenAI cites organizer
+commentary and community analysis; selected organizer text inspected,
+not an independent re-derivation of this attempt.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-firstproof
+ai-src-first-submissions ai-src-first-comments</p>
+<p><strong>limitations</strong>: The order of quantifiers matters: one W
+is selected before varying π; V may depend on π. The
+representation-theoretic setup is reproduced from organizer Problem2.
+This record audits an explicitly corrected attempt, not a solved
+theorem.</p>
+<h3 id="ai-claim-fp4">ai-claim-fp4</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unreleased internal model</p>
+<p><strong>problemStatement</strong>: For monic real-rooted degree-n
+polynomials p,q with the organizer’s finite free additive convolution,
+is 1/Φ_n(p⊞<em>n q)≥1/Φ_n(p)+1/Φ_n(q), with
+Φ_n(p)=Σ</em>{i≤n}Σ_{j≠i}(1/(λ_i−λ_j))² and Φ=∞ at repeated roots?</p>
+<p><strong>claimedDate</strong>: 2026-02-20</p>
+<p><strong>priorStatus</strong>: Research-level hidden-solution
+challenge; prior human solutions existed.</p>
+<p><strong>AIContribution</strong>: Model-generated proof attempt, human
+best-of selection and clarification.</p>
+<p><strong>verificationStatus</strong>: Company reports high chance of
+correctness, not a machine-checked theorem verdict.</p>
+<p><strong>independentEvidence</strong>: Organizer provides exact
+statement; its early GPT-5.2 baseline comments do not grade this later
+internal-model attempt.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-firstproof
+ai-src-first-submissions ai-src-first-comments</p>
+<p><strong>limitations</strong>: Polynomial normalization and
+repeated-root conventions matter; complete proof not independently
+audited. The Φ definition is transcribed as the source’s double sum of
+squared reciprocals.</p>
+<h3 id="ai-claim-fp6">ai-claim-fp6</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unreleased internal model</p>
+<p><strong>problemStatement</strong>: Does a universal c&gt;0 exist such
+that every finite graph and 0&lt;ε&lt;1 admit S⊂V with |S|≥cε|V| and
+L_S≼εL, where L_S retains only edges insideS?</p>
+<p><strong>claimedDate</strong>: 2026-02-20</p>
+<p><strong>priorStatus</strong>: Hidden human-solved spectral graph
+question in First Proof.</p>
+<p><strong>AIContribution</strong>: Generated proof with limited human
+supervision and expert-feedback clarification.</p>
+<p><strong>verificationStatus</strong>: Provider provisional
+high-confidence result.</p>
+<p><strong>independentEvidence</strong>: Organizer statement inspected;
+no independent verification of this exact internal attempt obtained.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-firstproof
+ai-src-first-submissions ai-src-first-comments</p>
+<p><strong>limitations</strong>: A sampled graph experiment cannot prove
+the universal existence claim; PSD means positive-semidefinite
+order.</p>
+<h3 id="ai-claim-fp9">ai-claim-fp9</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unreleased internal model</p>
+<p><strong>problemStatement</strong>: For n≥5 and Zariski-generic
+A<sup>(α)∈R</sup>(3×4), find n-independent-degree polynomial relations
+recognizing exactly the coordinatewise tensor scalings
+λ_αβγδ=u_αv_βw_γx_δ of determinant tensors, with the organizer’s
+nonzero-pattern restriction.</p>
+<p><strong>claimedDate</strong>: 2026-02-20</p>
+<p><strong>priorStatus</strong>: Hidden-solution algebraic research
+challenge.</p>
+<p><strong>AIContribution</strong>: Generated candidate argument; humans
+selected and formatted outputs.</p>
+<p><strong>verificationStatus</strong>: Provider high-chance assessment;
+proof not independently checked here.</p>
+<p><strong>independentEvidence</strong>: Exact organizer problem and
+internal submitted section9 retrieved.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-firstproof
+ai-src-first-submissions ai-src-first-comments</p>
+<p><strong>limitations</strong>: Genericity, exceptional index pattern
+and if-and-only-if direction must survive formalization; omitted zero
+cases can change the question.</p>
+<h3 id="ai-claim-fp10">ai-claim-fp10</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unreleased internal model</p>
+<p><strong>problemStatement</strong>: Explain a matrix-free
+preconditioned conjugate-gradient method for the stated nr×nr kernelized
+CP-ALS normal system with missing tensor entries, selection matrixS,
+Kronecker products and RKHS kernelK.</p>
+<p><strong>claimedDate</strong>: 2026-02-20</p>
+<p><strong>priorStatus</strong>: Research-method benchmark with existing
+human solution.</p>
+<p><strong>AIContribution</strong>: Model-generated linear-algebra
+derivation and proof attempt, selected under human supervision.</p>
+<p><strong>verificationStatus</strong>: Provider high chance of
+correctness; implementation/runtime advantage not independently
+reproduced.</p>
+<p><strong>independentEvidence</strong>: Organizer system equation and
+requested preconditioner/matvec explanation inspected.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-firstproof
+ai-src-first-submissions ai-src-first-comments</p>
+<p><strong>limitations</strong>: Positive-semidefinite versus definite
+operators, regularization and solver convergence hypotheses cannot be
+inferred from an equation label.</p>
+<h3 id="ai-claim-ramsey">ai-claim-ramsey</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Internal Astra</p>
+<p><strong>problemStatement</strong>: For k-colour triangle Ramsey
+numberR_k(3), claim logR_k(3)=Θ(k logk), hence R_k(3)^(1/k)→∞; reported
+as resolving Erdős183.</p>
+<p><strong>claimedDate</strong>: 2026-08-01</p>
+<p><strong>priorStatus</strong>: Longstanding superexponential-growth
+question according to announcement/manuscript; direct current database
+access blocked.</p>
+<p><strong>AIContribution</strong>: Provider says model generated
+argument; humans/model prepared manuscript and Lean certificate.</p>
+<p><strong>verificationStatus</strong>: Provider-reported formalization;
+manuscript and selected actual Lean declarations inspected. No Lean
+kernel, dependency-axiom audit or Comparator execution was performed;
+proof correctness is not independently certified.</p>
+<p><strong>independentEvidence</strong>: No claim-specific independent
+correctness verdict located; code existence and MathHelm’s broad
+response are different evidence types.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-ten ai-src-ten-paper
+ai-src-ten-readme ai-src-ten-certificate ai-src-erdos183</p>
+<p><strong>limitations</strong>: Do not label accepted solely from
+provider formalization claim; exact theorem/imports/axioms need pinned
+build and comparison.</p>
+<h3 id="ai-claim-ehrhart">ai-claim-ehrhart</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Internal Astra</p>
+<p><strong>problemStatement</strong>: Claim vol(K)≤(n+1)^n/n! for convex
+bodies K⊂R^n whose centroid is the unique interior lattice point, in the
+stated lattice-volume convention.</p>
+<p><strong>claimedDate</strong>: 2026-08-01</p>
+<p><strong>priorStatus</strong>: Ehrhart volume conjecture according to
+authors.</p>
+<p><strong>AIContribution</strong>: Generated proof, human-assisted
+manuscript preparation, claimed Lean formalization.</p>
+<p><strong>verificationStatus</strong>: Announcement and manuscript
+abstract read; proof module/build not audited.</p>
+<p><strong>independentEvidence</strong>: No independent claim-specific
+proof review captured.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-ten ai-src-ten-paper
+ai-src-ten-readme</p>
+<p><strong>limitations</strong>: Convex-body hypotheses and lattice
+normalization are essential; graph node is a documented claim, not
+certified resolution.</p>
+<h3 id="ai-claim-permanent">ai-claim-permanent</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Internal Astra</p>
+<p><strong>problemStatement</strong>: Claim division-free arithmetic
+circuit lower boundΩ(n²loglogn) and arithmetic-formula leaf lower
+boundΩ(n⁴/logn) for the n×n permanent under the manuscript’s algebraic
+model.</p>
+<p><strong>claimedDate</strong>: 2026-08-01</p>
+<p><strong>priorStatus</strong>: Claims improvement of arithmetic lower
+bounds; not itself a P≠NP theorem.</p>
+<p><strong>AIContribution</strong>: Provider attributes argument to
+model and preparation/formalization to model plus humans.</p>
+<p><strong>verificationStatus</strong>: Selected abstract/overview only;
+no proof or certificate execution.</p>
+<p><strong>independentEvidence</strong>: No independent verdict located
+for this exact lower bound.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-ten ai-src-ten-paper
+ai-src-ten-readme</p>
+<p><strong>limitations</strong>: Arithmetic circuits, formulas, field
+and allowed operations differ from Boolean computational complexity.</p>
+<h3 id="ai-claim-nonsofic">ai-claim-nonsofic</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Internal Astra</p>
+<p><strong>problemStatement</strong>: Claim an explicit countable group
+which is not sofic, disproving that every countable group admits the
+required finite permutation approximations.</p>
+<p><strong>claimedDate</strong>: 2026-08-01</p>
+<p><strong>priorStatus</strong>: Major group-theoretic question as
+identified by authors.</p>
+<p><strong>AIContribution</strong>: Model-generated construction;
+manuscript/certificate prepared with human involvement.</p>
+<p><strong>verificationStatus</strong>: Selected primary claim
+inspected; no complete construction or proof audit.</p>
+<p><strong>independentEvidence</strong>: Independent correctness remains
+unresolved in this selected corpus.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-ten ai-src-ten-paper
+ai-src-ten-readme</p>
+<p><strong>limitations</strong>: Existence of a Lean filename is not
+evidence the mathematical statement matches the historical question.</p>
+<h3 id="ai-claim-withdrawal">ai-claim-withdrawal</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unnamed internal model</p>
+<p><strong>problemStatement</strong>: Three manuscripts on split abelian
+eightfold Weil classes, Kuga–Satake correspondences for K3 surfaces, and
+rational Hodge for products of K3 surfaces were withdrawn after a
+sign-error-dependent construction failed.</p>
+<p><strong>claimedDate</strong>: 2026-10-07</p>
+<p><strong>priorStatus</strong>: October6 release had presented results;
+history now withdraws these specific manuscripts.</p>
+<p><strong>AIContribution</strong>: Model-origin outputs entered a large
+collection; authors maintain corrections/dependency notices.</p>
+<p><strong>verificationStatus</strong>: Withdrawn by issuer on October7:
+these three specific manuscripts are not accepted proofs; withdrawal
+does not apply automatically to other Hodge-related claims.</p>
+<p><strong>independentEvidence</strong>: Direct revision-history notice
+captured; root mathematical error not independently reconstructed.</p>
+<p><strong>sourceIds</strong>: ai-src-math-history
+ai-src-openai-math</p>
+<p><strong>limitations</strong>: Do not extend these withdrawals to all
+Hodge-related papers; later CM-abelian-variety formalization is a
+different claim.</p>
+<h3 id="ai-claim-recent-lp">ai-claim-recent-lp</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unnamed internal model</p>
+<p><strong>problemStatement</strong>: November24 history claims a
+deterministic strongly polynomial algorithm for general linear
+programming, answering Smale’s ninth problem.</p>
+<p><strong>claimedDate</strong>: 2026-11-24</p>
+<p><strong>priorStatus</strong>: Major open complexity question
+according to issuer.</p>
+<p><strong>AIContribution</strong>: A newly released model-generated
+manuscript family; no detailed contribution audit yet.</p>
+<p><strong>verificationStatus</strong>: Unverified source claim: newly
+announced; original manuscript unread, independent correctness/novelty
+checks pending.</p>
+<p><strong>independentEvidence</strong>: Only history announcement
+retrieved, not original proof or independent review.</p>
+<p><strong>sourceIds</strong>: ai-src-math-history</p>
+<p><strong>limitations</strong>: Lead-level claim deliberately excluded
+from verified-theorem count; one-day freshness increases review
+uncertainty.</p>
+<h3 id="ai-claim-recent-mm">ai-claim-recent-mm</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: Unnamed internal model</p>
+<p><strong>problemStatement</strong>: November24 history lists “The
+matrix multiplication exponent is nine fourths,” i.e. claims ω=9/4 in
+the intended arithmetic asymptotic convention.</p>
+<p><strong>claimedDate</strong>: 2026-11-24</p>
+<p><strong>priorStatus</strong>: Claims an exact exponent, a stronger
+statement than an upper bound; original theorem hypotheses not read.</p>
+<p><strong>AIContribution</strong>: Issuer lists new model-origin
+tensor-geometry manuscripts.</p>
+<p><strong>verificationStatus</strong>: Unverified source claim: newly
+announced; original manuscript unread, independent correctness/novelty
+checks pending.</p>
+<p><strong>independentEvidence</strong>: No original manuscript or
+independent result captured.</p>
+<p><strong>sourceIds</strong>: ai-src-math-history</p>
+<p><strong>limitations</strong>: Exact equality in a history title must
+not be silently weakened to a proven algorithmic bound or promoted to
+established fact.</p>
+<h3 id="ai-claim-claude-batch">ai-claim-claude-batch</h3>
+<p><strong>provider</strong>: Anthropic</p>
+<p><strong>model</strong>: Siege harness on Claude Opus5.5</p>
+<p><strong>problemStatement</strong>: First Proof Batch3: solve ten
+researcher-origin questions with hidden pre-existing human solutions
+under the specified one-shot/no-human-input evaluation.</p>
+<p><strong>claimedDate</strong>: 2026-10-14</p>
+<p><strong>priorStatus</strong>: Unpublished human solutions existed;
+this is research-proof evaluation, not ten newly open theorem
+resolutions.</p>
+<p><strong>AIContribution</strong>: Anthropic provided a workflow; its
+performance reflects harness, model, budget and abstention policy.</p>
+<p><strong>verificationStatus</strong>: Independent expert grading:
+published threshold count3/10 at mean correctness≥0.5; two submissions
+have mean1 and one has mean0.5 with minor gaps. No submissions
+for3,4,8,9,10. This is not three strict/unanimous proof acceptances.</p>
+<p><strong>independentEvidence</strong>: First Proof46-page report,
+Tables2–5 and detailed reviews inspected.</p>
+<p><strong>sourceIds</strong>: ai-src-first-third ai-src-third-pdf
+ai-src-third-press</p>
+<p><strong>limitations</strong>: Some accepted-threshold submissions
+have gaps; exposition/attribution separate; no kernel proofs or
+representative distribution guarantee.</p>
+<h3 id="ai-claim-claude-hyperfield">ai-claim-claude-hyperfield</h3>
+<p><strong>provider</strong>: Anthropic</p>
+<p><strong>model</strong>: Siege/Claude Opus5.5</p>
+<p><strong>problemStatement</strong>: For a hyperfieldH and 0∈x⊞y⊞z,
+must 0 belong to x³⊞y³⊞z³⊞(−xyz)⊞(−xyz)⊞(−xyz)? Batch3P5 asks this
+universal implication; submitted answer provides a counterexample.</p>
+<p><strong>claimedDate</strong>: 2026-10-14</p>
+<p><strong>priorStatus</strong>: Human had already solved benchmark
+problem; reviewers note alternative construction combines prior
+Connes–Consani and Hall work.</p>
+<p><strong>AIContribution</strong>: System reconstructed a
+counterexample using an infinite cyclic projective-plane hyperfield.</p>
+<p><strong>verificationStatus</strong>: All three referees find
+mathematics correct; attribution judged deficient, mean attribution0;
+exposition−.33.</p>
+<p><strong>independentEvidence</strong>: ReportSections3.5/5.5
+inspected, including criticism that reproduced prior constructions need
+explicit citations.</p>
+<p><strong>sourceIds</strong>: ai-src-third-pdf</p>
+<p><strong>limitations</strong>: A correct counterexample can still be a
+rediscovery with weak attribution; this does not establish independent
+first discovery by Claude.</p>
+<h3 id="ai-claim-claude-darcy">ai-claim-claude-darcy</h3>
+<p><strong>provider</strong>: Anthropic</p>
+<p><strong>model</strong>: Siege/Claude Opus5.5</p>
+<p><strong>problemStatement</strong>: Batch3P2: for div(f∇u)=1 on unit
+ballD⊂R^d,d≥2, zero boundary data, Yn=u_f+n^(-1/2)W and f in a small
+C^α-neighbourhood of1, determine minimax L² conductivity-estimation rate
+up to logarithms.</p>
+<p><strong>claimedDate</strong>: 2026-10-14</p>
+<p><strong>priorStatus</strong>: Hidden human-solved research question;
+printed context includes an inconsistent d=1 discussion, which must not
+overwrite the formal d≥2 statement.</p>
+<p><strong>AIContribution</strong>: Plug-in kernel estimation and
+Assouad-type lower bound, without human intervention in the recorded
+run.</p>
+<p><strong>verificationStatus</strong>: Referees grade correctness.50:
+sound strategy with minor proof gaps; not an unconditional fully audited
+theorem.</p>
+<p><strong>independentEvidence</strong>: ReportSections3.2/5.2 andTable2
+read; reviewers flag missing attribution and multivariate notation
+corrections.</p>
+<p><strong>sourceIds</strong>: ai-src-third-pdf</p>
+<p><strong>limitations</strong>: Exact rate formula not transcribed here
+because the reviewed passage does not provide it; problem statement and
+qualified review are recorded, not a fabricated exponent.</p>
+<h3 id="ai-claim-astra-batch">ai-claim-astra-batch</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: GPT-6 Astra</p>
+<p><strong>problemStatement</strong>: First Proof Batch3 ten
+hidden-human-solution problems under a one-shot24-hour, no-human-input
+protocol.</p>
+<p><strong>claimedDate</strong>: 2026-10-14</p>
+<p><strong>priorStatus</strong>: Already human-solved unpublished
+benchmark problems.</p>
+<p><strong>AIContribution</strong>: Public base-model prompting rather
+than a separate human-provided proof outline; system and budget are
+documented.</p>
+<p><strong>verificationStatus</strong>: Independent First Proof Table2
+reports7/10 at mean correctness≥0.5. The stricter alternative of
+requiring mean grade exactly1 counts5/10. The published7 therefore
+includes partial/qualified judgments; neither count certifies
+machine-verified new theorems.</p>
+<p><strong>independentEvidence</strong>: ReportTable2 and detailed
+reviews include qualified computational checks; attribution adequate for
+only4/10.</p>
+<p><strong>sourceIds</strong>: ai-src-first-third ai-src-third-pdf
+ai-src-third-press</p>
+<p><strong>limitations</strong>: Seven includes threshold/qualified
+judgments; do not compare directly to benchmark percentages with
+different scoring, sampling or compute.</p>
+<h3 id="ai-claim-frontier52">ai-claim-frontier52</h3>
+<p><strong>provider</strong>: OpenAI</p>
+<p><strong>model</strong>: GPT-5.2 Thinking</p>
+<p><strong>problemStatement</strong>: Answer FrontierMath Tiers1–3
+expert-designed problems under provider maximum-effort reasoning with a
+Python tool.</p>
+<p><strong>claimedDate</strong>: 2025-12-11</p>
+<p><strong>priorStatus</strong>: Benchmark authored with known checkable
+answers; new/unpublished questions do not necessarily ask globally open
+theorems.</p>
+<p><strong>AIContribution</strong>: Model plus tool computation under a
+declared evaluation setup.</p>
+<p><strong>verificationStatus</strong>: Provider reports40.3%; no
+independent rerun captured.</p>
+<p><strong>independentEvidence</strong>: Original benchmark
+abstract/current Epoch track distinctions inspected, but they do not
+independently reproduce this model score.</p>
+<p><strong>sourceIds</strong>: ai-src-oa-52 ai-src-arxiv-frontier
+ai-src-epoch-frontier</p>
+<p><strong>limitations</strong>: A score is not a list of new theorems;
+track, tools, version and denominator must accompany it.</p>
+<h3 id="ai-claim-imo24">ai-claim-imo24</h3>
+<p><strong>provider</strong>: Google DeepMind comparison</p>
+<p><strong>model</strong>: AlphaProof and AlphaGeometry2</p>
+<p><strong>problemStatement</strong>: Solve the six IMO2024 competition
+problems, with Lean-based formal reasoning on translated statements and
+a dedicated geometry system.</p>
+<p><strong>claimedDate</strong>: 2024-07-25</p>
+<p><strong>priorStatus</strong>: Competition problems with official
+solutions/marking, not an open-problem research theorem collection.</p>
+<p><strong>AIContribution</strong>: Formal-search and geometry systems;
+humans translated statements, and some computation took much longer than
+contestant time.</p>
+<p><strong>verificationStatus</strong>: Provider reports4/6 and28/42
+silver-medal-level; formal system claims are source-reported, not rerun
+here.</p>
+<p><strong>independentEvidence</strong>: Official technical announcement
+inspected, not all proof certificates or original problem texts.</p>
+<p><strong>sourceIds</strong>: ai-src-alpha-proof</p>
+<p><strong>limitations</strong>: Do not conflate medal-level scoring
+with actual contest participation or equal time/translation
+conditions.</p>
+<h2 id="nested-coverage-map">Nested coverage map</h2>
+<ul>
+<li><strong>AI-assisted mathematics: claims, contributions and
+verification</strong> (<code>ai-root</code>; mapped): AI-assisted
+mathematics: claims, contributions and verification is mapped as a
+distinct question or evidence channel; coverage is limited to the linked
+selected records.
+<ul>
+<li><strong>Evaluating mathematical capability</strong>
+(<code>ai-evaluation</code>; mapped): Evaluating mathematical capability
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+<li><strong>Human–AI research collaboration</strong>
+(<code>ai-collaboration</code>; mapped): Human–AI research collaboration
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+<li><strong>Formal proof and trusted computing</strong>
+(<code>ai-formal</code>; mapped): Formal proof and trusted computing is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.</li>
+<li><strong>Open-problem research claims</strong>
+(<code>ai-research</code>; mapped): Open-problem research claims is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.</li>
+<li><strong>Corrections, priority and publication</strong>
+(<code>ai-correction</code>; mapped): Corrections, priority and
+publication is mapped as a distinct question or evidence channel;
+coverage is limited to the linked selected records.</li>
+<li><strong>Independent review and research institutions</strong>
+(<code>ai-review</code>; mapped): Independent review and research
+institutions is mapped as a distinct question or evidence channel;
+coverage is limited to the linked selected records.
+<ul>
+<li><strong>Competition and answer benchmarks</strong>
+(<code>ai-benchmarks</code>; mapped): Competition and answer benchmarks
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+<li><strong>Research-proof benchmarks</strong>
+(<code>ai-research-bench</code>; mapped): Research-proof benchmarks is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Olympiad problem solving</strong> (<code>ai-olympiad</code>;
+mapped): Olympiad problem solving is mapped as a distinct question or
+evidence channel; coverage is limited to the linked selected records.
+<ul>
+<li><strong>IMO2024 formal/geometry systems</strong>
+(<code>ai-imo2024</code>; mapped): IMO2024 formal/geometry systems is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.</li>
+<li><strong>IMO2025 general reasoning claim</strong>
+(<code>ai-imo2025</code>; mapped): IMO2025 general reasoning claim is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.</li>
+</ul></li>
+<li><strong>FrontierMath answer verification</strong>
+(<code>ai-frontier</code>; mapped): FrontierMath answer verification is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Tier/track/sample distinctions</strong>
+(<code>ai-frontier-tier</code>; mapped): Tier/track/sample distinctions
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+</ul></li>
+<li><strong>First Proof controlled research tasks</strong>
+(<code>ai-firstproof</code>; reviewed): First Proof controlled research
+tasks is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.
+<ul>
+<li><strong>Batch3 blind expert assessment</strong>
+(<code>ai-batch3</code>; reviewed): Batch3 blind expert assessment is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Claude Siege provider-specific record</strong>
+(<code>ai-claude</code>; reviewed): Claude Siege provider-specific
+record is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+<li><strong>Astra provider-specific record</strong>
+(<code>ai-openai-batch</code>; reviewed): Astra provider-specific record
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>Optimization collaborations</strong>
+(<code>ai-optimization</code>; mapped): Optimization collaborations is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Nesterov point convergence</strong> (<code>ai-nag</code>;
+mapped): Nesterov point convergence is mapped as a distinct question or
+evidence channel; coverage is limited to the linked selected records.
+<ul>
+<li><strong>Finite-dimensional hypotheses and priority</strong>
+(<code>ai-nag-hyp</code>; mapped): Finite-dimensional hypotheses and
+priority is mapped as a distinct question or evidence channel; coverage
+is limited to the linked selected records.</li>
+</ul></li>
+</ul></li>
+<li><strong>Statistical learning collaborations</strong>
+(<code>ai-statistics</code>; reviewed): Statistical learning
+collaborations is mapped as a distinct question or evidence channel;
+coverage is limited to the linked selected records.
+<ul>
+<li><strong>Gaussian MLE learning-curve risk</strong>
+(<code>ai-mle</code>; reviewed): Gaussian MLE learning-curve risk is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Forward KL finiteness and monotonicity</strong>
+(<code>ai-mle-bound</code>; reviewed): Forward KL finiteness and
+monotonicity is mapped as a distinct question or evidence channel;
+coverage is limited to the linked selected records.</li>
+</ul></li>
+</ul></li>
+<li><strong>Proof-assistant source artifacts</strong>
+(<code>ai-proof-assistant</code>; mapped): Proof-assistant source
+artifacts is mapped as a distinct question or evidence channel; coverage
+is limited to the linked selected records.
+<ul>
+<li><strong>Lean4 trusted-kernel boundary</strong>
+(<code>ai-lean</code>; mapped): Lean4 trusted-kernel boundary is mapped
+as a distinct question or evidence channel; coverage is limited to the
+linked selected records.
+<ul>
+<li><strong>Statement comparison and external checking</strong>
+(<code>ai-comparator</code>; mapped): Statement comparison and external
+checking is mapped as a distinct question or evidence channel; coverage
+is limited to the linked selected records.
+<ul>
+<li><strong>Axioms/imports and statement fidelity</strong>
+(<code>ai-axioms</code>; mapped): Axioms/imports and statement fidelity
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>Combinatorial open-problem claims</strong>
+(<code>ai-combinatorics</code>; mapped): Combinatorial open-problem
+claims is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.
+<ul>
+<li><strong>Multicolor triangle Ramsey growth</strong>
+(<code>ai-ramsey</code>; mapped): Multicolor triangle Ramsey growth is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Erdős183 statement provenance</strong>
+(<code>ai-erdos</code>; mapped): Erdős183 statement provenance is mapped
+as a distinct question or evidence channel; coverage is limited to the
+linked selected records.</li>
+</ul></li>
+</ul></li>
+<li><strong>Algebra and complexity claims</strong>
+(<code>ai-algebra</code>; mapped): Algebra and complexity claims is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Non-sofic group construction claim</strong>
+(<code>ai-nonsofic</code>; mapped): Non-sofic group construction claim
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+<li><strong>Arithmetic permanent lower-bound claim</strong>
+(<code>ai-permanent</code>; mapped): Arithmetic permanent lower-bound
+claim is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+</ul></li>
+<li><strong>Convex lattice volume claim</strong>
+(<code>ai-volume</code>; mapped): Convex lattice volume claim is mapped
+as a distinct question or evidence channel; coverage is limited to the
+linked selected records.
+<ul>
+<li><strong>Ehrhart volume bound</strong> (<code>ai-ehrhart</code>;
+mapped): Ehrhart volume bound is mapped as a distinct question or
+evidence channel; coverage is limited to the linked selected
+records.</li>
+</ul></li>
+<li><strong>Large-scale manuscript releases</strong>
+(<code>ai-release</code>; mapped): Large-scale manuscript releases is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Versioned repairs and withdrawals</strong>
+(<code>ai-versions</code>; mapped): Versioned repairs and withdrawals is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>Withdrawn Weil/K3-dependent claims</strong>
+(<code>ai-hodge</code>; mapped): Withdrawn Weil/K3-dependent claims is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.</li>
+</ul></li>
+</ul></li>
+<li><strong>Prior art and concurrent proofs</strong>
+(<code>ai-priority</code>; mapped): Prior art and concurrent proofs is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>New argument versus rediscovery</strong>
+(<code>ai-rediscovery</code>; mapped): New argument versus rediscovery
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+<li><strong>November24 unreviewed additions</strong>
+(<code>ai-recent</code>; mapped): November24 unreviewed additions is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.</li>
+</ul></li>
+<li><strong>Independent review practices</strong>
+(<code>ai-institutions</code>; mapped): Independent review practices is
+mapped as a distinct question or evidence channel; coverage is limited
+to the linked selected records.
+<ul>
+<li><strong>MathHelm claim-specific discussion</strong>
+(<code>ai-mathhelm</code>; mapped): MathHelm claim-specific discussion
+is mapped as a distinct question or evidence channel; coverage is
+limited to the linked selected records.</li>
+<li><strong>Correctness/exposition/attribution separation</strong>
+(<code>ai-referee</code>; reviewed): Correctness/exposition/attribution
+separation is mapped as a distinct question or evidence channel;
+coverage is limited to the linked selected records.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<p><strong>LLM</strong> — Large language model: a text-generating model,
+not itself a proof certificate.</p>
+<p><strong>NAG</strong> — Nesterov accelerated gradient; algorithm
+schedules and problem hypotheses must be specified.</p>
+<p><strong>MLE</strong> — Maximum likelihood estimator; parameter
+maximizing the observed-data likelihood.</p>
+<p><strong>KL</strong> — Kullback–Leibler divergence; directional
+expected log likelihood ratio, not a symmetric distance.</p>
+<p><strong>IID</strong> — Independent and identically distributed
+observations.</p>
+<p><strong>Lean</strong> — A proof assistant with a small trusted
+kernel; source code is not a successful checking receipt.</p>
+<p><strong>Lake</strong> — Lean project/build manager, with
+dependency/toolchain configuration.</p>
+<p><strong>Comparator</strong> — Artifact described in linked
+instructions for additional theorem/statement checking; not executed
+here.</p>
+<p><strong>Axiom</strong> — An assumed statement; consistency and
+intended interpretation limit the scope of a checked proof.</p>
+<p><strong>sorry</strong> — Lean placeholder that can admit a
+proposition; absence must be checked in the relevant dependency
+closure.</p>
+<p><strong>Harness</strong> — Software orchestrating model calls, tools
+and stopping; not interchangeable with the underlying model.</p>
+<p><strong>IMO</strong> — International Mathematical Olympiad; contest
+problems and medal-level scores do not imply new theorems.</p>
+<p><strong>AIME</strong> — American Invitational Mathematics
+Examination; a short-answer benchmark when reused in model evaluation,
+not a new-theorem collection.</p>
+<p><strong>FrontierMath</strong> — Program with separately specified
+tiered answer tasks, open-problem tasks and formal Erdős tasks.</p>
+<p><strong>PSD</strong> — Positive semidefinite; a symmetric matrix has
+nonnegative quadratic form for every real vector.</p>
+<p><strong>CP-ALS</strong> — CANDECOMP/PARAFAC tensor decomposition by
+alternating least squares.</p>
+<p><strong>PCG</strong> — Preconditioned conjugate gradient, an
+iterative linear solver requiring suitable definiteness hypotheses.</p>
+<p><strong>RKHS</strong> — Reproducing kernel Hilbert space; a function
+space whose evaluation is represented by a kernel.</p>
+<p><strong>Zariski-generic</strong> — Away from specified algebraic
+exceptional sets; not simply a random numerical example.</p>
+<p><strong>Sofic</strong> — Admitting finite permutation approximations
+in the specified asymptotic sense.</p>
+<p><strong>Hyperfield</strong> — Field-like algebra with multivalued
+addition; ordinary polynomial identities need not transfer as naive
+implications.</p>
+<p><strong>Ramsey number</strong> — Smallest complete-graph size forcing
+a monochromatic structure under every allowed edge coloring.</p>
+<p><strong>Arithmetic circuit</strong> — An algebraic computation graph;
+different from a Boolean circuit or a formula with no shared
+subcomputations.</p>
+<p><strong>Strongly polynomial</strong> — An algorithmic complexity
+notion controlling arithmetic-operation count independently of input
+coefficient bit magnitudes, with additional size requirements.</p>
+<p><strong>ω</strong> — Matrix multiplication exponent, an infimum of
+feasible arithmetic asymptotic exponents; equality needs both upper and
+lower reasoning.</p>
+<p><strong>Preprint</strong> — Public manuscript without an implied
+completed journal review.</p>
+<p><strong>Independent evidence</strong> — A review or experiment with a
+distinct evidential role; company hosting, expert fame or institutional
+funding alone does not certify a result.</p>
+<p><strong>Read depth</strong> — Precisely which sections were
+inspected; download size does not measure review completeness.</p>
+<p><strong>GL_r(F)</strong> — Group of invertible r×r matrices over
+fieldF; N_r is its upper-triangular unipotent subgroup, with diagonal
+entries1.</p>
+<p><strong>Whittaker model</strong> — A realization of a generic
+representation by functions with specified character equivariance under
+a unipotent subgroup; its character and representation hypotheses are
+part of First ProofProblem2.</p>
+<p><strong>Non-archimedean local field</strong> — A locally compact
+field with a non-archimedean valuation; its ring of integers and
+conductor ideals enter the local Rankin–Selberg question.</p>
+<h2 id="open-questions-and-missing-evidence">Open questions and missing
+evidence</h2>
+<h3
+id="do-the-selected-lean-certificates-check-the-intended-historical-statements">Do
+the selected Lean certificates check the intended historical
+statements?</h3>
+<p>Status: open-audit. Pinned toolchain/import closure, no-placeholder
+check, printed axiom dependencies, clean kernel/comparator
+execution.</p>
+<h3
+id="are-november24-lp-and-matrix-exponent-claims-correct-and-novel">Are
+November24 LP and matrix-exponent claims correct and novel?</h3>
+<p>Status: unreviewed-lead. Original papers, exact statements,
+independent domain experts, artifact builds and prior-art
+comparison.</p>
+<h3 id="what-is-the-independent-current-status-of-erdős183">What is the
+independent current status of Erdős183?</h3>
+<p>Status: blocked-direct-source. Reachable database snapshot or
+maintainer confirmation; current direct page returned403.</p>
+<h3 id="how-should-ai-help-and-concurrent-proofs-be-credited-in-nag">How
+should AI help and concurrent proofs be credited in NAG?</h3>
+<p>Status: active-scholarly-question. Read concurrent paper13 and full
+revision chronology, not just provider interview.</p>
+<h3
+id="how-do-qualified-reviewer-judgments-and-the-dimension-context-mismatch-affect-the-exact-darcy-claim">How
+do qualified reviewer judgments and the dimension-context mismatch
+affect the exact Darcy claim?</h3>
+<p>Status: requires-clarification. Organizer errata plus complete proof
+and report scope, including rate formula and missing steps.</p>
+<h3
+id="which-specific-october-collection-claims-have-independent-favorable-or-unfavorable-reviews">Which
+specific October collection claims have independent favorable or
+unfavorable reviews?</h3>
+<p>Status: ongoing. Claim-level MathHelm commentary with author identity
+and exact manuscript version.</p>
+<h2 id="source-records-and-reading-depth">Source records and reading
+depth</h2>
+<h3
+id="ai-src-oa-discovery-how-gpt-5-helped-mathematician-ernest-ryu-solve-a-40-year-old-open-problem">ai-src-oa-discovery
+— How GPT-5 helped mathematician Ernest Ryu solve a 40-year-old open
+problem</h3>
+<p>OpenAI; 2025; Captured current page; exact byte identity retained</p>
+<p><a href="https://openai.com/index/gpt-5-mathematical-discovery/"
+class="uri">https://openai.com/index/gpt-5-mathematical-discovery/</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Dated November 24 2025 article;
+problem, turning point, attribution and verification</p>
+<p><strong>Supported claim</strong>: Human-directed GPT-5 exploration
+helped Ryu develop a point-convergence proof; the article explicitly
+says a decisive model suggestion was incorrect as written.</p>
+<p><strong>Limitations</strong>: Provider case study; research status
+and exact theorem must be checked in the paper.</p>
+<p><strong>research-note</strong>: Human-directed GPT-5 exploration
+helped Ryu develop a point-convergence proof; the article explicitly
+says a decisive model suggestion was incorrect as written.</p>
+<p>Capture SHA-256:
+<code>c65baf5c840aec47854d796b16bd3568aeaa9d9317bb03a6c2aa61e851d4c22f</code>;
+captured 2026-11-25T06:25:36.626223+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-ryu-paper-point-convergence-of-nesterovs-accelerated-gradient-method-an-ai-assisted-proof">ai-src-ryu-paper
+— Point convergence of Nesterov’s accelerated gradient method: an
+AI-assisted proof</h3>
+<p>Uijeong Jang Ernest K. Ryu; 2026; arXiv:2510.23513v2, 19 January
+2026</p>
+<p><a href="https://arxiv.org/pdf/2510.23513"
+class="uri">https://arxiv.org/pdf/2510.23513</a></p>
+<p><strong>Source class</strong>: preprint</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Abstract; introduction 1.1–1.4;
+continuous-time Lemma 2.1 and Theorem 2.2; point-convergence
+statement</p>
+<p><strong>Supported claim</strong>: Claims point convergence of
+classical accelerated gradient; identifies AI assistance and concurrent
+research.</p>
+<p><strong>Limitations</strong>: Selected proof steps read, not the
+complete discrete proof; no independent formal certificate run.</p>
+<p><strong>research-note</strong>: Claims point convergence of classical
+accelerated gradient; identifies AI assistance and concurrent
+research.</p>
+<p>Capture SHA-256:
+<code>31dafeda57a8b0f933fbadefe20d32543ca36ea176292dfaf240d179f3b273f0</code>;
+captured 2026-11-25T06:26:09.650027+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-oa-52-advancing-science-and-math-with-gpt-5.2">ai-src-oa-52 —
+Advancing science and math with GPT-5.2</h3>
+<p>OpenAI; 2025; Captured current page; exact byte identity retained</p>
+<p><a href="https://openai.com/index/gpt-5-2-for-science-and-math/"
+class="uri">https://openai.com/index/gpt-5-2-for-science-and-math/</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: December 11 2025 benchmark
+protocol and learning-curve case study</p>
+<p><strong>Supported claim</strong>: Reports 40.3% FrontierMath Tiers1–3
+with Python and maximum effort, separately from a learning-curve
+result.</p>
+<p><strong>Limitations</strong>: Company evaluation and contribution
+narrative; not an independent theorem verdict.</p>
+<p><strong>research-note</strong>: Reports 40.3% FrontierMath Tiers1–3
+with Python and maximum effort, separately from a learning-curve
+result.</p>
+<p>Capture SHA-256:
+<code>b19cdc68a3c60e8b4456b93a988875ad60ce15522bcf92a67d0846ead1d42175</code>;
+captured 2026-11-25T06:25:36.619321+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-mle-paper-on-learning-curve-monotonicity-for-maximum-likelihood-estimators">ai-src-mle-paper
+— On Learning-Curve Monotonicity for Maximum Likelihood Estimators</h3>
+<p>Mark Sellke Steven Yin; 2025; Unversioned provider-hosted manuscript
+linked December11 2025</p>
+<p><a
+href="https://cdn.openai.com/pdf/a3f3f76c-98bd-47a5-888f-c52c932a8942/colt-monotonicity-problem.pdf"
+class="uri">https://cdn.openai.com/pdf/a3f3f76c-98bd-47a5-888f-c52c932a8942/colt-monotonicity-problem.pdf</a></p>
+<p><strong>Source class</strong>: preprint</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Abstract; introduction;
+Statement on AI Assistance; Theorems1.1–1.2; scalar specialization of
+Section3</p>
+<p><strong>Supported claim</strong>: Forward KL risk decreases for
+well-specified Gaussian covariance MLE above its exact sample-size
+threshold; GPT-5.2 variants generated proofs subsequently
+checked/transcribed by humans.</p>
+<p><strong>Limitations</strong>: No journal acceptance or Lean execution
+established; attribution is author testimony. PDF is unversioned, date
+anchored to official release.</p>
+<p><strong>research-note</strong>: Forward KL risk decreases for
+well-specified Gaussian covariance MLE above its exact sample-size
+threshold; GPT-5.2 variants generated proofs subsequently
+checked/transcribed by humans.</p>
+<p>Capture SHA-256:
+<code>72dd996ecbb872343ac18f94da98a1cb63405daff6c4595112826343864e124d</code>;
+captured 2026-11-25T06:26:10.164969+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-oa-firstproof-our-first-proof-submissions">ai-src-oa-firstproof
+— Our First Proof submissions</h3>
+<p>OpenAI; 2026; Captured current page; exact byte identity retained</p>
+<p><a href="https://openai.com/index/first-proof-submissions/"
+class="uri">https://openai.com/index/first-proof-submissions/</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: February20 2026 article in
+full</p>
+<p><strong>Supported claim</strong>: Claims high confidence for
+attempts4,5,6,9,10; explicitly retracts confidence in attempt2;
+documents human selection and feedback.</p>
+<p><strong>Limitations</strong>: A company’s provisional correctness
+estimate, not official grading of each internal-model proof.</p>
+<p><strong>research-note</strong>: Claims high confidence for
+attempts4,5,6,9,10; explicitly retracts confidence in attempt2;
+documents human selection and feedback.</p>
+<p>Capture SHA-256:
+<code>02304d4bf20e6ce30d97691563f085bd6ed6537d40f67102b8aa522fd8b6779d</code>;
+captured 2026-11-25T06:25:36.611887+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3 id="ai-src-first-submissions-first-proof">ai-src-first-submissions —
+First Proof?</h3>
+<p>OpenAI; 2026; February20 2026 PDF</p>
+<p><a
+href="https://cdn.openai.com/pdf/26177a73-3b75-4828-8c91-e8f1cf27aaa0/oai_first_proof.pdf"
+class="uri">https://cdn.openai.com/pdf/26177a73-3b75-4828-8c91-e8f1cf27aaa0/oai_first_proof.pdf</a></p>
+<p><strong>Source class</strong>: preprint</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: February20 title/abstract;
+contents; problem statements1,2,4,6,9,10; prompting appendix
+headings</p>
+<p><strong>Supported claim</strong>: Ten internal-model proof attempts
+with limited human supervision and best-of selection.</p>
+<p><strong>Limitations</strong>: Attempt does not mean proof; no full
+proof audit, no kernel run, some claims incorrect.</p>
+<p><strong>research-note</strong>: Ten internal-model proof attempts
+with limited human supervision and best-of selection.</p>
+<p>Capture SHA-256:
+<code>27e97e4f61610cb31120c68bc8845b7a7b65bb2bfd044ffc4bb6f3b4d17f8102</code>;
+captured 2026-11-25T06:26:10.466497+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-first-comments-first-proof-solutions-and-comments">ai-src-first-comments
+— First Proof: solutions and comments</h3>
+<p>First Proof problem authors; 2026; Organizer-hosted current PDF</p>
+<p><a
+href="https://1stproof.org/documents/FirstProofSolutionsComments.pdf"
+class="uri">https://1stproof.org/documents/FirstProofSolutionsComments.pdf</a></p>
+<p><strong>Source class</strong>: problem-record</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Problem statements2,4,5,6,9,10;
+Sections4.1–4.6 and4.10 assessment context</p>
+<p><strong>Supported claim</strong>: Supplies exact research problems
+and expert comments; the early baseline tests used GPT-5.2 Pro and are
+distinct from OpenAI’s later internal-model attempts.</p>
+<p><strong>Limitations</strong>: Do not transfer a baseline verdict to a
+different model’s submission.</p>
+<p><strong>research-note</strong>: Supplies exact research problems and
+expert comments; the early baseline tests used GPT-5.2 Pro and are
+distinct from OpenAI’s later internal-model attempts.</p>
+<p>Capture SHA-256:
+<code>a46d478359e4038f7f83e83f8e2de423a6d713f3bc8c93859eab6540e0934631</code>;
+captured 2026-11-25T06:26:10.066292+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-firstproof-first-proof-project-mission-and-chronology">ai-src-firstproof
+— First Proof Project mission and chronology</h3>
+<p>First Proof Foundation; 2026; Captured current page; exact byte
+identity retained</p>
+<p><a href="https://www.1stproof.org/"
+class="uri">https://www.1stproof.org/</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Mission; three batch chronology;
+ethics/funding statement</p>
+<p><strong>Supported claim</strong>: Independent expert-engagement
+framework, with stated industry donations and governance
+restrictions.</p>
+<p><strong>Limitations</strong>: Organizational independence is
+contextual evidence, not a proof of every submitted theorem.</p>
+<p><strong>research-note</strong>: Independent expert-engagement
+framework, with stated industry donations and governance
+restrictions.</p>
+<p>Capture SHA-256:
+<code>144ba7fb2e6b54d718c979e3c9037fa7deee2c26a05f9fd39b6425c140ac290d</code>;
+captured 2026-11-25T06:25:04.736718+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-first-third-third-batch-benchmark-protocol">ai-src-first-third
+— Third Batch benchmark protocol</h3>
+<p>First Proof Foundation; 2026; Captured current page; exact byte
+identity retained</p>
+<p><a href="https://1stproof.org/third-batch.html"
+class="uri">https://1stproof.org/third-batch.html</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Benchmark design; tested
+systems; links to reports/code/logs</p>
+<p><strong>Supported claim</strong>: Ten already-human-solved
+unpublished problems, one shot per system, public-model harnesses and
+double-blind grading.</p>
+<p><strong>Limitations</strong>: Research-level benchmark does not mean
+ten globally open problems.</p>
+<p><strong>research-note</strong>: Ten already-human-solved unpublished
+problems, one shot per system, public-model harnesses and double-blind
+grading.</p>
+<p>Capture SHA-256:
+<code>5814d3bd60577ca862239e4538d6934a65733d1b7dd35b2e63e195e149c3ca89</code>;
+captured 2026-11-25T06:26:09.965835+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3 id="ai-src-third-pdf-first-proof-third-batch">ai-src-third-pdf —
+First Proof Third Batch</h3>
+<p>Mohammed Abouzaid Nikhil Srivastava Rachel Ward Lauren Williams;
+2026; Hexagon2610.00244v1; October14 2026;46pages</p>
+<p><a href="https://hexagonmath.org/pdf/2610.00244v1"
+class="uri">https://hexagonmath.org/pdf/2610.00244v1</a></p>
+<p><strong>Source class</strong>: primary-paper</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Abstract; Section1;
+Sections3.2/3.5 problem statements; Section4 system descriptions;
+Tables2–5; Sections5.1/5.2/5.5/5.7–5.9</p>
+<p><strong>Supported claim</strong>: At correctness threshold0.5:
+Astra7/10, Siege3/10, ProofCouncil9/10; exposition/attribution
+separately graded; several detailed reviews remain qualified.</p>
+<p><strong>Limitations</strong>: Only selected report sections read.
+Human expert grading is not machine kernel verification or a
+population-wide capability estimate.</p>
+<p><strong>research-note</strong>: At correctness threshold0.5:
+Astra7/10, Siege3/10, ProofCouncil9/10; exposition/attribution
+separately graded; several detailed reviews remain qualified.</p>
+<p>Capture SHA-256:
+<code>541f026537556d584d34a9d3cabbe6e1e649af7151d89b244c11ee8e7da9be33</code>;
+captured 2026-11-25T06:27:29.125414+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-third-press-frontier-ai-systems-solve-up-to910-problems-in-first-proof-benchmark">ai-src-third-press
+— Frontier AI Systems Solve up to9/10 Problems in First Proof
+Benchmark</h3>
+<p>First Proof Foundation; 2026; Captured current page; exact byte
+identity retained</p>
+<p><a href="https://1stproof.org/third-batch-press-release.html"
+class="uri">https://1stproof.org/third-batch-press-release.html</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: October14 2026 key findings and
+methods</p>
+<p><strong>Supported claim</strong>: Summarizes controlled batch and
+stresses exposition/attribution gaps and compute dependence.</p>
+<p><strong>Limitations</strong>: Use report tables for provider-specific
+scores, not headline alone.</p>
+<p><strong>research-note</strong>: Summarizes controlled batch and
+stresses exposition/attribution gaps and compute dependence.</p>
+<p>Capture SHA-256:
+<code>dc59e8483e90a92b600c3e0956434b555b2c36575c5d9b61caecec1ea25b1033</code>;
+captured 2026-11-25T06:26:44.427969+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-oa-ten-ten-advances-in-mathematics-and-theoretical-computer-science">ai-src-oa-ten
+— Ten advances in mathematics and theoretical computer science</h3>
+<p>OpenAI; 2026; Captured current page; exact byte identity retained</p>
+<p><a href="https://openai.com/index/ten-advances-in-mathematics/"
+class="uri">https://openai.com/index/ten-advances-in-mathematics/</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: August1 2026 announcement and
+result list</p>
+<p><strong>Supported claim</strong>: Claims ten research advances by
+internal Astra, with human manuscript preparation and Lean
+artifacts.</p>
+<p><strong>Limitations</strong>: Announcement is not independent
+confirmation of novelty, correctness or statement fidelity.</p>
+<p><strong>research-note</strong>: Claims ten research advances by
+internal Astra, with human manuscript preparation and Lean
+artifacts.</p>
+<p>Capture SHA-256:
+<code>1c0c65cba23f81286517029ddace5267d69e7d7bf03bc02fcaec8805b2f44e0b</code>;
+captured 2026-11-25T06:25:36.836329+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-ten-paper-ten-advances-in-mathematics-and-theoretical-computer-science">ai-src-ten-paper
+— Ten Advances in Mathematics and Theoretical Computer Science</h3>
+<p>OpenAI; 2026; Updated August6 2026; original version separately
+linked</p>
+<p><a href="https://cdn.openai.com/pdf/ten-proofs-oai.pdf"
+class="uri">https://cdn.openai.com/pdf/ten-proofs-oai.pdf</a></p>
+<p><strong>Source class</strong>: preprint</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Abstract; contents/version note;
+headline results5,7,8,9; chapter9 theorem scope</p>
+<p><strong>Supported claim</strong>: States permanent lower bounds,
+lattice hardness, sharp Ehrhart volume bound and multicolor Ramsey
+growth among ten claims.</p>
+<p><strong>Limitations</strong>: Most of the long manuscript’s proofs
+were not read; results remain attributed claims in this atlas.</p>
+<p><strong>research-note</strong>: States permanent lower bounds,
+lattice hardness, sharp Ehrhart volume bound and multicolor Ramsey
+growth among ten claims.</p>
+<p>Capture SHA-256:
+<code>ebc561ab5c53dbd240e17a8fdb6fffeb648591eca85dbfc7466f563638f8c566</code>;
+captured 2026-11-25T06:26:10.349924+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-ten-readme-ten-proofs-lean4-artifact-readme">ai-src-ten-readme
+— Ten-proofs Lean4 artifact README</h3>
+<p>OpenAI; 2026; Captured current page; exact byte identity retained</p>
+<p><a
+href="https://raw.githubusercontent.com/openai/ten-proofs/main/README.md"
+class="uri">https://raw.githubusercontent.com/openai/ten-proofs/main/README.md</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Result-to-module mapping; build
+instructions; independent-check instructions</p>
+<p><strong>Supported claim</strong>: Provides source filenames and
+Lean4.32/mathlib/Lake build commands for ten claimed formalizations.</p>
+<p><strong>Limitations</strong>: Repository existence/build instructions
+are not an executed verification receipt.</p>
+<p><strong>research-note</strong>: Provides source filenames and
+Lean4.32/mathlib/Lake build commands for ten claimed formalizations.</p>
+<p>Capture SHA-256:
+<code>fb1a59b06c3b855f10ef62e70c1dcf873b6f9a7641e752f5b25d917d5263f7e5</code>;
+captured 2026-11-25T06:26:44.353293+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-ten-certificate-multicolortriangleramsey.lean">ai-src-ten-certificate
+— MulticolorTriangleRamsey.lean</h3>
+<p>OpenAI; 2026; Retrieved main-branch bytes, content hash pinned</p>
+<p><a
+href="https://raw.githubusercontent.com/openai/ten-proofs/main/MulticolorTriangleRamsey.lean"
+class="uri">https://raw.githubusercontent.com/openai/ten-proofs/main/MulticolorTriangleRamsey.lean</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Final theorem
+triangleRamseyNumber_log_isTheta; divergentRamseyRoot; erdos_183;
+explicit lower-bound declaration</p>
+<p><strong>Supported claim</strong>: Actual Lean text declares
+logarithmic Ramsey asymptotics and divergence of the kth root.</p>
+<p><strong>Limitations</strong>: Only selected source declarations
+inspected; imports, axioms, trusted kernel and comparator were not
+executed.</p>
+<p><strong>research-note</strong>: Actual Lean text declares logarithmic
+Ramsey asymptotics and divergence of the kth root.</p>
+<p>Capture SHA-256:
+<code>a87bd60efe16dab00ba07ea4069f22b8dbc991b3f3ba34ae5088b1f8b1987cd3</code>;
+captured 2026-11-25T06:26:44.582445+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-ten-comparator-comparator-challenge-checking-instructions">ai-src-ten-comparator
+— Comparator challenge checking instructions</h3>
+<p>OpenAI; 2026; Captured current page; exact byte identity retained</p>
+<p><a
+href="https://raw.githubusercontent.com/openai/ten-proofs/main/ComparatorChallenges/README.md"
+class="uri">https://raw.githubusercontent.com/openai/ten-proofs/main/ComparatorChallenges/README.md</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Entire short README</p>
+<p><strong>Supported claim</strong>: Requests landrun, lean4export,
+nanoda_bin and comparator challenge execution for independent
+checking.</p>
+<p><strong>Limitations</strong>: Instructions do not establish that this
+atlas performed those checks.</p>
+<p><strong>research-note</strong>: Requests landrun, lean4export,
+nanoda_bin and comparator challenge execution for independent
+checking.</p>
+<p>Capture SHA-256:
+<code>dcf5e36bf69cb5f4dbf1db9c0c9770e437d791b88e426cb46a3177ef5a224584</code>;
+captured 2026-11-25T06:27:29.004833+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-oa-progress-sharing-ai-progress-in-mathematics">ai-src-oa-progress
+— Sharing AI progress in mathematics</h3>
+<p>OpenAI; 2026; Captured current page; exact byte identity retained</p>
+<p><a
+href="https://openai.com/index/sharing-ai-progress-in-mathematics/"
+class="uri">https://openai.com/index/sharing-ai-progress-in-mathematics/</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: October6 release and October15
+update</p>
+<p><strong>Supported claim</strong>: Describes a large research release
+and subsequent Simons funding; notes more formalizations to follow.</p>
+<p><strong>Limitations</strong>: Funding, advisory consultation and
+quantity do not independently validate proofs.</p>
+<p><strong>research-note</strong>: Describes a large research release
+and subsequent Simons funding; notes more formalizations to follow.</p>
+<p>Capture SHA-256:
+<code>a3eb97defc6af960f623b33de9cad9930b855d0008765a8db0b4d0345e624f7e</code>;
+captured 2026-11-25T06:25:36.647028+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-openai-math-openai-mathematics-manuscript-collection-readme">ai-src-openai-math
+— OpenAI mathematics manuscript collection README</h3>
+<p>OpenAI; 2026; Captured current page; exact byte identity retained</p>
+<p><a
+href="https://raw.githubusercontent.com/openai/math/main/README.md"
+class="uri">https://raw.githubusercontent.com/openai/math/main/README.md</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Entire current README; counts;
+verification caveats; provenance and citations</p>
+<p><strong>Supported claim</strong>: Current README
+says730manuscripts/375families, about42% top-line formalized, and warns
+unformalized results may have issues.</p>
+<p><strong>Limitations</strong>: Moving repository snapshot; counts are
+not counts of verified new theorems and may lag history entries.</p>
+<p><strong>research-note</strong>: Current README
+says730manuscripts/375families, about42% top-line formalized, and warns
+unformalized results may have issues.</p>
+<p>Capture SHA-256:
+<code>d87b51bfa10f1c42fe35746934a44b84e0608e556c9ca5ffeb0163914ac8761c</code>;
+captured 2026-11-25T06:26:09.957012+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-math-history-openai-math-collection-revision-history">ai-src-math-history
+— OpenAI math collection revision history</h3>
+<p>OpenAI; 2026; Current history retrieved November25 2026</p>
+<p><a
+href="https://raw.githubusercontent.com/openai/math/main/history.md"
+class="uri">https://raw.githubusercontent.com/openai/math/main/history.md</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: October7 withdrawals/fixes;
+October26 additions; November23–24 additions</p>
+<p><strong>Supported claim</strong>: Records three withdrawals after a
+sign error and very recent complexity/optimization claims, including
+strongly polynomial LP and matrix multiplication exponent9/4.</p>
+<p><strong>Limitations</strong>: Author-maintained history is not an
+independent proof review; November claims were not inspected at
+manuscript level.</p>
+<p><strong>research-note</strong>: Records three withdrawals after a
+sign error and very recent complexity/optimization claims, including
+strongly polynomial LP and matrix multiplication exponent9/4.</p>
+<p>Capture SHA-256:
+<code>badbb8f33483c3ff2b41a062e9cf328d3214a8b38b3af7a3ce8fabce9166155d</code>;
+captured 2026-11-25T06:26:44.391761+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-tao-review-introducing-mathhelm-a-place-to-discuss-ai-generated-papers">ai-src-tao-review
+— Introducing MathHelm: A Place to discuss AI-generated papers</h3>
+<p>MathHelm scientific committee, guest post hosted by Terence Tao;
+2026; Captured current page; exact byte identity retained</p>
+<p><a
+href="https://terrytao.wordpress.com/2026/11/13/introducing-mathhelm-a-place-to-discuss-ai-generated-papers/"
+class="uri">https://terrytao.wordpress.com/2026/11/13/introducing-mathhelm-a-place-to-discuss-ai-generated-papers/</a></p>
+<p><strong>Source class</strong>: independent-review</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: November13 2026 guest essay
+before comments/sidebar</p>
+<p><strong>Supported claim</strong>: Reports most of the October
+collection had not been verified by humans, encourages claim-specific
+discussion and rejects an obligation to review everything.</p>
+<p><strong>Limitations</strong>: Broad scholarly response, not a verdict
+on each paper; guest authorship must not be attributed solely to
+Tao.</p>
+<p><strong>research-note</strong>: Reports most of the October
+collection had not been verified by humans, encourages claim-specific
+discussion and rejects an obligation to review everything.</p>
+<p>Capture SHA-256:
+<code>e9d69d9bc59a8c7b9a612140f334cb10329c15735c3ecf5e7e05b3fbf2abf451</code>;
+captured 2026-11-25T06:27:29.229279+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-arxiv-frontier-frontiermath-a-benchmark-for-evaluating-advanced-mathematical-reasoning-in-ai">ai-src-arxiv-frontier
+— FrontierMath: A Benchmark for Evaluating Advanced Mathematical
+Reasoning in AI</h3>
+<p>Elliot Glazer and23coauthors; 2024; arXiv2411.04872v7; December23
+2025</p>
+<p><a href="https://arxiv.org/abs/2411.04872"
+class="uri">https://arxiv.org/abs/2411.04872</a></p>
+<p><strong>Source class</strong>: preprint</p>
+<p><strong>Status / reading depth</strong>: abstract-only; Abstract and
+version metadata only; full manuscript not read.</p>
+<p><strong>Sections inspected</strong>: Abstract; submission/version
+history</p>
+<p><strong>Supported claim</strong>: Unpublished expert-designed
+problems and automated answer checking; benchmark performance differs
+from theorem proof.</p>
+<p><strong>Limitations</strong>: Abstract/version metadata only; no
+problem-set audit or independent rerun.</p>
+<p><strong>research-note</strong>: Unpublished expert-designed problems
+and automated answer checking; benchmark performance differs from
+theorem proof.</p>
+<p>Capture SHA-256:
+<code>06616bad07fbc760690cd822023b51ca92a5a10e0790ab33038a3061d156b8b3</code>;
+captured 2026-11-25T06:25:04.280621+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-epoch-frontier-frontiermath-benchmark-program">ai-src-epoch-frontier
+— FrontierMath benchmark program</h3>
+<p>Epoch AI; 2026; Captured current page; exact byte identity
+retained</p>
+<p><a href="https://epoch.ai/frontiermath"
+class="uri">https://epoch.ai/frontiermath</a></p>
+<p><strong>Source class</strong>: official-data</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: Definitions of Tiers1–4, Open
+Problems, and FrontierMath Erdős</p>
+<p><strong>Supported claim</strong>: These are distinct benchmark tracks
+with distinct proof/checking requirements.</p>
+<p><strong>Limitations</strong>: Current overview without dated results
+table; no exhaustive problem evaluation.</p>
+<p><strong>research-note</strong>: These are distinct benchmark tracks
+with distinct proof/checking requirements.</p>
+<p>Capture SHA-256:
+<code>153f3f440593c4de557c0a7141c1c1035cc0e3a3c9435246f29003f5bf76774d</code>;
+captured 2026-11-25T06:25:04.393266+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-alpha-proof-ai-solves-imo-problems-at-silver-medal-level">ai-src-alpha-proof
+— AI solves IMO problems at silver-medal level</h3>
+<p>Google DeepMind; 2024; Captured current page; exact byte identity
+retained</p>
+<p><a
+href="https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/"
+class="uri">https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: July25 2024 problem results,
+human translation and time conditions</p>
+<p><strong>Supported claim</strong>: AlphaProof/AlphaGeometry2
+reportedly solved4/6 IMO2024 problems,28/42, with formal and geometry
+systems.</p>
+<p><strong>Limitations</strong>: Provider report; not a new research
+theorem, and not the same time conditions as contestants.</p>
+<p><strong>research-note</strong>: AlphaProof/AlphaGeometry2 reportedly
+solved4/6 IMO2024 problems,28/42, with formal and geometry systems.</p>
+<p>Capture SHA-256:
+<code>1fa4ff34d982b6ba10dec8a86df99567c7982b77a57dcbc7c47c6a497b276919</code>;
+captured 2026-11-25T06:25:05.277320+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-anthropic-science-claude-shaped-science">ai-src-anthropic-science
+— Claude-shaped science</h3>
+<p>Matthew Schwartz, guest author; Anthropic host; 2026; Captured
+current page; exact byte identity retained</p>
+<p><a href="https://www.anthropic.com/research/claude-shaped-science"
+class="uri">https://www.anthropic.com/research/claude-shaped-science</a></p>
+<p><strong>Source class</strong>: official-announcement</p>
+<p><strong>Status / reading depth</strong>: selected-text; Selected
+sections read; no comprehensive proof audit.</p>
+<p><strong>Sections inspected</strong>: BootLoops workflow and
+guest-author account of research assistance</p>
+<p><strong>Supported claim</strong>: Describes scientist-guided tools,
+expert consultation and cross-domain exploration rather than a clean
+theorem benchmark.</p>
+<p><strong>Limitations</strong>: Not entered as a verified new
+mathematical theorem; source role differs from Anthropic’s independent
+First Proof participation.</p>
+<p><strong>research-note</strong>: Describes scientist-guided tools,
+expert consultation and cross-domain exploration rather than a clean
+theorem benchmark.</p>
+<p>Capture SHA-256:
+<code>01c68aba6aaf550ce1b1bdff1cdb61ca6da667d4df0d0642afac007794f96c8b</code>;
+captured 2026-11-25T06:25:36.861156+00:00. Raw full text remains a
+private research capture; this package supplies bounded notes and
+original-source links.</p>
+<h3
+id="ai-src-erdos183-erdős-problem183-direct-database-page">ai-src-erdos183
+— Erdős problem183 direct database page</h3>
+<p>Erdős Problems maintainers; None; Direct retrieval unsuccessful</p>
+<p><a href="https://www.erdosproblems.com/183"
+class="uri">https://www.erdosproblems.com/183</a></p>
+<p><strong>Source class</strong>: problem-record</p>
+<p><strong>Status / reading depth</strong>: inaccessible-lead; Not read:
+HTTP403</p>
+<p><strong>Sections inspected</strong>:</p>
+<p><strong>Supported claim</strong>: Direct current database
+verification remains a lead.</p>
+<p><strong>Limitations</strong>: HTTP403; cannot independently certify
+current problem status from this page.</p>
+<p><strong>research-note</strong>: Kept as a blocked provenance lead;
+OpenAI attribution is separately recorded.</p>
+<p>Capture SHA-256: <code>None</code>; captured None. Raw full text
+remains a private research capture; this package supplies bounded notes
+and original-source links.</p>
+</body>
+</html>

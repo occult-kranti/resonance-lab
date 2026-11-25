@@ -1,0 +1,155 @@
+domain,term,definition
+electrostatics,SI,"International System of Units; all numerical examples convert lengths, charge and energy consistently."
+electrostatics,PB,"Poisson–Boltzmann, an equilibrium mean-field equation for ideal mobile ions."
+electrostatics,DOS,Density of electronic states per specified energy and area; units must distinguish joules from electronvolts.
+electrostatics,DFT,"Density-functional theory; here electronic or classical fluid free-energy modeling, not a guarantee of exact material behavior."
+electrostatics,KPFM,Kelvin probe force microscopy; contact-potential inference through a calibrated force/electrostatic transfer model.
+electrostatics,FEM,Finite-element method; a weak-form discretization with explicit boundary data.
+electrostatics,BEM,Boundary-element method; integral equations on interfaces with singular-kernel/jump conventions.
+electrostatics,Ewald,An exact long-range splitting plus boundary-dependent periodic summation machinery.
+electrostatics,CPD,Contact-potential difference; polarity depends on tip/sample voltage convention.
+electrostatics,Matsubara,Discrete imaginary-frequency representation of thermal field fluctuations; zero frequency is one sector.
+electrostatics,Free charge,Charge treated as an independently specified mobile or electrode source in the macroscopic constitutive model.
+electrostatics,Bound charge,Macroscopic charge associated with the divergence and termination of polarization.
+electrostatics,Negative capacitance,"A negative differential voltage/charge slope whose ensemble, dynamics and whole-system stability must be declared."
+electrostatics,Quantum capacitance,"The electronic compressibility contribution to charging, distinct from geometry and ion adsorption."
+electrostatics,Gauge,An unobservable additive potential constant in electrostatics unless a reference is fixed.
+electrostatics,Equivalence,"A conclusion requiring a prespecified meaningful margin and statistical/uncertainty procedure, not merely failure to detect a difference."
+magnetism,B versus H,B is magnetic induction in tesla; H is field intensity in ampere per metre. B=mu0(H+M) does not by itself assume a linear material.
+magnetism,SI,"International System of Units. The revised SI fixes h and e, while mu0 is experimentally inferred."
+magnetism,FM / AFM / ferrimagnet,Ferromagnetic / antiferromagnetic / unequal opposing sublattice order; net moment alone does not specify a magnetic phase.
+magnetism,Néel vector,An antiferromagnetic sublattice-difference order parameter; its normalization must be declared.
+magnetism,MQS,Magnetoquasistatic approximation: retain induction while neglecting displacement current only under an appropriate scale analysis.
+magnetism,DMI,"Dzyaloshinskii–Moriya interaction, an antisymmetric exchange contribution allowed by appropriate inversion-symmetry breaking."
+magnetism,LLG,Landau–Lifshitz–Gilbert dynamics. Signed gyromagnetic conventions and B-versus-H choices must remain consistent.
+magnetism,SOT / STT,Spin–orbit torque / spin-transfer torque. Both require an angular-momentum source and a complete electrical/thermal budget.
+magnetism,DFT / GGA / meta-GGA / U,"Density functional theory and increasingly structured exchange-correlation approximations; Hubbard U is an additional model parameter, not an automatic measured constant."
+magnetism,NV,"Nitrogen-vacancy center in diamond; an orientation-dependent spin sensor with its own Hamiltonian, calibration and bandwidth."
+magnetism,QSL,"Quantum spin liquid: a proposed quantum phase requiring positive diagnostic evidence, not simply lack of observed order."
+magnetism,Moiré,A long-period interference/registry pattern from lattice mismatch or twist; magnetic exchange depends on the actual relaxed structure.
+magnetism,PT,Combined spatial inversion and time-reversal symmetry; neither a generic claim of magnetic absence nor a universal spin-degeneracy rule without the full symmetry setting.
+magnetism,Magnon,"A spin-wave excitation. A mode frequency, a driven resonance peak and a sensor spectral peak are different quantities."
+magnetism,GL,"Ginzburg–Landau coarse-grained order-parameter theory, especially controlled near a transition under its assumptions."
+magnetism,Passivity,A system cannot deliver more energy than supplied plus initially stored energy over its stated ports and time window.
+magnetism,Verification versus validation,Verification checks implementation against a mathematical model; validation tests whether that model predicts the measured physical system.
+magnetism,Read-depth status,"Abstract-only, selected text and metadata identify different evidence levels; a source hash proves identity, not truth."
+magnetism,Uncertainty versus tolerance,"A statistical standard uncertainty, a deterministic numerical error bound and an assumed manufacturing tolerance are distinct."
+magnetism,Spin versus orbital angular momentum,Different contributions to angular-momentum transport can produce similar electrical/THz signals; a channel model is required.
+magnetism,Fluxoid,Magnetic flux plus a supercurrent term; it is not always identical to magnetic flux through a loop.
+gravity,GR,"General relativity, a classical metric theory with stated matter coupling."
+gravity,PPN,Parameterized post-Newtonian framework for weak-field metric comparisons.
+gravity,FLRW,Friedmann–Lemaître–Robertson–Walker homogeneous/isotropic background.
+gravity,BAO,"Baryon acoustic oscillations, a statistical clustering-distance ruler."
+gravity,CMB,Cosmic microwave background; likelihood constraints depend on a cosmological model.
+gravity,DESI,Dark Energy Spectroscopic Instrument survey. DR1 andDR2refer to distinct observation/release analyses.
+gravity,PTA,"Pulsar timing array, a network of astronomical clocks probing low-frequency correlations."
+gravity,EHT,Event Horizon Telescope very-long-baseline interferometric imaging collaboration.
+gravity,GWOSC,Gravitational Wave Open Science Center; data are not automatically cleaned measurements of everymodelparameter.
+gravity,TT,Transverse-traceless projection defined relative to a propagation direction/background.
+gravity,QNM,Quasinormalmode with specified outgoing/ingoingboundaryconditions andcomplexfrequency.
+gravity,ISCO,Innermost stable circular orbit under a specified spacetime andtest-particlemodel.
+gravity,EFT,"Effective field theory, a scale-separated expansion with matchedcoefficients andcontrolleddomain."
+gravity,AdS/CFT,"Anti-de Sitter/conformal-field-theory correspondence in specified regimes, not a generic measureduniverseidentity."
+gravity,LQG,"Loop quantum gravity; kinematics,physicalconstraints andsemiclassicallimits require separateevidence."
+gravity,WEP,Weak equivalenceprinciple concerning universaltest-bodyfreefall.
+gravity,SOTA,"State of the art; this atlas provides a dated selectedcorpus, not an exhaustive latestsurvey."
+gravity,Sigma,A model-dependent tail or Gaussian-equivalent shorthand; not probability a theory istrue.
+gravity,x0=ct,Timecoordinate expressed as a length; cosmicproper time is still measured inseconds.
+gravity,Mass versusenergy density,rho haskg/m³ while epsilon hasJ/m³. They differ byc² only in the appropriate rest-energy relation.
+gravity,Curvatureconvention,R^rho_sigmamunu=partial_muGamma^rho_nusigma-partial_nuGamma^rho_musigma+Gamma^rho_mulambdaGamma^lambda_nusigma-Gamma^rho_nulambdaGamma^lambda_musigma; Ricci=R^rho_sigmarhonu.
+gravity,Geometricunits,SettingG=c=1 changes unit representation; it does not erase dimensions or identify mass anddistance without conversion.
+frequency,SI,International System of Units; exact defining constants do not eliminate realization uncertainty.
+frequency,Hz,"Hertz: cycles per second; SI dimension s⁻¹, retaining the cycle convention."
+frequency,rad/s,"Radians per second; angular frequency, differing from Hz by 2π."
+frequency,DFT,Discrete Fourier transform: finite invertible coordinate transform.
+frequency,FFT,Fast Fourier transform: an algorithm for evaluating a DFT.
+frequency,PSD,"Power spectral density: signal squared per Hz, with an explicit estimator/reference."
+frequency,STFT,Short-time Fourier transform using a declared sliding analysis window.
+frequency,CWT,Continuous wavelet transform; scale-to-frequency depends on the chosen wavelet.
+frequency,LTI,Linear time-invariant model; neither linearity nor invariance is automatic in living or driven systems.
+frequency,Q,"Quality factor; energy-loss or linewidth convention must be stated, including loading."
+frequency,FWHM,Full width at half maximum; specify whether the curve is amplitude or power.
+frequency,VUV,"Vacuum ultraviolet electromagnetic radiation, distinct from acoustic ultrasound."
+frequency,CEO,Carrier-envelope offset of a frequency comb; not the pulse repetition frequency.
+frequency,TOF,Time of flight; an elapsed propagation-time measurement with channel and path assumptions.
+frequency,Rabi spectroscopy,"Quantum transition probing by coherent driving; a method, not automatic clock stabilization."
+frequency,Dick effect,Aliasing of local-oscillator noise through intermittent clock interrogation.
+frequency,Allan deviation,Square root of Allan variance at a stated averaging time; stability is not accuracy.
+frequency,i,Imaginary unit satisfying i²=−1; never automatically electric current.
+frequency,star / asterisk,Complex conjugation in the CWT; convolution uses the separately declared binary star.
+frequency,δ / Δ,"Change, offset, linewidth or uncertainty as explicitly defined locally; no single global meaning."
+frequency,mode,A solution shape/eigenvalue of a specified dynamical boundary problem; not any visually similar pattern.
+frequency,carrier,Fast oscillatory component distinguished from modulation and from a measured brain rhythm.
+frequency,loaded Q,"Q including energy escape into source, sensor and other coupled ports."
+frequency,accuracy,"Closeness of measurement to reference truth, assessed through a defensible uncertainty framework; distinct from stability."
+frequency,isomer,"A metastable nuclear excited state, not a chemical isomer in this context."
+frequency,HWHM,"Half-width at half-maximum: half the full width; specify whether the curve is amplitude, power or an excitation probability."
+frequency,BBR,"Blackbody-radiation shift; temperature-dependent perturbation of a clock transition, with an environmental/view-factor model."
+mathematics,field,A commutative ring in which every nonzero element is invertible.
+mathematics,ring,An additive abelian group with distributive multiplication; identity and commutativity are stated when needed.
+mathematics,kernel,Elements mapped to zero/identity; a source of nonunique inverse reconstruction.
+mathematics,normal,For matrices: commuting with the adjoint. For subgroups: invariant under conjugation. These meanings are distinct.
+mathematics,a.e.,Almost everywhere: outside a set of measure zero for the named measure.
+mathematics,IID,Independent and identically distributed.
+mathematics,ODE,"Ordinary differential equation, with one evolution parameter."
+mathematics,PDE,"Partial differential equation, with derivatives in multiple independent coordinates."
+mathematics,SVD,Singular-value decomposition with nonnegative singular values.
+mathematics,FFT,"Fast Fourier transform, an algorithm for a discrete transform with specified normalization and sampling."
+mathematics,CW complex,A topological space built by attaching cells; the letters historically denote closure-finite and weak topology.
+mathematics,L2,"Square-integrable functions modulo equality almost everywhere, with the chosen measure."
+mathematics,C1/C2,Continuously differentiable once/twice.
+mathematics,Hilbert space,A complete inner-product vector space.
+mathematics,Banach space,A complete normed vector space.
+mathematics,coercive,A quadratic/bilinear form bounded below by a positive constant times the norm squared.
+mathematics,functor,A map of categories preserving identities and composition.
+mathematics,natural transformation,A compatible family of maps between functors.
+mathematics,sheaf,Local data with unique compatible gluing.
+mathematics,scheme,A locally ringed space locally isomorphic to a prime spectrum; not merely a plot of polynomial zeros.
+mathematics,Hausdorff dimension,A scale-dependent measure-theoretic dimension defined through covers.
+mathematics,Minkowski dimension,A covering-number scaling dimension; upper/lower versions may differ.
+mathematics,Kakeya set,A subset of Euclidean space containing a unit line segment in every direction.
+mathematics,Galois,A field extension that is normal and separable in the finite correspondence used here.
+mathematics,characteristic,"The least positive number of copies of1 summing to0, or0 if none."
+mathematics,Itô integral,"A stochastic integral against Brownian motion defined by adapted approximation and an L2 isometry, then localization."
+mathematics,quadratic variation,Limit of squared increments; Brownian motion has quadratic variation t.
+mathematics,weak convergence,A topology-dependent convergence notion; it must not be silently substituted for norm or pointwise convergence.
+mathematics,quasi-isomorphism,A chain map inducing isomorphisms on homology.
+mathematics,deRham,"The differential-form formulation of cohomology or, separately, a characteristic-zero connection setting; context fixes the meaning."
+mathematics,Betti,"Topological/sheaf-theoretic terminology, not a synonym for a metric measurement."
+mathematics,Boltzmann–Grad scaling,A dilute hard-particle limit with particle count and radius linked to retain collision frequency; not a generic thermodynamic limit.
+mathematics,Knudsen number,Ratio of mean free path to a macroscopic length in a kinetic model.
+mathematics,trusted kernel,The small rule-checking component of a proof assistant; mathematical interpretation and trusted axioms remain separate obligations.
+mathematics,DOI,"Digital Object Identifier; provenance identifier, not proof of correctness."
+mathematics,arXiv,A preprint repository; versions and review status must be tracked separately.
+mathematics,nondimensional,A mathematical normalization with no physical units until an explicit scale map is supplied.
+ai-mathematics,LLM,"Large language model: a text-generating model, not itself a proof certificate."
+ai-mathematics,NAG,Nesterov accelerated gradient; algorithm schedules and problem hypotheses must be specified.
+ai-mathematics,MLE,Maximum likelihood estimator; parameter maximizing the observed-data likelihood.
+ai-mathematics,KL,"Kullback–Leibler divergence; directional expected log likelihood ratio, not a symmetric distance."
+ai-mathematics,IID,Independent and identically distributed observations.
+ai-mathematics,Lean,A proof assistant with a small trusted kernel; source code is not a successful checking receipt.
+ai-mathematics,Lake,"Lean project/build manager, with dependency/toolchain configuration."
+ai-mathematics,Comparator,Artifact described in linked instructions for additional theorem/statement checking; not executed here.
+ai-mathematics,Axiom,An assumed statement; consistency and intended interpretation limit the scope of a checked proof.
+ai-mathematics,sorry,Lean placeholder that can admit a proposition; absence must be checked in the relevant dependency closure.
+ai-mathematics,Harness,"Software orchestrating model calls, tools and stopping; not interchangeable with the underlying model."
+ai-mathematics,IMO,International Mathematical Olympiad; contest problems and medal-level scores do not imply new theorems.
+ai-mathematics,AIME,"American Invitational Mathematics Examination; a short-answer benchmark when reused in model evaluation, not a new-theorem collection."
+ai-mathematics,FrontierMath,"Program with separately specified tiered answer tasks, open-problem tasks and formal Erdős tasks."
+ai-mathematics,PSD,Positive semidefinite; a symmetric matrix has nonnegative quadratic form for every real vector.
+ai-mathematics,CP-ALS,CANDECOMP/PARAFAC tensor decomposition by alternating least squares.
+ai-mathematics,PCG,"Preconditioned conjugate gradient, an iterative linear solver requiring suitable definiteness hypotheses."
+ai-mathematics,RKHS,Reproducing kernel Hilbert space; a function space whose evaluation is represented by a kernel.
+ai-mathematics,Zariski-generic,Away from specified algebraic exceptional sets; not simply a random numerical example.
+ai-mathematics,Sofic,Admitting finite permutation approximations in the specified asymptotic sense.
+ai-mathematics,Hyperfield,Field-like algebra with multivalued addition; ordinary polynomial identities need not transfer as naive implications.
+ai-mathematics,Ramsey number,Smallest complete-graph size forcing a monochromatic structure under every allowed edge coloring.
+ai-mathematics,Arithmetic circuit,An algebraic computation graph; different from a Boolean circuit or a formula with no shared subcomputations.
+ai-mathematics,Strongly polynomial,"An algorithmic complexity notion controlling arithmetic-operation count independently of input coefficient bit magnitudes, with additional size requirements."
+ai-mathematics,ω,"Matrix multiplication exponent, an infimum of feasible arithmetic asymptotic exponents; equality needs both upper and lower reasoning."
+ai-mathematics,Preprint,Public manuscript without an implied completed journal review.
+ai-mathematics,Independent evidence,"A review or experiment with a distinct evidential role; company hosting, expert fame or institutional funding alone does not certify a result."
+ai-mathematics,Read depth,Precisely which sections were inspected; download size does not measure review completeness.
+ai-mathematics,GL_r(F),"Group of invertible r×r matrices over fieldF; N_r is its upper-triangular unipotent subgroup, with diagonal entries1."
+ai-mathematics,Whittaker model,A realization of a generic representation by functions with specified character equivariance under a unipotent subgroup; its character and representation hypotheses are part of First ProofProblem2.
+ai-mathematics,Non-archimedean local field,A locally compact field with a non-archimedean valuation; its ring of integers and conductor ideals enter the local Rankin–Selberg question.

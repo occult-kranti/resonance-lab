@@ -1,0 +1,287 @@
+[
+  {
+    "source": "es-f03",
+    "target": "math-f-stokes",
+    "type": "requires",
+    "label": "Integral and differential flux forms use Stokes/divergence reasoning plus the separately stated physical Gauss law.",
+    "evidenceSourceIds": [
+      "es-mit-gauss",
+      "math-hatcher"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "grav-f-poisson",
+    "target": "es-f05",
+    "type": "compares",
+    "label": "Shared elliptic operator structure, with different source signs, coupling constants and material assumptions; this is not a force-unification claim.",
+    "evidenceSourceIds": [
+      "grav-src-carroll",
+      "es-tong-matter",
+      "es-fenics"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "es-f37",
+    "target": "math-variational",
+    "type": "requires",
+    "label": "Weak electric boundary-value formulations require function spaces, traces and boundary hypotheses.",
+    "evidenceSourceIds": [
+      "es-fenics",
+      "math-lebl"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "es-f38",
+    "target": "math-variational",
+    "type": "requires",
+    "label": "Variational electrostatics uses a functional with specified boundary data; stationarity and stability are distinct.",
+    "evidenceSourceIds": [
+      "es-fenics",
+      "math-lebl"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "es-f11",
+    "target": "math-f-rank-nullity",
+    "type": "requires",
+    "label": "Capacitance and inverse maps require a stated reference/gauge and full domain dimension.",
+    "evidenceSourceIds": [
+      "es-mit-capacitance",
+      "math-axler"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "mag-f-height",
+    "target": "freq-fourier",
+    "type": "requires",
+    "label": "Spatial Fourier propagation filters high wave numbers; the inverse loses information under finite height/noise assumptions.",
+    "evidenceSourceIds": [
+      "mag-src-inverse-nv",
+      "freq-numpy-fft",
+      "freq-sympy-laplace"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "freq-modes",
+    "target": "math-f-spectral-matrix",
+    "type": "requires",
+    "label": "Finite normal modes use a spectral problem with mass/stiffness assumptions; arbitrary matrices need not have the same orthogonal structure.",
+    "evidenceSourceIds": [
+      "freq-feynman-oscillator",
+      "math-axler"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "grav-f-geodesic",
+    "target": "math-f-geodesic",
+    "type": "compares",
+    "label": "Shared geometric equation, with Lorentzian versus Riemannian assumptions and affine/proper-time distinctions.",
+    "evidenceSourceIds": [
+      "grav-src-carroll",
+      "math-tong-gr",
+      "math-mit-surfaces"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "grav-f-riemann",
+    "target": "math-curvature",
+    "type": "requires",
+    "label": "Curvature needs a chart, metric, connection and an explicit sign convention.",
+    "evidenceSourceIds": [
+      "grav-src-carroll",
+      "math-hatcher"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "grav-f-fluid",
+    "target": "mag-f-density",
+    "type": "compares",
+    "label": "Electromagnetic energy contributes to stress-energy in relativistic theory; a vacuum magnetic density is not a perfect-fluid equation of state.",
+    "evidenceSourceIds": [
+      "grav-src-carroll",
+      "mag-src-mit-energy"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "freq-covariance",
+    "target": "es-f42",
+    "type": "compares",
+    "label": "Both propagate covariance under a local linearization; correlation and model uncertainty remain separate.",
+    "evidenceSourceIds": [
+      "freq-nist-stability",
+      "es-gum"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "freq-fourier",
+    "target": "math-harmonic-analysis",
+    "type": "requires",
+    "label": "Integral transforms require a stated convention and function/distribution domain.",
+    "evidenceSourceIds": [
+      "freq-numpy-fft",
+      "freq-sympy-laplace",
+      "math-lebl"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "freq-laplace",
+    "target": "math-convergence",
+    "type": "requires",
+    "label": "Transform convergence regions are hypotheses, not automatic consequences of symbolic notation.",
+    "evidenceSourceIds": [
+      "freq-sympy-laplace",
+      "math-lebl"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "freq-photon",
+    "target": "mag-f-maxwell",
+    "type": "compares",
+    "label": "A quantum energy/frequency relation and a classical field equation describe different levels of a model; an explicit bridge is required.",
+    "evidenceSourceIds": [
+      "freq-si-brochure",
+      "freq-thorium-ratio-2024",
+      "mag-src-mit-energy"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "math-proof-assistants",
+    "target": "ai-src-ten-certificate",
+    "type": "compares",
+    "label": "A retrieved proof file is an artifact to inspect; this corpus does not claim the external Lean certificate was executed.",
+    "evidenceSourceIds": [
+      "math-milne-gt",
+      "ai-src-ten-certificate"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "math-geometric-langlands",
+    "target": "ai-src-math-history",
+    "type": "compares",
+    "label": "Research claims and correction histories require exact theorem scope; a family title is not a proof certificate.",
+    "evidenceSourceIds": [
+      "math-langlands",
+      "ai-src-math-history"
+    ],
+    "editorialRelation": true,
+    "scope": "A source-linked didactic comparison selected by the editor, not an additional physical measurement or a claim that the cited authors proposed every cross-field connection."
+  },
+  {
+    "source": "es-field",
+    "target": "math-calculus",
+    "type": "requires",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected electrostatics models and research claims.",
+    "evidenceSourceIds": [
+      "es-mit-gauss"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  },
+  {
+    "source": "mag-root",
+    "target": "math-algebra",
+    "type": "requires",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected magnetism models and research claims.",
+    "evidenceSourceIds": [
+      "mag-src-mit-energy"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  },
+  {
+    "source": "mag-root",
+    "target": "math-calculus",
+    "type": "requires",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected magnetism models and research claims.",
+    "evidenceSourceIds": [
+      "mag-src-mit-energy"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  },
+  {
+    "source": "grav-root",
+    "target": "math-geometry",
+    "type": "requires",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected gravity models and research claims.",
+    "evidenceSourceIds": [
+      "grav-src-carroll"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  },
+  {
+    "source": "grav-root",
+    "target": "math-calculus",
+    "type": "requires",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected gravity models and research claims.",
+    "evidenceSourceIds": [
+      "grav-src-carroll"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  },
+  {
+    "source": "freq-root",
+    "target": "math-algebra",
+    "type": "requires",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected frequency models and research claims.",
+    "evidenceSourceIds": [
+      "freq-si-brochure"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  },
+  {
+    "source": "freq-root",
+    "target": "math-calculus",
+    "type": "requires",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected frequency models and research claims.",
+    "evidenceSourceIds": [
+      "freq-si-brochure"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  },
+  {
+    "source": "ai-root",
+    "target": "math-algebra",
+    "type": "compares",
+    "label": "Curriculum bridge: read the named mathematical foundations before the selected ai-mathematics models and research claims.",
+    "evidenceSourceIds": [
+      "ai-src-firstproof"
+    ],
+    "editorialRelation": true,
+    "scope": "A learning prerequisite/comparison, not a claim of physical causation, theory unification or automated proof of an entire field."
+  }
+]
