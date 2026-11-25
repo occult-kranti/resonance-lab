@@ -1,14 +1,14 @@
 {
   "schema": "resonance-pages-publication/v1",
-  "generatedAt": "2026-11-17T15:26:18.002Z",
+  "generatedAt": "2026-11-25T07:36:05.576659+00:00",
   "base": "/resonance-lab/",
   "mode": "static-snapshot",
   "packager": {
     "path": "scripts/prepare-pages.mjs",
     "sha256": "0708e481956fb1c5165761ed0dfd9f30d3e850e1ae4d1cf03080e82d1c2362bb"
   },
-  "files": 3951,
-  "totalBytes": 650350897,
+  "files": 4122,
+  "totalBytes": 714839972,
   "bridgeCopies": 13,
   "rebasedTextFiles": 15,
   "adapters": [
@@ -299,6 +299,11 @@
       "sha256": "f6a4e229a0b3844084fa09348258ac50035c60e54536f5f384276344784b45c1"
     },
     {
+      "path": "apps/astrology-sim-ant/assets/data/horizon-2031-manifest.json",
+      "bytes": 141307,
+      "sha256": "37bd6b10ccc864c0939291f1e54f03353cbb4300230c9e33362721a81598ff3a"
+    },
+    {
       "path": "apps/astrology-sim-ant/assets/data/horizon-2031/astronomy.json",
       "bytes": 5867983,
       "sha256": "217de55190648e5bbeaa16657d5e85c71de0476cf3122f189ef6b61fa35bfcea"
@@ -317,11 +322,6 @@
       "path": "apps/astrology-sim-ant/assets/data/horizon-2031/case-new-york.json",
       "bytes": 9724490,
       "sha256": "7dcb16a28df4eded6f1a9d47a0c6d62e6189eaf69e108781f2e8a109dc6c6832"
-    },
-    {
-      "path": "apps/astrology-sim-ant/assets/data/horizon-2031-manifest.json",
-      "bytes": 141307,
-      "sha256": "37bd6b10ccc864c0939291f1e54f03353cbb4300230c9e33362721a81598ff3a"
     },
     {
       "path": "apps/astrology-sim-ant/assets/data/mcp-catalogue.json",
@@ -3424,31 +3424,6 @@
       "sha256": "817d38958e4ad4e54a7cb765f77348dd2a2bd75559619cb8ddf684a00b6b8227"
     },
     {
-      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/calculator-1440.png",
-      "bytes": 87856,
-      "sha256": "b989a44c8532f7f3bb83d6fa1098c837b92c34a4c5765f3af5079cbdcbb04c52"
-    },
-    {
-      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/calculator-390.png",
-      "bytes": 42764,
-      "sha256": "8f5b3e3a3d0ba67a59fd94b92738cc449e53a1b12bdc1f344b48850f884ae252"
-    },
-    {
-      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/page-1440.png",
-      "bytes": 90505,
-      "sha256": "86b971412f30d3f7d987d323b240b3f80d15c2aa94cea5e9310c751eb010ced4"
-    },
-    {
-      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/page-390.png",
-      "bytes": 52415,
-      "sha256": "c087ea135bf21bd28b77ebde3d3f8bef5da0631d01f21cf08268075471648be3"
-    },
-    {
-      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/report.json",
-      "bytes": 517,
-      "sha256": "f14a6be531428630c638b957f0408736710b5a029d87c8dd965880bece102e96"
-    },
-    {
       "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser-round3/calculator-1440.png",
       "bytes": 88034,
       "sha256": "3c822177e01fe25d1d50c3f7efb8fa89a5e93608634f5eb1fcd9b7354da19be7"
@@ -3482,6 +3457,31 @@
       "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser-round3/report.json",
       "bytes": 731,
       "sha256": "2b1a1e59923d6873abe1d6d8a838ab141ccd899082385b0713bdf332541d3632"
+    },
+    {
+      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/calculator-1440.png",
+      "bytes": 87856,
+      "sha256": "b989a44c8532f7f3bb83d6fa1098c837b92c34a4c5765f3af5079cbdcbb04c52"
+    },
+    {
+      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/calculator-390.png",
+      "bytes": 42764,
+      "sha256": "8f5b3e3a3d0ba67a59fd94b92738cc449e53a1b12bdc1f344b48850f884ae252"
+    },
+    {
+      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/page-1440.png",
+      "bytes": 90505,
+      "sha256": "86b971412f30d3f7d987d323b240b3f80d15c2aa94cea5e9310c751eb010ced4"
+    },
+    {
+      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/page-390.png",
+      "bytes": 52415,
+      "sha256": "c087ea135bf21bd28b77ebde3d3f8bef5da0631d01f21cf08268075471648be3"
+    },
+    {
+      "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/browser/report.json",
+      "bytes": 517,
+      "sha256": "f14a6be531428630c638b957f0408736710b5a029d87c8dd965880bece102e96"
     },
     {
       "path": "apps/brainwave_opensync/energy-observatory/research/dephasing-work-bound/panel/workflow/round1.md",
@@ -4489,6 +4489,11 @@
       "sha256": "fd9f186717ca229b11c7f1cde50c6925db47aaafba999a37f74ae7debd11e6db"
     },
     {
+      "path": "apps/brainwave_opensync/energy-observatory/research/release-math-roadmap.json",
+      "bytes": 1735,
+      "sha256": "50209c45f5ac63a5ffbbc82fae2bfc74cba96e2ddbe90c5fec408a730f46ec62"
+    },
+    {
       "path": "apps/brainwave_opensync/energy-observatory/research/release/browser-check.json",
       "bytes": 1128,
       "sha256": "9218d46fa83f38a27f9c0ebc1a99b49bb95a379b37f642dc69c5d023473a1a57"
@@ -4512,11 +4517,6 @@
       "path": "apps/brainwave_opensync/energy-observatory/research/release/source-archive-check.json",
       "bytes": 178,
       "sha256": "56c1a604c05d04ff75abeb9964c014681ca3223d9b12baddc490c3fcd46ee7a0"
-    },
-    {
-      "path": "apps/brainwave_opensync/energy-observatory/research/release-math-roadmap.json",
-      "bytes": 1735,
-      "sha256": "50209c45f5ac63a5ffbbc82fae2bfc74cba96e2ddbe90c5fec408a730f46ec62"
     },
     {
       "path": "apps/brainwave_opensync/energy-observatory/research/roadmap-update-2026-10-22/advisor-plan1.md",
@@ -6469,6 +6469,11 @@
       "sha256": "56bca068f2364df948653c2d9f3beaf657ecee498b558e30da45ef32ac92a1ff"
     },
     {
+      "path": "apps/brainwave_opensync/energy-observatory/versions.html",
+      "bytes": 3572,
+      "sha256": "9fc61fa9793c9b628d98003373fe69e22bb1516e377367cc406ba97282bfa02f"
+    },
+    {
       "path": "apps/brainwave_opensync/energy-observatory/versions/index.html",
       "bytes": 210,
       "sha256": "087e463abdac5cbcee436a37bf04fa72361c002f4bc838f66251a0e378b6b2e9"
@@ -7367,11 +7372,6 @@
       "path": "apps/brainwave_opensync/energy-observatory/versions/position-v1.0/src/styles.css",
       "bytes": 15784,
       "sha256": "990af679031ccdeaa51903630e5a93dfd1c680d326a05db7dd1746393f041ba0"
-    },
-    {
-      "path": "apps/brainwave_opensync/energy-observatory/versions.html",
-      "bytes": 3572,
-      "sha256": "9fc61fa9793c9b628d98003373fe69e22bb1516e377367cc406ba97282bfa02f"
     },
     {
       "path": "apps/brainwave_opensync/energy-observatory/workbench.html",
@@ -9144,6 +9144,21 @@
       "sha256": "5317fc8f7edd3a2d9851a83f892ba47b0f42a5d58c97f2bda67794c299918d92"
     },
     {
+      "path": "apps/crop-circle-pattern-lab/assets/studio-start.js",
+      "bytes": 716,
+      "sha256": "2c49b5149aa644db19ee996ecdf25e6cdd6a00aea910f73753a8c5fab40e47f9"
+    },
+    {
+      "path": "apps/crop-circle-pattern-lab/assets/studio.js.parts/part_000",
+      "bytes": 9000,
+      "sha256": "80fb062568855096dbf441439f5538504bf3bfe5f66ad6f56d8f19cc75a7db81"
+    },
+    {
+      "path": "apps/crop-circle-pattern-lab/assets/studio.js.parts/part_001",
+      "bytes": 6521,
+      "sha256": "98e65b8d7997965015448b230849efbee08482f22c645863d08f540c205f20d1"
+    },
+    {
       "path": "apps/crop-circle-pattern-lab/assets/studio/chartres_rose.jpg.b64.parts/part_000",
       "bytes": 9000,
       "sha256": "727e0bece2a5da63632f9ddc02ac24b4bef223b9da9e3246ce27f7e4628ae8aa"
@@ -9472,21 +9487,6 @@
       "path": "apps/crop-circle-pattern-lab/assets/studio/stonehenge.jpg.b64.parts/part_002",
       "bytes": 8071,
       "sha256": "09011df15dfc7eb0bcfd7413cdb44143522bd0cbbf82388e5aec39f0f0dacfcc"
-    },
-    {
-      "path": "apps/crop-circle-pattern-lab/assets/studio-start.js",
-      "bytes": 716,
-      "sha256": "2c49b5149aa644db19ee996ecdf25e6cdd6a00aea910f73753a8c5fab40e47f9"
-    },
-    {
-      "path": "apps/crop-circle-pattern-lab/assets/studio.js.parts/part_000",
-      "bytes": 9000,
-      "sha256": "80fb062568855096dbf441439f5538504bf3bfe5f66ad6f56d8f19cc75a7db81"
-    },
-    {
-      "path": "apps/crop-circle-pattern-lab/assets/studio.js.parts/part_001",
-      "bytes": 6521,
-      "sha256": "98e65b8d7997965015448b230849efbee08482f22c645863d08f540c205f20d1"
     },
     {
       "path": "apps/crop-circle-pattern-lab/assets/studio_data.js",
@@ -11069,106 +11069,6 @@
       "sha256": "39f0b1cd52bcb741da4b440a78573cfbed252055bb75e9afc5a8ca7c426df052"
     },
     {
-      "path": "apps/resonance-research-atlas/docs/panel/advisor-round1.md",
-      "bytes": 11595,
-      "sha256": "0eb03ad58a62cb085695138138a7856fd093b68eaef9fab5e9e2c6abb017eedb"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/advisor-round2.md",
-      "bytes": 5717,
-      "sha256": "cd982aee0a904cbcda80bfb9476020f44799766fe2401f2e36f6c72bac2dcb8f"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/advisor-round3.md",
-      "bytes": 3495,
-      "sha256": "0f177a17c72ba3f530196d678e9819a7b55ccf197a3b7e90672c582a5079addf"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/advisor-round4.md",
-      "bytes": 3251,
-      "sha256": "4c2c0e5ee42bfe06c1bc728853352aba01ec577be0dd5afceda4f06d7b6b410b"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/advisor-round5.md",
-      "bytes": 3132,
-      "sha256": "c76a45bbb02f4ccbf8e540bdcb490a8449976342aa70198f789d26501b3acfeb"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/advisor-round6.md",
-      "bytes": 4260,
-      "sha256": "e66bc702c2b6ddabac86aaf3dd1f18d8ba67a424ddd18349a5ab4534c84f2ff7"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/dream-review.md",
-      "bytes": 9411,
-      "sha256": "32b106a476198e7a3acb239dc9a8f67838277f6583f59c829084547e72c2d4ed"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/dream-sources.json",
-      "bytes": 2818,
-      "sha256": "a0314fc7a719f2ea764264b79dc673f3428c4e4ae5634a82025369cfc50aef54"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/dreams-preparation.md",
-      "bytes": 7108,
-      "sha256": "55e90e8125d48309a94e50f33ca0a8dc1b941a82297724aa04497363132237a7"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/history-inherited-audit.md",
-      "bytes": 8509,
-      "sha256": "73abd0c0904fc4e86e306a2fe9c72371290e2a13bd7cc952d3be2d79144f1b62"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/history-round1.md",
-      "bytes": 11818,
-      "sha256": "9f560471eeb967d5edeca430b96b8b3e82c5c4b125f930d0cf041c5acae7feec"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/repo-audit.md",
-      "bytes": 7063,
-      "sha256": "ab0031f0d0fcaec1037e62defe37d484c82e763a08a79b5c18e3ae3935b8afbc"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/six-round-extension.md",
-      "bytes": 3405,
-      "sha256": "70cfb117b300a0ef43312d286fdec7eba8d5787d1420115e1c011a151a7917d9"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/sources-dreams-advisor.json",
-      "bytes": 3814,
-      "sha256": "d4b56f559c804723157afa3141bbddee78cc6bfb2385bf8b86232aff33e9a559"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/sources-history.json",
-      "bytes": 14923,
-      "sha256": "6fbb33e5f097cbadce40dcb80d659629db29d1e9421e50b4e61d87023d8d560d"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/sources-tesla-phantom.json",
-      "bytes": 4317,
-      "sha256": "582695f9307d7ebdd2ca6779ab8f7bca8220f384d3dd5236cace7d0d13b7c024"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/sources-tesla.json",
-      "bytes": 18892,
-      "sha256": "fef14b157e91e6d63ff701846bf8638aa3036bbfd284fc31ebcbb577810d2bda"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/tesla-phantom-protocol.md",
-      "bytes": 13662,
-      "sha256": "70ad89349dd2f0a9aca22a8f99c6cadbeed06fddc1f252769f7dafa46b3c2f8c"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/tesla-round1.md",
-      "bytes": 14123,
-      "sha256": "83e7273ea4ad64ba7ef83a699a16d397387094df827d2ccd9c4ae21b3f417ef1"
-    },
-    {
-      "path": "apps/resonance-research-atlas/docs/panel/tesla-round2-reaction.md",
-      "bytes": 3125,
-      "sha256": "179943b50b43156afe42762a7ca0ceff391b15ff35cf616c201c59b607c056a5"
-    },
-    {
       "path": "apps/resonance-research-atlas/docs/panel-final-review.md",
       "bytes": 9156,
       "sha256": "c731885dee5a15f7b180b7ee30c8da3bb09d374aa8b0011f04348a4e5f5ae3c1"
@@ -11522,6 +11422,106 @@
       "path": "apps/resonance-research-atlas/docs/panel-v4/source-review.md",
       "bytes": 8846,
       "sha256": "62593d670de57ffd1cb22cd511b6083178029d51319c061565c5a32111e636a8"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/advisor-round1.md",
+      "bytes": 11595,
+      "sha256": "0eb03ad58a62cb085695138138a7856fd093b68eaef9fab5e9e2c6abb017eedb"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/advisor-round2.md",
+      "bytes": 5717,
+      "sha256": "cd982aee0a904cbcda80bfb9476020f44799766fe2401f2e36f6c72bac2dcb8f"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/advisor-round3.md",
+      "bytes": 3495,
+      "sha256": "0f177a17c72ba3f530196d678e9819a7b55ccf197a3b7e90672c582a5079addf"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/advisor-round4.md",
+      "bytes": 3251,
+      "sha256": "4c2c0e5ee42bfe06c1bc728853352aba01ec577be0dd5afceda4f06d7b6b410b"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/advisor-round5.md",
+      "bytes": 3132,
+      "sha256": "c76a45bbb02f4ccbf8e540bdcb490a8449976342aa70198f789d26501b3acfeb"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/advisor-round6.md",
+      "bytes": 4260,
+      "sha256": "e66bc702c2b6ddabac86aaf3dd1f18d8ba67a424ddd18349a5ab4534c84f2ff7"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/dream-review.md",
+      "bytes": 9411,
+      "sha256": "32b106a476198e7a3acb239dc9a8f67838277f6583f59c829084547e72c2d4ed"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/dream-sources.json",
+      "bytes": 2818,
+      "sha256": "a0314fc7a719f2ea764264b79dc673f3428c4e4ae5634a82025369cfc50aef54"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/dreams-preparation.md",
+      "bytes": 7108,
+      "sha256": "55e90e8125d48309a94e50f33ca0a8dc1b941a82297724aa04497363132237a7"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/history-inherited-audit.md",
+      "bytes": 8509,
+      "sha256": "73abd0c0904fc4e86e306a2fe9c72371290e2a13bd7cc952d3be2d79144f1b62"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/history-round1.md",
+      "bytes": 11818,
+      "sha256": "9f560471eeb967d5edeca430b96b8b3e82c5c4b125f930d0cf041c5acae7feec"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/repo-audit.md",
+      "bytes": 7063,
+      "sha256": "ab0031f0d0fcaec1037e62defe37d484c82e763a08a79b5c18e3ae3935b8afbc"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/six-round-extension.md",
+      "bytes": 3405,
+      "sha256": "70cfb117b300a0ef43312d286fdec7eba8d5787d1420115e1c011a151a7917d9"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/sources-dreams-advisor.json",
+      "bytes": 3814,
+      "sha256": "d4b56f559c804723157afa3141bbddee78cc6bfb2385bf8b86232aff33e9a559"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/sources-history.json",
+      "bytes": 14923,
+      "sha256": "6fbb33e5f097cbadce40dcb80d659629db29d1e9421e50b4e61d87023d8d560d"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/sources-tesla-phantom.json",
+      "bytes": 4317,
+      "sha256": "582695f9307d7ebdd2ca6779ab8f7bca8220f384d3dd5236cace7d0d13b7c024"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/sources-tesla.json",
+      "bytes": 18892,
+      "sha256": "fef14b157e91e6d63ff701846bf8638aa3036bbfd284fc31ebcbb577810d2bda"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/tesla-phantom-protocol.md",
+      "bytes": 13662,
+      "sha256": "70ad89349dd2f0a9aca22a8f99c6cadbeed06fddc1f252769f7dafa46b3c2f8c"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/tesla-round1.md",
+      "bytes": 14123,
+      "sha256": "83e7273ea4ad64ba7ef83a699a16d397387094df827d2ccd9c4ae21b3f417ef1"
+    },
+    {
+      "path": "apps/resonance-research-atlas/docs/panel/tesla-round2-reaction.md",
+      "bytes": 3125,
+      "sha256": "179943b50b43156afe42762a7ca0ceff391b15ff35cf616c201c59b607c056a5"
     },
     {
       "path": "apps/resonance-research-atlas/docs/release-verification.md",
@@ -14639,6 +14639,11 @@
       "sha256": "7ddad7243dc130e503253c145f261753b132808848a642beb06df601bf456b2a"
     },
     {
+      "path": "apps/resonance-research-atlas/research/nanoparticles/reviews/replay-verification.json",
+      "bytes": 1224,
+      "sha256": "c13295f74f77955f6b71ecb6c620bb0e1ea36ce297434677697e8cea82606c97"
+    },
+    {
       "path": "apps/resonance-research-atlas/research/nanoparticles/reviews/replay/review_n1.py",
       "bytes": 1958,
       "sha256": "5414cc1005fd18ab372e5cde8cf1de09fbcee7416516c818c58554d4517ea7dc"
@@ -14667,11 +14672,6 @@
       "path": "apps/resonance-research-atlas/research/nanoparticles/reviews/replay/review_n5_final.py",
       "bytes": 4078,
       "sha256": "74db2539dfbddff9057ac76f872a98228921c4d4e6f17255f2a75f83eedd2ae3"
-    },
-    {
-      "path": "apps/resonance-research-atlas/research/nanoparticles/reviews/replay-verification.json",
-      "bytes": 1224,
-      "sha256": "c13295f74f77955f6b71ecb6c620bb0e1ea36ce297434677697e8cea82606c97"
     },
     {
       "path": "apps/resonance-research-atlas/research/nanoparticles/round1/bibliographic-erratum.md",
@@ -18000,8 +18000,8 @@
     },
     {
       "path": "data/dashboard-release.json",
-      "bytes": 5265,
-      "sha256": "ea4bce4719a6ddb459da5eac703a3e1cfb20584c1940c206714b08c35cc01901"
+      "bytes": 5378,
+      "sha256": "b335f959ae15c332a8e7ea889c394aad0d12f204c969c8d474e017162d176000"
     },
     {
       "path": "data/patent-literature.json",
@@ -18052,6 +18052,16 @@
       "path": "panels/five-rounds/DECISIONS.md",
       "bytes": 6515,
       "sha256": "4c96397ca1ca746f296dd195276ce3c65d1c6aafb406616af48c1a6b42af8953"
+    },
+    {
+      "path": "panels/five-rounds/blueprint-packets.zip",
+      "bytes": 1306337,
+      "sha256": "4a5dbcef96062bcbb921bea76c4229aa6fcf403ec794ad4cfc72ae184fc5c8cd"
+    },
+    {
+      "path": "panels/five-rounds/blueprint-packets.zip.sha256",
+      "bytes": 88,
+      "sha256": "9749ad804a4e49b14377ca24223f265a1d39fd01dbb065663a33339fbf29526c"
     },
     {
       "path": "panels/five-rounds/blueprint-packets/README.md",
@@ -18367,16 +18377,6 @@
       "path": "panels/five-rounds/blueprint-packets/nt-newton-prism.svg",
       "bytes": 6889,
       "sha256": "53662c375492bc771e7876af680c68c972a63f577d65ddddd65576d23e166ae2"
-    },
-    {
-      "path": "panels/five-rounds/blueprint-packets.zip",
-      "bytes": 1306337,
-      "sha256": "4a5dbcef96062bcbb921bea76c4229aa6fcf403ec794ad4cfc72ae184fc5c8cd"
-    },
-    {
-      "path": "panels/five-rounds/blueprint-packets.zip.sha256",
-      "bytes": 88,
-      "sha256": "9749ad804a4e49b14377ca24223f265a1d39fd01dbb065663a33339fbf29526c"
     },
     {
       "path": "panels/five-rounds/index.html",
@@ -19802,6 +19802,877 @@
       "path": "sphere-lab/sphere-study-bundle.zip",
       "bytes": 6518016,
       "sha256": "88efd49ed5b458f62e0bbe2de4d5911b08dbd00d27370f9b8494a618cd6a13b5"
+    },
+    {
+      "path": "study-atlas/README.txt",
+      "bytes": 1320,
+      "sha256": "2c6a05e116fa41001dc2f170ca5f03737197ac0f167d5792f7f5ade912cf782c"
+    },
+    {
+      "path": "study-atlas/atlas.css",
+      "bytes": 7069,
+      "sha256": "84ef9dbd7b43d23019227d3e6e9fca7498a760cfdbfcac8620ef3d73ffda2d1a"
+    },
+    {
+      "path": "study-atlas/atlas.js",
+      "bytes": 12889,
+      "sha256": "07bc82fe7afa0e7604330ed6164b415cdb08e2b6cf8623e023a44d64e54eadf1"
+    },
+    {
+      "path": "study-atlas/book.css",
+      "bytes": 1573,
+      "sha256": "340049172d5e102fe2aa0ba0f991eab9a307ece8cf75ac1eaba8a20fa7bb4100"
+    },
+    {
+      "path": "study-atlas/chapters/ai-mathematics.md",
+      "bytes": 57313,
+      "sha256": "9328c2c076b48d09e0bc103c0366e03e5064ba0423ab06a07e2fdda5e57b8423"
+    },
+    {
+      "path": "study-atlas/chapters/electrostatics.md",
+      "bytes": 43239,
+      "sha256": "dbbf71178e14ca79f5eeb7b4a0ad8e05d6c7c51800d479f8a444cbcb77054905"
+    },
+    {
+      "path": "study-atlas/chapters/frequency.md",
+      "bytes": 49024,
+      "sha256": "87883c1ec7c57f279732160bb4f04e57fb9f1476d36057a3a8bc041b88f4c369"
+    },
+    {
+      "path": "study-atlas/chapters/gravity.md",
+      "bytes": 58116,
+      "sha256": "bcff542d102fa028b8c8f9c056bc3de7a3fee982a5f55a6145ad78fff79c762f"
+    },
+    {
+      "path": "study-atlas/chapters/magnetism.md",
+      "bytes": 61988,
+      "sha256": "70a011891ea65fdf70fc09c37cdff02eddda7339b00f1e25b67ed003c8650d72"
+    },
+    {
+      "path": "study-atlas/chapters/mathematics.md",
+      "bytes": 69623,
+      "sha256": "c3c32bf62ca3b1eced439f0356e29ef30642fca3c78c229a7b0943d9fc5f6d94"
+    },
+    {
+      "path": "study-atlas/data/ai-corpus-index.json",
+      "bytes": 950029,
+      "sha256": "fdad865795e6dc828f282f9f99b3387656d8a4a3accee7ae1e1e822ef2822c70"
+    },
+    {
+      "path": "study-atlas/data/ai-mathematics.json",
+      "bytes": 147648,
+      "sha256": "f9516d60c82c9aab3dc66a21390fbcca332c4809e552e33995bded243e505518"
+    },
+    {
+      "path": "study-atlas/data/atlas.json",
+      "bytes": 2985293,
+      "sha256": "4aae7d54a88ad29868aa665f31c7ec83adffadab63b0dff23b77784fd13e8368"
+    },
+    {
+      "path": "study-atlas/data/constants.json",
+      "bytes": 3850,
+      "sha256": "13773d99c20b71f76f13588fd25b4c767cc0a1f103d309c50474bd72a515812b"
+    },
+    {
+      "path": "study-atlas/data/crosslinks.json",
+      "bytes": 12205,
+      "sha256": "069ea57430971e06f87f97938b74541164be5a59b6fcf0d0f6d792d753a9518b"
+    },
+    {
+      "path": "study-atlas/data/downloads.json",
+      "bytes": 4297,
+      "sha256": "b539c27ab9b31a827fcb0f9a6c68ea15d33733044c72643adfb90a2654832525"
+    },
+    {
+      "path": "study-atlas/data/electrostatics.json",
+      "bytes": 211024,
+      "sha256": "56ee3d5f9915574cc2cb73a70de5b235cef7431db54df870a4fe0a3d73c436c6"
+    },
+    {
+      "path": "study-atlas/data/frequency.json",
+      "bytes": 226300,
+      "sha256": "a0d7ded94d463bbc473f78847177db2f2e59799610254657f38eb2a38c5eba42"
+    },
+    {
+      "path": "study-atlas/data/gravity.json",
+      "bytes": 217895,
+      "sha256": "5f7dc550501117d05ee4ece6c225acade286dab0b1fe1b2025c7d2d2b563a15f"
+    },
+    {
+      "path": "study-atlas/data/magnetism.json",
+      "bytes": 247707,
+      "sha256": "b434b67c8b611677636552f40662969331587901d297ca9c93ecb58b3668fae3"
+    },
+    {
+      "path": "study-atlas/data/manifest.json",
+      "bytes": 1570,
+      "sha256": "79a47902c48332e301a6c046a468f105f142f1010ff1b19b08de9f60bdf5b4b5"
+    },
+    {
+      "path": "study-atlas/data/mathematics.json",
+      "bytes": 284854,
+      "sha256": "28232cd599c65325203b2a63787e58263ae1d0b5e2f29f3e7abe37a90afa941b"
+    },
+    {
+      "path": "study-atlas/data/panel.json",
+      "bytes": 5727,
+      "sha256": "72dfbab92a1387e7b2a99092ab122735732e1efebea78fdb37c75c650b4997b5"
+    },
+    {
+      "path": "study-atlas/data/scientific-controls.json",
+      "bytes": 7175,
+      "sha256": "3310384bd41bc220370304489e02475d82d63eb3ed2f8fa2ae2161e01fbc631d"
+    },
+    {
+      "path": "study-atlas/downloads/ai-mathematics.docx",
+      "bytes": 61946,
+      "sha256": "22d4c8dad77e7c59e15acc70b15a36bea13547593a77b2ea418cc67571c24e7c"
+    },
+    {
+      "path": "study-atlas/downloads/ai-mathematics.html",
+      "bytes": 165268,
+      "sha256": "e4d0ecac1df1c7fc18edc73ae5c7facb8a327c5e333e715ad8cfce1c37e5bbcb"
+    },
+    {
+      "path": "study-atlas/downloads/ai-mathematics.md",
+      "bytes": 131463,
+      "sha256": "b2f5fc8d049f8612f419b1c0f35d2f57cb01c8f2c0c66723cf611104a75c6976"
+    },
+    {
+      "path": "study-atlas/downloads/ai-mathematics.pdf",
+      "bytes": 1009126,
+      "sha256": "ea07385079da69b9d5f20d8c595051074271ef7f53b69f547a93158646199262"
+    },
+    {
+      "path": "study-atlas/downloads/atlas.graphml",
+      "bytes": 1751297,
+      "sha256": "a7c203b728895f5b28fed5ba553f10f3b356cce7a73f0b7a4a6ea4fd99a85b75"
+    },
+    {
+      "path": "study-atlas/downloads/atlas.json",
+      "bytes": 2985293,
+      "sha256": "4aae7d54a88ad29868aa665f31c7ec83adffadab63b0dff23b77784fd13e8368"
+    },
+    {
+      "path": "study-atlas/downloads/complete-study.docx",
+      "bytes": 406050,
+      "sha256": "9df9b582d248a611184324b8a875d259bcf08ba12843b9a23e60d9d34ec81d6b"
+    },
+    {
+      "path": "study-atlas/downloads/complete-study.html",
+      "bytes": 1423429,
+      "sha256": "aa506dcf15113f44f103719e8e9ea045c1622d066bfa08689623e63c9d24d7e9"
+    },
+    {
+      "path": "study-atlas/downloads/complete-study.md",
+      "bytes": 995523,
+      "sha256": "7b5baa0d10e12d0b87f6cbb3c40bd6a7424e46f2419a6b7fcef5269cae0a9a2f"
+    },
+    {
+      "path": "study-atlas/downloads/complete-study.pdf",
+      "bytes": 10122346,
+      "sha256": "1e73e082d4faa621988e47433b974f9a53532ab1d3764c6d17b9dc17e32607a2"
+    },
+    {
+      "path": "study-atlas/downloads/electrostatics.docx",
+      "bytes": 74910,
+      "sha256": "2c6b255c8341f1587951f904f2462810e1a5191858da8b2f28a8291169b035df"
+    },
+    {
+      "path": "study-atlas/downloads/electrostatics.html",
+      "bytes": 231747,
+      "sha256": "78851d87394991424f3fb97eaac7f65883b72fe8327a75942278a32acce76460"
+    },
+    {
+      "path": "study-atlas/downloads/electrostatics.md",
+      "bytes": 153960,
+      "sha256": "8d84ccef6455c030954aa29062a5bc55b4ad6658f70406ba41bf28c9f4c8ad9f"
+    },
+    {
+      "path": "study-atlas/downloads/electrostatics.pdf",
+      "bytes": 1846805,
+      "sha256": "4d04eb2a2faa11c4d28bc21e86be96ce3c137e99ac21086c958d3036f6d217a1"
+    },
+    {
+      "path": "study-atlas/downloads/formula-register.csv",
+      "bytes": 359188,
+      "sha256": "d6a4ce9b7fba13e66e5da9c9642ff2895ebcfb3f751c9a028dc002ab810b1fad"
+    },
+    {
+      "path": "study-atlas/downloads/frequency.docx",
+      "bytes": 76550,
+      "sha256": "c400fc380c484b04fa0eed3a1ac22fc62f2eebdcb534cf4faf98272068b34fce"
+    },
+    {
+      "path": "study-atlas/downloads/frequency.html",
+      "bytes": 233839,
+      "sha256": "0612d05824e3fe0147799342ba68f4e631eef4ea84670bf6fc750670508050be"
+    },
+    {
+      "path": "study-atlas/downloads/frequency.md",
+      "bytes": 160291,
+      "sha256": "8714cf288334c128ac5b2586fa100534b6ba9977d402393d56ff5718ecd0a221"
+    },
+    {
+      "path": "study-atlas/downloads/frequency.pdf",
+      "bytes": 1722726,
+      "sha256": "725c3ae82c26c1929f4aafc06dd4d5e90bee378a79aeef86c7a912febfe6fa0f"
+    },
+    {
+      "path": "study-atlas/downloads/glossary.csv",
+      "bytes": 18361,
+      "sha256": "99004a8d3d4e0d5b5fcedb2b6ad416a57bc4f6924f26c429bec96ef693cc79b2"
+    },
+    {
+      "path": "study-atlas/downloads/gravity.docx",
+      "bytes": 81356,
+      "sha256": "3d72c77a312521c856e4b63afd80a5251a8115ab582be2077a00a918ae5a260a"
+    },
+    {
+      "path": "study-atlas/downloads/gravity.html",
+      "bytes": 249063,
+      "sha256": "b880760d85f25b18df15688e5752835a5c12f1c3f342e34883adc7f7c8a8b782"
+    },
+    {
+      "path": "study-atlas/downloads/gravity.md",
+      "bytes": 168596,
+      "sha256": "04d10a49a2c0d72db8b2a090365fadcc59535e071a03f968b60109ba39704288"
+    },
+    {
+      "path": "study-atlas/downloads/gravity.pdf",
+      "bytes": 2030431,
+      "sha256": "527e64967bd4b97c9828fe1eed14cb538cb6587b4841a3f7d7b150f6985ad2f5"
+    },
+    {
+      "path": "study-atlas/downloads/magnetism.docx",
+      "bytes": 85164,
+      "sha256": "6c3777ad0bca0226bc8eb2d4fcfddfafe38753013651f532bfe0ec48659eea70"
+    },
+    {
+      "path": "study-atlas/downloads/magnetism.html",
+      "bytes": 250830,
+      "sha256": "557dcac82129bafff8a6f99d949f4c28de60707dfd177dce237b20d7258c2af8"
+    },
+    {
+      "path": "study-atlas/downloads/magnetism.md",
+      "bytes": 174808,
+      "sha256": "0d58dd676271c73a42333edf61532d3699722bdf998ab3f0a3ccacc81cd9d61d"
+    },
+    {
+      "path": "study-atlas/downloads/magnetism.pdf",
+      "bytes": 1921496,
+      "sha256": "5e31498d48ceebcf1ecb8ff08cff52e4a965c46a34e111215a1461d771836134"
+    },
+    {
+      "path": "study-atlas/downloads/mathematics.docx",
+      "bytes": 86487,
+      "sha256": "0006fc89626b728f126d2714a183409a7f691d91065397cf4907dc107db1f312"
+    },
+    {
+      "path": "study-atlas/downloads/mathematics.html",
+      "bytes": 316847,
+      "sha256": "ca8ff1171dd861d96b6e2026d675f64838b2690f9b08b007703412632aa56490"
+    },
+    {
+      "path": "study-atlas/downloads/mathematics.md",
+      "bytes": 218567,
+      "sha256": "486a590f9f6277654ff34f9dfc18707716a4258a1cd8a27ebeeae21c7f222e0a"
+    },
+    {
+      "path": "study-atlas/downloads/mathematics.pdf",
+      "bytes": 2306951,
+      "sha256": "f57dca14cc12687fd1f07477be1c9d530cea6c6b4108fb390b4d37f66b8c14f4"
+    },
+    {
+      "path": "study-atlas/downloads/network-atlas.html",
+      "bytes": 4281220,
+      "sha256": "6d61c9a54003f315b3f1ee431b75cdcf49894e67e3235067e069d6e006cafd55"
+    },
+    {
+      "path": "study-atlas/downloads/paper-register.csv",
+      "bytes": 43279,
+      "sha256": "8fc1ed07354bea57abe99ece110a1ad280d1b58cd5399187a609b40de42ee96c"
+    },
+    {
+      "path": "study-atlas/downloads/pdf-manifest.json",
+      "bytes": 1436,
+      "sha256": "9efab41fbf98446a8e15cb08c829161807d9a142a833682d0b6d631be333d758"
+    },
+    {
+      "path": "study-atlas/downloads/research-bundle.zip",
+      "bytes": 17036835,
+      "sha256": "ec75c989401f9b3c5974e9237b4251e5013ff12aba3186e4c1e8da9d44726355"
+    },
+    {
+      "path": "study-atlas/downloads/source-register.csv",
+      "bytes": 108058,
+      "sha256": "caf57bc47f951363124a9965374e1a61373c29ca595b5f763605e6873868608c"
+    },
+    {
+      "path": "study-atlas/downloads/summary.docx",
+      "bytes": 14445,
+      "sha256": "f1a1d46b2304233eac04568b4f40c58c87687d3fbf0faf1cb8e5a0fc048a5df8"
+    },
+    {
+      "path": "study-atlas/downloads/summary.html",
+      "bytes": 11704,
+      "sha256": "1d53221ebb87e6d6b0167cdd058a0edc896e0fc042b6521b967cebfc1f8b1476"
+    },
+    {
+      "path": "study-atlas/downloads/summary.md",
+      "bytes": 8591,
+      "sha256": "33d5c7dc8fdf2e43ebf6e7ff70450e465e1f5749f7d8b6fcd4c2c135bd7558d5"
+    },
+    {
+      "path": "study-atlas/downloads/summary.pdf",
+      "bytes": 99924,
+      "sha256": "89de09586f5c22d04dd472cc79a53499563e01d25c4c11161bd0a74a03f7f3d2"
+    },
+    {
+      "path": "study-atlas/downloads/topic-register.csv",
+      "bytes": 109545,
+      "sha256": "04b3a30e221c9cd47359a85bce7b17dbe48f77e19ac38b7dd78a2a0fe98f01c1"
+    },
+    {
+      "path": "study-atlas/graphs/ai-mathematics.graphml",
+      "bytes": 202598,
+      "sha256": "84e9af7e25c8123541370a30b0c28d5a17a787f1001f26ed9b823b1ebb64388f"
+    },
+    {
+      "path": "study-atlas/graphs/ai-mathematics.svg",
+      "bytes": 14305,
+      "sha256": "3b0bf8c7dad6a2d397c080d59f70109c252f44ea2603a9578a7c659644368449"
+    },
+    {
+      "path": "study-atlas/graphs/electrostatics.graphml",
+      "bytes": 286500,
+      "sha256": "68f1ddd6f0af6d28a3adc03ece90ad5f0869e4803e97ee6d05adb92783bb10f9"
+    },
+    {
+      "path": "study-atlas/graphs/electrostatics.svg",
+      "bytes": 25105,
+      "sha256": "225e16d692c9fffe03f95d51eff65b91960932f5488c7660995c05d7f9355e26"
+    },
+    {
+      "path": "study-atlas/graphs/frequency.graphml",
+      "bytes": 278963,
+      "sha256": "22adf45cdefb3484d0fbb55a8524d8e86cc4f34a0ce5409027d3ffea8532e7be"
+    },
+    {
+      "path": "study-atlas/graphs/frequency.svg",
+      "bytes": 21532,
+      "sha256": "33e8d41180480c6dd3b0a17397e9f13bfa733872e68e84295412f4110bfd3bf8"
+    },
+    {
+      "path": "study-atlas/graphs/gravity.graphml",
+      "bytes": 284309,
+      "sha256": "f95d8fecc1decb662f6407423b15a1430e8d7537c7aaa0590b361570f26faee3"
+    },
+    {
+      "path": "study-atlas/graphs/gravity.svg",
+      "bytes": 21918,
+      "sha256": "24a12c6d75f5521aa6812f754dba9738321199c45fa24a372bd4eb837ce763d8"
+    },
+    {
+      "path": "study-atlas/graphs/magnetism.graphml",
+      "bytes": 311569,
+      "sha256": "c91677aa889f7a25a4688aec6bf3c112e86eeacc9cf463b027f53f7b73a30a6a"
+    },
+    {
+      "path": "study-atlas/graphs/magnetism.svg",
+      "bytes": 26299,
+      "sha256": "8974fe7b8b2129b55016ae3d7b315a2336e2b1f15e113fad702f13a14e788ef3"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics-algebra.graphml",
+      "bytes": 45720,
+      "sha256": "dbff037ca4ab2970530fbdb3a5190c11f85472f479a7c7f04b278553ffd4559c"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics-algebra.svg",
+      "bytes": 13601,
+      "sha256": "e348bce52edc18f5c20912ba13b641123a6f9eb76fe4198c3a12c0fcb9453f54"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics-calculus.graphml",
+      "bytes": 33929,
+      "sha256": "9dcb60e19b4d6b1515ebdaa4caed312afc23fb80f153bc6b506782c93072a411"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics-calculus.svg",
+      "bytes": 11164,
+      "sha256": "613addcc1ec6c577f0e551e0a601615d252e1092531197ba0ff859f7d6d1d16e"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics-geometry.graphml",
+      "bytes": 30260,
+      "sha256": "2666f9cea8e8cb352e389ce6bafa3fce97642fc72e2333c2b7ab83233d56f665"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics-geometry.svg",
+      "bytes": 9357,
+      "sha256": "d4cb903cba561a45b71a818fad64316474a90843b2d26d93df85072ca10cf427"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics.graphml",
+      "bytes": 371533,
+      "sha256": "33a6c99f65eab3e238a348ee759283d072e080b0d6e1fa04ef153bd117a15e37"
+    },
+    {
+      "path": "study-atlas/graphs/mathematics.svg",
+      "bytes": 33423,
+      "sha256": "5e6cfa32eb191b77b7818236274ab5f5718f2cda2948422f4e56b6db7a4c87bc"
+    },
+    {
+      "path": "study-atlas/index.html",
+      "bytes": 6119,
+      "sha256": "838894f63ff970ea1e12286c8688af2ea49470357dd5e8aa6069a535c236f2b3"
+    },
+    {
+      "path": "study-atlas/vendor/d3/LICENSE",
+      "bytes": 731,
+      "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+    },
+    {
+      "path": "study-atlas/vendor/d3/d3.min.js",
+      "bytes": 280622,
+      "sha256": "912111098ea99503a6f4967361d2bbdc9dbf58cf9c678c8e27e5b02d1a07f0c1"
+    },
+    {
+      "path": "study-atlas/vendor/katex/LICENSE",
+      "bytes": 1107,
+      "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+    },
+    {
+      "path": "study-atlas/vendor/katex/README.md",
+      "bytes": 6503,
+      "sha256": "ef41f42d7256023faf98b789fd3d56bac3f04de84b945437b38798ea1eafd6e9"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/auto-render.js",
+      "bytes": 10529,
+      "sha256": "4cfb141d56e2c5644f5226e6b8709a3eadd39989fcec86a38c8150adb196d89b"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/auto-render.min.js",
+      "bytes": 3486,
+      "sha256": "e5372d199bcdae8b4de71d0f7ceba72a4ba12774a27c60a6f1f77d03b3228ee4"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/auto-render.mjs",
+      "bytes": 6929,
+      "sha256": "e0410e8ce6c38869bf2f703fcc3b8d192308b5f3b34264625d605d742b1309e0"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/copy-tex.js",
+      "bytes": 4469,
+      "sha256": "75d6dbee9697706dc694d9500e876a1ad392db3e8a4588213e0cc300b280eb0a"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/copy-tex.min.js",
+      "bytes": 1671,
+      "sha256": "c571c49b520cb8e9040287338286b21783e39b476660b8b56d9e1c037eeaeaff"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/copy-tex.mjs",
+      "bytes": 3715,
+      "sha256": "d3a214e3f8c2de12410df5b4de45086dc54566b1919c0078e9ae947a15964283"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/mathtex-script-type.js",
+      "bytes": 4220,
+      "sha256": "8c898971b4abe2fe9dadeb999617ea02cbeddd9a7b7d33e2c59e23dba922b380"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/mathtex-script-type.min.js",
+      "bytes": 1303,
+      "sha256": "461b30e513fe6cffb7130f6786360d37208bb6945deaee0c520fa7fe51037795"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/mathtex-script-type.mjs",
+      "bytes": 764,
+      "sha256": "b11a5fab6ffeea4ef040f93e6f491bdbfcdec8963bc5e8c2b3642f3cb7d4799a"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/mhchem.js",
+      "bytes": 78561,
+      "sha256": "b193073c57b9ba833ca09faa72013c8995eb56fd2d27d65a6814c2e75f2370ab"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/mhchem.min.js",
+      "bytes": 33706,
+      "sha256": "aaf20145c0b8ecd450ccf6eb0cebece2f77d8e6a02c30d291f28c1167b57b2df"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/mhchem.mjs",
+      "bytes": 75445,
+      "sha256": "d590d100ede9335bda7648d029db5510877205538af36b53d56cd8bac1de79c1"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/render-a11y-string.js",
+      "bytes": 24218,
+      "sha256": "f0e2259b8bb929436d0c334f32b84c40311c71e00dd1874be9c743e0480db633"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/render-a11y-string.min.js",
+      "bytes": 8634,
+      "sha256": "90a3049e599a1a850c9c34e44adec762a30abc72b793c272955c86888553fd9e"
+    },
+    {
+      "path": "study-atlas/vendor/katex/contrib/render-a11y-string.mjs",
+      "bytes": 20519,
+      "sha256": "34d38d2c45197666b1657ebe01f7d907510b59d741199678ea3ff586b2bac648"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_AMS-Regular.ttf",
+      "bytes": 63632,
+      "sha256": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_AMS-Regular.woff",
+      "bytes": 33516,
+      "sha256": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_AMS-Regular.woff2",
+      "bytes": 28076,
+      "sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Caligraphic-Bold.ttf",
+      "bytes": 12368,
+      "sha256": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Caligraphic-Bold.woff",
+      "bytes": 7716,
+      "sha256": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Caligraphic-Bold.woff2",
+      "bytes": 6912,
+      "sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Caligraphic-Regular.ttf",
+      "bytes": 12344,
+      "sha256": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Caligraphic-Regular.woff",
+      "bytes": 7656,
+      "sha256": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Caligraphic-Regular.woff2",
+      "bytes": 6908,
+      "sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Fraktur-Bold.ttf",
+      "bytes": 19584,
+      "sha256": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Fraktur-Bold.woff",
+      "bytes": 13296,
+      "sha256": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Fraktur-Bold.woff2",
+      "bytes": 11348,
+      "sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Fraktur-Regular.ttf",
+      "bytes": 19572,
+      "sha256": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Fraktur-Regular.woff",
+      "bytes": 13208,
+      "sha256": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Fraktur-Regular.woff2",
+      "bytes": 11316,
+      "sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Bold.ttf",
+      "bytes": 51336,
+      "sha256": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Bold.woff",
+      "bytes": 29912,
+      "sha256": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Bold.woff2",
+      "bytes": 25324,
+      "sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-BoldItalic.ttf",
+      "bytes": 32968,
+      "sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-BoldItalic.woff",
+      "bytes": 19412,
+      "sha256": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-BoldItalic.woff2",
+      "bytes": 16780,
+      "sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Italic.ttf",
+      "bytes": 33580,
+      "sha256": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Italic.woff",
+      "bytes": 19676,
+      "sha256": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Italic.woff2",
+      "bytes": 16988,
+      "sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Regular.ttf",
+      "bytes": 53580,
+      "sha256": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Regular.woff",
+      "bytes": 30772,
+      "sha256": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Main-Regular.woff2",
+      "bytes": 26272,
+      "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Math-BoldItalic.ttf",
+      "bytes": 31196,
+      "sha256": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Math-BoldItalic.woff",
+      "bytes": 18668,
+      "sha256": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Math-BoldItalic.woff2",
+      "bytes": 16400,
+      "sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Math-Italic.ttf",
+      "bytes": 31308,
+      "sha256": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Math-Italic.woff",
+      "bytes": 18748,
+      "sha256": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Math-Italic.woff2",
+      "bytes": 16440,
+      "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Bold.ttf",
+      "bytes": 24504,
+      "sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Bold.woff",
+      "bytes": 14408,
+      "sha256": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Bold.woff2",
+      "bytes": 12216,
+      "sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Italic.ttf",
+      "bytes": 22364,
+      "sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Italic.woff",
+      "bytes": 14112,
+      "sha256": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Italic.woff2",
+      "bytes": 12028,
+      "sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Regular.ttf",
+      "bytes": 19436,
+      "sha256": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Regular.woff",
+      "bytes": 12316,
+      "sha256": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_SansSerif-Regular.woff2",
+      "bytes": 10344,
+      "sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Script-Regular.ttf",
+      "bytes": 16648,
+      "sha256": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Script-Regular.woff",
+      "bytes": 10588,
+      "sha256": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Script-Regular.woff2",
+      "bytes": 9644,
+      "sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size1-Regular.ttf",
+      "bytes": 12228,
+      "sha256": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size1-Regular.woff",
+      "bytes": 6496,
+      "sha256": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size1-Regular.woff2",
+      "bytes": 5468,
+      "sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size2-Regular.ttf",
+      "bytes": 11508,
+      "sha256": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size2-Regular.woff",
+      "bytes": 6188,
+      "sha256": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size2-Regular.woff2",
+      "bytes": 5208,
+      "sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size3-Regular.ttf",
+      "bytes": 7588,
+      "sha256": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size3-Regular.woff",
+      "bytes": 4420,
+      "sha256": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size3-Regular.woff2",
+      "bytes": 3624,
+      "sha256": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size4-Regular.ttf",
+      "bytes": 10364,
+      "sha256": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size4-Regular.woff",
+      "bytes": 5980,
+      "sha256": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Size4-Regular.woff2",
+      "bytes": 4928,
+      "sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Typewriter-Regular.ttf",
+      "bytes": 27556,
+      "sha256": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Typewriter-Regular.woff",
+      "bytes": 16028,
+      "sha256": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7"
+    },
+    {
+      "path": "study-atlas/vendor/katex/fonts/KaTeX_Typewriter-Regular.woff2",
+      "bytes": 13568,
+      "sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b"
+    },
+    {
+      "path": "study-atlas/vendor/katex/katex-swap.css",
+      "bytes": 33064,
+      "sha256": "ebf7a67571427ce2d6efdb0dd2e04307f42563442edbbe9f8b6333bb70bacfb4"
+    },
+    {
+      "path": "study-atlas/vendor/katex/katex-swap.min.css",
+      "bytes": 24773,
+      "sha256": "bb6da34e175803db5fcc5cb9eadc74c6188fca652de8d6c1d3d9aafb403e8366"
+    },
+    {
+      "path": "study-atlas/vendor/katex/katex.css",
+      "bytes": 33084,
+      "sha256": "042b367bf8d89aef200f567f27aba119ec4204f9594e697609951e1295362ce8"
+    },
+    {
+      "path": "study-atlas/vendor/katex/katex.js",
+      "bytes": 621475,
+      "sha256": "8f4f4efac9e80863b0ef9946c004928ad3bd33bbbeabcc8531c605c82a1bb545"
+    },
+    {
+      "path": "study-atlas/vendor/katex/katex.min.css",
+      "bytes": 24793,
+      "sha256": "00e0b094171b07f58422075f469b4feac2b2f7bce1aeec943c08da4d697f4dcf"
+    },
+    {
+      "path": "study-atlas/vendor/katex/katex.min.js",
+      "bytes": 273081,
+      "sha256": "fa140498b8cfc8302cbe5e7cb1bdbc1f952bc38b3fa258ede09e73edbf9a74bc"
+    },
+    {
+      "path": "study-atlas/vendor/katex/katex.mjs",
+      "bytes": 603305,
+      "sha256": "5f0c3749f8b28ce1a63b68de34d3950bb4aa1a9e0130865e4b09ecc9a250c8b7"
     }
-  ]
+  ],
+  "researchAtlas": {
+    "path": "study-atlas/",
+    "cutoff": "2026-11-25",
+    "completeBookPages": 496,
+    "topics": 471,
+    "formulas": 237,
+    "sourceRecords": 117,
+    "paperReviews": 43,
+    "AIClaimRecords": 20,
+    "indexedManuscripts": 730,
+    "manuscriptReadingStatus": "unread-indexed",
+    "reviewRounds": 3,
+    "reviewReports": 18,
+    "corpusSHA256": "4aae7d54a88ad29868aa665f31c7ec83adffadab63b0dff23b77784fd13e8368"
+  },
+  "publicationRevisionNote": "Added the reviewed field-study atlas and navigation link; prior workbench/adapters remain preserved."
 }
